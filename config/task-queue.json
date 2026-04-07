@@ -35,6 +35,66 @@
       "updated_at": "2026-04-08 08:26:42",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-crafter-56f1dc",
+      "agent": "crafter",
+      "task": "wELEC 프론트엔드 긴급 수정 요청.",
+      "message": "wELEC 프론트엔드 긴급 수정 요청.\n\nCloudflare 터널로 외부 접속 시 Vite가 호스트를 차단하고 있음:\n\"Blocked request. This host is not allowed. To allow this host, add to server.allowedHosts in vite.config.js\"\n\nC:/wELEC/frontend/vite.config.ts에서 server.allowedHosts를 true(모든 호스트 허용)로 설정하고 dev 서버 재시작해줘.\n\n예시:\n```ts\nserver: {\n  host: '0.0.0.0',\n  allowedHosts: true\n}\n```\n\n수정 후 새 터널 URL 알려줘.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 08:33:50",
+      "updated_at": "2026-04-08 08:33:50",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-crafter-aa8743",
+      "agent": "crafter",
+      "task": "wELEC UI 피드백 반영 요청 (부서장 확인 완료, Phase 1 계속 진행).",
+      "message": "wELEC UI 피드백 반영 요청 (부서장 확인 완료, Phase 1 계속 진행).\n\n기본 UI는 승인됨. 추가 요청:\n**프로젝트 탐색기 패널** — 좌측에 Windows 탐색기 스타일의 트리뷰 추가\n\n요구사항:\n1. 좌측 사이드바에 프로젝트 탐색기 패널 추가 (기존 심볼 라이브러리와 탭 또는 분리)\n2. 트리 구조: 프로젝트 > 도면 페이지(Sheet) 계층\n3. 프로젝트 생성/삭제, 도면 페이지 추가/삭제/이름변경\n4. 페이지 클릭 시 해당 도면 캔버스로 전환\n5. 트리뷰 아이콘: 폴더(프로젝트), 문서(도면 페이지)\n6. EPLAN처럼 프로젝트 단위로 도면을 관리하는 구조\n\n수정 후 동일 터널 URL로 확인 가능하도록 해줘.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 08:36:36",
+      "updated_at": "2026-04-08 08:36:36",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-crafter-af5d53",
+      "agent": "crafter",
+      "task": "추가 지시 (부서장):",
+      "message": "추가 지시 (부서장):\n\n좌측 패널을 **탭(책갈피) 메뉴 형태**로 구성해줘.\n- 탭1: 프로젝트 탐색기 (트리뷰)\n- 탭2: 심볼 라이브러리 (기존)\n\n탭 클릭으로 두 패널을 스왑하는 구조. 동시에 보이는 게 아니라 탭 전환 방식.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 08:36:53",
+      "updated_at": "2026-04-08 08:36:53",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-db-manager-b40960",
+      "agent": "db-manager",
+      "task": "docs-agent 경유, 김근형님 요청건.",
+      "message": "docs-agent 경유, 김근형님 요청건.\n\nERP 재고현황 보고서 데이터 재조회 필요:\n1. ERP 현재고현황 재고량>0 **전체** (이전 TOP 100이 아닌 전건 조회)\n2. 각 품목별 2024-01-01 이후 발주내역 **전건 재확인** (누락 없이)\n3. 재고금액 높은 순 정렬 유지\n\n결과는 docs-agent에게 전달해줘. docs-agent가 보고서 재작성 예정.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 08:38:08",
+      "updated_at": "2026-04-08 08:38:08",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-crafter-bb9c25",
+      "agent": "crafter",
+      "task": "부서장 추가 요청:",
+      "message": "부서장 추가 요청:\n\n전기 부품 데이터 관리 기능이 현재 wELEC에 있는지 분석해줘.\n\n확인 포인트:\n1. 현재 구현된 부품(컴포넌트) 데이터 관리 기능이 있는지\n2. PLAN.md에 부품 DB/관리 기능이 어느 Phase에 계획되어 있는지\n3. EPLAN의 부품 관리 기능 대비 현재 갭 분석\n\n부품 = 전기 부품(차단기, 릴레이, 커넥터, 단자대, 전선 등)의 사양/모델/제조사 정보 관리.\n심볼과 별개로 실제 부품 데이터베이스 관리가 필요한 것.\n\n분석 결과 간단히 보고해줘.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 08:38:26",
+      "updated_at": "2026-04-08 08:38:26",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }
