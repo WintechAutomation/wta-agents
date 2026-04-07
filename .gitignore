@@ -5,6 +5,9 @@ scripts/auto-commit.log
 .claude/settings.local.json
 .env
 .env.backup
+config/*-token.txt
+config/*-token*.txt
+config/atlassian-org-id.txt
 
 # 세션 JSONL — 대용량, 일일 아카이브 스크립트로 별도 커밋
 sessions/**/*.jsonl
