@@ -276,3 +276,4 @@ Execution of job "_update_knowledge_cache (trigger: interval[0:01:00], next run 
 Execution of job "_update_knowledge_cache (trigger: interval[0:01:00], next run at: 2026-04-07 13:36:26 KST)" skipped: maximum number of running instances reached (1)
 Execution of job "_update_knowledge_cache (trigger: interval[0:01:00], next run at: 2026-04-07 13:37:26 KST)" skipped: maximum number of running instances reached (1)
 Execution of job "_update_knowledge_cache (trigger: interval[0:01:00], next run at: 2026-04-07 13:38:26 KST)" skipped: maximum number of running instances reached (1)
+Execution of job "_update_knowledge_cache (trigger: interval[0:01:00], next run at: 2026-04-08 06:21:26 KST)" skipped: maximum number of running instances reached (1)

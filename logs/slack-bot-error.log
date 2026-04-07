@@ -239,3 +239,4 @@
 2026-04-07 14:31:46,782 WARNING [파일→MES] 프로젝트 조회 실패: 'list' object has no attribute 'get'
 2026-04-07 14:47:28,183 WARNING [파일→MES] 프로젝트 조회 실패: 'list' object has no attribute 'get'
 2026-04-07 15:09:28,882 WARNING [파일→MES] 프로젝트 조회 실패: 'list' object has no attribute 'get'
+2026-04-07 22:00:57,229 WARNING 채널 ID 없음: #PM
