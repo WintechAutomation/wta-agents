@@ -1,0 +1,7 @@
+C:\wMES/wmes_env/Lib/site-packages\django\db\backends\utils.py:98: RuntimeWarning: Accessing the database during app initialization is discouraged. To fix this warning, avoid executing queries in AppConfig.ready() or when your app modules are imported.
+  warnings.warn(self.APPS_NOT_READY_WARNING_MSG, category=RuntimeWarning)
+Traceback (most recent call last):
+  File "C:\MES\wta-agents\workspaces\db-manager\erp_wrapper.py", line 17, in <module>
+    exec(open(sys.argv[1], encoding='utf-8').read())
+  File "<string>", line 12, in <module>
+pyodbc.ProgrammingError: ('42S22', "[42S22] [Microsoft][ODBC SQL Server Driver][SQL Server]열 이름 'VENDOR_CD'이(가) 잘못되었습니다. (207) (SQLExecDirectW); [42S22] [Microsoft][ODBC SQL Server Driver][SQL Server]문을 준비할 수 없습니다. (8180)")

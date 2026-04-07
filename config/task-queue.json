@@ -95,6 +95,42 @@
       "updated_at": "2026-04-08 08:38:26",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-crafter-74b5d2",
+      "agent": "crafter",
+      "task": "부서장 지시: 부품 데이터 관리 기능을 지금 바로 구현해라.",
+      "message": "부서장 지시: 부품 데이터 관리 기능을 지금 바로 구현해라.\n\n요구사항:\n- 전기 부품에 필요한 **가능한 모든 필드**를 포함한 부품 마스터 DB 설계 + UI\n- EPLAN Parts Management 수준의 필드 커버리지\n\n필수 포함 필드 (예시, 이외에도 전기부품에 필요한 것 모두):\n- 기본: 부품번호, 부품명, 카테고리(차단기/릴레이/커넥터/단자대/전선/퓨즈 등)\n- 제조사: 제조사, 모델번호, 시리즈\n- 전기사양: 정격전압(V), 정격전류(A), 정격용량(W/kW/VA), 극수, 상수, 주파수(Hz), 절연등급, 내전압\n- 물리사양: 크기(W×H×D mm), 중량, 장착방식(DIN레일/패널/PCB), 보호등급(IP)\n- 접점: 접점구성(a접점/b접점/c접점), 접점용량\n- 전선: 단면적(mm²), 허용전류, 외경, 색상, 피복재질\n- 단자대: 접속방식(나사/스프링/푸시인), 연결가능 전선규격\n- 구매: 단가, 리드타임, 공급업체, MOQ\n- 문서: 데이터시트URL, 인증(UL/CE/KC), 비고\n- 대체품: 대체품 부품번호 목록\n- 상태: 사용중/단종/대체\n\nDB 테이블 설계 + 부품 관리 UI 페이지(CRUD + 검색/필터) + 회로도 심볼에 부품 연결 기능까지 구현해줘.\n\n프로젝트 탐색기처럼 탭으로 접근하거나 별도 메뉴로 구성하는 건 네 판단에 맡김.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 08:43:50",
+      "updated_at": "2026-04-08 08:43:50",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-db-manager-23cce1",
+      "agent": "db-manager",
+      "task": "docs-agent 경유, 김근형님 지적건.",
+      "message": "docs-agent 경유, 김근형님 지적건.\n\n\"CKR20-145-1065L\" (X-AXIS ROBOT) 등이 \"발주 없음\"으로 나오는데 실제로는 발주이력이 있을 수 있다는 지적.\n\n확인 사항:\n1. 발주이력 조회 시 어떤 ERP 테이블을 참조했는지 (테이블명, 조인 조건)\n2. 품목코드 \"CKR20-145-1065L\"로 발주 테이블에서 직접 조회하여 실제 발주이력 유무 확인\n3. 2024-01-01 이전 발주만 있는 경우 \"없음\" 처리된 건지, 조회 자체가 누락된 건지\n\n결과는 docs-agent에게 전달해줘.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 08:46:53",
+      "updated_at": "2026-04-08 08:46:53",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-db-manager-df6669",
+      "agent": "db-manager",
+      "task": "docs-agent 추가 요청.",
+      "message": "docs-agent 추가 요청.\n\n4,059건 전체 품목에 대해 **전체 기간(날짜 무관) 마지막 발주일(all_time_last_po_dt)** 추가 조회해서 docs-agent에 전달해줘.\n\n기존 erp_inventory_full.json에 필드 추가하거나 별도 파일로 전달 둘 다 OK.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 08:50:00",
+      "updated_at": "2026-04-08 08:50:00",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }
