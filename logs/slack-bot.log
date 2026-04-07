@@ -26198,3 +26198,11 @@ Atlassian 토큰도
 
 정리:
 ✅ GitHub에서 시크릿 
+2026-04-08 07:14:16,314 INFO [수신] #claudecode 조한종: <https://youtube.com/@maker-evan?si=IjHWddDRgzZ4g7i4|https://youtube.com/@maker- → sales-agent
+2026-04-08 07:14:16,363 INFO [챗로그] #claudecode 조한종: <https://youtube.com/@maker-evan?si=IjHWddDRgzZ4g7i4|https://youtube.com/@maker- (멘션 없음 — 로깅만)
+2026-04-08 07:15:11,816 INFO [수신] #claudecode 조한종: <https://youtube.com/@builderjoshkim?si=6fBb8D1wqrkqC9XV|https://youtube.com/@bu → sales-agent
+2026-04-08 07:15:11,864 INFO [챗로그] #claudecode 조한종: <https://youtube.com/@builderjoshkim?si=6fBb8D1wqrkqC9XV|https://youtube.com/@bu (멘션 없음 — 로깅만)
+2026-04-08 07:15:54,395 INFO [수신] #claudecode 조한종: <https://youtube.com/@dante-labs?si=Br41bLAjj6u5_l3n|https://youtube.com/@dante- → sales-agent
+2026-04-08 07:15:54,448 INFO [챗로그] #claudecode 조한종: <https://youtube.com/@dante-labs?si=Br41bLAjj6u5_l3n|https://youtube.com/@dante- (멘션 없음 — 로깅만)
+2026-04-08 07:16:31,001 INFO [수신] #claudecode 조한종: <https://youtube.com/@teddynote?si=vOiBu06uD-JUtyOG|https://youtube.com/@teddyno → sales-agent
+2026-04-08 07:16:31,039 INFO [챗로그] #claudecode 조한종: <https://youtube.com/@teddynote?si=vOiBu06uD-JUtyOG|https://youtube.com/@teddyno (멘션 없음 — 로깅만)

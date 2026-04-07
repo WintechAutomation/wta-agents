@@ -2669,12 +2669,12 @@
       "agent": "crafter",
       "task": "wELEC Phase 1A - IEC 60617 symbol system (50 symbols)",
       "message": "",
-      "status": "in_progress",
+      "status": "done",
       "priority": "high",
       "created_at": "2026-04-08 07:50:08",
-      "updated_at": "2026-04-08 07:50:08",
+      "updated_at": "2026-04-08 07:59:37",
       "last_report_at": null,
-      "completed_at": null
+      "completed_at": "2026-04-08 07:59:37"
     },
     {
       "id": "tq-admin-agent-18bdbe",
@@ -2685,6 +2685,42 @@
       "priority": "medium",
       "created_at": "2026-04-08 07:51:29",
       "updated_at": "2026-04-08 07:51:29",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-admin-agent-31ab7f",
+      "agent": "admin-agent",
+      "task": "부서장 지시: 매일 아침 7:30 KST에 전날 하루치 내용을 MES 공지사항에 자동 등록하는 스케줄 작업 구현.",
+      "message": "부서장 지시: 매일 아침 7:30 KST에 전날 하루치 내용을 MES 공지사항에 자동 등록하는 스케줄 작업 구현.\n\n■ 공지 내용 (간결하게)\n1. 시스템 관련 업데이트 내용 (최대한 간단히)\n2. 에이전트별 변경사항\n\n■ 데이터 수집 방법\n- git log: 전날 00:00~23:59 커밋 내역에서 변경사항 추출\n- 작업큐: curl http://localhost:5555/api/task-queue 에서 전날 완료된 작업\n- 에이전트 보고 로그 등 활용 가능\n\n■ MES 공지사항 등록\n- MES API: POST https://mes-wta.com/api/notices (또는 DB 직접 insert)\n- MES DB 공지 테이블 구조 확인 필요 → db-manager에게 문의하거나 직접 확인\n\n■ 산출물\n1. 스크립트: scripts/daily-notice.py\n2. jobs.json에 스케줄 등록: cron \"30 7 * * *\"\n3. 완료 후 MAX에게 보고\n\n공지는 최대한 간결하게, 한눈에 파악 가능하도록.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 07:59:07",
+      "updated_at": "2026-04-08 07:59:07",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-crafter-1994e4",
+      "agent": "crafter",
+      "task": "wELEC Phase 1B - Schematic editor + Phase 1C - Project management",
+      "message": "",
+      "status": "in_progress",
+      "priority": "high",
+      "created_at": "2026-04-08 07:59:37",
+      "updated_at": "2026-04-08 07:59:37",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-crafter-3da7e0",
+      "agent": "crafter",
+      "task": "Phase 1A 확인 완료. Phase 1B + 1C 이어서 진행해줘.",
+      "message": "Phase 1A 확인 완료. Phase 1B + 1C 이어서 진행해줘.\n\n■ Phase 1B: 회로도 편집기 (2주)\n- 줌/팬, 그리드 스냅, Undo/Redo (Ctrl+Z/Y)\n- 심볼 배치: 회전(90도), 미러\n- 배선 그리기: 포트 클릭→드래그→포트 연결, 직교 경로\n- 배선 편집: waypoint 추가/이동, 삭제\n- 다중 시트: 탭 기반 전환, 추가/삭제/이름변경\n- 선택/복사/붙여넣기: 다중 선택, Ctrl+C/V, 그룹 이동\n- 텍스트/라벨: 배선 번호, 심볼 태그, 자유 텍스트\n\n■ Phase 1C: 프로젝트 관리 (2주)\n- 프로젝트 CRUD (생성/열기/저장/삭제, 목록)\n- 자동 저장 (30초 간격)\n- 프로젝트 트리 (좌측 패널)\n- JWT 인증 (MES 연동 또는 독립)\n- JSON 프로젝트 파일 export/import\n\n■ DB: welec (localhost:55432) — 이미 생성 완료\n\n■ Phase 1 최종 게이트\n- 3상 모터 기동회로 1장을 wELEC으로 그릴 수 있음\n- 프로젝트 저장/로드 동작",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 07:59:53",
+      "updated_at": "2026-04-08 07:59:53",
       "last_report_at": null,
       "completed_at": null
     }
