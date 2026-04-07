@@ -1,0 +1,3 @@
+[     204ms] [INFO] 🌐 i18next is made possible by our own product, Locize — consider powering your project with managed localization (AI, CDN, integrations): https://locize.com 💙 @ https://cs-wta.com/assets/index-BMkUxjs4.js:8
+[     383ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ https://cs-wta.com/login:0
+[     424ms] [WARNING] Error while trying to use the following icon from the Manifest: https://cs-wta.com/icon-192.png (Download error or resource isn't a valid image) @ https://cs-wta.com/login:0

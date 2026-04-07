@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026년 기술경영계획 월별/부서별 과제 현황 — (주)윈텍오토메이션</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: "맑은 고딕", "Malgun Gothic", sans-serif; background: #f0f4f8; color: #1a1a2e; }
+
+/* 헤더 */
+.top-header { background: #4472C4; color: white; padding: 24px 32px; }
+.top-header h1 { font-size: 1.6rem; font-weight: 700; margin-bottom: 6px; }
+.top-header p { font-size: 0.9rem; opacity: 0.85; }
+
+/* 네비게이션 */
+.nav-bar { background: white; border-bottom: 2px solid #4472C4; padding: 12px 32px; display: flex; gap: 12px; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+.nav-btn { background: none; border: 2px solid #4472C4; color: #4472C4; padding: 6px 18px; border-radius: 20px; cursor: pointer; font-family: "맑은 고딕", sans-serif; font-size: 0.9rem; font-weight: 600; text-decoration: none; }
+.nav-btn:hover { background: #4472C4; color: white; }
+
+/* 월별 섹션 */
+.month-section { padding: 32px; max-width: 1600px; margin: 0 auto; }
+.month-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 3px solid #4472C4; }
+.month-header h2 { font-size: 1.4rem; color: #4472C4; font-weight: 700; }
+.badge { background: #4472C4; color: white; padding: 3px 12px; border-radius: 12px; font-size: 0.82rem; }
+
+/* 부서 그리드 */
+.dept-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 16px; }
+
+/* 부서 카드 */
+.dept-card { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border: 1px solid #e8eaf0; }
+.dept-header { padding: 12px 16px; display: flex; flex-direction: column; gap: 3px; }
+.dept-name { font-size: 1.05rem; font-weight: 700; color: white; }
+.dept-file { font-size: 0.72rem; color: rgba(255,255,255,0.8); }
+.dept-body { padding: 14px 16px; }
+.section { margin-bottom: 12px; }
+.section:last-child { margin-bottom: 0; }
+.section-title { font-size: 0.8rem; font-weight: 700; color: #555; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.3px; }
+
+/* 리스트 */
+.task-list { padding-left: 16px; font-size: 0.85rem; line-height: 1.7; color: #333; }
+.task-list li { margin-bottom: 2px; }
+.task-list li.issue { color: #c0392b; }
+.task-list li.kpi { color: #1a7a3e; font-weight: 600; }
+.task-list li.empty { color: #aaa; list-style: none; margin-left: -16px; font-style: italic; }
+
+/* 구분선 */
+.month-divider { border: none; border-top: 1px solid #dde3ee; margin: 0 32px; }
+
+/* 이미지 그리드 */
+.img-grid { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.img-grid a { display: block; }
+.img-grid img { width: 120px; height: 80px; object-fit: cover; border: 1px solid #ddd; border-radius: 4px; cursor: pointer; transition: transform 0.2s; }
+.img-grid img:hover { transform: scale(1.05); box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .dept-grid { grid-template-columns: 1fr; }
+  .month-section { padding: 16px; }
+  .top-header h1 { font-size: 1.2rem; }
+}
+</style>
+</head>
+<body>
+
+<div class="top-header">
+  <h1>2026년 기술경영계획 월별/부서별 과제 현황</h1>
+  <p>(주)윈텍오토메이션 · 분석 기준: 2026년 1월~3월 · python-pptx 텍스트 자동 추출</p>
+</div>
+
+<div class="nav-bar">
+  <a class="nav-btn" href="#2026-01">1월</a>
+  <a class="nav-btn" href="#2026-02">2월</a>
+  <a class="nav-btn" href="#2026-03">3월</a>
+</div>
+
+
+  <section class="month-section" id="2026-01">
+    <div class="month-header">
+      <h2>2026년 1월</h2>
+      <span class="badge">15개 팀/부서</span>
+    </div>
+    <div class="dept-grid">
+      
+    <div class="dept-card">
+      <div class="dept-header" style="background:#4472C4">
+        <span class="dept-name">영업</span>
+        <span class="dept-file">1-3. 2026년 1월 영업 경영계획보고 [일본].pptx</span>
+      </div>
+      <div class="dept-body">
+        <div class="section">
+          <div class="section-title">📋 주요 과제 / 목차</div>
+          <ul class="task-list"><li>26년 영업 목표 및 계획</li><li>영업 계획</li><li>※ 경영 목표: 매출 240억 / 수출 1,200만불 / 내수 과점화 / 신시장 확대※ 경영 전략: 무싱기간내 A/S 제로 / 단납기 강화 / 원가 혁신 / DX 확대</li><li>JIMTOF 전시 계획</li><li>공정별 셀 자동화 구축</li><li>공정별 셀 자동화에 의한 검사 및 무인화 구축</li><li>공정별 셀 자동화 구축</li></ul>
+        </div>
+        <div class="section"><div class="section-title">⚠️ 이슈 / 현안</div><ul class="task-list"><li class="issue">- AI Vision & Zero Teaching: 불량 기준 자동 학습, 자동티칭 검사기</li><li class="issue">AI 학습에 의한 불량 편차 최소화 및 안정성</li><li class="issue">불량률 감소, 공정 편차 감소로 인한 TCO 절감</li><li class="issue">복잡한 공정 대응가능한 불량 편차 감소</li></ul></div>
+        <div class="section"><div class="section-title">📊 KPI / 성과지표</div><ul class="task-list"><li class="kpi">2. 키워드 6개</li></ul></div>
+        <div class="section"><div class="section-title">🖼 슬라이드 이미지 (1개)</div><div class="img-grid"><a href="2026-monthly-plan-images/2026-01/영업/slide05_01.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/영업/slide05_01.png" alt="슬라이드5" title="슬라이드 5" loading="lazy"></a></div></div>
+      </div>
+    </div>
+    <div class="dept-card">
+      <div class="dept-header" style="background:#5B9BD5">
+        <span class="dept-name">전략기획</span>
+        <span class="dept-file">1-4. 2026년 1월 경영계획보고 [전략기획].pptx</span>
+      </div>
+      <div class="dept-body">
+        <div class="section">
+          <div class="section-title">📋 주요 과제 / 목차</div>
+          <ul class="task-list"><li>1. 고객의 신뢰성 강화 및 선택 우위 확보를 통한 충성 고객 확보</li><li>2. WTA의 제품 가치 강화로 시장내 차별화 및 가성비 경쟁력 강화</li><li>3. 신시장 확대 및 신제품(HGM 등) 초기 진입장벽 최소화</li><li>4. 사업의 안정성과 지속적인 성장 가능성 확보로 내부조직의 결속력 및 인재확보</li><li>5. 협력사 및 투자자와의 신뢰성 강화 인한 위기 대응력 강화</li></ul>
+        </div>
+        
+        <div class="section"><div class="section-title">📊 KPI / 성과지표</div><ul class="task-list"><li class="kpi">매출 240억,          수출 1,200만불</li></ul></div>
+        <div class="section"><div class="section-title">🖼 슬라이드 이미지 (1개)</div><div class="img-grid"><a href="2026-monthly-plan-images/2026-01/전략기획/slide05_01.jpg" target="_blank"><img src="2026-monthly-plan-images/2026-01/전략기획/slide05_01.jpg" alt="슬라이드5" title="슬라이드 5" loading="lazy"></a></div></div>
+      </div>
+    </div>
+    <div class="dept-card">
+      <div class="dept-header" style="background:#ED7D31">
+        <span class="dept-name">품질CS그룹</span>
+        <span class="dept-file">10. 2026년 1월 경영계획보고_품질CS 그룹.pptx</span>
+      </div>
+      <div class="dept-body">
+        <div class="section">
+          <div class="section-title">📋 주요 과제 / 목차</div>
+          <ul class="task-list"><li>1. 경영 전략 기반 품질 강화 방안</li></ul>
+        </div>
+        <div class="section"><div class="section-title">⚠️ 이슈 / 현안</div><ul class="task-list"><li class="issue">USB 2.0 송수신기 고장 이슈</li><li class="issue">한국야금 검사기 #5 F1 Z축 스트록 부족</li><li class="issue">다른 그립퍼 조립시 문제없음(원인 확인 힘듬)</li></ul></div>
+        
+        <div class="section"><div class="section-title">🖼 슬라이드 이미지 (15개)</div><div class="img-grid"><a href="2026-monthly-plan-images/2026-01/품질CS그룹/slide07_01.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/품질CS그룹/slide07_01.png" alt="슬라이드7" title="슬라이드 7" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/품질CS그룹/slide07_02.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/품질CS그룹/slide07_02.png" alt="슬라이드7" title="슬라이드 7" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/품질CS그룹/slide07_03.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/품질CS그룹/slide07_03.png" alt="슬라이드7" title="슬라이드 7" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/품질CS그룹/slide07_04.jpg" target="_blank"><img src="2026-monthly-plan-images/2026-01/품질CS그룹/slide07_04.jpg" alt="슬라이드7" title="슬라이드 7" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/품질CS그룹/slide07_05.jpg" target="_blank"><img src="2026-monthly-plan-images/2026-01/품질CS그룹/slide07_05.jpg" alt="슬라이드7" title="슬라이드 7" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/품질CS그룹/slide07_06.jpg" target="_blank"><img src="2026-monthly-plan-images/2026-01/품질CS그룹/slide07_06.jpg" alt="슬라이드7" title="슬라이드 7" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/품질CS그룹/slide08_07.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/품질CS그룹/slide08_07.png" alt="슬라이드8" title="슬라이드 8" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/품질CS그룹/slide08_08.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/품질CS그룹/slide08_08.png" alt="슬라이드8" title="슬라이드 8" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/품질CS그룹/slide08_09.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/품질CS그룹/slide08_09.png" alt="슬라이드8" title="슬라이드 8" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/품질CS그룹/slide09_10.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/품질CS그룹/slide09_10.png" alt="슬라이드9" title="슬라이드 9" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/품질CS그룹/slide09_11.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/품질CS그룹/slide09_11.png" alt="슬라이드9" title="슬라이드 9" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/품질CS그룹/slide09_12.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/품질CS그룹/slide09_12.png" alt="슬라이드9" title="슬라이드 9" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/품질CS그룹/slide09_13.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/품질CS그룹/slide09_13.png" alt="슬라이드9" title="슬라이드 9" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/품질CS그룹/slide09_14.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/품질CS그룹/slide09_14.png" alt="슬라이드9" title="슬라이드 9" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/품질CS그룹/slide09_15.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/품질CS그룹/slide09_15.png" alt="슬라이드9" title="슬라이드 9" loading="lazy"></a></div></div>
+      </div>
+    </div>
+    <div class="dept-card">
+      <div class="dept-header" style="background:#A5A5A5">
+        <span class="dept-name">생산관리</span>
+        <span class="dept-file">2. 2026년 1월 기술경영계획보고_생산관리.pptx</span>
+      </div>
+      <div class="dept-body">
+        <div class="section">
+          <div class="section-title">📋 주요 과제 / 목차</div>
+          <ul class="task-list"><li>2026년 1월 기술경영계획 보고</li><li>※ 2026년 업무 계획</li><li>전사 전략에 대한 생산관리 실행 계획</li><li>상세 업무 계획</li><li>※ 2025년 미완료 사항</li><li>※ 2026년 제품 기술개발 계획</li><li>2. 전사 전략에 대한 생산관리 실행 계획</li><li>고객사 Setup관리 시스템 구축</li></ul>
+        </div>
+        <div class="section"><div class="section-title">⚠️ 이슈 / 현안</div><ul class="task-list"><li class="issue">반복 이슈 개선 반영</li><li class="issue">이슈 관리 체계 정립</li><li class="issue">제작 진척 , 이슈 가시화</li><li class="issue">이슈 & 출하 검수 데이터화</li><li class="issue">재작업·지연 비용 제거</li></ul></div>
+        
+        <div class="section"><div class="section-title">🖼 슬라이드 이미지 (12개)</div><div class="img-grid"><a href="2026-monthly-plan-images/2026-01/생산관리/slide02_01.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/생산관리/slide02_01.png" alt="슬라이드2" title="슬라이드 2" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/생산관리/slide10_02.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/생산관리/slide10_02.png" alt="슬라이드10" title="슬라이드 10" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/생산관리/slide10_03.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/생산관리/slide10_03.png" alt="슬라이드10" title="슬라이드 10" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/생산관리/slide10_04.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/생산관리/slide10_04.png" alt="슬라이드10" title="슬라이드 10" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/생산관리/slide10_05.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/생산관리/slide10_05.png" alt="슬라이드10" title="슬라이드 10" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/생산관리/slide10_06.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/생산관리/slide10_06.png" alt="슬라이드10" title="슬라이드 10" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/생산관리/slide10_07.jpg" target="_blank"><img src="2026-monthly-plan-images/2026-01/생산관리/slide10_07.jpg" alt="슬라이드10" title="슬라이드 10" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/생산관리/slide10_08.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/생산관리/slide10_08.png" alt="슬라이드10" title="슬라이드 10" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/생산관리/slide10_09.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/생산관리/slide10_09.png" alt="슬라이드10" title="슬라이드 10" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/생산관리/slide10_10.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/생산관리/slide10_10.png" alt="슬라이드10" title="슬라이드 10" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/생산관리/slide10_11.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/생산관리/slide10_11.png" alt="슬라이드10" title="슬라이드 10" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/생산관리/slide10_12.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/생산관리/slide10_12.png" alt="슬라이드10" title="슬라이드 10" loading="lazy"></a></div></div>
+      </div>
+    </div>
+    <div class="dept-card">
+      <div class="dept-header" style="background:#FFC000">
+        <span class="dept-name">구매</span>
+        <span class="dept-file">3. 2026년 1월 기술경영계획보고_구매팀.pptx</span>
+      </div>
+      <div class="dept-body">
+        <div class="section">
+          <div class="section-title">📋 주요 과제 / 목차</div>
+          <ul class="task-list"><li>3.   단납기 시스템 구축</li><li>4.   무상기간내 A/S 제로화</li><li>5.   정상외 관리</li><li>1. ‘26년 목표대비 실적</li></ul>
+        </div>
+        
+        <div class="section"><div class="section-title">📊 KPI / 성과지표</div><ul class="task-list"><li class="kpi">(매출) 240억/년 : 5.3억/월 누계</li><li class="kpi">-0.37억</li><li class="kpi">2.2%</li><li class="kpi">▶ 26년 매출증가에 대비 가공(4개사), 판금(4개사) 운영</li></ul></div>
+        
+      </div>
+    </div>
+    <div class="dept-card">
+      <div class="dept-header" style="background:#70AD47">
+        <span class="dept-name">기구설계HAM(Press)</span>
+        <span class="dept-file">4-1. 2026년 1월 기술경영계획보고_기구설계 HAM팀(Press).</span>
+      </div>
+      <div class="dept-body">
+        <div class="section">
+          <div class="section-title">📋 주요 과제 / 목차</div>
+          <ul class="task-list"><li>1. 신규장비 개발</li><li>2. 핵심기술 확보</li><li>3. 설계 효율화 및 표준화</li><li>4. 원가 혁신</li><li>5. 경쟁사 제품 분석</li><li>6. 제안 내용 검토</li><li>1. 신규장비 개발</li></ul>
+        </div>
+        
+        
+        <div class="section"><div class="section-title">🖼 슬라이드 이미지 (15개)</div><div class="img-grid"><a href="2026-monthly-plan-images/2026-01/기구설계HAM(Press)/slide03_01.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/기구설계HAM(Press)/slide03_01.png" alt="슬라이드3" title="슬라이드 3" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/기구설계HAM(Press)/slide03_02.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/기구설계HAM(Press)/slide03_02.png" alt="슬라이드3" title="슬라이드 3" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/기구설계HAM(Press)/slide04_03.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/기구설계HAM(Press)/slide04_03.png" alt="슬라이드4" title="슬라이드 4" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/기구설계HAM(Press)/slide05_04.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/기구설계HAM(Press)/slide05_04.png" alt="슬라이드5" title="슬라이드 5" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/기구설계HAM(Press)/slide06_05.jpg" target="_blank"><img src="2026-monthly-plan-images/2026-01/기구설계HAM(Press)/slide06_05.jpg" alt="슬라이드6" title="슬라이드 6" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/기구설계HAM(Press)/slide08_06.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/기구설계HAM(Press)/slide08_06.png" alt="슬라이드8" title="슬라이드 8" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/기구설계HAM(Press)/slide08_07.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/기구설계HAM(Press)/slide08_07.png" alt="슬라이드8" title="슬라이드 8" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/기구설계HAM(Press)/slide08_08.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/기구설계HAM(Press)/slide08_08.png" alt="슬라이드8" title="슬라이드 8" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/기구설계HAM(Press)/slide09_09.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/기구설계HAM(Press)/slide09_09.png" alt="슬라이드9" title="슬라이드 9" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/기구설계HAM(Press)/slide09_10.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/기구설계HAM(Press)/slide09_10.png" alt="슬라이드9" title="슬라이드 9" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/기구설계HAM(Press)/slide09_11.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/기구설계HAM(Press)/slide09_11.png" alt="슬라이드9" title="슬라이드 9" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/기구설계HAM(Press)/slide10_12.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/기구설계HAM(Press)/slide10_12.png" alt="슬라이드10" title="슬라이드 10" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/기구설계HAM(Press)/slide12_13.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/기구설계HAM(Press)/slide12_13.png" alt="슬라이드12" title="슬라이드 12" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/기구설계HAM(Press)/slide12_14.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/기구설계HAM(Press)/slide12_14.png" alt="슬라이드12" title="슬라이드 12" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/기구설계HAM(Press)/slide12_15.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/기구설계HAM(Press)/slide12_15.png" alt="슬라이드12" title="슬라이드 12" loading="lazy"></a></div></div>
+      </div>
+    </div>
+    <div class="dept-card">
+      <div class="dept-header" style="background:#70AD47">
+        <span class="dept-name">기구설계HAM</span>
+        <span class="dept-file">4-2. 2026년 1월 기술경영계획보고_기구설계 HAM팀.pptx</span>
+      </div>
+      <div class="dept-body">
+        <div class="section">
+          <div class="section-title">📋 주요 과제 / 목차</div>
+          <ul class="task-list"><li>2. 핵심 기술 확보</li><li>3. 설계 효율화 및 표준화</li><li>4. 원가 혁신</li><li>1. 2026년 계획업무[수주&개발]</li></ul>
+        </div>
+        
+        
+        <div class="section"><div class="section-title">🖼 슬라이드 이미지 (7개)</div><div class="img-grid"><a href="2026-monthly-plan-images/2026-01/기구설계HAM/slide04_01.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/기구설계HAM/slide04_01.png" alt="슬라이드4" title="슬라이드 4" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/기구설계HAM/slide09_02.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/기구설계HAM/slide09_02.png" alt="슬라이드9" title="슬라이드 9" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/기구설계HAM/slide09_03.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/기구설계HAM/slide09_03.png" alt="슬라이드9" title="슬라이드 9" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/기구설계HAM/slide09_04.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/기구설계HAM/slide09_04.png" alt="슬라이드9" title="슬라이드 9" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/기구설계HAM/slide12_05.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/기구설계HAM/slide12_05.png" alt="슬라이드12" title="슬라이드 12" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/기구설계HAM/slide13_06.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/기구설계HAM/slide13_06.png" alt="슬라이드13" title="슬라이드 13" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/기구설계HAM/slide13_07.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/기구설계HAM/slide13_07.png" alt="슬라이드13" title="슬라이드 13" loading="lazy"></a></div></div>
+      </div>
+    </div>
+    <div class="dept-card">
+      <div class="dept-header" style="background:#255E91">
+        <span class="dept-name">기구설계HIM</span>
+        <span class="dept-file">4-3. 2026년 1월 기술경영계획보고_기구설계 HIM팀.ppt</span>
+      </div>
+      <div class="dept-body">
+        <div class="section">
+          <div class="section-title">📋 주요 과제 / 목차</div>
+          <ul class="task-list"><li class='empty'>추출된 과제 없음</li></ul>
+        </div>
+        
+        
+        
+      </div>
+    </div>
+    <div class="dept-card">
+      <div class="dept-header" style="background:#9E480E">
+        <span class="dept-name">제작</span>
+        <span class="dept-file">5. 2026년 1월 기술경영계획보고_제작팀.pptx</span>
+      </div>
+      <div class="dept-body">
+        <div class="section">
+          <div class="section-title">📋 주요 과제 / 목차</div>
+          <ul class="task-list"><li>7. 중국 제조 현지화 교육</li><li>8. 제작 안전 관리</li><li>9.  업무 분장</li><li>1. 장비 제작 현황</li></ul>
+        </div>
+        
+        <div class="section"><div class="section-title">📊 KPI / 성과지표</div><ul class="task-list"><li class="kpi">제작 중    : Press(하이썽 2대, 천진 허리 1대)</li><li class="kpi">포장기(선 제작(교세라향) 1대, YG1(선제작 개조) 1대)</li></ul></div>
+        <div class="section"><div class="section-title">🖼 슬라이드 이미지 (6개)</div><div class="img-grid"><a href="2026-monthly-plan-images/2026-01/제작/slide11_01.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/제작/slide11_01.png" alt="슬라이드11" title="슬라이드 11" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/제작/slide12_02.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/제작/slide12_02.png" alt="슬라이드12" title="슬라이드 12" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/제작/slide12_03.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/제작/slide12_03.png" alt="슬라이드12" title="슬라이드 12" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/제작/slide13_04.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/제작/slide13_04.png" alt="슬라이드13" title="슬라이드 13" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/제작/slide13_05.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/제작/slide13_05.png" alt="슬라이드13" title="슬라이드 13" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/제작/slide14_06.jpg" target="_blank"><img src="2026-monthly-plan-images/2026-01/제작/slide14_06.jpg" alt="슬라이드14" title="슬라이드 14" loading="lazy"></a></div></div>
+      </div>
+    </div>
+    <div class="dept-card">
+      <div class="dept-header" style="background:#843C0C">
+        <span class="dept-name">제어</span>
+        <span class="dept-file">6. 2026년 1월 기술경영계획보고_제어팀.pptx</span>
+      </div>
+      <div class="dept-body">
+        <div class="section">
+          <div class="section-title">📋 주요 과제 / 목차</div>
+          <ul class="task-list"><li>제작 품질 개선</li><li>제작 시스템 개선</li><li>공정 개선</li><li>단납기 시스템 구축</li><li>제어팀 26년 계획</li><li>2026년 제어팀 설계, 제작 운영 계획 – 설계 시스템 안정화 · 제작 품질 안정화 체계</li><li>추진 방향</li><li>PC 환경을 window 11 + WMX3 도입 : 개별 장비 별 환경이 아닌 공통 기준 환경 구축</li></ul>
+        </div>
+        <div class="section"><div class="section-title">⚠️ 이슈 / 현안</div><ul class="task-list"><li class="issue">2) PC 사용 중 발생하는 문제점 해결</li><li class="issue">PC변경으로 인한 이슈 최소화 및 WMX3 도입시 제어 환경 안정화</li><li class="issue">Windows 11 + WMX3 셋업 시 발생 될 문제점 여부 및 PC 사전 테스트 체크리스트 작성 (기존 프로그램 설치 시 문제여부)</li><li class="issue">“문제 발생시 대응“ 에서 -> 문제 유형별 대응 기준을 미리 정리</li><li class="issue">PC에서 문제 발생 시 감이 아닌 대응 매뉴얼로 대응 -> 동일 문제 재발 방지</li></ul></div>
+        
+        <div class="section"><div class="section-title">🖼 슬라이드 이미지 (2개)</div><div class="img-grid"><a href="2026-monthly-plan-images/2026-01/제어/slide10_01.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/제어/slide10_01.png" alt="슬라이드10" title="슬라이드 10" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/제어/slide10_02.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/제어/slide10_02.png" alt="슬라이드10" title="슬라이드 10" loading="lazy"></a></div></div>
+      </div>
+    </div>
+    <div class="dept-card">
+      <div class="dept-header" style="background:#264478">
+        <span class="dept-name">소프트웨어</span>
+        <span class="dept-file">7. 2026년 1월 기술경영계획보고_소프트웨어팀.pptx</span>
+      </div>
+      <div class="dept-body">
+        <div class="section">
+          <div class="section-title">📋 주요 과제 / 목차</div>
+          <ul class="task-list"><li>1. 기술 개발</li><li>2. 무상 기간내 A/S 제로화</li><li>3. 원가 절감</li><li>1. 내부 인력 강화 교육</li><li>2. 시스템 / 보안</li><li>WMX2  WMX3로 컨트롤러 전환</li><li>Windows 10 단종 계획으로 인한 기존 WMX2 운영 OS 유지 불가</li></ul>
+        </div>
+        <div class="section"><div class="section-title">⚠️ 이슈 / 현안</div><ul class="task-list"><li class="issue">시퀀스 코드의 품질 향상 (기존 코드의 품질 문제 개선)</li><li class="issue">단종 시 OS 호환성 문제 제거</li><li class="issue">경면 불균일 문제</li><li class="issue">마킹 위치 문제 – 개선 전</li><li class="issue">Vision Align 수정 후 문제시</li></ul></div>
+        
+        <div class="section"><div class="section-title">🖼 슬라이드 이미지 (15개)</div><div class="img-grid"><a href="2026-monthly-plan-images/2026-01/소프트웨어/slide05_01.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/소프트웨어/slide05_01.png" alt="슬라이드5" title="슬라이드 5" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/소프트웨어/slide05_02.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/소프트웨어/slide05_02.png" alt="슬라이드5" title="슬라이드 5" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/소프트웨어/slide05_03.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/소프트웨어/slide05_03.png" alt="슬라이드5" title="슬라이드 5" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/소프트웨어/slide05_04.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/소프트웨어/slide05_04.png" alt="슬라이드5" title="슬라이드 5" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/소프트웨어/slide06_05.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/소프트웨어/slide06_05.png" alt="슬라이드6" title="슬라이드 6" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/소프트웨어/slide07_06.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/소프트웨어/slide07_06.png" alt="슬라이드7" title="슬라이드 7" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/소프트웨어/slide07_07.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/소프트웨어/slide07_07.png" alt="슬라이드7" title="슬라이드 7" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/소프트웨어/slide07_08.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/소프트웨어/slide07_08.png" alt="슬라이드7" title="슬라이드 7" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/소프트웨어/slide08_09.jpg" target="_blank"><img src="2026-monthly-plan-images/2026-01/소프트웨어/slide08_09.jpg" alt="슬라이드8" title="슬라이드 8" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/소프트웨어/slide08_10.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/소프트웨어/slide08_10.png" alt="슬라이드8" title="슬라이드 8" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/소프트웨어/slide10_11.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/소프트웨어/slide10_11.png" alt="슬라이드10" title="슬라이드 10" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/소프트웨어/slide11_12.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/소프트웨어/slide11_12.png" alt="슬라이드11" title="슬라이드 11" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/소프트웨어/slide11_13.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/소프트웨어/slide11_13.png" alt="슬라이드11" title="슬라이드 11" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/소프트웨어/slide13_14.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/소프트웨어/slide13_14.png" alt="슬라이드13" title="슬라이드 13" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/소프트웨어/slide15_15.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/소프트웨어/slide15_15.png" alt="슬라이드15" title="슬라이드 15" loading="lazy"></a></div></div>
+      </div>
+    </div>
+    <div class="dept-card">
+      <div class="dept-header" style="background:#806000">
+        <span class="dept-name">비전</span>
+        <span class="dept-file">8. 2026년 1월 기술경영계획보고_비전팀.pptx</span>
+      </div>
+      <div class="dept-body">
+        <div class="section">
+          <div class="section-title">📋 주요 과제 / 목차</div>
+          <ul class="task-list"><li>2026. 01. 기술경영계획</li></ul>
+        </div>
+        
+        <div class="section"><div class="section-title">📊 KPI / 성과지표</div><ul class="task-list"><li class="kpi">매출: 240억원</li><li class="kpi">수출: 120만불</li><li class="kpi">실측값 대비 약 10㎛ 작게 측정 (약 50% 개선)(완료)</li><li class="kpi">정확도(MAE): 0.001 ㎛ (0.0106%)</li></ul></div>
+        <div class="section"><div class="section-title">🖼 슬라이드 이미지 (15개)</div><div class="img-grid"><a href="2026-monthly-plan-images/2026-01/비전/slide15_01.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/비전/slide15_01.png" alt="슬라이드15" title="슬라이드 15" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/비전/slide15_02.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/비전/slide15_02.png" alt="슬라이드15" title="슬라이드 15" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/비전/slide15_03.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/비전/slide15_03.png" alt="슬라이드15" title="슬라이드 15" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/비전/slide15_04.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/비전/slide15_04.png" alt="슬라이드15" title="슬라이드 15" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/비전/slide15_05.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/비전/slide15_05.png" alt="슬라이드15" title="슬라이드 15" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/비전/slide15_06.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/비전/slide15_06.png" alt="슬라이드15" title="슬라이드 15" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/비전/slide15_07.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/비전/slide15_07.png" alt="슬라이드15" title="슬라이드 15" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/비전/slide15_08.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/비전/slide15_08.png" alt="슬라이드15" title="슬라이드 15" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/비전/slide15_09.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/비전/slide15_09.png" alt="슬라이드15" title="슬라이드 15" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/비전/slide15_10.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/비전/slide15_10.png" alt="슬라이드15" title="슬라이드 15" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/비전/slide15_11.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/비전/slide15_11.png" alt="슬라이드15" title="슬라이드 15" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/비전/slide15_12.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/비전/slide15_12.png" alt="슬라이드15" title="슬라이드 15" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/비전/slide15_13.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/비전/slide15_13.png" alt="슬라이드15" title="슬라이드 15" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/비전/slide15_14.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/비전/slide15_14.png" alt="슬라이드15" title="슬라이드 15" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/비전/slide15_15.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/비전/slide15_15.png" alt="슬라이드15" title="슬라이드 15" loading="lazy"></a></div></div>
+      </div>
+    </div>
+    <div class="dept-card">
+      <div class="dept-header" style="background:#375623">
+        <span class="dept-name">광학기술센터</span>
+        <span class="dept-file">9. 2026년 1월 기술경영계획보고_광학기술센터.pptx</span>
+      </div>
+      <div class="dept-body">
+        <div class="section">
+          <div class="section-title">📋 주요 과제 / 목차</div>
+          <ul class="task-list"><li>2026. 1. 기술경영계획</li><li>01. 2026년 기술 개발 계획</li></ul>
+        </div>
+        <div class="section"><div class="section-title">⚠️ 이슈 / 현안</div><ul class="task-list"><li class="issue">- 부품 입고 11/14 → 지연 중</li><li class="issue">장비 stroke 부족 측정 불가</li><li class="issue">장비 stroke 부족 측정 불가</li><li class="issue">8b 는 문제 없으나 10b 에서는 약간 불리 예상</li><li class="issue">문제 없다고 판단</li></ul></div>
+        <div class="section"><div class="section-title">📊 KPI / 성과지표</div><ul class="task-list"><li class="kpi">- 선제작 2대 개조 진행 (#22-1, #23-2)</li><li class="kpi">. 고배율 광학계 motion 부 2대분 완성 (제작팀, 12월)</li><li class="kpi">※ 개조 대상 : 7대</li><li class="kpi">. 선제작 #23-2 : 개조 후 Korloy 장비 swap, 이후 4대 순차 개조</li><li class="kpi">. 기간 : '25년 6월 ~ 11월 (6개월), 최종보고서 입수 (11/26)</li></ul></div>
+        <div class="section"><div class="section-title">🖼 슬라이드 이미지 (15개)</div><div class="img-grid"><a href="2026-monthly-plan-images/2026-01/광학기술센터/slide05_01.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/광학기술센터/slide05_01.png" alt="슬라이드5" title="슬라이드 5" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/광학기술센터/slide05_02.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/광학기술센터/slide05_02.png" alt="슬라이드5" title="슬라이드 5" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/광학기술센터/slide05_03.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/광학기술센터/slide05_03.png" alt="슬라이드5" title="슬라이드 5" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/광학기술센터/slide07_04.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/광학기술센터/slide07_04.png" alt="슬라이드7" title="슬라이드 7" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/광학기술센터/slide08_05.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/광학기술센터/slide08_05.png" alt="슬라이드8" title="슬라이드 8" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/광학기술센터/slide08_06.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/광학기술센터/slide08_06.png" alt="슬라이드8" title="슬라이드 8" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/광학기술센터/slide08_07.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/광학기술센터/slide08_07.png" alt="슬라이드8" title="슬라이드 8" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/광학기술센터/slide09_08.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/광학기술센터/slide09_08.png" alt="슬라이드9" title="슬라이드 9" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/광학기술센터/slide10_09.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/광학기술센터/slide10_09.png" alt="슬라이드10" title="슬라이드 10" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/광학기술센터/slide10_10.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/광학기술센터/slide10_10.png" alt="슬라이드10" title="슬라이드 10" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/광학기술센터/slide10_11.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/광학기술센터/slide10_11.png" alt="슬라이드10" title="슬라이드 10" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/광학기술센터/slide11_12.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/광학기술센터/slide11_12.png" alt="슬라이드11" title="슬라이드 11" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/광학기술센터/slide11_13.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/광학기술센터/slide11_13.png" alt="슬라이드11" title="슬라이드 11" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/광학기술센터/slide12_14.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/광학기술센터/slide12_14.png" alt="슬라이드12" title="슬라이드 12" loading="lazy"></a><a href="2026-monthly-plan-images/2026-01/광학기술센터/slide12_15.png" target="_blank"><img src="2026-monthly-plan-images/2026-01/광학기술센터/slide12_15.png" alt="슬라이드12" title="슬라이드 12" loading="lazy"></a></div></div>
+      </div>
+    </div>
+    <div class="dept-card">
+      <div class="dept-header" style="background:#7030A0">
+        <span class="dept-name">연삭</span>
+        <span class="dept-file">11. 2026년 1월 기술경영계획보고_연삭팀.pptx</span>
+      </div>
+      <div class="dept-body">
+        <div class="section">
+          <div class="section-title">📋 주요 과제 / 목차</div>
+          <ul class="task-list"><li>※ 파일 용량 초과(290MB)로 자동 추출 불가 — 직접 확인 필요</li></ul>
+        </div>
+        
+        
+        
+      </div>
+    </div>
+    <div class="dept-card">
+      <div class="dept-header" style="background:#808080">
+        <span class="dept-name">관리</span>
+        <span class="dept-file">12. 2026년 1월 경영계획보고_관리팀.pptx</span>
+      </div>
+      <div class="dept-body">
+        <div class="section">
+          <div class="section-title">📋 주요 과제 / 목차</div>
+          <ul class="task-list"><li>1. 중대재해 처벌법</li><li>2. 중대재해 처벌법 정부정책 및 사례</li><li>3. 중대재해 처벌법 체크리스트</li><li>4. 중대재해 처벌법 담당자 선임상태</li><li>3. 중대재해 처벌법 현재상태 및 향후 계획</li><li>2. 연간계획 진행내용</li><li>3. 일반 총무(행정), 시설관리, 복지, 소방업무 등</li><li>4. 시설관리업무</li></ul>
+        </div>
+        
+        <div class="section"><div class="section-title">📊 KPI / 성과지표</div><ul class="task-list"><li class="kpi">중대재해 예방을 위해 3대 사고유형 핵심 관리 대상</li></ul></div>
+        
+      </div>
+    </div>
+    </div>
+  </section>
+  <section class="month-section" id="2026-02">
+    <div class="month-header">
+      <h2>2026년 2월</h2>
+      <span class="badge">13개 팀/부서</span>
+    </div>
+    <div class="dept-grid">
+      
+    <div class="dept-card">
+      <div class="dept-header" style="background:#4472C4">
+        <span class="dept-name">영업</span>
+        <span class="dept-file">1. 2026년 2월 기술경영계획보고_영업.pptx</span>
+      </div>
+      <div class="dept-body">
+        <div class="section">
+          <div class="section-title">📋 주요 과제 / 목차</div>
+          <ul class="task-list"><li>1. 시장 – 매출/수주 현황</li></ul>
+        </div>
+        <div class="section"><div class="section-title">⚠️ 이슈 / 현안</div><ul class="task-list"><li class="issue">부착 분리 문제로 전수 수동 작업 중</li></ul></div>
+        <div class="section"><div class="section-title">📊 KPI / 성과지표</div><ul class="task-list"><li class="kpi">6개월매출 계획</li><li class="kpi">수주 잔고(5,432만/23대)</li><li class="kpi">6개월 수주 계획</li><li class="kpi">2. 시장 – 6개월 매출 계획</li><li class="kpi">3개월  : 확실한  Project 기재.</li></ul></div>
+        <div class="section"><div class="section-title">🖼 슬라이드 이미지 (15개)</div><div class="img-grid"><a href="2026-monthly-plan-images/2026-02/영업/slide09_01.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/영업/slide09_01.png" alt="슬라이드9" title="슬라이드 9" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/영업/slide09_02.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/영업/slide09_02.png" alt="슬라이드9" title="슬라이드 9" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/영업/slide09_03.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/영업/slide09_03.png" alt="슬라이드9" title="슬라이드 9" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/영업/slide09_04.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/영업/slide09_04.png" alt="슬라이드9" title="슬라이드 9" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/영업/slide09_05.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/영업/slide09_05.png" alt="슬라이드9" title="슬라이드 9" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/영업/slide09_06.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/영업/slide09_06.png" alt="슬라이드9" title="슬라이드 9" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/영업/slide09_07.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/영업/slide09_07.png" alt="슬라이드9" title="슬라이드 9" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/영업/slide10_08.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/영업/slide10_08.png" alt="슬라이드10" title="슬라이드 10" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/영업/slide11_09.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/영업/slide11_09.png" alt="슬라이드11" title="슬라이드 11" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/영업/slide13_10.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/영업/slide13_10.png" alt="슬라이드13" title="슬라이드 13" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/영업/slide13_11.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/영업/slide13_11.png" alt="슬라이드13" title="슬라이드 13" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/영업/slide15_12.jpg" target="_blank"><img src="2026-monthly-plan-images/2026-02/영업/slide15_12.jpg" alt="슬라이드15" title="슬라이드 15" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/영업/slide16_13.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/영업/slide16_13.png" alt="슬라이드16" title="슬라이드 16" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/영업/slide16_14.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/영업/slide16_14.png" alt="슬라이드16" title="슬라이드 16" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/영업/slide16_15.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/영업/slide16_15.png" alt="슬라이드16" title="슬라이드 16" loading="lazy"></a></div></div>
+      </div>
+    </div>
+    <div class="dept-card">
+      <div class="dept-header" style="background:#ED7D31">
+        <span class="dept-name">품질CS그룹</span>
+        <span class="dept-file">2. 2026년 2월 기술경영계획보고_품질CS그룹.pptx</span>
+      </div>
+      <div class="dept-body">
+        <div class="section">
+          <div class="section-title">📋 주요 과제 / 목차</div>
+          <ul class="task-list"><li>1. 무상기간 내 A/S 제로화</li></ul>
+        </div>
+        <div class="section"><div class="section-title">⚠️ 이슈 / 현안</div><ul class="task-list"><li class="issue">USB 2.0 송수신기 고장 이슈</li><li class="issue">한국야금 검사기 #5 F1 Z축 스트록 부족</li><li class="issue">다른 그립퍼 조립시 문제없음(원인 확인 힘듬)</li></ul></div>
+        <div class="section"><div class="section-title">📊 KPI / 성과지표</div><ul class="task-list"><li class="kpi">14.8%</li><li class="kpi">17.8%</li><li class="kpi">21.5%</li><li class="kpi">86건 중 19건</li><li class="kpi">22.1%</li></ul></div>
+        <div class="section"><div class="section-title">🖼 슬라이드 이미지 (15개)</div><div class="img-grid"><a href="2026-monthly-plan-images/2026-02/품질CS그룹/slide04_01.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/품질CS그룹/slide04_01.png" alt="슬라이드4" title="슬라이드 4" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/품질CS그룹/slide06_02.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/품질CS그룹/slide06_02.png" alt="슬라이드6" title="슬라이드 6" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/품질CS그룹/slide08_03.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/품질CS그룹/slide08_03.png" alt="슬라이드8" title="슬라이드 8" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/품질CS그룹/slide08_04.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/품질CS그룹/slide08_04.png" alt="슬라이드8" title="슬라이드 8" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/품질CS그룹/slide10_05.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/품질CS그룹/slide10_05.png" alt="슬라이드10" title="슬라이드 10" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/품질CS그룹/slide10_06.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/품질CS그룹/slide10_06.png" alt="슬라이드10" title="슬라이드 10" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/품질CS그룹/slide10_07.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/품질CS그룹/slide10_07.png" alt="슬라이드10" title="슬라이드 10" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/품질CS그룹/slide10_08.jpg" target="_blank"><img src="2026-monthly-plan-images/2026-02/품질CS그룹/slide10_08.jpg" alt="슬라이드10" title="슬라이드 10" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/품질CS그룹/slide10_09.jpg" target="_blank"><img src="2026-monthly-plan-images/2026-02/품질CS그룹/slide10_09.jpg" alt="슬라이드10" title="슬라이드 10" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/품질CS그룹/slide10_10.jpg" target="_blank"><img src="2026-monthly-plan-images/2026-02/품질CS그룹/slide10_10.jpg" alt="슬라이드10" title="슬라이드 10" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/품질CS그룹/slide11_11.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/품질CS그룹/slide11_11.png" alt="슬라이드11" title="슬라이드 11" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/품질CS그룹/slide11_12.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/품질CS그룹/slide11_12.png" alt="슬라이드11" title="슬라이드 11" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/품질CS그룹/slide11_13.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/품질CS그룹/slide11_13.png" alt="슬라이드11" title="슬라이드 11" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/품질CS그룹/slide12_14.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/품질CS그룹/slide12_14.png" alt="슬라이드12" title="슬라이드 12" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/품질CS그룹/slide12_15.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/품질CS그룹/slide12_15.png" alt="슬라이드12" title="슬라이드 12" loading="lazy"></a></div></div>
+      </div>
+    </div>
+    <div class="dept-card">
+      <div class="dept-header" style="background:#A5A5A5">
+        <span class="dept-name">생산관리</span>
+        <span class="dept-file">2. 2026년 2월 기술경영계획보고_생산관리.pptx</span>
+      </div>
+      <div class="dept-body">
+        <div class="section">
+          <div class="section-title">📋 주요 과제 / 목차</div>
+          <ul class="task-list"><li>1. 제품 생산 관리</li></ul>
+        </div>
+        <div class="section"><div class="section-title">⚠️ 이슈 / 현안</div><ul class="task-list"><li class="issue">반복 이슈 개선 반영</li><li class="issue">이슈 관리 체계 정립</li><li class="issue">제작 진척 , 이슈 가시화</li><li class="issue">이슈 & 출하 검수 데이터화</li><li class="issue">재작업·지연 비용 제거</li></ul></div>
+        <div class="section"><div class="section-title">📊 KPI / 성과지표</div><ul class="task-list"><li class="kpi">용량 43%</li><li class="kpi">구축비용 : 550만원</li></ul></div>
+        <div class="section"><div class="section-title">🖼 슬라이드 이미지 (15개)</div><div class="img-grid"><a href="2026-monthly-plan-images/2026-02/생산관리/slide02_01.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/생산관리/slide02_01.png" alt="슬라이드2" title="슬라이드 2" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/생산관리/slide04_02.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/생산관리/slide04_02.png" alt="슬라이드4" title="슬라이드 4" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/생산관리/slide04_03.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/생산관리/slide04_03.png" alt="슬라이드4" title="슬라이드 4" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/생산관리/slide04_04.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/생산관리/slide04_04.png" alt="슬라이드4" title="슬라이드 4" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/생산관리/slide04_05.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/생산관리/slide04_05.png" alt="슬라이드4" title="슬라이드 4" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/생산관리/slide04_06.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/생산관리/slide04_06.png" alt="슬라이드4" title="슬라이드 4" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/생산관리/slide04_07.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/생산관리/slide04_07.png" alt="슬라이드4" title="슬라이드 4" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/생산관리/slide04_08.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/생산관리/slide04_08.png" alt="슬라이드4" title="슬라이드 4" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/생산관리/slide05_09.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/생산관리/slide05_09.png" alt="슬라이드5" title="슬라이드 5" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/생산관리/slide05_10.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/생산관리/slide05_10.png" alt="슬라이드5" title="슬라이드 5" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/생산관리/slide05_11.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/생산관리/slide05_11.png" alt="슬라이드5" title="슬라이드 5" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/생산관리/slide05_12.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/생산관리/slide05_12.png" alt="슬라이드5" title="슬라이드 5" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/생산관리/slide06_13.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/생산관리/slide06_13.png" alt="슬라이드6" title="슬라이드 6" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/생산관리/slide06_14.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/생산관리/slide06_14.png" alt="슬라이드6" title="슬라이드 6" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/생산관리/slide06_15.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/생산관리/slide06_15.png" alt="슬라이드6" title="슬라이드 6" loading="lazy"></a></div></div>
+      </div>
+    </div>
+    <div class="dept-card">
+      <div class="dept-header" style="background:#FFC000">
+        <span class="dept-name">구매</span>
+        <span class="dept-file">4. 2026년 2월 기술경영계획보고_구매.pptx</span>
+      </div>
+      <div class="dept-body">
+        <div class="section">
+          <div class="section-title">📋 주요 과제 / 목차</div>
+          <ul class="task-list"><li>3.   단납기 시스템 구축</li><li>4.   무상기간내 A/S 제로화</li><li>5.   정상외 관리</li><li>1. ‘26년 목표대비 실적</li></ul>
+        </div>
+        
+        <div class="section"><div class="section-title">📊 KPI / 성과지표</div><ul class="task-list"><li class="kpi">(매출) 240억/년 : 8.6억/월 누계</li><li class="kpi">-0.61억</li><li class="kpi">3.6%</li><li class="kpi">▶ 26년 매출증가에 대비 가공(4개사), 판금(4개사) 운영</li></ul></div>
+        
+      </div>
+    </div>
+    <div class="dept-card">
+      <div class="dept-header" style="background:#70AD47">
+        <span class="dept-name">기구설계HAM(Press)</span>
+        <span class="dept-file">5. 2026년 2월 기술경영계획보고_기구설계HAM팀(Press).ppt</span>
+      </div>
+      <div class="dept-body">
+        <div class="section">
+          <div class="section-title">📋 주요 과제 / 목차</div>
+          <ul class="task-list"><li>1. 신규장비 개발</li><li>2. 핵심기술 확보</li><li>3. 설계 효율화 및 표준화</li><li>4. 원가 혁신</li><li>5. 경쟁사 제품 분석</li><li>6. 제안 내용 검토</li><li>1. 신규장비 개발 (신시장 확대)</li></ul>
+        </div>
+        
+        
+        <div class="section"><div class="section-title">🖼 슬라이드 이미지 (15개)</div><div class="img-grid"><a href="2026-monthly-plan-images/2026-02/기구설계HAM(Press)/slide03_01.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/기구설계HAM(Press)/slide03_01.png" alt="슬라이드3" title="슬라이드 3" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/기구설계HAM(Press)/slide03_02.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/기구설계HAM(Press)/slide03_02.png" alt="슬라이드3" title="슬라이드 3" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/기구설계HAM(Press)/slide04_03.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/기구설계HAM(Press)/slide04_03.png" alt="슬라이드4" title="슬라이드 4" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/기구설계HAM(Press)/slide05_04.jpg" target="_blank"><img src="2026-monthly-plan-images/2026-02/기구설계HAM(Press)/slide05_04.jpg" alt="슬라이드5" title="슬라이드 5" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/기구설계HAM(Press)/slide07_05.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/기구설계HAM(Press)/slide07_05.png" alt="슬라이드7" title="슬라이드 7" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/기구설계HAM(Press)/slide08_06.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/기구설계HAM(Press)/slide08_06.png" alt="슬라이드8" title="슬라이드 8" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/기구설계HAM(Press)/slide08_07.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/기구설계HAM(Press)/slide08_07.png" alt="슬라이드8" title="슬라이드 8" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/기구설계HAM(Press)/slide08_08.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/기구설계HAM(Press)/slide08_08.png" alt="슬라이드8" title="슬라이드 8" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/기구설계HAM(Press)/slide09_09.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/기구설계HAM(Press)/slide09_09.png" alt="슬라이드9" title="슬라이드 9" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/기구설계HAM(Press)/slide09_10.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/기구설계HAM(Press)/slide09_10.png" alt="슬라이드9" title="슬라이드 9" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/기구설계HAM(Press)/slide09_11.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/기구설계HAM(Press)/slide09_11.png" alt="슬라이드9" title="슬라이드 9" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/기구설계HAM(Press)/slide10_12.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/기구설계HAM(Press)/slide10_12.png" alt="슬라이드10" title="슬라이드 10" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/기구설계HAM(Press)/slide12_13.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/기구설계HAM(Press)/slide12_13.png" alt="슬라이드12" title="슬라이드 12" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/기구설계HAM(Press)/slide12_14.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/기구설계HAM(Press)/slide12_14.png" alt="슬라이드12" title="슬라이드 12" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/기구설계HAM(Press)/slide12_15.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/기구설계HAM(Press)/slide12_15.png" alt="슬라이드12" title="슬라이드 12" loading="lazy"></a></div></div>
+      </div>
+    </div>
+    <div class="dept-card">
+      <div class="dept-header" style="background:#70AD47">
+        <span class="dept-name">기구설계HAM</span>
+        <span class="dept-file">5. 2026년 2월 기술경영계획보고_기구설계HAM팀.pptx</span>
+      </div>
+      <div class="dept-body">
+        <div class="section">
+          <div class="section-title">📋 주요 과제 / 목차</div>
+          <ul class="task-list"><li>2. 핵심 기술 확보</li><li>3. 설계 효율화 및 표준화</li><li>4. 원가 혁신</li><li>2. 신규 장비 개발</li></ul>
+        </div>
+        
+        <div class="section"><div class="section-title">📊 KPI / 성과지표</div><ul class="task-list"><li class="kpi">PVD #4호기</li><li class="kpi">PVD #5~6호기</li></ul></div>
+        <div class="section"><div class="section-title">🖼 슬라이드 이미지 (15개)</div><div class="img-grid"><a href="2026-monthly-plan-images/2026-02/기구설계HAM/slide03_01.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/기구설계HAM/slide03_01.png" alt="슬라이드3" title="슬라이드 3" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/기구설계HAM/slide04_02.jpg" target="_blank"><img src="2026-monthly-plan-images/2026-02/기구설계HAM/slide04_02.jpg" alt="슬라이드4" title="슬라이드 4" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/기구설계HAM/slide04_03.jpg" target="_blank"><img src="2026-monthly-plan-images/2026-02/기구설계HAM/slide04_03.jpg" alt="슬라이드4" title="슬라이드 4" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/기구설계HAM/slide05_04.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/기구설계HAM/slide05_04.png" alt="슬라이드5" title="슬라이드 5" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/기구설계HAM/slide06_05.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/기구설계HAM/slide06_05.png" alt="슬라이드6" title="슬라이드 6" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/기구설계HAM/slide06_06.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/기구설계HAM/slide06_06.png" alt="슬라이드6" title="슬라이드 6" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/기구설계HAM/slide06_07.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/기구설계HAM/slide06_07.png" alt="슬라이드6" title="슬라이드 6" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/기구설계HAM/slide07_08.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/기구설계HAM/slide07_08.png" alt="슬라이드7" title="슬라이드 7" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/기구설계HAM/slide07_09.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/기구설계HAM/slide07_09.png" alt="슬라이드7" title="슬라이드 7" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/기구설계HAM/slide08_10.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/기구설계HAM/slide08_10.png" alt="슬라이드8" title="슬라이드 8" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/기구설계HAM/slide08_11.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/기구설계HAM/slide08_11.png" alt="슬라이드8" title="슬라이드 8" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/기구설계HAM/slide08_12.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/기구설계HAM/slide08_12.png" alt="슬라이드8" title="슬라이드 8" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/기구설계HAM/slide09_13.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/기구설계HAM/slide09_13.png" alt="슬라이드9" title="슬라이드 9" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/기구설계HAM/slide10_14.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/기구설계HAM/slide10_14.png" alt="슬라이드10" title="슬라이드 10" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/기구설계HAM/slide10_15.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/기구설계HAM/slide10_15.png" alt="슬라이드10" title="슬라이드 10" loading="lazy"></a></div></div>
+      </div>
+    </div>
+    <div class="dept-card">
+      <div class="dept-header" style="background:#255E91">
+        <span class="dept-name">기구설계HIM</span>
+        <span class="dept-file">6. 2026년 2월 기술경영계획보고_기구설계HIM팀.ppt</span>
+      </div>
+      <div class="dept-body">
+        <div class="section">
+          <div class="section-title">📋 주요 과제 / 목차</div>
+          <ul class="task-list"><li class='empty'>추출된 과제 없음</li></ul>
+        </div>
+        
+        
+        
+      </div>
+    </div>
+    <div class="dept-card">
+      <div class="dept-header" style="background:#9E480E">
+        <span class="dept-name">제작</span>
+        <span class="dept-file">7. 2026년 2월 기술경영계획보고_제작팀.pptx</span>
+      </div>
+      <div class="dept-body">
+        <div class="section">
+          <div class="section-title">📋 주요 과제 / 목차</div>
+          <ul class="task-list"><li>7. 중국 제조 현지화 교육</li><li>8. 제작 안전 관리</li><li>9.  업무 분장</li><li>1. 장비 제작 현황</li></ul>
+        </div>
+        
+        <div class="section"><div class="section-title">📊 KPI / 성과지표</div><ul class="task-list"><li class="kpi">제작 중    : PVD(몰디노 1대, 대구텍 개조 1대, 한국야금 2대)</li><li class="kpi">포장기(선 제작(교세라향) 1대)</li><li class="kpi">출하 대기 : 포장기(YG1(선제작 개조) 1대)</li></ul></div>
+        <div class="section"><div class="section-title">🖼 슬라이드 이미지 (12개)</div><div class="img-grid"><a href="2026-monthly-plan-images/2026-02/제작/slide07_01.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/제작/slide07_01.png" alt="슬라이드7" title="슬라이드 7" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/제작/slide07_02.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/제작/slide07_02.png" alt="슬라이드7" title="슬라이드 7" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/제작/slide08_03.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/제작/slide08_03.png" alt="슬라이드8" title="슬라이드 8" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/제작/slide10_04.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/제작/slide10_04.png" alt="슬라이드10" title="슬라이드 10" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/제작/slide11_05.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/제작/slide11_05.png" alt="슬라이드11" title="슬라이드 11" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/제작/slide11_06.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/제작/slide11_06.png" alt="슬라이드11" title="슬라이드 11" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/제작/slide12_07.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/제작/slide12_07.png" alt="슬라이드12" title="슬라이드 12" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/제작/slide12_08.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/제작/slide12_08.png" alt="슬라이드12" title="슬라이드 12" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/제작/slide13_09.jpg" target="_blank"><img src="2026-monthly-plan-images/2026-02/제작/slide13_09.jpg" alt="슬라이드13" title="슬라이드 13" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/제작/slide16_10.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/제작/slide16_10.png" alt="슬라이드16" title="슬라이드 16" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/제작/slide16_11.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/제작/slide16_11.png" alt="슬라이드16" title="슬라이드 16" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/제작/slide16_12.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/제작/slide16_12.png" alt="슬라이드16" title="슬라이드 16" loading="lazy"></a></div></div>
+      </div>
+    </div>
+    <div class="dept-card">
+      <div class="dept-header" style="background:#843C0C">
+        <span class="dept-name">제어</span>
+        <span class="dept-file">8. 2026년 2월 기술경영계획보고_제어팀.pptx</span>
+      </div>
+      <div class="dept-body">
+        <div class="section">
+          <div class="section-title">📋 주요 과제 / 목차</div>
+          <ul class="task-list"><li>1. PC 시스템 안정화</li></ul>
+        </div>
+        <div class="section"><div class="section-title">⚠️ 이슈 / 현안</div><ul class="task-list"><li class="issue">데이터 기반 관리 : 간헐적 통신 불량 및 블루 스크린 이슈의 데이터 관리 및 원인규명</li><li class="issue">Bluescreen이력관리 & HW/SW 통신 이슈 -> SSD소모성 부품의 기대 수명 및 교체 현황 모니터링(Vision team 개발 프로그램 활용)-> 이슈 발생 시 대응 안 제시</li><li class="issue">PC 이슈 이력관리 및 데이터 통합 -> 이력 추적성 확보 : 장비별 설치 사양, OS업데이트, 부품 교체 이력의 디지털 통합관리-> 로그 및 덤프 파일을 클릭 한번으로 수집하는 자동화 툴 개발(Chat Gpt)</li><li class="issue">통신 관련 이슈 관리</li><li class="issue">문제가 되는 PC에 DB수집용 클릭 후 데이터 수집</li></ul></div>
+        <div class="section"><div class="section-title">📊 KPI / 성과지표</div><ul class="task-list"><li class="kpi">내용 : 카메라 8개 이상 증가시 WMX 통신이 안 붙는 현상 발생</li><li class="kpi">문제 해결 : 카메라 최대 12개까지 사용가능 할 것으로 보여지고 통신 불안정 증세 해결보임 -> WMX3로 업그레이드시도 문제해결</li><li class="kpi">원인 : 대다수 장비에 USB 연결이 최소 10개에서 최대 20개 이상 문어발식으로 연결</li><li class="kpi">외부 4개+ 내부2개</li><li class="kpi">3호기 스테이지 Y축 구동시 7HZ발생</li></ul></div>
+        <div class="section"><div class="section-title">🖼 슬라이드 이미지 (15개)</div><div class="img-grid"><a href="2026-monthly-plan-images/2026-02/제어/slide03_01.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/제어/slide03_01.png" alt="슬라이드3" title="슬라이드 3" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/제어/slide03_02.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/제어/slide03_02.png" alt="슬라이드3" title="슬라이드 3" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/제어/slide03_03.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/제어/slide03_03.png" alt="슬라이드3" title="슬라이드 3" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/제어/slide04_04.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/제어/slide04_04.png" alt="슬라이드4" title="슬라이드 4" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/제어/slide04_05.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/제어/slide04_05.png" alt="슬라이드4" title="슬라이드 4" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/제어/slide04_06.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/제어/slide04_06.png" alt="슬라이드4" title="슬라이드 4" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/제어/slide04_07.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/제어/slide04_07.png" alt="슬라이드4" title="슬라이드 4" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/제어/slide04_08.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/제어/slide04_08.png" alt="슬라이드4" title="슬라이드 4" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/제어/slide05_09.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/제어/slide05_09.png" alt="슬라이드5" title="슬라이드 5" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/제어/slide07_10.jpg" target="_blank"><img src="2026-monthly-plan-images/2026-02/제어/slide07_10.jpg" alt="슬라이드7" title="슬라이드 7" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/제어/slide07_11.jpg" target="_blank"><img src="2026-monthly-plan-images/2026-02/제어/slide07_11.jpg" alt="슬라이드7" title="슬라이드 7" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/제어/slide07_12.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/제어/slide07_12.png" alt="슬라이드7" title="슬라이드 7" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/제어/slide07_13.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/제어/slide07_13.png" alt="슬라이드7" title="슬라이드 7" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/제어/slide07_14.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/제어/slide07_14.png" alt="슬라이드7" title="슬라이드 7" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/제어/slide07_15.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/제어/slide07_15.png" alt="슬라이드7" title="슬라이드 7" loading="lazy"></a></div></div>
+      </div>
+    </div>
+    <div class="dept-card">
+      <div class="dept-header" style="background:#264478">
+        <span class="dept-name">소프트웨어</span>
+        <span class="dept-file">9. 2026년 1월 기술경영계획보고_소프트웨어팀.pptx</span>
+      </div>
+      <div class="dept-body">
+        <div class="section">
+          <div class="section-title">📋 주요 과제 / 목차</div>
+          <ul class="task-list"><li>1. 기술 개발</li><li>2. 무상 기간내 A/S 제로화</li><li>3. 원가 절감</li><li>1. 내부 인력 강화 교육</li><li>2. 시스템 / 보안</li><li>WMX2  WMX3로 컨트롤러 전환</li><li>Windows 10 단종 계획으로 인한 기존 WMX2 운영 OS 유지 불가</li></ul>
+        </div>
+        <div class="section"><div class="section-title">⚠️ 이슈 / 현안</div><ul class="task-list"><li class="issue">시퀀스 코드의 품질 향상 (기존 코드의 품질 문제 개선)</li><li class="issue">단종 시 OS 호환성 문제 제거</li><li class="issue">경면 불균일 문제</li><li class="issue">마킹 위치 문제 – 개선 전</li><li class="issue">Vision Align 수정 후 문제시</li></ul></div>
+        
+        <div class="section"><div class="section-title">🖼 슬라이드 이미지 (15개)</div><div class="img-grid"><a href="2026-monthly-plan-images/2026-02/소프트웨어/slide05_01.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/소프트웨어/slide05_01.png" alt="슬라이드5" title="슬라이드 5" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/소프트웨어/slide05_02.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/소프트웨어/slide05_02.png" alt="슬라이드5" title="슬라이드 5" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/소프트웨어/slide05_03.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/소프트웨어/slide05_03.png" alt="슬라이드5" title="슬라이드 5" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/소프트웨어/slide05_04.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/소프트웨어/slide05_04.png" alt="슬라이드5" title="슬라이드 5" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/소프트웨어/slide06_05.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/소프트웨어/slide06_05.png" alt="슬라이드6" title="슬라이드 6" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/소프트웨어/slide07_06.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/소프트웨어/slide07_06.png" alt="슬라이드7" title="슬라이드 7" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/소프트웨어/slide07_07.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/소프트웨어/slide07_07.png" alt="슬라이드7" title="슬라이드 7" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/소프트웨어/slide07_08.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/소프트웨어/slide07_08.png" alt="슬라이드7" title="슬라이드 7" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/소프트웨어/slide08_09.jpg" target="_blank"><img src="2026-monthly-plan-images/2026-02/소프트웨어/slide08_09.jpg" alt="슬라이드8" title="슬라이드 8" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/소프트웨어/slide08_10.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/소프트웨어/slide08_10.png" alt="슬라이드8" title="슬라이드 8" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/소프트웨어/slide10_11.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/소프트웨어/slide10_11.png" alt="슬라이드10" title="슬라이드 10" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/소프트웨어/slide11_12.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/소프트웨어/slide11_12.png" alt="슬라이드11" title="슬라이드 11" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/소프트웨어/slide11_13.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/소프트웨어/slide11_13.png" alt="슬라이드11" title="슬라이드 11" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/소프트웨어/slide13_14.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/소프트웨어/slide13_14.png" alt="슬라이드13" title="슬라이드 13" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/소프트웨어/slide15_15.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/소프트웨어/slide15_15.png" alt="슬라이드15" title="슬라이드 15" loading="lazy"></a></div></div>
+      </div>
+    </div>
+    <div class="dept-card">
+      <div class="dept-header" style="background:#806000">
+        <span class="dept-name">비전</span>
+        <span class="dept-file">10. 2026년 2월 기술경영계획보고_비전팀.pptx</span>
+      </div>
+      <div class="dept-body">
+        <div class="section">
+          <div class="section-title">📋 주요 과제 / 목차</div>
+          <ul class="task-list"><li>2026. 02. 기술경영계획</li></ul>
+        </div>
+        <div class="section"><div class="section-title">⚠️ 이슈 / 현안</div><ul class="task-list"><li class="issue">Feature: 각 이슈/기능 단위로 분기해 개발 후 다시 병합하는 작업용 브런치</li><li class="issue">이슈와 코드를 하나의 흐름으로 묶어, 문제의 발생→분석→수정→회고까지 전과정의 투명성과 재사용성을 높이기 위함</li><li class="issue">이슈-코드 추적성 확보: 어떤 이슈가 어떤 코드 변경으로 해결됐는지 명확</li><li class="issue">유사 문제 재발 시 빠른 해결: 과거 사례 검색/참조 용이</li><li class="issue">Jira 이슈 등록 및 브런치 생성</li></ul></div>
+        <div class="section"><div class="section-title">📊 KPI / 성과지표</div><ul class="task-list"><li class="kpi">매출: 240억원</li><li class="kpi">수출: 120만불</li></ul></div>
+        <div class="section"><div class="section-title">🖼 슬라이드 이미지 (15개)</div><div class="img-grid"><a href="2026-monthly-plan-images/2026-02/비전/slide04_01.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/비전/slide04_01.png" alt="슬라이드4" title="슬라이드 4" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/비전/slide04_02.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/비전/slide04_02.png" alt="슬라이드4" title="슬라이드 4" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/비전/slide04_03.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/비전/slide04_03.png" alt="슬라이드4" title="슬라이드 4" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/비전/slide04_04.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/비전/slide04_04.png" alt="슬라이드4" title="슬라이드 4" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/비전/slide04_05.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/비전/slide04_05.png" alt="슬라이드4" title="슬라이드 4" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/비전/slide07_06.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/비전/slide07_06.png" alt="슬라이드7" title="슬라이드 7" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/비전/slide07_07.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/비전/slide07_07.png" alt="슬라이드7" title="슬라이드 7" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/비전/slide07_08.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/비전/slide07_08.png" alt="슬라이드7" title="슬라이드 7" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/비전/slide08_09.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/비전/slide08_09.png" alt="슬라이드8" title="슬라이드 8" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/비전/slide08_10.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/비전/slide08_10.png" alt="슬라이드8" title="슬라이드 8" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/비전/slide12_11.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/비전/slide12_11.png" alt="슬라이드12" title="슬라이드 12" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/비전/slide12_12.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/비전/slide12_12.png" alt="슬라이드12" title="슬라이드 12" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/비전/slide12_13.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/비전/slide12_13.png" alt="슬라이드12" title="슬라이드 12" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/비전/slide12_14.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/비전/slide12_14.png" alt="슬라이드12" title="슬라이드 12" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/비전/slide13_15.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/비전/slide13_15.png" alt="슬라이드13" title="슬라이드 13" loading="lazy"></a></div></div>
+      </div>
+    </div>
+    <div class="dept-card">
+      <div class="dept-header" style="background:#375623">
+        <span class="dept-name">광학기술센터</span>
+        <span class="dept-file">11. 2026년 2월 기술경영계획보고_광학기술센터.pptx</span>
+      </div>
+      <div class="dept-body">
+        <div class="section">
+          <div class="section-title">📋 주요 과제 / 목차</div>
+          <ul class="task-list"><li>2026. 2. 기술경영계획</li></ul>
+        </div>
+        <div class="section"><div class="section-title">⚠️ 이슈 / 현안</div><ul class="task-list"><li class="issue">- 부품 입고 11/14 → 지연 중</li><li class="issue">장비 stroke 부족 측정 불가</li><li class="issue">Korloy 포장기 혼입검사 광택제품 이슈 검토</li><li class="issue">이슈 상황</li><li class="issue">- 포장기 #6 (#25-3) 혼입검사시 광택 제품 nose-R 측정 오류</li></ul></div>
+        <div class="section"><div class="section-title">📊 KPI / 성과지표</div><ul class="task-list"><li class="kpi">- Micro 2개소 : HIM-F 동일 광학계 및 조명</li><li class="kpi">- Side 3개소 : HIM-F 동일 광학계 및 조명</li><li class="kpi">- Macro 2개소 : 80% FOV 광학계 (旣개발)</li><li class="kpi">■ DTCL-150-3W-G-NC 제품 : 예상 광량균일도 90.0%</li><li class="kpi">- 데모 평가, power 향상 (3W→5W), UF 개선 (90→95%) 메이커 문의중</li></ul></div>
+        <div class="section"><div class="section-title">🖼 슬라이드 이미지 (15개)</div><div class="img-grid"><a href="2026-monthly-plan-images/2026-02/광학기술센터/slide05_01.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/광학기술센터/slide05_01.png" alt="슬라이드5" title="슬라이드 5" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/광학기술센터/slide06_02.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/광학기술센터/slide06_02.png" alt="슬라이드6" title="슬라이드 6" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/광학기술센터/slide06_03.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/광학기술센터/slide06_03.png" alt="슬라이드6" title="슬라이드 6" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/광학기술센터/slide06_04.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/광학기술센터/slide06_04.png" alt="슬라이드6" title="슬라이드 6" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/광학기술센터/slide06_05.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/광학기술센터/slide06_05.png" alt="슬라이드6" title="슬라이드 6" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/광학기술센터/slide07_06.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/광학기술센터/slide07_06.png" alt="슬라이드7" title="슬라이드 7" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/광학기술센터/slide08_07.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/광학기술센터/slide08_07.png" alt="슬라이드8" title="슬라이드 8" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/광학기술센터/slide09_08.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/광학기술센터/slide09_08.png" alt="슬라이드9" title="슬라이드 9" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/광학기술센터/slide09_09.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/광학기술센터/slide09_09.png" alt="슬라이드9" title="슬라이드 9" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/광학기술센터/slide09_10.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/광학기술센터/slide09_10.png" alt="슬라이드9" title="슬라이드 9" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/광학기술센터/slide09_11.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/광학기술센터/slide09_11.png" alt="슬라이드9" title="슬라이드 9" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/광학기술센터/slide09_12.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/광학기술센터/slide09_12.png" alt="슬라이드9" title="슬라이드 9" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/광학기술센터/slide09_13.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/광학기술센터/slide09_13.png" alt="슬라이드9" title="슬라이드 9" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/광학기술센터/slide09_14.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/광학기술센터/slide09_14.png" alt="슬라이드9" title="슬라이드 9" loading="lazy"></a><a href="2026-monthly-plan-images/2026-02/광학기술센터/slide09_15.png" target="_blank"><img src="2026-monthly-plan-images/2026-02/광학기술센터/slide09_15.png" alt="슬라이드9" title="슬라이드 9" loading="lazy"></a></div></div>
+      </div>
+    </div>
+    <div class="dept-card">
+      <div class="dept-header" style="background:#7030A0">
+        <span class="dept-name">연삭</span>
+        <span class="dept-file">12. 2026년 2월 기술경영계획보고_연삭팀.pptx</span>
+      </div>
+      <div class="dept-body">
+        <div class="section">
+          <div class="section-title">📋 주요 과제 / 목차</div>
+          <ul class="task-list"><li>※ 파일 용량 초과(396MB)로 자동 추출 불가 — 직접 확인 필요</li></ul>
+        </div>
+        
+        
+        
+      </div>
+    </div>
+    </div>
+  </section>
+  <section class="month-section" id="2026-03">
+    <div class="month-header">
+      <h2>2026년 3월</h2>
+      <span class="badge">12개 팀/부서</span>
+    </div>
+    <div class="dept-grid">
+      
+    <div class="dept-card">
+      <div class="dept-header" style="background:#4472C4">
+        <span class="dept-name">영업</span>
+        <span class="dept-file">1. 2026년 3월 기술경영계획보고_영업.pptx</span>
+      </div>
+      <div class="dept-body">
+        <div class="section">
+          <div class="section-title">📋 주요 과제 / 목차</div>
+          <ul class="task-list"><li>1. 시장 – 매출/수주 현황</li></ul>
+        </div>
+        <div class="section"><div class="section-title">⚠️ 이슈 / 현안</div><ul class="task-list"><li class="issue">지연/보류</li><li class="issue">지연/보류</li><li class="issue">부착 분리 문제로 전수 수동 작업 중</li></ul></div>
+        <div class="section"><div class="section-title">📊 KPI / 성과지표</div><ul class="task-list"><li class="kpi">6개월매출 계획</li><li class="kpi">수주 잔고(5,322만/16대)</li><li class="kpi">6개월 수주 계획</li><li class="kpi">1. 시장 – 6개월 매출 계획 (1분기)</li><li class="kpi">3개월  : 확실한  Project 기재.</li></ul></div>
+        <div class="section"><div class="section-title">🖼 슬라이드 이미지 (15개)</div><div class="img-grid"><a href="2026-monthly-plan-images/2026-03/영업/slide14_01.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/영업/slide14_01.png" alt="슬라이드14" title="슬라이드 14" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/영업/slide15_02.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/영업/slide15_02.png" alt="슬라이드15" title="슬라이드 15" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/영업/slide15_03.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/영업/slide15_03.png" alt="슬라이드15" title="슬라이드 15" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/영업/slide18_04.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/영업/slide18_04.png" alt="슬라이드18" title="슬라이드 18" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/영업/slide18_05.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/영업/slide18_05.png" alt="슬라이드18" title="슬라이드 18" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/영업/slide22_06.jpg" target="_blank"><img src="2026-monthly-plan-images/2026-03/영업/slide22_06.jpg" alt="슬라이드22" title="슬라이드 22" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/영업/slide23_07.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/영업/slide23_07.png" alt="슬라이드23" title="슬라이드 23" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/영업/slide23_08.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/영업/slide23_08.png" alt="슬라이드23" title="슬라이드 23" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/영업/slide23_09.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/영업/slide23_09.png" alt="슬라이드23" title="슬라이드 23" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/영업/slide23_10.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/영업/slide23_10.png" alt="슬라이드23" title="슬라이드 23" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/영업/slide25_11.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/영업/slide25_11.png" alt="슬라이드25" title="슬라이드 25" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/영업/slide25_12.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/영업/slide25_12.png" alt="슬라이드25" title="슬라이드 25" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/영업/slide25_13.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/영업/slide25_13.png" alt="슬라이드25" title="슬라이드 25" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/영업/slide25_14.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/영업/slide25_14.png" alt="슬라이드25" title="슬라이드 25" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/영업/slide25_15.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/영업/slide25_15.png" alt="슬라이드25" title="슬라이드 25" loading="lazy"></a></div></div>
+      </div>
+    </div>
+    <div class="dept-card">
+      <div class="dept-header" style="background:#ED7D31">
+        <span class="dept-name">품질CS그룹</span>
+        <span class="dept-file">2. 2026년 3월 기술경영계획보고_품질CS그룹.pptx</span>
+      </div>
+      <div class="dept-body">
+        <div class="section">
+          <div class="section-title">📋 주요 과제 / 목차</div>
+          <ul class="task-list"><li>1. 무상기간 내 A/S 제로화</li></ul>
+        </div>
+        <div class="section"><div class="section-title">⚠️ 이슈 / 현안</div><ul class="task-list"><li class="issue">2026年 협력업체 불량율</li><li class="issue">USB 2.0 송수신기 고장 이슈</li><li class="issue">한국야금 검사기 #5 F1 Z축 스트록 부족</li><li class="issue">다른 그립퍼 조립시 문제없음(원인 확인 힘듬)</li></ul></div>
+        <div class="section"><div class="section-title">📊 KPI / 성과지표</div><ul class="task-list"><li class="kpi">14.8%</li><li class="kpi">17.8%</li><li class="kpi">21.5%</li><li class="kpi">96건 중 21건</li><li class="kpi">21.9%</li></ul></div>
+        <div class="section"><div class="section-title">🖼 슬라이드 이미지 (15개)</div><div class="img-grid"><a href="2026-monthly-plan-images/2026-03/품질CS그룹/slide04_01.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/품질CS그룹/slide04_01.png" alt="슬라이드4" title="슬라이드 4" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/품질CS그룹/slide04_02.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/품질CS그룹/slide04_02.png" alt="슬라이드4" title="슬라이드 4" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/품질CS그룹/slide06_03.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/품질CS그룹/slide06_03.png" alt="슬라이드6" title="슬라이드 6" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/품질CS그룹/slide08_04.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/품질CS그룹/slide08_04.png" alt="슬라이드8" title="슬라이드 8" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/품질CS그룹/slide08_05.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/품질CS그룹/slide08_05.png" alt="슬라이드8" title="슬라이드 8" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/품질CS그룹/slide11_06.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/품질CS그룹/slide11_06.png" alt="슬라이드11" title="슬라이드 11" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/품질CS그룹/slide11_07.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/품질CS그룹/slide11_07.png" alt="슬라이드11" title="슬라이드 11" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/품질CS그룹/slide11_08.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/품질CS그룹/slide11_08.png" alt="슬라이드11" title="슬라이드 11" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/품질CS그룹/slide11_09.jpg" target="_blank"><img src="2026-monthly-plan-images/2026-03/품질CS그룹/slide11_09.jpg" alt="슬라이드11" title="슬라이드 11" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/품질CS그룹/slide11_10.jpg" target="_blank"><img src="2026-monthly-plan-images/2026-03/품질CS그룹/slide11_10.jpg" alt="슬라이드11" title="슬라이드 11" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/품질CS그룹/slide11_11.jpg" target="_blank"><img src="2026-monthly-plan-images/2026-03/품질CS그룹/slide11_11.jpg" alt="슬라이드11" title="슬라이드 11" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/품질CS그룹/slide12_12.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/품질CS그룹/slide12_12.png" alt="슬라이드12" title="슬라이드 12" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/품질CS그룹/slide12_13.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/품질CS그룹/slide12_13.png" alt="슬라이드12" title="슬라이드 12" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/품질CS그룹/slide12_14.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/품질CS그룹/slide12_14.png" alt="슬라이드12" title="슬라이드 12" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/품질CS그룹/slide13_15.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/품질CS그룹/slide13_15.png" alt="슬라이드13" title="슬라이드 13" loading="lazy"></a></div></div>
+      </div>
+    </div>
+    <div class="dept-card">
+      <div class="dept-header" style="background:#A5A5A5">
+        <span class="dept-name">생산관리</span>
+        <span class="dept-file">3. 2026년 3월 기술경영계획보고_생산관리.pptx</span>
+      </div>
+      <div class="dept-body">
+        <div class="section">
+          <div class="section-title">📋 주요 과제 / 목차</div>
+          <ul class="task-list"><li>1. 제품 생산 관리</li></ul>
+        </div>
+        <div class="section"><div class="section-title">⚠️ 이슈 / 현안</div><ul class="task-list"><li class="issue">반복 이슈 개선 반영</li><li class="issue">이슈 관리 체계 정립</li><li class="issue">제작 진척 , 이슈 가시화</li><li class="issue">이슈 & 출하 검수 데이터화</li><li class="issue">재작업·지연 비용 제거</li></ul></div>
+        <div class="section"><div class="section-title">📊 KPI / 성과지표</div><ul class="task-list"><li class="kpi">용량 43%</li><li class="kpi">구축비용 : 600만원</li></ul></div>
+        <div class="section"><div class="section-title">🖼 슬라이드 이미지 (15개)</div><div class="img-grid"><a href="2026-monthly-plan-images/2026-03/생산관리/slide02_01.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/생산관리/slide02_01.png" alt="슬라이드2" title="슬라이드 2" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/생산관리/slide04_02.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/생산관리/slide04_02.png" alt="슬라이드4" title="슬라이드 4" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/생산관리/slide04_03.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/생산관리/slide04_03.png" alt="슬라이드4" title="슬라이드 4" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/생산관리/slide04_04.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/생산관리/slide04_04.png" alt="슬라이드4" title="슬라이드 4" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/생산관리/slide04_05.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/생산관리/slide04_05.png" alt="슬라이드4" title="슬라이드 4" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/생산관리/slide04_06.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/생산관리/slide04_06.png" alt="슬라이드4" title="슬라이드 4" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/생산관리/slide04_07.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/생산관리/slide04_07.png" alt="슬라이드4" title="슬라이드 4" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/생산관리/slide04_08.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/생산관리/slide04_08.png" alt="슬라이드4" title="슬라이드 4" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/생산관리/slide05_09.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/생산관리/slide05_09.png" alt="슬라이드5" title="슬라이드 5" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/생산관리/slide05_10.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/생산관리/slide05_10.png" alt="슬라이드5" title="슬라이드 5" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/생산관리/slide05_11.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/생산관리/slide05_11.png" alt="슬라이드5" title="슬라이드 5" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/생산관리/slide05_12.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/생산관리/slide05_12.png" alt="슬라이드5" title="슬라이드 5" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/생산관리/slide06_13.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/생산관리/slide06_13.png" alt="슬라이드6" title="슬라이드 6" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/생산관리/slide06_14.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/생산관리/slide06_14.png" alt="슬라이드6" title="슬라이드 6" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/생산관리/slide06_15.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/생산관리/slide06_15.png" alt="슬라이드6" title="슬라이드 6" loading="lazy"></a></div></div>
+      </div>
+    </div>
+    <div class="dept-card">
+      <div class="dept-header" style="background:#FFC000">
+        <span class="dept-name">구매</span>
+        <span class="dept-file">4. 2026년 3월 기술경영계획보고_구매.pptx</span>
+      </div>
+      <div class="dept-body">
+        <div class="section">
+          <div class="section-title">📋 주요 과제 / 목차</div>
+          <ul class="task-list"><li>3.   단납기 시스템 구축</li><li>4.   무상기간내 A/S 제로화</li><li>5.   정상외 관리</li><li>1. ‘26년 목표대비 실적</li></ul>
+        </div>
+        
+        <div class="section"><div class="section-title">📊 KPI / 성과지표</div><ul class="task-list"><li class="kpi">(매출) 240억/년 : 17.8억/월 누계</li><li class="kpi">-1.26억</li><li class="kpi">7.4%</li><li class="kpi">▶ 26년 매출증가에 대비 가공(4개사), 판금(4개사) 운영</li></ul></div>
+        
+      </div>
+    </div>
+    <div class="dept-card">
+      <div class="dept-header" style="background:#70AD47">
+        <span class="dept-name">기구설계HAM(Press)</span>
+        <span class="dept-file">5. 2026년 3월 기술경영계획보고_기구설계HAM팀(Press).ppt</span>
+      </div>
+      <div class="dept-body">
+        <div class="section">
+          <div class="section-title">📋 주요 과제 / 목차</div>
+          <ul class="task-list"><li>1. 신규장비 개발</li><li>2. 핵심기술 확보</li><li>3. 설계 효율화 및 표준화</li><li>4. 원가 혁신</li><li>5. 경쟁사 제품 분석</li><li>6. 제안 내용 검토</li><li>1. 신규장비 개발 (신시장 확대)</li></ul>
+        </div>
+        
+        
+        <div class="section"><div class="section-title">🖼 슬라이드 이미지 (15개)</div><div class="img-grid"><a href="2026-monthly-plan-images/2026-03/기구설계HAM(Press)/slide03_01.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/기구설계HAM(Press)/slide03_01.png" alt="슬라이드3" title="슬라이드 3" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/기구설계HAM(Press)/slide03_02.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/기구설계HAM(Press)/slide03_02.png" alt="슬라이드3" title="슬라이드 3" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/기구설계HAM(Press)/slide04_03.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/기구설계HAM(Press)/slide04_03.png" alt="슬라이드4" title="슬라이드 4" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/기구설계HAM(Press)/slide05_04.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/기구설계HAM(Press)/slide05_04.png" alt="슬라이드5" title="슬라이드 5" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/기구설계HAM(Press)/slide05_05.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/기구설계HAM(Press)/slide05_05.png" alt="슬라이드5" title="슬라이드 5" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/기구설계HAM(Press)/slide06_06.jpg" target="_blank"><img src="2026-monthly-plan-images/2026-03/기구설계HAM(Press)/slide06_06.jpg" alt="슬라이드6" title="슬라이드 6" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/기구설계HAM(Press)/slide08_07.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/기구설계HAM(Press)/slide08_07.png" alt="슬라이드8" title="슬라이드 8" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/기구설계HAM(Press)/slide09_08.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/기구설계HAM(Press)/slide09_08.png" alt="슬라이드9" title="슬라이드 9" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/기구설계HAM(Press)/slide09_09.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/기구설계HAM(Press)/slide09_09.png" alt="슬라이드9" title="슬라이드 9" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/기구설계HAM(Press)/slide09_10.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/기구설계HAM(Press)/slide09_10.png" alt="슬라이드9" title="슬라이드 9" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/기구설계HAM(Press)/slide10_11.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/기구설계HAM(Press)/slide10_11.png" alt="슬라이드10" title="슬라이드 10" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/기구설계HAM(Press)/slide10_12.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/기구설계HAM(Press)/slide10_12.png" alt="슬라이드10" title="슬라이드 10" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/기구설계HAM(Press)/slide10_13.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/기구설계HAM(Press)/slide10_13.png" alt="슬라이드10" title="슬라이드 10" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/기구설계HAM(Press)/slide11_14.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/기구설계HAM(Press)/slide11_14.png" alt="슬라이드11" title="슬라이드 11" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/기구설계HAM(Press)/slide13_15.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/기구설계HAM(Press)/slide13_15.png" alt="슬라이드13" title="슬라이드 13" loading="lazy"></a></div></div>
+      </div>
+    </div>
+    <div class="dept-card">
+      <div class="dept-header" style="background:#70AD47">
+        <span class="dept-name">기구설계HAM</span>
+        <span class="dept-file">5. 2026년 3월 기술경영계획보고_기구설계HAM팀.pptx</span>
+      </div>
+      <div class="dept-body">
+        <div class="section">
+          <div class="section-title">📋 주요 과제 / 목차</div>
+          <ul class="task-list"><li>1. 핵심기술 확보</li><li>2. 신규 장비 개발</li><li>3. 설계 효율화 및 표준화</li><li>4. 원가 혁신</li><li>1. 핵심기술 확보</li></ul>
+        </div>
+        <div class="section"><div class="section-title">⚠️ 이슈 / 현안</div><ul class="task-list"><li class="issue">현 문제점</li></ul></div>
+        <div class="section"><div class="section-title">📊 KPI / 성과지표</div><ul class="task-list"><li class="kpi">100% 측정하는건 아니고, 런아웃을통해 동심도 추정 및 판단</li><li class="kpi">Air Blow 1개소 추가 방안</li><li class="kpi">PVD #4호기</li><li class="kpi">PVD #5~6호기</li></ul></div>
+        <div class="section"><div class="section-title">🖼 슬라이드 이미지 (15개)</div><div class="img-grid"><a href="2026-monthly-plan-images/2026-03/기구설계HAM/slide03_01.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/기구설계HAM/slide03_01.png" alt="슬라이드3" title="슬라이드 3" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/기구설계HAM/slide03_02.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/기구설계HAM/slide03_02.png" alt="슬라이드3" title="슬라이드 3" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/기구설계HAM/slide03_03.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/기구설계HAM/slide03_03.png" alt="슬라이드3" title="슬라이드 3" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/기구설계HAM/slide04_04.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/기구설계HAM/slide04_04.png" alt="슬라이드4" title="슬라이드 4" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/기구설계HAM/slide04_05.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/기구설계HAM/slide04_05.png" alt="슬라이드4" title="슬라이드 4" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/기구설계HAM/slide05_06.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/기구설계HAM/slide05_06.png" alt="슬라이드5" title="슬라이드 5" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/기구설계HAM/slide05_07.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/기구설계HAM/slide05_07.png" alt="슬라이드5" title="슬라이드 5" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/기구설계HAM/slide05_08.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/기구설계HAM/slide05_08.png" alt="슬라이드5" title="슬라이드 5" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/기구설계HAM/slide05_09.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/기구설계HAM/slide05_09.png" alt="슬라이드5" title="슬라이드 5" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/기구설계HAM/slide05_10.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/기구설계HAM/slide05_10.png" alt="슬라이드5" title="슬라이드 5" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/기구설계HAM/slide05_11.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/기구설계HAM/slide05_11.png" alt="슬라이드5" title="슬라이드 5" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/기구설계HAM/slide06_12.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/기구설계HAM/slide06_12.png" alt="슬라이드6" title="슬라이드 6" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/기구설계HAM/slide06_13.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/기구설계HAM/slide06_13.png" alt="슬라이드6" title="슬라이드 6" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/기구설계HAM/slide07_14.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/기구설계HAM/slide07_14.png" alt="슬라이드7" title="슬라이드 7" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/기구설계HAM/slide07_15.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/기구설계HAM/slide07_15.png" alt="슬라이드7" title="슬라이드 7" loading="lazy"></a></div></div>
+      </div>
+    </div>
+    <div class="dept-card">
+      <div class="dept-header" style="background:#255E91">
+        <span class="dept-name">기구설계HIM</span>
+        <span class="dept-file">6. 2026년 3월 기술경영계획보고_기구설계HIM팀.ppt</span>
+      </div>
+      <div class="dept-body">
+        <div class="section">
+          <div class="section-title">📋 주요 과제 / 목차</div>
+          <ul class="task-list"><li class='empty'>추출된 과제 없음</li></ul>
+        </div>
+        
+        
+        
+      </div>
+    </div>
+    <div class="dept-card">
+      <div class="dept-header" style="background:#9E480E">
+        <span class="dept-name">제작</span>
+        <span class="dept-file">7. 2026년 3월 기술경영계획보고_제작팀.pptx</span>
+      </div>
+      <div class="dept-body">
+        <div class="section">
+          <div class="section-title">📋 주요 과제 / 목차</div>
+          <ul class="task-list"><li>7. 중국 제조 현지화 교육</li><li>8. 제작 안전 관리</li><li>9. 제작현장 AI 적용</li><li>10. 업무 분장</li><li>1. 장비 제작 현황</li></ul>
+        </div>
+        <div class="section"><div class="section-title">⚠️ 이슈 / 현안</div><ul class="task-list"><li class="issue">제작 품질 이슈 관리</li><li class="issue">MMC 검사기 클리닝 이슈</li><li class="issue">이슈 마무리 후 뒤처리 미비(조치자의 마음가짐)</li><li class="issue">제작 후 많은 이슈로 인한 변경 사항으로 불특정 다수의 이슈 처리</li><li class="issue">이슈 조치에 대한 처리 창구 단일화</li></ul></div>
+        <div class="section"><div class="section-title">📊 KPI / 성과지표</div><ul class="task-list"><li class="kpi">제작 중    : Press(몰디노 1대), PVD(한국야금 2대)</li><li class="kpi">S/W, QC  : Press(메이써루이 1대), PVD(몰디노 1대, 대구텍 개조 1대), 포장기(선 제작(교세라향) 1대)</li><li class="kpi">출하 대기 : 소결취출기(CTA 1대), PVD(Unloading : CTA 1대), CVD(CTA 1대)</li><li class="kpi">1개의 Main 공압으로 분개해서 각  Unit 별로 공급이 되는</li></ul></div>
+        <div class="section"><div class="section-title">🖼 슬라이드 이미지 (15개)</div><div class="img-grid"><a href="2026-monthly-plan-images/2026-03/제작/slide06_01.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/제작/slide06_01.png" alt="슬라이드6" title="슬라이드 6" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/제작/slide07_02.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/제작/slide07_02.png" alt="슬라이드7" title="슬라이드 7" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/제작/slide08_03.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/제작/slide08_03.png" alt="슬라이드8" title="슬라이드 8" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/제작/slide08_04.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/제작/slide08_04.png" alt="슬라이드8" title="슬라이드 8" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/제작/slide09_05.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/제작/slide09_05.png" alt="슬라이드9" title="슬라이드 9" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/제작/slide09_06.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/제작/slide09_06.png" alt="슬라이드9" title="슬라이드 9" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/제작/slide10_07.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/제작/slide10_07.png" alt="슬라이드10" title="슬라이드 10" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/제작/slide12_08.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/제작/slide12_08.png" alt="슬라이드12" title="슬라이드 12" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/제작/slide13_09.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/제작/slide13_09.png" alt="슬라이드13" title="슬라이드 13" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/제작/slide13_10.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/제작/slide13_10.png" alt="슬라이드13" title="슬라이드 13" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/제작/slide14_11.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/제작/slide14_11.png" alt="슬라이드14" title="슬라이드 14" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/제작/slide14_12.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/제작/slide14_12.png" alt="슬라이드14" title="슬라이드 14" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/제작/slide15_13.jpg" target="_blank"><img src="2026-monthly-plan-images/2026-03/제작/slide15_13.jpg" alt="슬라이드15" title="슬라이드 15" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/제작/slide18_14.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/제작/slide18_14.png" alt="슬라이드18" title="슬라이드 18" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/제작/slide18_15.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/제작/slide18_15.png" alt="슬라이드18" title="슬라이드 18" loading="lazy"></a></div></div>
+      </div>
+    </div>
+    <div class="dept-card">
+      <div class="dept-header" style="background:#843C0C">
+        <span class="dept-name">제어</span>
+        <span class="dept-file">8. 2026년 3월 기술경영계획보고_제어팀.pptx</span>
+      </div>
+      <div class="dept-body">
+        <div class="section">
+          <div class="section-title">📋 주요 과제 / 목차</div>
+          <ul class="task-list"><li>1. PC 시스템 안정화</li></ul>
+        </div>
+        <div class="section"><div class="section-title">⚠️ 이슈 / 현안</div><ul class="task-list"><li class="issue">데이터 관리: 블루스크린(BSOD) 및 통신 불량의 원인을 데이터로 규명.</li><li class="issue">Bluescreen이력관리 & HW/SW 통신 이슈 -> SSD소모성 부품의 기대 수명 및 교체 현황 모니터링(Vision team 개발 프로그램 활용)-> 이슈 발생 시 대응 안 제시</li><li class="issue">PC 이슈 이력관리 및 데이터 통합 -> 이력 추적성 확보 : 장비별 설치 사양, OS업데이트, 부품 교체 이력의 디지털 통합관리-> 로그 및 덤프 파일을 클릭 한번으로 수집하는 자동화 툴 개발(Chat Gpt)</li><li class="issue">통신 관련 이슈 관리</li><li class="issue">데이터 관리: 블루스크린(BSOD) 및 통신 불량의 원인을 데이터로 규명.</li></ul></div>
+        <div class="section"><div class="section-title">📊 KPI / 성과지표</div><ul class="task-list"><li class="kpi">내용 : 카메라 8개 이상 증가 시 WMX 통신이 안 붙는 현상 발생</li><li class="kpi">문제 해결 : 카메라 최대 12개까지 사용가능 할 것으로 보여지고 통신 불안정 증세 해결보임 -> WMX3로 업그레이드시도 문제해결</li><li class="kpi">원인 : 대다수 장비에 USB 연결이 최소 10개에서 최대 20개 이상 문어발식으로 연결</li><li class="kpi">외부 4개+ 내부2개</li><li class="kpi">3호기 스테이지 Y축 구동시 7HZ발생</li></ul></div>
+        <div class="section"><div class="section-title">🖼 슬라이드 이미지 (15개)</div><div class="img-grid"><a href="2026-monthly-plan-images/2026-03/제어/slide03_01.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/제어/slide03_01.png" alt="슬라이드3" title="슬라이드 3" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/제어/slide03_02.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/제어/slide03_02.png" alt="슬라이드3" title="슬라이드 3" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/제어/slide05_03.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/제어/slide05_03.png" alt="슬라이드5" title="슬라이드 5" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/제어/slide05_04.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/제어/slide05_04.png" alt="슬라이드5" title="슬라이드 5" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/제어/slide05_05.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/제어/slide05_05.png" alt="슬라이드5" title="슬라이드 5" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/제어/slide06_06.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/제어/slide06_06.png" alt="슬라이드6" title="슬라이드 6" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/제어/slide06_07.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/제어/slide06_07.png" alt="슬라이드6" title="슬라이드 6" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/제어/slide06_08.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/제어/slide06_08.png" alt="슬라이드6" title="슬라이드 6" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/제어/slide06_09.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/제어/slide06_09.png" alt="슬라이드6" title="슬라이드 6" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/제어/slide06_10.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/제어/slide06_10.png" alt="슬라이드6" title="슬라이드 6" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/제어/slide07_11.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/제어/slide07_11.png" alt="슬라이드7" title="슬라이드 7" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/제어/slide08_12.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/제어/slide08_12.png" alt="슬라이드8" title="슬라이드 8" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/제어/slide08_13.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/제어/slide08_13.png" alt="슬라이드8" title="슬라이드 8" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/제어/slide10_14.jpg" target="_blank"><img src="2026-monthly-plan-images/2026-03/제어/slide10_14.jpg" alt="슬라이드10" title="슬라이드 10" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/제어/slide10_15.jpg" target="_blank"><img src="2026-monthly-plan-images/2026-03/제어/slide10_15.jpg" alt="슬라이드10" title="슬라이드 10" loading="lazy"></a></div></div>
+      </div>
+    </div>
+    <div class="dept-card">
+      <div class="dept-header" style="background:#264478">
+        <span class="dept-name">소프트웨어</span>
+        <span class="dept-file">9. 2026년 3월 기술경영계획보고_소프트웨어팀.pptx</span>
+      </div>
+      <div class="dept-body">
+        <div class="section">
+          <div class="section-title">📋 주요 과제 / 목차</div>
+          <ul class="task-list"><li>1. 기술 개발</li><li>2. 무상 기간내 A/S 제로화</li><li>3. 원가 절감</li><li>1. 내부 인력 강화 교육</li><li>2. 시스템 / 보안</li><li>WMX2  WMX3로 컨트롤러 전환</li><li>Windows 10 단종 계획으로 인한 기존 WMX2 운영 OS 유지 불가</li></ul>
+        </div>
+        <div class="section"><div class="section-title">⚠️ 이슈 / 현안</div><ul class="task-list"><li class="issue">시퀀스 코드의 품질 향상 (기존 코드의 품질 문제 개선)</li><li class="issue">단종 시 OS 호환성 문제 제거</li><li class="issue">경면 불균일 문제</li><li class="issue">마킹 위치 문제 – 개선 전</li><li class="issue">Vision Align 수정 후 문제시</li></ul></div>
+        
+        <div class="section"><div class="section-title">🖼 슬라이드 이미지 (15개)</div><div class="img-grid"><a href="2026-monthly-plan-images/2026-03/소프트웨어/slide05_01.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/소프트웨어/slide05_01.png" alt="슬라이드5" title="슬라이드 5" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/소프트웨어/slide05_02.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/소프트웨어/slide05_02.png" alt="슬라이드5" title="슬라이드 5" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/소프트웨어/slide05_03.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/소프트웨어/slide05_03.png" alt="슬라이드5" title="슬라이드 5" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/소프트웨어/slide05_04.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/소프트웨어/slide05_04.png" alt="슬라이드5" title="슬라이드 5" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/소프트웨어/slide06_05.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/소프트웨어/slide06_05.png" alt="슬라이드6" title="슬라이드 6" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/소프트웨어/slide07_06.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/소프트웨어/slide07_06.png" alt="슬라이드7" title="슬라이드 7" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/소프트웨어/slide07_07.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/소프트웨어/slide07_07.png" alt="슬라이드7" title="슬라이드 7" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/소프트웨어/slide07_08.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/소프트웨어/slide07_08.png" alt="슬라이드7" title="슬라이드 7" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/소프트웨어/slide08_09.jpg" target="_blank"><img src="2026-monthly-plan-images/2026-03/소프트웨어/slide08_09.jpg" alt="슬라이드8" title="슬라이드 8" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/소프트웨어/slide08_10.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/소프트웨어/slide08_10.png" alt="슬라이드8" title="슬라이드 8" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/소프트웨어/slide10_11.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/소프트웨어/slide10_11.png" alt="슬라이드10" title="슬라이드 10" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/소프트웨어/slide11_12.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/소프트웨어/slide11_12.png" alt="슬라이드11" title="슬라이드 11" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/소프트웨어/slide11_13.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/소프트웨어/slide11_13.png" alt="슬라이드11" title="슬라이드 11" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/소프트웨어/slide12_14.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/소프트웨어/slide12_14.png" alt="슬라이드12" title="슬라이드 12" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/소프트웨어/slide12_15.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/소프트웨어/slide12_15.png" alt="슬라이드12" title="슬라이드 12" loading="lazy"></a></div></div>
+      </div>
+    </div>
+    <div class="dept-card">
+      <div class="dept-header" style="background:#806000">
+        <span class="dept-name">비전</span>
+        <span class="dept-file">10. 2026년 3월 기술경영계획보고_비전팀.pptx</span>
+      </div>
+      <div class="dept-body">
+        <div class="section">
+          <div class="section-title">📋 주요 과제 / 목차</div>
+          <ul class="task-list"><li>2026. 03. 기술경영계획</li></ul>
+        </div>
+        <div class="section"><div class="section-title">⚠️ 이슈 / 현안</div><ul class="task-list"><li class="issue">Feature: 각 이슈/기능 단위로 분기해 개발 후 다시 병합하는 작업용 브런치</li><li class="issue">이슈와 코드를 하나의 흐름으로 묶어, 문제의 발생→분석→수정→회고까지 전과정의 투명성과 재사용성을 높이기 위함</li><li class="issue">이슈-코드 추적성 확보: 어떤 이슈가 어떤 코드 변경으로 해결됐는지 명확</li><li class="issue">유사 문제 재발 시 빠른 해결: 과거 사례 검색/참조 용이</li><li class="issue">Jira 이슈 등록 및 브런치 생성</li></ul></div>
+        <div class="section"><div class="section-title">📊 KPI / 성과지표</div><ul class="task-list"><li class="kpi">매출: 240억원</li><li class="kpi">수출: 120만불</li></ul></div>
+        <div class="section"><div class="section-title">🖼 슬라이드 이미지 (15개)</div><div class="img-grid"><a href="2026-monthly-plan-images/2026-03/비전/slide04_01.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/비전/slide04_01.png" alt="슬라이드4" title="슬라이드 4" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/비전/slide04_02.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/비전/slide04_02.png" alt="슬라이드4" title="슬라이드 4" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/비전/slide04_03.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/비전/slide04_03.png" alt="슬라이드4" title="슬라이드 4" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/비전/slide04_04.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/비전/slide04_04.png" alt="슬라이드4" title="슬라이드 4" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/비전/slide04_05.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/비전/slide04_05.png" alt="슬라이드4" title="슬라이드 4" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/비전/slide04_06.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/비전/slide04_06.png" alt="슬라이드4" title="슬라이드 4" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/비전/slide07_07.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/비전/slide07_07.png" alt="슬라이드7" title="슬라이드 7" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/비전/slide07_08.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/비전/slide07_08.png" alt="슬라이드7" title="슬라이드 7" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/비전/slide07_09.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/비전/slide07_09.png" alt="슬라이드7" title="슬라이드 7" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/비전/slide07_10.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/비전/slide07_10.png" alt="슬라이드7" title="슬라이드 7" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/비전/slide08_11.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/비전/slide08_11.png" alt="슬라이드8" title="슬라이드 8" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/비전/slide08_12.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/비전/slide08_12.png" alt="슬라이드8" title="슬라이드 8" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/비전/slide08_13.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/비전/slide08_13.png" alt="슬라이드8" title="슬라이드 8" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/비전/slide09_14.jpg" target="_blank"><img src="2026-monthly-plan-images/2026-03/비전/slide09_14.jpg" alt="슬라이드9" title="슬라이드 9" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/비전/slide10_15.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/비전/slide10_15.png" alt="슬라이드10" title="슬라이드 10" loading="lazy"></a></div></div>
+      </div>
+    </div>
+    <div class="dept-card">
+      <div class="dept-header" style="background:#375623">
+        <span class="dept-name">광학기술센터</span>
+        <span class="dept-file">11. 2026년 3월 기술경영계획보고_광학기술센터.pptx</span>
+      </div>
+      <div class="dept-body">
+        <div class="section">
+          <div class="section-title">📋 주요 과제 / 목차</div>
+          <ul class="task-list"><li>2026. 3. 기술경영계획</li></ul>
+        </div>
+        <div class="section"><div class="section-title">⚠️ 이슈 / 현안</div><ul class="task-list"><li class="issue">→ 제한적 사용 가능한 수준 (UI 및 오류 예외처리 필요)</li><li class="issue">- 부품 입고 11/14 → 지연 중</li><li class="issue">장비 stroke 부족 측정 불가</li></ul></div>
+        <div class="section"><div class="section-title">📊 KPI / 성과지표</div><ul class="task-list"><li class="kpi">- Micro 2개소 : HIM-F 동일 광학계 및 조명</li><li class="kpi">- Side 3개소 : HIM-F 동일 광학계 및 조명</li><li class="kpi">- Macro 2개소 : 80% FOV 광학계 (旣개발)</li><li class="kpi">. 고객 요구 사항 : ① 과/미연삭 검사(1개소), ② 핀부러짐 검사(2개소)</li><li class="kpi">■ DTCL-150-3W-G-NC 제품 : 예상 광량균일도 90.0%</li></ul></div>
+        <div class="section"><div class="section-title">🖼 슬라이드 이미지 (15개)</div><div class="img-grid"><a href="2026-monthly-plan-images/2026-03/광학기술센터/slide05_01.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/광학기술센터/slide05_01.png" alt="슬라이드5" title="슬라이드 5" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/광학기술센터/slide06_02.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/광학기술센터/slide06_02.png" alt="슬라이드6" title="슬라이드 6" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/광학기술센터/slide06_03.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/광학기술센터/slide06_03.png" alt="슬라이드6" title="슬라이드 6" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/광학기술센터/slide06_04.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/광학기술센터/slide06_04.png" alt="슬라이드6" title="슬라이드 6" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/광학기술센터/slide06_05.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/광학기술센터/slide06_05.png" alt="슬라이드6" title="슬라이드 6" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/광학기술센터/slide07_06.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/광학기술센터/slide07_06.png" alt="슬라이드7" title="슬라이드 7" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/광학기술센터/slide07_07.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/광학기술센터/slide07_07.png" alt="슬라이드7" title="슬라이드 7" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/광학기술센터/slide07_08.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/광학기술센터/slide07_08.png" alt="슬라이드7" title="슬라이드 7" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/광학기술센터/slide08_09.jpg" target="_blank"><img src="2026-monthly-plan-images/2026-03/광학기술센터/slide08_09.jpg" alt="슬라이드8" title="슬라이드 8" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/광학기술센터/slide08_10.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/광학기술센터/slide08_10.png" alt="슬라이드8" title="슬라이드 8" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/광학기술센터/slide09_11.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/광학기술센터/slide09_11.png" alt="슬라이드9" title="슬라이드 9" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/광학기술센터/slide09_12.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/광학기술센터/slide09_12.png" alt="슬라이드9" title="슬라이드 9" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/광학기술센터/slide09_13.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/광학기술센터/slide09_13.png" alt="슬라이드9" title="슬라이드 9" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/광학기술센터/slide09_14.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/광학기술센터/slide09_14.png" alt="슬라이드9" title="슬라이드 9" loading="lazy"></a><a href="2026-monthly-plan-images/2026-03/광학기술센터/slide09_15.png" target="_blank"><img src="2026-monthly-plan-images/2026-03/광학기술센터/slide09_15.png" alt="슬라이드9" title="슬라이드 9" loading="lazy"></a></div></div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+<div style="text-align:center; padding: 24px; color:#888; font-size:0.8rem;">
+  생성: 2026-04-05 · db-manager 자동 분석 · 원본 PPT에서 텍스트 자동 추출 (이미지/그래프 내 텍스트 미포함)
+</div>
+</body>
+</html>

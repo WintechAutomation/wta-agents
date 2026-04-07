@@ -1,0 +1,52 @@
+{
+  "pilot_recall_10": 60.0,
+  "pilot_recall_27": 23.1,
+  "missed_10": [
+    "Resolution:측정 가능 제품군 제한",
+    "Issue:Korloy 포장기 #6 밝기 비대칭",
+    "Resolution:컨베이어 벨트 기준 조명 높이 10mm 수준 세팅 권장",
+    "Resolution:광축 중심과 조명 중심 상하좌우 ±1mm 이내 세팅"
+  ],
+  "missed_27": [
+    "Process:위치 검사",
+    "Resolution:측정 가능 제품군 제한",
+    "Product:T형 인서트",
+    "Product:B형 인서트",
+    "Process:CB 방향 구분",
+    "Product:S형 인서트",
+    "Resolution:컨베이어 벨트 기준 조명 높이 10mm 수준 세팅 권장",
+    "Resolution:광축 중심과 조명 중심 상하좌우 ±1mm 이내 세팅",
+    "Product:W형 인서트",
+    "Process:앞뒷면 구분",
+    "Product:V형 인서트",
+    "Issue:혼입 검사 이슈",
+    "Process:혼입 분류",
+    "Process:NoseR 측정",
+    "Tool:코그넥스",
+    "Person:정진원",
+    "Issue:Korloy 포장기 #6 밝기 비대칭",
+    "Process:레시피 에디터",
+    "Product:C형 인서트",
+    "Process:CB 혼입 비교"
+  ],
+  "type_distribution": {
+    "Issue": 84,
+    "Product": 14,
+    "Process": 158,
+    "Tool": 30,
+    "Component": 208,
+    "Resolution": 58,
+    "Customer": 11,
+    "Equipment": 54,
+    "Person": 7
+  },
+  "resolution_total": 58,
+  "resolution_short": 55,
+  "resolution_specific": 3,
+  "gap_patterns": [
+    "Resolution 통합/요약",
+    "보조 장비 누락",
+    "운영 정책 조치 누락",
+    "Component 모델번호 누락"
+  ]
+}

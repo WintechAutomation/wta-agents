@@ -1,0 +1,149 @@
+
+============================================================
+[1/18] Starting: CBN (2 files)
+[1/18] OK CBN (1s)
+
+STDERR: [batch] 20:38:58 Processing 2 files (0 PDF + 2 DOCX) from CBN
+[batch] 20:38:58 [1/2] Dain_Precision_cBN_User_Manual.docx
+[batch] 20:38:58   Skip (already embedded): Dain_Precision_cBN_User_Manual.docx
+[batch] 20:38:58 [2/2] Maintenance.docx
+[batch] 20:38:58   Skip (already parsed): Maintenance.docx
+[batch] 20:38:58 
+Done: 0 processed, 0 chunks, 0 errors
+
+============================================================
+[2/18] Starting: CVD (33 files)
+[2/18] OK CVD (2s)
+
+STDERR: ip (already parsed): Zhuzhou_CVD_3_6_Outline_Manual.docx
+[batch] 20:39:00 [31/33] Zhuzhou_DiamondCVD2UnitUser_Manual.pdf
+[batch] 20:39:00   Skip (already parsed): Zhuzhou_DiamondCVD2UnitUser_Manual.pdf
+[batch] 20:39:00 [32/33] cvd_Manual_Chinese.pdf
+[batch] 20:39:00   Skip (already parsed): cvd_Manual_Chinese.pdf
+[batch] 20:39:00 [33/33] zccct_CVD_3456_User_Manual.pdf
+[batch] 20:39:00   Skip (already parsed): zccct_CVD_3456_User_Manual.pdf
+[batch] 20:39:00 
+Done: 0 processed, 0 chunks, 4 errors
+
+============================================================
+[3/18] Starting: Double_Side_Grinder (7 files)
+[3/18] OK Double_Side_Grinder (30s)
+
+STDERR: e.docx
+[batch] 20:39:30   FAIL: Korea_Tungsten_Double_Side_Grinder_Conveyor_Type_Maintenance.docx -- current transaction is aborted, commands ignored until end of transaction block
+
+[batch] 20:39:30 [7/7] Korea_Tungsten_Double_Side_Grinder_Equipment_Outline_Manual.docx
+[batch] 20:39:30   FAIL: Korea_Tungsten_Double_Side_Grinder_Equipment_Outline_Manual.docx -- current transaction is aborted, commands ignored until end of transaction block
+
+[batch] 20:39:30 
+Done: 0 processed, 0 chunks, 7 errors
+
+============================================================
+[4/18] Starting: Fujisanki_Grinding_Handler (17 files)
+[4/18] OK Fujisanki_Grinding_Handler (220s)
+
+STDERR: ock
+
+[batch] 20:43:11 [16/17] YG-1_Fujisanki_Outline_Manual.docx
+[batch] 20:43:11   FAIL: YG-1_Fujisanki_Outline_Manual.docx -- current transaction is aborted, commands ignored until end of transaction block
+
+[batch] 20:43:11 [17/17] YG1_Fujisanki_Grinder_Handler_Manual_ver1.4_1.pdf
+[batch] 20:43:11   FAIL: YG1_Fujisanki_Grinder_Handler_Manual_ver1.4_1.pdf -- current transaction is aborted, commands ignored until end of transaction block
+
+[batch] 20:43:11 
+Done: 0 processed, 0 chunks, 17 errors
+
+============================================================
+[5/18] Starting: Honing (26 files)
+[5/18] OK Honing (1222s)
+MuPDF error: format error: No common ancestor in structure tree
+
+MuPDF error: format error: No common ancestor in structure tree
+
+MuPDF error: format error: No common ancestor in structure tree
+
+
+STDERR: pment_Outline_Manual.docx -- 0 chunks, 2 images
+[batch] 21:00:11 [24/26] SW_Manual.pdf
+[batch] 21:00:41   FAIL: SW_Manual.pdf -- expected 2000 dimensions, not 1024
+
+[batch] 21:00:41 [25/26] WBM_2th_Handler_20181126.pdf
+[batch] 21:03:27   FAIL: WBM_2th_Handler_20181126.pdf -- expected 2000 dimensions, not 1024
+
+[batch] 21:03:27 [26/26] WBM_Maintenance.docx
+[batch] 21:03:33   FAIL: WBM_Maintenance.docx -- expected 2000 dimensions, not 1024
+
+[batch] 21:03:33 
+Done: 0 processed, 0 chunks, 22 errors
+
+============================================================
+[6/18] Starting: Honing_Inspection (6 files)
+[6/18] OK Honing_Inspection (75s)
+
+STDERR: ection_Manual_20251020.pdf
+[batch] 21:04:47   Skip (already parsed): Honing_ShapeInspection_Manual_20251020.pdf
+[batch] 21:04:47 [5/6] Korea_Kyocera_Honing_ShapeInspection_Manual.docx
+[batch] 21:04:47   Skip (already parsed): Korea_Kyocera_Honing_ShapeInspection_Manual.docx
+[batch] 21:04:47 [6/6] Korea_Kyocera_Honing_ShapeInspection_Manual_PDF.pdf
+[batch] 21:04:47   Skip (already parsed): Korea_Kyocera_Honing_ShapeInspection_Manual_PDF.pdf
+[batch] 21:04:47 
+Done: 0 processed, 0 chunks, 0 errors
+
+============================================================
+[7/18] Starting: Inspection (75 files)
+[7/18] OK Inspection (5s)
+
+STDERR: er_Manual_ver.3_F10F25.docx
+[batch] 21:04:52 [73/75] User_Manual_ver.6.1_F1_IOI2.0_ver.docx
+[batch] 21:04:52   Skip (already parsed): User_Manual_ver.6.1_F1_IOI2.0_ver.docx
+[batch] 21:04:52 [74/75] User_Manual_ver.6.1_F1_IOI2.0_ver_jp.docx
+[batch] 21:04:52   Skip (already parsed): User_Manual_ver.6.1_F1_IOI2.0_ver_jp.docx
+[batch] 21:04:52 [75/75] ZCCCT_User_Manual_F10.pdf
+[batch] 21:04:52   Skip (already parsed): ZCCCT_User_Manual_F10.pdf
+[batch] 21:04:52 
+Done: 0 processed, 0 chunks, 11 errors
+
+============================================================
+[8/18] Starting: Labeling (8 files)
+
+============================================================
+[1/18] Starting: CBN (2 files)
+[1/18] OK CBN (24s)
+
+STDERR: [batch] 21:07:32 Embed URL: http://182.224.6.147:11434/api/embed (batch=128)
+[batch] 21:07:32 Processing 2 files (0 PDF + 2 DOCX) from CBN
+[batch] 21:07:32 [1/2] Dain_Precision_cBN_User_Manual.docx
+[batch] 21:07:32   Skip (already embedded): Dain_Precision_cBN_User_Manual.docx
+[batch] 21:07:32 [2/2] Maintenance.docx
+[batch] 21:07:32   Skip (already parsed): Maintenance.docx
+[batch] 21:07:32 
+Done: 0 processed, 0 chunks, 0 errors
+
+============================================================
+[2/18] Starting: CVD (33 files)
+[2/18] OK CVD (3s)
+
+STDERR: ip (already parsed): Zhuzhou_CVD_3_6_Outline_Manual.docx
+[batch] 21:07:35 [31/33] Zhuzhou_DiamondCVD2UnitUser_Manual.pdf
+[batch] 21:07:36   Skip (already parsed): Zhuzhou_DiamondCVD2UnitUser_Manual.pdf
+[batch] 21:07:36 [32/33] cvd_Manual_Chinese.pdf
+[batch] 21:07:36   Skip (already parsed): cvd_Manual_Chinese.pdf
+[batch] 21:07:36 [33/33] zccct_CVD_3456_User_Manual.pdf
+[batch] 21:07:36   Skip (already parsed): zccct_CVD_3456_User_Manual.pdf
+[batch] 21:07:36 
+Done: 0 processed, 0 chunks, 4 errors
+
+============================================================
+[3/18] Starting: Double_Side_Grinder (7 files)
+[3/18] OK Double_Side_Grinder (1s)
+
+STDERR: ouble_Side_Grinder_4_Conveyor_Type_Maintenance.docx
+[batch] 21:07:37 [6/7] Korea_Tungsten_Double_Side_Grinder_Conveyor_Type_Maintenance.docx
+[batch] 21:07:37   Skip (already parsed): Korea_Tungsten_Double_Side_Grinder_Conveyor_Type_Maintenance.docx
+[batch] 21:07:37 [7/7] Korea_Tungsten_Double_Side_Grinder_Equipment_Outline_Manual.docx
+[batch] 21:07:37   Skip (already parsed): Korea_Tungsten_Double_Side_Grinder_Equipment_Outline_Manual.docx
+[batch] 21:07:37 
+Done: 0 processed, 0 chunks, 0 errors
+
+============================================================
+[4/18] Starting: Fujisanki_Grinding_Handler (17 files)

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>GraphRAG PoC Phase 1 Result (v2)</title><style>
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Malgun Gothic', sans-serif; max-width: 960px; margin: 0 auto; padding: 32px 40px; color: #24292f; line-height: 1.65; background: #fff; }
+h1 { font-size: 2em; border-bottom: 1px solid #d0d7de; padding-bottom: 0.3em; margin-top: 24px; }
+h2 { font-size: 1.5em; border-bottom: 1px solid #d0d7de; padding-bottom: 0.3em; margin-top: 24px; }
+h3 { font-size: 1.25em; margin-top: 24px; }
+h4 { font-size: 1em; margin-top: 24px; }
+hr { border: none; border-top: 1px solid #d0d7de; margin: 24px 0; }
+p { margin: 0 0 16px; }
+ul, ol { padding-left: 2em; margin: 0 0 16px; }
+li { margin: 0.25em 0; }
+a { color: #0969da; text-decoration: none; }
+a:hover { text-decoration: underline; }
+code { background: rgba(175,184,193,0.2); padding: 0.2em 0.4em; border-radius: 6px; font-size: 85%; font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace; }
+pre { background: #f6f8fa; padding: 16px; border-radius: 6px; overflow-x: auto; font-size: 85%; line-height: 1.45; }
+pre code { background: transparent; padding: 0; border-radius: 0; font-size: 100%; }
+table { border-collapse: collapse; margin: 0 0 16px; display: block; overflow-x: auto; max-width: 100%; }
+table th, table td { border: 1px solid #d0d7de; padding: 6px 13px; }
+table th { background: #f6f8fa; font-weight: 600; text-align: left; }
+table tr:nth-child(2n) { background: #f6f8fa; }
+blockquote { margin: 0 0 16px; padding: 0 1em; color: #656d76; border-left: 0.25em solid #d0d7de; }
+strong { font-weight: 600; color: #1f2328; }
+em { font-style: italic; }
+</style></head>
+<body>
+<h1>GraphRAG PoC Phase 1 결과 + 31페이지 확장</h1>
+<p><strong>작성일</strong>: 2026-04-05  <strong>v2 (31페이지 확장)</strong></p>
+<p><strong>작성자</strong>: research-agent</p>
+<p><strong>대상 데이터</strong>: 포장혼입검사·장비물류·분말검사·연삭측정제어·호닝신뢰성 Confluence 31페이지</p>
+<p><strong>Neo4j</strong>: bolt://localhost:7688 (Docker, wta-neo4j-poc)</p>
+<hr>
+<h2>요약</h2>
+<table>
+<thead><tr><th>항목</th><th>Phase 1 (7페이지)</th><th>확장 (31페이지)</th></tr></thead>
+<tbody>
+<tr><td>노드</td><td>27개</td><td><strong>71개</strong></td></tr>
+<tr><td>관계</td><td>27개</td><td><strong>58개</strong></td></tr>
+<tr><td>TC 커버리지</td><td>5/5 PASS (100%)</td><td>—</td></tr>
+<tr><td>SIMILAR_TO 관계</td><td>1개 (동일 주제)</td><td><strong>3개 (크로스주제 포함)</strong></td></tr>
+<tr><td>주제 수</td><td>1개</td><td><strong>5개</strong></td></tr>
+</tbody></table>
+<hr>
+<h2>1. Phase 1: 포장혼입검사 7페이지 결과</h2>
+<h3>1.1 그래프 적재</h3>
+<p>포장혼입검사 7개 Confluence 페이지에서 수동 추출한 엔티티·관계를 Neo4j에 적재.</p>
+<p><strong>노드 (27개)</strong></p>
+<table>
+<thead><tr><th>유형</th><th>수</th><th>주요 항목</th></tr></thead>
+<tbody>
+<tr><td>Process</td><td>7</td><td>혼입 분류, CB 방향 구분, 앞뒷면 구분, CB 혼입 비교, NoseR 측정, 레시피 에디터, 위치 검사</td></tr>
+<tr><td>Product</td><td>6</td><td>C/W/T/S/V/B형 인서트</td></tr>
+<tr><td>Component</td><td>3</td><td>acA2500-14gm(카메라), M2514-MP2(렌즈), DOMELIGHT100(조명 LWD 169mm)</td></tr>
+<tr><td>Issue</td><td>3</td><td>밝기비대칭(2026-01), 혼입검사이슈(2025-02), 글자검출(2025-01)</td></tr>
+<tr><td>Resolution</td><td>3</td><td>R001(광축±1mm), R002(조명높이10mm), R003(제품군제한)</td></tr>
+<tr><td>Equipment</td><td>2</td><td>Korloy 포장기 #6, 혼입검사기</td></tr>
+<tr><td>Customer</td><td>1</td><td>Korloy (한국야금)</td></tr>
+<tr><td>Person</td><td>1</td><td>정진원 (소프트웨어팀)</td></tr>
+<tr><td>Tool</td><td>1</td><td>코그넥스</td></tr>
+</tbody></table>
+<p><strong>관계 (27개)</strong></p>
+<table>
+<thead><tr><th>유형</th><th>수</th><th>의미</th></tr></thead>
+<tbody>
+<tr><td>HAS_SUBPROCESS</td><td>6</td><td>혼입분류 → 6개 하위공정</td></tr>
+<tr><td>USES_TOOL</td><td>5</td><td>공정 → 코그넥스</td></tr>
+<tr><td>RESOLVED_BY</td><td>3</td><td>이슈 → 조치방안</td></tr>
+<tr><td>INVOLVES_COMPONENT</td><td>3</td><td>이슈 → 광학계 부품</td></tr>
+<tr><td>USES_COMPONENT</td><td>3</td><td>장비 → 광학계 부품</td></tr>
+<tr><td>HAS_ISSUE</td><td>2</td><td>장비 → 이슈</td></tr>
+<tr><td>INVOLVED_IN</td><td>2</td><td>제품 → 이슈</td></tr>
+<tr><td>OWNS/MAINTAINS/SIMILAR_TO</td><td>3</td><td>각 1개</td></tr>
+</tbody></table>
+<h3>1.2 그래프 구조</h3>
+<pre><code>[Korloy] ─OWNS─▶ [Korloy 포장기 #6]
+                       │
+                  HAS_ISSUE
+                       │
+            [밝기비대칭 2026-01] ◀─INVOLVED_IN─ [C형 인서트]
+            │    │                               [W형 인서트]
+   RESOLVED_BY   INVOLVES_COMPONENT
+        │         │       │       │
+       R001      cam     lens   DOMELIGHT100
+       R002               (LWD 169mm)
+       R003
+            │
+       SIMILAR_TO (score=0.82)
+            │
+       [혼입검사이슈 2025-02]
+
+[혼입 분류] ─HAS_SUBPROCESS─▶ [CB 방향 구분]
+                             ▶ [앞뒷면 구분]
+                             ▶ [CB 혼입 비교]
+                             ▶ [NoseR 측정]
+                             ▶ [레시피 에디터]
+                             ▶ [위치 검사]
+각 공정 ─USES_TOOL─▶ [코그넥스]
+
+[정진원] ─MAINTAINS─▶ [혼입 분류]</code></pre>
+<h3>1.3 TC-01~05 쿼리 테스트: <strong>5/5 PASS (100%)</strong></h3>
+<table>
+<thead><tr><th>TC</th><th>질문</th><th>결과</th></tr></thead>
+<tbody>
+<tr><td>TC-01</td><td>유사 이슈 탐색</td><td>밝기비대칭(2026-01) ↔ 혼입검사이슈(2025-02), score=0.82</td></tr>
+<tr><td>TC-02</td><td>장비별 이슈+조치 체인</td><td>Korloy 포장기 #6 → R001·R002·R003 3개 조치 즉시 조회</td></tr>
+<tr><td>TC-03</td><td>제품-이슈 연결</td><td>C형·W형 경면 인서트 → 밝기비대칭 이슈</td></tr>
+<tr><td>TC-04</td><td>공정 계층 구조</td><td>혼입분류 → 6개 하위공정</td></tr>
+<tr><td>TC-05</td><td>광학계 부품 구성</td><td>acA2500-14gm + M2514-MP2 + DOMELIGHT100(LWD 169mm)</td></tr>
+</tbody></table>
+<p><strong>그래프 단독 커버리지: 100% (5/5)</strong></p>
+<hr>
+<h2>2. 31페이지 확장 결과</h2>
+<h3>2.1 전체 그래프 현황</h3>
+<p><strong>노드 (71개)</strong></p>
+<table>
+<thead><tr><th>유형</th><th>수</th><th>추가 주요 항목</th></tr></thead>
+<tbody>
+<tr><td>Process</td><td>16</td><td>팔레트교체, 툴교체, AGV원점설정, 비전측정공정, 초음파세척, 재현성검증 등</td></tr>
+<tr><td>Component</td><td>14</td><td>KP3 팔레트, 동축조명, T-BLU, FlatDome, G1Z/G2Z/G3Z 그리퍼, NA-9289, IPC-610-BTO, 제진대 등</td></tr>
+<tr><td>Equipment</td><td>10</td><td>후지산기 핸들러, 교세라 양면연삭 핸들러, AGV, ATC, Press-IM CELL LINE, WTA 양면연삭 핸들러, 호닝 형상 검사기, 간저우 하이썽 1호기</td></tr>
+<tr><td>Issue</td><td>10</td><td>신규물류이슈, 클램프센서, 스토퍼헐거움, 측면Burr불가, FlatDome광량부족, 크래비스통신불가, C-type오측정 등</td></tr>
+<tr><td>Resolution</td><td>10</td><td>R010~R041 (간격링조치, 감지센서부착, FlatDome미러, Strobe조명, imageJ합성, 크래비스교체 등)</td></tr>
+<tr><td>Product</td><td>6</td><td>(포장혼입검사 동일)</td></tr>
+<tr><td>Customer</td><td>3</td><td>Korloy, 교세라, 간저우 하이썽</td></tr>
+<tr><td>Person</td><td>1</td><td>정진원</td></tr>
+<tr><td>Tool</td><td>1</td><td>코그넥스</td></tr>
+</tbody></table>
+<p><strong>관계 (58개)</strong></p>
+<table>
+<thead><tr><th>유형</th><th>수</th></tr></thead>
+<tbody>
+<tr><td>USES_COMPONENT</td><td>14</td></tr>
+<tr><td>RESOLVED_BY</td><td>10</td></tr>
+<tr><td>HAS_SUBPROCESS</td><td>8</td></tr>
+<tr><td>INVOLVES_COMPONENT</td><td>7</td></tr>
+<tr><td>HAS_ISSUE</td><td>6</td></tr>
+<tr><td>USES_TOOL / USES_PROCESS</td><td>5</td></tr>
+<tr><td>OWNS</td><td>4</td></tr>
+<tr><td><strong>SIMILAR_TO</strong></td><td><strong>3</strong></td></tr>
+<tr><td>INVOLVED_IN / MAINTAINS</td><td>3</td></tr>
+</tbody></table>
+<h3>2.2 주제별 이슈 분포</h3>
+<table>
+<thead><tr><th>주제</th><th>페이지 수</th><th>이슈 수</th><th>조치방안 수</th></tr></thead>
+<tbody>
+<tr><td>포장혼입검사</td><td>7</td><td>3</td><td>3</td></tr>
+<tr><td>장비물류</td><td>9</td><td>3</td><td>2</td></tr>
+<tr><td>분말검사</td><td>2</td><td>2</td><td>3</td></tr>
+<tr><td>연삭측정제어</td><td>4</td><td>0</td><td>0</td></tr>
+<tr><td>호닝신뢰성</td><td>9</td><td>2</td><td>2</td></tr>
+<tr><td><strong>합계</strong></td><td><strong>31</strong></td><td><strong>10</strong></td><td><strong>10</strong></td></tr>
+</tbody></table>
+<hr>
+<h2>3. 핵심 발견: 크로스주제 SIMILAR_TO</h2>
+<blockquote><strong>이것이 GraphRAG의 킬러 데모입니다.</strong></blockquote>
+<h3>발견된 SIMILAR_TO 관계 3개</h3>
+<pre><code>[포장혼입검사]
+  Korloy 포장기 #6 밝기 비대칭 (2026-01)
+         │
+    SIMILAR_TO (score=0.82)  ← 동일 주제 내
+         │
+  혼입 검사 이슈 (2025-02)
+
+
+[분말검사]
+  측면 광학계 Burr 측정 불가 (9004482562)
+         │
+    SIMILAR_TO (score=0.90)  ← 동일 주제 내
+         │
+  FlatDome 광량 부족 (9061335043)
+
+
+[크로스주제 ★]
+  Korloy 포장기 #6 밝기 비대칭   ← 포장혼입검사
+         │
+    SIMILAR_TO (score=0.70)  ← 주제 경계를 넘는 연결
+         │
+  측면 광학계 Burr 측정 불가      ← 분말검사</code></pre>
+<h3>크로스주제 연결의 의미</h3>
+<table>
+<thead><tr><th>항목</th><th>포장혼입검사 이슈</th><th>분말검사 이슈</th></tr></thead>
+<tbody>
+<tr><td>현상</td><td>경면 인서트 이미지 밝기 비대칭</td><td>Burr 측면 시인 불가</td></tr>
+<tr><td>원인</td><td>광축 중심과 조명 중심 편차</td><td>기존 조명 구성(동축·T-BLU) 한계</td></tr>
+<tr><td><strong>공통 패턴</strong></td><td><strong>광학계 조명 불균형·불충분</strong></td><td><strong>광학계 조명 불균형·불충분</strong></td></tr>
+<tr><td>담당 팀</td><td>비전검사팀</td><td>비전검사팀</td></tr>
+<tr><td>발생 시기</td><td>2026-01, 2025-02</td><td>2025년</td></tr>
+</tbody></table>
+<p><strong>기존 벡터 RAG와의 차이</strong>:</p>
+<ul>
+<li>벡터 RAG: 각 문서를 임베딩 → "밝기 비대칭"과 "Burr 불가"는 다른 키워드라 유사도 낮음</li>
+<li>GraphRAG: 두 이슈가 모두 <code>Component{type:'조명'}</code> → <code>INVOLVES_COMPONENT</code> → <code>Issue</code> 패턴으로 연결 → 명시적 탐색으로 발견</li>
+</ul>
+<p><strong>실제 활용 시나리오</strong>: 엔지니어가 "포장 검사 장비 조명 문제 관련 사례 있나요?"라고 질의하면, 그래프 탐색으로 포장 담당자 모르게 분말 검사에서 같은 팀이 이미 해결한 유사 케이스를 즉시 연결.</p>
+<hr>
+<h2>4. LLM 자동 추출 파일럿</h2>
+<h3>4.1 시도 결과</h3>
+<table>
+<thead><tr><th>방법</th><th>모델</th><th>결과</th><th>실패 유형</th></tr></thead>
+<tbody>
+<tr><td>LightRAG 내장</td><td>gemma4:12b</td><td>0 entities / 0 relations</td><td>Structured delimiter 미생성</td></tr>
+<tr><td>Ollama 직접</td><td>qwen3.5:35b-a3b</td><td>실패</td><td>300초 타임아웃</td></tr>
+<tr><td>Ollama 직접</td><td>gemma4:e4b</td><td>실패</td><td>HTTP 500 에러</td></tr>
+<tr><td>Ollama 직접</td><td>gemma4:e2b</td><td>실패</td><td>HTTP 500 에러</td></tr>
+<tr><td>Ollama 직접</td><td>qwen3-vl:8b</td><td>실패</td><td>빈 응답</td></tr>
+<tr><td>Rule-based</td><td>정규식</td><td>4/18 매칭 (22%)</td><td>—</td></tr>
+</tbody></table>
+<h3>4.2 실패 유형 분류</h3>
+<table>
+<thead><tr><th>유형</th><th>원인</th><th>영향</th></tr></thead>
+<tbody>
+<tr><td>(A) Delimiter 미지원</td><td>LightRAG 기대 형식 미생성</td><td>LightRAG 내장 추출 전체 무효</td></tr>
+<tr><td>(B) 서버 과부하</td><td>GPU 서버 다중 요청 중 500 에러</td><td>소형 모델 포함 불안정</td></tr>
+<tr><td>(C) 모델 미적합</td><td>qwen3-vl은 멀티모달 특화</td><td>구조화 JSON 출력 불가</td></tr>
+</tbody></table>
+<h3>4.3 Phase 2 LLM 권고</h3>
+<table>
+<thead><tr><th>옵션</th><th>비용</th><th>권장 이유</th></tr></thead>
+<tbody>
+<tr><td><strong>Claude API (Haiku 4.5)</strong></td><td>~$0.003/페이지</td><td>JSON mode 신뢰성 최고, 구조화 스키마 강제 가능</td></tr>
+<tr><td>OpenAI gpt-4o-mini</td><td>~$0.005/페이지</td><td>function calling 지원</td></tr>
+<tr><td>Ollama qwen2.5-coder:32b</td><td>무료</td><td>코드/구조화 출력 특화, 전용 GPU 필요</td></tr>
+</tbody></table>
+<p>31페이지 전체 자동 추출 비용 (Claude Haiku): <strong>약 $0.09</strong> (31 × $0.003)</p>
+<hr>
+<h2>5. 온톨로지 v1.1 확정 스키마</h2>
+<h3>5.1 노드 유형</h3>
+<pre><code>(:Customer   {name, alias, country, region})
+(:Equipment  {name, model, type, location, customer, topic})
+(:Product    {type, material, rotation_count})
+(:Component  {model, name, type, lwd_design, fov_design, spec})
+(:Process    {name, description, tool, parent, page_id, topic})
+(:Issue      {page_id, title, date, status, severity, symptom, root_cause, jira_key, topic})
+(:Resolution {id, description, category, effectiveness, topic})
+(:Person     {name, dept, role})
+(:Tool       {name, type, components[]})</code></pre>
+<h3>5.2 관계 유형</h3>
+<pre><code>(Customer)  -[:OWNS]----------------&gt; (Equipment)
+(Equipment) -[:HAS_ISSUE]-----------&gt; (Issue)
+(Issue)     -[:SIMILAR_TO]----------&gt; (Issue)          ← cross_topic 플래그 지원
+(Issue)     -[:RESOLVED_BY]---------&gt; (Resolution)
+(Issue)     -[:INVOLVES_COMPONENT]--&gt; (Component)
+(Equipment) -[:USES_COMPONENT]------&gt; (Component)
+(Product)   -[:INVOLVED_IN]---------&gt; (Issue)
+(Process)   -[:HAS_SUBPROCESS]------&gt; (Process)
+(Process)   -[:USES_TOOL]-----------&gt; (Tool)
+(Equipment) -[:USES_PROCESS]--------&gt; (Process)
+(Person)    -[:MAINTAINS]-----------&gt; (Process)</code></pre>
+<hr>
+<h2>6. Phase 2 권고 및 로드맵</h2>
+<h3>6.1 Phase 2 필요성 평가</h3>
+<p><strong>벡터 인덱스 추가 시점</strong>: 자유 텍스트 질의("이 증상과 유사한 이슈 찾아줘" 형태)가 실제 운영 요건이 될 때.</p>
+<p>현재는 구조적 질의(장비명·이슈ID·날짜 기반)만으로 100% 커버 가능.</p>
+<h3>6.2 권고 로드맵</h3>
+<table>
+<thead><tr><th>단계</th><th>내용</th><th>예상 소요</th><th>선행 조건</th></tr></thead>
+<tbody>
+<tr><td><strong>즉시</strong></td><td>Claude API 연동, LLM 자동 추출 파이프라인</td><td>0.5일</td><td>Claude API 키 승인</td></tr>
+<tr><td><strong>1주</strong></td><td>31페이지 LLM 자동 추출 → 수동 결과와 정확도 비교</td><td>1일</td><td>—</td></tr>
+<tr><td><strong>2주</strong></td><td>전체 CM/UserManual 대상 확장 적재</td><td>3일</td><td>Neo4j 디스크 증설</td></tr>
+<tr><td><strong>3주</strong></td><td>Neo4j 벡터 인덱스 추가 → 하이브리드 검색</td><td>2일</td><td>—</td></tr>
+<tr><td><strong>1개월</strong></td><td>cs-agent·db-manager 연동, 실제 CS 질의 파이프라인</td><td>5일</td><td>—</td></tr>
+</tbody></table>
+<h3>6.3 비용 예측 (전체 CM 1,148페이지 기준)</h3>
+<table>
+<thead><tr><th>항목</th><th>비용</th></tr></thead>
+<tbody>
+<tr><td>LLM 추출 (Claude Haiku)</td><td>~$3.5</td></tr>
+<tr><td>Neo4j Community (무료)</td><td>$0</td></tr>
+<tr><td>총 예측</td><td><strong>~$3.5</strong></td></tr>
+</tbody></table>
+<hr>
+<h2>부록: 데이터 파일 경로</h2>
+<table>
+<thead><tr><th>파일</th><th>경로</th></tr></thead>
+<tbody>
+<tr><td>전체 텍스트</td><td><code>workspaces/research-agent/poc-texts-all/</code></td></tr>
+<tr><td>Phase 1 Cypher</td><td><code>workspaces/research-agent/poc-load-graph.py</code></td></tr>
+<tr><td>확장 Cypher</td><td><code>workspaces/research-agent/poc-load-graph-all.py</code></td></tr>
+<tr><td>텍스트 추출기</td><td><code>workspaces/research-agent/extract-all-topics.py</code></td></tr>
+<tr><td>LLM 추출 스크립트</td><td><code>workspaces/research-agent/poc-llm-extract.py</code></td></tr>
+</tbody></table>
+<hr>
+<p><em>GraphRAG PoC Phase 1 — 포장혼입검사 7페이지 + 4개 주제 확장 31페이지</em></p>
+<p><em>그래프 단독 커버리지: 100% (TC-01~05) | 크로스주제 SIMILAR_TO 3개 발견</em></p>
+</body></html>

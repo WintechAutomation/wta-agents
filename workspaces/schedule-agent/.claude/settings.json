@@ -1,0 +1,16 @@
+{
+  "enabledPlugins": {
+    "telegram@claude-plugins-official": false,
+    "playwright@claude-plugins-official": false,
+    "superpowers@claude-plugins-official": false,
+    "ralph-loop@claude-plugins-official": false,
+    "supabase@claude-plugins-official": false,
+    "atlassian@claude-plugins-official": true,
+    "frontend-design@claude-plugins-official": false,
+    "context7@claude-plugins-official": false,
+    "code-review@claude-plugins-official": false,
+    "github@claude-plugins-official": false,
+    "security-guidance@claude-plugins-official": false,
+    "skill-creator@claude-plugins-official": false
+  }
+}

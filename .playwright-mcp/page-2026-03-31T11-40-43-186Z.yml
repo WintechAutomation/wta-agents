@@ -1,0 +1,19 @@
+- generic [ref=e3]:
+  - button "Language" [ref=e6]:
+    - img [ref=e7]
+  - generic [ref=e11]:
+    - generic [ref=e12]:
+      - img "WTA" [ref=e13]
+      - heading "CS Agent" [level=1] [ref=e14]
+      - paragraph [ref=e15]: 고객 서비스 관리
+    - generic [ref=e16]:
+      - generic [ref=e17]:
+        - generic [ref=e18]: 사용자 ID
+        - textbox "사용자 ID" [active] [ref=e19]
+      - generic [ref=e20]:
+        - generic [ref=e21]: 비밀번호
+        - generic [ref=e22]:
+          - textbox "비밀번호" [ref=e23]
+          - button [ref=e24]:
+            - img [ref=e25]
+      - button "로그인" [disabled] [ref=e28]

@@ -1,0 +1,91 @@
+{
+  "_description": "WTA 공식 슬라이드/문서 템플릿 설정. Template.pptx에서 추출 (2026-04-02).",
+  "_source": "data/uploads/fa85f7cd-7ce6-4fe8-9a13-c9fc4d77b56d/Template.pptx",
+  "_updated": "2026-04-02",
+
+  "company": {
+    "name": "(주)윈텍오토메이션",
+    "department": "생산관리팀 (AI운영팀)",
+    "confidential_label": "CONFIDENTIAL"
+  },
+
+  "slide": {
+    "format": "16:9",
+    "size_inches": "11.1 x 6.2",
+    "max_width": "1100px",
+    "min_height_px": 580,
+    "font_family": "'맑은 고딕', 'Malgun Gothic', -apple-system, sans-serif",
+    "font_size": {
+      "cover_title": "40px",
+      "slide_title": "28px",
+      "body": "17px",
+      "list": "16px",
+      "box_title": "17px",
+      "box_body": "15px",
+      "caption": "13px",
+      "slide_number": "13px"
+    },
+    "colors": {
+      "primary_red": "#CC0000",
+      "safe_green": "#2E7D32",
+      "info_blue": "#1565C0",
+      "warning_orange": "#E65100",
+      "text_dark": "#222222",
+      "text_body": "#444444",
+      "text_light": "#888888",
+      "background": "#FFFFFF",
+      "card_bg": "#F8F8F8",
+      "card_border": "#E0E0E0",
+      "table_header_bg": "#F5F5F5",
+      "table_header_border": "#CC0000",
+      "page_bg": "#E8E8E8"
+    },
+    "backgrounds": {
+      "_note": "Template.pptx에서 추출한 배경 이미지. /assets/MAX/template-images/ 경로로 접근 가능.",
+      "cover": {
+        "image": "reports/MAX/template-images/image2.jpeg",
+        "url": "/assets/MAX/template-images/image2.jpeg",
+        "description": "표지 — 흰 배경, 빨간 곡선 스워시, 우하단 WTA 로고",
+        "layout_name": "제목 슬라이드"
+      },
+      "content": {
+        "image": "reports/MAX/template-images/image1.jpeg",
+        "url": "/assets/MAX/template-images/image1.jpeg",
+        "description": "내용 — 좌상단 빨간 삼각형(네트워크 패턴) + 빨간 수평선",
+        "layout_name": "제목 및 내용"
+      },
+      "contents": {
+        "image": "reports/MAX/template-images/image3.jpeg",
+        "url": "/assets/MAX/template-images/image3.jpeg",
+        "description": "목차 페이지",
+        "layout_name": "Contents"
+      },
+      "section": {
+        "image": "reports/MAX/template-images/image4.jpeg",
+        "url": "/assets/MAX/template-images/image4.jpeg",
+        "description": "구역 머리글",
+        "layout_name": "구역 머리글"
+      },
+      "ending": {
+        "image": "reports/MAX/template-images/image5.jpeg",
+        "url": "/assets/MAX/template-images/image5.jpeg",
+        "description": "끝 화면 / 빈 슬라이드",
+        "layout_name": "빈 화면"
+      }
+    }
+  },
+
+  "report": {
+    "font_family": "'맑은 고딕', sans-serif",
+    "max_width": "900px",
+    "colors": {
+      "primary": "#CC0000",
+      "text": "#333333",
+      "background": "#FFFFFF"
+    }
+  },
+
+  "exceptions": {
+    "equipment_manual": "장비 매뉴얼은 별도 양식 적용 (이 템플릿 미적용)"
+  }
+}

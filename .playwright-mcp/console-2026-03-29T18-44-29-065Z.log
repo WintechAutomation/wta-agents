@@ -1,0 +1,2 @@
+[   95601ms] [ERROR] WebSocket connection to 'wss://agent.mes-wta.com/socket.io/?EIO=4&transport=websocket' failed: Error during WebSocket handshake: Unexpected response code: 502 @ https://agent.mes-wta.com/assets/index-BP0CWmOO.js:11
+[   98385ms] [ERROR] WebSocket connection to 'wss://agent.mes-wta.com/socket.io/?EIO=4&transport=websocket' failed: Error during WebSocket handshake: Unexpected response code: 502 @ https://agent.mes-wta.com/assets/index-BP0CWmOO.js:11

@@ -1,0 +1,77 @@
+{
+  "updated_at": "2026-04-02",
+  "categories": [
+    {
+      "id": "cs-rag",
+      "title": "RAG 시스템",
+      "icon": "🧠",
+      "color": "#f97316",
+      "description": "장비 CS 이력·부품·매뉴얼 벡터 검색 시스템",
+      "items": [
+        { "label": "CS 이력 임베딩",       "value": 3318, "total": 3318, "unit": "건",  "status": "done" },
+        { "label": "부품 매뉴얼", "parsed": 892, "embedded": 810, "total": 892, "unit": "개", "status": "in_progress", "type": "dual_progress" },
+        { "label": "WTA 매뉴얼", "parsed": 321, "embedded": 0, "total": 590, "unit": "개", "status": "in_progress", "type": "dual_progress" },
+        { "label": "프로젝트 문서", "value": 0, "total": 0, "unit": "건", "status": "ready" }
+      ],
+      "meta": [
+        { "key": "벡터 저장소", "value": "PostgreSQL pgvector (localhost:55432)" },
+        { "key": "임베딩 모델", "value": "Qwen3-Embedding-8B (182.224.6.147:11434)" },
+        { "key": "벡터 테이블 1", "value": "manual.documents (부품 매뉴얼)" },
+        { "key": "벡터 테이블 2", "value": "manual.wta_documents (WTA 매뉴얼)" },
+        { "key": "벡터 테이블 3", "value": "csagent.vector_embeddings (CS 이력)" },
+        { "key": "벡터 테이블 4", "value": "public.project_documents (프로젝트 문서)" }
+      ]
+    },
+    {
+      "id": "mes-db",
+      "title": "MES 데이터베이스",
+      "icon": "🗄️",
+      "color": "#3b82f6",
+      "description": "MES 운영 DB 및 ERP 연동 데이터",
+      "items": [
+        { "label": "PostgreSQL (Supabase)", "value": null, "total": null, "unit": "", "status": "live" },
+        { "label": "ERP SQL Server",        "value": null, "total": null, "unit": "", "status": "live" }
+      ],
+      "meta": [
+        { "key": "MES DB",    "value": "PostgreSQL @ localhost:55432" },
+        { "key": "ERP DB",    "value": "SQL Server @ 192.168.1.201:1433 (읽기전용)" },
+        { "key": "스키마",     "value": "mirae. (ERP)" },
+        { "key": "접근 방식", "value": "sqlx + pgx v5" }
+      ]
+    },
+    {
+      "id": "agent-system",
+      "title": "AI 에이전트 시스템",
+      "icon": "🤖",
+      "color": "#a855f7",
+      "description": "Claude Code 기반 멀티에이전트 운영 시스템",
+      "items": [
+        { "label": "운영 에이전트",    "value": 15,   "total": null, "unit": "명",   "status": "live" },
+        { "label": "메시지 로그 (일)", "value": null, "total": null, "unit": "건/일","status": "live" },
+        { "label": "세션 로그",        "value": null, "total": null, "unit": "",     "status": "live" }
+      ],
+      "meta": [
+        { "key": "모델",      "value": "Claude Opus 4 / Sonnet 4.6 / Haiku 4.5" },
+        { "key": "통신",      "value": "MCP agent-channel (wta-hub)" },
+        { "key": "로그 경로", "value": "dashboard/logs/" },
+        { "key": "포트 범위", "value": "5600 ~ 5616" }
+      ]
+    },
+    {
+      "id": "atlassian",
+      "title": "Atlassian",
+      "icon": "📋",
+      "color": "#0ea5e9",
+      "description": "Jira 이슈 트래킹 및 Confluence 지식 문서",
+      "items": [
+        { "label": "Jira 이슈",        "value": null, "total": null, "unit": "",  "status": "live" },
+        { "label": "Confluence 문서",  "value": null, "total": null, "unit": "",  "status": "live" }
+      ],
+      "meta": [
+        { "key": "조직",     "value": "wta-mes.atlassian.net" },
+        { "key": "연동 방식","value": "Admin API (Bearer Token, 승인 대기)" },
+        { "key": "목표",     "value": "라이선스 자동 관리 (Jira/Confluence 개별 제어)" }
+      ]
+    }
+  ]
+}

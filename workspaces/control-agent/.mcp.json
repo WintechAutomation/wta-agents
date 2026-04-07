@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "agent-channel": {
+      "command": "C:\\Users\\Administrator\\.bun\\bin\\bun.exe",
+      "args": ["C:\\MES\\wta-agents\\scripts\\mcp-agent-channel.ts", "control-agent"]
+    }
+  }
+}

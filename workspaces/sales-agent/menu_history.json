@@ -1,0 +1,27 @@
+[
+  {
+    "date": "2026-04-01",
+    "restaurant": "대머리",
+    "weekday": "수"
+  },
+  {
+    "date": "2026-04-02",
+    "restaurant": "지리산",
+    "weekday": "목"
+  },
+  {
+    "date": "2026-04-03",
+    "restaurant": "후이후이",
+    "weekday": "금"
+  },
+  {
+    "date": "2026-04-06",
+    "restaurant": "시래기",
+    "weekday": "월"
+  },
+  {
+    "date": "2026-04-07",
+    "restaurant": "언양",
+    "weekday": "화"
+  }
+]

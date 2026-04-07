@@ -1,0 +1,93 @@
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - generic [ref=e7]: WTA AI
+        - generic [ref=e8]: 에이전트 대시보드 v2
+      - button "◀" [ref=e9]
+    - navigation [ref=e10]:
+      - link "🏢 에이전트 오피스" [ref=e11] [cursor=pointer]:
+        - /url: /v2/office
+        - generic [ref=e12]: 🏢
+        - generic [ref=e13]: 에이전트 오피스
+      - link "⚡ 운영 대시보드" [ref=e14] [cursor=pointer]:
+        - /url: /v2/dashboard
+        - generic [ref=e15]: ⚡
+        - generic [ref=e16]: 운영 대시보드
+      - link "📊 시스템 개요" [ref=e17] [cursor=pointer]:
+        - /url: /v2/overview
+        - generic [ref=e18]: 📊
+        - generic [ref=e19]: 시스템 개요
+      - link "📚 Knowledge Base" [ref=e20] [cursor=pointer]:
+        - /url: /v2/knowledge
+        - generic [ref=e21]: 📚
+        - generic [ref=e22]: Knowledge Base
+      - link "📋 작업 큐" [ref=e23] [cursor=pointer]:
+        - /url: /v2/task-queue
+        - generic [ref=e24]: 📋
+        - generic [ref=e25]: 작업 큐
+      - link "⏰ 스케줄 관리" [ref=e26] [cursor=pointer]:
+        - /url: /v2/cron
+        - generic [ref=e27]: ⏰
+        - generic [ref=e28]: 스케줄 관리
+      - link "💬 CS 세션" [ref=e29] [cursor=pointer]:
+        - /url: /v2/cs-sessions
+        - generic [ref=e30]: 💬
+        - generic [ref=e31]: CS 세션
+      - link "📖 기술용어집" [ref=e32] [cursor=pointer]:
+        - /url: /v2/glossary
+        - generic [ref=e33]: 📖
+        - generic [ref=e34]: 기술용어집
+      - link "🔨 매뉴얼 빌더" [ref=e35] [cursor=pointer]:
+        - /url: /v2/manual-builder
+        - generic [ref=e36]: 🔨
+        - generic [ref=e37]: 매뉴얼 빌더
+      - link "📁 업무공간" [ref=e38] [cursor=pointer]:
+        - /url: /v2/workspace
+        - generic [ref=e39]: 📁
+        - generic [ref=e40]: 업무공간
+    - generic [ref=e42]:
+      - generic [ref=e43]: 시스템
+      - generic [ref=e44]:
+        - generic [ref=e45]: 온라인
+        - generic [ref=e46]: 0/12
+      - generic [ref=e47]:
+        - generic [ref=e48]: 업타임
+        - generic [ref=e49]: 0h 0m
+  - main [ref=e50]:
+    - generic [ref=e51]:
+      - generic [ref=e52]:
+        - heading "🏢 에이전트 오피스" [level=1] [ref=e53]
+        - paragraph [ref=e54]: WTA AI 팀원 13명 — 밝고 화사한 픽셀아트 오피스
+      - generic [ref=e55]:
+        - generic [ref=e56]:
+          - generic [ref=e58]: 온라인
+          - generic [ref=e59]: "0"
+        - generic [ref=e60]:
+          - generic [ref=e62]: 오프라인
+          - generic [ref=e63]: "12"
+        - generic [ref=e64]:
+          - generic [ref=e65]: 도구 호출
+          - generic [ref=e66]: "0"
+        - generic [ref=e67]:
+          - generic [ref=e68]: 업타임
+          - generic [ref=e69]: 0h 0m
+      - generic [ref=e70]:
+        - generic [ref=e71]: 부장
+        - generic [ref=e73]: 대리
+        - generic [ref=e75]: 사원
+        - generic [ref=e77]: • 캐릭터를 탭/호버하면 정보 표시
+      - generic [ref=e80]:
+        - generic [ref=e81]: 👑 MAX
+        - generic [ref=e83]: 📊 DB매니저
+        - generic [ref=e85]: 🛠️ CS담당
+        - generic [ref=e87]: 💰 영업팀
+        - generic [ref=e89]: 💻 개발팀
+        - generic [ref=e91]: 📋 관리팀
+        - generic [ref=e93]: 🔧 크래프터
+        - generic [ref=e95]: 🔍 NC관리
+        - generic [ref=e97]: 🔬 출하품질
+        - generic [ref=e99]: 🚨 제품개선
+        - generic [ref=e101]: 💬 슬랙봇
+        - generic [ref=e103]: 📅 일정관리
+        - generic [ref=e105]: 📝 독스(Docs)

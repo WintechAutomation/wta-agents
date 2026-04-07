@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WTA GraphRAG 온톨로지 초안 v1.1</title>
+<style>
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Malgun Gothic', sans-serif; max-width: 960px; margin: 0 auto; padding: 32px 40px; color: #24292f; line-height: 1.65; background: #fff; }
+h1 { font-size: 2em; border-bottom: 1px solid #d0d7de; padding-bottom: 0.3em; margin-top: 24px; }
+h2 { font-size: 1.5em; border-bottom: 1px solid #d0d7de; padding-bottom: 0.3em; margin-top: 24px; }
+h3 { font-size: 1.25em; margin-top: 24px; }
+h4 { font-size: 1em; margin-top: 24px; }
+hr { border: none; border-top: 1px solid #d0d7de; margin: 24px 0; }
+p { margin: 0 0 16px; }
+ul, ol { padding-left: 2em; margin: 0 0 16px; }
+li { margin: 0.25em 0; }
+a { color: #0969da; text-decoration: none; }
+a:hover { text-decoration: underline; }
+code { background: rgba(175,184,193,0.2); padding: 0.2em 0.4em; border-radius: 6px; font-size: 85%; font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace; }
+pre { background: #f6f8fa; padding: 16px; border-radius: 6px; overflow-x: auto; font-size: 85%; line-height: 1.45; }
+pre code { background: transparent; padding: 0; border-radius: 0; font-size: 100%; }
+table { border-collapse: collapse; margin: 0 0 16px; display: block; overflow-x: auto; max-width: 100%; }
+table th, table td { border: 1px solid #d0d7de; padding: 6px 13px; }
+table th { background: #f6f8fa; font-weight: 600; text-align: left; }
+table tr:nth-child(2n) { background: #f6f8fa; }
+blockquote { margin: 0 0 16px; padding: 0 1em; color: #656d76; border-left: 0.25em solid #d0d7de; }
+strong { font-weight: 600; color: #1f2328; }
+em { font-style: italic; }
+</style>
+</head>
+<body>
+<h1>WTA GraphRAG 온톨로지 초안 v1.1 (통합본)</h1>
+<p><strong>작성</strong>: 2026-04-05 / <strong>작성자</strong>: MAX (crafter · db-manager 초안 통합) / <strong>용도</strong>: PoC 지식그래프 스키마 기준</p>
+<p><strong>버전</strong>: v1.1 — crafter·db-manager 피드백 반영</p>
+<hr>
+<h2>0. 설계 원칙</h2>
+<ol>
+<li><strong>도메인 엔티티(db-manager)</strong> + <strong>시스템 엔티티(crafter)</strong>를 하나의 그래프에 통합.</li>
+<li><strong>FK 실존 관계</strong>와 <strong>논리적 관계</strong>를 구분 표기.</li>
+<li>PoC 단계에서는 <strong>라벨 수 최소화</strong>(15개 내외), 속성은 핵심만.</li>
+<li><strong>Naming</strong>: 라벨은 <strong>PascalCase 단수형</strong>, 관계는 <strong>SNAKE_CASE 동사</strong>.</li>
+</ol>
+<hr>
+<h2>1. 노드 라벨 (Entity Labels)</h2>
+<h3>1-A. 도메인 (제품·장비·고객·이슈)</h3>
+<table>
+<thead><tr><th>라벨</th><th>주요 속성</th><th>출처 테이블</th></tr></thead>
+<tbody>
+<tr><td><code>Product</code></td><td>model_code, model_name, category</td><td>erp_item_master (※ shape 속성 2단계 이관 — 현재 DB 컬럼 없음)</td></tr>
+<tr><td><code>EquipmentModel</code></td><td>id, model_name, category</td><td>csagent.equipment_models</td></tr>
+<tr><td><code>EquipmentUnit</code></td><td>id, serial_number, install_date, location</td><td>csagent.equipment_units</td></tr>
+<tr><td><code>Customer</code></td><td>id, customer_code, company_name_ko/en/zh/ja, country</td><td>public.customer</td></tr>
+<tr><td><code>Partner</code></td><td>id, partner_code, partner_name, country</td><td>public.partner</td></tr>
+<tr><td><code>Part</code></td><td>id, part_number, name, category</td><td>csagent.parts_master</td></tr>
+<tr><td><code>ErrorCode</code></td><td>id, code, model_id</td><td>csagent.error_codes</td></tr>
+<tr><td><code>Issue</code></td><td>id, source_type(CS/Production/Setup), title, status, severity, reported_date, handling_method<em>, paid_type</em></td><td>production_issues / cs_history / setup_issues 통합 (※ handling_method·paid_type은 CS 한정)</td></tr>
+<tr><td><code>Inspection</code></td><td>id, inspection_date, status, result</td><td>api_checklistinspection</td></tr>
+<tr><td><code>Branch</code></td><td>id, name, country</td><td>csagent.branches</td></tr>
+</tbody></table>
+<h3>1-B. 사람·조직</h3>
+<table>
+<thead><tr><th>라벨</th><th>주요 속성</th><th>출처</th></tr></thead>
+<tbody>
+<tr><td><code>Person</code></td><td>id, name, employee_number, department, position</td><td>public.employee, csagent.users</td></tr>
+<tr><td><code>Department</code></td><td>name, parent</td><td>employee.current_department</td></tr>
+</tbody></table>
+<h3>1-C. 문서 · 지식</h3>
+<table>
+<thead><tr><th>라벨</th><th>주요 속성</th><th>출처</th></tr></thead>
+<tbody>
+<tr><td><code>Document</code></td><td>id, source(confluence/jira/mes/slack/manual), title, url, modified_at</td><td>통합</td></tr>
+<tr><td><code>ConfluencePage</code>:Document</td><td>space, page_id, version</td><td>Confluence</td></tr>
+<tr><td><code>JiraIssue</code>:Document</td><td>project, issue_key, status</td><td>Jira</td></tr>
+<tr><td><code>ManualDoc</code>:Document</td><td>doc_type(parts_manual/wta_tech), category, chunk_index, page_number</td><td>manual.documents / wta_documents</td></tr>
+<tr><td><code>SlackMessage</code>:Document</td><td>channel, ts, user</td><td>slack</td></tr>
+</tbody></table>
+<h3>1-D. 시스템 (에이전트 · 인프라)</h3>
+<table>
+<thead><tr><th>라벨</th><th>주요 속성</th><th>출처</th></tr></thead>
+<tbody>
+<tr><td><code>Agent</code></td><td>id, name, emoji, port, category, status</td><td>16명 agent registry</td></tr>
+<tr><td><code>SlackChannel</code></td><td>id, name, purpose</td><td>slack workspace</td></tr>
+<tr><td><code>Service</code></td><td>name, version, runtime</td><td>MES, cs-wta, dashboard, upload-server, slack-bot</td></tr>
+<tr><td><code>Host</code></td><td>name, ip, os</td><td>서버 인벤토리</td></tr>
+<tr><td><code>DataStore</code></td><td>name, type, schema</td><td>Postgres/SQL Server/JSONL</td></tr>
+</tbody></table>
+<hr>
+<h2>2. 관계 (Relationships)</h2>
+<h3>2-A. 도메인 관계 (FK 기반, R* = db-manager 초안 참조)</h3>
+<table>
+<thead><tr><th>관계</th><th>시작 → 종료</th><th>출처</th></tr></thead>
+<tbody>
+<tr><td><code>MODEL_OF</code></td><td>EquipmentUnit → EquipmentModel</td><td>R1</td></tr>
+<tr><td><code>INSTALLED_AT</code></td><td>EquipmentUnit → Customer</td><td>shipment_table.customer_ref_id</td></tr>
+<tr><td><code>SHIPPED_BY</code></td><td>EquipmentUnit → Partner</td><td>출하·협력업체</td></tr>
+<tr><td><code>HAS_ERROR_CODE</code></td><td>EquipmentModel → ErrorCode</td><td>R5</td></tr>
+<tr><td><code>HAS_BOM</code></td><td>EquipmentModel → Part</td><td>R6/R7</td></tr>
+<tr><td><code>RAISED_ON</code></td><td>Issue → EquipmentUnit</td><td>cs_history.shipment_id (R2)</td></tr>
+<tr><td><code>TRIGGERED_BY</code></td><td>Issue → ErrorCode</td><td>R4</td></tr>
+<tr><td><code>INSPECTED_AS</code></td><td>Inspection → Product</td><td>api_checklistinspection.product_type</td></tr>
+<tr><td><code>SERVES</code></td><td>Branch → Customer</td><td>setup.branch</td></tr>
+<tr><td><code>SIMILAR_TO</code></td><td>Issue → Issue</td><td>논리적 (GraphRAG 핵심)</td></tr>
+</tbody></table>
+<h3>2-B. 사람 관계</h3>
+<table>
+<thead><tr><th>관계</th><th>시작 → 종료</th></tr></thead>
+<tbody>
+<tr><td><code>HANDLED_BY</code></td><td>Issue → Person</td></tr>
+<tr><td><code>RESPONSIBLE_FOR</code></td><td>Person → EquipmentModel</td></tr>
+<tr><td><code>BELONGS_TO</code></td><td>Person → Department</td></tr>
+<tr><td><code>HANDLED</code></td><td>Person → Inspection</td></tr>
+</tbody></table>
+<h3>2-C. 문서·지식 관계</h3>
+<table>
+<thead><tr><th>관계</th><th>시작 → 종료</th></tr></thead>
+<tbody>
+<tr><td><code>MENTIONS</code></td><td>Document → Product \</td><td>EquipmentModel \</td><td>EquipmentUnit \</td><td>Customer \</td><td>Part \</td><td>Person</td></tr>
+<tr><td><code>DOCUMENTS</code></td><td>Document → Issue</td></tr>
+<tr><td><code>REFERS_TO</code></td><td>Document → Document</td></tr>
+<tr><td><code>CHUNK_OF</code></td><td>ManualDoc → ManualDoc (parent chunk)</td></tr>
+</tbody></table>
+<h3>2-D. 시스템 관계 (crafter 초안)</h3>
+<table>
+<thead><tr><th>관계</th><th>시작 → 종료</th></tr></thead>
+<tbody>
+<tr><td><code>ROUTED_TO</code></td><td>SlackChannel → Agent (담당·라우팅 통합)</td></tr>
+<tr><td><code>HANDLES</code></td><td>Agent → Issue</td></tr>
+<tr><td><code>PRODUCES</code></td><td>Agent → Document</td></tr>
+<tr><td><code>REPORTS_TO</code></td><td>Agent → Agent (→ MAX)</td></tr>
+<tr><td><code>HOSTED_ON</code></td><td>Service → Host</td></tr>
+<tr><td><code>READS_FROM</code> / <code>WRITES_TO</code></td><td>Service → DataStore</td></tr>
+<tr><td><code>DEPENDS_ON</code></td><td>Service → Service</td></tr>
+</tbody></table>
+<hr>
+<h2>3. 핵심 질의 경로 (PoC 검증용)</h2>
+<h3>Q1. "Korloy 포장기 #6 혼입검사 밝기 비대칭 이슈와 유사한 과거 사례는?"</h3>
+<pre><code>(i:Issue)-[:SIMILAR_TO*1..2]-(j:Issue)-[:RAISED_ON]-&gt;(u:EquipmentUnit)
+-[:INSTALLED_AT]-&gt;(c:Customer {company_name_ko:'한국야금'})
+WHERE i.title CONTAINS '밝기 비대칭'</code></pre>
+<h3>Q2. "이 이슈 담당자와 과거 유사 건 해결자는?"</h3>
+<pre><code>(i:Issue)-[:HANDLED_BY]-&gt;(p:Person),
+(j:Issue)-[:SIMILAR_TO]-(i)-[:HANDLED_BY]-&gt;(p2:Person)</code></pre>
+<h3>Q3. "Korloy 고객 전체 CS 이력 + 관련 매뉴얼?"</h3>
+<pre><code>(c:Customer)&lt;-[:INSTALLED_AT]-(u:EquipmentUnit)
+&lt;-[:RAISED_ON]-(i:Issue)&lt;-[:DOCUMENTS]-(d:Document)</code></pre>
+<h3>Q4. "조명(DOMELIGHT100) 관련 과거 이슈 전부"</h3>
+<pre><code>(p:Part {name:'DOMELIGHT100'})&lt;-[:MENTIONS]-(d:Document)-[:DOCUMENTS]-&gt;(i:Issue)</code></pre>
+<h3>Q5. "이 장비 기종에 설치된 광학계 구성 부품은?"</h3>
+<pre><code>(m:EquipmentModel)-[:HAS_BOM]-&gt;(p:Part {category:'광학계'})</code></pre>
+<hr>
+<h2>4. PoC 범위 (1단계)</h2>
+<p><strong>포함</strong>:</p>
+<ul>
+<li>Product, EquipmentModel, EquipmentUnit, Customer, Part, Issue, Person, Document, ConfluencePage</li>
+<li>MODEL_OF, INSTALLED_AT, RAISED_ON, HANDLED_BY, MENTIONS, DOCUMENTS, SIMILAR_TO</li>
+</ul>
+<p><strong>제외 (2단계)</strong>:</p>
+<ul>
+<li>Agent/Service/Host/DataStore (시스템 관점)</li>
+<li>Partner, Inspection, Branch, Department</li>
+<li>SlackMessage, ManualDoc 전체</li>
+</ul>
+<p><strong>데이터 소스</strong>: 포장혼입검사 Confluence 7페이지만 (엔티티·관계 수동/LLM 추출)</p>
+<hr>
+<h2>5. 확장 계획 (2~3단계)</h2>
+<ul>
+<li><strong>2단계</strong>: Agent/Service 시스템 레이어 추가 → "이 이슈는 어떤 에이전트가 처리했는지" 추적</li>
+<li><strong>3단계</strong>: ManualDoc 청크 전체 통합 → GraphRAG 벡터 인덱스 결합</li>
+</ul>
+<hr>
+<h2>6. 조율된 사항 (crafter ↔ db-manager 병합 결과)</h2>
+<table>
+<thead><tr><th>항목</th><th>crafter 제안</th><th>db-manager 제안</th><th>통합 결정</th></tr></thead>
+<tbody>
+<tr><td>도메인 엔티티</td><td><code>Entity(type, name)</code> 추상화</td><td>실제 테이블별 엔티티</td><td><strong>db-manager 안 채택</strong> (구체 라벨)</td></tr>
+<tr><td>Document 통합</td><td>단일 Document + source 필드</td><td>분리 (ManualDoc/WTADoc/CSEmbedding)</td><td><strong>crafter 안 채택</strong> (:Document 상위 라벨 + sub 라벨)</td></tr>
+<tr><td>Issue 통합</td><td>Issue 단일 라벨</td><td>ProductionIssue/CSHistory/SetupIssue 분리</td><td><strong>crafter 안 채택</strong> (Issue + source_type 속성)</td></tr>
+<tr><td>ManualDoc 분류</td><td>source=manual 단일</td><td>부품매뉴얼/WTA기술문서 구분</td><td><strong>doc_type 속성 추가</strong> (parts_manual/wta_tech)</td></tr>
+<tr><td>Channel-Agent 관계</td><td>OWNS + ROUTED_TO 병존</td><td>—</td><td><strong>ROUTED_TO 단일 통합</strong> (의미 중복 제거)</td></tr>
+<tr><td>shape(C/W형) 위치</td><td>Product 속성</td><td>DB 컬럼 없음</td><td><strong>PoC 1단계 제외</strong>, 2단계 문서추출 방식 재검토</td></tr>
+<tr><td>ERP ↔ shipment 연결</td><td>직접 키 필요</td><td>공통 키 없음</td><td><strong>R12 경로(semi_stock_master 경유)만 유효</strong></td></tr>
+</tbody></table>
+<hr>
+<h2>7. 다음 단계</h2>
+<ol>
+<li>부서장 초안 검토·피드백</li>
+<li>승인 시 research-agent가 본 스키마로 Neo4j 스키마 제약(Constraint) 생성</li>
+<li>포장혼입검사 7페이지에서 엔티티·관계 추출 → 본 라벨·관계로 적재</li>
+<li>Q1~Q5 테스트 질의 실행 → 커버리지 측정</li>
+</ol>
+<hr>
+<p><em>crafter 초안: workspaces/crafter/ontology-draft-system.md</em></p>
+<p><em>db-manager 초안: workspaces/db-manager/ontology-draft-dbschema.md</em></p>
+</body>
+</html>

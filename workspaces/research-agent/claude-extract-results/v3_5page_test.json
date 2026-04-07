@@ -1,0 +1,106 @@
+{
+  "results": [
+    {
+      "topic": "포장혼입검사",
+      "file": "8685453351-혼입_검사_이슈.txt",
+      "title": "혼입 검사 이슈",
+      "text_len": 430,
+      "chunks": 1,
+      "entities": 5,
+      "relations": 5,
+      "type_counts": {
+        "Equipment": 1,
+        "Product": 1,
+        "Issue": 3
+      },
+      "cost_usd": 0.001391,
+      "resolution_count": 0,
+      "component_count": 0,
+      "issue_count": 3
+    },
+    {
+      "topic": "장비물류",
+      "file": "8316485870-장비별_물류_교체시간.txt",
+      "title": "장비별 물류 교체시간",
+      "text_len": 1449,
+      "chunks": 1,
+      "entities": 17,
+      "relations": 16,
+      "type_counts": {
+        "Customer": 1,
+        "Equipment": 9,
+        "Process": 7
+      },
+      "cost_usd": 0.003411,
+      "resolution_count": 0,
+      "component_count": 0,
+      "issue_count": 0
+    },
+    {
+      "topic": "분말검사",
+      "file": "9004482562-측면_광학계_조명_시인성_개선_검토_(burr_측정).txt",
+      "title": "측면 광학계 조명 시인성 개선 검토 (burr 측정)",
+      "text_len": 1655,
+      "chunks": 1,
+      "entities": 22,
+      "relations": 25,
+      "type_counts": {
+        "Customer": 1,
+        "Equipment": 2,
+        "Product": 6,
+        "Component": 4,
+        "Issue": 2,
+        "Resolution": 4,
+        "Process": 2,
+        "Tool": 1
+      },
+      "cost_usd": 0.004865,
+      "resolution_count": 4,
+      "component_count": 4,
+      "issue_count": 2
+    },
+    {
+      "topic": "연삭측정제어",
+      "file": "8705507345-WTA_양면_연삭_핸들러_매뉴얼.txt",
+      "title": "WTA 양면 연삭 핸들러 매뉴얼",
+      "text_len": 9695,
+      "chunks": 6,
+      "entities": 71,
+      "relations": 46,
+      "type_counts": {
+        "Equipment": 11,
+        "Process": 44,
+        "Tool": 4,
+        "Component": 11,
+        "Product": 1
+      },
+      "cost_usd": 0.016341,
+      "resolution_count": 0,
+      "component_count": 11,
+      "issue_count": 0
+    },
+    {
+      "topic": "호닝신뢰성",
+      "file": "8081965089-호닝_형상_검사기_개선_검토.txt",
+      "title": "호닝 형상 검사기 개선 검토",
+      "text_len": 5060,
+      "chunks": 4,
+      "entities": 101,
+      "relations": 82,
+      "type_counts": {
+        "Equipment": 1,
+        "Process": 10,
+        "Customer": 2,
+        "Component": 39,
+        "Resolution": 32,
+        "Person": 1,
+        "Issue": 16
+      },
+      "cost_usd": 0.020009,
+      "resolution_count": 32,
+      "component_count": 39,
+      "issue_count": 16
+    }
+  ],
+  "total_cost": 0.046017
+}

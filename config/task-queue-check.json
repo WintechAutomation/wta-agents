@@ -1,0 +1,102 @@
+{
+  "checked_at": "2026-04-01 06:40:00",
+  "total_tasks": 86,
+  "active_tasks": 25,
+  "stalled_count": 0,
+  "stalled": [],
+  "agent_status": {
+    "MAX": {
+      "port": 5600,
+      "online": true,
+      "name": "MAX",
+      "emoji": "👑"
+    },
+    "db-manager": {
+      "port": 5601,
+      "online": true,
+      "name": "DB매니저",
+      "emoji": "📊"
+    },
+    "cs-agent": {
+      "port": 5602,
+      "online": true,
+      "name": "CS담당",
+      "emoji": "🛠️"
+    },
+    "sales-agent": {
+      "port": 5603,
+      "online": true,
+      "name": "영업팀",
+      "emoji": "💰"
+    },
+    "dev-agent": {
+      "port": 5606,
+      "online": true,
+      "name": "개발팀",
+      "emoji": "💻"
+    },
+    "admin-agent": {
+      "port": 5607,
+      "online": true,
+      "name": "관리팀",
+      "emoji": "📋"
+    },
+    "crafter": {
+      "port": 5608,
+      "online": true,
+      "name": "크래프터",
+      "emoji": "🔧"
+    },
+    "nc-manager": {
+      "port": 5609,
+      "online": true,
+      "name": "NC관리",
+      "emoji": "🔍"
+    },
+    "qa-agent": {
+      "port": 5610,
+      "online": true,
+      "name": "출하품질",
+      "emoji": "🔬"
+    },
+    "issue-manager": {
+      "port": 5611,
+      "online": true,
+      "name": "제품개선",
+      "emoji": "🚨"
+    },
+    "slack-bot": {
+      "port": 5612,
+      "online": true,
+      "name": "슬랙봇",
+      "emoji": "💬"
+    },
+    "schedule-agent": {
+      "port": 5613,
+      "online": true,
+      "name": "일정관리",
+      "emoji": "📅"
+    },
+    "docs-agent": {
+      "port": 5614,
+      "online": true,
+      "name": "독스(Docs)",
+      "emoji": "📝"
+    },
+    "control-agent": {
+      "port": 5616,
+      "online": true,
+      "name": "제어설계",
+      "emoji": "⚡"
+    },
+    "purchase-agent": {
+      "port": 5617,
+      "online": false,
+      "name": "구매팀",
+      "emoji": "🛒"
+    }
+  },
+  "offline_agents": [],
+  "offline_count": 0,
+  "saved_at": "2026-04-01 06:40:02"
+}

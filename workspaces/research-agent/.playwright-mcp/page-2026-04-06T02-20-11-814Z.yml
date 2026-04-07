@@ -1,0 +1,455 @@
+- generic [ref=e3]:
+  - generic:
+    - link "본문 바로가기" [ref=e4] [cursor=pointer]:
+      - /url: "#section_content"
+      - generic [ref=e5]: 본문 바로가기
+    - link "주 메뉴 바로가기" [ref=e6] [cursor=pointer]:
+      - /url: "#header"
+      - generic [ref=e7]: 주 메뉴 바로가기
+  - banner [ref=e8]:
+    - heading "네이버지도" [level=1] [ref=e9]:
+      - link "네이버지도" [ref=e10] [cursor=pointer]:
+        - /url: https://www.naver.com
+        - generic [ref=e11]: 네이버지도
+    - navigation [ref=e12]:
+      - list [ref=e13]:
+        - listitem [ref=e14]:
+          - button "지도 홈" [ref=e15] [cursor=pointer]:
+            - img [ref=e18]
+            - generic [ref=e21]: 지도 홈
+        - listitem [ref=e22]:
+          - button "길찾기" [ref=e23] [cursor=pointer]:
+            - img [ref=e26]
+            - generic [ref=e28]: 길찾기
+        - listitem [ref=e29]:
+          - button "버스" [ref=e30] [cursor=pointer]:
+            - img [ref=e33]
+            - generic [ref=e35]: 버스
+        - listitem [ref=e36]:
+          - button "지하철" [ref=e37] [cursor=pointer]:
+            - img [ref=e40]
+            - generic [ref=e42]: 지하철
+        - listitem [ref=e43]:
+          - button "기차" [ref=e44] [cursor=pointer]:
+            - img [ref=e47]
+            - generic [ref=e49]: 기차
+        - listitem [ref=e50]:
+          - button "new 저장" [ref=e51] [cursor=pointer]:
+            - generic [ref=e53]: new
+            - img [ref=e56]
+            - generic [ref=e58]: 저장
+        - listitem [ref=e59]:
+          - button "더보기" [ref=e60] [cursor=pointer]:
+            - img [ref=e63]
+            - generic [ref=e65]: 더보기
+    - generic [ref=e67]:
+      - strong [ref=e68]: 사용자 링크
+      - list [ref=e69]:
+        - listitem [ref=e70]:
+          - link "로그인" [ref=e71] [cursor=pointer]:
+            - /url: https://nid.naver.com/nidlogin.login
+            - generic [ref=e72]: 로그인
+        - listitem [ref=e73]:
+          - link "서비스 더보기" [ref=e74] [cursor=pointer]:
+            - /url: javascript:;
+            - generic [ref=e75]: 서비스 더보기
+  - generic [ref=e77]:
+    - generic [ref=e79]:
+      - generic [ref=e82]:
+        - button "검색" [ref=e83] [cursor=pointer]
+        - generic [ref=e84]:
+          - generic [ref=e85] [cursor=pointer]: 네이버지도 검색
+          - combobox "네이버지도 검색" [ref=e86]
+      - generic [ref=e87]:
+        - iframe [active] [ref=e90]:
+          - generic [ref=f5e2]:
+            - img [ref=f5e3]
+            - generic [ref=f5e4]:
+              - banner [ref=f5e5]:
+                - button "이전 페이지" [ref=f5e159] [cursor=pointer]:
+                  - img [ref=f5e160]
+                  - generic [ref=f5e162]: 이전 페이지
+                - heading "금촌샤브칼국수" [level=1] [ref=f5e6]
+                - button "페이지 닫기" [ref=f5e7] [cursor=pointer]:
+                  - img [ref=f5e8]
+                  - generic [ref=f5e10]: 페이지 닫기
+              - main [ref=f5e12]:
+                - generic [ref=f5e14]:
+                  - button "업체" [ref=f5e17] [cursor=pointer]:
+                    - img "업체" [ref=f5e18]
+                  - generic [ref=f5e19]:
+                    - generic [ref=f5e20]:
+                      - button "업체" [ref=f5e23] [cursor=pointer]:
+                        - img "업체" [ref=f5e24]
+                      - button "업체" [ref=f5e27] [cursor=pointer]:
+                        - img "업체" [ref=f5e28]
+                    - generic [ref=f5e29]:
+                      - button "업체" [ref=f5e32] [cursor=pointer]:
+                        - img "업체" [ref=f5e33]
+                      - button "업체 이미지 갯수 999+" [ref=f5e36] [cursor=pointer]:
+                        - img "업체" [ref=f5e37]
+                        - generic [ref=f5e38]:
+                          - img [ref=f5e39]
+                          - generic [ref=f5e41]: 이미지 갯수
+                          - text: 999+
+                - generic [ref=f5e42]:
+                  - generic [ref=f5e43]:
+                    - generic [ref=f5e44]:
+                      - generic [ref=f5e45]:
+                        - text: 금촌샤브칼국수
+                        - generic [ref=f5e46]: 칼국수,만두
+                      - button "알림받기" [ref=f5e163] [cursor=pointer]:
+                        - img [ref=f5e164]
+                        - text: 알림받기
+                    - generic [ref=f5e47]:
+                      - button "방문자 리뷰 967" [ref=f5e49] [cursor=pointer]
+                      - button "블로그 리뷰 180" [ref=f5e51] [cursor=pointer]
+                      - generic [ref=f5e52]: 추위도 녹이는 얼큰한 위로
+                  - generic [ref=f5e53]:
+                    - button "출발" [ref=f5e54] [cursor=pointer]
+                    - button "도착" [ref=f5e55] [cursor=pointer]
+                  - generic [ref=f5e57]:
+                    - button "저장" [ref=f5e59] [cursor=pointer]:
+                      - img [ref=f5e60]
+                      - text: 저장
+                    - button "거리뷰" [ref=f5e63] [cursor=pointer]:
+                      - img [ref=f5e64]
+                      - generic [ref=f5e66]: 거리뷰
+                    - link "공유" [ref=f5e68] [cursor=pointer]:
+                      - /url: "#"
+                      - img [ref=f5e69]
+                      - text: 공유
+                - tablist [ref=f5e72]:
+                  - generic [ref=f5e75]:
+                    - tab "홈" [selected] [ref=f5e76] [cursor=pointer]:
+                      - generic [ref=f5e77]: 홈
+                    - tab "소식" [ref=f5e78] [cursor=pointer]:
+                      - generic [ref=f5e79]: 소식
+                    - tab "메뉴" [ref=f5e80] [cursor=pointer]:
+                      - generic [ref=f5e81]: 메뉴
+                    - tab "리뷰" [ref=f5e82] [cursor=pointer]:
+                      - generic [ref=f5e83]: 리뷰
+                    - tab "사진" [ref=f5e84] [cursor=pointer]:
+                      - generic [ref=f5e85]: 사진
+                    - tab "정보" [ref=f5e86] [cursor=pointer]:
+                      - generic [ref=f5e87]: 정보
+                - generic [ref=f5e89]:
+                  - generic [ref=f5e90]:
+                    - generic [ref=f5e92]:
+                      - generic [ref=f5e93]:
+                        - strong [ref=f5e94]:
+                          - img [ref=f5e95]
+                          - generic [ref=f5e97]: 주소
+                        - generic [ref=f5e98]:
+                          - button "경기 수원시 영통구 태장로 73" [ref=f5e99] [cursor=pointer]:
+                            - text: 경기 수원시 영통구 태장로 73
+                            - img [ref=f5e101]
+                          - generic [ref=f5e103]:
+                            - generic [ref=f5e105]: 수인분당
+                            - text: 망포역 3번 출구에서 896m
+                            - generic [ref=f5e106]: 미터
+                      - generic [ref=f5e107]:
+                        - strong [ref=f5e108]:
+                          - img [ref=f5e109]
+                          - generic [ref=f5e111]: 찾아가는길
+                        - button "주차는 1층 뚜레쥬르 끼고 돌자마자 오른... 내용 더보기" [ref=f5e166] [cursor=pointer]:
+                          - text: 주차는 1층 뚜레쥬르 끼고 돌자마자 오른...
+                          - generic [ref=f5e167]:
+                            - img [ref=f5e168]
+                            - generic [ref=f5e170]: 내용 더보기
+                      - generic [ref=f5e115]:
+                        - strong [ref=f5e116]:
+                          - img [ref=f5e117]
+                          - generic [ref=f5e119]: 영업시간
+                        - generic [ref=f5e120]:
+                          - button "오늘 휴무 매주 월요일 휴무 월 정기휴무 (매주 월요일) 화 11:30 - 21:30 15:30 - 17:30 브레이크타임 14:30, 20:30 라스트오더 수 11:30 - 21:30 15:30 - 17:30 브레이크타임 14:30, 20:30 라스트오더 목 11:30 - 21:30 15:30 - 17:30 브레이크타임 14:30, 20:30 라스트오더 금 11:30 - 21:30 15:30 - 17:30 브레이크타임 14:30, 20:30 라스트오더 토 11:30 - 21:30 15:30 - 17:30 브레이크타임 14:30, 20:30 라스트오더 일 11:30 - 21:30 15:30 - 17:30 브레이크타임 14:30, 20:30 라스트오더 접기" [expanded] [active] [ref=f5e370] [cursor=pointer]:
+                            - generic [ref=f5e124]:
+                              - emphasis [ref=f5e125]: 오늘 휴무
+                              - generic [ref=f5e126]:
+                                - time [ref=f5e127]: 매주 월요일 휴무
+                                - generic [ref=f5e128]: 매주 월요일 휴무
+                            - generic [ref=f5e373]:
+                              - generic [ref=f5e374]: 월
+                              - generic [ref=f5e375]: 정기휴무 (매주 월요일)
+                            - generic [ref=f5e378]:
+                              - generic [ref=f5e379]: 화
+                              - generic [ref=f5e380]:
+                                - text: 11:30 - 21:30
+                                - text: 15:30 - 17:30 브레이크타임
+                                - text: 14:30, 20:30 라스트오더
+                            - generic [ref=f5e383]:
+                              - generic [ref=f5e384]: 수
+                              - generic [ref=f5e385]:
+                                - text: 11:30 - 21:30
+                                - text: 15:30 - 17:30 브레이크타임
+                                - text: 14:30, 20:30 라스트오더
+                            - generic [ref=f5e388]:
+                              - generic [ref=f5e389]: 목
+                              - generic [ref=f5e390]:
+                                - text: 11:30 - 21:30
+                                - text: 15:30 - 17:30 브레이크타임
+                                - text: 14:30, 20:30 라스트오더
+                            - generic [ref=f5e393]:
+                              - generic [ref=f5e394]: 금
+                              - generic [ref=f5e395]:
+                                - text: 11:30 - 21:30
+                                - text: 15:30 - 17:30 브레이크타임
+                                - text: 14:30, 20:30 라스트오더
+                            - generic [ref=f5e398]:
+                              - generic [ref=f5e399]: 토
+                              - generic [ref=f5e400]:
+                                - text: 11:30 - 21:30
+                                - text: 15:30 - 17:30 브레이크타임
+                                - text: 14:30, 20:30 라스트오더
+                            - generic [ref=f5e402]:
+                              - generic [ref=f5e403]:
+                                - generic [ref=f5e404]: 일
+                                - generic [ref=f5e405]:
+                                  - text: 11:30 - 21:30
+                                  - text: 15:30 - 17:30 브레이크타임
+                                  - text: 14:30, 20:30 라스트오더
+                              - generic [ref=f5e406]:
+                                - img [ref=f5e407]
+                                - generic [ref=f5e409]: 접기
+                          - button "영업시간 수정 제안하기" [ref=f5e411] [cursor=pointer]
+                      - generic [ref=f5e133]:
+                        - strong [ref=f5e134]:
+                          - img [ref=f5e135]
+                          - generic [ref=f5e137]: 전화번호
+                        - generic [ref=f5e138]:
+                          - text: 031-205-5636
+                          - button "복사" [ref=f5e140] [cursor=pointer]
+                    - button "정보 더보기" [ref=f5e143] [cursor=pointer]:
+                      - generic [ref=f5e144]: 정보
+                      - generic [ref=f5e145]:
+                        - text: 더보기
+                        - img [ref=f5e146]
+                  - generic [ref=f5e171]:
+                    - heading "메뉴7 메뉴판 이미지로 보기" [level=2] [ref=f5e172]:
+                      - generic [ref=f5e173]:
+                        - text: 메뉴
+                        - emphasis [ref=f5e174]: "7"
+                      - button "메뉴판 이미지로 보기" [ref=f5e178] [cursor=pointer]
+                    - list [ref=f5e180]:
+                      - listitem [ref=f5e181]:
+                        - generic [ref=f5e182]:
+                          - generic [ref=f5e185]:
+                            - button "버섯매운탕칼국수(야채+면+볶음밥)" [ref=f5e186] [cursor=pointer]
+                            - button "사진" [ref=f5e187] [cursor=pointer]:
+                              - generic [ref=f5e188]: 사진
+                              - img [ref=f5e189]
+                          - generic [ref=f5e191]:
+                            - emphasis [ref=f5e192]: 10,000
+                            - text: 원
+                      - listitem [ref=f5e193]:
+                        - generic [ref=f5e194]:
+                          - button "왕만두" [ref=f5e198] [cursor=pointer]
+                          - generic [ref=f5e199]:
+                            - emphasis [ref=f5e200]: 5,000
+                            - text: 원
+                      - listitem [ref=f5e201]:
+                        - generic [ref=f5e202]:
+                          - button "물만두" [ref=f5e206] [cursor=pointer]
+                          - generic [ref=f5e207]:
+                            - emphasis [ref=f5e208]: 5,000
+                            - text: 원
+                      - listitem [ref=f5e209]:
+                        - generic [ref=f5e210]:
+                          - button "소고기 추가" [ref=f5e214] [cursor=pointer]
+                          - generic [ref=f5e215]:
+                            - emphasis [ref=f5e216]: 8,000
+                            - text: 원
+                    - button "메뉴 더보기" [ref=f5e219] [cursor=pointer]:
+                      - generic [ref=f5e220]: 메뉴
+                      - generic [ref=f5e221]:
+                        - text: 더보기
+                        - img [ref=f5e222]
+                  - generic [ref=f5e224]:
+                    - heading "AI 브리핑 실험 단계로 정확하지 않을 수 있어요. 안내" [level=2] [ref=f5e225]:
+                      - generic [ref=f5e226]:
+                        - strong [ref=f5e227]: AI 브리핑
+                        - generic [ref=f5e228]:
+                          - text: 실험 단계로 정확하지 않을 수 있어요.
+                          - button "안내" [ref=f5e229] [cursor=pointer]:
+                            - img [ref=f5e230]
+                            - generic [ref=f5e232]: 안내
+                    - generic [ref=f5e233]:
+                      - generic [ref=f5e234]: 사용자 리뷰에 기반해 정리한 정보는 다음과 같습니다.
+                      - generic [ref=f5e235]:
+                        - list [ref=f5e236]:
+                          - listitem [ref=f5e237]:
+                            - text: 금촌샤브칼국수는 망포동에서 소문난 칼국수 전문점으로, 신선한 재료와 얼큰한 국물이 일품입니다.
+                            - generic [ref=f5e238]:
+                              - button "1" [ref=f5e240] [cursor=pointer]
+                              - button "2" [ref=f5e242] [cursor=pointer]
+                              - button "3" [ref=f5e244] [cursor=pointer]
+                          - listitem [ref=f5e245]:
+                            - text: 버섯매운탕칼국수는 소고기, 미나리, 버섯이 푸짐하게 들어가 깊은 맛을 자랑하며, 볶음밥까지 추가하면 완벽한 한 끼를 즐길 수 있습니다.
+                            - generic [ref=f5e246]:
+                              - button "4" [ref=f5e248] [cursor=pointer]
+                              - button "5" [ref=f5e250] [cursor=pointer]
+                          - listitem [ref=f5e251]:
+                            - text: 김치도 맛있어 단골손님이 많으며, 특히 추운 날씨에 방문하면 더욱 맛있게 느껴집니다.
+                            - generic [ref=f5e252]:
+                              - button "6" [ref=f5e254] [cursor=pointer]
+                              - button "7" [ref=f5e256] [cursor=pointer]
+                              - button "8" [ref=f5e258] [cursor=pointer]
+                        - list [ref=f5e262]:
+                          - listitem [ref=f5e263]:
+                            - button "금촌샤브칼국수 맛있어요 :) 여기 겉절이 정말 맛도리~~~~ 국물도 칼칼하 미나리랑 소고기랑 같이 먹으면 끝내줍니다👍 1 kittii 2025년 06월 24일 화요일" [ref=f5e264] [cursor=pointer]:
+                              - generic [ref=f5e265]:
+                                - img [ref=f5e266]
+                                - text: 금촌샤브칼국수 맛있어요 :) 여기 겉절이 정말 맛도리~~~~ 국물도 칼칼하 미나리랑 소고기랑 같이 먹으면 끝내줍니다👍
+                              - generic [ref=f5e268]:
+                                - generic [ref=f5e270]: "1"
+                                - generic [ref=f5e272]: kittii
+                                - generic [ref=f5e273]:
+                                  - time [ref=f5e274]: 25.06.24.
+                                  - generic [ref=f5e275]: 2025년 06월 24일 화요일
+                          - listitem [ref=f5e276]:
+                            - button "끓일수록 더 얼큰해지는 국물 진하고 매콤해서 내 입맛에 잘 맞았다 뚱이보다 내가 더 만족스러워 했던 망포동 칼국수 맛집 2 뚱이 2025년 04월 21일 월요일" [ref=f5e277] [cursor=pointer]:
+                              - generic [ref=f5e278]:
+                                - img [ref=f5e279]
+                                - text: 끓일수록 더 얼큰해지는 국물 진하고 매콤해서 내 입맛에 잘 맞았다 뚱이보다 내가 더 만족스러워 했던 망포동 칼국수 맛집
+                              - generic [ref=f5e281]:
+                                - generic [ref=f5e283]: "2"
+                                - generic [ref=f5e285]: 뚱이
+                                - generic [ref=f5e286]:
+                                  - time [ref=f5e287]: 25.04.21.
+                                  - generic [ref=f5e288]: 2025년 04월 21일 월요일
+                          - listitem [ref=f5e289]:
+                            - button "수원 망포에 유명한 얼큰한 샤브샤브 맛집이 있죠! 미나리가 푸짐해서 매력적인 금촌샤브칼국수 입니다 3 날개 2025년 08월 17일 일요일" [ref=f5e290] [cursor=pointer]:
+                              - generic [ref=f5e291]:
+                                - img [ref=f5e292]
+                                - text: 수원 망포에 유명한 얼큰한 샤브샤브 맛집이 있죠! 미나리가 푸짐해서 매력적인 금촌샤브칼국수 입니다
+                              - generic [ref=f5e294]:
+                                - generic [ref=f5e296]: "3"
+                                - generic [ref=f5e298]: 날개
+                                - generic [ref=f5e299]:
+                                  - time [ref=f5e300]: 25.08.17.
+                                  - generic [ref=f5e301]: 2025년 08월 17일 일요일
+                          - listitem [ref=f5e302]:
+                            - button "☆금촌샤브칼국수 맛있게 먹는 방법☆ 버섯매운탕이 끓으면 1.느타리버섯과 미나리를 익혀드신후 2. 사리를 넣어 끓이면서 드십니다 3. 사리와 익힌 감자를 건저 드시고나면 국물은 아주 조금만 남긴후 중간불에 밥을 볶으시고 불을 끄십시요. 4 티니아이 2025년 03월 28일 금요일" [ref=f5e303] [cursor=pointer]:
+                              - generic [ref=f5e304]:
+                                - img [ref=f5e305]
+                                - text: ☆금촌샤브칼국수 맛있게 먹는 방법☆ 버섯매운탕이 끓으면 1.느타리버섯과 미나리를 익혀드신후 2. 사리를 넣어 끓이면서 드십니다 3. 사리와 익힌 감자를 건저 드시고나면 국물은 아주 조금만 남긴후 중간불에 밥을 볶으시고 불을 끄십시요.
+                              - generic [ref=f5e307]:
+                                - generic [ref=f5e309]: "4"
+                                - generic [ref=f5e311]: 티니아이
+                                - generic [ref=f5e312]:
+                                  - time [ref=f5e313]: 25.03.28.
+                                  - generic [ref=f5e314]: 2025년 03월 28일 금요일
+                          - listitem [ref=f5e315]:
+                            - button "너무너무 맛있는 저녁요~ 사장님 넘 친절하시고 국물에 미나리,버섯 신선하고 맛있고 면에 고소한 밥 까지!! 사실 저흰 넘 자주가는 단골집이예요~~ 5 Ssoso7 2025년 09월 13일 토요일" [ref=f5e316] [cursor=pointer]:
+                              - generic [ref=f5e317]:
+                                - img [ref=f5e318]
+                                - text: 너무너무 맛있는 저녁요~ 사장님 넘 친절하시고 국물에 미나리,버섯 신선하고 맛있고 면에 고소한 밥 까지!! 사실 저흰 넘 자주가는 단골집이예요~~
+                              - generic [ref=f5e320]:
+                                - generic [ref=f5e322]: "5"
+                                - generic [ref=f5e324]: Ssoso7
+                                - generic [ref=f5e325]:
+                                  - time [ref=f5e326]: 25.09.13.
+                                  - generic [ref=f5e327]: 2025년 09월 13일 토요일
+                          - listitem [ref=f5e328]:
+                            - button "이김치 먹으러 또 갈꺼에요 칼국수집은 김치 맛있으면 맛집인거 아시죵? 진짜 너무 맛있었어용! 6 gyugyu 2026년 01월 12일 월요일" [ref=f5e329] [cursor=pointer]:
+                              - generic [ref=f5e330]:
+                                - img [ref=f5e331]
+                                - text: 이김치 먹으러 또 갈꺼에요 칼국수집은 김치 맛있으면 맛집인거 아시죵? 진짜 너무 맛있었어용!
+                              - generic [ref=f5e333]:
+                                - generic [ref=f5e335]: "6"
+                                - generic [ref=f5e337]: gyugyu
+                                - generic [ref=f5e338]:
+                                  - time [ref=f5e339]: 26.01.12.
+                                  - generic [ref=f5e340]: 2026년 01월 12일 월요일
+                          - listitem [ref=f5e341]:
+                            - button "사장님 너무 친절하시고 맛있는집이에요. 채소신선하구요. 추운날가면 더 맛있는집입니다.ㅎㅎ 7 앤사랑0702 2026년 01월 21일 수요일" [ref=f5e342] [cursor=pointer]:
+                              - generic [ref=f5e343]:
+                                - img [ref=f5e344]
+                                - text: 사장님 너무 친절하시고 맛있는집이에요. 채소신선하구요. 추운날가면 더 맛있는집입니다.ㅎㅎ
+                              - generic [ref=f5e346]:
+                                - generic [ref=f5e348]: "7"
+                                - generic [ref=f5e350]: 앤사랑0702
+                                - generic [ref=f5e351]:
+                                  - time [ref=f5e352]: 26.01.21.
+                                  - generic [ref=f5e353]: 2026년 01월 21일 수요일
+                          - listitem [ref=f5e354]:
+                            - button "샤브샤브와 칼국수, 볶음밥까지 나오는데 가성비도 좋고 맛있어서 단골 많은 곳 기본 반찬으로는 김치가 끝! 8 혜짱이 2025년 08월 31일 일요일" [ref=f5e355] [cursor=pointer]:
+                              - generic [ref=f5e356]:
+                                - img [ref=f5e357]
+                                - text: 샤브샤브와 칼국수, 볶음밥까지 나오는데 가성비도 좋고 맛있어서 단골 많은 곳 기본 반찬으로는 김치가 끝!
+                              - generic [ref=f5e359]:
+                                - generic [ref=f5e361]: "8"
+                                - generic [ref=f5e363]: 혜짱이
+                                - generic [ref=f5e364]:
+                                  - time [ref=f5e365]: 25.08.31.
+                                  - generic [ref=f5e366]: 2025년 08월 31일 일요일
+              - contentinfo [ref=f5e148]:
+                - generic [ref=f5e149]:
+                  - button "이용약관" [ref=f5e150] [cursor=pointer]
+                  - button "고객센터" [ref=f5e151] [cursor=pointer]
+                  - button "리뷰운영정책" [ref=f5e152] [cursor=pointer]
+                  - button "신고센터" [ref=f5e153] [cursor=pointer]
+                - button "네이버" [ref=f5e155] [cursor=pointer]:
+                  - generic [ref=f5e156]: 네이버
+                  - img [ref=f5e157]
+        - button "패널 접기" [expanded] [ref=e97] [cursor=pointer]:
+          - generic [ref=e98]: 패널 접기
+    - generic [ref=e99]:
+      - generic:
+        - generic [ref=e101]:
+          - button "일반지도" [ref=e102] [cursor=pointer]:
+            - generic [ref=e103]: 일반지도
+          - button "위성지도" [ref=e104] [cursor=pointer]:
+            - generic [ref=e105]: 위성지도
+          - button "지형지도" [ref=e106] [cursor=pointer]:
+            - generic [ref=e107]: 지형지도
+        - generic [ref=e108]:
+          - generic [ref=e109]:
+            - button "테마" [ref=e110] [cursor=pointer]:
+              - generic [ref=e111]: 테마
+            - button "저장" [ref=e112] [cursor=pointer]:
+              - generic [ref=e113]: 저장
+            - button "지적편집도" [ref=e114] [cursor=pointer]:
+              - generic [ref=e115]: 지적편집도
+            - button "거리뷰" [ref=e116] [cursor=pointer]:
+              - generic [ref=e117]: 거리뷰
+          - generic [ref=e118]:
+            - button "반경측정" [ref=e119] [cursor=pointer]:
+              - generic [ref=e120]: 반경측정
+            - button "면적측정" [ref=e121] [cursor=pointer]:
+              - generic [ref=e122]: 면적측정
+            - button "거리측정" [ref=e123] [cursor=pointer]:
+              - generic [ref=e124]: 거리측정
+          - generic [ref=e125]:
+            - button "다운로드" [ref=e126] [cursor=pointer]:
+              - generic [ref=e127]: 다운로드
+            - button "인쇄" [ref=e128] [cursor=pointer]:
+              - generic [ref=e129]: 인쇄
+            - button "공유하기" [ref=e130] [cursor=pointer]:
+              - generic [ref=e131]: 공유하기
+        - generic [ref=e132]:
+          - button "접속위치" [ref=e135] [cursor=pointer]:
+            - generic [ref=e136]:
+              - generic [ref=e137]: 접속위치
+              - img [ref=e139]
+          - generic [ref=e141]:
+            - button "확대" [ref=e142] [cursor=pointer]:
+              - generic [ref=e143]: 확대
+            - generic [ref=e144]:
+              - slider "줌 슬라이더" [ref=e148] [cursor=pointer]: "67"
+              - generic:
+                - button "부동산"
+                - button "거리"
+                - button "동"
+                - button "읍/면"
+                - button "시/군/구"
+                - button "시/도"
+            - button "축소" [ref=e149] [cursor=pointer]:
+              - generic [ref=e150]: 축소
+      - application [ref=e152]:
+        - generic [ref=e356] [cursor=pointer]:
+          - img "음식점" [ref=e358]
+          - strong [ref=e360]: 금촌샤브칼국수
+        - generic [ref=e227]:
+          - img "NAVER" [ref=e229] [cursor=pointer]
+          - generic [ref=e231]: 100m

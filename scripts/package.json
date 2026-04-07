@@ -1,0 +1,12 @@
+{
+  "name": "wta-agent-channel",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "dom-to-pptx": "^1.1.6",
+    "pdf-lib": "^1.17.1",
+    "playwright": "^1.59.1",
+    "socket.io-client": "^4.7.0"
+  }
+}

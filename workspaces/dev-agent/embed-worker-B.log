@@ -1,0 +1,208 @@
+[parts-embed] 13:47:40 대상: 88개 MD 파일 → manual.documents
+[parts-embed] 13:47:51   [1/88] Yaskawa_Unknown_SetupGuide_EN.md
+[parts-embed] 13:47:51     Chunks: 51 embeddable
+[parts-embed] 13:48:09     OK: 51 chunks embedded
+[parts-embed] 13:48:09   [2/88] Yaskawa_Unknown_InstallGuide_EN_2.md
+[parts-embed] 13:48:09     Skip (exists: 591 records)
+[parts-embed] 13:48:09   [3/88] Yaskawa_Unknown_InstallGuide_EN.md
+[parts-embed] 13:48:09     Skip (exists: 4 records)
+[parts-embed] 13:48:09   [4/88] Yaskawa_SAR_InstallGuide_EN.md
+[parts-embed] 13:48:09     Chunks: 33 embeddable
+[parts-embed] 13:48:23     OK: 33 chunks embedded
+[parts-embed] 13:48:23   [5/88] Yaskawa_SAR-LT_InstallGuide_EN.md
+[parts-embed] 13:48:23     Chunks: 28 embeddable
+[parts-embed] 13:48:33     OK: 28 chunks embedded
+[parts-embed] 13:48:33   [6/88] Yaskawa_SA-LT_InstallGuide_EN.md
+[parts-embed] 13:48:33     Chunks: 20 embeddable
+[parts-embed] 13:48:38     OK: 20 chunks embedded
+[parts-embed] 13:48:38   [7/88] Unknown_Unknown_QuickStart_KO_2.md
+[parts-embed] 13:48:38     Chunks: 108 embeddable
+[parts-embed] 13:49:36     OK: 108 chunks embedded
+[parts-embed] 13:49:36   [8/88] Unknown_Unknown_QuickStart_KO.md
+[parts-embed] 13:49:36     Chunks: 136 embeddable
+[parts-embed] 13:50:48     OK: 136 chunks embedded
+[parts-embed] 13:50:48   [9/88] Unknown_Unknown_Manual_KO.md
+[parts-embed] 13:50:48     Skip (exists: 6 records)
+[parts-embed] 13:50:48   [10/88] Unknown_PMAC_SetupGuide_KO.md
+[parts-embed] 13:50:48     Chunks: 25 embeddable
+[parts-embed] 13:50:55     OK: 25 chunks embedded
+[parts-embed] 13:50:55   [11/88] Unknown_PMAC_SetupGuide_EN.md
+[parts-embed] 13:50:55     Chunks: 67 embeddable
+[parts-embed] 13:51:23     OK: 67 chunks embedded
+[parts-embed] 13:51:23   [12/88] Unknown_PMAC_ProgrammingManual_KO.md
+[parts-embed] 13:51:23     Chunks: 268 embeddable
+[parts-embed] 13:52:46     OK: 268 chunks embedded
+[parts-embed] 13:52:46   [13/88] Unknown_MC4U_SetupGuide_EN_2.md
+[parts-embed] 13:52:46     Chunks: 16 embeddable
+[parts-embed] 13:52:50     OK: 16 chunks embedded
+[parts-embed] 13:52:50   [14/88] Unknown_MC4U_SetupGuide_EN.md
+[parts-embed] 13:52:50     Chunks: 16 embeddable
+[parts-embed] 13:52:53     OK: 16 chunks embedded
+[parts-embed] 13:52:53   [15/88] Unknown_HSSI_SetupGuide_EN.md
+[parts-embed] 13:52:53     Chunks: 229 embeddable
+[parts-embed] 13:54:01     OK: 229 chunks embedded
+[parts-embed] 13:54:01   [16/88] Unknown_ACSPL_Manual_KO.md
+[parts-embed] 13:54:01     Chunks: 10 embeddable
+[parts-embed] 13:54:05     OK: 10 chunks embedded
+[parts-embed] 13:54:05   [17/88] Unknown_ACS_Manual_KO.md
+[parts-embed] 13:54:05     Chunks: 5 embeddable
+[parts-embed] 13:54:07     OK: 5 chunks embedded
+[parts-embed] 13:54:07   [18/88] Unknown_ACS_CommManual_KO.md
+[parts-embed] 13:54:07     Skip (exists: 14 records)
+[parts-embed] 13:54:07   [19/88] Panasonic_Unknown_InstallGuide_EN_2.md
+[parts-embed] 13:54:07     Skip (exists: 410 records)
+[parts-embed] 13:54:07   [20/88] Panasonic_Unknown_InstallGuide_EN.md
+[parts-embed] 13:54:07     Skip (exists: 641 records)
+[parts-embed] 13:54:07   [21/88] Panasonic_UDM_SetupGuide_EN_3.md
+[parts-embed] 13:54:07     Chunks: 19 embeddable
+[parts-embed] 13:54:12     OK: 19 chunks embedded
+[parts-embed] 13:54:12   [22/88] Panasonic_UDM_SetupGuide_EN_2.md
+[parts-embed] 13:54:12     Chunks: 18 embeddable
+[parts-embed] 13:54:19     OK: 18 chunks embedded
+[parts-embed] 13:54:19   [23/88] Panasonic_UDM_SetupGuide_EN.md
+[parts-embed] 13:54:19     Chunks: 19 embeddable
+[parts-embed] 13:54:26     OK: 19 chunks embedded
+[parts-embed] 13:54:26   [24/88] Panasonic_UDM_InstallGuide_EN.md
+[parts-embed] 13:54:26     Chunks: 17 embeddable
+[parts-embed] 13:54:34     OK: 17 chunks embedded
+[parts-embed] 13:54:34   [25/88] Panasonic_UDM_CommManual_EN.md
+[parts-embed] 13:54:34     Chunks: 17 embeddable
+[parts-embed] 13:54:39     OK: 17 chunks embedded
+[parts-embed] 13:54:39   [26/88] Panasonic_UDI_CommManual_EN.md
+[parts-embed] 13:54:39     Chunks: 20 embeddable
+[parts-embed] 13:54:46     OK: 20 chunks embedded
+[parts-embed] 13:54:46   [27/88] Panasonic_TURBO_InstallGuide_EN.md
+[parts-embed] 13:54:46     Chunks: 174 embeddable
+[parts-embed] 13:55:48     OK: 174 chunks embedded
+[parts-embed] 13:55:48   [28/88] Panasonic_RESOLUTE_Manual_KO.md
+[parts-embed] 13:55:48     Chunks: 21 embeddable
+[parts-embed] 13:55:53     OK: 21 chunks embedded
+[parts-embed] 13:55:53   [29/88] Panasonic_MC4N_SetupGuide_KO.md
+[parts-embed] 13:55:53     Chunks: 17 embeddable
+[parts-embed] 13:55:57     OK: 17 chunks embedded
+[parts-embed] 13:55:57   [30/88] Panasonic_EVOLUTE_InstallGuide_EN.md
+[parts-embed] 13:55:57     Chunks: 15 embeddable
+[parts-embed] 13:56:00     OK: 15 chunks embedded
+[parts-embed] 13:56:00   [31/88] Mitsubishi_Unknown_Manual_KO_2.md
+[parts-embed] 13:56:00     Skip (exists: 373 records)
+[parts-embed] 13:56:00   [32/88] Mitsubishi_Unknown_Manual_KO.md
+[parts-embed] 13:56:00     Skip (exists: 522 records)
+[parts-embed] 13:56:00   [33/88] LS_Unknown_UserManual_EN.md
+[parts-embed] 13:56:00     Skip (exists: 154 records)
+[parts-embed] 13:56:00   [34/88] LS_Unknown_ProgrammingManual_EN.md
+[parts-embed] 13:56:00     Skip (exists: 118 records)
+[parts-embed] 13:56:00   [35/88] LS_Unknown_Manual_KO.md
+[parts-embed] 13:56:00     Skip (exists: 37 records)
+[parts-embed] 13:56:00   [36/88] LS_Unknown_MaintenanceManual_EN.md
+[parts-embed] 13:56:00     Skip (exists: 15 records)
+[parts-embed] 13:56:00   [37/88] LS_Unknown_InstallGuide_EN_2.md
+[parts-embed] 13:56:00     Skip (exists: 10 records)
+[parts-embed] 13:56:00   [38/88] LS_Unknown_InstallGuide_EN.md
+[parts-embed] 13:56:00     Skip (exists: 205 records)
+[parts-embed] 13:56:00   [39/88] LS_Unknown_FunctionsManual_EN.md
+[parts-embed] 13:56:00     Chunks: 8 embeddable
+[parts-embed] 13:56:01     OK: 8 chunks embedded
+[parts-embed] 13:56:01   [40/88] LS_TURBO_UserManual_EN.md
+[parts-embed] 13:56:01     Chunks: 2117 embeddable
+[parts-embed] 14:04:46     OK: 2117 chunks embedded
+[parts-embed] 14:04:46   [41/88] LS_PMAC_UserManual_EN_2.md
+[parts-embed] 14:04:47     Chunks: 1805 embeddable
+[parts-embed] 14:11:21     OK: 1805 chunks embedded
+[parts-embed] 14:11:21   [42/88] LS_PMAC_UserManual_EN.md
+[parts-embed] 14:11:21     Chunks: 316 embeddable
+[parts-embed] 14:13:02     OK: 316 chunks embedded
+[parts-embed] 14:13:02   [43/88] LS_PMAC_InstallGuide_EN_3.md
+[parts-embed] 14:13:02     Chunks: 1992 embeddable
+[parts-embed] 14:20:11     OK: 1992 chunks embedded
+[parts-embed] 14:20:11   [44/88] LS_PMAC_InstallGuide_EN_2.md
+[parts-embed] 14:20:11     Skip (exists: 3600 records)
+[parts-embed] 14:20:11   [45/88] LS_PMAC_InstallGuide_EN.md
+[parts-embed] 14:20:11     Skip (exists: 1901 records)
+[parts-embed] 14:20:11   [46/88] LS_PMAC_FunctionsManual_EN.md
+[parts-embed] 14:20:11     Skip (exists: 80 records)
+[parts-embed] 14:20:11   [47/88] LS_PMAC2A_InstallGuide_EN_4.md
+[parts-embed] 14:20:11     Skip (exists: 148 records)
+[parts-embed] 14:20:11   [48/88] LS_PMAC2A_InstallGuide_EN_3.md
+[parts-embed] 14:20:11     Skip (exists: 84 records)
+[parts-embed] 14:20:11   [49/88] LS_PMAC2A_InstallGuide_EN_2.md
+[parts-embed] 14:20:11     Skip (exists: 146 records)
+[parts-embed] 14:20:11   [50/88] LS_PMAC2A_InstallGuide_EN.md
+[parts-embed] 14:20:11     Skip (exists: 105 records)
+[parts-embed] 14:20:11   [51/88] LS_PCI_InstallGuide_EN.md
+[parts-embed] 14:20:11     Skip (exists: 24 records)
+[parts-embed] 14:20:11   [52/88] LS_PCI_FunctionsManual_EN_2.md
+[parts-embed] 14:20:11     Skip (exists: 8 records)
+[parts-embed] 14:20:11   [53/88] LS_PCI_FunctionsManual_EN.md
+[parts-embed] 14:20:11     Skip (exists: 8 records)
+[parts-embed] 14:20:11   [54/88] LS_PCI-ST_InstallGuide_EN.md
+[parts-embed] 14:20:11     Skip (exists: 24 records)
+[parts-embed] 14:20:11   [55/88] LS_PCI-LT_InstallGuide_EN.md
+[parts-embed] 14:20:11     Skip (exists: 26 records)
+[parts-embed] 14:20:11   [56/88] LS_NTM_SetupGuide_EN.md
+[parts-embed] 14:20:11     Skip (exists: 10 records)
+[parts-embed] 14:20:11   [57/88] LS_MC4U_SetupGuide_EN_4.md
+[parts-embed] 14:20:11     Skip (exists: 16 records)
+[parts-embed] 14:20:11   [58/88] LS_MC4U_SetupGuide_EN_3.md
+[parts-embed] 14:20:11     Skip (exists: 16 records)
+[parts-embed] 14:20:11   [59/88] LS_MC4U_SetupGuide_EN_2.md
+[parts-embed] 14:20:11     Skip (exists: 16 records)
+[parts-embed] 14:20:11   [60/88] LS_MC4U_SetupGuide_EN.md
+[parts-embed] 14:20:11     Skip (exists: 16 records)
+[parts-embed] 14:20:11   [61/88] LS_MC4U_CommManual_EN_2.md
+[parts-embed] 14:20:11     Skip (exists: 39 records)
+[parts-embed] 14:20:11   [62/88] LS_MC4U_CommManual_EN.md
+[parts-embed] 14:20:11     Skip (exists: 38 records)
+[parts-embed] 14:20:11   [63/88] LS_LF-CM_InstallGuide_EN_2.md
+[parts-embed] 14:20:11     Skip (exists: 28 records)
+[parts-embed] 14:20:11   [64/88] LS_LF-CM_InstallGuide_EN.md
+[parts-embed] 14:20:11     Skip (exists: 28 records)
+[parts-embed] 14:20:11   [65/88] LS_HSSI-ED2_SetupGuide_EN.md
+[parts-embed] 14:20:11     Skip (exists: 17 records)
+[parts-embed] 14:20:11   [66/88] LS_ACS_SetupGuide_KO.md
+[parts-embed] 14:20:11     Skip (exists: 5 records)
+[parts-embed] 14:20:11   [67/88] EtherCAT_PNOZ_WiringGuide_EN.md
+[parts-embed] 14:20:11     Skip (exists: 22 records)
+[parts-embed] 14:20:11   [68/88] EtherCAT_CVS-18-04_CommManual_KO.md
+[parts-embed] 14:20:11     Skip (exists: 28 records)
+[parts-embed] 14:20:11   [69/88] Delta_PMAC_ProgrammingManual_KO.md
+[parts-embed] 14:20:11     Skip (exists: 269 records)
+[parts-embed] 14:20:11   [70/88] Delta_PMAC_FirmwareNote_EN.md
+[parts-embed] 14:20:11     Skip (exists: 18 records)
+[parts-embed] 14:20:11   [71/88] Crevis_Unknown_Safety_KO.md
+[parts-embed] 14:20:11     Skip (exists: 92 records)
+[parts-embed] 14:20:11   [72/88] Beckhoff_Unknown_SetupGuide_EN.md
+[parts-embed] 14:20:11     Skip (exists: 19 records)
+[parts-embed] 14:20:11   [73/88] Beckhoff_Unknown_CommManual_KO.md
+[parts-embed] 14:20:11     Skip (exists: 777 records)
+[parts-embed] 14:20:11   [74/88] ACS_Unknown_SetupGuide_EN.md
+[parts-embed] 14:20:11     Skip (exists: 297 records)
+[parts-embed] 14:20:11   [75/88] ACS_Unknown_CommManual_EN_2.md
+[parts-embed] 14:20:11     Skip (exists: 306 records)
+[parts-embed] 14:20:11   [76/88] ACS_Unknown_CommManual_EN.md
+[parts-embed] 14:20:11     Skip (exists: 62 records)
+[parts-embed] 14:20:11   [77/88] ACS_SDM_CommManual_EN.md
+[parts-embed] 14:20:11     Skip (exists: 15 records)
+[parts-embed] 14:20:11   [78/88] ACS_SAR-LT_CommManual_EN.md
+[parts-embed] 14:20:11     Skip (exists: 282 records)
+[parts-embed] 14:20:11   [79/88] ACS_PDM_CommManual_EN.md
+[parts-embed] 14:20:11     Skip (exists: 10 records)
+[parts-embed] 14:20:11   [80/88] ACS_MC4U_SetupGuide_EN.md
+[parts-embed] 14:20:11     Skip (exists: 14 records)
+[parts-embed] 14:20:11   [81/88] ACS_IOM_WiringGuide_EN.md
+[parts-embed] 14:20:11     Skip (exists: 4 records)
+[parts-embed] 14:20:11   [82/88] ACS_COM_CommManual_EN_2.md
+[parts-embed] 14:20:11     Skip (exists: 1074 records)
+[parts-embed] 14:20:11   [83/88] ACS_COM_CommManual_EN.md
+[parts-embed] 14:20:11     Skip (exists: 1271 records)
+[parts-embed] 14:20:11   [84/88] ACS_ACSPL_SetupGuide_EN.md
+[parts-embed] 14:20:11     Skip (exists: 945 records)
+[parts-embed] 14:20:11   [85/88] ACS_ACS_SetupGuide_KO.md
+[parts-embed] 14:20:11     Skip (exists: 9 records)
+[parts-embed] 14:20:11   [86/88] ACS_ACS_CommManual_KO_3.md
+[parts-embed] 14:20:11     Skip (exists: 6 records)
+[parts-embed] 14:20:11   [87/88] ACS_ACS_CommManual_KO_2.md
+[parts-embed] 14:20:11     Skip (exists: 7 records)
+[parts-embed] 14:20:11   [88/88] ACS_ACS_CommManual_KO.md
+[parts-embed] 14:20:11     Skip (exists: 6 records)
+[parts-embed] 14:20:11 
+완료: 88개 파일, 7587개 청크, 0\ufffd\ufffd\ufffd 에러

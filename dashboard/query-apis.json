@@ -1,0 +1,173 @@
+{
+  "project_by_name": {
+    "name": "project_by_name",
+    "description": "프로젝트명으로 id/code/name 조회",
+    "db": "mes",
+    "sql": "SELECT id, project_code, name FROM api_project WHERE name ILIKE '%{keyword}%'",
+    "params": [
+      {
+        "name": "keyword",
+        "description": "프로젝트명 검색어",
+        "required": true
+      }
+    ],
+    "example": "GET /api/query/project_by_name?keyword=메이써",
+    "registered_by": "db-manager",
+    "registered_at": "2026-03-27 20:10:49"
+  },
+  "active_press_projects": {
+    "name": "active_press_projects",
+    "description": "진행중 프레스 프로젝트 목록",
+    "db": "mes",
+    "sql": "SELECT id, project_code, name, status FROM api_project WHERE status = 'in_progress' AND name ILIKE '%프레스%' ORDER BY id",
+    "params": [],
+    "example": "GET /api/query/active_press_projects",
+    "registered_by": "db-manager",
+    "registered_at": "2026-03-27 20:11:00"
+  },
+  "project_status_values": {
+    "name": "project_status_values",
+    "description": "api_project status 종류 확인",
+    "db": "mes",
+    "sql": "SELECT DISTINCT status FROM api_project ORDER BY status",
+    "params": [],
+    "example": "GET /api/query/project_status_values",
+    "registered_by": "db-manager",
+    "registered_at": "2026-03-27 20:11:02"
+  },
+  "active_projects": {
+    "name": "active_projects",
+    "description": "진행중 프로젝트 목록 (status=in_progress)",
+    "db": "mes",
+    "sql": "SELECT id, project_code, name, status, customer_name, delivery_date, progress FROM api_project WHERE status = 'in_progress' ORDER BY delivery_date",
+    "params": [],
+    "example": "GET /api/query/active_projects",
+    "registered_by": "db-manager",
+    "registered_at": "2026-03-27 20:58:58"
+  },
+  "nc_recent": {
+    "name": "nc_recent",
+    "description": "최근 부적합 목록 (최근 50건)",
+    "db": "mes",
+    "sql": "SELECT r.id, r.nonconformance_type, r.importance, r.title, r.description, p.name AS project_name, u.username AS reporter, r.created_at FROM api_nonconformancereport r LEFT JOIN api_project p ON p.id = r.project_id LEFT JOIN auth_user u ON u.id = r.reporter_id ORDER BY r.created_at DESC LIMIT 50",
+    "params": [],
+    "example": "GET /api/query/nc_recent",
+    "registered_by": "db-manager",
+    "registered_at": "2026-03-27 20:59:00"
+  },
+  "nc_by_project": {
+    "name": "nc_by_project",
+    "description": "특정 프로젝트의 부적합 목록",
+    "db": "mes",
+    "sql": "SELECT r.id, r.nonconformance_type, r.importance, r.title, r.description, u.username AS reporter, r.created_at FROM api_nonconformancereport r LEFT JOIN api_project p ON p.id = r.project_id LEFT JOIN auth_user u ON u.id = r.reporter_id WHERE p.project_code = '{project_code}' ORDER BY r.created_at DESC",
+    "params": [
+      {
+        "name": "project_code",
+        "description": "프로젝트 코드 (예: CNCMAHP0012)",
+        "required": true
+      }
+    ],
+    "example": "GET /api/query/nc_by_project?project_code=CNCMAHP0012",
+    "registered_by": "db-manager",
+    "registered_at": "2026-03-27 20:59:02"
+  },
+  "orders_list": {
+    "name": "orders_list",
+    "description": "수주 목록 (최근 50건)",
+    "db": "mes",
+    "sql": "SELECT id, order_number, customer_name, project_name, product_type, quantity, order_date, delivery_date, order_status, sales_person FROM api_order ORDER BY order_date DESC LIMIT 50",
+    "params": [],
+    "example": "GET /api/query/orders_list",
+    "registered_by": "db-manager",
+    "registered_at": "2026-03-27 20:59:04"
+  },
+  "project_schedule": {
+    "name": "project_schedule",
+    "description": "프로젝트 세부 일정 조회",
+    "db": "mes",
+    "sql": "SELECT ds.task_name, ds.task_type, ds.planned_start_date, ds.planned_end_date, ds.actual_start_date, ds.actual_end_date, ds.progress_percent, ds.status FROM api_projectdetailedschedule ds JOIN api_project p ON p.id = ds.project_id WHERE p.project_code = '{project_code}' ORDER BY ds.planned_start_date",
+    "params": [
+      {
+        "name": "project_code",
+        "description": "프로젝트 코드 (예: CNCMAHP0012)",
+        "required": true
+      }
+    ],
+    "example": "GET /api/query/project_schedule?project_code=CNCMAHP0012",
+    "registered_by": "db-manager",
+    "registered_at": "2026-03-27 20:59:06"
+  },
+  "shipment_recent": {
+    "name": "shipment_recent",
+    "description": "최근 출하 목록 (최근 50건)",
+    "db": "mes",
+    "sql": "SELECT id, doc_no, status, shipment_no, project_name, customer, shipment_date, export_date, serial_no FROM shipment_table ORDER BY shipment_date DESC NULLS LAST LIMIT 50",
+    "params": [],
+    "example": "GET /api/query/shipment_recent",
+    "registered_by": "db-manager",
+    "registered_at": "2026-03-27 21:07:58"
+  },
+  "shipment_by_status": {
+    "name": "shipment_by_status",
+    "description": "출하 상태별 목록",
+    "db": "mes",
+    "sql": "SELECT id, doc_no, status, shipment_no, project_name, customer, shipment_date, serial_no FROM shipment_table WHERE status = '{status}' ORDER BY shipment_date DESC LIMIT 50",
+    "params": [
+      {
+        "name": "status",
+        "description": "출하 상태",
+        "required": true
+      }
+    ],
+    "example": "GET /api/query/shipment_by_status?status=출하완료",
+    "registered_by": "db-manager",
+    "registered_at": "2026-03-27 21:08:00"
+  },
+  "cs_inventory_zero": {
+    "name": "cs_inventory_zero",
+    "description": "CS 재고 중 양품 수량 0인 항목",
+    "db": "mes",
+    "sql": "SELECT item_cd, item_nm, spec, stock_qty, good_qty, bad_qty FROM csagent.api_cs_inventory WHERE good_qty = 0 ORDER BY item_cd",
+    "params": [],
+    "example": "GET /api/query/cs_inventory_zero",
+    "registered_by": "db-manager",
+    "registered_at": "2026-03-27 21:08:02"
+  },
+  "nc_overdue": {
+    "name": "nc_overdue",
+    "description": "중요도별 기한 초과 미조치 부적합 목록 (critical=3일, high=7일, medium=14일, low=30일) — importance 파라미터로 필터 가능",
+    "db": "mes",
+    "sql": "SELECT r.id, r.importance, r.title, p.name AS project_name, CONCAT(u.last_name, u.first_name) AS reporter, am.username AS action_manager_username, CONCAT(am.last_name, am.first_name) AS action_manager_name, (r.created_at AT TIME ZONE 'UTC' AT TIME ZONE 'Asia/Seoul')::text AS created_kst, EXTRACT(DAY FROM NOW() - r.created_at)::int - CASE r.importance WHEN 'critical' THEN 3 WHEN 'high' THEN 7 WHEN 'medium' THEN 14 WHEN 'low' THEN 30 ELSE 14 END AS overdue_days FROM api_nonconformancereport r LEFT JOIN api_project p ON p.id = r.project_id LEFT JOIN auth_user u ON u.id = r.reporter_id LEFT JOIN auth_user am ON am.id = r.action_manager_id WHERE (r.action_result IS NULL OR r.action_result = '') AND EXTRACT(DAY FROM NOW() - r.created_at) > CASE r.importance WHEN 'critical' THEN 3 WHEN 'high' THEN 7 WHEN 'medium' THEN 14 WHEN 'low' THEN 30 ELSE 14 END AND ('{importance}' = 'all' OR r.importance = '{importance}') ORDER BY CASE r.importance WHEN 'critical' THEN 1 WHEN 'high' THEN 2 WHEN 'medium' THEN 3 ELSE 4 END, r.created_at ASC",
+    "params": [
+      {
+        "name": "importance",
+        "description": "중요도 필터 (critical/high/medium/low/all)",
+        "required": false,
+        "default": "all"
+      }
+    ],
+    "example": "GET /api/query/nc_overdue?importance=high",
+    "registered_by": "db-manager",
+    "registered_at": "2026-03-29 11:33:47"
+  },
+  "nc_weekly_summary": {
+    "name": "nc_weekly_summary",
+    "description": "중요도별 미조치 요약 — 총 미조치, 납기위험(D-30 이내 진행중 프로젝트), 이번 주 조치 완료 건수",
+    "db": "mes",
+    "sql": "SELECT r.importance, COUNT(*) FILTER (WHERE r.action_result IS NULL OR r.action_result = '') as total_open, COUNT(*) FILTER (WHERE (r.action_result IS NULL OR r.action_result = '') AND p.delivery_date BETWEEN CURRENT_DATE AND CURRENT_DATE + INTERVAL '30 days' AND p.status NOT IN ('완료', '취소', 'completed', 'cancelled')) as delivery_risk, COUNT(*) FILTER (WHERE r.action_result IS NOT NULL AND r.action_result != '' AND r.updated_at >= date_trunc('week', NOW())) as closed_this_week FROM api_nonconformancereport r LEFT JOIN api_project p ON p.id = r.project_id GROUP BY r.importance ORDER BY CASE r.importance WHEN 'critical' THEN 1 WHEN 'high' THEN 2 WHEN 'medium' THEN 3 ELSE 4 END",
+    "params": [],
+    "example": "GET /api/query/nc_weekly_summary",
+    "registered_by": "db-manager",
+    "registered_at": "2026-03-29 11:34:54"
+  },
+  "nc_new_this_week": {
+    "name": "nc_new_this_week",
+    "description": "이번 주(월요일 00:00 KST 이후) 신규 등록 부적합 목록",
+    "db": "mes",
+    "sql": "SELECT r.id, r.importance, r.title, p.name AS project_name, CONCAT(u.last_name, u.first_name) AS reporter, (r.created_at AT TIME ZONE 'UTC' AT TIME ZONE 'Asia/Seoul')::text AS created_kst FROM api_nonconformancereport r LEFT JOIN api_project p ON p.id = r.project_id LEFT JOIN auth_user u ON u.id = r.reporter_id WHERE r.created_at >= date_trunc('week', NOW() AT TIME ZONE 'Asia/Seoul') AT TIME ZONE 'Asia/Seoul' ORDER BY r.created_at DESC",
+    "params": [],
+    "example": "GET /api/query/nc_new_this_week",
+    "registered_by": "db-manager",
+    "registered_at": "2026-03-29 11:33:51"
+  }
+}

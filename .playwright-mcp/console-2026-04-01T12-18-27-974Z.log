@@ -1,0 +1,7 @@
+[     228ms] [ERROR] Failed to load resource: the server responded with a status of 404 (NOT FOUND) @ http://localhost:5555/favicon.svg:0
+[     290ms] [ERROR] Failed to load resource: the server responded with a status of 404 (NOT FOUND) @ http://localhost:5555/favicon.svg:0
+[     368ms] [WARNING] [.WebGL-0x3c7401a26300]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels @ http://localhost:5555/v2/office:0
+[     604ms] [WARNING] [.WebGL-0x3c7401a26300]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels @ http://localhost:5555/v2/office:0
+[     631ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-CjKrEBQ_.js:11
+[     632ms] [WARNING] [.WebGL-0x3c7401a26300]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels @ http://localhost:5555/v2/office:0
+[     688ms] [WARNING] [.WebGL-0x3c7401a26300]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat) @ http://localhost:5555/v2/office:0

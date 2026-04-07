@@ -1,0 +1,17 @@
+C:\wMES\wmes_env\Lib\site-packages\django\db\backends\utils.py:98: RuntimeWarning: Accessing the database during app initialization is discouraged. To fix this warning, avoid executing queries in AppConfig.ready() or when your app modules are imported.
+  warnings.warn(self.APPS_NOT_READY_WARNING_MSG, category=RuntimeWarning)
+ERROR SMTP settings - Host: email-smtp.ap-northeast-2.amazonaws.com, Port: 587, TLS: True, Username: AKIAZJ2JZWDNX764JP63
+ERROR SMTP settings - Host: email-smtp.ap-northeast-2.amazonaws.com, Port: 587, TLS: True, Username: AKIAZJ2JZWDNX764JP63
+ERROR SMTP settings - Host: email-smtp.ap-northeast-2.amazonaws.com, Port: 587, TLS: True, Username: AKIAZJ2JZWDNX764JP63
+ERROR SMTP settings - Host: email-smtp.ap-northeast-2.amazonaws.com, Port: 587, TLS: True, Username: AKIAZJ2JZWDNX764JP63
+ERROR SMTP settings - Host: email-smtp.ap-northeast-2.amazonaws.com, Port: 587, TLS: True, Username: AKIAZJ2JZWDNX764JP63
+ERROR SMTP settings - Host: email-smtp.ap-northeast-2.amazonaws.com, Port: 587, TLS: True, Username: AKIAZJ2JZWDNX764JP63
+ERROR SMTP settings - Host: email-smtp.ap-northeast-2.amazonaws.com, Port: 587, TLS: True, Username: AKIAZJ2JZWDNX764JP63
+ERROR SMTP settings - Host: email-smtp.ap-northeast-2.amazonaws.com, Port: 587, TLS: True, Username: AKIAZJ2JZWDNX764JP63
+ERROR You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR "PRI * HTTP/2.0" 505 -
+ERROR You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR SMTP settings - Host: email-smtp.ap-northeast-2.amazonaws.com, Port: 587, TLS: True, Username: AKIAZJ2JZWDNX764JP63
+ERROR SMTP settings - Host: email-smtp.ap-northeast-2.amazonaws.com, Port: 587, TLS: True, Username: AKIAZJ2JZWDNX764JP63
+[2026-03-31 17:35:31,442] DEBUG chat.signals_rag: RAG signal upsert ok: db_defect_delivery id=261
+[2026-03-31 17:35:41,732] DEBUG chat.signals_rag: RAG signal upsert ok: db_defect_delivery id=255

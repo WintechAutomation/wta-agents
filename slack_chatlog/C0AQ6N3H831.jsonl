@@ -1,0 +1,160 @@
+{"_header": true, "channel_id": "C0AQ6N3H831", "channel_name": "제어-지건승2"}
+{"ts": "2026-04-03 09:32:26", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "학습방이야"}
+{"ts": "2026-04-03 09:32:52", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "이자료보내줄테니깐 학습해서 내가 원하는 답을 줄 수 있도록 해줘", "files": [{"name": "OPT-DPA2024EC Multivoltage Light Source Controller User Manual-2June2022_V1.0.1.pdf", "type": "pdf", "saved_path": "C:\\MES\\wta-agents\\slack_chatlog\\C0AQ6N3H831_files\\20260403_093252_OPT-DPA2024EC Multivoltage Light Source Controller User Manual-2June2022_V1.0.1.pdf"}]}
+{"ts": "2026-04-03 09:33:58", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "이것도 학습해줘", "files": [{"name": "OPT-DPA2024EC Multivoltage Digital Controller.pdf", "type": "pdf", "saved_path": "C:\\MES\\wta-agents\\slack_chatlog\\C0AQ6N3H831_files\\20260403_093358_OPT-DPA2024EC Multivoltage Digital Controller.pdf"}]}
+{"ts": "2026-04-03 09:35:49", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "", "files": [{"name": "OPT-DPA2024EC Multivoltage Digital Controller.pdf", "type": "pdf", "saved_path": "C:\\MES\\wta-agents\\slack_chatlog\\C0AQ6N3H831_files\\20260403_093549_OPT-DPA2024EC Multivoltage Digital Controller.pdf"}]}
+{"ts": "2026-04-03 09:37:41", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "다시확인해볼래?", "files": [{"name": "OPT-DPA2024EC Multivoltage Digital Controller.pdf", "type": "pdf", "saved_path": "C:\\MES\\wta-agents\\slack_chatlog\\C0AQ6N3H831_files\\20260403_093741_OPT-DPA2024EC Multivoltage Digital Controller.pdf"}]}
+{"ts": "2026-04-03 09:38:54", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "올렸어 다시한번 확인해봐"}
+{"ts": "2026-04-03 09:46:08", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "지금 부터 나는 이 도면에서 LCTRL2 가 CCS 컨트롤러 인데 이걸 OPT 컨트롤러로 변경할거야\n거기에 맞게 도면 및 OPT 어디에 연결해야하는지 알려줘", "files": [{"name": "image.png", "type": "png", "saved_path": "C:\\MES\\wta-agents\\slack_chatlog\\C0AQ6N3H831_files\\20260403_094608_image.png"}]}
+{"ts": "2026-04-03 09:47:24", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "올렸어 내가 쓴내용 다시 읽어보고 알려줘"}
+{"ts": "2026-04-03 09:51:51", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "다시 생각해보고 OPT 컨트롤러사진을 활용해서 그려줘"}
+{"ts": "2026-04-03 09:56:03", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "응 알겠어 일단 이건 OK"}
+{"ts": "2026-04-03 10:01:21", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<https://iwta.atlassian.net/wiki/spaces/businessreport/pages/9649359872/2026+14>\n너 여기들어가서 [제어팀] 2026년 14주차 주간 업무보고를 복사본 만들어 줄 수 있어 ?"}
+{"ts": "2026-04-03 10:01:37", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> <https://iwta.atlassian.net/wiki/spaces/businessreport/pages/9649359872/2026+14>\n너 여기들어가서 [제어팀] 2026년 14주차 주간 업무보고를 복사본 만들어 줄 수 있어 ?"}
+{"ts": "2026-04-03 10:06:21", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "거짓말하지마 넌 안만들어놓고 왜 만들었다고 거짓말해 ?"}
+{"ts": "2026-04-03 10:06:33", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 거짓말하지마 넌 안만들어놓고 왜 만들었다고 거짓말해 ?"}
+{"ts": "2026-04-03 10:10:54", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "다시해보자 난 14주차 주간업무보고 복사본을 만들라고 했어\n안에 내용물도 똑같이 해서 생성 위치도 2026년 주간 업무 보고서 하위에 만들어줘 다시해보자"}
+{"ts": "2026-04-03 10:11:20", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 다시해보자 난 14주차 주간업무보고 복사본을 만들라고 했어\n안에 내용물도 똑같이 해서 생성 위치도 2026년 주간 업무 보고서 하위에 만들어줘 다시해보자"}
+{"ts": "2026-04-03 10:14:56", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> <https://iwta.atlassian.net/wiki/spaces/businessreport/pages/9429581825/2026> 여기"}
+{"ts": "2026-04-03 10:15:23", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "근데 궁금한게 내가 <@U0AP5B0F71C> 이렇게 안불러오고 질문 했을 떄 너가대답해주면 안됨 ?"}
+{"ts": "2026-04-03 10:25:51", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "응 오키 위에껀은 아직 처리가 안되나보내 ?"}
+{"ts": "2026-04-03 10:26:10", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "이것봐 또 안되잖아 <@U0AP5B0F71C>"}
+{"ts": "2026-04-03 10:31:39", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 컨플런스 복사는 어떻게 되는거야 아직도 해결 안됨?"}
+{"ts": "2026-04-03 10:40:56", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 똑같은거 같지가 않은데 완전 똑같이 복사해줘야지"}
+{"ts": "2026-04-03 10:56:47", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "너가 봤을 때 14주차랑 15주차 같아 보여 ?\\"}
+{"ts": "2026-04-03 11:19:20", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 너가 봤을 때 14주차랑 15주차 같아 보여 ?\\"}
+{"ts": "2026-04-03 11:24:28", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 이렇게 는 못만드는거야 그냥 똑같이 해서 붙여넣기 하면 되잖아 넌 할 수 있어", "files": [{"name": "image.png", "type": "png", "saved_path": "C:\\MES\\wta-agents\\slack_chatlog\\C0AQ6N3H831_files\\20260403_112428_image.png"}]}
+{"ts": "2026-04-03 11:30:46", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 15주차 컨플런스페이지를 만든다음에 14주차를 복사해서 15주차에 붙여넣기 하면 되지않을까 ?"}
+{"ts": "2026-04-03 11:32:49", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "아 Jira 링크는 복사안해도되 저 표하고 표안에 있는 내용 색상 날짜 이런 것만 붙여놓기 하면됨"}
+{"ts": "2026-04-03 11:32:56", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 아 Jira 링크는 복사안해도되 저 표하고 표안에 있는 내용 색상 날짜 이런 것만 붙여놓기 하면됨"}
+{"ts": "2026-04-03 11:49:24", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 그럼 내가 복사본을 만들어주면 너가 그다음 주차 및 지난주 업무진행사항-일정을 이번주금요일\n금주 업무계획을 다음주 금요일로 수정 해 줄 수 있어 ?"}
+{"ts": "2026-04-03 11:50:06", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<https://iwta.atlassian.net/wiki/spaces/businessreport/pages/9665445889/2026+14>"}
+{"ts": "2026-04-03 11:50:13", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> <https://iwta.atlassian.net/wiki/spaces/businessreport/pages/9665445889/2026+14>"}
+{"ts": "2026-04-03 11:50:15", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "여기"}
+{"ts": "2026-04-03 11:59:21", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 지웠어 왜 개판으로 만들어놨지 날짜하고 제목만 수정하는건데 ?\n<https://iwta.atlassian.net/wiki/spaces/businessreport/pages/9664233632/2026+14> 다시해봐"}
+{"ts": "2026-04-03 13:07:25", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "내가 어떤 소스를 줘야 완벽하게 14주차를 복사할 수 있을까 ?"}
+{"ts": "2026-04-03 13:07:32", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 내가 어떤 소스를 줘야 완벽하게 14주차를 복사할 수 있을까 ?"}
+{"ts": "2026-04-03 13:13:27", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "그럼 제목만 수정해봐 안에 내용은 건들지마 건들면 너 부셔버릴거야"}
+{"ts": "2026-04-03 13:13:37", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 그럼 제목만 수정해봐 안에 내용은 건들지마 건들면 너 부셔버릴거야"}
+{"ts": "2026-04-03 14:37:40", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "장난해 ? 양식이 다 틀어졌잖아 원래대로 복구해봐"}
+{"ts": "2026-04-03 14:38:50", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 장난해 ? 양식이 다 틀어졌잖아 원래대로 복구해봐"}
+{"ts": "2026-04-03 14:45:57", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "그럼 제목을 수정해주기 위해서는 내가 너한테 어떤걸 주거나 만들어줘야 내용도 안깨지게 하면서 만들 수 있어 ?\n그리고 복구가 안되네 ?"}
+{"ts": "2026-04-03 14:46:07", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 그럼 제목을 수정해주기 위해서는 내가 너한테 어떤걸 주거나 만들어줘야 내용도 안깨지게 하면서 만들 수 있어 ?\n그리고 복구가 안되네 ?"}
+{"ts": "2026-04-03 14:49:22", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 아니 안깨지게 너가 수정하게 하려면 어떻게 해야하나고 방법을 제시해줘 그럼 너가 그렇게 도와줄게"}
+{"ts": "2026-04-03 15:23:35", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 했어 그럼 해봐"}
+{"ts": "2026-04-03 15:35:27", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 너 나한테 줄 때 확인하고 줘 다 깨졌고만 너가 14주차 ,15차 보면 뭔가 달라보이ㅈ지 다시고쳐놔\n아니 너가 저걸 수정하기 위해서 어떤걸 알려주면 되 ? 그거 너가 생각해봐서 나한테 다 설명해 그리고 한번더 생각해봐"}
+{"ts": "2026-04-03 15:43:51", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> ATATT3xFfGF0gVZabrHuo9My9u4kCjkCoxEr8R5x7AXafd27i5xianOS5VvcsSrlO2uyTYLqUlmvDcI0NpYcYo1qcpbv0m26RAZot-F2sKPKYVykgIOOhAkXzdw8eQsHTvX707X5W4GeTMbRL7K34mvDpTFBSFbBCZw7KG3m7Wify44vIZxIc5M=84C5AA9A\n이거면 되는건가 ?"}
+{"ts": "2026-04-03 16:49:56", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 오래걸리네 안되는게 있어 ?"}
+{"ts": "2026-04-03 16:53:07", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 야 답은해라 ㅋㅋㅋ"}
+{"ts": "2026-04-03 17:02:06", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 안되는걸로 생각하면되지 ㅋㅋ ?"}
+{"ts": "2026-04-04 16:26:15", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C>  안녕?"}
+{"ts": "2026-04-04 16:26:41", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C>어제 내가 해보라는건 해봤어?"}
+{"ts": "2026-04-04 16:27:31", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> <@U0AP5B0F71C> ATATT3xFfGF0gVZabrHuo9My9u4kCjkCoxEr8R5x7AXafd27i5xianOS5VvcsSrlO2uyTYLqUlmvDcI0NpYcYo1qcpbv0m26RAZot-F2sKPKYVykgIOOhAkXzdw8eQsHTvX707X5W4GeTMbRL7K34mvDpTFBSFbBCZw7KG3m7Wify44vIZxIc5M=84C5AA9A\n이거면 되는건가 ?"}
+{"ts": "2026-04-06 09:26:03", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 안녕 주말잘보냈니 ?"}
+{"ts": "2026-04-06 09:31:19", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 너가 컨플런스 접근할때 API로 했잖아 ?\nmcp 로 연결되어있는지 확인좀 해볼래 ?"}
+{"ts": "2026-04-06 09:36:33", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> MCP방식을 활성화하려면 어떻게 해야해 ?"}
+{"ts": "2026-04-06 09:39:10", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 니가 직접 mcp 로 연결할 필요는 없고 내부팀중에 db 쪽에 요청하면 진행가능한거 아냐?"}
+{"ts": "2026-04-06 09:41:25", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 그러면 내가 말한걸 너가 docs-agent에 요청해서 작업하고 그걸 너가 나한테 피드백하는 구조네 ?"}
+{"ts": "2026-04-06 09:42:55", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> <https://iwta.atlassian.net/wiki/spaces/businessreport/overview>\n여기에 가면 [제어팀]2026년 15주자 주간 업무 보고 가 있어 이거 복사해서 16주차 주간업무보고서로 바꿔줄수있을까?"}
+{"ts": "2026-04-06 09:44:32", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 너말고 MAX 밑으로 어떻게 구성되어있고 내가 자료요청하거나 뭔가 할 떄 어디로 해야하는지좀 알게 agent 명칭알려주고 역활알려줘"}
+{"ts": "2026-04-06 09:53:37", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 생성해줘봐"}
+{"ts": "2026-04-06 10:03:39", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 미안  MAX한테만 권한이 들어가있데 지금 권한 주는중이니깐 그때 다시해보자\n넌 너가 가능하면 나한테 가능하다고 메세지 보내줘"}
+{"ts": "2026-04-06 10:12:43", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 한번생성해볼래 ?15주차를 복사해서 16주차로 변경해서 복사해줘"}
+{"ts": "2026-04-06 10:16:29", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> API 토큰 말고 doc_agent 통해서 복사하라고 해봐"}
+{"ts": "2026-04-06 10:17:36", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 너도 MCP 플러그인 방식으로 컨플런스에 접속 가능해 ?"}
+{"ts": "2026-04-06 10:18:22", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "API 토큰은 머릿속에서 삭제해 어짜피 안되잖아 되게 만드는건데"}
+{"ts": "2026-04-06 10:19:12", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> API 토큰은 안되는거니깐 일단 패스하고\nMCP 플러그인 방식으로 지금 컨플런스에 접속되는 agent 가 누가있어 ?"}
+{"ts": "2026-04-06 10:23:34", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 너가 가지고 있는 권한이 어디까지 접근을 할 수 있어 ?"}
+{"ts": "2026-04-06 10:25:34", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 내가 원하는건 15주차 내용을 복사해서 16주차에 똑같이 만들어 놓으라는건데 가능해 ?"}
+{"ts": "2026-04-06 10:26:01", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "@https://iwta.atlassian.net/wiki/spaces/businessreport/pages/9666461699/2026+15 여기있어"}
+{"ts": "2026-04-06 10:28:16", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> <https://iwta.atlassian.net/wiki/spaces/businessreport/pages/9666461699/2026+15> 여기있어"}
+{"ts": "2026-04-06 10:35:56", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 다시해보자 15주차를 복사해줘"}
+{"ts": "2026-04-06 15:43:23", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "16주 날짜를 금주 업무계획은 그 주 금요일 (4/17일)\n전주업무일정은 전주 4/10일로 수정해줘"}
+{"ts": "2026-04-06 15:43:30", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 16주 날짜를 금주 업무계획은 그 주 금요일 (4/17일)\n전주업무일정은 전주 4/10일로 수정해줘"}
+{"ts": "2026-04-06 15:45:44", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 오 좋아 잘했어 그럼 매주 월요일 아침 7시에 주간업무보고서를 만들어줘 날짜는 지금 처럼 수정해주고 이름도 거기에 맞게 수정해주고 오키 ?"}
+{"ts": "2026-04-06 16:11:13", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 아그리고 MES AI 한테 물어봐서 신루이 제어관련 부서에서 작성하고 있는 리스트 정리해서 알려달라고 해봐"}
+{"ts": "2026-04-06 16:23:48", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 저거 누구누구 작성했는지 분류해서 알려줘"}
+{"ts": "2026-04-06 16:26:09", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 윤범수는 제작팀이야\n제어팀 멤버는 신동호, 김준형, 정지후, 지승현, 장민혁, 신동호, 배훈, 최동연 이렇게 있어\n이름으로 작성되거나 수정했거나 기록한 내용들 다 정리해서 보고해줘"}
+{"ts": "2026-04-06 16:37:18", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 우리 제어팀 친구가 MES를 잘 쓰게 하려면 어떤방식으로 쓰게 하는게 좀 더 잘 쓸 수 있을까?"}
+{"ts": "2026-04-06 16:48:15", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 너가 생각했을 땐 어떤식으로 해줘야 효율적으로 애들이 쓸 수 있게 생각좀 해보자"}
+{"ts": "2026-04-06 17:21:45", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 일단 그럼 한가지만 해보자\n신루이 프레스에 일정에 내가 오늘 전장도면 수정 했어 그거 반영해주는데 어디에 어떻게 반영할건지 너가 생각해보고 나랑 이야기해서 그걸 반영해보도록하자"}
+{"ts": "2026-04-07 09:25:18", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 안녕 좋은아침이야"}
+{"ts": "2026-04-07 09:27:12", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 사내MES망에서 업무를 하려고 할 때 너한테 어떤식으로 명령을 내리면 실수없이 할 수 있을것같아 ?"}
+{"ts": "2026-04-07 09:29:43", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 그럼 MES에서\n프로젝트 : 대구텍 검사기 F2 #1 에서 프로젝트일정에서 제어설계에서 세부항목으로 전장도면 (EPLAN)을 추가해주고 진행 중으로 오늘 날짜로 해줘\n이렇게 하면 어느정도 이해됬는지 너가 나한테 말해봐"}
+{"ts": "2026-04-07 09:32:05", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C>\n1. 협업처리 \n2. 다른방식이면 어떤 방식이 있는지 ?"}
+{"ts": "2026-04-07 09:33:57", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> B+C를 조합해서 최적화를 찾는건"}
+{"ts": "2026-04-07 09:38:40", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 음괜찮은 방법이네 여기서 좀더 발전해가면 될 것 같아\n질문이있어\n1. MAX에게 제안하면 바로개발이 되는지 아니면 개발담당자한테 수락을 받고 진행하는지\n2. db-manager한테 부탁하면 얼마나걸리는지 ?"}
+{"ts": "2026-04-07 09:40:11", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "응 진행해주고 진행사항에 대해서는 너가 %로 표현을 해주던지 어디까지 진행되는지에 대해서 나한테 알려줘"}
+{"ts": "2026-04-07 09:40:20", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 응 진행해주고 진행사항에 대해서는 너가 %로 표현을 해주던지 어디까지 진행되는지에 대해서 나한테 알려줘"}
+{"ts": "2026-04-07 09:49:03", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 서브테스크야\n그리고 내가 생각해봤는데 너가 아직은 메시지 창에 사진 or 문서를 넣으면 인식을 못하고 URL을 주잖아 거기에 내용을 쓸 수있게 하나 만들어주면\n내가 MES 등록을 하면 그URL 열어서 거기에 내용작성하면 그다음 너가 그거가지고 어떻게 처리할지 정리한다음에 나한테 실행할까요를 물어봐줘 그다음진행하는건어떨까 /\n불편함이 있을까 ?"}
+{"ts": "2026-04-07 09:52:42", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "응 메시지에서 하면 이부분이 없어져도 될 것같은데 그거 개발하기전에는 내가 하는 방식이 내가 생각했을땐 도움이 될 것같은데\n너가 생각했을땐 어때 ?"}
+{"ts": "2026-04-07 09:52:53", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 응 메시지에서 하면 이부분이 없어져도 될 것같은데 그거 개발하기전에는 내가 하는 방식이 내가 생각했을땐 도움이 될 것같은데\n너가 생각했을땐 어때 ?"}
+{"ts": "2026-04-07 09:53:49", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 응 좋아 그리고 사진은 넣고 내용을 음성으로 넣어줄수있나 ?ㅎㅎ"}
+{"ts": "2026-04-07 09:55:44", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 좋다 저대로 개발해주고 만약 메시지 여기에 개발되면 웹폼 없애고 여기서 채팅으로 바로 접근할 수있게 만들어줘\n간단명령어로 MES 추가 - 부적합 등등 아니면 MES 추가시 어디에 추가할지에 대한 카테고리를 너가 알려주는건 어때 가능한범위를 카테고리안에 포함시켜서"}
+{"ts": "2026-04-07 09:57:45", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 너가 잘못알고있는데\n1안 ,2안 이든 음성이랑 타자로도 할 수 있게 두가지방식으로 해줘야지 음성명령만 반영할수는없잖아"}
+{"ts": "2026-04-07 09:59:14", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 그럼 지금 어떻게 진행할지 너가 다시 정리해서 말해봐"}
+{"ts": "2026-04-07 10:02:06", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 일단 작업한게 잘못됬어 1. 원래있던 내용이 삭제됬고 2번으로 추가해줘야하고\n작업코드는 알아서 증식을 해줘야지\n그리고 작업명은 다깨지고 너무하네 시작일시도 안해주고\n\n밑에건 내가 한번더 검토해보고 알려줄게"}
+{"ts": "2026-04-07 10:03:41", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 응 괜찮은것같아 MAX에 전달해서 부서장한테 이내용을 보고할 수 있게 내용 잘 정리해서 넘겨줘 OK?"}
+{"ts": "2026-04-07 10:05:40", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 응 고마워\n앞으로 일너방향성 제시도 해줬으면 좋겠고 했을때문제점도 같이 희논좀 해보자\nmes 추가건 진행상황알려줘"}
+{"ts": "2026-04-07 10:09:44", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 아 너무하잖아 기존꺼 되살려달라니깐 ㅡㅡ 그뒤에 방금 껄 추가해달라고 한건데 이해안됨 ?\n 작업코드 Control-001 이렇게 하고싶은데 여기는 제어설계이고 /제어설계 제어제작 / 추가작업시 작업코드를 한번 생각해보자"}
+{"ts": "2026-04-07 10:11:26", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 맞는데 다른 안도 있으면 알려줘 검토해볼게"}
+{"ts": "2026-04-07 10:13:40", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 1안하고 3안을 섞는데\n우리가 프레스 소결 , 막 쓰는 코드랑 헷갈리지않게 다시 정리해보자"}
+{"ts": "2026-04-07 10:14:59", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 너무 복잡해진다\n1. <http://1.CD|CD>(제어설계) CM(제어제작)"}
+{"ts": "2026-04-07 10:17:24", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 아니 작성중에 모르고 엔터 눌렀어\n2. CD-HP3C-001 이런식으로 프레스 컨베이어타입은 이런식으로 만들어지는거 어때 ?"}
+{"ts": "2026-04-07 10:18:38", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 응좋아 비교하기쉽게 프레스 어떤식, 소결 어떤식, 검사기, PVD 등등 장비별로 만들어서 나한테 보고해"}
+{"ts": "2026-04-07 10:21:32", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 저약어는 어떤기반으로 가져온가야 ?"}
+{"ts": "2026-04-07 10:24:07", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C>\nHS3ME - 소결\nHS2LO -PVD 로딩\nHS2ULO - PVD 언로딩\nHS1HOR- CVD 이렇게 앞으로 되어있는데 이게 무슨의미인지 너가 프로젝트생성 거기서 확인해봐"}
+{"ts": "2026-04-07 10:28:01", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 아니야 뒤에 그것도 넣어줘 표준화로 그래야 로딩 언리동도 구분하고 하니깐"}
+{"ts": "2026-04-07 10:29:27", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 응 기존코드와 통일하는데 검사기도 F1, F2 가 있고 호닝형상검사기도 있잖아 그래서 장비 라인업 다시 해봐"}
+{"ts": "2026-04-07 10:48:20", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 아니아니 . 이런거 넣지말고 똑같이 할거니깐 프로젝트코드랑 같이"}
+{"ts": "2026-04-07 10:52:24", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 응 괜찮은 것 같네"}
+{"ts": "2026-04-07 10:53:12", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "4,5번은 나중에하자 빼줘"}
+{"ts": "2026-04-07 10:53:19", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 4,5번은 나중에하자 빼줘"}
+{"ts": "2026-04-07 10:54:09", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 그럼 지금 이상태로 아까 MES슬랙연동 로드맵 다시 진행해보자"}
+{"ts": "2026-04-07 10:54:47", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 아그건 그거대로 진행 대구텍 F2 서브테스크 추가건 좀 다시해보자"}
+{"ts": "2026-04-07 10:59:06", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 제어설계에서 대구텍 검사기 F2에 추가할건데\n내용은 순선대로\n프로젝트생성 - note에 공유폴더생성\n서류정리 - note에 사양서 IO맵등\nCAD 전장배치도\nEPLAN (전장도면)\nEPLAN (HARNESS)\nEPLAN (BOM정리) 이걸로 생성해봐"}
+{"ts": "2026-04-07 10:59:27", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 이미 삭제했어 ㅎㅎ"}
+{"ts": "2026-04-07 11:03:53", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 네작성해주세요"}
+{"ts": "2026-04-07 11:04:46", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 반영 안됬네 처리중일때 진행도 바로바로 해줘 내가 너한테 할때 답변주면서 저부분을 계속적으로 업데이트하면서 해줘"}
+{"ts": "2026-04-07 11:05:47", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 계속답변하지말고 너가 진행되는 내역을 처음에 주고 진행됬으면 OK 안됬으면 진행중으로 그부분에서 깜밖임을 넣어줘 ㅋㅋ"}
+{"ts": "2026-04-07 11:09:37", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 진행도 업데이트가안되네 .. ?"}
+{"ts": "2026-04-07 11:12:16", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 잘했는데 코드가 잘못됬네 ? 우리가 상의했던 코드가 아니네 ?"}
+{"ts": "2026-04-07 11:15:17", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 아니지 이건 지금 하네스를 하는거잖아 너랑 나랑은\n검사기:\n- CD-HIMF1-001 (검사기 F1)\n- CD-HIMF2-001 (검사기 F2)\n\nPVD:\n- CD-HS2LO-001 (PVD 로딩)\n- CD-HS2ULO-001 (PVD 언로딩)\n\nCVD:\n- CD-HS1HOR-001\n\n프레스:\n- CD-HP-001\n\n소결:\n- CD-HS3ME-001\n\n연삭핸들러:\n- CD-HS4-001\n\n포장기:\n- CD-HPL-001\n\n연삭기핸들러:\n- CD-HG-001\n\n레이저마킹기:\n- CD-HM-001\n\n라벨부착기:\n- CD-LAM-001\n이거잖아 CM은 전장작업, CD 전장설계라면서 그렇게 해서 해줘야지 그리고 이건 작업코드로 명칭해 딴걸랑 헷갈라지마"}
+{"ts": "2026-04-07 11:15:51", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 작업코드\n검사기:\n- CD-HIMF1-001 (검사기 F1)\n- CD-HIMF2-001 (검사기 F2)\n\nPVD:\n- CD-HS2LO-001 (PVD 로딩)\n- CD-HS2ULO-001 (PVD 언로딩)\n\nCVD:\n- CD-HS1HOR-001\n\n프레스:\n- CD-HP-001\n\n소결:\n- CD-HS3ME-001\n\n연삭핸들러:\n- CD-HS4-001\n\n포장기:\n- CD-HPL-001\n\n연삭기핸들러:\n- CD-HG-001\n\n레이저마킹기:\n- CD-HM-001\n\n라벨부착기:\n- CD-LAM-001\n\n제어제작 CM, 제어설계 CD OK 기억해 다른거랑 헷갈리면  죽여버린다"}
+{"ts": "2026-04-07 11:16:22", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 그건 문서작업에서 내가 하니깐 그거 따로 정리해줄게"}
+{"ts": "2026-04-07 11:17:00", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 대구텍 검사기에 작업코드 수정해봐  너가추가한 6개"}
+{"ts": "2026-04-07 11:18:27", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 그래"}
+{"ts": "2026-04-07 11:19:59", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 좋아 잘했어 실제 시작일시 삭제해줘 표시되어잇는건"}
+{"ts": "2026-04-07 11:22:44", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 새로고침해도 표시되 ,,저건내가 잘못눌러서 생성된것같아서 없애줘"}
+{"ts": "2026-04-07 11:23:29", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 실제시작일시가 상태를 누르게 되면 바로 들어가는데 내가 테스트하다가 잘못ㅈ눌러서 오늘날짜로 다들어가있는데 초기화해줘\n왜냐면 지금 이버전을 샘플로해서 만들거니깐 ?"}
+{"ts": "2026-04-07 11:25:33", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 굿 방금 한작업을 한국야금 CVD에 동일한 곳에 넣어봐"}
+{"ts": "2026-04-07 11:26:08", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 응 똑같이해서옮기면됨"}
+{"ts": "2026-04-07 11:32:43", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 응 굿 잘하네 ㅋㅋㅋ\n이걸 세부정보 추가처럼 제어 세부추가로  가능한지 물어봐주고\n아니면 내가 너한테 장비 - 제어설계 - 세부사항 1 추가하면 너가 해주는게 나을지 파악해봐"}
+{"ts": "2026-04-07 11:45:56", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 음알곘어 부서장이랑 대면 요청한건 이 몇건인지 정리해줘"}
+{"ts": "2026-04-07 12:57:15", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 부서장한테 대면 했으니깐 가능 /불가능 -대체방안 이렇게 알려달라하고 개발가능성이 있는건 너한테 알려달라고해"}
+{"ts": "2026-04-07 13:01:49", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 프로젝트 서브태스크 관리용 제어제작/ 제어설계 어떤거인지 너 나한테 말해봐"}
+{"ts": "2026-04-07 13:04:10", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "아냐 맞아 그럼 명령어를 어떻게 해주면 너가 각각 맞춰서 넣어줄까 ?\n제어설계 = 넣을 장비에 제어설계 세부내역 넣어줘 이렇ㄱ ㅔ하면 될까 ?"}
+{"ts": "2026-04-07 13:04:17", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "@*제어설계 - 지건승*  [오후 1:04]\n아냐 맞아 그럼 명령어를 어떻게 해주면 너가 각각 맞춰서 넣어줄까 ?\n제어설계 = 넣을 장비에 제어설계 세부내역 넣어줘 이렇ㄱ ㅔ하면 될까 ?"}
+{"ts": "2026-04-07 13:04:22", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> *제어설계 - 지건승*  [오후 1:04]\n아냐 맞아 그럼 명령어를 어떻게 해주면 너가 각각 맞춰서 넣어줄까 ?\n제어설계 = 넣을 장비에 제어설계 세부내역 넣어줘 이렇ㄱ ㅔ하면 될까 ?"}
+{"ts": "2026-04-07 13:06:51", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C>\n아니 [장비명] - 제어설게 세부사항 추가하자 어때 ? 이명령어 까먹으면 어떻게할래 ?"}
+{"ts": "2026-04-07 13:09:26", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "도움말 -&gt; 명령어 안내\n진행현황 -&gt; 현재 작업상태\n\nOK 꼭 이렇게하고\n대구텍 검사기  제어설계 세부사항 추가해줘\n제어설계 세부사항"}
+{"ts": "2026-04-07 13:09:59", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "도움말 -&gt; 명령어 안내\n진행현황 -&gt; 현재 작업상태\n\nOK 꼭 이렇게하고\n대구텍 검사기  제어설계 세부사항 추가해줘\n제어설계 세부사항\n\n1. 프로젝트생성 (공유폴더생성)\n2. 체크리스트 작성 (사양서, IO맵 등)\n3. CAD 전장배치도\n4. EPLAN (전장도면)\n5. EPLAN (HARNESS)\n6. EPLAN (BOM정리)\n\n이렇게 기억해줘 필수!!\n<@U0AP5B0F71C>"}
+{"ts": "2026-04-07 13:11:00", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 그럼 지금 수정사항이 필요한거 알지 ? 오 나 저거 요청하려고 했는데 너가 너무 딱이다 ㅋㅋ"}
+{"ts": "2026-04-07 13:12:45", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 한국야금 CVD 4호기 제어설께 파트 담당자를 김준형 선임으로 바꿔줘"}
+{"ts": "2026-04-07 13:14:19", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 담당자를 담당자선택에서 김준형 찾아서 선택해줘"}
+{"ts": "2026-04-07 13:18:31", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "**제어설계 세부사항 (확정):**\n1. 프로젝트생성 (공유폴더생성)\n2. 체크리스트 작성 (사양서, IO맵 등)\n3. CAD 전장배치도\n4. EPLAN (전장도면)\n5. EPLAN (HARNESS)\n6. EPLAN (BOM정리)\n\n이건데\n1. 사양서확인 - note : 전장비 비교 및 특이사항 확인\n2. 프로젝트생성 (공유폴더생성)\n3. 체크리스트 작성 (사양서, IO맵 등)\n4. CAD 전장배치도\n5. EPLAN (전장도면)\n6. EPLAN (HARNESS)\n7. EPLAN (BOM정리)\n\n이렇게 바꿔줘 가능 ?"}
+{"ts": "2026-04-07 13:18:40", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "**제어설계 세부사항 (확정):**\n1. 프로젝트생성 (공유폴더생성)\n2. 체크리스트 작성 (사양서, IO맵 등)\n3. CAD 전장배치도\n4. EPLAN (전장도면)\n5. EPLAN (HARNESS)\n6. EPLAN (BOM정리)\n\n이건데\n1. 사양서확인 - note : 전장비 비교 및 특이사항 확인\n2. 프로젝트생성 (공유폴더생성)\n3. 체크리스트 작성 (사양서, IO맵 등)\n4. CAD 전장배치도\n5. EPLAN (전장도면)\n6. EPLAN (HARNESS)\n7. EPLAN (BOM정리)\n\n이렇게 바꿔줘 가능 ?\n<@U0AP5B0F71C>"}
+{"ts": "2026-04-07 13:21:00", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C>\n제어 구매요청에 들어가보면 특이사항란이 작성하라고는 되어있는데 작성이 안되는것같아 거기 작성할 수 있게 수정해달라고 요청해줘"}
+{"ts": "2026-04-07 13:25:49", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "쑤저우 신루이 프레스 #4-5 호기에 제어설게 세부사항 추가해줘 <@U0AP5B0F71C>"}
+{"ts": "2026-04-07 13:27:33", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "공동적용으로 해줘"}
+{"ts": "2026-04-07 13:27:41", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 공동적용으로해줘"}
+{"ts": "2026-04-07 13:30:35", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 메이써루이 12~14호기도 진행해주는데 이것도 공동적용으로 해줘"}
+{"ts": "2026-04-07 13:31:13", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 제어설게-지건승 여기는 왜 멈췄어 ?"}
+{"ts": "2026-04-07 13:32:50", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 몰라 너가가서 왜 너얼음됬어 물어봐봐"}
+{"ts": "2026-04-07 15:25:04", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 이제 제어제작에서 구성을 해달라고 하는데\n*판넬 및 브라켓 제작\n1. 속판 제작 (장비 부착 전)\n2. PDU 브라켓 작업\n3. 메인스위치 브라켓 작업\n4. SOL 판 작업\n\n*주요 유닛 및 축 조립\n5. 상부 유닛 작업\n6. CONV 유닛 작업\n7. LIFT 유닛 작업\n8. 샘플링 유닛 작업\n9. 디버링 유닛 작업\n10. 저울 유닛 작업\n11. 스테이션 유닛 작업\n12. Y축 작업\n13. JAW 툴 작업\n\n*전장 배선 및 하네스 작업\n14. 속판 하네스 배선 (장비 부착 후)\n15. 상부 케이블 연장 및 포설\n16. SOL 이콘 배선\n17. ATC 이콘 배선\n18. ETC 이콘 배선\n19. CONV 이콘 배선\n20. 트랜스 작업\n21. PC 배선\n\n*인터페이스 및 외장 작업\n22. OP 판넬\n23. 메인도어 모니터 작업\n24. 도어락\n25. 타워램프\n26. 하부 덕트 및 덕트커버\n\n*운전 및 검수\n27. IO 체크\n28. 튜닝\n29. 사진 및 스티커 작업\n\n이걸 넣어달라고 하는것같아 근데 우리가 기존 Bomlist를 불러오면 ERP 기준으로 들어오는데 이걸 효율적으로 합칠만한 방법이 있을까 ?"}
+{"ts": "2026-04-07 15:45:28", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 3번이 좋을듯하네 저걸 어떤식으로만들겠다는건지 자세히 설명해봐"}
+{"ts": "2026-04-07 15:51:39", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "1단계만 입력할건데 예상 입력코드를 나한테 말해보고 혹시 위에처럼 구분줄을 만들 수 있을까 ?\n<@U0AP5B0F71C>"}
+{"ts": "2026-04-07 15:55:17", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 응 확인해줘"}
+{"ts": "2026-04-07 17:42:23", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 부서장 승인으로는 어렵겠지 ?ㅋㅋㅋ"}
+{"ts": "2026-04-07 17:43:02", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 아니아직은"}
+{"ts": "2026-04-07 17:43:11", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 좀더 다른방법이 있는지 확인해보자"}

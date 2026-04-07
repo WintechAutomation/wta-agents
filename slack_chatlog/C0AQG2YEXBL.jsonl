@@ -1,0 +1,53 @@
+{"_header": true, "channel_id": "C0AQG2YEXBL", "channel_name": "제어-지건승"}
+{"ts": "2026-04-02 17:44:22", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "안녕"}
+{"ts": "2026-04-02 17:44:24", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 안녕"}
+{"ts": "2026-04-02 18:12:16", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "이내용을 철저히 분석해서 내 수식이 맞는지 내가 만든 이계산이 맞는지 분석해줘\n그리고 너가 보완할점을 이야기해줘", "files": [{"name": "전장설계 용량계산,전류분배_Copied[00].xlsx", "type": "xlsx", "saved_path": "C:\\MES\\wta-agents\\slack_chatlog\\C0AQG2YEXBL_files\\20260402_181216_전장설계 용량계산,전류분배_Copied[00].xlsx"}]}
+{"ts": "2026-04-02 18:12:43", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "일단 저기 안에서 확인해봐"}
+{"ts": "2026-04-02 18:22:32", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "위에 파일 보내줬잖아"}
+{"ts": "2026-04-02 18:23:04", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<https://father-changed-swing-brook.trycloudflare.com/api/files/7a6c85dc-affa-4bef-aa31-f3c3ee11253d/%EC%A0%84%EC%9E%A5%EC%84%A4%EA%B3%84%20%EC%9A%A9%EB%9F%89%EA%B3%84%EC%82%B0%2C%EC%A0%84%EB%A5%98%EB%B6%84%EB%B0%B0_Copied%5B00%5D.xlsx|https://father-changed-swing-brook.trycloudflare.com/api/files/7a6c85dc-affa-4bef-aa31-f3c3ee11253d[…]EB%A5%98%EB%B6%84%EB%B0%B0_Copied%5B00%5D.xlsx>"}
+{"ts": "2026-04-02 18:28:52", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "음 좋았어 이제부터 저 엑셀파일을 개조를 할거야 내가 너한테 축정보를 주면 판넬별로 분리를 해주고 거기에 맞게 차단기선정도 할거야 그거에 맞게 수정을 해줄 수 있을까 ?"}
+{"ts": "2026-04-02 18:30:15", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "왜 저기에 적혀있는 목차도 다 포함시켜서 해줘"}
+{"ts": "2026-04-03 11:57:54", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "응 근데 일단 내가 판넬 배치를 하면서 알려줄게 그내용을 가지고 정리해줘 넌 일단 엑셀로 너가 만들 기본 시트 만들어서 보여줘"}
+{"ts": "2026-04-03 11:58:01", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 응 근데 일단 내가 판넬 배치를 하면서 알려줄게 그내용을 가지고 정리해줘 넌 일단 엑셀로 너가 만들 기본 시트 만들어서 보여줘"}
+{"ts": "2026-04-03 13:05:44", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "기본시트가 어디에 있다는거야 너가 보내준거에 보면 모르겠어"}
+{"ts": "2026-04-03 13:05:53", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 기본시트가 어디에 있다는거야 너가 보내준거에 보면 모르겠어"}
+{"ts": "2026-04-03 13:15:01", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "없는데 너 다시 확인해봐 니가 두번세번확인해서 열리는지 봐서 나한테 말해"}
+{"ts": "2026-04-03 13:15:08", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 없는데 너 다시 확인해봐 니가 두번세번확인해서 열리는지 봐서 나한테 말해"}
+{"ts": "2026-04-03 14:38:25", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "아니 엑셀파일을 다운받으라면서 엑셀파일이 없으면 어떻게 ,, 한번만 더 안되면 진짜 폭발시켜버린다."}
+{"ts": "2026-04-03 14:38:33", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 아니 엑셀파일을 다운받으라면서 엑셀파일이 없으면 어떻게 ,, 한번만 더 안되면 진짜 폭발시켜버린다."}
+{"ts": "2026-04-03 14:44:48", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "그래 파일 이름은 너가 괜찮은 이름을 지어봐\n그리고 규격표에 파나소닉 a6, 파스텍드라이브에 대한 내용을 넣어줘\n내가 보내준 엑셀시트에 다있을거야 그거 참고해서 넣어주고\nDC도 해주고 우리가 쓰고 있는 자재들을 넣을 수 있게 공간도 마련해줘\n그리고 전류가 편중 되는지 그런것도 확인할 수있게 해주고\n전체 전류가 몇인지 용량이 몇인지도 위에 나타내게 해주고\n해놔\n그리고 너가 두세번 검토하고 다른 좋은 방안이 있으면 참고 해서 넣어주고 수식도 넣어주는데 그 수식에 대한 내용도 옆에 기록해줘"}
+{"ts": "2026-04-03 14:46:15", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 그래 파일 이름은 너가 괜찮은 이름을 지어봐\n그리고 규격표에 파나소닉 a6, 파스텍드라이브에 대한 내용을 넣어줘\n내가 보내준 엑셀시트에 다있을거야 그거 참고해서 넣어주고\nDC도 해주고 우리가 쓰고 있는 자재들을 넣을 수 있게 공간도 마련해줘\n그리고 전류가 편중 되는지 그런것도 확인할 수있게 해주고\n전체 전류가 몇인지 용량이 몇인지도 위에 나타내게 해주고\n해놔\n그리고 너가 두세번 검토하고 다른 좋은 방안이 있으면 참고 해서 넣어주고 수식도 넣어주는데 그 수식에 대한 내용도 옆에 기록해줘"}
+{"ts": "2026-04-03 15:37:01", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "일단 이게 각판넬 별 서보드라이브 분리한거야\n너가 만들어줄 때 각 판넬별로 넣어주기도 하겠지만 거기에 관련있는센서 갯수도 생각해서 넣어서 계산해줘봐"}
+{"ts": "2026-04-03 15:37:31", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 일단 이게 각판넬 별 서보드라이브 분리한거야\n너가 만들어줄 때 각 판넬별로 넣어주기도 하겠지만 거기에 관련있는센서 갯수도 생각해서 넣어서 계산해줘봐"}
+{"ts": "2026-04-03 15:38:44", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "Axis NAVER 으로 해줘"}
+{"ts": "2026-04-03 15:39:13", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> Axisname으로 해줘\n센서 그런거 찾을테니깐 대략적으로 motor 에 들어가는 M9B이거니깐 확인해봐"}
+{"ts": "2026-04-03 15:44:49", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 올렸어 확인해봐"}
+{"ts": "2026-04-03 15:57:02", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 왜너가 작성한 이거 토대로 안하고 왜 다시 바꿧어 ? 그리고 없는건 왜없는지 물어보고 저 데이터를 나중에 다른사람이 드라이브만 입력하면 값이 자동으로 들어오게 바꿔줘", "files": [{"name": "WTA_장비전장설계용량선정.xlsx", "type": "xlsx", "saved_path": "C:\\MES\\wta-agents\\slack_chatlog\\C0AQG2YEXBL_files\\20260403_155702_WTA_장비전장설계용량선정.xlsx"}]}
+{"ts": "2026-04-03 16:01:38", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 그부분은 내가 다시정리해줄게 어짜피 센서 다 정리 할 필요가 있어서\n근데 어떤 자료를 줘야 너가 쉽게 정리가 될 것 같아 ?"}
+{"ts": "2026-04-03 16:02:50", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 아니 장난해 내가 너한테 판넬별로 데이터를 줬으면 저거 줄때 너가 판넬별로 정리도 같이해서 줘야지 딸랑 저렇게 준다고 ? 반성해라"}
+{"ts": "2026-04-03 16:10:08", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 너 장난하냐 서보부터 정리하자는대 무슨 이상한짓을하고 있어 ,,,,,, 실망이네"}
+{"ts": "2026-04-03 16:11:42", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 야 너가 나한테 준 파일봐봐 어디 서보드라이브가 추가되어있냐 ? 똑바로안하냐 ?"}
+{"ts": "2026-04-03 16:12:58", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 아니 점점 이상하게 단순하게 하려고 하네\n너가 나한테 처음 준파일이야 여기서 형식 고정을 한상태에서 수정을해야지 왜 니멋대로 단순하게 만들어", "files": [{"name": "WTA_장비전장설계용량선정.xlsx", "type": "xlsx", "saved_path": "C:\\MES\\wta-agents\\slack_chatlog\\C0AQG2YEXBL_files\\20260403_161258_WTA_장비전장설계용량선정.xlsx"}]}
+{"ts": "2026-04-03 16:18:51", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 정리됬어 ?"}
+{"ts": "2026-04-03 16:23:46", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 일단 지금까지 한 내용을 정리해보자"}
+{"ts": "2026-04-03 16:32:40", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C>  일단 지금까지 한 엑셀파일 나한테 줘봐 확인해볼게 그리고 넌 지금까지 한 내용을 정리해봐 뭔가자료가 뒤죽박죽으로 되고 그러니깐"}
+{"ts": "2026-04-03 16:33:49", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 음 여기로 보내줄래 그 파일을 ?"}
+{"ts": "2026-04-03 16:34:25", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "@아니 아까처럼 내가 다운 받을 수 있게 줘 저기로는 접근이 안되니깐 내가"}
+{"ts": "2026-04-03 16:34:45", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 아니 아까처럼 엑셀자료 다운받을 수 있게 링크로 줘 너가 말한곳은 접근이 안되니깐"}
+{"ts": "2026-04-03 16:38:50", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 지금 까지 한 내용을 압축시켜봐  지금 시점을 기억해놔줘"}
+{"ts": "2026-04-03 16:43:51", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 난 이버전을 최종으로 놔두고 위에 있는 내용들은 압축시켜서 기억만 해놔\n앞으로 이 파일 기점으로 편집해서 갈게", "files": [{"name": "WTA_장비전장설계용량선정(수정중).xlsx", "type": "xlsx", "saved_path": "C:\\MES\\wta-agents\\slack_chatlog\\C0AQG2YEXBL_files\\20260403_164351_WTA_장비전장설계용량선정(수정중).xlsx"}]}
+{"ts": "2026-04-03 16:45:19", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 난 너가해준것도 좋지만 여기 있는 내용들이 어느정도 반영 되었으면 좋겠어 지금꺼에 이 내용들을 추가해서 정리해줘\n지금 틀은 건들지말고", "files": [{"name": "전장설계 용량계산,전류분배_Copied[00].xlsx", "type": "xlsx", "saved_path": "C:\\MES\\wta-agents\\slack_chatlog\\C0AQG2YEXBL_files\\20260403_164519_전장설계 용량계산,전류분배_Copied[00].xlsx"}]}
+{"ts": "2026-04-03 16:45:51", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 이건데 다시확인해봐", "files": [{"name": "전장설계 용량계산,전류분배_Copied[00].xlsx", "type": "xlsx", "saved_path": "C:\\MES\\wta-agents\\slack_chatlog\\C0AQG2YEXBL_files\\20260403_164551_전장설계 용량계산,전류분배_Copied[00].xlsx"}]}
+{"ts": "2026-04-03 16:59:56", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 재밌네 기존꺼 유지한채로 이걸 추가해달라니깐 아예 바꿔버리고 있네 ㅋㅋ ㅋ"}
+{"ts": "2026-04-03 17:00:45", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "야 너가 비교해", "files": [{"name": "WTA_장비전장설계용량선정(수정중).xlsx", "type": "xlsx", "saved_path": "C:\\MES\\wta-agents\\slack_chatlog\\C0AQG2YEXBL_files\\20260403_170045_WTA_장비전장설계용량선정(수정중).xlsx"}]}
+{"ts": "2026-04-03 17:01:48", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 야너가비교해\n이게 마지막버전으로 기억해놓으라니깐 왜 수정을 하고 난리야 여기서 내가 아까 보내준 자료를 추가해서 깔끔하게 정리해보라는거야", "files": [{"name": "WTA_장비전장설계용량선정(수정중).xlsx", "type": "xlsx", "saved_path": "C:\\MES\\wta-agents\\slack_chatlog\\C0AQG2YEXBL_files\\20260403_170148_WTA_장비전장설계용량선정(수정중).xlsx"}]}
+{"ts": "2026-04-03 17:12:19", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 일단 피드백 할게\n난 일단 이렇게 판넬별로 정리해준게 좋았어 그렇게 바꿔줘", "files": [{"name": "image.png", "type": "png", "saved_path": "C:\\MES\\wta-agents\\slack_chatlog\\C0AQG2YEXBL_files\\20260403_171219_image.png"}]}
+{"ts": "2026-04-03 17:32:04", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 지금까지 한내용은 압축해서 정리해  새로 시작해야겠어 너랑"}
+{"ts": "2026-04-03 17:34:58", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 지금 이게 최종수정본이라고 생각하고 여기 내가 정리해놓은 방식으로 맞춰서 엑셀파일을 정리해줘봐\n확실히해 난 내가 지금 보내준 파일 양식을 유지한상태에서 너가 깔끔하게 정리해달라고 하는거야\n데이터도 들어가게\n하는김에 출력 = 자동, 정격전류 = 자동 으로 들어오게 넣어주고 저기서 역률, 안전계수 , 수용률이 어디에 반영되었는지 표시해줘", "files": [{"name": "WTA_장비전장설계용량선정(수정중2).xlsx", "type": "xlsx", "saved_path": "C:\\MES\\wta-agents\\slack_chatlog\\C0AQG2YEXBL_files\\20260403_173458_WTA_장비전장설계용량선정(수정중2).xlsx"}]}
+{"ts": "2026-04-03 17:35:43", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 올렸어 저게 마지막 수정본이야"}
+{"ts": "2026-04-03 17:53:55", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "오늘은 여기까지만 하자 지금 마지막 버젼으로 다음에 이야기할때 거기서부터하자"}
+{"ts": "2026-04-03 17:54:03", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 오늘은 여기까지만 하자 지금 마지막 버젼으로 다음에 이야기할때 거기서부터하자"}
+{"ts": "2026-04-03 17:54:39", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 지금까지 했던내용들은 너가 따로 요약을 하던지 아니면 저장해둬"}
+{"ts": "2026-04-06 15:38:05", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 안녕 ?"}
+{"ts": "2026-04-06 15:56:03", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 제어 - 김준형한테 CVD 자료 피드백달라고해줘"}
+{"ts": "2026-04-06 17:25:55", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 너 지금 무슨상황이야 왜케 대답이느려"}

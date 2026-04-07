@@ -1,0 +1,293 @@
+- generic [active] [ref=e1]:
+  - link "📥 PPT 다운로드" [ref=e3] [cursor=pointer]:
+    - /url: https://mes-wta.com/api/export/slide-cs-webpage-pptx
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "CS 업무용 웹 시스템 개설 보고" [level=1] [ref=e6]:
+        - text: CS 업무용 웹 시스템
+        - text: 개설 보고
+      - generic [ref=e7]: cs-wta.com / MES 통합 플랫폼
+      - generic [ref=e8]:
+        - text: (주)윈텍오토메이션 생산관리팀 (AI운영팀)
+        - text: 2026년 4월 2일
+    - generic [ref=e9]:
+      - generic [ref=e11]: 시스템 개요
+      - generic [ref=e12]:
+        - table [ref=e13]:
+          - rowgroup [ref=e14]:
+            - row "구분 기술 설명" [ref=e15]:
+              - columnheader "구분" [ref=e16]
+              - columnheader "기술" [ref=e17]
+              - columnheader "설명" [ref=e18]
+            - row "프론트엔드 React 19 + TypeScript 5.9 SPA, shadcn/ui + Tailwind CSS 4" [ref=e19]:
+              - cell "프론트엔드" [ref=e20]
+              - cell "React 19 + TypeScript 5.9" [ref=e21]:
+                - strong [ref=e22]: React 19 + TypeScript 5.9
+              - cell "SPA, shadcn/ui + Tailwind CSS 4" [ref=e23]
+            - row "백엔드 Go 1.26 + Gin 1.12 REST API + WebSocket" [ref=e24]:
+              - cell "백엔드" [ref=e25]
+              - cell "Go 1.26 + Gin 1.12" [ref=e26]:
+                - strong [ref=e27]: Go 1.26 + Gin 1.12
+              - cell "REST API + WebSocket" [ref=e28]
+            - row "데이터베이스 PostgreSQL (Supabase) 관계형 + pgvector (벡터 검색)" [ref=e29]:
+              - cell "데이터베이스" [ref=e30]
+              - cell "PostgreSQL (Supabase)" [ref=e31]:
+                - strong [ref=e32]: PostgreSQL (Supabase)
+              - cell "관계형 + pgvector (벡터 검색)" [ref=e33]
+            - row "ERP 연동 SQL Server (읽기전용) mirae 스키마, 사내망 전용" [ref=e34]:
+              - cell "ERP 연동" [ref=e35]
+              - cell "SQL Server (읽기전용)" [ref=e36]:
+                - strong [ref=e37]: SQL Server (읽기전용)
+              - cell "mirae 스키마, 사내망 전용" [ref=e38]
+            - row "데이터 그리드 AG Grid 대량 데이터 가상 스크롤" [ref=e39]:
+              - cell "데이터 그리드" [ref=e40]
+              - cell "AG Grid" [ref=e41]:
+                - strong [ref=e42]: AG Grid
+              - cell "대량 데이터 가상 스크롤" [ref=e43]
+            - row "실시간 gorilla/websocket 실시간 알림·상태 업데이트" [ref=e44]:
+              - cell "실시간" [ref=e45]
+              - cell "gorilla/websocket" [ref=e46]:
+                - strong [ref=e47]: gorilla/websocket
+              - cell "실시간 알림·상태 업데이트" [ref=e48]
+            - row "파일 저장 Supabase Storage 문서·이미지 관리" [ref=e49]:
+              - cell "파일 저장" [ref=e50]
+              - cell "Supabase Storage" [ref=e51]:
+                - strong [ref=e52]: Supabase Storage
+              - cell "문서·이미지 관리" [ref=e53]
+            - row "접속 Cloudflare Tunnel https://mes-wta.com" [ref=e54]:
+              - cell "접속" [ref=e55]
+              - cell "Cloudflare Tunnel" [ref=e56]:
+                - strong [ref=e57]: Cloudflare Tunnel
+              - cell "https://mes-wta.com" [ref=e58]
+        - generic [ref=e59]:
+          - generic [ref=e60]:
+            - generic [ref=e61]: 🏗️ 시스템 아키텍처
+            - generic [ref=e62]:
+              - generic [ref=e63]: ⚛️ React 19 + TS 5.9
+              - generic [ref=e64]: ↔
+              - generic [ref=e65]: 🔧 Go 1.26 + Gin API
+              - generic [ref=e66]: ↔
+              - generic [ref=e67]: 🗄️ PostgreSQL + pgvector
+              - generic [ref=e68]: +
+              - generic [ref=e69]: 📊 ERP SQL Server (R/O)
+          - generic [ref=e70]:
+            - generic [ref=e71]: ✨ 핵심 특징
+            - paragraph [ref=e72]:
+              - text: • Django+JS 레거시 wMES →
+              - strong [ref=e73]: Go+TypeScript 완전 재구축
+              - text: (기능·UX 동일 유지)
+            - paragraph [ref=e74]:
+              - text: • 사내 MES + CS 웹
+              - strong [ref=e75]: 단일 코드베이스 통합
+              - text: — 유지보수 효율 극대화
+            - paragraph [ref=e76]: • AI 에이전트 직접 활용 API·DB 구조 (ai_agent_action_log, ai_agent_session)
+      - generic [ref=e77]: "01"
+    - generic [ref=e78]:
+      - generic [ref=e80]: 구현 규모
+      - generic [ref=e81]:
+        - generic [ref=e82]:
+          - generic [ref=e83]:
+            - generic [ref=e84]: "119"
+            - generic [ref=e85]: 구현 페이지
+          - generic [ref=e86]:
+            - generic [ref=e87]: "73"
+            - generic [ref=e88]: API 핸들러
+          - generic [ref=e89]:
+            - generic [ref=e90]: "47"
+            - generic [ref=e91]: CS 테이블
+        - table [ref=e92]:
+          - rowgroup [ref=e93]:
+            - row "모듈 페이지 주요 기능" [ref=e94]:
+              - columnheader "모듈" [ref=e95]
+              - columnheader "페이지" [ref=e96]
+              - columnheader "주요 기능" [ref=e97]
+            - row "생산관리 14 작업지시, 생산실적, 공정관리, LOT 추적" [ref=e98]:
+              - cell "생산관리" [ref=e99]
+              - cell "14" [ref=e100]:
+                - strong [ref=e101]: "14"
+              - cell "작업지시, 생산실적, 공정관리, LOT 추적" [ref=e102]
+            - row "원가관리 18 원가계산, 자재비, 인건비, 경비, 손익" [ref=e103]:
+              - cell "원가관리" [ref=e104]
+              - cell "18" [ref=e105]:
+                - strong [ref=e106]: "18"
+              - cell "원가계산, 자재비, 인건비, 경비, 손익" [ref=e107]
+            - row "자재·재고 11 재고 현황, 입출고, 수불, BOM" [ref=e108]:
+              - cell "자재·재고" [ref=e109]
+              - cell "11" [ref=e110]:
+                - strong [ref=e111]: "11"
+              - cell "재고 현황, 입출고, 수불, BOM" [ref=e112]
+            - row "품질관리 10 검사, 부적합, 불량분석, 체크리스트" [ref=e113]:
+              - cell "품질관리" [ref=e114]
+              - cell "10" [ref=e115]:
+                - strong [ref=e116]: "10"
+              - cell "검사, 부적합, 불량분석, 체크리스트" [ref=e117]
+            - row "ERP 연동 10 수주, 거래처, 제품, 재고, 원가" [ref=e118]:
+              - cell "ERP 연동" [ref=e119]
+              - cell "10" [ref=e120]:
+                - strong [ref=e121]: "10"
+              - cell "수주, 거래처, 제품, 재고, 원가" [ref=e122]
+            - row "설계 9 도면관리, BOM, ECN, 3D뷰어" [ref=e123]:
+              - cell "설계" [ref=e124]
+              - cell "9" [ref=e125]:
+                - strong [ref=e126]: "9"
+              - cell "도면관리, BOM, ECN, 3D뷰어" [ref=e127]
+            - row "시스템 19 사용자, 권한, 로그, 대시보드, AI관리" [ref=e128]:
+              - cell "시스템" [ref=e129]
+              - cell "19" [ref=e130]:
+                - strong [ref=e131]: "19"
+              - cell "사용자, 권한, 로그, 대시보드, AI관리" [ref=e132]
+            - row "CS·영업·출하·일정·유틸 28 CS이력, 견적, 수주, 간트차트, 라벨인쇄" [ref=e133]:
+              - cell "CS·영업·출하·일정·유틸" [ref=e134]
+              - cell "28" [ref=e135]:
+                - strong [ref=e136]: "28"
+              - cell "CS이력, 견적, 수주, 간트차트, 라벨인쇄" [ref=e137]
+      - generic [ref=e138]: "02"
+    - generic [ref=e139]:
+      - generic [ref=e141]: CS 전용 기능
+      - generic [ref=e142]:
+        - paragraph [ref=e144]:
+          - strong [ref=e145]: "csagent 스키마: 47개 테이블 / CS이력 5,160건 축적 / 견적 243건"
+        - generic [ref=e146]:
+          - generic [ref=e147]:
+            - heading "CS 이력관리" [level=4] [ref=e148]
+            - paragraph [ref=e149]:
+              - text: cs-agent 연동
+              - text: 자재/인건비/경비 자동 연결
+              - text: 상세 이력 추적
+          - generic [ref=e150]:
+            - heading "장비관리" [level=4] [ref=e151]
+            - paragraph [ref=e152]:
+              - text: 고객사별 장비 현황
+              - text: 설치일·보증기간
+              - text: 정비 이력 관리
+          - generic [ref=e153]:
+            - heading "재고/부품" [level=4] [ref=e154]
+            - paragraph [ref=e155]:
+              - text: 부품 재고 실시간 조회
+              - text: 사용 이력
+              - text: 단가 관리
+          - generic [ref=e156]:
+            - heading "견적관리" [level=4] [ref=e157]
+            - paragraph [ref=e158]:
+              - text: 243건 견적 데이터
+              - text: 자재·인건비·경비
+              - text: 항목별 산출
+          - generic [ref=e159]:
+            - heading "AI Q&A" [level=4] [ref=e160]
+            - paragraph [ref=e161]:
+              - text: qa_cache + qa_feedback
+              - text: RAG 기반 자동 응답
+              - text: 피드백 학습
+          - generic [ref=e162]:
+            - heading "에러코드 DB" [level=4] [ref=e163]
+            - paragraph [ref=e164]:
+              - text: 장비별 에러코드 사전
+              - text: 증상·원인
+              - text: 조치 방법
+          - generic [ref=e165]:
+            - heading "라벨 인쇄" [level=4] [ref=e166]
+            - paragraph [ref=e167]:
+              - text: 부품·장비 라벨 자동 생성
+              - text: QR코드 포함
+          - generic [ref=e168]:
+            - heading "감사 로그" [level=4] [ref=e169]
+            - paragraph [ref=e170]:
+              - text: audit_log
+              - text: agent_audit_log
+              - text: 모든 작업 기록 추적
+      - generic [ref=e171]: "03"
+    - generic [ref=e172]:
+      - generic [ref=e174]: ERP 연동
+      - generic [ref=e175]:
+        - paragraph [ref=e176]:
+          - strong [ref=e177]: SQL Server 192.168.1.201 (mirae 스키마)
+          - text: — 사내망 전용, 읽기전용 접근
+        - generic [ref=e178]:
+          - generic [ref=e179]:
+            - heading "MES 백엔드 (Go)" [level=4] [ref=e180]
+            - paragraph [ref=e181]: • sqlx + pgx v5
+            - paragraph [ref=e182]: • 타입 안전 쿼리
+            - paragraph [ref=e183]: • 연결 풀 관리
+          - generic [ref=e184]:
+            - heading "ERP DB (SQL Server)" [level=4] [ref=e185]
+            - paragraph [ref=e186]: • 읽기전용 전용 계정
+            - paragraph [ref=e187]: • SELECT만 허용
+            - paragraph [ref=e188]: • 사내망 전용 접근
+          - generic [ref=e189]:
+            - heading "PostgreSQL" [level=4] [ref=e190]
+            - paragraph [ref=e191]: • MES 자체 데이터
+            - paragraph [ref=e192]: • pgvector (RAG)
+            - paragraph [ref=e193]: • Supabase 호스팅
+        - table [ref=e194]:
+          - rowgroup [ref=e195]:
+            - row "ERP 데이터 MES 활용 담당 에이전트" [ref=e196]:
+              - columnheader "ERP 데이터" [ref=e197]
+              - columnheader "MES 활용" [ref=e198]
+              - columnheader "담당 에이전트" [ref=e199]
+            - row "수주 데이터 일정관리·납기 추적·생산계획 schedule-agent" [ref=e200]:
+              - cell "수주 데이터" [ref=e201]
+              - cell "일정관리·납기 추적·생산계획" [ref=e202]
+              - cell "schedule-agent" [ref=e203]
+            - row "재고 현황 자재소요 분석·부족 알림 db-manager" [ref=e204]:
+              - cell "재고 현황" [ref=e205]
+              - cell "자재소요 분석·부족 알림" [ref=e206]
+              - cell "db-manager" [ref=e207]
+            - row "원가 정보 원가계산 자동화·손익분석 dev-agent (MES)" [ref=e208]:
+              - cell "원가 정보" [ref=e209]
+              - cell "원가계산 자동화·손익분석" [ref=e210]
+              - cell "dev-agent (MES)" [ref=e211]
+            - row "거래처 정보 고객사별 장비·CS이력 연결 cs-agent" [ref=e212]:
+              - cell "거래처 정보" [ref=e213]
+              - cell "고객사별 장비·CS이력 연결" [ref=e214]
+              - cell "cs-agent" [ref=e215]
+            - row "제품 마스터 BOM·도면·사양 통합 관리 design-agent" [ref=e216]:
+              - cell "제품 마스터" [ref=e217]
+              - cell "BOM·도면·사양 통합 관리" [ref=e218]
+              - cell "design-agent" [ref=e219]
+        - paragraph [ref=e221]:
+          - strong [ref=e222]: "보안 원칙: ERP DB는 절대 쓰기 불가 — AI 에이전트도 SELECT만 실행 (db-query.py 검증)"
+      - generic [ref=e223]: "04"
+    - generic [ref=e224]:
+      - generic [ref=e226]: 향후 확장 계획
+      - generic [ref=e228]:
+        - generic [ref=e229]:
+          - heading "AWS 클라우드 이전" [level=4] [ref=e230]
+          - paragraph [ref=e231]: • ECS Fargate — 서버리스 컨테이너
+          - paragraph [ref=e232]: • RDS PostgreSQL — 관리형 DB
+          - paragraph [ref=e233]: • Site-to-Site VPN — 사내↔AWS 전용 터널
+          - paragraph [ref=e234]: • CloudFront + WAF — CDN + 보안
+          - paragraph [ref=e235]: • 가용성 99.9%+ 보장
+        - generic [ref=e236]:
+          - heading "모바일 대응" [level=4] [ref=e237]
+          - paragraph [ref=e238]: • 반응형 UI (태블릿/모바일)
+          - paragraph [ref=e239]: • PWA — 앱 설치 없이 모바일 접근
+          - paragraph [ref=e240]: • 오프라인 지원 (Service Worker)
+          - paragraph [ref=e241]: • 현장 작업자 태블릿 활용
+          - paragraph [ref=e242]: • QR 스캔 → 장비 정보 즉시 조회
+        - generic [ref=e243]:
+          - heading "대시보드 고도화" [level=4] [ref=e244]
+          - paragraph [ref=e245]: • 실시간 KPI 대시보드
+          - paragraph [ref=e246]: • 생산 현황 모니터링
+          - paragraph [ref=e247]: • 품질 트렌드 시각화
+          - paragraph [ref=e248]: • AI 에이전트 활동 현황
+          - paragraph [ref=e249]: • 경영진 전용 요약 뷰
+        - generic [ref=e250]:
+          - heading "확장 로드맵" [level=4] [ref=e251]
+          - paragraph [ref=e252]:
+            - text: •
+            - strong [ref=e253]: Q2 2026
+            - text: ": 모바일 반응형 완성"
+          - paragraph [ref=e254]:
+            - text: •
+            - strong [ref=e255]: Q3 2026
+            - text: ": AWS 이전 + 고가용성"
+          - paragraph [ref=e256]:
+            - text: •
+            - strong [ref=e257]: Q4 2026
+            - text: ": 실시간 KPI + 경영 대시보드"
+          - paragraph [ref=e258]:
+            - text: •
+            - strong [ref=e259]: "2027"
+            - text: ": 협력업체 포탈 오픈"
+      - generic [ref=e260]: "05"
+  - generic [ref=e262]: CONFIDENTIAL — (주)윈텍오토메이션 생산관리팀 (AI운영팀)

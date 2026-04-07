@@ -1,0 +1,140 @@
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]: WTA AI
+      - generic [ref=e7]: 에이전트 대시보드 v2
+    - navigation [ref=e8]:
+      - link "🏢 에이전트 오피스" [ref=e9] [cursor=pointer]:
+        - /url: /v2/office
+        - generic [ref=e10]: 🏢
+        - generic [ref=e11]: 에이전트 오피스
+      - link "📊 시스템 개요" [ref=e12] [cursor=pointer]:
+        - /url: /v2/overview
+        - generic [ref=e13]: 📊
+        - generic [ref=e14]: 시스템 개요
+      - link "⚡ 운영 대시보드" [ref=e15] [cursor=pointer]:
+        - /url: /v2/dashboard
+        - generic [ref=e16]: ⚡
+        - generic [ref=e17]: 운영 대시보드
+      - link "📈 분석" [ref=e18] [cursor=pointer]:
+        - /url: /v2/analytics
+        - generic [ref=e19]: 📈
+        - generic [ref=e20]: 분석
+      - link "🖥️ 실시간 모니터" [ref=e21] [cursor=pointer]:
+        - /url: /v2/monitor
+        - generic [ref=e22]: 🖥️
+        - generic [ref=e23]: 실시간 모니터
+      - link "📚 Knowledge Base" [ref=e24] [cursor=pointer]:
+        - /url: /v2/knowledge
+        - generic [ref=e25]: 📚
+        - generic [ref=e26]: Knowledge Base
+      - link "📋 작업 큐" [ref=e27] [cursor=pointer]:
+        - /url: /v2/task-queue
+        - generic [ref=e28]: 📋
+        - generic [ref=e29]: 작업 큐
+      - link "⏰ 스케줄 관리" [ref=e30] [cursor=pointer]:
+        - /url: /v2/cron
+        - generic [ref=e31]: ⏰
+        - generic [ref=e32]: 스케줄 관리
+      - link "💬 CS 세션" [ref=e33] [cursor=pointer]:
+        - /url: /v2/cs-sessions
+        - generic [ref=e34]: 💬
+        - generic [ref=e35]: CS 세션
+      - link "📖 기술용어집" [ref=e36] [cursor=pointer]:
+        - /url: /v2/glossary
+        - generic [ref=e37]: 📖
+        - generic [ref=e38]: 기술용어집
+      - link "🔨 매뉴얼 빌더" [ref=e39] [cursor=pointer]:
+        - /url: /v2/manual-builder
+        - generic [ref=e40]: 🔨
+        - generic [ref=e41]: 매뉴얼 빌더
+      - link "📁 업무공간" [ref=e42] [cursor=pointer]:
+        - /url: /v2/workspace
+        - generic [ref=e43]: 📁
+        - generic [ref=e44]: 업무공간
+    - generic [ref=e45]:
+      - generic [ref=e46]: 시스템
+      - generic [ref=e47]:
+        - generic [ref=e48]: 온라인
+        - generic [ref=e49]: 0/12
+      - generic [ref=e50]:
+        - generic [ref=e51]: 업타임
+        - generic [ref=e52]: 0h 0m
+  - main [ref=e53]:
+    - generic [ref=e54]:
+      - generic [ref=e55]:
+        - generic [ref=e56]:
+          - heading "CS 질의응답 세션" [level=1] [ref=e57]
+          - paragraph [ref=e58]: cs-agent의 CS RAG 질의응답 기록 (7건)
+        - button "🔄 파이프라인" [ref=e59]:
+          - generic [ref=e60]: 🔄
+          - text: 파이프라인
+      - generic [ref=e61]:
+        - textbox "질문/답변 검색..." [ref=e62]
+        - combobox [ref=e63]:
+          - option "전체 소스" [selected]
+          - option "Slack"
+          - option "Telegram"
+          - option "Web"
+        - button "검색" [ref=e64]
+      - generic [ref=e65]:
+        - generic [ref=e67]:
+          - button "slack Invalid Date 8.5s PVD 장비 국가 구분없이 전체 cs 이력을 정리하고 가장 빈도가높은 에러 10가지 추려봐. 엑셀로 만들수 있으면 만들어 claude-sonnet-4-6" [ref=e68]:
+            - generic [ref=e69]:
+              - generic [ref=e70]:
+                - generic [ref=e71]: slack
+                - generic [ref=e72]: Invalid Date
+              - generic [ref=e73]: 8.5s
+            - generic [ref=e74]: PVD 장비 국가 구분없이 전체 cs 이력을 정리하고 가장 빈도가높은 에러 10가지 추려봐. 엑셀로 만들수 있으면 만들어
+            - generic [ref=e76]: claude-sonnet-4-6
+          - 'button "slack Invalid Date 2.1s 한국야금 pvd 로딩 #4 cs 이력 조회 claude-sonnet-4-6" [ref=e77]':
+            - generic [ref=e78]:
+              - generic [ref=e79]:
+                - generic [ref=e80]: slack
+                - generic [ref=e81]: Invalid Date
+              - generic [ref=e82]: 2.1s
+            - generic [ref=e83]: "한국야금 pvd 로딩 #4 cs 이력 조회"
+            - generic [ref=e85]: claude-sonnet-4-6
+          - button "slack Invalid Date 5.8s 미쓰비시 로봇 배터리 교체방법 찾아줘 claude-sonnet-4-6" [ref=e86]:
+            - generic [ref=e87]:
+              - generic [ref=e88]:
+                - generic [ref=e89]: slack
+                - generic [ref=e90]: Invalid Date
+              - generic [ref=e91]: 5.8s
+            - generic [ref=e92]: 미쓰비시 로봇 배터리 교체방법 찾아줘
+            - generic [ref=e94]: claude-sonnet-4-6
+          - button "slack Invalid Date 4.2s 미쓰비시 H1043 에러에 대해서 설명해줘 claude-sonnet-4-6" [ref=e95]:
+            - generic [ref=e96]:
+              - generic [ref=e97]:
+                - generic [ref=e98]: slack
+                - generic [ref=e99]: Invalid Date
+              - generic [ref=e100]: 4.2s
+            - generic [ref=e101]: 미쓰비시 H1043 에러에 대해서 설명해줘
+            - generic [ref=e103]: claude-sonnet-4-6
+          - 'button "slack Invalid Date 3.2s 테스트 질문: 미쓰비시 로봇 에러코드 H1043 claude-sonnet-4-6" [ref=e104]':
+            - generic [ref=e105]:
+              - generic [ref=e106]:
+                - generic [ref=e107]: slack
+                - generic [ref=e108]: Invalid Date
+              - generic [ref=e109]: 3.2s
+            - generic [ref=e110]: "테스트 질문: 미쓰비시 로봇 에러코드 H1043"
+            - generic [ref=e112]: claude-sonnet-4-6
+          - button "slack Invalid Date 4.5s 미쓰비시 H1043 에러에 대해서 설명해줘 claude-sonnet-4-6" [ref=e113]:
+            - generic [ref=e114]:
+              - generic [ref=e115]:
+                - generic [ref=e116]: slack
+                - generic [ref=e117]: Invalid Date
+              - generic [ref=e118]: 4.5s
+            - generic [ref=e119]: 미쓰비시 H1043 에러에 대해서 설명해줘
+            - generic [ref=e121]: claude-sonnet-4-6
+          - button "slack Invalid Date 4.2s 미쓰비시 H1043 에러에 대해서 설명해줘 claude-sonnet-4-6" [ref=e122]:
+            - generic [ref=e123]:
+              - generic [ref=e124]:
+                - generic [ref=e125]: slack
+                - generic [ref=e126]: Invalid Date
+              - generic [ref=e127]: 4.2s
+            - generic [ref=e128]: 미쓰비시 H1043 에러에 대해서 설명해줘
+            - generic [ref=e130]: claude-sonnet-4-6
+        - generic [ref=e133]:
+          - generic [ref=e134]: 💬
+          - paragraph [ref=e135]: 세션을 선택하면 상세 내용이 표시됩니다

@@ -1,0 +1,5 @@
+[     991ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-C46wj9G4.js:11
+[   15348ms] [ERROR] Failed to load resource: the server responded with a status of 404 (NOT FOUND) @ http://localhost:5555/api/manual-builder/files:0
+[   15348ms] [ERROR] Failed to load resource: the server responded with a status of 404 (NOT FOUND) @ http://localhost:5555/api/manual-builder/stats:0
+[   18553ms] [ERROR] Failed to load resource: the server responded with a status of 404 (NOT FOUND) @ http://localhost:5555/api/glossary?:0
+[   18553ms] [ERROR] 용어집 로드 실패 SyntaxError: Unexpected token '<', "<!doctype "... is not valid JSON @ http://localhost:5555/assets/index-C46wj9G4.js:341

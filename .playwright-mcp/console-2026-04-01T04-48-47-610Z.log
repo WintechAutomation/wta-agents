@@ -1,0 +1,9 @@
+[     569ms] [ERROR] Failed to load resource: the server responded with a status of 404 (NOT FOUND) @ http://localhost:5555/favicon.svg:0
+[     863ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-Dm9c0L-j.js:11
+[   46758ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-Dm9c0L-j.js:11
+[  117726ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-Dm9c0L-j.js:11
+[  227010ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-Dm9c0L-j.js:11
+[  273698ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-Dm9c0L-j.js:11
+[  845281ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-Dm9c0L-j.js:11
+[  891643ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-Dm9c0L-j.js:11
+[  963397ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-Dm9c0L-j.js:11

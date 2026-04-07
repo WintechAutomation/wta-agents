@@ -1,0 +1,19 @@
+[parts-embed-all] Processing 8 categories via Qwen3
+[parts-embed-all] Log: C:\MES\wta-agents\logs\parts-embed-all.log
+[1/8] Starting: 1_robot (267 files)
+[1/8] OK 1_robot (18078s)
+[2/8] Starting: 2_sensor (157 files)
+[2/8] OK 2_sensor (5106s)
+[3/8] Starting: 3_hmi (248 files)
+[3/8] OK 3_hmi (4894s)
+[4/8] Starting: 4_servo (466 files)
+[4/8] OK 4_servo (12321s)
+[5/8] Starting: 5_inverter (3 files)
+[5/8] OK 5_inverter (1s)
+[6/8] Starting: 6_plc (34 files)
+[6/8] OK 6_plc (1s)
+[7/8] Starting: 7_pneumatic (9 files)
+[7/8] OK 7_pneumatic (1s)
+[8/8] Starting: 8_etc (111 files)
+[8/8] OK 8_etc (2s)
+[parts-embed-all] All done.

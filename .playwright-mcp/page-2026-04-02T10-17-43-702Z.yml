@@ -1,0 +1,393 @@
+- generic [active] [ref=e1]:
+  - link "📥 PPT 다운로드" [ref=e3] [cursor=pointer]:
+    - /url: https://mes-wta.com/api/export/security-slide-pptx
+  - generic [ref=e4]:
+    - generic [ref=e6]:
+      - heading "AI 멀티에이전트 시스템 데이터 보안 보고" [level=1] [ref=e7]:
+        - text: AI 멀티에이전트 시스템
+        - text: 데이터 보안 보고
+      - paragraph [ref=e8]: 기술 데이터 보호 체계 및 외부 유출 방지 대책
+      - generic [ref=e9]:
+        - text: (주)윈텍오토메이션 생산관리팀 (AI운영팀)
+        - text: 2026년 4월 2일
+    - generic [ref=e10]:
+      - generic [ref=e12]: 핵심 요약
+      - generic [ref=e13]:
+        - paragraph [ref=e14]:
+          - strong [ref=e15]: "\"AI를 쓰면 우리 기술 데이터가 밖으로 새어나가는 것 아닌가?\""
+        - generic [ref=e16]:
+          - generic [ref=e17]:
+            - heading "✅ AI가 우리 데이터를 학습하지 않습니다" [level=4] [ref=e18]
+            - paragraph [ref=e19]:
+              - text: 유료 API는 계약상
+              - strong [ref=e20]: 고객 데이터를 AI 모델 훈련에 사용하지 않습니다.
+              - text: 법적으로 보장된 사항입니다.
+          - generic [ref=e21]:
+            - heading "🔐 모든 전송은 암호화됩니다" [level=4] [ref=e22]
+            - paragraph [ref=e23]:
+              - text: 인터넷 뱅킹과 동일한 수준의
+              - strong [ref=e24]: TLS 1.3 암호화
+              - text: 로 보호됩니다.
+        - generic [ref=e25]:
+          - generic [ref=e26]:
+            - generic [ref=e27]: 0건
+            - generic [ref=e28]: AI 학습에 사용된 WTA 데이터
+          - generic [ref=e29]:
+            - generic [ref=e30]: 30일
+            - generic [ref=e31]: 이후 전송 기록 자동 삭제
+          - generic [ref=e32]:
+            - generic [ref=e33]: 100%
+            - generic [ref=e34]: 사내 서버에서 운영
+      - generic [ref=e35]: "01"
+    - generic [ref=e36]:
+      - generic [ref=e38]: AI는 어떻게 동작하는가
+      - generic [ref=e39]:
+        - paragraph [ref=e40]:
+          - text: AI 에이전트는
+          - strong [ref=e41]: 우리 회사 서버 안에서
+          - text: 동작합니다.
+          - text: 외부 AI 서비스(Claude)는
+          - strong [ref=e42]: "\"두뇌\" 역할만"
+          - text: 합니다 — 질문을 보내면 답변을 돌려줍니다.
+        - generic [ref=e43]:
+          - heading "💡 비유하자면" [level=4] [ref=e44]
+          - paragraph [ref=e45]:
+            - text: AI 에이전트 =
+            - strong [ref=e46]: 우리 회사에 상주하는 직원
+            - text: Claude API =
+            - strong [ref=e47]: 외부 전문가에게 전화로 자문을 구하는 것
+          - paragraph [ref=e48]:
+            - text: 직원이 전문가에게 전화할 때 필요한 내용만 말하고,
+            - text: 전문가는 답변 후 통화 내용을
+            - strong [ref=e49]: 30일 뒤 자동으로 폐기
+            - text: 합니다.
+            - text: 전문가가 우리 통화 내용으로
+            - strong [ref=e50]: 다른 고객을 가르치지 않습니다.
+      - generic [ref=e51]: "02"
+    - generic [ref=e52]:
+      - generic [ref=e54]: WTA AI 시스템 전체 구조
+      - generic [ref=e56]:
+        - generic [ref=e57]:
+          - generic [ref=e58]: 🏢 WTA 사내 서버 (외부 접근 차단)
+          - generic [ref=e59]:
+            - generic [ref=e60]: 👑 MAX
+            - generic [ref=e61]: 📊 DB매니저
+            - generic [ref=e62]: 🛠️ CS담당
+            - generic [ref=e63]: 💻 개발팀
+            - generic [ref=e64]: 🔧 크래프터
+            - generic [ref=e65]: 🔍 NC관리
+            - generic [ref=e66]: 🔬 출하품질
+            - generic [ref=e67]: 💰 영업팀
+            - generic [ref=e68]: 📐 설계팀
+            - generic [ref=e69]: 📅 일정관리
+          - generic [ref=e70]: ▲ AI 에이전트 14명 — 모두 사내 서버에서 실행
+          - generic [ref=e71]:
+            - generic [ref=e72]: 🗄️ MES DB
+            - generic [ref=e73]: 🗄️ ERP DB (읽기전용)
+            - generic [ref=e74]: 📁 기술문서
+          - generic [ref=e75]: 🔒 모든 데이터는 사내에 저장 — 외부 반출 없음
+        - generic [ref=e77]: ⬆️⬇️ 암호화된 질문/답변만 오감 (TLS 1.3)
+        - generic [ref=e78]:
+          - generic [ref=e79]: ☁️ 외부 클라우드 서비스
+          - generic [ref=e80]:
+            - generic [ref=e81]: 🧠 Claude AI (미국)
+            - generic [ref=e82]: 💬 Slack
+            - generic [ref=e83]: 📋 Jira
+      - generic [ref=e84]: "03"
+    - generic [ref=e85]:
+      - generic [ref=e87]: 어떤 데이터가 외부로 나가는가?
+      - generic [ref=e88]:
+        - table [ref=e89]:
+          - rowgroup [ref=e90]:
+            - row "전송 경로 전송 데이터 암호화 AI 학습 보존" [ref=e91]:
+              - columnheader "전송 경로" [ref=e92]
+              - columnheader "전송 데이터" [ref=e93]
+              - columnheader "암호화" [ref=e94]
+              - columnheader "AI 학습" [ref=e95]
+              - columnheader "보존" [ref=e96]
+            - row "→ Claude AI 에이전트 질문/분석 텍스트 TLS 1.3 사용 안함 30일 삭제" [ref=e97]:
+              - cell "→ Claude AI" [ref=e98]:
+                - strong [ref=e99]: → Claude AI
+              - cell "에이전트 질문/분석 텍스트" [ref=e100]
+              - cell "TLS 1.3" [ref=e101]:
+                - generic [ref=e102]: TLS 1.3
+              - cell "사용 안함" [ref=e103]:
+                - strong [ref=e104]: 사용 안함
+              - cell "30일 삭제" [ref=e105]
+            - row "→ Slack 채널 대화 메시지 TLS 1.2+ 사용 안함 슬랙 정책" [ref=e106]:
+              - cell "→ Slack" [ref=e107]:
+                - strong [ref=e108]: → Slack
+              - cell "채널 대화 메시지" [ref=e109]
+              - cell "TLS 1.2+" [ref=e110]:
+                - generic [ref=e111]: TLS 1.2+
+              - cell "사용 안함" [ref=e112]
+              - cell "슬랙 정책" [ref=e113]
+            - row "→ Jira 이슈/문서 내용 TLS 1.2+ 사용 안함 직접 관리" [ref=e114]:
+              - cell "→ Jira" [ref=e115]:
+                - strong [ref=e116]: → Jira
+              - cell "이슈/문서 내용" [ref=e117]
+              - cell "TLS 1.2+" [ref=e118]:
+                - generic [ref=e119]: TLS 1.2+
+              - cell "사용 안함" [ref=e120]
+              - cell "직접 관리" [ref=e121]
+        - generic [ref=e122]:
+          - heading "📌 중요한 점" [level=4] [ref=e123]
+          - paragraph [ref=e124]:
+            - strong [ref=e125]: DB 원본 데이터, 도면 파일, CAD 파일은 외부로 전송되지 않습니다.
+            - text: 에이전트가 분석에 필요한
+            - strong [ref=e126]: 텍스트 요약본만
+            - text: Claude에 질문으로 보내고, 답변을 받아옵니다.
+            - text: 원본 데이터는 항상
+            - strong [ref=e127]: 사내 서버에만
+            - text: 존재합니다.
+      - generic [ref=e128]: "04"
+    - generic [ref=e129]:
+      - generic [ref=e131]: 핵심 질문과 답변
+      - generic [ref=e132]:
+        - generic [ref=e133]:
+          - heading "Q1. AI가 우리 기술을 배워서 경쟁사에 알려주지 않나?" [level=4] [ref=e134]
+          - paragraph [ref=e135]:
+            - generic [ref=e136]: "NO"
+            - text: 유료 API는 고객 데이터를 모델 학습에
+            - strong [ref=e137]: 사용하지 않음.
+            - text: 법적 의무.
+        - generic [ref=e138]:
+          - heading "Q2. 전송 중에 해커가 데이터를 훔칠 수 있나?" [level=4] [ref=e139]
+          - paragraph [ref=e140]:
+            - generic [ref=e141]: "NO"
+            - text: 인터넷 뱅킹과 동일한
+            - strong [ref=e142]: TLS 1.3 암호화
+            - text: 적용. 제3자 열람
+            - strong [ref=e143]: 불가능.
+        - generic [ref=e144]:
+          - heading "Q3. Anthropic 직원이 우리 데이터를 볼 수 있나?" [level=4] [ref=e145]
+          - paragraph [ref=e146]:
+            - text: 일상 업무에서
+            - strong [ref=e147]: 열람 안 함.
+            - text: 악용 조사 목적에 한해 제한적 접근만 가능.
+        - generic [ref=e148]:
+          - heading "Q4. 만약 Anthropic이 해킹당하면?" [level=4] [ref=e149]
+          - paragraph [ref=e150]:
+            - strong [ref=e151]: SOC 2 Type II
+            - text: + AES-256 + 30일 자동 삭제로 노출 범위
+            - strong [ref=e152]: 매우 제한적.
+      - generic [ref=e153]: "05"
+    - generic [ref=e154]:
+      - generic [ref=e156]: 왜 유료 API를 사용하는가?
+      - generic [ref=e157]:
+        - paragraph [ref=e158]:
+          - text: 같은 AI라도 무료 웹 채팅과 유료 API는
+          - strong [ref=e159]: 데이터 취급 방식이 완전히 다릅니다.
+        - generic [ref=e160]:
+          - generic [ref=e161]:
+            - heading "✗ 무료 AI 채팅 (일반 사용)" [level=4] [ref=e162]
+            - list [ref=e163]:
+              - listitem [ref=e164]:
+                - text: ✗ 대화 내용이 AI 학습에
+                - strong [ref=e165]: 사용될 수 있음
+              - listitem [ref=e166]: ✗ 데이터 삭제 절차가 복잡함
+              - listitem [ref=e167]: ✗ 기업 보안 계약(DPA) 불가
+              - listitem [ref=e168]: ✗ 감사 로그 없음
+              - listitem [ref=e169]: ✗ 개인 단위 — 통제 불가
+          - generic [ref=e170]:
+            - heading "✓ 유료 API (WTA가 사용 중)" [level=4] [ref=e171]
+            - list [ref=e172]:
+              - listitem [ref=e173]:
+                - text: ✓ 학습에
+                - strong [ref=e174]: 절대 사용되지 않음
+                - text: (법적 보장)
+              - listitem [ref=e175]: ✓ 30일 후 자동 삭제 + 즉시 삭제 가능
+              - listitem [ref=e176]: ✓ 기업 보안 계약(DPA) 체결 가능
+              - listitem [ref=e177]: ✓ API 사용 감사 로그 제공
+              - listitem [ref=e178]: ✓ 회사 관리 — 접근 통제 가능
+        - generic [ref=e179]:
+          - heading "⚠️ 오히려 위험한 것은" [level=4] [ref=e180]
+          - paragraph [ref=e181]:
+            - text: 직원이
+            - strong [ref=e182]: 개인 무료 AI에 기술 데이터를 직접 입력
+            - text: 하는 것이 훨씬 큰 리스크. 회사 시스템으로
+            - strong [ref=e183]: 데이터 전달을 통제
+            - text: 가능.
+      - generic [ref=e184]: "06"
+    - generic [ref=e185]:
+      - generic [ref=e187]: Anthropic(Claude)은 얼마나 안전한가?
+      - generic [ref=e188]:
+        - generic [ref=e189]:
+          - generic [ref=e190]:
+            - generic [ref=e191]: 🏅
+            - heading "SOC 2 Type II" [level=4] [ref=e192]
+            - paragraph [ref=e193]: 정보보안 감사 최고 인증
+          - generic [ref=e194]:
+            - generic [ref=e195]: 🔐
+            - heading "AES-256" [level=4] [ref=e196]
+            - paragraph [ref=e197]: 군사 등급 암호화
+          - generic [ref=e198]:
+            - generic [ref=e199]: 🗑️
+            - heading "30일 자동 삭제" [level=4] [ref=e200]
+            - paragraph [ref=e201]: API 기록 영구 삭제
+          - generic [ref=e202]:
+            - generic [ref=e203]: 📄
+            - heading "DPA 체결 가능" [level=4] [ref=e204]
+            - paragraph [ref=e205]: 법적 보호 계약
+        - table [ref=e206]:
+          - rowgroup [ref=e207]:
+            - row "항목 Claude (WTA 사용 중) GPT (OpenAI) Gemini (Google)" [ref=e208]:
+              - columnheader "항목" [ref=e209]
+              - columnheader "Claude (WTA 사용 중)" [ref=e210]
+              - columnheader "GPT (OpenAI)" [ref=e211]
+              - columnheader "Gemini (Google)" [ref=e212]
+            - row "API 학습 제외 ✓ 기본 적용 ✓ 기본 적용 ✓ 유료만" [ref=e213]:
+              - cell "API 학습 제외" [ref=e214]
+              - cell "✓ 기본 적용" [ref=e215]:
+                - strong [ref=e216]: ✓ 기본 적용
+              - cell "✓ 기본 적용" [ref=e217]
+              - cell "✓ 유료만" [ref=e218]
+            - row "데이터 보존 30일 30일 18개월*" [ref=e219]:
+              - cell "데이터 보존" [ref=e220]
+              - cell "30일" [ref=e221]:
+                - strong [ref=e222]: 30일
+              - cell "30일" [ref=e223]
+              - cell "18개월*" [ref=e224]
+            - row "SOC 2 / DPA ✓ Type II / ✓ ✓ / ✓ ✓ / ✓" [ref=e225]:
+              - cell "SOC 2 / DPA" [ref=e226]
+              - cell "✓ Type II / ✓" [ref=e227]:
+                - strong [ref=e228]: ✓ Type II / ✓
+              - cell "✓ / ✓" [ref=e229]
+              - cell "✓ / ✓" [ref=e230]
+      - generic [ref=e231]: "07"
+    - generic [ref=e232]:
+      - generic [ref=e234]: WTA가 이미 적용한 보안 장치들
+      - generic [ref=e236]:
+        - generic [ref=e237]:
+          - heading "✅ 유료 API만 사용" [level=4] [ref=e238]
+          - paragraph [ref=e239]: 학습 제외 보장되는 유료 API만 사용
+        - generic [ref=e240]:
+          - heading "✅ 100% 사내 서버 운영" [level=4] [ref=e241]
+          - paragraph [ref=e242]: 모든 에이전트 사내 서버 실행, 외부 호스팅 없음
+        - generic [ref=e243]:
+          - heading "✅ DB 외부 차단" [level=4] [ref=e244]
+          - paragraph [ref=e245]: MES·ERP DB 사내망 전용, 인터넷 접근 불가
+        - generic [ref=e246]:
+          - heading "✅ ERP 읽기 전용" [level=4] [ref=e247]
+          - paragraph [ref=e248]: AI가 ERP 데이터 변경 불가
+        - generic [ref=e249]:
+          - heading "✅ 슬랙 대화 사내 백업" [level=4] [ref=e250]
+          - paragraph [ref=e251]: 채널 대화를 사내 서버에 별도 저장
+        - generic [ref=e252]:
+          - heading "✅ 업무별 권한 분리" [level=4] [ref=e253]
+          - paragraph [ref=e254]: 각 에이전트는 자기 업무 범위만 접근
+      - generic [ref=e255]: "08"
+    - generic [ref=e256]:
+      - generic [ref=e258]: 추가 보안 강화 계획
+      - generic [ref=e259]:
+        - paragraph [ref=e260]: 단기 (2주 내)
+        - table [ref=e261]:
+          - rowgroup [ref=e262]:
+            - row "# 항목 내용" [ref=e263]:
+              - columnheader "#" [ref=e264]
+              - columnheader "항목" [ref=e265]
+              - columnheader "내용" [ref=e266]
+            - row "1 민감 데이터 자동 필터 도면번호·고객코드 AI 전송 전 자동 마스킹" [ref=e267]:
+              - cell "1" [ref=e268]
+              - cell "민감 데이터 자동 필터" [ref=e269]
+              - cell "도면번호·고객코드 AI 전송 전 자동 마스킹" [ref=e270]:
+                - text: 도면번호·고객코드
+                - strong [ref=e271]: AI 전송 전 자동 마스킹
+            - row "2 전송 감사 로그 AI 전송 데이터 전체 기록" [ref=e272]:
+              - cell "2" [ref=e273]
+              - cell "전송 감사 로그" [ref=e274]
+              - cell "AI 전송 데이터 전체 기록" [ref=e275]:
+                - text: AI 전송 데이터
+                - strong [ref=e276]: 전체 기록
+            - row "3 기밀 문서 차단 CAD·도면·BOM 자동 차단" [ref=e277]:
+              - cell "3" [ref=e278]
+              - cell "기밀 문서 차단" [ref=e279]
+              - cell "CAD·도면·BOM 자동 차단" [ref=e280]:
+                - text: CAD·도면·BOM
+                - strong [ref=e281]: 자동 차단
+        - paragraph [ref=e282]: 중장기 로드맵
+        - table [ref=e283]:
+          - rowgroup [ref=e284]:
+            - row "시기 항목" [ref=e285]:
+              - columnheader "시기" [ref=e286]
+              - columnheader "항목" [ref=e287]
+            - row "Q2 DPA 정식 체결 — Anthropic 법적 데이터 보호 계약" [ref=e288]:
+              - cell "Q2" [ref=e289]
+              - cell "DPA 정식 체결 — Anthropic 법적 데이터 보호 계약" [ref=e290]:
+                - strong [ref=e291]: DPA 정식 체결
+                - text: — Anthropic 법적 데이터 보호 계약
+            - row "Q2~Q3 사내 전용 AI 검토 — 최고 기밀은 사내 AI로만 처리" [ref=e292]:
+              - cell "Q2~Q3" [ref=e293]
+              - cell "사내 전용 AI 검토 — 최고 기밀은 사내 AI로만 처리" [ref=e294]:
+                - strong [ref=e295]: 사내 전용 AI 검토
+                - text: — 최고 기밀은 사내 AI로만 처리
+            - row "Q3 분기별 보안 점검 — 정기 자동 점검 체계" [ref=e296]:
+              - cell "Q3" [ref=e297]
+              - cell "분기별 보안 점검 — 정기 자동 점검 체계" [ref=e298]:
+                - strong [ref=e299]: 분기별 보안 점검
+                - text: — 정기 자동 점검 체계
+            - row "Q4 ISO 27001 준비 — 국제 정보보안 인증" [ref=e300]:
+              - cell "Q4" [ref=e301]
+              - cell "ISO 27001 준비 — 국제 정보보안 인증" [ref=e302]:
+                - strong [ref=e303]: ISO 27001 준비
+                - text: — 국제 정보보안 인증
+      - generic [ref=e304]: "09"
+    - generic [ref=e305]:
+      - generic [ref=e307]: 남아 있는 위험과 대비
+      - table [ref=e309]:
+        - rowgroup [ref=e310]:
+          - row "우려 사항 가능성 대비 방안" [ref=e311]:
+            - columnheader "우려 사항" [ref=e312]
+            - columnheader "가능성" [ref=e313]
+            - columnheader "대비 방안" [ref=e314]
+          - row "Anthropic 서버 해킹으로 API 기록 유출 극히 낮음 SOC2 인증, AES-256, 30일 자동 삭제. DPA 체결 시 법적 보호." [ref=e315]:
+            - cell "Anthropic 서버 해킹으로 API 기록 유출" [ref=e316]
+            - cell "극히 낮음" [ref=e317]:
+              - generic [ref=e318]: 극히 낮음
+            - cell "SOC2 인증, AES-256, 30일 자동 삭제. DPA 체결 시 법적 보호." [ref=e319]:
+              - text: SOC2 인증, AES-256,
+              - strong [ref=e320]: 30일 자동 삭제
+              - text: . DPA 체결 시 법적 보호.
+          - row "직원 실수로 기밀 자료 AI에 입력 중간 민감 데이터 자동 필터링 도입. 직원 교육 + 가이드라인." [ref=e321]:
+            - cell "직원 실수로 기밀 자료 AI에 입력" [ref=e322]
+            - cell "중간" [ref=e323]:
+              - generic [ref=e324]: 중간
+            - cell "민감 데이터 자동 필터링 도입. 직원 교육 + 가이드라인." [ref=e325]:
+              - strong [ref=e326]: 민감 데이터 자동 필터링
+              - text: 도입. 직원 교육 + 가이드라인.
+          - row "사내 서버 외부 공격 낮음 DB 외부 차단, 방화벽. 에이전트 간 인증 추가 예정." [ref=e327]:
+            - cell "사내 서버 외부 공격" [ref=e328]
+            - cell "낮음" [ref=e329]:
+              - generic [ref=e330]: 낮음
+            - cell "DB 외부 차단, 방화벽. 에이전트 간 인증 추가 예정." [ref=e331]
+          - row "Anthropic 정책 변경 극히 낮음 DPA 체결 시 법적 구속력. 사전 통지 의무." [ref=e332]:
+            - cell "Anthropic 정책 변경" [ref=e333]
+            - cell "극히 낮음" [ref=e334]:
+              - generic [ref=e335]: 극히 낮음
+            - cell "DPA 체결 시 법적 구속력. 사전 통지 의무." [ref=e336]:
+              - text: DPA 체결 시
+              - strong [ref=e337]: 법적 구속력
+              - text: . 사전 통지 의무.
+      - generic [ref=e338]: "10"
+    - generic [ref=e339]:
+      - generic [ref=e341]: 종합 결론
+      - generic [ref=e342]:
+        - list [ref=e344]:
+          - listitem [ref=e345]:
+            - strong [ref=e346]: 1. 기술 데이터가 AI 학습에 사용되지 않습니다.
+            - text: — 유료 API 계약상 법적 보장
+          - listitem [ref=e347]:
+            - strong [ref=e348]: 2. 데이터 전송은 은행 수준으로 보호됩니다.
+            - text: — TLS 1.3 + 30일 자동 삭제
+          - listitem [ref=e349]:
+            - strong [ref=e350]: 3. 직원의 개인 AI 사용이 더 큰 위험입니다.
+            - text: — 회사 시스템 통제가 더 안전
+        - generic [ref=e351]:
+          - generic [ref=e352]:
+            - heading "📄 DPA 체결 추진" [level=4] [ref=e353]
+            - paragraph [ref=e354]: Anthropic 법적 데이터 보호 계약 (무료, API 구독 포함)
+          - generic [ref=e355]:
+            - heading "🖥️ 사내 전용 AI 검토" [level=4] [ref=e356]
+            - paragraph [ref=e357]: 최고 기밀은 사내 AI로 처리 (서버 투자 필요)
+      - generic [ref=e358]: "11"
+  - generic [ref=e360]: © 2026 (주)윈텍오토메이션. All rights reserved.

@@ -1,0 +1,235 @@
+- generic [ref=e29]:
+  - complementary [ref=e30]:
+    - generic [ref=e31]:
+      - generic [ref=e32]:
+        - img "WTA" [ref=e33]
+        - generic [ref=e34]: CS Agent
+      - button [ref=e35]:
+        - img [ref=e36]
+    - generic [ref=e40]:
+      - img [ref=e42]
+      - generic [ref=e45]:
+        - paragraph [ref=e46]: Administrator
+        - paragraph [ref=e47]: HQ
+    - navigation [ref=e48]:
+      - link "대시보드" [ref=e49] [cursor=pointer]:
+        - /url: /
+        - img [ref=e50]
+        - text: 대시보드
+      - link "CS 이력" [ref=e55] [cursor=pointer]:
+        - /url: /cs
+        - img [ref=e56]
+        - text: CS 이력
+      - link "업무 스케줄" [ref=e59] [cursor=pointer]:
+        - /url: /schedule
+        - img [ref=e60]
+        - text: 업무 스케줄
+      - link "장비" [ref=e62] [cursor=pointer]:
+        - /url: /equipment
+        - img [ref=e63]
+        - text: 장비
+      - link "장비 셋업" [ref=e66] [cursor=pointer]:
+        - /url: /setup
+        - img [ref=e67]
+        - text: 장비 셋업
+      - link "재고" [ref=e69] [cursor=pointer]:
+        - /url: /inventory
+        - img [ref=e70]
+        - text: 재고
+      - link "부품 판매" [ref=e74] [cursor=pointer]:
+        - /url: /sales
+        - img [ref=e75]
+        - text: 부품 판매
+      - link "갤러리" [ref=e79] [cursor=pointer]:
+        - /url: /gallery
+        - img [ref=e80]
+        - text: 갤러리
+      - link "견적서 관리" [ref=e84] [cursor=pointer]:
+        - /url: /quotes
+        - img [ref=e85]
+        - text: 견적서 관리
+      - link "라벨 출력" [ref=e88] [cursor=pointer]:
+        - /url: /labels
+        - img [ref=e89]
+        - text: 라벨 출력
+      - link "설정" [ref=e93] [cursor=pointer]:
+        - /url: /settings
+        - img [ref=e94]
+        - text: 설정
+    - button "로그아웃" [ref=e97]:
+      - img [ref=e98]
+      - text: 로그아웃
+  - generic [ref=e101]:
+    - banner [ref=e102]:
+      - generic [ref=e103]:
+        - button [ref=e104]:
+          - img [ref=e105]
+        - img "WTA" [ref=e106]
+      - generic [ref=e107]:
+        - button "다크 모드 전환" [ref=e108]:
+          - img [ref=e109]
+        - button "Language" [ref=e112]:
+          - img [ref=e113]
+    - main [ref=e116]:
+      - generic [ref=e117]:
+        - generic [ref=e118]:
+          - generic [ref=e119]:
+            - img [ref=e121]
+            - paragraph [ref=e124]: "5160"
+            - paragraph [ref=e125]: 전체 CS
+          - generic [ref=e126]:
+            - img [ref=e128]
+            - paragraph [ref=e131]: "254"
+            - paragraph [ref=e132]: 진행중
+          - generic [ref=e133]:
+            - img [ref=e135]
+            - paragraph [ref=e138]: "4197"
+            - paragraph [ref=e139]: 완료
+          - generic [ref=e140]:
+            - img [ref=e142]
+            - paragraph [ref=e144]: "709"
+            - paragraph [ref=e145]: 대기
+        - generic [ref=e146]:
+          - heading "월별 CS 현황" [level=2] [ref=e147]
+          - generic [ref=e149]:
+            - generic [ref=e150]:
+              - generic [ref=e151]: "35"
+              - generic [ref=e153]: "10"
+            - generic [ref=e154]:
+              - generic [ref=e155]: "52"
+              - generic [ref=e157]: "11"
+            - generic [ref=e158]:
+              - generic [ref=e159]: "44"
+              - generic [ref=e161]: "12"
+            - generic [ref=e162]:
+              - generic [ref=e163]: "73"
+              - generic [ref=e165]: "1"
+            - generic [ref=e166]:
+              - generic [ref=e167]: "38"
+              - generic [ref=e169]: "2"
+            - generic [ref=e170]:
+              - generic [ref=e171]: "41"
+              - generic [ref=e173]: "3"
+        - generic [ref=e174]:
+          - generic [ref=e175]:
+            - heading "고객별 CS (Top 5)" [level=2] [ref=e176]
+            - generic [ref=e178]:
+              - generic [ref=e180]:
+                - generic [ref=e181]:
+                  - generic [ref=e182]: "1."
+                  - text: 한국야금
+                - generic [ref=e183]: "1309"
+              - generic [ref=e187]:
+                - generic [ref=e188]:
+                  - generic [ref=e189]: "2."
+                  - text: 교세라
+                - generic [ref=e190]: "686"
+              - generic [ref=e194]:
+                - generic [ref=e195]:
+                  - generic [ref=e196]: "3."
+                  - text: 화루이
+                - generic [ref=e197]: "515"
+              - generic [ref=e201]:
+                - generic [ref=e202]:
+                  - generic [ref=e203]: "4."
+                  - text: OKE
+                - generic [ref=e204]: "484"
+              - generic [ref=e208]:
+                - generic [ref=e209]:
+                  - generic [ref=e210]: "5."
+                  - text: 주주쫜스
+                - generic [ref=e211]: "422"
+          - generic [ref=e214]:
+            - heading "장비별 CS (Top 5)" [level=2] [ref=e215]
+            - generic [ref=e217]:
+              - generic [ref=e219]:
+                - generic [ref=e220]:
+                  - generic [ref=e221]: "1."
+                  - text: "교세라 포장기 #2"
+                - generic [ref=e222]: "104"
+              - generic [ref=e226]:
+                - generic [ref=e227]:
+                  - generic [ref=e228]: "2."
+                  - text: "교세라 검사기 #2"
+                - generic [ref=e229]: "101"
+              - generic [ref=e233]:
+                - generic [ref=e234]:
+                  - generic [ref=e235]: "3."
+                  - text: "교세라 포장기 #3"
+                - generic [ref=e236]: "91"
+              - generic [ref=e240]:
+                - generic [ref=e241]:
+                  - generic [ref=e242]: "4."
+                  - text: "한국야금 PVD #1"
+                - generic [ref=e243]: "72"
+              - generic [ref=e247]:
+                - generic [ref=e248]:
+                  - generic [ref=e249]: "5."
+                  - text: "한국야금 검사기 #1"
+                - generic [ref=e250]: "71"
+        - generic [ref=e253]:
+          - heading "빠른 실행" [level=2] [ref=e254]
+          - generic [ref=e255]:
+            - button "새 CS 등록" [ref=e256]:
+              - img [ref=e257]
+              - text: 새 CS 등록
+            - button "장비 검색" [ref=e258]:
+              - img [ref=e259]
+              - text: 장비 검색
+        - generic [ref=e262]:
+          - generic [ref=e263]:
+            - heading "최근 CS 이력" [level=2] [ref=e264]
+            - button "전체 보기" [ref=e265]:
+              - text: 전체 보기
+              - img [ref=e266]
+          - generic [ref=e268]:
+            - button "Kyocera 검사기 1 호기 AP1135 신제품 마그네틱 암 사용 불가 깐저우 교세라 · 종료" [ref=e269]:
+              - generic [ref=e270]:
+                - paragraph [ref=e271]: Kyocera 검사기 1 호기 AP1135 신제품 마그네틱 암 사용 불가
+                - paragraph [ref=e272]: 깐저우 교세라 ·
+              - generic [ref=e274]: 종료
+            - button "Kyocera 검사기 1 호기 제품 팔레트 위치 틀어짐으로 인해 고배율 렌즈 불량률 15% 증가 깐저우 교세라 · 종료" [ref=e275]:
+              - generic [ref=e276]:
+                - paragraph [ref=e277]: Kyocera 검사기 1 호기 제품 팔레트 위치 틀어짐으로 인해 고배율 렌즈 불량률 15% 증가
+                - paragraph [ref=e278]: 깐저우 교세라 ·
+              - generic [ref=e280]: 종료
+            - button "Kyocera 검사기 1 호기 동일 제품 동일 레시피 저배율 검사 결과 상이 깐저우 교세라 · 종료" [ref=e281]:
+              - generic [ref=e282]:
+                - paragraph [ref=e283]: Kyocera 검사기 1 호기 동일 제품 동일 레시피 저배율 검사 결과 상이
+                - paragraph [ref=e284]: 깐저우 교세라 ·
+              - generic [ref=e286]: 종료
+            - button "Kyocera 검사기 1 호기 종료 정지 시 간헐적으로 인덱스 배열 한계 초과 현상 발생 깐저우 교세라 · 종료" [ref=e287]:
+              - generic [ref=e288]:
+                - paragraph [ref=e289]: Kyocera 검사기 1 호기 종료 정지 시 간헐적으로 인덱스 배열 한계 초과 현상 발생
+                - paragraph [ref=e290]: 깐저우 교세라 ·
+              - generic [ref=e292]: 종료
+            - button "R축이 제품 정렬시 조금씩 틀어짐 발생 YG1 · 종료" [ref=e293]:
+              - generic [ref=e294]:
+                - paragraph [ref=e295]: R축이 제품 정렬시 조금씩 틀어짐 발생
+                - paragraph [ref=e296]: YG1 ·
+              - generic [ref=e298]: 종료
+  - navigation [ref=e299]:
+    - link "업무 스케줄" [ref=e300] [cursor=pointer]:
+      - /url: /schedule
+      - img [ref=e302]
+      - generic [ref=e304]: 업무 스케줄
+    - link "CS 이력" [ref=e305] [cursor=pointer]:
+      - /url: /cs
+      - img [ref=e307]
+      - generic [ref=e310]: CS 이력
+    - link "장비" [ref=e311] [cursor=pointer]:
+      - /url: /equipment
+      - img [ref=e313]
+      - generic [ref=e316]: 장비
+    - link "장비 셋업" [ref=e317] [cursor=pointer]:
+      - /url: /setup
+      - img [ref=e319]
+      - generic [ref=e321]: 장비 셋업
+    - link "재고" [ref=e322] [cursor=pointer]:
+      - /url: /inventory
+      - img [ref=e324]
+      - generic [ref=e328]: 재고
+    - link "더보기" [ref=e329] [cursor=pointer]:
+      - /url: /more
+      - img [ref=e331]
+      - generic [ref=e336]: 더보기

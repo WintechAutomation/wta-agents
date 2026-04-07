@@ -1,0 +1,74 @@
+{"_header": true, "channel_id": "C0AQJNSDWVD", "channel_name": "제어-문서작업"}
+{"ts": "2026-04-06 10:38:55", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 안녕 여기는 내 개인적인 문서 작업을 위한공간으로 할게"}
+{"ts": "2026-04-06 10:46:39", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 이게 이렇게 처리하는게 느리다고 ?"}
+{"ts": "2026-04-06 11:00:58", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 저기 ?"}
+{"ts": "2026-04-06 15:33:43", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 안녕?"}
+{"ts": "2026-04-06 15:46:38", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 사내 MES관련 제어 관련에 대해서 올라온 이력 확인 해 줄 수 있나 ?"}
+{"ts": "2026-04-06 15:49:42", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "MES에 등록된 제어 관련 부적합/ 이슈 혹은 제어팀에서 올린 이슈등을 정리해줘"}
+{"ts": "2026-04-06 15:49:49", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> MES에 등록된 제어 관련 부적합/ 이슈 혹은 제어팀에서 올린 이슈등을 정리해줘"}
+{"ts": "2026-04-06 15:53:05", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 김준형이 작성한 장비 별 특이사항 컨플런스 찾아서 알려줘"}
+{"ts": "2026-04-06 15:57:44", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 이거 보고 너가 자료 정리해줘 동영상은 내가 2개 있어서 그거 비교자료로 넣을거야 형식은 저대로 해주고 너가 내용 정리해서 간략하게 해줘", "files": [{"name": "image.png", "type": "png", "saved_path": "C:\\MES\\wta-agents\\slack_chatlog\\C0AQJNSDWVD_files\\20260406_155744_image.png"}]}
+{"ts": "2026-04-06 15:58:09", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 너가 따로 만들어서 나한테 그냥 ppt 자료로 줘"}
+{"ts": "2026-04-06 15:59:06", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "검사기 장비이고 이슈 : 프레임그레버 이탈 이슈 이걸로가지가고 조치전, 조치후 동영상이야 그래서 내가 바로 올리게 양식만 만들어주면 될것같아\n한장으로 만들어줘"}
+{"ts": "2026-04-06 15:59:15", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 검사기 장비이고 이슈 : 프레임그레버 이탈 이슈 이걸로가지가고 조치전, 조치후 동영상이야 그래서 내가 바로 올리게 양식만 만들어주면 될것같아\n한장으로 만들어줘"}
+{"ts": "2026-04-06 16:00:49", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "안보이는데 ? ㅋㅋㅋ"}
+{"ts": "2026-04-06 16:00:58", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 안보이는데?"}
+{"ts": "2026-04-06 16:04:06", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 좋은데 너무 내용이 없다 내가 보내준 내용을 참조해서 좀더 더 해줘"}
+{"ts": "2026-04-06 16:06:50", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "저걸 내가 쓰게 PPT 파일로 주면 안될까 ?"}
+{"ts": "2026-04-06 16:07:09", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 저걸 쓰게 너가 PPT 파일로 주면 안될까 ?"}
+{"ts": "2026-04-06 16:14:56", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 어디에 올려놨어 ? 매번 까먹네 ? 너자꾸이러면 내가 혼낸다"}
+{"ts": "2026-04-06 16:17:05", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> PPT에 바로 넣을 수 있게 PPT 파일로 만들어서 주라고 없던데 어디에도"}
+{"ts": "2026-04-06 16:23:32", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 양식은 그대로 해달라고 하니깐 너가 맘대로 수정하네\n이게 앞으로 너랑나랑 PPT로 보낼땐 기본 양식이야 여기에 반영해서 작성해줘\n그러니깐 지금부터 저대로 작성해보고 다시줘", "files": [{"name": "기본양식_Copied[00].pptx", "type": "pptx", "saved_path": "C:\\MES\\wta-agents\\slack_chatlog\\C0AQJNSDWVD_files\\20260406_162332_기본양식_Copied[00].pptx"}]}
+{"ts": "2026-04-06 16:24:02", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 내가 방금 너한테 보내줬잖아"}
+{"ts": "2026-04-06 16:24:27", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 기본양식으로 너한테 보냈어"}
+{"ts": "2026-04-06 16:24:58", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "아니 컨플런스 말고 파일로 받을수 있게 URL올려줘"}
+{"ts": "2026-04-06 16:25:10", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 컨플런스말고 파일을 받을 수 있는 곳 알려줘 넣어줄게"}
+{"ts": "2026-04-06 16:27:25", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 어디에 올리면 되는데 ?"}
+{"ts": "2026-04-06 16:29:47", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "여기는 아닌것 같아\n업로드 위치가 아닌것같아 다시 생각해봐"}
+{"ts": "2026-04-06 16:29:54", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 여기는 아닌것 같아\n업로드 위치가 아닌것같아 다시 생각해봐"}
+{"ts": "2026-04-06 16:30:37", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "아니 전에는 너가 나한테 파일 올릴 수있는 URL 주소를 알려줬는데 저건 너무 아닌것같아"}
+{"ts": "2026-04-06 16:30:48", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 아니 전에는 너가 나한테 파일 올릴 수있는 URL 주소를 알려줬는데 저건 너무 아닌것같아"}
+{"ts": "2026-04-06 16:31:59", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 그리고 너가 보내준 agent.mes 는 너만의 공간이야 ??"}
+{"ts": "2026-04-06 16:34:16", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 그래 이렇게 해줘야지 앞으로 주의하도록해\n그리고 내가 마스터한테 말해서 대화창에 올리면 너가 그거 인식할 수 있도록 요청할게 ㅎㅎ"}
+{"ts": "2026-04-06 16:34:43", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 올렸어 다시한번 확인해바ㅗ"}
+{"ts": "2026-04-06 16:34:53", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<https://agent.mes-wta.com/api/files/524731e3-dc16-4141-b885-9ab32149311b/%EA%B8%B0%EB%B3%B8%EC%96%91%EC%8B%9D_Copied%5B00%5D.pptx>\n여기에 올렸으니깐"}
+{"ts": "2026-04-06 16:36:07", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> <https://agent.mes-wta.com/api/files/524731e3-dc16-4141-b885-9ab32149311b/%EA%B8%B0%EB%B3%B8%EC%96%91%EC%8B%9D_Copied%5B00%5D.pptx>\n여기에 올렸으니깐"}
+{"ts": "2026-04-06 16:36:35", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 아니면 너가 MAX 한테 요청해봐\nㅋㅋㅋ 메시지에서 파일 올려주면 너가 인식할 수 있게"}
+{"ts": "2026-04-06 16:41:37", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 에이젠트 오피스에 넌 왜없냐 ?ㅋㅋㅋ"}
+{"ts": "2026-04-06 16:45:23", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 내용이 없는데 수정을 할것조차"}
+{"ts": "2026-04-06 16:54:51", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 야근데 너무 대충 만든거아니냐 어울리게는 만들어줘야지 아니면 너가 저 양식에 맞게 수정을 해주던가 .."}
+{"ts": "2026-04-06 17:00:40", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 아니 내가 보낸 양식에서 너가 변경하면서 해야지 무슨 너가 만든걸 붙여넣기만 해 .,.."}
+{"ts": "2026-04-06 17:00:56", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 그리고 내가 한장으로 하라고 했지\n두장으로 하라고 했니 ?"}
+{"ts": "2026-04-06 17:04:48", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 1. 외주 인력 구성 및 산정 내역\n\n1) 기간 : 03월 01일 ~ 03월 31일 (총21일 Man-day)\n2) 인원 : 1명\n3) 인건비 : 일당 230,000원\n구분\n단가\n일수\n합계\nMan-day 비용\n230,000원\n21일\n4,830,000원\n3월 식대\n7,000원\n21일\n147+,000원\n총 합계\n\n\n4,977,000\n\n4) 총액 : 4,977,000원 (VAT 별도)\n\n*2. 외주 인력 투입 업무*\n- 제작 일정 준수 및 공정 지연 방지를 위해 *메이써루이 프레스 속판 3대분, 신루이 프레스 속판 2대분 + 로컬작업, 한국야금 프레스 속판 1대분* 제작 공정에 외주 인력을 투입하여 전장 조립, 배선 작업 및 작업 검수 등 제작 공정 지원 업무를 수행하였습니다.\n\n*3. 품의 내용*\n상기 외주 인건비는 제작 일정에 따른 공정 수행 과정에서 발생한 비용으로,\n관련 비용을 *2026년 4월 중순 지급*으로 집행하고자 하오니 *재가 요청드립니다.*\n\n*틀린내용이 있는지 검토 해줘* "}
+{"ts": "2026-04-06 20:39:42", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 너 이거 똑같이 PPT 만들어 줄 수 있어 ?", "files": [{"name": "image.png", "type": "png", "saved_path": "C:\\MES\\wta-agents\\slack_chatlog\\C0AQJNSDWVD_files\\20260406_203942_image.png"}]}
+{"ts": "2026-04-06 20:40:06", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 내가 보낸 사진 내용을 보고 똑같이 만들어줘 ~"}
+{"ts": "2026-04-06 20:42:09", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 올렸어 너가 저 두개 자료를 통해서 PPT 폼은 내가 보낸 폼으로 해서 저런식으로 만들어줘"}
+{"ts": "2026-04-06 20:45:48", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 에이 니가 짜집기해서 만들어달라니깐 gemini는 잘만드는데 넌 왜 못만들까 ㅠㅠ"}
+{"ts": "2026-04-06 20:47:16", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 전체다 내가 제미나이가 만든거 올려줬잖아 저걸 너가 내폼을 조금씩 병경하는데 기본적인건 놔두고 만들어줘야지"}
+{"ts": "2026-04-07 10:40:24", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 안녕?"}
+{"ts": "2026-04-07 10:40:48", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C>\n제어-지건승2에서 왜케 오래걸리냐 ?"}
+{"ts": "2026-04-07 10:41:43", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 앞으로너네 처리중이라고 할때 답답하니깐 몇퍼센트 진행되는지 표시해주면 안될까 이러면 너무 많은 요소를 가지고 가나 ?"}
+{"ts": "2026-04-07 10:42:17", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 그걸구분해서 깔끔하게 나눠서 해봐 ㅋㅋㅋ"}
+{"ts": "2026-04-07 10:42:44", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C>진행내역도 포함해봐"}
+{"ts": "2026-04-07 10:45:02", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 그리고 남은작업도 뭔지 너가 생각해서 알려주고 저걸 좀 세련되게 만들어봐"}
+{"ts": "2026-04-07 10:47:45", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 너무 과해 ㅋㅋ 적당히 해봐"}
+{"ts": "2026-04-07 10:49:11", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 응좋은데 어디에서 저내용들이 나왔는지에대해서도 넣어줬으면 좋겠어"}
+{"ts": "2026-04-07 10:51:01", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 응 좋다 ... 이렇게 말해주는것도 좋고 너가 맨날 작업중입니다 할때 얼마 진행되었는지도 좀 보여줘 ~"}
+{"ts": "2026-04-07 11:06:41", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 내가 요청한거 다시한번만 진행률 표시해서 알려줘"}
+{"ts": "2026-04-07 11:07:33", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 이제 장비별 하네스도 품번으로 작업을 하고싶은데 어떻게 하는지 좋을지 너가 샘플줘봐"}
+{"ts": "2026-04-07 11:09:25", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "아니 일단 프레스핸들러로만 해보자"}
+{"ts": "2026-04-07 11:09:47", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 아니 일단 프레스핸들러로만 해보자"}
+{"ts": "2026-04-07 11:13:40", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "우리가 만드는 하네스가 cmd, Ac서보 pOW, ENC, BK, LMT , DC POW,ENC, LMT,BK  I/O센서 (각유닛별)\n인터페이스 DOOR 이런것등이 있어 그런거 반영해서 해봐 <@U0AP5B0F71C>"}
+{"ts": "2026-04-07 11:18:05", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "HP3C-CBL-CMD-001 이런게 낫지않을까 ?"}
+{"ts": "2026-04-07 11:18:15", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> HP3C-CBL-CMD-001 이런게 낫지않을까 ?"}
+{"ts": "2026-04-07 11:19:03", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 저 3이 3호기를 뜻하는거아냐\n수정해"}
+{"ts": "2026-04-07 11:27:22", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 저건 내가 찾아봐서알려줄게 ㅋㅋ"}
+{"ts": "2026-04-07 11:36:09", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 너가생각했을때 다른좋은방법이있는지봐봐"}
+{"ts": "2026-04-07 11:37:55", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "응 3번도 괜찮네 두개를 합해서 효율적으로 다시할수있는방법이 있을까 ?"}
+{"ts": "2026-04-07 11:38:24", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 응 3번도 괜찮네 두개를 합해서 효율적으로 다시할수있는방법이 있을까 ?\n근데 EPLAN을 너가 들어올수있어  ? 아님 PDF를 줘야하나 ?"}
+{"ts": "2026-04-07 11:42:50", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "음 고민좀해볼게 이걸 <mailto:rjstmd5@wta.kr|rjstmd5@wta.kr> 메일보내줘"}
+{"ts": "2026-04-07 11:43:00", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 음 고민좀해볼게 이걸 <mailto:rjstmd5@wta.kr|rjstmd5@wta.kr> 메일보내줘"}
+{"ts": "2026-04-07 11:43:50", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "1번 정리해주고 2번 가능한지 물어보고 가능하면 어떻게 하면 되는지 알려줘"}
+{"ts": "2026-04-07 11:43:59", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 1번 정리해주고 2번 가능한지 물어보고 가능하면 어떻게 하면 되는지 알려줘"}
+{"ts": "2026-04-07 13:35:03", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> ERP 에서 품목코드가 몇개까지이지 ?"}
+{"ts": "2026-04-07 14:11:23", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> 아니 내가 쓸수있는15자이내인지 이상도 되는지"}

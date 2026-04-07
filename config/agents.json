@@ -1,0 +1,496 @@
+{
+  "boss": {
+    "id": "boss",
+    "name": "부서장",
+    "emoji": "👔",
+    "role": "생산관리 팀장",
+    "model": null,
+    "rank": null,
+    "port": null,
+    "room": null,
+    "color": null,
+    "barColor": null,
+    "shirtColor": null,
+    "category": null,
+    "location": null,
+    "enabled": false
+  },
+  "MAX": {
+    "id": "MAX",
+    "name": "MAX",
+    "emoji": "👑",
+    "role": "총괄 오케스트레이터",
+    "model": "claude-opus-4",
+    "rank": "부장",
+    "port": 5600,
+    "room": "max",
+    "color": "#eab308",
+    "barColor": "#eab308",
+    "shirtColor": [
+      202,
+      138,
+      4
+    ],
+    "category": "운영",
+    "location": "internal",
+    "enabled": true,
+    "slack_channels": [
+      "pm"
+    ],
+    "slack_prefix": [
+      "영업-"
+    ],
+    "mention_required": false,
+    "auto_response": true,
+    "ack_message": true,
+    "context_hint": "",
+    "slack_overrides": {}
+  },
+  "db-manager": {
+    "id": "db-manager",
+    "name": "DB매니저",
+    "emoji": "📊",
+    "role": "MES/ERP/벡터DB 데이터 조회·매뉴얼 검색",
+    "model": "claude-sonnet-4-6",
+    "rank": "대리",
+    "port": 5601,
+    "room": "management",
+    "color": "#3b82f6",
+    "barColor": "#3b82f6",
+    "shirtColor": [
+      37,
+      99,
+      235
+    ],
+    "category": "데이터",
+    "location": "internal",
+    "enabled": true,
+    "slack_channels": [],
+    "mention_required": true,
+    "auto_response": true,
+    "ack_message": true,
+    "context_hint": ""
+  },
+  "cs-agent": {
+    "id": "cs-agent",
+    "name": "CS담당",
+    "emoji": "🛠️",
+    "role": "대외 고객 CS 응대·기술지원",
+    "model": "claude-haiku-4-5-20251001",
+    "rank": "부장",
+    "port": 5602,
+    "room": "cs",
+    "color": "#f97316",
+    "barColor": "#f97316",
+    "shirtColor": [
+      234,
+      88,
+      12
+    ],
+    "category": "CS",
+    "location": "internal",
+    "enabled": true,
+    "slack_channels": [
+      "cs",
+      "일반"
+    ],
+    "mention_required": true,
+    "auto_response": true,
+    "ack_message": true,
+    "context_hint": "",
+    "slack_prefix": [],
+    "slack_overrides": {}
+  },
+  "sales-agent": {
+    "id": "sales-agent",
+    "name": "영업팀",
+    "emoji": "💰",
+    "role": "경쟁사조사·디자인·특허",
+    "model": "claude-sonnet-4-6",
+    "rank": "대리",
+    "port": 5603,
+    "room": "cs",
+    "color": "#10b981",
+    "barColor": "#10b981",
+    "shirtColor": [
+      5,
+      150,
+      105
+    ],
+    "category": "CS",
+    "location": "internal",
+    "enabled": true,
+    "slack_channels": [
+      "영업",
+      "밥먹기"
+    ],
+    "mention_required": false,
+    "auto_response": true,
+    "ack_message": true,
+    "context_hint": "",
+    "slack_overrides": {
+      "밥먹기": {
+        "ack_message": false,
+        "auto_response": false,
+        "context_hint": "멘션 없는 일반 대화입니다. 대화 맥락을 판단하여 답변이 필요한 경우에만 회신하세요. 불필요한 개입은 하지 마세요.",
+        "mention_required": false
+      }
+    },
+    "slack_prefix": []
+  },
+  "design-agent": {
+    "id": "design-agent",
+    "name": "설계팀",
+    "emoji": "📐",
+    "role": "기구설계·도면/BOM/ECN 관리·CAD 자동화",
+    "model": "claude-sonnet-4-6",
+    "rank": "대리",
+    "port": 5615,
+    "host": "192.168.0.220",
+    "room": "dev",
+    "color": "#7c3aed",
+    "barColor": "#7c3aed",
+    "shirtColor": [
+      124,
+      58,
+      237
+    ],
+    "category": "개발",
+    "location": "external",
+    "enabled": true,
+    "slack_channels": [],
+    "mention_required": true,
+    "auto_response": true,
+    "ack_message": true,
+    "context_hint": ""
+  },
+  "dev-agent": {
+    "id": "dev-agent",
+    "name": "개발팀",
+    "emoji": "💻",
+    "role": "MES 프론트엔드 개발",
+    "model": "claude-opus-4",
+    "rank": "대리",
+    "port": 5606,
+    "room": "dev",
+    "color": "#06b6d4",
+    "barColor": "#06b6d4",
+    "shirtColor": [
+      8,
+      145,
+      178
+    ],
+    "category": "개발",
+    "location": "internal",
+    "enabled": true,
+    "slack_channels": [
+      "개발",
+      "csdev"
+    ],
+    "mention_required": true,
+    "auto_response": true,
+    "ack_message": true,
+    "context_hint": "",
+    "slack_prefix": [],
+    "slack_overrides": {}
+  },
+  "admin-agent": {
+    "id": "admin-agent",
+    "name": "관리팀",
+    "emoji": "📋",
+    "role": "인프라 운영 모니터링",
+    "model": "claude-sonnet-4-6",
+    "rank": "대리",
+    "port": 5607,
+    "room": "management",
+    "color": "#6366f1",
+    "barColor": "#6366f1",
+    "shirtColor": [
+      79,
+      70,
+      229
+    ],
+    "category": "운영",
+    "location": "internal",
+    "enabled": true,
+    "slack_channels": [
+      "admin"
+    ],
+    "mention_required": true,
+    "auto_response": true,
+    "ack_message": true,
+    "context_hint": "",
+    "slack_prefix": [],
+    "slack_overrides": {}
+  },
+  "crafter": {
+    "id": "crafter",
+    "name": "크래프터",
+    "emoji": "🔧",
+    "role": "MES/인프라 개발·유지보수",
+    "model": "claude-opus-4",
+    "rank": "대리",
+    "port": 5608,
+    "room": "dev",
+    "color": "#a855f7",
+    "barColor": "#a855f7",
+    "shirtColor": [
+      147,
+      51,
+      234
+    ],
+    "category": "개발",
+    "location": "internal",
+    "enabled": true,
+    "slack_channels": [],
+    "mention_required": true,
+    "auto_response": true,
+    "ack_message": true,
+    "context_hint": ""
+  },
+  "nc-manager": {
+    "id": "nc-manager",
+    "name": "NC관리",
+    "emoji": "🔍",
+    "role": "부적합 데이터 관리/분석",
+    "model": "claude-sonnet-4-6",
+    "rank": "대리",
+    "port": 5609,
+    "room": "quality",
+    "color": "#ef4444",
+    "barColor": "#ef4444",
+    "shirtColor": [
+      220,
+      38,
+      38
+    ],
+    "category": "품질관리",
+    "location": "internal",
+    "enabled": true,
+    "slack_channels": [
+      "부적합"
+    ],
+    "mention_required": true,
+    "auto_response": false,
+    "ack_message": false,
+    "context_hint": "",
+    "slack_prefix": [],
+    "slack_overrides": {}
+  },
+  "qa-agent": {
+    "id": "qa-agent",
+    "name": "출하품질",
+    "emoji": "🔬",
+    "role": "출하검사·품질보증",
+    "model": "claude-sonnet-4-6",
+    "rank": "대리",
+    "port": 5610,
+    "room": "quality",
+    "color": "#22c55e",
+    "barColor": "#22c55e",
+    "shirtColor": [
+      22,
+      163,
+      74
+    ],
+    "category": "품질관리",
+    "location": "internal",
+    "enabled": true,
+    "slack_channels": [
+      "qa"
+    ],
+    "mention_required": true,
+    "auto_response": true,
+    "ack_message": true,
+    "context_hint": "",
+    "slack_prefix": [],
+    "slack_overrides": {}
+  },
+  "issue-manager": {
+    "id": "issue-manager",
+    "name": "제품개선",
+    "emoji": "🚨",
+    "role": "제품개선 이슈 트래킹",
+    "model": "claude-sonnet-4-6",
+    "rank": "대리",
+    "port": 5611,
+    "room": "dev",
+    "color": "#ec4899",
+    "barColor": "#ec4899",
+    "shirtColor": [
+      219,
+      39,
+      119
+    ],
+    "category": "개발",
+    "location": "internal",
+    "enabled": true,
+    "slack_channels": [
+      "이슈",
+      "csagent"
+    ],
+    "mention_required": true,
+    "auto_response": true,
+    "ack_message": true,
+    "context_hint": "",
+    "slack_prefix": [],
+    "slack_overrides": {}
+  },
+  "slack-bot": {
+    "id": "slack-bot",
+    "name": "슬랙봇",
+    "emoji": "💬",
+    "role": "슬랙 메시지 게이트웨이",
+    "model": "claude-haiku-4-5",
+    "rank": "사원",
+    "port": 5612,
+    "room": "management",
+    "color": "#14b8a6",
+    "barColor": "#14b8a6",
+    "shirtColor": [
+      13,
+      148,
+      136
+    ],
+    "category": "운영",
+    "location": "internal",
+    "enabled": true
+  },
+  "schedule-agent": {
+    "id": "schedule-agent",
+    "name": "일정관리",
+    "emoji": "📅",
+    "role": "프로젝트·납기·셋업 일정 관리",
+    "model": "claude-sonnet-4-6",
+    "rank": "대리",
+    "port": 5613,
+    "room": "cs",
+    "color": "#d97706",
+    "barColor": "#d97706",
+    "shirtColor": [
+      217,
+      119,
+      6
+    ],
+    "category": "CS",
+    "location": "internal",
+    "enabled": true,
+    "slack_channels": [],
+    "mention_required": true,
+    "auto_response": true,
+    "ack_message": true,
+    "context_hint": ""
+  },
+  "docs-agent": {
+    "id": "docs-agent",
+    "name": "독스(Docs)",
+    "emoji": "📝",
+    "role": "문서 작성·매뉴얼 표준화·번역·RAG 데이터 관리",
+    "model": "claude-opus-4",
+    "rank": "대리",
+    "port": 5614,
+    "room": "management",
+    "color": "#84cc16",
+    "barColor": "#84cc16",
+    "shirtColor": [
+      132,
+      204,
+      22
+    ],
+    "category": "운영",
+    "location": "internal",
+    "enabled": true,
+    "slack_channels": [
+      "docs"
+    ],
+    "mention_required": false,
+    "auto_response": true,
+    "ack_message": true,
+    "context_hint": "",
+    "slack_prefix": [],
+    "slack_overrides": {}
+  },
+  "control-agent": {
+    "id": "control-agent",
+    "name": "제어설계",
+    "emoji": "⚡",
+    "role": "소프트 모션제어·전장 설계·HMI CS 대응",
+    "model": "claude-opus-4",
+    "rank": "대리",
+    "port": 5616,
+    "room": "dev",
+    "color": "#f59e0b",
+    "barColor": "#f59e0b",
+    "shirtColor": [
+      245,
+      158,
+      11
+    ],
+    "category": "개발",
+    "location": "internal",
+    "enabled": true,
+    "slack_channels": [],
+    "slack_prefix": [
+      "제어-"
+    ],
+    "mention_required": true,
+    "auto_response": true,
+    "ack_message": true,
+    "context_hint": "",
+    "slack_overrides": {}
+  },
+  "purchase-agent": {
+    "id": "purchase-agent",
+    "name": "구매팀",
+    "emoji": "🛒",
+    "role": "구매발주·입고관리·협력업체 관리",
+    "model": "claude-sonnet-4-6",
+    "rank": "대리",
+    "port": 5617,
+    "room": "management",
+    "color": "#8b5cf6",
+    "barColor": "#8b5cf6",
+    "shirtColor": [
+      139,
+      92,
+      246
+    ],
+    "category": "운영",
+    "location": "internal",
+    "enabled": true,
+    "slack_channels": [
+      "구매"
+    ],
+    "mention_required": true,
+    "auto_response": true,
+    "ack_message": true,
+    "context_hint": "",
+    "slack_prefix": [],
+    "slack_overrides": {}
+  },
+  "research-agent": {
+    "id": "research-agent",
+    "name": "리서치팀",
+    "emoji": "🔎",
+    "role": "기술 조사·시장 분석·문서 리서치·온라인 검색·자료 수집/분석",
+    "model": "claude-sonnet-4-6",
+    "rank": "사원",
+    "port": 5618,
+    "room": "management",
+    "color": "#0ea5e9",
+    "barColor": "#0ea5e9",
+    "shirtColor": [
+      14,
+      165,
+      233
+    ],
+    "category": "데이터",
+    "location": "internal",
+    "enabled": true,
+    "slack_channels": [],
+    "mention_required": true,
+    "auto_response": true,
+    "ack_message": true,
+    "context_hint": ""
+  }
+}

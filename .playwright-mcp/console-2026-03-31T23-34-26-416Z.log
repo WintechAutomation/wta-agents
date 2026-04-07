@@ -1,0 +1,2 @@
+[    1201ms] [ERROR] Failed to load resource: the server responded with a status of 404 (NOT FOUND) @ http://localhost:5555/favicon.svg:0
+[    1505ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-DBq6FRkt.js:11

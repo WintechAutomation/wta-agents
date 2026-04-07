@@ -1,0 +1,10 @@
+{
+  "question": "미쓰비시 H1043 에러에 대해서 설명해줘",
+  "answer": "심경기님, 미쓰비시 CR750/CR751 로봇 컨트롤러 H1043 에러 설명드립니다.\n\n**H1043 — Encoder init communication error (J3축)**\n\nH104n 계열 에러로, n 숫자가 축 번호를 의미합니다.\n- H1041 = J1축 / H1042 = J2축 / **H1043 = J3축** / H1044 = J4축 …\n\n**에러 내용**\n로봇 전원 인가 시 J3축 인코더(엔코더)와의 초기화 통신에 실패한 상태입니다.\n\n**주요 원인**\n- J3축 인코더 케이블 단선/단락 또는 커넥터 접촉 불량\n- 인코더 케이블 연결 커넥터 이탈 또는 손상\n- 인코더 자체 불량\n- 서보 앰프 불량\n\n**조치 방법**\n1. 전원 OFF → J3축 인코더 케이블 및 커넥터 연결 상태 육안 확인\n2. 케이블 흔들어서 접촉 불량 여부 확인\n3. 컨트롤러 측과 모터 측 커넥터 재결합 후 전원 ON 재시도\n4. 위 조치 후에도 재발 시 → 인코더 케이블 교체 또는 서보 앰프 점검 필요\n\n**참조**: Mitsubishi CR750/CR751 컨트롤러 취급설명서 (트러블슈팅 편)",
+  "question_source": "slack",
+  "image_paths": [],
+  "tools_used": ["cs_rag_agent.run_search", "manual.documents DB검색", "extract_pdf_excerpt"],
+  "model": "claude-sonnet-4-6",
+  "response_time_ms": 4200,
+  "session_id": "h1043-20260331-final"
+}

@@ -1,0 +1,5041 @@
+{
+  "total_pages": 31,
+  "total_cost_usd": 0.0657,
+  "results": [
+    {
+      "extracted": {
+        "entities": [
+          {
+            "type": "Issue",
+            "id": "issue_mixed_contamination_detection",
+            "name": "혼입 검사 이슈",
+            "properties": {
+              "title": "혼입 검사 이슈",
+              "description": "포장혼입검사 관련 이슈",
+              "status": null,
+              "date": null,
+              "symptom": "오검출, 경면 제품 처리 중 비대칭 이슈"
+            }
+          },
+          {
+            "type": "Issue",
+            "id": "issue_false_detection_1",
+            "name": "오검출#1",
+            "properties": {
+              "title": "오검출#1",
+              "status": null,
+              "date": null,
+              "symptom": "오검출 현상"
+            }
+          },
+          {
+            "type": "Issue",
+            "id": "issue_false_detection_2",
+            "name": "오검출#2",
+            "properties": {
+              "title": "오검출#2",
+              "status": null,
+              "date": null,
+              "symptom": "오검출 현상"
+            }
+          },
+          {
+            "type": "Issue",
+            "id": "issue_asymmetry_after_sequential",
+            "name": "순차 처리 후 비대칭 이슈",
+            "properties": {
+              "title": "순차 처리 후 비대칭 이슈",
+              "status": null,
+              "date": null,
+              "symptom": "경면 제품 순차 처리 후 비대칭 현상"
+            }
+          },
+          {
+            "type": "Product",
+            "id": "product_specular",
+            "name": "경면 제품",
+            "properties": {
+              "type": "경면 제품",
+              "material": null,
+              "description": null
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_mixed_contamination_detection",
+            "name": "혼입 검사",
+            "properties": {
+              "name": "혼입 검사",
+              "description": "포장혼입검사 공정",
+              "tool": null,
+              "parent": null
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_sequential_treatment",
+            "name": "순차 처리",
+            "properties": {
+              "name": "순차 처리",
+              "description": null,
+              "tool": null,
+              "parent": null
+            }
+          }
+        ],
+        "relations": [
+          {
+            "type": "SIMILAR_TO",
+            "from_id": "issue_false_detection_1",
+            "to_id": "issue_false_detection_2",
+            "properties": {}
+          },
+          {
+            "type": "INVOLVED_IN",
+            "from_id": "product_specular",
+            "to_id": "issue_asymmetry_after_sequential",
+            "properties": {}
+          }
+        ]
+      },
+      "usage": {
+        "input_tokens": 964,
+        "output_tokens": 827,
+        "cost_usd": 0.001275
+      },
+      "raw_len": 2070,
+      "topic": "포장혼입검사",
+      "file": "8685453351-혼입_검사_이슈.txt"
+    },
+    {
+      "extracted": {
+        "entities": [
+          {
+            "type": "Process",
+            "id": "process_insert_character_detection",
+            "name": "인서트 내부 글자 검출",
+            "properties": {
+              "description": "포장혼입검사 관련 인서트 내부 글자 검출 프로세스",
+              "parent": null
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_cognex_implementation",
+            "name": "코그넥스 기능 구현",
+            "properties": {
+              "description": "레시피 에디터를 통한 코그넥스 기능 구현",
+              "parent": "process_insert_character_detection"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_algorithm_implementation",
+            "name": "알고리즘 구현",
+            "properties": {
+              "description": "CB 방향 구분, 앞/뒷면 구분, C/B혼입 분류, 혼입 NoseR 기능",
+              "parent": "process_insert_character_detection"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_algorithm_test",
+            "name": "알고리즘 테스트",
+            "properties": {
+              "description": "각종 인서트 적용 V, T, C, S 테스트",
+              "parent": "process_insert_character_detection"
+            }
+          },
+          {
+            "type": "Tool",
+            "id": "tool_cognex",
+            "name": "코그넥스",
+            "properties": {
+              "type": "이미지 처리 소프트웨어"
+            }
+          },
+          {
+            "type": "Tool",
+            "id": "tool_recipe_editor",
+            "name": "레시피 에디터",
+            "properties": {
+              "type": "소프트웨어 도구"
+            }
+          },
+          {
+            "type": "Tool",
+            "id": "tool_align_tool",
+            "name": "Align Tool",
+            "properties": {
+              "type": "코그넥스 플러그인"
+            }
+          },
+          {
+            "type": "Tool",
+            "id": "tool_polygon_tool",
+            "name": "Polygon Tool",
+            "properties": {
+              "type": "코그넥스 플러그인"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "component_insert",
+            "name": "인서트",
+            "properties": {
+              "type": "부품",
+              "spec": "V, T, C, S 형태"
+            }
+          },
+          {
+            "type": "Issue",
+            "id": "issue_center_detection_error",
+            "name": "중심점 검출 오류",
+            "properties": {
+              "title": "코그넥스 중심점 검출 불일치",
+              "status": "예상되는 문제",
+              "symptom": "코그넥스로 찾은 중심점이 맞지 않거나 좌우 중심이 크게 틀어진 불량 인서트",
+              "root_cause": "물체 자체의 좌우 중심이 틀어진 경우 또는 중심점 검출 오류"
+            }
+          },
+          {
+            "type": "Issue",
+            "id": "issue_algorithm_accuracy",
+            "name": "알고리즘 정확도 문제",
+            "properties": {
+              "title": "인서트 중심 기반 회전 시 오류 발생",
+              "status": "예상되는 문제",
+              "symptom": "중심이 맞지 않을 경우 검출 결과 오류",
+              "root_cause": "인서트 중심을 기준으로 회전할 때 중심점 오류로 인한 결과 오류"
+            }
+          },
+          {
+            "type": "Resolution",
+            "id": "resolution_cognex_usage",
+            "name": "코그넥스 활용 방안",
+            "properties": {
+              "description": "코그넥스를 활용해 인서트와 인서트 안에 있는 글자를 찾아내고 해당 글자로 인서트의 방향이 맞는지 확인",
+              "category": "검출 알고리즘"
+            }
+          },
+          {
+            "type": "Resolution",
+            "id": "resolution_polygon_alignment",
+            "name": "폴리곤 정렬 조정",
+            "properties": {
+              "description": "인서트 형태에 맞게 빨간색 폴리곤을 이동시켜 맞춰주고 원점, 등록, 검출을 눌러 인서트를 찾아냄",
+              "category": "수동 조정"
+            }
+          },
+          {
+            "type": "Resolution",
+            "id": "resolution_image_comparison",
+            "name": "다각도 이미지 비교",
+            "properties": {
+              "description": "물체의 형태에 따라 중심점을 기준으로 폴리곤을 회전하여 다각도로 비교",
+              "category": "자동 검출"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_align_tool_usage",
+            "name": "Align Tool을 이용한 형태 분석",
+            "properties": {
+              "description": "물체의 형태, 중심점, 각도를 탐색하고 저장",
+              "parent": "process_algorithm_implementation"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_polygon_tool_usage",
+            "name": "Polygon Tool을 이용한 영역 설정",
+            "properties": {
+              "description": "물체 안의 글자를 포함하는 폴리곤 영역을 설정",
+              "parent": "process_algorithm_implementation"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_new_image_comparison",
+            "name": "새로운 이미지 비교",
+            "properties": {
+              "description": "새 이미지가 들어오면 Align Tool로 물체 분석 후 기존 값과 비교",
+              "parent": "process_algorithm_implementation"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_rotation_comparison",
+            "name": "회전 및 정답 이미지 비교",
+            "properties": {
+              "description": "물체의 형태에 따라 중심점을 기준으로 폴리곤을 회전하여 다각도로 비교",
+              "parent": "process_algorithm_implementation"
+            }
+          }
+        ],
+        "relations": [
+          {
+            "type": "USES_TOOL",
+            "from_id": "process_cognex_implementation",
+            "to_id": "tool_cognex",
+            "properties": {}
+          },
+          {
+            "type": "USES_TOOL",
+            "from_id": "process_cognex_implementation",
+            "to_id": "tool_recipe_editor",
+            "properties": {}
+          },
+          {
+            "type": "USES_TOOL",
+            "from_id": "process_align_tool_usage",
+            "to_id": "tool_align_tool",
+            "properties": {}
+          },
+          {
+            "type": "USES_TOOL",
+            "from_id": "process_polygon_tool_usage",
+            "to_id": "tool_polygon_tool",
+            "properties": {}
+          },
+          {
+            "type": "USES_TOOL",
+            "from_id": "process_new_image_comparison",
+            "to_id": "tool_align_tool",
+            "properties": {}
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "process_insert_character_detection",
+            "to_id": "process_cognex_implementation",
+            "properties": {}
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "process_insert_character_detection",
+            "to_id": "process_algorithm_implementation",
+            "properties": {}
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "process_insert_character_detection",
+            "to_id": "process_algorithm_test",
+            "properties": {}
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "process_algorithm_implementation",
+            "to_id": "process_align_tool_usage",
+            "properties": {}
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "process_algorithm_implementation",
+            "to_id": "process_polygon_tool_usage",
+            "properties": {}
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "process_algorithm_implementation",
+            "to_id": "process_new_image_comparison",
+            "properties": {}
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "process_algorithm_implementation",
+            "to_id": "process_rotation_comparison",
+            "properties": {}
+          },
+          {
+            "type": "INVOLVES_COMPONENT",
+            "from_id": "issue_center_detection_error",
+            "to_id": "component_insert",
+            "properties": {}
+          },
+          {
+            "type": "INVOLVES_COMPONENT",
+            "from_id": "issue_algorithm_accuracy",
+            "to_id": "component_insert",
+            "properties": {}
+          },
+          {
+            "type": "RESOLVED_BY",
+            "from_id": "issue_center_detection_error",
+            "to_id": "resolution_polygon_alignment",
+            "properties": {}
+          },
+          {
+            "type": "RESOLVED_BY",
+            "from_id": "issue_algorithm_accuracy",
+            "to_id": "resolution_image_comparison",
+            "properties": {}
+          }
+        ]
+      },
+      "usage": {
+        "input_tokens": 2271,
+        "output_tokens": 2769,
+        "cost_usd": 0.004029
+      },
+      "raw_len": 6730,
+      "topic": "포장혼입검사",
+      "file": "8719663107-인서트_내부_글자_검출_결과_정리.txt"
+    },
+    {
+      "extracted": {
+        "entities": [
+          {
+            "type": "Process",
+            "id": "process_insert_position_detection",
+            "name": "인서트 위치 검출",
+            "properties": {
+              "description": "이미지에서 인서트의 영역을 설정하는 기능",
+              "tool": "Tracker 툴"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_center_point_setting",
+            "name": "인서트 중심부 설정",
+            "properties": {
+              "description": "설정된 인서트의 형태에 중심부를 사용자가 설정할 수 있는 기능",
+              "parent": "process_insert_position_detection"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_main_direction_setting",
+            "name": "주 방향(절삭부) 설정",
+            "properties": {
+              "description": "설정된 인서트의 형태에 주 방향(절삭부)을 사용자가 설정할 수 있는 기능",
+              "parent": "process_insert_position_detection"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_masking",
+            "name": "마스킹",
+            "properties": {
+              "description": "위치 검출에 영향이 있는 방해 요소를 마스킹할 수 있는 기능",
+              "parent": "process_insert_position_detection"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_lighting_adjustment",
+            "name": "조명 조건 조절",
+            "properties": {
+              "description": "인서트 이미지를 찍을 때 조명 조건을 조절하는 기능"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_focus_adjustment",
+            "name": "초점 조절",
+            "properties": {
+              "description": "인서트 이미지의 초점을 조절할 수 있도록 높이 조절 설정 기능"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_cb_direction_classification",
+            "name": "C/B 방향 구분",
+            "properties": {
+              "description": "Nose의 주 방향을 결정할 수 있는 각인 영역을 설정하는 기능"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_front_back_classification",
+            "name": "앞/뒷면 구분",
+            "properties": {
+              "description": "양면 인서트에 한하여 앞면, 뒷면 각인을 저장하고 비교하여 구분하는 기능"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_cb_mixture_classification",
+            "name": "C/B 혼입 분류",
+            "properties": {
+              "description": "C/B 영역을 지정하여 혼입을 분류하는 기능"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_nose_r_extraction",
+            "name": "NoseR 혼입 검출",
+            "properties": {
+              "description": "인서트 Nose부의 엣지를 정밀 외곽 설정하고 R값을 추출하는 기능"
+            }
+          },
+          {
+            "type": "Tool",
+            "id": "tool_tracker",
+            "name": "Tracker 툴",
+            "properties": {
+              "type": "이미지 처리 도구",
+              "description": "다각형 폐루프 형태의 영역 설정 기능"
+            }
+          },
+          {
+            "type": "Tool",
+            "id": "tool_pattern_matching",
+            "name": "패턴매칭",
+            "properties": {
+              "type": "이미지 인식 도구"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "component_insert",
+            "name": "인서트",
+            "properties": {
+              "type": "절삭 공구 부품",
+              "description": "포장 혼입 검사 대상 부품"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "component_nose",
+            "name": "Nose",
+            "properties": {
+              "type": "인서트 부품",
+              "description": "인서트의 주 방향을 결정하는 부위"
+            }
+          },
+          {
+            "type": "Product",
+            "id": "product_insert_inspection",
+            "name": "포장혼입검사",
+            "properties": {
+              "type": "검사 프로세스",
+              "description": "인서트의 혼입을 분류하고 검출하는 검사"
+            }
+          }
+        ],
+        "relations": [
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "process_insert_position_detection",
+            "to_id": "process_center_point_setting",
+            "properties": {}
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "process_insert_position_detection",
+            "to_id": "process_main_direction_setting",
+            "properties": {}
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "process_insert_position_detection",
+            "to_id": "process_masking",
+            "properties": {}
+          },
+          {
+            "type": "USES_TOOL",
+            "from_id": "process_insert_position_detection",
+            "to_id": "tool_tracker",
+            "properties": {}
+          },
+          {
+            "type": "USES_TOOL",
+            "from_id": "process_cb_direction_classification",
+            "to_id": "tool_tracker",
+            "properties": {}
+          },
+          {
+            "type": "USES_TOOL",
+            "from_id": "process_insert_position_detection",
+            "to_id": "tool_pattern_matching",
+            "properties": {}
+          },
+          {
+            "type": "INVOLVES_COMPONENT",
+            "from_id": "product_insert_inspection",
+            "to_id": "component_insert",
+            "properties": {}
+          },
+          {
+            "type": "INVOLVES_COMPONENT",
+            "from_id": "product_insert_inspection",
+            "to_id": "component_nose",
+            "properties": {}
+          }
+        ]
+      },
+      "usage": {
+        "input_tokens": 2472,
+        "output_tokens": 1836,
+        "cost_usd": 0.002913
+      },
+      "raw_len": 4414,
+      "topic": "포장혼입검사",
+      "file": "8725987333-혼입_분류.txt"
+    },
+    {
+      "extracted": {
+        "entities": [
+          {
+            "type": "Tool",
+            "id": "tool_recipe_editor",
+            "name": "레시피 에디터",
+            "properties": {
+              "type": "소프트웨어 도구",
+              "description": "CB 방향 구분, 앞/뒷면 구분, C/B혼입 분류, 혼입 NoseR 기능을 수행하는 기존 툴 기반 제작"
+            }
+          },
+          {
+            "type": "Tool",
+            "id": "tool_cognex",
+            "name": "코그넥스",
+            "properties": {
+              "type": "비전 소프트웨어"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_normalization",
+            "name": "Normalization 기능",
+            "properties": {
+              "description": "촬영한 모든 이미지를 normalize하여 패턴 저장 및 검출 가능하게 함"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_masking",
+            "name": "마스킹 기능",
+            "properties": {
+              "description": "패턴 등록 전 검출되는 패턴을 제거"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_pattern_registration",
+            "name": "패턴 등록 기능",
+            "properties": {
+              "description": "폴리곤 상자를 조작하여 검출을 원하는 패턴을 등록"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_function_test",
+            "name": "기능 테스트",
+            "properties": {
+              "description": "레시피 에디터의 Shape을 설정하고 Run 버튼으로 기능 작동 확인"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_recipe_save",
+            "name": "레시피 저장 기능",
+            "properties": {
+              "description": "패턴 등록 후 저장 버튼으로 레시피 저장"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_recipe_load",
+            "name": "레시피 불러오기 기능",
+            "properties": {
+              "description": "저장된 레시피를 불러와 레시피 에디터에 적용하고 기능 테스트 가능"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_front_back_classification",
+            "name": "앞/뒷면 구분",
+            "properties": {
+              "description": "앞으로 구현해야 하는 기능"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_cb_mixing_comparison",
+            "name": "C/B혼입 비교 기능",
+            "properties": {
+              "description": "앞으로 구현해야 하는 기능"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_mixing_noser",
+            "name": "혼입 NoseR",
+            "properties": {
+              "description": "앞으로 구현해야 하는 기능"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "component_recipe_txt",
+            "name": "recipe.txt",
+            "properties": {
+              "type": "레시피 파일",
+              "description": "학습 인서트의 각도, 중심점, 패턴 위치, 인서트 종류, Normalize 여부 등 포함 (추후 Json 형식으로 변경예정)"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "component_temptool_vpp",
+            "name": "TempTool.vpp",
+            "properties": {
+              "type": "코그넥스 툴 파일",
+              "description": "코그넥스로 학습한 툴 파일"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "component_train_image",
+            "name": "trainImage.png",
+            "properties": {
+              "type": "이미지 파일",
+              "description": "코그넥스 툴로 패턴을 등록한 이미지"
+            }
+          },
+          {
+            "type": "Product",
+            "id": "product_packaging_contamination_inspection",
+            "name": "포장혼입검사",
+            "properties": {
+              "type": "검사 시스템",
+              "description": "CB 방향 구분, 앞/뒷면 구분, C/B혼입 분류, 혼입 NoseR 기능을 포함"
+            }
+          }
+        ],
+        "relations": [
+          {
+            "type": "USES_TOOL",
+            "from_id": "process_normalization",
+            "to_id": "tool_recipe_editor",
+            "properties": {}
+          },
+          {
+            "type": "USES_TOOL",
+            "from_id": "process_masking",
+            "to_id": "tool_recipe_editor",
+            "properties": {}
+          },
+          {
+            "type": "USES_TOOL",
+            "from_id": "process_pattern_registration",
+            "to_id": "tool_recipe_editor",
+            "properties": {}
+          },
+          {
+            "type": "USES_TOOL",
+            "from_id": "process_function_test",
+            "to_id": "tool_recipe_editor",
+            "properties": {}
+          },
+          {
+            "type": "USES_TOOL",
+            "from_id": "process_recipe_save",
+            "to_id": "tool_recipe_editor",
+            "properties": {}
+          },
+          {
+            "type": "USES_TOOL",
+            "from_id": "process_recipe_load",
+            "to_id": "tool_recipe_editor",
+            "properties": {}
+          },
+          {
+            "type": "USES_TOOL",
+            "from_id": "process_pattern_registration",
+            "to_id": "tool_cognex",
+            "properties": {}
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "process_recipe_save",
+            "to_id": "process_pattern_registration",
+            "properties": {}
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "tool_recipe_editor",
+            "to_id": "process_normalization",
+            "properties": {}
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "tool_recipe_editor",
+            "to_id": "process_masking",
+            "properties": {}
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "tool_recipe_editor",
+            "to_id": "process_pattern_registration",
+            "properties": {}
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "tool_recipe_editor",
+            "to_id": "process_function_test",
+            "properties": {}
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "tool_recipe_editor",
+            "to_id": "process_recipe_save",
+            "properties": {}
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "tool_recipe_editor",
+            "to_id": "process_recipe_load",
+            "properties": {}
+          },
+          {
+            "type": "INVOLVED_IN",
+            "from_id": "product_packaging_contamination_inspection",
+            "to_id": "process_front_back_classification",
+            "properties": {}
+          },
+          {
+            "type": "INVOLVED_IN",
+            "from_id": "product_packaging_contamination_inspection",
+            "to_id": "process_cb_mixing_comparison",
+            "properties": {}
+          },
+          {
+            "type": "INVOLVED_IN",
+            "from_id": "product_packaging_contamination_inspection",
+            "to_id": "process_mixing_noser",
+            "properties": {}
+          }
+        ]
+      },
+      "usage": {
+        "input_tokens": 1635,
+        "output_tokens": 2278,
+        "cost_usd": 0.003256
+      },
+      "raw_len": 5559,
+      "topic": "포장혼입검사",
+      "file": "8726085635-레시피_에디터_제작_(CB_방향_구분).txt"
+    },
+    {
+      "extracted": {
+        "entities": [
+          {
+            "type": "Process",
+            "id": "process_cb_direction_classification",
+            "name": "C/B 방향 구분",
+            "properties": {
+              "description": "인서트의 방향이 원하는 방향인지 확인하고 방향을 알 수 있는 특징을 학습"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_front_back_classification",
+            "name": "앞/뒷면 구분",
+            "properties": {
+              "description": "현재 인서트가 앞면인지 뒷면인지 확인하고 판단할 수 있는 특징을 학습"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_cb_mixture_comparison",
+            "name": "C/B 혼입 비교",
+            "properties": {
+              "description": "인서트의 C/B 모양이 원하는 모양인지 확인하고 혼입되는 C/B 모양을 판단"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_noseR_measurement",
+            "name": "NoseR 측정",
+            "properties": {
+              "description": "인서트의 NoseR을 측정하고 각 코너의 NoseR을 계산"
+            }
+          },
+          {
+            "type": "Tool",
+            "id": "tool_cb_direction_learning",
+            "name": "C/B 방향 Tool",
+            "properties": {
+              "type": "학습 도구"
+            }
+          },
+          {
+            "type": "Tool",
+            "id": "tool_front_back_learning",
+            "name": "앞/뒷면 Tool",
+            "properties": {
+              "type": "학습 도구"
+            }
+          },
+          {
+            "type": "Tool",
+            "id": "tool_cb_mixture_learning",
+            "name": "C/B 혼입 Tool",
+            "properties": {
+              "type": "학습 도구"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "component_insert",
+            "name": "인서트",
+            "properties": {
+              "type": "광학계"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "component_noseR",
+            "name": "NoseR",
+            "properties": {
+              "type": "인서트 부품",
+              "description": "인서트의 측정 대상 영역"
+            }
+          }
+        ],
+        "relations": [
+          {
+            "type": "USES_TOOL",
+            "from_id": "process_cb_direction_classification",
+            "to_id": "tool_cb_direction_learning",
+            "properties": {}
+          },
+          {
+            "type": "USES_TOOL",
+            "from_id": "process_front_back_classification",
+            "to_id": "tool_front_back_learning",
+            "properties": {}
+          },
+          {
+            "type": "USES_TOOL",
+            "from_id": "process_cb_mixture_comparison",
+            "to_id": "tool_cb_mixture_learning",
+            "properties": {}
+          },
+          {
+            "type": "INVOLVES_COMPONENT",
+            "from_id": "process_cb_direction_classification",
+            "to_id": "component_insert",
+            "properties": {}
+          },
+          {
+            "type": "INVOLVES_COMPONENT",
+            "from_id": "process_front_back_classification",
+            "to_id": "component_insert",
+            "properties": {}
+          },
+          {
+            "type": "INVOLVES_COMPONENT",
+            "from_id": "process_cb_mixture_comparison",
+            "to_id": "component_insert",
+            "properties": {}
+          },
+          {
+            "type": "INVOLVES_COMPONENT",
+            "from_id": "process_noseR_measurement",
+            "to_id": "component_noseR",
+            "properties": {}
+          }
+        ]
+      },
+      "usage": {
+        "input_tokens": 1651,
+        "output_tokens": 1123,
+        "cost_usd": 0.001816
+      },
+      "raw_len": 2795,
+      "topic": "포장혼입검사",
+      "file": "8743878914-혼입분류_기능_정리.txt"
+    },
+    {
+      "extracted": {
+        "entities": [
+          {
+            "type": "Customer",
+            "id": "customer_korean_metallurgy",
+            "name": "한국 야금",
+            "properties": {
+              "country": "한국"
+            }
+          },
+          {
+            "type": "Equipment",
+            "id": "equipment_korloy_packaging_6",
+            "name": "Korloy 포장기 #6(#25-3)",
+            "properties": {
+              "type": "포장기",
+              "customer": "한국 야금"
+            }
+          },
+          {
+            "type": "Product",
+            "id": "product_c_type_glossy",
+            "name": "C형 경면 제품",
+            "properties": {
+              "type": "경면 제품",
+              "material": "금속"
+            }
+          },
+          {
+            "type": "Product",
+            "id": "product_w_type_glossy",
+            "name": "W형 경면 제품",
+            "properties": {
+              "type": "경면 제품",
+              "material": "금속"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "component_camera_aca2500",
+            "name": "acA2500-14gm",
+            "properties": {
+              "type": "카메라",
+              "model": "acA2500-14gm"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "component_lens_m2514",
+            "name": "M2514-MP2",
+            "properties": {
+              "type": "렌즈",
+              "model": "M2514-MP2"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "component_domelight100",
+            "name": "DOMELIGHT100",
+            "properties": {
+              "type": "조명",
+              "model": "DOMELIGHT100"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "component_nose_r",
+            "name": "Nose-r부",
+            "properties": {
+              "type": "부품",
+              "spec": "측정 대상 부위"
+            }
+          },
+          {
+            "type": "Issue",
+            "id": "issue_brightness_asymmetry",
+            "name": "혼입검사 특정 제품 밝기 비대칭",
+            "properties": {
+              "title": "C, W형 경면 제품 이미지 한쪽 부분 비정상적 밝기 시인",
+              "date": "문서 작성일",
+              "status": "분석 완료",
+              "symptom": "한쪽 부분이 비정상적으로 밝게 시인되어 Nose-r부의 치수가 상이하게 측정되는 현상",
+              "root_cause": "광축 중심과 조명 중심의 불일치, 조명 높이 부적절"
+            }
+          },
+          {
+            "type": "Resolution",
+            "id": "resolution_optical_axis_alignment",
+            "name": "광축 및 조명 정렬 조치",
+            "properties": {
+              "description": "광축 중심과 조명의 중심을 상하좌우 ±1mm 이내로 세팅, 컨베이어 벨트 기준 조명 높이 10mm 수준으로 세팅",
+              "category": "장비 설정",
+              "effectiveness": "중심 기준 ±1mm 내에서 C, W형 경면 제품 밝기 비대칭 개선 가능"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_mixing_inspection",
+            "name": "혼입검사",
+            "properties": {
+              "description": "포장기 혼입검사부에서 제품 품질 검사"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_optical_system_setup",
+            "name": "광학계 초기 세팅",
+            "properties": {
+              "description": "카메라, 렌즈, 조명 등 광학계 구성 요소의 초기 설정",
+              "parent": "혼입검사"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_phenomenon_reproduction",
+            "name": "현상 재현 및 원인 분석",
+            "properties": {
+              "description": "조명 거리, 제품 위치 등을 조정하여 현상 재현 및 원인 분석 테스트",
+              "parent": "혼입검사"
+            }
+          }
+        ],
+        "relations": [
+          {
+            "type": "OWNS",
+            "from_id": "customer_korean_metallurgy",
+            "to_id": "equipment_korloy_packaging_6",
+            "properties": {}
+          },
+          {
+            "type": "HAS_ISSUE",
+            "from_id": "equipment_korloy_packaging_6",
+            "to_id": "issue_brightness_asymmetry",
+            "properties": {}
+          },
+          {
+            "type": "INVOLVED_IN",
+            "from_id": "product_c_type_glossy",
+            "to_id": "issue_brightness_asymmetry",
+            "properties": {}
+          },
+          {
+            "type": "INVOLVED_IN",
+            "from_id": "product_w_type_glossy",
+            "to_id": "issue_brightness_asymmetry",
+            "properties": {}
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "equipment_korloy_packaging_6",
+            "to_id": "component_camera_aca2500",
+            "properties": {}
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "equipment_korloy_packaging_6",
+            "to_id": "component_lens_m2514",
+            "properties": {}
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "equipment_korloy_packaging_6",
+            "to_id": "component_domelight100",
+            "properties": {}
+          },
+          {
+            "type": "INVOLVES_COMPONENT",
+            "from_id": "issue_brightness_asymmetry",
+            "to_id": "component_nose_r",
+            "properties": {}
+          },
+          {
+            "type": "INVOLVES_COMPONENT",
+            "from_id": "issue_brightness_asymmetry",
+            "to_id": "component_camera_aca2500",
+            "properties": {}
+          },
+          {
+            "type": "INVOLVES_COMPONENT",
+            "from_id": "issue_brightness_asymmetry",
+            "to_id": "component_lens_m2514",
+            "properties": {}
+          },
+          {
+            "type": "INVOLVES_COMPONENT",
+            "from_id": "issue_brightness_asymmetry",
+            "to_id": "component_domelight100",
+            "properties": {}
+          },
+          {
+            "type": "RESOLVED_BY",
+            "from_id": "issue_brightness_asymmetry",
+            "to_id": "resolution_optical_axis_alignment",
+            "properties": {}
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "process_mixing_inspection",
+            "to_id": "process_optical_system_setup",
+            "properties": {}
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "process_mixing_inspection",
+            "to_id": "process_phenomenon_reproduction",
+            "properties": {}
+          }
+        ]
+      },
+      "usage": {
+        "input_tokens": 2027,
+        "output_tokens": 2097,
+        "cost_usd": 0.003128
+      },
+      "raw_len": 5077,
+      "topic": "포장혼입검사",
+      "file": "9485484034-Korloy_포장기_#6(#25-3)_혼입_검사_특정_제품_밝기_비대칭.txt"
+    },
+    {
+      "extracted": {
+        "entities": [
+          {
+            "type": "Process",
+            "id": "process_image_acquisition",
+            "name": "촬상",
+            "properties": {
+              "description": "폴더 내 이미지를 화면에 표시",
+              "step": 1
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_insert_setup",
+            "name": "형번 설정",
+            "properties": {
+              "description": "PMTool과 동일하게 인서트를 잡고 설정",
+              "step": 2
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_location_inspection",
+            "name": "위치 검사",
+            "properties": {
+              "description": "물체를 찾는 검사 프로세스",
+              "step": 3
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_mask_setting",
+            "name": "마스크 설정",
+            "properties": {
+              "description": "마스크를 그려 계산에서 제외할 영역 지정",
+              "step": 4
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_direction_setting",
+            "name": "방향 설정",
+            "properties": {
+              "description": "새로운 ROI를 검출할 위치에 배치",
+              "step": 5
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_nose_r_setting",
+            "name": "노즈 R 설정",
+            "properties": {
+              "description": "U 형태의 ROI를 노즈 R 부분에 맞추기",
+              "step": 6
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_detection_result",
+            "name": "검출 결과",
+            "properties": {
+              "description": "CB 위치와 노즈R 크기를 자동으로 측정",
+              "step": 7
+            }
+          },
+          {
+            "type": "Tool",
+            "id": "tool_pmtool",
+            "name": "PMTool",
+            "properties": {
+              "type": "pattern_matching_tool"
+            }
+          },
+          {
+            "type": "Tool",
+            "id": "tool_cognex_cpp",
+            "name": "코그넥스 cpp",
+            "properties": {
+              "type": "image_processing_library"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "component_insert",
+            "name": "인서트",
+            "properties": {
+              "type": "part"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "component_cb",
+            "name": "칩브레이커(CB)",
+            "properties": {
+              "type": "chip_breaker",
+              "spec": "영역의 이미지 유사도 검사"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "component_nose_r",
+            "name": "노즈 반경(Nose R)",
+            "properties": {
+              "type": "radius",
+              "spec": "노즈 부분의 반경 측정"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_center_point_setup",
+            "name": "중심점 설정",
+            "properties": {
+              "description": "훈련 영역의 중심 좌표를 계산하여 기준 원점 설정",
+              "parent": "process_location_inspection"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_inspection_condition_setup",
+            "name": "검사 조건 세팅",
+            "properties": {
+              "description": "-180도부터 +180도까지 모든 방향에서 제품을 찾도록 탐색",
+              "parent": "process_location_inspection"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_pattern_learning",
+            "name": "패턴 학습",
+            "properties": {
+              "description": "설정된 영역과 이미지를 바탕으로 제품의 특징을 학습",
+              "parent": "process_location_inspection"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_inspection_execution",
+            "name": "검사 실행",
+            "properties": {
+              "description": "학습된 패턴을 이용해 현재 이미지에서 객체를 찾기",
+              "parent": "process_location_inspection"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_mask_verification",
+            "name": "검증",
+            "properties": {
+              "description": "훈련 이미지가 정상적으로 등록되었는지 확인",
+              "parent": "process_mask_setting"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_mask_editor_call",
+            "name": "편집창 호출",
+            "properties": {
+              "description": "마스크 편집창을 띄워 사용자가 마스크 영역을 직접 그리기",
+              "parent": "process_mask_setting"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_mask_apply",
+            "name": "마스크 적용 및 재검사",
+            "properties": {
+              "description": "결과 마스크를 패턴 도구에 적용하고 위치 재검사",
+              "parent": "process_mask_setting"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_direction_initialization",
+            "name": "초기화",
+            "properties": {
+              "description": "새로운 패턴 도구에 현재 이미지를 입력",
+              "parent": "process_direction_setting"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_roi_setting",
+            "name": "ROI 설정",
+            "properties": {
+              "description": "화면의 특정 좌표를 중심으로 사각형을 배치",
+              "parent": "process_direction_setting"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_feature_point_search",
+            "name": "특징점 및 방향 탐색",
+            "properties": {
+              "description": "코너 찾기 도구를 이용해 특징점의 좌표와 방향 계산",
+              "parent": "process_detection_result"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_image_rotation",
+            "name": "회전",
+            "properties": {
+              "description": "이미지를 회전시켜 제품이 수직 방향을 바라보도록 정렬",
+              "parent": "process_detection_result"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_accurate_direction_finding",
+            "name": "가장 정확한 방향 찾기",
+            "properties": {
+              "description": "픽셀 차이를 계산하여 가장 오차가 적은 방향 찾기",
+              "parent": "process_detection_result"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_fine_calibration",
+            "name": "정밀 보정 및 저장",
+            "properties": {
+              "description": "폴리곤 영역을 새 좌표에 맞게 변환하고 TrainImage.png로 저장",
+              "parent": "process_detection_result"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_circle_tool_init",
+            "name": "도구 초기화",
+            "properties": {
+              "description": "원/원호 찾기 도구에 현재 이미지를 입력하고 ROI를 셋팅",
+              "parent": "process_nose_r_setting"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_caliper_setup",
+            "name": "캘리퍼 세팅",
+            "properties": {
+              "description": "원의 안쪽 방향으로 경계선을 찾도록 설정",
+              "parent": "process_nose_r_setting"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_location_reconfirm",
+            "name": "위치 재확인 및 정렬 계산",
+            "properties": {
+              "description": "현재 이미지에서 제품의 위치와 각도를 재검사",
+              "parent": "process_detection_result"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_front_back_direction_judgment",
+            "name": "앞/뒷면 및 정확한 방향 판별",
+            "properties": {
+              "description": "대칭성을 이용해 저장된 패턴 이미지와 비교",
+              "parent": "process_detection_result"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_precise_corner_search",
+            "name": "정밀 코너 탐색",
+            "properties": {
+              "description": "가장 뾰족한 기준 코너를 찾아 기준점 설정",
+              "parent": "process_detection_result"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_multiple_nose_r_measurement",
+            "name": "다중 Nose R 측정",
+            "properties": {
+              "description": "제품의 모든 코너 반경을 차례대로 측정",
+              "parent": "process_detection_result"
+            }
+          }
+        ],
+        "relations": [
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "process_location_inspection",
+            "to_id": "process_center_point_setup",
+            "properties": {}
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "process_location_inspection",
+            "to_id": "process_inspection_condition_setup",
+            "properties": {}
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "process_location_inspection",
+            "to_id": "process_pattern_learning",
+            "properties": {}
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "process_location_inspection",
+            "to_id": "process_inspection_execution",
+            "properties": {}
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "process_mask_setting",
+            "to_id": "process_mask_verification",
+            "properties": {}
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "process_mask_setting",
+            "to_id": "process_mask_editor_call",
+            "properties": {}
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "process_mask_setting",
+            "to_id": "process_mask_apply",
+            "properties": {}
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "process_direction_setting",
+            "to_id": "process_direction_initialization",
+            "properties": {}
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "process_direction_setting",
+            "to_id": "process_roi_setting",
+            "properties": {}
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "process_detection_result",
+            "to_id": "process_location_reconfirm",
+            "properties": {}
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "process_detection_result",
+            "to_id": "process_front_back_direction_judgment",
+            "properties": {}
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "process_detection_result",
+            "to_id": "process_precise_corner_search",
+            "properties": {}
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "process_detection_result",
+            "to_id": "process_multiple_nose_r_measurement",
+            "properties": {}
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "process_nose_r_setting",
+            "to_id": "process_circle_tool_init",
+            "properties": {}
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "process_nose_r_setting",
+            "to_id": "process_caliper_setup",
+            "properties": {}
+          },
+          {
+            "type": "USES_TOOL",
+            "from_id": "process_location_inspection",
+            "to_id": "tool_pmtool",
+            "properties": {}
+          },
+          {
+            "type": "USES_TOOL",
+            "from_id": "process_detection_result",
+            "to_id": "tool_cognex_cpp",
+            "properties": {}
+          },
+          {
+            "type": "INVOLVES_COMPONENT",
+            "from_id": "process_insert_setup",
+            "to_id": "component_insert",
+            "properties": {}
+          },
+          {
+            "type": "INVOLVES_COMPONENT",
+            "from_id": "process_detection_result",
+            "to_id": "component_cb",
+            "properties": {}
+          },
+          {
+            "type": "INVOLVES_COMPONENT",
+            "from_id": "process_nose_r_setting",
+            "to_id": "component_nose_r",
+            "properties": {}
+          }
+        ]
+      },
+      "usage": {
+        "input_tokens": 4339,
+        "output_tokens": 3873,
+        "cost_usd": 0.005926
+      },
+      "raw_len": 9850,
+      "topic": "포장혼입검사",
+      "file": "9596731397-혼입분류_정리.txt"
+    },
+    {
+      "extracted": {
+        "entities": [
+          {
+            "type": "Equipment",
+            "id": "press_elevator",
+            "name": "프레스 엘리베이터",
+            "properties": {
+              "type": "프레스",
+              "spm": 15
+            }
+          },
+          {
+            "type": "Equipment",
+            "id": "sintering_plate",
+            "name": "소결 플레이트",
+            "properties": {
+              "type": "소결",
+              "spm": 45
+            }
+          },
+          {
+            "type": "Equipment",
+            "id": "pvd_loading",
+            "name": "PVD - 로딩",
+            "properties": {
+              "type": "PVD",
+              "spm": 40
+            }
+          },
+          {
+            "type": "Equipment",
+            "id": "pvd_unloading",
+            "name": "PVD - 언로딩",
+            "properties": {
+              "type": "PVD",
+              "spm": 40
+            }
+          },
+          {
+            "type": "Equipment",
+            "id": "inspection_loading",
+            "name": "검사기 로딩",
+            "properties": {
+              "type": "검사기",
+              "spm": 10
+            }
+          },
+          {
+            "type": "Equipment",
+            "id": "inspection_unloading",
+            "name": "검사기 언로딩",
+            "properties": {
+              "type": "검사기",
+              "spm": 10
+            }
+          },
+          {
+            "type": "Equipment",
+            "id": "inspection_conveyor",
+            "name": "검사 컨베이어",
+            "properties": {
+              "type": "컨베이어",
+              "spm": 10
+            }
+          },
+          {
+            "type": "Equipment",
+            "id": "packaging_machine",
+            "name": "포장기",
+            "properties": {
+              "type": "포장기",
+              "spm": 55
+            }
+          },
+          {
+            "type": "Component",
+            "id": "tool_die",
+            "name": "금형",
+            "properties": {
+              "type": "금형"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "pallet_kp3",
+            "name": "팔레트 KP3",
+            "properties": {
+              "type": "팔레트",
+              "model": "KP3",
+              "spec": "182개"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "loading_rod",
+            "name": "로딩 막대",
+            "properties": {
+              "type": "막대",
+              "spec": "30개"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "unloading_rod",
+            "name": "언로딩 막대",
+            "properties": {
+              "type": "막대",
+              "spec": "30개"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "plate",
+            "name": "플레이트",
+            "properties": {
+              "type": "플레이트",
+              "spec": "100개"
+            }
+          },
+          {
+            "type": "Customer",
+            "id": "korean_metallurgy",
+            "name": "한국야금",
+            "properties": {
+              "country": "한국"
+            }
+          }
+        ],
+        "relations": [
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "press_elevator",
+            "to_id": "tool_die",
+            "properties": {}
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "press_elevator",
+            "to_id": "plate",
+            "properties": {}
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "sintering_plate",
+            "to_id": "plate",
+            "properties": {}
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "pvd_loading",
+            "to_id": "loading_rod",
+            "properties": {}
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "pvd_loading",
+            "to_id": "pallet_kp3",
+            "properties": {}
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "pvd_unloading",
+            "to_id": "unloading_rod",
+            "properties": {}
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "pvd_unloading",
+            "to_id": "pallet_kp3",
+            "properties": {}
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "inspection_loading",
+            "to_id": "pallet_kp3",
+            "properties": {}
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "inspection_unloading",
+            "to_id": "pallet_kp3",
+            "properties": {}
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "packaging_machine",
+            "to_id": "pallet_kp3",
+            "properties": {}
+          }
+        ]
+      },
+      "usage": {
+        "input_tokens": 1760,
+        "output_tokens": 1446,
+        "cost_usd": 0.002247
+      },
+      "raw_len": 3681,
+      "topic": "장비물류",
+      "file": "8316485870-장비별_물류_교체시간.txt"
+    },
+    {
+      "extracted": {
+        "entities": [
+          {
+            "type": "Equipment",
+            "id": "equipment_head_atc",
+            "name": "헤드 ATC",
+            "properties": {
+              "type": "자동공구교환기",
+              "manual": "헤드 ATC 정리 매뉴얼"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "component_sol_cable",
+            "name": "SOL 케이블",
+            "properties": {
+              "type": "케이블",
+              "description": "SOL 케이블"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "component_pneumatic_monitor_cable",
+            "name": "공압 모니터 케이블",
+            "properties": {
+              "type": "케이블",
+              "description": "공압 모니터 연결 케이블"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "component_grip_ungrip",
+            "name": "GRIP UNGRIP",
+            "properties": {
+              "type": "부품",
+              "model": "MC-16NL-3"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "component_interface_terminal",
+            "name": "인터페이스 단자대",
+            "properties": {
+              "type": "단자대"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "component_econ",
+            "name": "E-CON",
+            "properties": {
+              "type": "커넥터",
+              "description": "IO맵 배선 커넥터"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "component_atc_flat_cable",
+            "name": "ATC 플랫 케이블",
+            "properties": {
+              "type": "케이블",
+              "description": "상부 제작시 정리되는 케이블"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "component_cable_tie",
+            "name": "케이블 타이",
+            "properties": {
+              "type": "정리용품"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_sol_cable_fastening",
+            "name": "SOL 케이블 체결",
+            "properties": {
+              "description": "SOL 케이블을 넘버링 후 체결"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_grip_ungrip_fastening",
+            "name": "GRIP UNGRIP 체결",
+            "properties": {
+              "description": "공압 모니터에 연결되는 GRIP UNGRIP 케이블을 알맞은 위치에 체결"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_cable_organization",
+            "name": "케이블 정리",
+            "properties": {
+              "description": "케이블을 규정에 따라 정리"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_econ_wiring",
+            "name": "E-CON 배선",
+            "properties": {
+              "description": "IO맵에서 ATC 부분 확인 후 순서에 맞게 E-CON을 배선"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_inspection",
+            "name": "검수",
+            "properties": {
+              "description": "제작 완료 후 검수"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_econ_connection_inspection",
+            "name": "E-CON 체결상태 검수",
+            "properties": {
+              "description": "알맞은 크기의 E-CON 사용 여부 및 탈락 여부 확인"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_cable_organization_inspection",
+            "name": "케이블 정리상태 검수",
+            "properties": {
+              "description": "케이블이 깔끔하게 정리되었는지 확인"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_cable_tie_inspection",
+            "name": "케이블 타이 검수",
+            "properties": {
+              "description": "케이블 타이의 날카로운 부분 제거 확인"
+            }
+          },
+          {
+            "type": "Person",
+            "id": "person_control_design_team",
+            "name": "제어설계팀",
+            "properties": {
+              "dept": "제어설계팀",
+              "role": "기술문서 작성"
+            }
+          }
+        ],
+        "relations": [
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "equipment_head_atc",
+            "to_id": "component_sol_cable"
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "equipment_head_atc",
+            "to_id": "component_pneumatic_monitor_cable"
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "equipment_head_atc",
+            "to_id": "component_grip_ungrip"
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "equipment_head_atc",
+            "to_id": "component_interface_terminal"
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "equipment_head_atc",
+            "to_id": "component_econ"
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "equipment_head_atc",
+            "to_id": "component_atc_flat_cable"
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "equipment_head_atc",
+            "to_id": "component_cable_tie"
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "process_inspection",
+            "to_id": "process_econ_connection_inspection"
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "process_inspection",
+            "to_id": "process_cable_organization_inspection"
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "process_inspection",
+            "to_id": "process_cable_tie_inspection"
+          },
+          {
+            "type": "INVOLVES_COMPONENT",
+            "from_id": "process_sol_cable_fastening",
+            "to_id": "component_sol_cable"
+          },
+          {
+            "type": "INVOLVES_COMPONENT",
+            "from_id": "process_grip_ungrip_fastening",
+            "to_id": "component_grip_ungrip"
+          },
+          {
+            "type": "INVOLVES_COMPONENT",
+            "from_id": "process_cable_organization",
+            "to_id": "component_atc_flat_cable"
+          },
+          {
+            "type": "INVOLVES_COMPONENT",
+            "from_id": "process_econ_wiring",
+            "to_id": "component_econ"
+          },
+          {
+            "type": "MAINTAINS",
+            "from_id": "person_control_design_team",
+            "to_id": "process_sol_cable_fastening"
+          },
+          {
+            "type": "MAINTAINS",
+            "from_id": "person_control_design_team",
+            "to_id": "process_grip_ungrip_fastening"
+          },
+          {
+            "type": "MAINTAINS",
+            "from_id": "person_control_design_team",
+            "to_id": "process_cable_organization"
+          },
+          {
+            "type": "MAINTAINS",
+            "from_id": "person_control_design_team",
+            "to_id": "process_econ_wiring"
+          }
+        ]
+      },
+      "usage": {
+        "input_tokens": 1396,
+        "output_tokens": 2220,
+        "cost_usd": 0.003124
+      },
+      "raw_len": 5537,
+      "topic": "장비물류",
+      "file": "8415117313-헤드_ATC_정리_매뉴얼.txt"
+    },
+    {
+      "extracted": {
+        "entities": [
+          {
+            "type": "Equipment",
+            "id": "agv_system",
+            "name": "AGV",
+            "properties": {
+              "type": "자동운반시스템",
+              "description": "물류 운반 장비"
+            }
+          },
+          {
+            "type": "Equipment",
+            "id": "elevator_l",
+            "name": "Elevator_L",
+            "properties": {
+              "type": "엘리베이터",
+              "description": "AGV용 엘리베이터"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "rear_plate_sensor",
+            "name": "플레이트 후면 감지 센서",
+            "properties": {
+              "type": "센서",
+              "spec": "일정시간 미감지 시 운전 자동 정지"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "plate_presence_sensor",
+            "name": "플레이트 유무 감지 센서",
+            "properties": {
+              "type": "센서",
+              "spec": "플레이트 감지"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "clamp",
+            "name": "클램프",
+            "properties": {
+              "type": "고정장치",
+              "description": "엘리베이터 내 플레이트 고정"
+            }
+          },
+          {
+            "type": "Product",
+            "id": "plate",
+            "name": "플레이트",
+            "properties": {
+              "type": "제품",
+              "description": "AGV 운반 대상"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "plate_supply",
+            "name": "플레이트 공급",
+            "properties": {
+              "description": "엘리베이터 공급 위치에서 플레이트 제공"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "plate_discharge",
+            "name": "플레이트 취출",
+            "properties": {
+              "description": "엘리베이터 취출 위치에서 플레이트 반출"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "sensor_positioning",
+            "name": "센서 위치 설정",
+            "properties": {
+              "description": "감지 센서 위치, 감지거리, 마스킹 확인"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "origin_setting",
+            "name": "원점설정",
+            "properties": {
+              "description": "엘리베이터 원점 위치 설정"
+            }
+          },
+          {
+            "type": "Issue",
+            "id": "sensor_malfunction_rear",
+            "name": "플레이트 후면 센서 이상",
+            "properties": {
+              "title": "센서 이상으로 인한 미감지",
+              "symptom": "위치 틀어져서 기본적으로 미감지 상태일경우 동작 불가능",
+              "status": "미해결"
+            }
+          },
+          {
+            "type": "Issue",
+            "id": "sensor_malfunction_presence",
+            "name": "플레이트 유무 센서 이상",
+            "properties": {
+              "title": "센서 위치 및 감지거리 문제",
+              "symptom": "반사되거나 빛을 막는 위치에서 감지 오류",
+              "status": "미해결"
+            }
+          },
+          {
+            "type": "Issue",
+            "id": "clamp_interference",
+            "name": "클램프 간섭 문제",
+            "properties": {
+              "title": "클램프가 플레이트 측면 바닥보다 내려오는 현상",
+              "symptom": "2장씩 집어가는 상황 발생",
+              "status": "미해결"
+            }
+          },
+          {
+            "type": "Resolution",
+            "id": "sensor_distance_adjustment",
+            "name": "센서 감지거리 및 마스킹 조정",
+            "properties": {
+              "description": "거리와 마스킹 조정으로 정확한 감지 위치 확보",
+              "category": "조정"
+            }
+          },
+          {
+            "type": "Resolution",
+            "id": "clamp_offset_control",
+            "name": "클램프 오프셋 제어",
+            "properties": {
+              "description": "CLAMP_OFFSET으로 클램프 위치 조정",
+              "category": "파라미터 설정"
+            }
+          },
+          {
+            "type": "Tool",
+            "id": "parameter_config",
+            "name": "파라미터 설정",
+            "properties": {
+              "type": "설정도구",
+              "description": "AGV 엘리베이터 파라미터 구성"
+            }
+          }
+        ],
+        "relations": [
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "elevator_l",
+            "to_id": "rear_plate_sensor",
+            "properties": {}
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "elevator_l",
+            "to_id": "plate_presence_sensor",
+            "properties": {}
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "elevator_l",
+            "to_id": "clamp",
+            "properties": {}
+          },
+          {
+            "type": "HAS_ISSUE",
+            "from_id": "elevator_l",
+            "to_id": "sensor_malfunction_rear",
+            "properties": {}
+          },
+          {
+            "type": "HAS_ISSUE",
+            "from_id": "elevator_l",
+            "to_id": "sensor_malfunction_presence",
+            "properties": {}
+          },
+          {
+            "type": "HAS_ISSUE",
+            "from_id": "elevator_l",
+            "to_id": "clamp_interference",
+            "properties": {}
+          },
+          {
+            "type": "INVOLVES_COMPONENT",
+            "from_id": "sensor_malfunction_rear",
+            "to_id": "rear_plate_sensor",
+            "properties": {}
+          },
+          {
+            "type": "INVOLVES_COMPONENT",
+            "from_id": "sensor_malfunction_presence",
+            "to_id": "plate_presence_sensor",
+            "properties": {}
+          },
+          {
+            "type": "INVOLVES_COMPONENT",
+            "from_id": "clamp_interference",
+            "to_id": "clamp",
+            "properties": {}
+          },
+          {
+            "type": "RESOLVED_BY",
+            "from_id": "sensor_malfunction_rear",
+            "to_id": "sensor_distance_adjustment",
+            "properties": {}
+          },
+          {
+            "type": "RESOLVED_BY",
+            "from_id": "sensor_malfunction_presence",
+            "to_id": "sensor_distance_adjustment",
+            "properties": {}
+          },
+          {
+            "type": "RESOLVED_BY",
+            "from_id": "clamp_interference",
+            "to_id": "clamp_offset_control",
+            "properties": {}
+          },
+          {
+            "type": "INVOLVED_IN",
+            "from_id": "plate",
+            "to_id": "sensor_malfunction_rear",
+            "properties": {}
+          },
+          {
+            "type": "INVOLVED_IN",
+            "from_id": "plate",
+            "to_id": "sensor_malfunction_presence",
+            "properties": {}
+          },
+          {
+            "type": "INVOLVED_IN",
+            "from_id": "plate",
+            "to_id": "clamp_interference",
+            "properties": {}
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "plate_supply",
+            "to_id": "origin_setting",
+            "properties": {}
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "plate_discharge",
+            "to_id": "origin_setting",
+            "properties": {}
+          },
+          {
+            "type": "USES_TOOL",
+            "from_id": "origin_setting",
+            "to_id": "parameter_config",
+            "properties": {}
+          },
+          {
+            "type": "USES_TOOL",
+            "from_id": "sensor_positioning",
+            "to_id": "parameter_config",
+            "properties": {}
+          }
+        ]
+      },
+      "usage": {
+        "input_tokens": 2234,
+        "output_tokens": 2360,
+        "cost_usd": 0.003509
+      },
+      "raw_len": 5819,
+      "topic": "장비물류",
+      "file": "8435892472-AGV_물류.txt"
+    },
+    {
+      "topic": "장비물류",
+      "file": "8517419053-신규_물류_개발건_이슈.txt",
+      "error": "Expecting ',' delimiter: line 420 column 6 (char 9608)"
+    },
+    {
+      "extracted": {
+        "entities": [
+          {
+            "type": "Customer",
+            "id": "customer_kyocera",
+            "name": "교세라",
+            "properties": {
+              "country": "Japan"
+            }
+          },
+          {
+            "type": "Equipment",
+            "id": "equipment_kyocera_handler",
+            "name": "교세라 핸들러",
+            "properties": {
+              "type": "핸들러",
+              "customer": "교세라"
+            }
+          },
+          {
+            "type": "Equipment",
+            "id": "equipment_grinder",
+            "name": "연삭기",
+            "properties": {
+              "type": "연삭기",
+              "customer": "교세라"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "component_central_gear",
+            "name": "중앙기어",
+            "properties": {
+              "type": "기어",
+              "equipment": "연삭기"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "component_outer_gear",
+            "name": "외측기어",
+            "properties": {
+              "type": "기어",
+              "equipment": "연삭기"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "component_carrier",
+            "name": "캐리어",
+            "properties": {
+              "type": "부품",
+              "equipment": "연삭기"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "component_wheel",
+            "name": "상하휠",
+            "properties": {
+              "type": "휠",
+              "equipment": "연삭기"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "component_vision_lower",
+            "name": "하부비전",
+            "properties": {
+              "type": "비전 시스템",
+              "equipment": "연삭기"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "component_pallet",
+            "name": "팔레트",
+            "properties": {
+              "type": "부품"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "component_handler_door",
+            "name": "핸들러 도어",
+            "properties": {
+              "type": "도어",
+              "equipment": "교세라 핸들러"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_material_supply",
+            "name": "공급부",
+            "properties": {
+              "description": "적재소에서 작업위치로 팔레트 투입"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_loading_to_work",
+            "name": "적재소 → 작업위치 이동",
+            "properties": {
+              "description": "팔레트를 작업위치로 이동"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_work_to_unload",
+            "name": "작업위치 → 취출부 이동",
+            "properties": {
+              "description": "작업 완료 후 취출부로 이동"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_unload",
+            "name": "취출부",
+            "properties": {
+              "description": "팔레트 배출"
+            }
+          },
+          {
+            "type": "Issue",
+            "id": "issue_door_function",
+            "title": "핸들러 도어 기능 사양",
+            "properties": {
+              "status": "검토중",
+              "concern": "제대로 동작할지, 예외사항, 부족한 부분"
+            }
+          },
+          {
+            "type": "Issue",
+            "id": "issue_interference",
+            "title": "기구 간섭",
+            "properties": {
+              "status": "검토중",
+              "concern": "작업 동선, 패스라인, 기구 간섭"
+            }
+          },
+          {
+            "type": "Issue",
+            "id": "issue_tolerance",
+            "title": "가공공차 및 부자재 오차",
+            "properties": {
+              "status": "검토중",
+              "concern": "세팅 가능 여부, 가공공차, 부자재 오차범위 유지"
+            }
+          },
+          {
+            "type": "Issue",
+            "id": "issue_maintenance",
+            "title": "유지보수 및 접근성",
+            "properties": {
+              "status": "검토중",
+              "concern": "보수 접근성, 작업 공간, 내구성"
+            }
+          },
+          {
+            "type": "Issue",
+            "id": "issue_cost",
+            "title": "비용 검토",
+            "properties": {
+              "status": "검토중",
+              "concern": "자재비, 인건비, 물품조달 용이성"
+            }
+          }
+        ],
+        "relations": [
+          {
+            "type": "OWNS",
+            "from_id": "customer_kyocera",
+            "to_id": "equipment_kyocera_handler"
+          },
+          {
+            "type": "OWNS",
+            "from_id": "customer_kyocera",
+            "to_id": "equipment_grinder"
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "equipment_grinder",
+            "to_id": "component_central_gear"
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "equipment_grinder",
+            "to_id": "component_outer_gear"
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "equipment_grinder",
+            "to_id": "component_carrier"
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "equipment_grinder",
+            "to_id": "component_wheel"
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "equipment_grinder",
+            "to_id": "component_vision_lower"
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "equipment_kyocera_handler",
+            "to_id": "component_pallet"
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "equipment_kyocera_handler",
+            "to_id": "component_handler_door"
+          },
+          {
+            "type": "HAS_ISSUE",
+            "from_id": "equipment_kyocera_handler",
+            "to_id": "issue_door_function"
+          },
+          {
+            "type": "HAS_ISSUE",
+            "from_id": "equipment_kyocera_handler",
+            "to_id": "issue_interference"
+          },
+          {
+            "type": "HAS_ISSUE",
+            "from_id": "equipment_kyocera_handler",
+            "to_id": "issue_tolerance"
+          },
+          {
+            "type": "HAS_ISSUE",
+            "from_id": "equipment_kyocera_handler",
+            "to_id": "issue_maintenance"
+          },
+          {
+            "type": "HAS_ISSUE",
+            "from_id": "equipment_kyocera_handler",
+            "to_id": "issue_cost"
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "process_material_supply",
+            "to_id": "process_loading_to_work"
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "process_material_supply",
+            "to_id": "process_work_to_unload"
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "process_material_supply",
+            "to_id": "process_unload"
+          }
+        ]
+      },
+      "usage": {
+        "input_tokens": 1209,
+        "output_tokens": 2182,
+        "cost_usd": 0.00303
+      },
+      "raw_len": 5476,
+      "topic": "장비물류",
+      "file": "8933408770-교세라_핸들러_물류_구조_검토.txt"
+    },
+    {
+      "extracted": {
+        "entities": [
+          {
+            "type": "Customer",
+            "id": "customer_kyocera",
+            "name": "한국 교세라 정공",
+            "properties": {
+              "country": "한국"
+            }
+          },
+          {
+            "type": "Equipment",
+            "id": "equipment_double_side_grinder",
+            "name": "양면연삭핸들러",
+            "properties": {
+              "type": "핸들러",
+              "customer": "customer_kyocera"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "component_cylinder_transfer",
+            "name": "실린더 트랜스퍼",
+            "properties": {
+              "type": "전송장치"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "component_robot_transfer",
+            "name": "로봇 트랜스퍼",
+            "properties": {
+              "type": "전송장치",
+              "spec": "X,Y,Z축 연결"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "component_gripper",
+            "name": "그리퍼",
+            "properties": {
+              "type": "파지장치"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "component_pallet",
+            "name": "팔레트",
+            "properties": {
+              "type": "작업대"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "component_atc_station",
+            "name": "ATC 스테이션",
+            "properties": {
+              "type": "공구교환장치"
+            }
+          },
+          {
+            "type": "Product",
+            "id": "product_dcmt06",
+            "name": "DCMT06",
+            "properties": {
+              "type": "소형제품"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_grinding",
+            "name": "연삭",
+            "properties": {
+              "type": "가공공정"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_tool_change",
+            "name": "작업 툴 교체",
+            "properties": {
+              "type": "유지보수"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_sampling_measurement",
+            "name": "샘플링 측정",
+            "properties": {
+              "type": "검사공정"
+            }
+          },
+          {
+            "type": "Issue",
+            "id": "issue_cylinder_transfer_removal",
+            "title": "실린더 트랜스퍼 제거 필요",
+            "properties": {
+              "status": "논의중"
+            }
+          },
+          {
+            "type": "Issue",
+            "id": "issue_gripper_selection",
+            "title": "소형 제품 픽업 가능한 그리퍼 모색 필요",
+            "properties": {
+              "status": "논의중"
+            }
+          },
+          {
+            "type": "Issue",
+            "id": "issue_wall_interference",
+            "title": "팔레트 픽업시 벽면 간섭",
+            "properties": {
+              "status": "논의중",
+              "symptom": "팔레트 픽업시 벽면 간섭"
+            }
+          },
+          {
+            "type": "Issue",
+            "id": "issue_tool_change_difficulty",
+            "title": "툴 체인지 어려움",
+            "properties": {
+              "status": "논의중",
+              "symptom": "툴 교체가 너무 어려움"
+            }
+          },
+          {
+            "type": "Issue",
+            "id": "issue_storage_space",
+            "title": "연삭유 보관 공간 추가 필요",
+            "properties": {
+              "status": "요청사항"
+            }
+          },
+          {
+            "type": "Resolution",
+            "id": "resolution_robot_transfer",
+            "description": "X,Y,Z축 연결된 로봇 트랜스퍼 추가하여 팔레트 픽업 및 자유로운 작업위치 분배 가능",
+            "properties": {
+              "category": "장비개선"
+            }
+          },
+          {
+            "type": "Resolution",
+            "id": "resolution_wall_avoidance",
+            "description": "팔레트 픽업시 벽면 간섭 회피 기능 추가",
+            "properties": {
+              "category": "장비개선"
+            }
+          },
+          {
+            "type": "Resolution",
+            "id": "resolution_atc_station",
+            "description": "ATC 스테이션 추가하여 작업 툴 교체 편의성 개선",
+            "properties": {
+              "category": "장비개선"
+            }
+          },
+          {
+            "type": "Resolution",
+            "id": "resolution_measurement_timing",
+            "description": "샘플링 측정을 연삭중에 남는시간에 수행",
+            "properties": {
+              "category": "공정최적화"
+            }
+          }
+        ],
+        "relations": [
+          {
+            "type": "OWNS",
+            "from_id": "customer_kyocera",
+            "to_id": "equipment_double_side_grinder",
+            "properties": {}
+          },
+          {
+            "type": "HAS_ISSUE",
+            "from_id": "equipment_double_side_grinder",
+            "to_id": "issue_cylinder_transfer_removal",
+            "properties": {}
+          },
+          {
+            "type": "HAS_ISSUE",
+            "from_id": "equipment_double_side_grinder",
+            "to_id": "issue_gripper_selection",
+            "properties": {}
+          },
+          {
+            "type": "HAS_ISSUE",
+            "from_id": "equipment_double_side_grinder",
+            "to_id": "issue_wall_interference",
+            "properties": {}
+          },
+          {
+            "type": "HAS_ISSUE",
+            "from_id": "equipment_double_side_grinder",
+            "to_id": "issue_tool_change_difficulty",
+            "properties": {}
+          },
+          {
+            "type": "HAS_ISSUE",
+            "from_id": "equipment_double_side_grinder",
+            "to_id": "issue_storage_space",
+            "properties": {}
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "equipment_double_side_grinder",
+            "to_id": "component_cylinder_transfer",
+            "properties": {}
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "equipment_double_side_grinder",
+            "to_id": "component_robot_transfer",
+            "properties": {}
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "equipment_double_side_grinder",
+            "to_id": "component_gripper",
+            "properties": {}
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "equipment_double_side_grinder",
+            "to_id": "component_pallet",
+            "properties": {}
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "equipment_double_side_grinder",
+            "to_id": "component_atc_station",
+            "properties": {}
+          },
+          {
+            "type": "RESOLVED_BY",
+            "from_id": "issue_cylinder_transfer_removal",
+            "to_id": "resolution_robot_transfer",
+            "properties": {}
+          },
+          {
+            "type": "RESOLVED_BY",
+            "from_id": "issue_wall_interference",
+            "to_id": "resolution_wall_avoidance",
+            "properties": {}
+          },
+          {
+            "type": "RESOLVED_BY",
+            "from_id": "issue_tool_change_difficulty",
+            "to_id": "resolution_atc_station",
+            "properties": {}
+          },
+          {
+            "type": "INVOLVES_COMPONENT",
+            "from_id": "issue_gripper_selection",
+            "to_id": "component_gripper",
+            "properties": {}
+          },
+          {
+            "type": "INVOLVED_IN",
+            "from_id": "product_dcmt06",
+            "to_id": "issue_gripper_selection",
+            "properties": {}
+          }
+        ]
+      },
+      "usage": {
+        "input_tokens": 1337,
+        "output_tokens": 2331,
+        "cost_usd": 0.003248
+      },
+      "raw_len": 5957,
+      "topic": "장비물류",
+      "file": "8939372563-2025년_8월_21일_핸들러_물류_컨셉_논의.txt"
+    },
+    {
+      "topic": "장비물류",
+      "file": "8989966340-2025-09-01_교세라_양면연삭핸들러_물류_컨셉.txt",
+      "error": "Expecting ',' delimiter: line 423 column 6 (char 10242)"
+    },
+    {
+      "extracted": {
+        "entities": [
+          {
+            "type": "Process",
+            "id": "atc_tool_schedule",
+            "name": "ATC Tool 일정",
+            "properties": {
+              "description": "AutoToolChange 모듈 개발 일정",
+              "parent": "AutoToolChange 모듈개발"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "rotary_r_axis_module_dev",
+            "name": "회전부 R축 모듈 개발",
+            "properties": {
+              "description": "R축 모듈 개발 프로세스"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "specification_definition",
+            "name": "사양 정의",
+            "properties": {
+              "description": "사양 정의",
+              "schedule": "~11/7"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "technical_investigation",
+            "name": "기술조사",
+            "properties": {
+              "description": "샤프트 에어 관로 가공성, 오링 윤활 코팅검토",
+              "status": "진행중",
+              "schedule": "~11/21"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "structural_design",
+            "name": "구조설계",
+            "properties": {
+              "description": "배선처리 (슬립링), 회전부 모듈 테스트 제작",
+              "schedule": "~11/28"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "standard_spec_review",
+            "name": "Master & Slave 툴별 표준 사양 검토 및 구조설계",
+            "properties": {
+              "schedule": "~12/14"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "test_production",
+            "name": "테스트 제작 및 사내테스트",
+            "properties": {
+              "description": "에어 조인트부 확정 테스트 제작 및 사내테스트",
+              "schedule": "12/20~12/30"
+            }
+          },
+          {
+            "type": "Person",
+            "id": "mechanical_design_team",
+            "name": "기구설계팀",
+            "properties": {
+              "dept": "연구개발"
+            }
+          }
+        ],
+        "relations": [
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "atc_tool_schedule",
+            "to_id": "rotary_r_axis_module_dev",
+            "properties": {}
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "rotary_r_axis_module_dev",
+            "to_id": "specification_definition",
+            "properties": {}
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "rotary_r_axis_module_dev",
+            "to_id": "technical_investigation",
+            "properties": {}
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "rotary_r_axis_module_dev",
+            "to_id": "structural_design",
+            "properties": {}
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "rotary_r_axis_module_dev",
+            "to_id": "standard_spec_review",
+            "properties": {}
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "rotary_r_axis_module_dev",
+            "to_id": "test_production",
+            "properties": {}
+          },
+          {
+            "type": "MAINTAINS",
+            "from_id": "mechanical_design_team",
+            "to_id": "atc_tool_schedule",
+            "properties": {}
+          }
+        ]
+      },
+      "usage": {
+        "input_tokens": 1061,
+        "output_tokens": 1072,
+        "cost_usd": 0.001605
+      },
+      "raw_len": 2684,
+      "topic": "장비물류",
+      "file": "9202892812-ATC_Tool_일정.txt"
+    },
+    {
+      "extracted": {
+        "entities": [
+          {
+            "type": "Equipment",
+            "id": "equipment_wta_bilateral_grinder_handler",
+            "name": "WTA개발 양면연삭핸들러",
+            "properties": {
+              "type": "핸들러",
+              "category": "장비물류"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_supply_lift",
+            "name": "공급 리프트",
+            "properties": {
+              "description": "공급 시작 위치"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_supply_position",
+            "name": "공급 위치",
+            "properties": {
+              "description": "공급 작업 위치"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_supply_waiting_position",
+            "name": "공급 대기위치",
+            "properties": {
+              "description": "공급 대기 위치"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_working_position_a",
+            "name": "작업위치 A",
+            "properties": {
+              "description": "첫 번째 작업 위치"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_working_position_b",
+            "name": "작업위치 B",
+            "properties": {
+              "description": "두 번째 작업 위치"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_takeout_waiting_position",
+            "name": "취출 대기위치",
+            "properties": {
+              "description": "취출 대기 위치"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_takeout_position",
+            "name": "취출 위치",
+            "properties": {
+              "description": "취출 작업 위치"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_takeout_lift",
+            "name": "취출 리프트",
+            "properties": {
+              "description": "취출 종료 위치"
+            }
+          }
+        ],
+        "relations": [
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "equipment_wta_bilateral_grinder_handler",
+            "to_id": "process_supply_lift",
+            "properties": {}
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "process_supply_lift",
+            "to_id": "process_supply_position",
+            "properties": {
+              "action": "동작"
+            }
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "process_supply_position",
+            "to_id": "process_supply_waiting_position",
+            "properties": {
+              "action": "동작"
+            }
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "process_supply_waiting_position",
+            "to_id": "process_working_position_a",
+            "properties": {
+              "action": "동작"
+            }
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "process_working_position_a",
+            "to_id": "process_working_position_b",
+            "properties": {
+              "action": "동작"
+            }
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "process_working_position_b",
+            "to_id": "process_takeout_waiting_position",
+            "properties": {
+              "action": "동작"
+            }
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "process_takeout_waiting_position",
+            "to_id": "process_takeout_position",
+            "properties": {
+              "action": "동작"
+            }
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "process_takeout_position",
+            "to_id": "process_takeout_lift",
+            "properties": {
+              "action": "동작"
+            }
+          }
+        ]
+      },
+      "usage": {
+        "input_tokens": 1058,
+        "output_tokens": 1160,
+        "cost_usd": 0.001715
+      },
+      "raw_len": 3097,
+      "topic": "장비물류",
+      "file": "9256468481-물류_구조_(2개_작업_위치_타입).txt"
+    },
+    {
+      "extracted": {
+        "entities": [
+          {
+            "type": "Equipment",
+            "id": "press_im_cell_line",
+            "name": "Press-IM (CELL LINE 장비)",
+            "properties": {
+              "type": "광학계 검사 장비",
+              "customer": "KORLOY"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "side_optical_system",
+            "name": "측면 광학계",
+            "properties": {
+              "type": "광학계",
+              "spec": "동축 조명, telecentric BLU"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "coaxial_lighting",
+            "name": "동축 조명",
+            "properties": {
+              "type": "조명",
+              "model": "기존 구성"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "t_blu_lighting",
+            "name": "Telecentric BLU 조명",
+            "properties": {
+              "type": "조명",
+              "model": "기존 구성"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "flat_dome_lighting",
+            "name": "FlatDome 조명",
+            "properties": {
+              "type": "조명",
+              "spec": "BRT 511, WDT 1,200"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "round_bar_lighting",
+            "name": "라운드 바조명",
+            "properties": {
+              "type": "조명",
+              "spec": "45~135º, 15º step"
+            }
+          },
+          {
+            "type": "Product",
+            "id": "burr_product",
+            "name": "Burr",
+            "properties": {
+              "type": "측정 대상",
+              "description": "중앙 돌출부(Both부)의 경사면"
+            }
+          },
+          {
+            "type": "Issue",
+            "id": "burr_visibility_issue",
+            "title": "측면 광학계 조명 시인성 개선 (burr 측정)",
+            "properties": {
+              "date": "2025-09-04",
+              "symptom": "기존 조명(동축, telecentric BLU)으로는 Burr 측정 불가",
+              "description": "동축조명: Burr의 경사로 인해 시인되지 않음, T-BLU: Both부(중앙 돌출부)에 가려 시인되지 않음",
+              "status": "진행 중"
+            }
+          },
+          {
+            "type": "Resolution",
+            "id": "flat_dome_solution",
+            "description": "FlatDome 조명 선정으로 Both부를 밝게 올려 burr의 실루엣 표현",
+            "properties": {
+              "category": "조명 최적화",
+              "effectiveness": "높음",
+              "brightness": "BRT 511, WDT 1,200",
+              "installation_offset": "-5mm"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "burr_measurement_process",
+            "name": "Burr 측정 공정",
+            "properties": {
+              "description": "측면 광학계를 통한 burr 검사"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "illumination_test_1",
+            "name": "1차 테스트: 라운드 바조명 각도 확인",
+            "properties": {
+              "description": "45~135º 범위에서 15º step으로 조사각도 및 시인성 확인",
+              "parent": "burr_measurement_process"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "illumination_test_2",
+            "name": "2차 테스트: FlatDome 조명 샘플 평가",
+            "properties": {
+              "description": "6가지 샘플 측정 (D형-1,2,3, T형, V형)",
+              "parent": "burr_measurement_process"
+            }
+          },
+          {
+            "type": "Tool",
+            "id": "image_storage_system",
+            "name": "테스트 이미지 저장소",
+            "properties": {
+              "type": "네트워크 저장소",
+              "path": "\\\\192.168.1.253\\광학기술센터\\0.Test_Images\\4_HAM-IM\\Press-im_측면광학계_조명추가검토"
+            }
+          },
+          {
+            "type": "Customer",
+            "id": "korloy",
+            "name": "KORLOY",
+            "properties": {
+              "country": "Korea"
+            }
+          }
+        ],
+        "relations": [
+          {
+            "type": "OWNS",
+            "from_id": "korloy",
+            "to_id": "press_im_cell_line",
+            "properties": {}
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "press_im_cell_line",
+            "to_id": "side_optical_system",
+            "properties": {}
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "side_optical_system",
+            "to_id": "coaxial_lighting",
+            "properties": {}
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "side_optical_system",
+            "to_id": "t_blu_lighting",
+            "properties": {}
+          },
+          {
+            "type": "HAS_ISSUE",
+            "from_id": "press_im_cell_line",
+            "to_id": "burr_visibility_issue",
+            "properties": {}
+          },
+          {
+            "type": "INVOLVED_IN",
+            "from_id": "burr_product",
+            "to_id": "burr_visibility_issue",
+            "properties": {}
+          },
+          {
+            "type": "INVOLVES_COMPONENT",
+            "from_id": "burr_visibility_issue",
+            "to_id": "side_optical_system",
+            "properties": {}
+          },
+          {
+            "type": "INVOLVES_COMPONENT",
+            "from_id": "burr_visibility_issue",
+            "to_id": "coaxial_lighting",
+            "properties": {}
+          },
+          {
+            "type": "INVOLVES_COMPONENT",
+            "from_id": "burr_visibility_issue",
+            "to_id": "t_blu_lighting",
+            "properties": {}
+          },
+          {
+            "type": "RESOLVED_BY",
+            "from_id": "burr_visibility_issue",
+            "to_id": "flat_dome_solution",
+            "properties": {}
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "burr_measurement_process",
+            "to_id": "illumination_test_1",
+            "properties": {}
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "burr_measurement_process",
+            "to_id": "illumination_test_2",
+            "properties": {}
+          },
+          {
+            "type": "USES_TOOL",
+            "from_id": "illumination_test_2",
+            "to_id": "image_storage_system",
+            "properties": {}
+          }
+        ]
+      },
+      "usage": {
+        "input_tokens": 1986,
+        "output_tokens": 2032,
+        "cost_usd": 0.003037
+      },
+      "raw_len": 4976,
+      "topic": "분말검사",
+      "file": "9004482562-측면_광학계_조명_시인성_개선_검토_(burr_측정).txt"
+    },
+    {
+      "extracted": {
+        "entities": [
+          {
+            "type": "Customer",
+            "id": "customer_korloy",
+            "name": "KORLOY",
+            "properties": {}
+          },
+          {
+            "type": "Equipment",
+            "id": "equipment_press_im",
+            "name": "Press-IM",
+            "properties": {
+              "type": "CELL LINE 장비",
+              "customer": "KORLOY"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "component_flatdome_mirror",
+            "name": "FlatDome 미러",
+            "properties": {
+              "type": "조명",
+              "spec": "24v Strobe Mode 1,000"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "component_side_optical_system",
+            "name": "측면 광학계",
+            "properties": {
+              "type": "광학계"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "component_t_blu",
+            "name": "T-BLU",
+            "properties": {
+              "type": "조명"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "component_coaxial",
+            "name": "Coaxial",
+            "properties": {
+              "type": "조명"
+            }
+          },
+          {
+            "type": "Product",
+            "id": "product_sintered_sample",
+            "name": "소성체 샘플",
+            "properties": {
+              "type": "측정용 샘플"
+            }
+          },
+          {
+            "type": "Issue",
+            "id": "issue_illumination_visibility",
+            "name": "측면 광학계 조명 시인성 개선",
+            "properties": {
+              "title": "측면 광학계 조명 시인성 개선 검토",
+              "symptom": "광량 부족, 시인성 낮음",
+              "status": "테스트 진행"
+            }
+          },
+          {
+            "type": "Resolution",
+            "id": "resolution_flatdome_upgrade",
+            "name": "FlatDome 미러 적용",
+            "properties": {
+              "category": "하드웨어 개선",
+              "description": "24v Strobe Mode 1,000 사용으로 광량 개선"
+            }
+          },
+          {
+            "type": "Resolution",
+            "id": "resolution_image_synthesis",
+            "name": "이미지 합성 기법 적용",
+            "properties": {
+              "category": "소프트웨어",
+              "description": "ImageJ 기능으로 FlatDome 여러번 합성"
+            }
+          },
+          {
+            "type": "Resolution",
+            "id": "resolution_mirror_surface",
+            "name": "표면경 부착",
+            "properties": {
+              "category": "하드웨어 개선",
+              "description": "조명 표면에 표면경 부착으로 광량 개선 (약 25% 효과)"
+            }
+          },
+          {
+            "type": "Tool",
+            "id": "tool_imagej",
+            "name": "ImageJ",
+            "properties": {
+              "type": "이미지 분석 소프트웨어"
+            }
+          }
+        ],
+        "relations": [
+          {
+            "type": "OWNS",
+            "from_id": "customer_korloy",
+            "to_id": "equipment_press_im",
+            "properties": {}
+          },
+          {
+            "type": "HAS_ISSUE",
+            "from_id": "equipment_press_im",
+            "to_id": "issue_illumination_visibility",
+            "properties": {}
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "equipment_press_im",
+            "to_id": "component_side_optical_system",
+            "properties": {}
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "equipment_press_im",
+            "to_id": "component_flatdome_mirror",
+            "properties": {}
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "equipment_press_im",
+            "to_id": "component_t_blu",
+            "properties": {}
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "equipment_press_im",
+            "to_id": "component_coaxial",
+            "properties": {}
+          },
+          {
+            "type": "INVOLVES_COMPONENT",
+            "from_id": "issue_illumination_visibility",
+            "to_id": "component_flatdome_mirror",
+            "properties": {}
+          },
+          {
+            "type": "INVOLVED_IN",
+            "from_id": "product_sintered_sample",
+            "to_id": "issue_illumination_visibility",
+            "properties": {}
+          },
+          {
+            "type": "RESOLVED_BY",
+            "from_id": "issue_illumination_visibility",
+            "to_id": "resolution_flatdome_upgrade",
+            "properties": {}
+          },
+          {
+            "type": "RESOLVED_BY",
+            "from_id": "issue_illumination_visibility",
+            "to_id": "resolution_image_synthesis",
+            "properties": {}
+          },
+          {
+            "type": "RESOLVED_BY",
+            "from_id": "issue_illumination_visibility",
+            "to_id": "resolution_mirror_surface",
+            "properties": {}
+          },
+          {
+            "type": "USES_TOOL",
+            "from_id": "resolution_image_synthesis",
+            "to_id": "tool_imagej",
+            "properties": {}
+          }
+        ]
+      },
+      "usage": {
+        "input_tokens": 1704,
+        "output_tokens": 1558,
+        "cost_usd": 0.002374
+      },
+      "raw_len": 4070,
+      "topic": "분말검사",
+      "file": "9061335043-측면_광학계_조명_시인성_개선_검토_(burr_측정_소성체_샘플).txt"
+    },
+    {
+      "extracted": {
+        "entities": [
+          {
+            "type": "Equipment",
+            "id": "wta_grinder_handler",
+            "name": "WTA 양면 연삭 핸들러",
+            "properties": {
+              "type": "양면 연삭 핸들러",
+              "model": "WTA"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "gripper_g1z",
+            "name": "G1Z 그리퍼",
+            "properties": {
+              "type": "그리퍼",
+              "model": "G1Z",
+              "spec": "제일 뒤(떨어진) 그리퍼 Z 축"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "gripper_g2z",
+            "name": "G2Z 그리퍼",
+            "properties": {
+              "type": "그리퍼",
+              "model": "G2Z",
+              "spec": "중간인 그리퍼 Z 축"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "gripper_g3z",
+            "name": "G3Z 그리퍼",
+            "properties": {
+              "type": "그리퍼",
+              "model": "G3Z",
+              "spec": "제일 안(가까운) 그리퍼 Z 축"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "camera_cam_z",
+            "name": "CAM_Z 상부 카메라",
+            "properties": {
+              "type": "카메라",
+              "model": "CAM_Z",
+              "spec": "G3 옆 상부 카메라 Z 축"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "lift_lo_lift",
+            "name": "LO_LIFT 공급 리프트",
+            "properties": {
+              "type": "리프트",
+              "model": "LO_LIFT",
+              "spec": "좌측 공급(넣음) 리프트 Z 축"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "lift_ulo_lift",
+            "name": "ULO_LIFT 취출 리프트",
+            "properties": {
+              "type": "리프트",
+              "model": "ULO_LIFT",
+              "spec": "우측 취출(꺼냄) 리프트 Z 축"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_hardware_origin",
+            "name": "축 원점(Hardware Org) 설정",
+            "properties": {
+              "description": "핸들러를 구동하기 위한 각 축의 원점을 설정하는 과정"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_position_setting",
+            "name": "기본 위치(Positions) 설정",
+            "properties": {
+              "description": "장비를 운전하는 데 필요한 위치를 설정하는 과정"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_homing",
+            "name": "원점 복귀",
+            "properties": {
+              "description": "설정 완료 후 축이 제대로 복귀하는지 확인하는 과정"
+            }
+          },
+          {
+            "type": "Tool",
+            "id": "tool_system_setting",
+            "name": "시스템 설정",
+            "properties": {
+              "type": "소프트웨어 도구"
+            }
+          },
+          {
+            "type": "Tool",
+            "id": "tool_hardware_org",
+            "name": "Hardware Org",
+            "properties": {
+              "type": "소프트웨어 도구"
+            }
+          },
+          {
+            "type": "Tool",
+            "id": "tool_positions_tab",
+            "name": "Positions 탭",
+            "properties": {
+              "type": "소프트웨어 도구"
+            }
+          }
+        ],
+        "relations": [
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "wta_grinder_handler",
+            "to_id": "gripper_g1z",
+            "properties": {}
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "wta_grinder_handler",
+            "to_id": "gripper_g2z",
+            "properties": {}
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "wta_grinder_handler",
+            "to_id": "gripper_g3z",
+            "properties": {}
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "wta_grinder_handler",
+            "to_id": "camera_cam_z",
+            "properties": {}
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "wta_grinder_handler",
+            "to_id": "lift_lo_lift",
+            "properties": {}
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "wta_grinder_handler",
+            "to_id": "lift_ulo_lift",
+            "properties": {}
+          },
+          {
+            "type": "USES_TOOL",
+            "from_id": "process_hardware_origin",
+            "to_id": "tool_system_setting",
+            "properties": {}
+          },
+          {
+            "type": "USES_TOOL",
+            "from_id": "process_hardware_origin",
+            "to_id": "tool_hardware_org",
+            "properties": {}
+          },
+          {
+            "type": "USES_TOOL",
+            "from_id": "process_position_setting",
+            "to_id": "tool_system_setting",
+            "properties": {}
+          },
+          {
+            "type": "USES_TOOL",
+            "from_id": "process_position_setting",
+            "to_id": "tool_positions_tab",
+            "properties": {}
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "process_hardware_origin",
+            "to_id": "process_homing",
+            "properties": {}
+          }
+        ]
+      },
+      "usage": {
+        "input_tokens": 4155,
+        "output_tokens": 1752,
+        "cost_usd": 0.003229
+      },
+      "raw_len": 4090,
+      "topic": "연삭측정제어",
+      "file": "8705507345-WTA_양면_연삭_핸들러_매뉴얼.txt"
+    },
+    {
+      "extracted": {
+        "entities": [
+          {
+            "type": "Process",
+            "id": "process_grinding_handler",
+            "name": "연삭 핸들러",
+            "properties": {
+              "description": "연삭측정제어",
+              "page_id": "8734146564",
+              "version": "1"
+            }
+          }
+        ],
+        "relations": []
+      },
+      "usage": {
+        "input_tokens": 862,
+        "output_tokens": 111,
+        "cost_usd": 0.000354
+      },
+      "raw_len": 274,
+      "topic": "연삭측정제어",
+      "file": "8734146564-연삭_핸들러.txt"
+    },
+    {
+      "extracted": {
+        "entities": [
+          {
+            "type": "Process",
+            "id": "logistics_system_improvement",
+            "name": "물류 시스템 개선",
+            "properties": {
+              "description": "툴 스트로크, 작업 범위 등을 고려하여 작업 위치 선정 및 물류 이동 시간 단축"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "pallet_fixation_position_control",
+            "name": "팔레트 고정 및 위치 제어",
+            "properties": {
+              "description": "팔레트 고정용 핀, 가이드, 스토퍼, 실린더 등의 장치를 활용한 위치 제어"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "workspace_optimization",
+            "name": "작업 공간 최적화 및 장비 선정",
+            "properties": {
+              "description": "제한된 작업 공간 내에서의 레이아웃 및 장비 배치 최적화"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "pallet_recognition_control",
+            "name": "팔레트 인식 및 제어 시스템",
+            "properties": {
+              "description": "광센서, 근접센서 등 센서를 활용한 팔레트 위치 확인"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "equipment_assembly_maintenance",
+            "name": "장비 조립 및 유지보수",
+            "properties": {
+              "description": "유지보수 편의성과 부품 교체 용이성을 고려한 모듈화 설계"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "transfer_arm_design",
+            "name": "트랜스퍼 암 설계 최적화",
+            "properties": {
+              "description": "암의 길이, 보강 구조, 구동 방식 최적 설계"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "workspace_equipment_final_review",
+            "name": "작업 공간 및 장비 배치 최종 검토",
+            "properties": {
+              "description": "전체 공간을 고려한 스테이지 길이 및 핸들러 위치 재조정"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "dressing_washing_system",
+            "name": "드레싱 장치 및 세척 시스템",
+            "properties": {
+              "description": "드레싱 장치 위치, 세척 및 건조 공정의 효율적 배치"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "guide_rail",
+            "name": "가이드 레일",
+            "properties": {
+              "type": "물류 시스템 부품"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "pallet",
+            "name": "팔레트",
+            "properties": {
+              "type": "물류 이동 장치"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "transfer_arm",
+            "name": "트랜스퍼 암",
+            "properties": {
+              "type": "팔레트 분리 장치"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "fixation_pin",
+            "name": "고정용 핀",
+            "properties": {
+              "type": "팔레트 고정 부품"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "guide_stopper_cylinder",
+            "name": "가이드, 스토퍼, 실린더",
+            "properties": {
+              "type": "위치 제어 장치"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "light_sensor",
+            "name": "광센서",
+            "properties": {
+              "type": "팔레트 인식 센서"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "proximity_sensor",
+            "name": "근접센서",
+            "properties": {
+              "type": "팔레트 인식 센서"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "dressing_device",
+            "name": "드레싱 장치",
+            "properties": {
+              "type": "연삭 보조 장치"
+            }
+          },
+          {
+            "type": "Equipment",
+            "id": "bilateral_grinder",
+            "name": "양면 연삭기",
+            "properties": {
+              "type": "연삭 장비"
+            }
+          }
+        ],
+        "relations": [
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "bilateral_grinder",
+            "to_id": "logistics_system_improvement",
+            "properties": {}
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "bilateral_grinder",
+            "to_id": "pallet_fixation_position_control",
+            "properties": {}
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "bilateral_grinder",
+            "to_id": "workspace_optimization",
+            "properties": {}
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "bilateral_grinder",
+            "to_id": "pallet_recognition_control",
+            "properties": {}
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "bilateral_grinder",
+            "to_id": "equipment_assembly_maintenance",
+            "properties": {}
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "bilateral_grinder",
+            "to_id": "transfer_arm_design",
+            "properties": {}
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "bilateral_grinder",
+            "to_id": "workspace_equipment_final_review",
+            "properties": {}
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "bilateral_grinder",
+            "to_id": "dressing_washing_system",
+            "properties": {}
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "logistics_system_improvement",
+            "to_id": "guide_rail",
+            "properties": {}
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "logistics_system_improvement",
+            "to_id": "pallet",
+            "properties": {}
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "pallet_fixation_position_control",
+            "to_id": "fixation_pin",
+            "properties": {}
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "pallet_fixation_position_control",
+            "to_id": "guide_stopper_cylinder",
+            "properties": {}
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "pallet_recognition_control",
+            "to_id": "light_sensor",
+            "properties": {}
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "pallet_recognition_control",
+            "to_id": "proximity_sensor",
+            "properties": {}
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "transfer_arm_design",
+            "to_id": "transfer_arm",
+            "properties": {}
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "dressing_washing_system",
+            "to_id": "dressing_device",
+            "properties": {}
+          }
+        ]
+      },
+      "usage": {
+        "input_tokens": 2057,
+        "output_tokens": 2216,
+        "cost_usd": 0.003284
+      },
+      "raw_len": 5416,
+      "topic": "연삭측정제어",
+      "file": "8748662790-2025-04-18_연삭_핸들러_컨셉.txt"
+    },
+    {
+      "topic": "연삭측정제어",
+      "file": "9463300099-2026-01-14_연삭_핸들러_비전_측정기.txt",
+      "error": "Expecting ',' delimiter: line 435 column 6 (char 10171)"
+    },
+    {
+      "topic": "호닝신뢰성",
+      "file": "8081965089-호닝_형상_검사기_개선_검토.txt",
+      "error": "Expecting ',' delimiter: line 438 column 6 (char 9746)"
+    },
+    {
+      "extracted": {
+        "entities": [
+          {
+            "type": "Process",
+            "id": "honing_shape_inspection",
+            "name": "호닝 형상 검사",
+            "properties": {
+              "description": "호닝 형상 검사기 개선 검토"
+            }
+          }
+        ],
+        "relations": []
+      },
+      "usage": {
+        "input_tokens": 1304,
+        "output_tokens": 101,
+        "cost_usd": 0.000452
+      },
+      "raw_len": 227,
+      "topic": "호닝신뢰성",
+      "file": "8081998147-호닝_형상_검사기_개선_검토_홈.txt"
+    },
+    {
+      "topic": "호닝신뢰성",
+      "file": "8138785229-호닝_형상_검사기_제작_이슈_및_조치_내용.txt",
+      "error": "Expecting ',' delimiter: line 410 column 6 (char 9119)"
+    },
+    {
+      "extracted": {
+        "entities": [
+          {
+            "type": "Process",
+            "id": "process_honing_shape_inspection",
+            "name": "호닝 형상 검사기 제작",
+            "properties": {
+              "description": "호닝 형상 검사기 제작 공정"
+            }
+          },
+          {
+            "type": "Product",
+            "id": "product_honing_shape_inspector",
+            "name": "호닝 형상 검사기",
+            "properties": {
+              "type": "검사기",
+              "description": "호닝 공정의 형상을 검사하는 기기"
+            }
+          }
+        ],
+        "relations": [
+          {
+            "type": "INVOLVED_IN",
+            "from_id": "product_honing_shape_inspector",
+            "to_id": "process_honing_shape_inspection",
+            "properties": {}
+          }
+        ]
+      },
+      "usage": {
+        "input_tokens": 1237,
+        "output_tokens": 258,
+        "cost_usd": 0.000632
+      },
+      "raw_len": 615,
+      "topic": "호닝신뢰성",
+      "file": "8139309518-호닝_형상_검사기_제작_이슈_및_조치_내용_홈.txt"
+    },
+    {
+      "extracted": {
+        "entities": [
+          {
+            "type": "Product",
+            "id": "product_c_type",
+            "name": "C type제품",
+            "properties": {
+              "type": "C type"
+            }
+          },
+          {
+            "type": "Product",
+            "id": "product_tnma",
+            "name": "TNMA제품",
+            "properties": {
+              "type": "TNMA"
+            }
+          },
+          {
+            "type": "Equipment",
+            "id": "equipment_honing_inspector",
+            "name": "호닝 형상 검사기",
+            "properties": {
+              "type": "형상검사기",
+              "model": "호닝형상검사기"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "component_nose",
+            "name": "Nose부위",
+            "properties": {
+              "type": "측정지점",
+              "spec": "Nose부"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "component_obtuse_angle",
+            "name": "둔각부",
+            "properties": {
+              "type": "측정지점",
+              "spec": "둔각부"
+            }
+          },
+          {
+            "type": "Issue",
+            "id": "issue_nose_measurement_error",
+            "name": "Nose부위 측정 오류",
+            "properties": {
+              "title": "C type제품 Nose부위 측정 에러",
+              "symptom": "둔각부가 Nose부보다 위에 놓여져 있을 경우, 둔각부를 측정지점으로 잡는 에러 발생",
+              "status": "identified",
+              "root_cause": "측정 지점 Teaching 오류"
+            }
+          },
+          {
+            "type": "Issue",
+            "id": "issue_dust_measurement_error",
+            "name": "먼지로 인한 측정 오류",
+            "properties": {
+              "title": "TNMA제품 측정 시 먼지로 인한 측정 오류",
+              "symptom": "먼지로 인한 측정 오류",
+              "status": "excluded_from_data",
+              "root_cause": "먼지 오염"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_measurement_teaching",
+            "name": "측정 지점 Teaching",
+            "properties": {
+              "description": "검사기 측정 지점 설정 과정",
+              "tool": "호닝 형상 검사기"
+            }
+          }
+        ],
+        "relations": [
+          {
+            "type": "INVOLVED_IN",
+            "from_id": "product_c_type",
+            "to_id": "issue_nose_measurement_error",
+            "properties": {}
+          },
+          {
+            "type": "INVOLVED_IN",
+            "from_id": "product_tnma",
+            "to_id": "issue_dust_measurement_error",
+            "properties": {}
+          },
+          {
+            "type": "HAS_ISSUE",
+            "from_id": "equipment_honing_inspector",
+            "to_id": "issue_nose_measurement_error",
+            "properties": {}
+          },
+          {
+            "type": "HAS_ISSUE",
+            "from_id": "equipment_honing_inspector",
+            "to_id": "issue_dust_measurement_error",
+            "properties": {}
+          },
+          {
+            "type": "INVOLVES_COMPONENT",
+            "from_id": "issue_nose_measurement_error",
+            "to_id": "component_nose",
+            "properties": {}
+          },
+          {
+            "type": "INVOLVES_COMPONENT",
+            "from_id": "issue_nose_measurement_error",
+            "to_id": "component_obtuse_angle",
+            "properties": {}
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "equipment_honing_inspector",
+            "to_id": "component_nose",
+            "properties": {}
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "equipment_honing_inspector",
+            "to_id": "component_obtuse_angle",
+            "properties": {}
+          },
+          {
+            "type": "USES_TOOL",
+            "from_id": "process_measurement_teaching",
+            "to_id": "equipment_honing_inspector",
+            "properties": {}
+          }
+        ]
+      },
+      "usage": {
+        "input_tokens": 1050,
+        "output_tokens": 1223,
+        "cost_usd": 0.001791
+      },
+      "raw_len": 3098,
+      "topic": "호닝신뢰성",
+      "file": "8277131337-호닝_형상_검사기_재현성_검증.txt"
+    },
+    {
+      "extracted": {
+        "entities": [
+          {
+            "type": "Equipment",
+            "id": "honing_shape_inspector",
+            "name": "호닝 형상 검사기",
+            "properties": {
+              "type": "검사기",
+              "description": "호닝 형상 검사기"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "frame_cover",
+            "name": "Frame & Cover",
+            "properties": {
+              "type": "구조부"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "pdu_device",
+            "name": "PDU",
+            "properties": {
+              "type": "전력분배장치"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "vibration_isolation_plate",
+            "name": "제진대 플레이트",
+            "properties": {
+              "type": "부품",
+              "spec": "20t"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "air_pump",
+            "name": "에어 펌프",
+            "properties": {
+              "type": "부품"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "acrylic_door",
+            "name": "아크릴 도어",
+            "properties": {
+              "type": "부품",
+              "model": "02-114-05-3"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "door_sensor",
+            "name": "도어 센서",
+            "properties": {
+              "type": "센서",
+              "model": "02-114-79-0, 02-114-80-0"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "magnetic_jig_stand",
+            "name": "마그네틱 지그 수납 거치대",
+            "properties": {
+              "type": "부품",
+              "spec": "HXNN12-3 6EA"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "pneumatic_device",
+            "name": "공압 장치",
+            "properties": {
+              "type": "부품"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "electrical_panel",
+            "name": "전장함",
+            "properties": {
+              "type": "부품"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "inner_panel",
+            "name": "2중 속판",
+            "properties": {
+              "type": "부품",
+              "model": "02-114-81-0"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "bottom_frame",
+            "name": "최하단 프레임",
+            "properties": {
+              "type": "부품",
+              "spec": "10t 판"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "main_power_bracket",
+            "name": "메인 전원 브라켓",
+            "properties": {
+              "type": "부품"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "side_under_cover",
+            "name": "측면 하단 커버",
+            "properties": {
+              "type": "부품",
+              "model": "02-114-01-0"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "optical_system",
+            "name": "광학계",
+            "properties": {
+              "type": "광학계"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "dynamic_device",
+            "name": "광학계 동적 장치",
+            "properties": {
+              "type": "부품"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "encoder",
+            "name": "엔코더",
+            "properties": {
+              "type": "부품"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "timing_belt",
+            "name": "타이밍 벨트",
+            "properties": {
+              "type": "부품"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "timing_pulley",
+            "name": "타이밍 풀리",
+            "properties": {
+              "type": "부품"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "motor",
+            "name": "모터",
+            "properties": {
+              "type": "부품"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "optical_wiring_bracket",
+            "name": "광학계 배선 브라켓",
+            "properties": {
+              "type": "부품"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "door_movement_design",
+            "name": "도어 이동성 개선",
+            "properties": {
+              "description": "지게차 운반 용이성 개선"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "pneumatic_space_design",
+            "name": "공압 장치 공간 확보",
+            "properties": {
+              "description": "PDU 제거를 통한 공간 확보"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "door_sensor_installation",
+            "name": "도어 센서 부착",
+            "properties": {
+              "description": "도어 닫힘 상태 확인"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "optical_system_design",
+            "name": "광학계 동적 장치 설계",
+            "properties": {
+              "description": "구조물 자체 탭 고정 방식 적용"
+            }
+          },
+          {
+            "type": "Issue",
+            "id": "issue_door_friction",
+            "title": "아크릴 도어 가공 오차로 인한 마찰",
+            "properties": {
+              "status": "resolved",
+              "symptom": "도어와 벽 간 마찰 발생"
+            }
+          },
+          {
+            "type": "Issue",
+            "id": "issue_exhaust_blockage",
+            "title": "도어 내부 수납 공간이 배기관을 막는 문제",
+            "properties": {
+              "status": "identified"
+            }
+          },
+          {
+            "type": "Resolution",
+            "id": "resolution_door_gap",
+            "description": "아크릴 도어와 벽 간격 증가 (2.050mm)",
+            "properties": {
+              "category": "설계수정",
+              "component_modified": "02-114-05-3"
+            }
+          },
+          {
+            "type": "Resolution",
+            "id": "resolution_pdu_removal",
+            "description": "외부 돌출 PDU 장치 제거, 도어의 PDU 홀 제거",
+            "properties": {
+              "category": "부품제거"
+            }
+          },
+          {
+            "type": "Resolution",
+            "id": "resolution_sensor_attachment",
+            "description": "측면 2개, 후면 1개의 센서 부착하여 도어의 닫힘 여부 확인",
+            "properties": {
+              "category": "기능추가"
+            }
+          }
+        ],
+        "relations": [
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "honing_shape_inspector",
+            "to_id": "frame_cover"
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "honing_shape_inspector",
+            "to_id": "pdu_device"
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "honing_shape_inspector",
+            "to_id": "vibration_isolation_plate"
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "honing_shape_inspector",
+            "to_id": "air_pump"
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "honing_shape_inspector",
+            "to_id": "acrylic_door"
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "honing_shape_inspector",
+            "to_id": "door_sensor"
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "honing_shape_inspector",
+            "to_id": "optical_system"
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "honing_shape_inspector",
+            "to_id": "encoder"
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "honing_shape_inspector",
+            "to_id": "motor"
+          },
+          {
+            "type": "HAS_ISSUE",
+            "from_id": "honing_shape_inspector",
+            "to_id": "issue_door_friction"
+          },
+          {
+            "type": "HAS_ISSUE",
+            "from_id": "honing_shape_inspector",
+            "to_id": "issue_exhaust_blockage"
+          },
+          {
+            "type": "INVOLVES_COMPONENT",
+            "from_id": "issue_door_friction",
+            "to_id": "acrylic_door"
+          },
+          {
+            "type": "INVOLVES_COMPONENT",
+            "from_id": "issue_exhaust_blockage",
+            "to_id": "acrylic_door"
+          },
+          {
+            "type": "RESOLVED_BY",
+            "from_id": "issue_door_friction",
+            "to_id": "resolution_door_gap"
+          },
+          {
+            "type": "RESOLVED_BY",
+            "from_id": "issue_exhaust_blockage",
+            "to_id": "resolution_pdu_removal"
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "door_movement_design",
+            "to_id": "pneumatic_space_design"
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "door_movement_design",
+            "to_id": "door_sensor_installation"
+          }
+        ]
+      },
+      "usage": {
+        "input_tokens": 2477,
+        "output_tokens": 2852,
+        "cost_usd": 0.004184
+      },
+      "raw_len": 7110,
+      "topic": "호닝신뢰성",
+      "file": "8315830532-호닝_형상_검사기_DR_회의록_23_12_11.txt"
+    },
+    {
+      "extracted": {
+        "entities": [
+          {
+            "type": "Equipment",
+            "id": "equipment_ipc_610_bto",
+            "name": "IPC-610-BTO",
+            "properties": {
+              "type": "Industrial PC",
+              "manufacturer": "어드밴텍케이알(주)"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "component_na_9289",
+            "name": "NA-9289",
+            "properties": {
+              "type": "크래비스 모듈",
+              "spec": "통신 모듈"
+            }
+          },
+          {
+            "type": "Tool",
+            "id": "tool_io_guide_pro",
+            "name": "IO Guide Pro",
+            "properties": {
+              "type": "소프트웨어"
+            }
+          },
+          {
+            "type": "Tool",
+            "id": "tool_bootp_server",
+            "name": "Bootp Server",
+            "properties": {
+              "type": "소프트웨어"
+            }
+          },
+          {
+            "type": "Issue",
+            "id": "issue_cravis_communication",
+            "name": "호닝 형상 검사기 크래비스 모듈 통신 이슈",
+            "properties": {
+              "title": "호닝 형상 검사기 크래비스 모듈 통신 이슈",
+              "symptom": "PC와 크레비스 모듈(NA-9289) 통신이 안되는 현상",
+              "root_cause": "PC셋업 시 설치하는 프로그램 및 셋팅과정 중에 충돌",
+              "status": "분석완료"
+            }
+          },
+          {
+            "type": "Resolution",
+            "id": "resolution_pc_setup_guide",
+            "name": "PC셋업 가이드 제작",
+            "properties": {
+              "description": "PC셋업 시 설치하는 프로그램 및 셋팅과정 표준화",
+              "category": "예방조치",
+              "effectiveness": "높음"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "component_poe_frame_grabber",
+            "name": "PoE+ Frame Grabber",
+            "properties": {
+              "type": "통신 카드"
+            }
+          }
+        ],
+        "relations": [
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "equipment_ipc_610_bto",
+            "to_id": "component_na_9289",
+            "properties": {}
+          },
+          {
+            "type": "HAS_ISSUE",
+            "from_id": "equipment_ipc_610_bto",
+            "to_id": "issue_cravis_communication",
+            "properties": {}
+          },
+          {
+            "type": "INVOLVES_COMPONENT",
+            "from_id": "issue_cravis_communication",
+            "to_id": "component_na_9289",
+            "properties": {}
+          },
+          {
+            "type": "RESOLVED_BY",
+            "from_id": "issue_cravis_communication",
+            "to_id": "resolution_pc_setup_guide",
+            "properties": {}
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "equipment_ipc_610_bto",
+            "to_id": "component_poe_frame_grabber",
+            "properties": {}
+          }
+        ]
+      },
+      "usage": {
+        "input_tokens": 1525,
+        "output_tokens": 953,
+        "cost_usd": 0.001573
+      },
+      "raw_len": 2260,
+      "topic": "호닝신뢰성",
+      "file": "8350073025-호닝_형상_검사기_크래비스_모듈_통신_이슈.txt"
+    },
+    {
+      "extracted": {
+        "entities": [
+          {
+            "type": "Equipment",
+            "id": "honing_shape_inspection_system",
+            "name": "호닝 형상 검사기 시스템",
+            "properties": {
+              "type": "검사 장비",
+              "description": "호닝 형상 검사기 시스템"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "honing_process",
+            "name": "호닝",
+            "properties": {
+              "description": "호닝 공정"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "shape_inspection_process",
+            "name": "형상 검사",
+            "properties": {
+              "description": "형상 검사 공정",
+              "tool": "호닝 형상 검사기 시스템"
+            }
+          }
+        ],
+        "relations": [
+          {
+            "type": "USES_TOOL",
+            "from_id": "shape_inspection_process",
+            "to_id": "honing_shape_inspection_system",
+            "properties": {}
+          }
+        ]
+      },
+      "usage": {
+        "input_tokens": 893,
+        "output_tokens": 316,
+        "cost_usd": 0.000618
+      },
+      "raw_len": 770,
+      "topic": "호닝신뢰성",
+      "file": "8357937213-호닝_형상_검사기_시스템에_대해서.txt"
+    },
+    {
+      "extracted": {
+        "entities": [
+          {
+            "type": "Customer",
+            "id": "customer_ganzhou_haixiang",
+            "name": "간저우 하이썽",
+            "properties": {
+              "country": "중국",
+              "location": "간저우"
+            }
+          },
+          {
+            "type": "Equipment",
+            "id": "equipment_honing_inspector_1",
+            "name": "호닝 형상 검사기 1호기",
+            "properties": {
+              "type": "검사기",
+              "customer": "간저우 하이썽"
+            }
+          },
+          {
+            "type": "Equipment",
+            "id": "equipment_press",
+            "name": "프레스",
+            "properties": {
+              "type": "프레스",
+              "customer": "간저우 하이썽"
+            }
+          },
+          {
+            "type": "Equipment",
+            "id": "equipment_press_handler",
+            "name": "프레스핸들러",
+            "properties": {
+              "type": "핸들러",
+              "customer": "간저우 하이썽"
+            }
+          },
+          {
+            "type": "Equipment",
+            "id": "equipment_cbn_grinder_handler",
+            "name": "cBN 연삭기핸들러",
+            "properties": {
+              "type": "핸들러",
+              "customer": "간저우 하이썽"
+            }
+          },
+          {
+            "type": "Equipment",
+            "id": "equipment_laser_marker",
+            "name": "레이저마킹기",
+            "properties": {
+              "type": "마킹기",
+              "customer": "간저우 하이썽"
+            }
+          },
+          {
+            "type": "Equipment",
+            "id": "equipment_packaging_machine",
+            "name": "포장기",
+            "properties": {
+              "type": "포장기",
+              "customer": "간저우 하이썽"
+            }
+          },
+          {
+            "type": "Equipment",
+            "id": "equipment_conveyor",
+            "name": "컨베이어",
+            "properties": {
+              "type": "컨베이어",
+              "customer": "간저우 하이썽"
+            }
+          },
+          {
+            "type": "Equipment",
+            "id": "equipment_elevator",
+            "name": "엘리베이터",
+            "properties": {
+              "type": "엘리베이터",
+              "customer": "간저우 하이썽"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_setup",
+            "name": "Setup 작업",
+            "properties": {
+              "description": "호닝 형상 검사기 1호기 설치 및 검수"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_unpacking",
+            "name": "패킹 해체 및 공장반입",
+            "properties": {
+              "parent": "setup"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_utility_connection",
+            "name": "기본 유틸리티 연결",
+            "properties": {
+              "parent": "setup"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_basic_operation_test",
+            "name": "기본동작 테스트",
+            "properties": {
+              "parent": "setup"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_docking_leveling",
+            "name": "도킹/레벨링",
+            "properties": {
+              "parent": "setup"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_io_check",
+            "name": "인터페이스 I/O 체크",
+            "properties": {
+              "parent": "setup"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_production_test",
+            "name": "연동/생산테스트",
+            "properties": {
+              "parent": "setup"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_equipment_inspection",
+            "name": "장비 검수",
+            "properties": {
+              "parent": "setup"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_equipment_training",
+            "name": "장비 교육",
+            "properties": {
+              "parent": "setup"
+            }
+          },
+          {
+            "type": "Person",
+            "id": "person_bak_ri_hwi",
+            "name": "박리휘",
+            "properties": {
+              "role": "설치인원"
+            }
+          },
+          {
+            "type": "Tool",
+            "id": "tool_confluence",
+            "name": "Confluence",
+            "properties": {
+              "type": "협업 도구"
+            }
+          }
+        ],
+        "relations": [
+          {
+            "type": "OWNS",
+            "from_id": "customer_ganzhou_haixiang",
+            "to_id": "equipment_honing_inspector_1",
+            "properties": {}
+          },
+          {
+            "type": "OWNS",
+            "from_id": "customer_ganzhou_haixiang",
+            "to_id": "equipment_press",
+            "properties": {}
+          },
+          {
+            "type": "OWNS",
+            "from_id": "customer_ganzhou_haixiang",
+            "to_id": "equipment_press_handler",
+            "properties": {}
+          },
+          {
+            "type": "OWNS",
+            "from_id": "customer_ganzhou_haixiang",
+            "to_id": "equipment_cbn_grinder_handler",
+            "properties": {}
+          },
+          {
+            "type": "OWNS",
+            "from_id": "customer_ganzhou_haixiang",
+            "to_id": "equipment_laser_marker",
+            "properties": {}
+          },
+          {
+            "type": "OWNS",
+            "from_id": "customer_ganzhou_haixiang",
+            "to_id": "equipment_packaging_machine",
+            "properties": {}
+          },
+          {
+            "type": "OWNS",
+            "from_id": "customer_ganzhou_haixiang",
+            "to_id": "equipment_conveyor",
+            "properties": {}
+          },
+          {
+            "type": "OWNS",
+            "from_id": "customer_ganzhou_haixiang",
+            "to_id": "equipment_elevator",
+            "properties": {}
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "process_setup",
+            "to_id": "process_unpacking",
+            "properties": {}
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "process_setup",
+            "to_id": "process_utility_connection",
+            "properties": {}
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "process_setup",
+            "to_id": "process_basic_operation_test",
+            "properties": {}
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "process_setup",
+            "to_id": "process_docking_leveling",
+            "properties": {}
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "process_setup",
+            "to_id": "process_io_check",
+            "properties": {}
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "process_setup",
+            "to_id": "process_production_test",
+            "properties": {}
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "process_setup",
+            "to_id": "process_equipment_inspection",
+            "properties": {}
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "process_setup",
+            "to_id": "process_equipment_training",
+            "properties": {}
+          },
+          {
+            "type": "MAINTAINS",
+            "from_id": "person_bak_ri_hwi",
+            "to_id": "process_setup",
+            "properties": {}
+          },
+          {
+            "type": "USES_TOOL",
+            "from_id": "process_setup",
+            "to_id": "tool_confluence",
+            "properties": {}
+          }
+        ]
+      },
+      "usage": {
+        "input_tokens": 1996,
+        "output_tokens": 2285,
+        "cost_usd": 0.003355
+      },
+      "raw_len": 6054,
+      "topic": "호닝신뢰성",
+      "file": "9266757633-간저우_하이썽_호닝_형상_검사기_1호기_Setup보고서.txt"
+    }
+  ]
+}

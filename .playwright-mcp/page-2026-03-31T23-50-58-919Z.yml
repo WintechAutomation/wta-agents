@@ -1,0 +1,1296 @@
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]: WTA AI
+      - generic [ref=e7]: 에이전트 대시보드 v2
+    - navigation [ref=e8]:
+      - link "🏢 에이전트 오피스" [ref=e9] [cursor=pointer]:
+        - /url: /v2/office
+        - generic [ref=e10]: 🏢
+        - generic [ref=e11]: 에이전트 오피스
+      - link "📊 시스템 개요" [ref=e12] [cursor=pointer]:
+        - /url: /v2/overview
+        - generic [ref=e13]: 📊
+        - generic [ref=e14]: 시스템 개요
+      - link "⚡ 운영 대시보드" [ref=e15] [cursor=pointer]:
+        - /url: /v2/dashboard
+        - generic [ref=e16]: ⚡
+        - generic [ref=e17]: 운영 대시보드
+      - link "📈 분석" [ref=e18] [cursor=pointer]:
+        - /url: /v2/analytics
+        - generic [ref=e19]: 📈
+        - generic [ref=e20]: 분석
+      - link "🖥️ 실시간 모니터" [ref=e21] [cursor=pointer]:
+        - /url: /v2/monitor
+        - generic [ref=e22]: 🖥️
+        - generic [ref=e23]: 실시간 모니터
+      - link "📚 Knowledge Base" [ref=e24] [cursor=pointer]:
+        - /url: /v2/knowledge
+        - generic [ref=e25]: 📚
+        - generic [ref=e26]: Knowledge Base
+      - link "📋 작업 큐" [ref=e27] [cursor=pointer]:
+        - /url: /v2/task-queue
+        - generic [ref=e28]: 📋
+        - generic [ref=e29]: 작업 큐
+      - link "⏰ 스케줄 관리" [ref=e30] [cursor=pointer]:
+        - /url: /v2/cron
+        - generic [ref=e31]: ⏰
+        - generic [ref=e32]: 스케줄 관리
+      - link "💬 CS 세션" [ref=e33] [cursor=pointer]:
+        - /url: /v2/cs-sessions
+        - generic [ref=e34]: 💬
+        - generic [ref=e35]: CS 세션
+      - link "📖 기술용어집" [ref=e36] [cursor=pointer]:
+        - /url: /v2/glossary
+        - generic [ref=e37]: 📖
+        - generic [ref=e38]: 기술용어집
+      - link "🔨 매뉴얼 빌더" [ref=e39] [cursor=pointer]:
+        - /url: /v2/manual-builder
+        - generic [ref=e40]: 🔨
+        - generic [ref=e41]: 매뉴얼 빌더
+      - link "📁 업무공간" [ref=e42] [cursor=pointer]:
+        - /url: /v2/workspace
+        - generic [ref=e43]: 📁
+        - generic [ref=e44]: 업무공간
+    - generic [ref=e45]:
+      - generic [ref=e46]: 시스템
+      - generic [ref=e47]:
+        - generic [ref=e48]: 온라인
+        - generic [ref=e49]: 0/12
+      - generic [ref=e50]:
+        - generic [ref=e51]: 업타임
+        - generic [ref=e52]: 0h 0m
+  - main [ref=e53]:
+    - generic [ref=e54]:
+      - generic [ref=e55]:
+        - generic [ref=e56]:
+          - heading "기술용어집" [level=1] [ref=e57]
+          - paragraph [ref=e58]: WTA 장비 기술 용어 — 한/영/중 3개 국어
+        - generic [ref=e59]:
+          - generic [ref=e60]: 120개 용어
+          - button "+ 용어 추가" [ref=e61]
+      - generic [ref=e62]:
+        - button "전체" [ref=e63]
+        - button "장비 일반" [ref=e64]
+        - button "PVD/CVD 코팅" [ref=e65]
+        - button "검사/측정" [ref=e66]
+        - button "제어/전기" [ref=e67]
+        - button "안전" [ref=e68]
+        - button "기구/기계" [ref=e69]
+        - button "소재/부품" [ref=e70]
+        - button "공정" [ref=e71]
+        - button "로봇/자동화" [ref=e72]
+        - button "통신/네트워크" [ref=e73]
+        - button "품질/관리" [ref=e74]
+        - button "제조사/브랜드" [ref=e75]
+        - textbox "검색..." [ref=e76]
+      - table [ref=e78]:
+        - rowgroup [ref=e79]:
+          - row "용어 (한) English 中文 카테고리 정의 작업" [ref=e80]:
+            - columnheader "용어 (한)" [ref=e81]
+            - columnheader "English" [ref=e82]
+            - columnheader "中文" [ref=e83]
+            - columnheader "카테고리" [ref=e84]
+            - columnheader "정의" [ref=e85]
+            - columnheader "작업" [ref=e86]
+        - rowgroup [ref=e87]:
+          - row "팔레트 Pallet 托盘 장비 일반 인서트를 적재하여 코팅 챔버에 투입하는 운반 지그. 봉(Pole)과 스페... 편집 삭제" [ref=e88] [cursor=pointer]:
+            - cell "팔레트" [ref=e89]
+            - cell "Pallet" [ref=e90]
+            - cell "托盘" [ref=e91]
+            - cell "장비 일반" [ref=e92]
+            - cell "인서트를 적재하여 코팅 챔버에 투입하는 운반 지그. 봉(Pole)과 스페..." [ref=e93]
+            - cell "편집 삭제" [ref=e94]:
+              - generic [ref=e95]:
+                - button "편집" [ref=e96]
+                - button "삭제" [ref=e97]
+          - row "봉 Pole 杆 장비 일반 팔레트에 수직으로 장착되는 금속 막대. 인서트와 스페이서를 교대로 적재한... 편집 삭제" [ref=e98] [cursor=pointer]:
+            - cell "봉" [ref=e99]
+            - cell "Pole" [ref=e100]
+            - cell "杆" [ref=e101]
+            - cell "장비 일반" [ref=e102]
+            - cell "팔레트에 수직으로 장착되는 금속 막대. 인서트와 스페이서를 교대로 적재한..." [ref=e103]
+            - cell "편집 삭제" [ref=e104]:
+              - generic [ref=e105]:
+                - button "편집" [ref=e106]
+                - button "삭제" [ref=e107]
+          - row "스페이서 Spacer 垫片 장비 일반 봉 위에서 인서트 사이 간격을 유지하는 부품. 코팅 균일성을 확보하기 위... 편집 삭제" [ref=e108] [cursor=pointer]:
+            - cell "스페이서" [ref=e109]
+            - cell "Spacer" [ref=e110]
+            - cell "垫片" [ref=e111]
+            - cell "장비 일반" [ref=e112]
+            - cell "봉 위에서 인서트 사이 간격을 유지하는 부품. 코팅 균일성을 확보하기 위..." [ref=e113]
+            - cell "편집 삭제" [ref=e114]:
+              - generic [ref=e115]:
+                - button "편집" [ref=e116]
+                - button "삭제" [ref=e117]
+          - row "매거진 Magazine 料仓 장비 일반 다수의 인서트 또는 팔레트를 정렬·보관하는 수납 장치. 자동 공급 시스템... 편집 삭제" [ref=e118] [cursor=pointer]:
+            - cell "매거진" [ref=e119]
+            - cell "Magazine" [ref=e120]
+            - cell "料仓" [ref=e121]
+            - cell "장비 일반" [ref=e122]
+            - cell "다수의 인서트 또는 팔레트를 정렬·보관하는 수납 장치. 자동 공급 시스템..." [ref=e123]
+            - cell "편집 삭제" [ref=e124]:
+              - generic [ref=e125]:
+                - button "편집" [ref=e126]
+                - button "삭제" [ref=e127]
+          - row "호퍼 Hopper 料斗 장비 일반 인서트를 투입하는 깔때기형 공급 장치. 진동 피더와 조합하여 정렬 공급한... 편집 삭제" [ref=e128] [cursor=pointer]:
+            - cell "호퍼" [ref=e129]
+            - cell "Hopper" [ref=e130]
+            - cell "料斗" [ref=e131]
+            - cell "장비 일반" [ref=e132]
+            - cell "인서트를 투입하는 깔때기형 공급 장치. 진동 피더와 조합하여 정렬 공급한..." [ref=e133]
+            - cell "편집 삭제" [ref=e134]:
+              - generic [ref=e135]:
+                - button "편집" [ref=e136]
+                - button "삭제" [ref=e137]
+          - row "피더 Feeder 供料器 장비 일반 인서트를 일정한 방향과 간격으로 공급하는 장치. 진동식, 벨트식 등이 있... 편집 삭제" [ref=e138] [cursor=pointer]:
+            - cell "피더" [ref=e139]
+            - cell "Feeder" [ref=e140]
+            - cell "供料器" [ref=e141]
+            - cell "장비 일반" [ref=e142]
+            - cell "인서트를 일정한 방향과 간격으로 공급하는 장치. 진동식, 벨트식 등이 있..." [ref=e143]
+            - cell "편집 삭제" [ref=e144]:
+              - generic [ref=e145]:
+                - button "편집" [ref=e146]
+                - button "삭제" [ref=e147]
+          - row "컨베이어 Conveyor 输送机 장비 일반 제품 또는 팔레트를 자동으로 이송하는 벨트/롤러 장치. 편집 삭제" [ref=e148] [cursor=pointer]:
+            - cell "컨베이어" [ref=e149]
+            - cell "Conveyor" [ref=e150]
+            - cell "输送机" [ref=e151]
+            - cell "장비 일반" [ref=e152]
+            - cell "제품 또는 팔레트를 자동으로 이송하는 벨트/롤러 장치." [ref=e153]
+            - cell "편집 삭제" [ref=e154]:
+              - generic [ref=e155]:
+                - button "편집" [ref=e156]
+                - button "삭제" [ref=e157]
+          - row "엘리베이터 Elevator 升降机 장비 일반 팔레트 또는 제품을 수직 방향으로 이동시키는 승강 장치. 편집 삭제" [ref=e158] [cursor=pointer]:
+            - cell "엘리베이터" [ref=e159]
+            - cell "Elevator" [ref=e160]
+            - cell "升降机" [ref=e161]
+            - cell "장비 일반" [ref=e162]
+            - cell "팔레트 또는 제품을 수직 방향으로 이동시키는 승강 장치." [ref=e163]
+            - cell "편집 삭제" [ref=e164]:
+              - generic [ref=e165]:
+                - button "편집" [ref=e166]
+                - button "삭제" [ref=e167]
+          - row "터렛 Turret 转塔 장비 일반 복수의 공구 또는 스테이션을 회전하며 선택하는 회전 장치. 편집 삭제" [ref=e168] [cursor=pointer]:
+            - cell "터렛" [ref=e169]
+            - cell "Turret" [ref=e170]
+            - cell "转塔" [ref=e171]
+            - cell "장비 일반" [ref=e172]
+            - cell "복수의 공구 또는 스테이션을 회전하며 선택하는 회전 장치." [ref=e173]
+            - cell "편집 삭제" [ref=e174]:
+              - generic [ref=e175]:
+                - button "편집" [ref=e176]
+                - button "삭제" [ref=e177]
+          - row "로터리 적재 Rotary Stacking 旋转装载 장비 일반 회전 테이블을 이용하여 인서트를 자동으로 적재하는 방식. 편집 삭제" [ref=e178] [cursor=pointer]:
+            - cell "로터리 적재" [ref=e179]
+            - cell "Rotary Stacking" [ref=e180]
+            - cell "旋转装载" [ref=e181]
+            - cell "장비 일반" [ref=e182]
+            - cell "회전 테이블을 이용하여 인서트를 자동으로 적재하는 방식." [ref=e183]
+            - cell "편집 삭제" [ref=e184]:
+              - generic [ref=e185]:
+                - button "편집" [ref=e186]
+                - button "삭제" [ref=e187]
+          - row "제어반 Control Cabinet 控制柜 장비 일반 PLC, 인버터, 차단기 등 전기 장치가 수납된 캐비닛. 편집 삭제" [ref=e188] [cursor=pointer]:
+            - cell "제어반" [ref=e189]
+            - cell "Control Cabinet" [ref=e190]
+            - cell "控制柜" [ref=e191]
+            - cell "장비 일반" [ref=e192]
+            - cell "PLC, 인버터, 차단기 등 전기 장치가 수납된 캐비닛." [ref=e193]
+            - cell "편집 삭제" [ref=e194]:
+              - generic [ref=e195]:
+                - button "편집" [ref=e196]
+                - button "삭제" [ref=e197]
+          - row "분전반 Distribution Panel 配电盘 장비 일반 메인 전원을 각 장치에 분배하는 전기 패널. 편집 삭제" [ref=e198] [cursor=pointer]:
+            - cell "분전반" [ref=e199]
+            - cell "Distribution Panel" [ref=e200]
+            - cell "配电盘" [ref=e201]
+            - cell "장비 일반" [ref=e202]
+            - cell "메인 전원을 각 장치에 분배하는 전기 패널." [ref=e203]
+            - cell "편집 삭제" [ref=e204]:
+              - generic [ref=e205]:
+                - button "편집" [ref=e206]
+                - button "삭제" [ref=e207]
+          - row "PVD PVD (Physical Vapor Deposition) 物理气相沉积 PVD/CVD 코팅 물리적 기상 증착. 진공 챔버 내에서 타깃 물질을 증발/스퍼터링하여 초경... 편집 삭제" [ref=e208] [cursor=pointer]:
+            - cell "PVD" [ref=e209]
+            - cell "PVD (Physical Vapor Deposition)" [ref=e210]
+            - cell "物理气相沉积" [ref=e211]
+            - cell "PVD/CVD 코팅" [ref=e212]
+            - cell "물리적 기상 증착. 진공 챔버 내에서 타깃 물질을 증발/스퍼터링하여 초경..." [ref=e213]
+            - cell "편집 삭제" [ref=e214]:
+              - generic [ref=e215]:
+                - button "편집" [ref=e216]
+                - button "삭제" [ref=e217]
+          - row "CVD CVD (Chemical Vapor Deposition) 化学气相沉积 PVD/CVD 코팅 화학적 기상 증착. 반응 가스를 이용하여 고온에서 화학 반응으로 코팅을 ... 편집 삭제" [ref=e218] [cursor=pointer]:
+            - cell "CVD" [ref=e219]
+            - cell "CVD (Chemical Vapor Deposition)" [ref=e220]
+            - cell "化学气相沉积" [ref=e221]
+            - cell "PVD/CVD 코팅" [ref=e222]
+            - cell "화학적 기상 증착. 반응 가스를 이용하여 고온에서 화학 반응으로 코팅을 ..." [ref=e223]
+            - cell "편집 삭제" [ref=e224]:
+              - generic [ref=e225]:
+                - button "편집" [ref=e226]
+                - button "삭제" [ref=e227]
+          - row "챔버 Chamber 腔室 PVD/CVD 코팅 진공 환경에서 코팅 공정이 수행되는 밀폐된 용기. 편집 삭제" [ref=e228] [cursor=pointer]:
+            - cell "챔버" [ref=e229]
+            - cell "Chamber" [ref=e230]
+            - cell "腔室" [ref=e231]
+            - cell "PVD/CVD 코팅" [ref=e232]
+            - cell "진공 환경에서 코팅 공정이 수행되는 밀폐된 용기." [ref=e233]
+            - cell "편집 삭제" [ref=e234]:
+              - generic [ref=e235]:
+                - button "편집" [ref=e236]
+                - button "삭제" [ref=e237]
+          - row "스퍼터링 Sputtering 溅射 PVD/CVD 코팅 아르곤 이온으로 타깃 물질을 충격하여 원자를 방출시키고, 이를 기재 표면... 편집 삭제" [ref=e238] [cursor=pointer]:
+            - cell "스퍼터링" [ref=e239]
+            - cell "Sputtering" [ref=e240]
+            - cell "溅射" [ref=e241]
+            - cell "PVD/CVD 코팅" [ref=e242]
+            - cell "아르곤 이온으로 타깃 물질을 충격하여 원자를 방출시키고, 이를 기재 표면..." [ref=e243]
+            - cell "편집 삭제" [ref=e244]:
+              - generic [ref=e245]:
+                - button "편집" [ref=e246]
+                - button "삭제" [ref=e247]
+          - row "증착 Deposition 沉积 PVD/CVD 코팅 기체 상태의 물질을 기재 표면에 얇은 막으로 형성하는 공정. 편집 삭제" [ref=e248] [cursor=pointer]:
+            - cell "증착" [ref=e249]
+            - cell "Deposition" [ref=e250]
+            - cell "沉积" [ref=e251]
+            - cell "PVD/CVD 코팅" [ref=e252]
+            - cell "기체 상태의 물질을 기재 표면에 얇은 막으로 형성하는 공정." [ref=e253]
+            - cell "편집 삭제" [ref=e254]:
+              - generic [ref=e255]:
+                - button "편집" [ref=e256]
+                - button "삭제" [ref=e257]
+          - row "타겟 Target 靶材 PVD/CVD 코팅 PVD 공정에서 스퍼터링에 의해 증발되어 코팅 막을 형성하는 원료 물질. 편집 삭제" [ref=e258] [cursor=pointer]:
+            - cell "타겟" [ref=e259]
+            - cell "Target" [ref=e260]
+            - cell "靶材" [ref=e261]
+            - cell "PVD/CVD 코팅" [ref=e262]
+            - cell "PVD 공정에서 스퍼터링에 의해 증발되어 코팅 막을 형성하는 원료 물질." [ref=e263]
+            - cell "편집 삭제" [ref=e264]:
+              - generic [ref=e265]:
+                - button "편집" [ref=e266]
+                - button "삭제" [ref=e267]
+          - row "코팅 Coating 涂层 PVD/CVD 코팅 초경합금 인서트 표면에 형성하는 얇은 보호막. TiN, TiAlN, Al... 편집 삭제" [ref=e268] [cursor=pointer]:
+            - cell "코팅" [ref=e269]
+            - cell "Coating" [ref=e270]
+            - cell "涂层" [ref=e271]
+            - cell "PVD/CVD 코팅" [ref=e272]
+            - cell "초경합금 인서트 표면에 형성하는 얇은 보호막. TiN, TiAlN, Al..." [ref=e273]
+            - cell "편집 삭제" [ref=e274]:
+              - generic [ref=e275]:
+                - button "편집" [ref=e276]
+                - button "삭제" [ref=e277]
+          - row "에칭 Etching 蚀刻 PVD/CVD 코팅 화학적 또는 물리적 방법으로 표면을 선택적으로 제거하는 공정. 코팅 전처... 편집 삭제" [ref=e278] [cursor=pointer]:
+            - cell "에칭" [ref=e279]
+            - cell "Etching" [ref=e280]
+            - cell "蚀刻" [ref=e281]
+            - cell "PVD/CVD 코팅" [ref=e282]
+            - cell "화학적 또는 물리적 방법으로 표면을 선택적으로 제거하는 공정. 코팅 전처..." [ref=e283]
+            - cell "편집 삭제" [ref=e284]:
+              - generic [ref=e285]:
+                - button "편집" [ref=e286]
+                - button "삭제" [ref=e287]
+          - row "비전 검사 Vision Inspection 视觉检查 검사/측정 카메라를 이용하여 인서트의 위치, 방향, 외관 불량을 자동 검사하는 시스... 편집 삭제" [ref=e288] [cursor=pointer]:
+            - cell "비전 검사" [ref=e289]
+            - cell "Vision Inspection" [ref=e290]
+            - cell "视觉检查" [ref=e291]
+            - cell "검사/측정" [ref=e292]
+            - cell "카메라를 이용하여 인서트의 위치, 방향, 외관 불량을 자동 검사하는 시스..." [ref=e293]
+            - cell "편집 삭제" [ref=e294]:
+              - generic [ref=e295]:
+                - button "편집" [ref=e296]
+                - button "삭제" [ref=e297]
+          - row "HIM 검사기 HIM Inspector HIM检查机 검사/측정 WTA 자체 개발 초경인서트 외관 검사 장비. 글로벌 시장 점유율 1위. 편집 삭제" [ref=e298] [cursor=pointer]:
+            - cell "HIM 검사기" [ref=e299]
+            - cell "HIM Inspector" [ref=e300]
+            - cell "HIM检查机" [ref=e301]
+            - cell "검사/측정" [ref=e302]
+            - cell "WTA 자체 개발 초경인서트 외관 검사 장비. 글로벌 시장 점유율 1위." [ref=e303]
+            - cell "편집 삭제" [ref=e304]:
+              - generic [ref=e305]:
+                - button "편집" [ref=e306]
+                - button "삭제" [ref=e307]
+          - row "카메라 Camera 相机 검사/측정 비전 검사 시스템의 핵심 구성 요소. 인서트 외관 이미지를 촬영하여 분석... 편집 삭제" [ref=e308] [cursor=pointer]:
+            - cell "카메라" [ref=e309]
+            - cell "Camera" [ref=e310]
+            - cell "相机" [ref=e311]
+            - cell "검사/측정" [ref=e312]
+            - cell "비전 검사 시스템의 핵심 구성 요소. 인서트 외관 이미지를 촬영하여 분석..." [ref=e313]
+            - cell "편집 삭제" [ref=e314]:
+              - generic [ref=e315]:
+                - button "편집" [ref=e316]
+                - button "삭제" [ref=e317]
+          - row "렌즈 Lens 镜头 검사/측정 카메라에 장착하여 검사 대상을 확대·축소하는 광학 부품. 편집 삭제" [ref=e318] [cursor=pointer]:
+            - cell "렌즈" [ref=e319]
+            - cell "Lens" [ref=e320]
+            - cell "镜头" [ref=e321]
+            - cell "검사/측정" [ref=e322]
+            - cell "카메라에 장착하여 검사 대상을 확대·축소하는 광학 부품." [ref=e323]
+            - cell "편집 삭제" [ref=e324]:
+              - generic [ref=e325]:
+                - button "편집" [ref=e326]
+                - button "삭제" [ref=e327]
+          - row "조명 Lighting 照明 검사/측정 비전 검사 시 인서트를 균일하게 비추는 광원. 링형, 바형, 동축 등 다... 편집 삭제" [ref=e328] [cursor=pointer]:
+            - cell "조명" [ref=e329]
+            - cell "Lighting" [ref=e330]
+            - cell "照明" [ref=e331]
+            - cell "검사/측정" [ref=e332]
+            - cell "비전 검사 시 인서트를 균일하게 비추는 광원. 링형, 바형, 동축 등 다..." [ref=e333]
+            - cell "편집 삭제" [ref=e334]:
+              - generic [ref=e335]:
+                - button "편집" [ref=e336]
+                - button "삭제" [ref=e337]
+          - row "외경 Outer Diameter (OD) 外径 검사/측정 원통형 부품의 바깥쪽 지름. 편집 삭제" [ref=e338] [cursor=pointer]:
+            - cell "외경" [ref=e339]
+            - cell "Outer Diameter (OD)" [ref=e340]
+            - cell "外径" [ref=e341]
+            - cell "검사/측정" [ref=e342]
+            - cell "원통형 부품의 바깥쪽 지름." [ref=e343]
+            - cell "편집 삭제" [ref=e344]:
+              - generic [ref=e345]:
+                - button "편집" [ref=e346]
+                - button "삭제" [ref=e347]
+          - row "내경 Inner Diameter (ID) 内径 검사/측정 구멍 또는 원통형 부품의 안쪽 지름. 편집 삭제" [ref=e348] [cursor=pointer]:
+            - cell "내경" [ref=e349]
+            - cell "Inner Diameter (ID)" [ref=e350]
+            - cell "内径" [ref=e351]
+            - cell "검사/측정" [ref=e352]
+            - cell "구멍 또는 원통형 부품의 안쪽 지름." [ref=e353]
+            - cell "편집 삭제" [ref=e354]:
+              - generic [ref=e355]:
+                - button "편집" [ref=e356]
+                - button "삭제" [ref=e357]
+          - row "공차 Tolerance 公差 검사/측정 설계 치수에 대한 허용 오차 범위. ±0.01mm 등으로 표기한다. 편집 삭제" [ref=e358] [cursor=pointer]:
+            - cell "공차" [ref=e359]
+            - cell "Tolerance" [ref=e360]
+            - cell "公差" [ref=e361]
+            - cell "검사/측정" [ref=e362]
+            - cell "설계 치수에 대한 허용 오차 범위. ±0.01mm 등으로 표기한다." [ref=e363]
+            - cell "편집 삭제" [ref=e364]:
+              - generic [ref=e365]:
+                - button "편집" [ref=e366]
+                - button "삭제" [ref=e367]
+          - row "진원도 Roundness 圆度 검사/측정 원형 단면이 완전한 원에 얼마나 가까운지를 나타내는 형상 정밀도. 편집 삭제" [ref=e368] [cursor=pointer]:
+            - cell "진원도" [ref=e369]
+            - cell "Roundness" [ref=e370]
+            - cell "圆度" [ref=e371]
+            - cell "검사/측정" [ref=e372]
+            - cell "원형 단면이 완전한 원에 얼마나 가까운지를 나타내는 형상 정밀도." [ref=e373]
+            - cell "편집 삭제" [ref=e374]:
+              - generic [ref=e375]:
+                - button "편집" [ref=e376]
+                - button "삭제" [ref=e377]
+          - row "조도 Surface Roughness 粗糙度 검사/측정 표면의 미세한 요철 정도. Ra, Rz 등의 단위로 측정한다. 편집 삭제" [ref=e378] [cursor=pointer]:
+            - cell "조도" [ref=e379]
+            - cell "Surface Roughness" [ref=e380]
+            - cell "粗糙度" [ref=e381]
+            - cell "검사/측정" [ref=e382]
+            - cell "표면의 미세한 요철 정도. Ra, Rz 등의 단위로 측정한다." [ref=e383]
+            - cell "편집 삭제" [ref=e384]:
+              - generic [ref=e385]:
+                - button "편집" [ref=e386]
+                - button "삭제" [ref=e387]
+          - row "HMI HMI (Human Machine Interface) 人机界面 제어/전기 작업자가 장비를 제어하고 모니터링하는 터치스크린 인터페이스. 편집 삭제" [ref=e388] [cursor=pointer]:
+            - cell "HMI" [ref=e389]
+            - cell "HMI (Human Machine Interface)" [ref=e390]
+            - cell "人机界面" [ref=e391]
+            - cell "제어/전기" [ref=e392]
+            - cell "작업자가 장비를 제어하고 모니터링하는 터치스크린 인터페이스." [ref=e393]
+            - cell "편집 삭제" [ref=e394]:
+              - generic [ref=e395]:
+                - button "편집" [ref=e396]
+                - button "삭제" [ref=e397]
+          - row "PLC PLC (Programmable Logic Controller) 可编程逻辑控制器 제어/전기 장비의 시퀀스 제어를 담당하는 산업용 프로그래머블 컨트롤러. 편집 삭제" [ref=e398] [cursor=pointer]:
+            - cell "PLC" [ref=e399]
+            - cell "PLC (Programmable Logic Controller)" [ref=e400]
+            - cell "可编程逻辑控制器" [ref=e401]
+            - cell "제어/전기" [ref=e402]
+            - cell "장비의 시퀀스 제어를 담당하는 산업용 프로그래머블 컨트롤러." [ref=e403]
+            - cell "편집 삭제" [ref=e404]:
+              - generic [ref=e405]:
+                - button "편집" [ref=e406]
+                - button "삭제" [ref=e407]
+          - row "서보 모터 Servo Motor 伺服电机 제어/전기 위치, 속도, 토크를 정밀 제어하는 모터. 엔코더와 함께 폐루프 제어한다... 편집 삭제" [ref=e408] [cursor=pointer]:
+            - cell "서보 모터" [ref=e409]
+            - cell "Servo Motor" [ref=e410]
+            - cell "伺服电机" [ref=e411]
+            - cell "제어/전기" [ref=e412]
+            - cell "위치, 속도, 토크를 정밀 제어하는 모터. 엔코더와 함께 폐루프 제어한다..." [ref=e413]
+            - cell "편집 삭제" [ref=e414]:
+              - generic [ref=e415]:
+                - button "편집" [ref=e416]
+                - button "삭제" [ref=e417]
+          - row "서보 축 Servo Axis 伺服轴 제어/전기 서보 모터로 구동되는 정밀 이동 축. 편집 삭제" [ref=e418] [cursor=pointer]:
+            - cell "서보 축" [ref=e419]
+            - cell "Servo Axis" [ref=e420]
+            - cell "伺服轴" [ref=e421]
+            - cell "제어/전기" [ref=e422]
+            - cell "서보 모터로 구동되는 정밀 이동 축." [ref=e423]
+            - cell "편집 삭제" [ref=e424]:
+              - generic [ref=e425]:
+                - button "편집" [ref=e426]
+                - button "삭제" [ref=e427]
+          - row "엔코더 Encoder 编码器 제어/전기 모터 축의 회전 위치를 검출하는 센서. 증분형과 절대값형이 있다. 편집 삭제" [ref=e428] [cursor=pointer]:
+            - cell "엔코더" [ref=e429]
+            - cell "Encoder" [ref=e430]
+            - cell "编码器" [ref=e431]
+            - cell "제어/전기" [ref=e432]
+            - cell "모터 축의 회전 위치를 검출하는 센서. 증분형과 절대값형이 있다." [ref=e433]
+            - cell "편집 삭제" [ref=e434]:
+              - generic [ref=e435]:
+                - button "편집" [ref=e436]
+                - button "삭제" [ref=e437]
+          - row "센서 Sensor 传感器 제어/전기 물리적 상태(위치, 온도, 압력 등)를 전기 신호로 변환하는 검출 장치. 편집 삭제" [ref=e438] [cursor=pointer]:
+            - cell "센서" [ref=e439]
+            - cell "Sensor" [ref=e440]
+            - cell "传感器" [ref=e441]
+            - cell "제어/전기" [ref=e442]
+            - cell "물리적 상태(위치, 온도, 압력 등)를 전기 신호로 변환하는 검출 장치." [ref=e443]
+            - cell "편집 삭제" [ref=e444]:
+              - generic [ref=e445]:
+                - button "편집" [ref=e446]
+                - button "삭제" [ref=e447]
+          - row "인버터 Inverter / VFD 变频器 제어/전기 모터의 회전 속도를 주파수 변환으로 제어하는 장치. 편집 삭제" [ref=e448] [cursor=pointer]:
+            - cell "인버터" [ref=e449]
+            - cell "Inverter / VFD" [ref=e450]
+            - cell "变频器" [ref=e451]
+            - cell "제어/전기" [ref=e452]
+            - cell "모터의 회전 속도를 주파수 변환으로 제어하는 장치." [ref=e453]
+            - cell "편집 삭제" [ref=e454]:
+              - generic [ref=e455]:
+                - button "편집" [ref=e456]
+                - button "삭제" [ref=e457]
+          - row "차단기 Circuit Breaker 断路器 제어/전기 과전류 발생 시 회로를 차단하여 장비를 보호하는 안전 장치. 편집 삭제" [ref=e458] [cursor=pointer]:
+            - cell "차단기" [ref=e459]
+            - cell "Circuit Breaker" [ref=e460]
+            - cell "断路器" [ref=e461]
+            - cell "제어/전기" [ref=e462]
+            - cell "과전류 발생 시 회로를 차단하여 장비를 보호하는 안전 장치." [ref=e463]
+            - cell "편집 삭제" [ref=e464]:
+              - generic [ref=e465]:
+                - button "편집" [ref=e466]
+                - button "삭제" [ref=e467]
+          - row "릴레이 Relay 继电器 제어/전기 전기 신호에 의해 접점을 개폐하는 전자식 스위치. 편집 삭제" [ref=e468] [cursor=pointer]:
+            - cell "릴레이" [ref=e469]
+            - cell "Relay" [ref=e470]
+            - cell "继电器" [ref=e471]
+            - cell "제어/전기" [ref=e472]
+            - cell "전기 신호에 의해 접점을 개폐하는 전자식 스위치." [ref=e473]
+            - cell "편집 삭제" [ref=e474]:
+              - generic [ref=e475]:
+                - button "편집" [ref=e476]
+                - button "삭제" [ref=e477]
+          - row "솔레노이드 Solenoid 电磁铁 제어/전기 전자력으로 밸브를 개폐하는 장치. 공압/유압 밸브 구동에 사용. 편집 삭제" [ref=e478] [cursor=pointer]:
+            - cell "솔레노이드" [ref=e479]
+            - cell "Solenoid" [ref=e480]
+            - cell "电磁铁" [ref=e481]
+            - cell "제어/전기" [ref=e482]
+            - cell "전자력으로 밸브를 개폐하는 장치. 공압/유압 밸브 구동에 사용." [ref=e483]
+            - cell "편집 삭제" [ref=e484]:
+              - generic [ref=e485]:
+                - button "편집" [ref=e486]
+                - button "삭제" [ref=e487]
+          - row "열전대 Thermocouple 热电偶 제어/전기 두 종류의 금속 접합부 온도차에 의한 기전력으로 온도를 측정하는 센서. 편집 삭제" [ref=e488] [cursor=pointer]:
+            - cell "열전대" [ref=e489]
+            - cell "Thermocouple" [ref=e490]
+            - cell "热电偶" [ref=e491]
+            - cell "제어/전기" [ref=e492]
+            - cell "두 종류의 금속 접합부 온도차에 의한 기전력으로 온도를 측정하는 센서." [ref=e493]
+            - cell "편집 삭제" [ref=e494]:
+              - generic [ref=e495]:
+                - button "편집" [ref=e496]
+                - button "삭제" [ref=e497]
+          - row "티칭 Teaching 示教 제어/전기 로봇 또는 서보 축의 작업 위치를 수동으로 설정하고 저장하는 과정. 편집 삭제" [ref=e498] [cursor=pointer]:
+            - cell "티칭" [ref=e499]
+            - cell "Teaching" [ref=e500]
+            - cell "示教" [ref=e501]
+            - cell "제어/전기" [ref=e502]
+            - cell "로봇 또는 서보 축의 작업 위치를 수동으로 설정하고 저장하는 과정." [ref=e503]
+            - cell "편집 삭제" [ref=e504]:
+              - generic [ref=e505]:
+                - button "편집" [ref=e506]
+                - button "삭제" [ref=e507]
+          - row "원점 복귀 Home Return 原点回归 제어/전기 각 서보 축을 기준 원점 위치로 이동시키는 동작. 자동 운전 전 필수 수... 편집 삭제" [ref=e508] [cursor=pointer]:
+            - cell "원점 복귀" [ref=e509]
+            - cell "Home Return" [ref=e510]
+            - cell "原点回归" [ref=e511]
+            - cell "제어/전기" [ref=e512]
+            - cell "각 서보 축을 기준 원점 위치로 이동시키는 동작. 자동 운전 전 필수 수..." [ref=e513]
+            - cell "편집 삭제" [ref=e514]:
+              - generic [ref=e515]:
+                - button "편집" [ref=e516]
+                - button "삭제" [ref=e517]
+          - row "조그 Jog 点动 제어/전기 축을 버튼 누르는 동안만 저속으로 이동시키는 수동 조작 모드. 편집 삭제" [ref=e518] [cursor=pointer]:
+            - cell "조그" [ref=e519]
+            - cell "Jog" [ref=e520]
+            - cell "点动" [ref=e521]
+            - cell "제어/전기" [ref=e522]
+            - cell "축을 버튼 누르는 동안만 저속으로 이동시키는 수동 조작 모드." [ref=e523]
+            - cell "편집 삭제" [ref=e524]:
+              - generic [ref=e525]:
+                - button "편집" [ref=e526]
+                - button "삭제" [ref=e527]
+          - row "제어 패널 Control Panel 控制面板 제어/전기 장비 전면에 위치한 물리 버튼 패널. 비상정지, 운전시작, 리셋 등의 버... 편집 삭제" [ref=e528] [cursor=pointer]:
+            - cell "제어 패널" [ref=e529]
+            - cell "Control Panel" [ref=e530]
+            - cell "控制面板" [ref=e531]
+            - cell "제어/전기" [ref=e532]
+            - cell "장비 전면에 위치한 물리 버튼 패널. 비상정지, 운전시작, 리셋 등의 버..." [ref=e533]
+            - cell "편집 삭제" [ref=e534]:
+              - generic [ref=e535]:
+                - button "편집" [ref=e536]
+                - button "삭제" [ref=e537]
+          - row "UPS UPS (Uninterruptible Power Supply) 不间断电源 제어/전기 정전 시 일시적으로 전원을 공급하여 데이터 손실을 방지하는 무정전 전원장... 편집 삭제" [ref=e538] [cursor=pointer]:
+            - cell "UPS" [ref=e539]
+            - cell "UPS (Uninterruptible Power Supply)" [ref=e540]
+            - cell "不间断电源" [ref=e541]
+            - cell "제어/전기" [ref=e542]
+            - cell "정전 시 일시적으로 전원을 공급하여 데이터 손실을 방지하는 무정전 전원장..." [ref=e543]
+            - cell "편집 삭제" [ref=e544]:
+              - generic [ref=e545]:
+                - button "편집" [ref=e546]
+                - button "삭제" [ref=e547]
+          - row "비상 정지 Emergency Stop (E-Stop) 紧急停止 안전 위험 상황 발생 시 장비의 모든 동작을 즉시 정지시키는 안전 장치. 빨간... 편집 삭제" [ref=e548] [cursor=pointer]:
+            - cell "비상 정지" [ref=e549]
+            - cell "Emergency Stop (E-Stop)" [ref=e550]
+            - cell "紧急停止" [ref=e551]
+            - cell "안전" [ref=e552]
+            - cell "위험 상황 발생 시 장비의 모든 동작을 즉시 정지시키는 안전 장치. 빨간..." [ref=e553]
+            - cell "편집 삭제" [ref=e554]:
+              - generic [ref=e555]:
+                - button "편집" [ref=e556]
+                - button "삭제" [ref=e557]
+          - row "안전도어 Safety Door 安全门 안전 장비 작동 중 작업 영역 접근을 차단하는 보호 도어. 개방 시 자동 정지... 편집 삭제" [ref=e558] [cursor=pointer]:
+            - cell "안전도어" [ref=e559]
+            - cell "Safety Door" [ref=e560]
+            - cell "安全门" [ref=e561]
+            - cell "안전" [ref=e562]
+            - cell "장비 작동 중 작업 영역 접근을 차단하는 보호 도어. 개방 시 자동 정지..." [ref=e563]
+            - cell "편집 삭제" [ref=e564]:
+              - generic [ref=e565]:
+                - button "편집" [ref=e566]
+                - button "삭제" [ref=e567]
+          - row "인터록 Interlock 联锁 안전 특정 조건이 충족되지 않으면 장비 동작을 허용하지 않는 안전 연동 장치. 편집 삭제" [ref=e568] [cursor=pointer]:
+            - cell "인터록" [ref=e569]
+            - cell "Interlock" [ref=e570]
+            - cell "联锁" [ref=e571]
+            - cell "안전" [ref=e572]
+            - cell "특정 조건이 충족되지 않으면 장비 동작을 허용하지 않는 안전 연동 장치." [ref=e573]
+            - cell "편집 삭제" [ref=e574]:
+              - generic [ref=e575]:
+                - button "편집" [ref=e576]
+                - button "삭제" [ref=e577]
+          - row "시그널 램프 Signal Lamp 信号灯 안전 장비 상태를 색상으로 표시. 녹색(정상), 황색(대기/경고), 적색(에러... 편집 삭제" [ref=e578] [cursor=pointer]:
+            - cell "시그널 램프" [ref=e579]
+            - cell "Signal Lamp" [ref=e580]
+            - cell "信号灯" [ref=e581]
+            - cell "안전" [ref=e582]
+            - cell "장비 상태를 색상으로 표시. 녹색(정상), 황색(대기/경고), 적색(에러..." [ref=e583]
+            - cell "편집 삭제" [ref=e584]:
+              - generic [ref=e585]:
+                - button "편집" [ref=e586]
+                - button "삭제" [ref=e587]
+          - row "알람 Alarm 报警 안전 장비 이상 발생 시 경고음 또는 화면 메시지로 작업자에게 알리는 기능. 편집 삭제" [ref=e588] [cursor=pointer]:
+            - cell "알람" [ref=e589]
+            - cell "Alarm" [ref=e590]
+            - cell "报警" [ref=e591]
+            - cell "안전" [ref=e592]
+            - cell "장비 이상 발생 시 경고음 또는 화면 메시지로 작업자에게 알리는 기능." [ref=e593]
+            - cell "편집 삭제" [ref=e594]:
+              - generic [ref=e595]:
+                - button "편집" [ref=e596]
+                - button "삭제" [ref=e597]
+          - row "그리퍼 Gripper 夹爪 기구/기계 로봇 말단에서 인서트를 집어 이송하는 장치. 2jaw, 3jaw 등이 있... 편집 삭제" [ref=e598] [cursor=pointer]:
+            - cell "그리퍼" [ref=e599]
+            - cell "Gripper" [ref=e600]
+            - cell "夹爪" [ref=e601]
+            - cell "기구/기계" [ref=e602]
+            - cell "로봇 말단에서 인서트를 집어 이송하는 장치. 2jaw, 3jaw 등이 있..." [ref=e603]
+            - cell "편집 삭제" [ref=e604]:
+              - generic [ref=e605]:
+                - button "편집" [ref=e606]
+                - button "삭제" [ref=e607]
+          - row "척 Chuck 卡盘 기구/기계 공작물을 고정하는 장치. 유압척, 공압척, 콜렛척 등이 있다. 편집 삭제" [ref=e608] [cursor=pointer]:
+            - cell "척" [ref=e609]
+            - cell "Chuck" [ref=e610]
+            - cell "卡盘" [ref=e611]
+            - cell "기구/기계" [ref=e612]
+            - cell "공작물을 고정하는 장치. 유압척, 공압척, 콜렛척 등이 있다." [ref=e613]
+            - cell "편집 삭제" [ref=e614]:
+              - generic [ref=e615]:
+                - button "편집" [ref=e616]
+                - button "삭제" [ref=e617]
+          - row "콜렛 Collet 夹头 기구/기계 탄성 변형을 이용하여 공구나 공작물을 정밀 고정하는 원통형 부품. 편집 삭제" [ref=e618] [cursor=pointer]:
+            - cell "콜렛" [ref=e619]
+            - cell "Collet" [ref=e620]
+            - cell "夹头" [ref=e621]
+            - cell "기구/기계" [ref=e622]
+            - cell "탄성 변형을 이용하여 공구나 공작물을 정밀 고정하는 원통형 부품." [ref=e623]
+            - cell "편집 삭제" [ref=e624]:
+              - generic [ref=e625]:
+                - button "편집" [ref=e626]
+                - button "삭제" [ref=e627]
+          - row "스핀들 Spindle 主轴 기구/기계 공구 또는 공작물을 회전시키는 주축. 편집 삭제" [ref=e628] [cursor=pointer]:
+            - cell "스핀들" [ref=e629]
+            - cell "Spindle" [ref=e630]
+            - cell "主轴" [ref=e631]
+            - cell "기구/기계" [ref=e632]
+            - cell "공구 또는 공작물을 회전시키는 주축." [ref=e633]
+            - cell "편집 삭제" [ref=e634]:
+              - generic [ref=e635]:
+                - button "편집" [ref=e636]
+                - button "삭제" [ref=e637]
+          - row "실린더 Cylinder 气缸 기구/기계 공압 또는 유압으로 직선 왕복 운동을 하는 구동 장치. 편집 삭제" [ref=e638] [cursor=pointer]:
+            - cell "실린더" [ref=e639]
+            - cell "Cylinder" [ref=e640]
+            - cell "气缸" [ref=e641]
+            - cell "기구/기계" [ref=e642]
+            - cell "공압 또는 유압으로 직선 왕복 운동을 하는 구동 장치." [ref=e643]
+            - cell "편집 삭제" [ref=e644]:
+              - generic [ref=e645]:
+                - button "편집" [ref=e646]
+                - button "삭제" [ref=e647]
+          - row "밸브 Valve 阀 기구/기계 유체(공기, 오일)의 흐름과 방향을 제어하는 장치. 편집 삭제" [ref=e648] [cursor=pointer]:
+            - cell "밸브" [ref=e649]
+            - cell "Valve" [ref=e650]
+            - cell "阀" [ref=e651]
+            - cell "기구/기계" [ref=e652]
+            - cell "유체(공기, 오일)의 흐름과 방향을 제어하는 장치." [ref=e653]
+            - cell "편집 삭제" [ref=e654]:
+              - generic [ref=e655]:
+                - button "편집" [ref=e656]
+                - button "삭제" [ref=e657]
+          - row "벨트 Belt 皮带 기구/기계 동력 전달 또는 이송에 사용되는 무한궤도형 고무/합성 띠. 편집 삭제" [ref=e658] [cursor=pointer]:
+            - cell "벨트" [ref=e659]
+            - cell "Belt" [ref=e660]
+            - cell "皮带" [ref=e661]
+            - cell "기구/기계" [ref=e662]
+            - cell "동력 전달 또는 이송에 사용되는 무한궤도형 고무/합성 띠." [ref=e663]
+            - cell "편집 삭제" [ref=e664]:
+              - generic [ref=e665]:
+                - button "편집" [ref=e666]
+                - button "삭제" [ref=e667]
+          - row "풀리 Pulley 滑轮 기구/기계 벨트를 감아 동력을 전달하는 회전체. 편집 삭제" [ref=e668] [cursor=pointer]:
+            - cell "풀리" [ref=e669]
+            - cell "Pulley" [ref=e670]
+            - cell "滑轮" [ref=e671]
+            - cell "기구/기계" [ref=e672]
+            - cell "벨트를 감아 동력을 전달하는 회전체." [ref=e673]
+            - cell "편집 삭제" [ref=e674]:
+              - generic [ref=e675]:
+                - button "편집" [ref=e676]
+                - button "삭제" [ref=e677]
+          - row "베어링 Bearing 轴承 기구/기계 회전축을 지지하며 마찰을 줄이는 부품. 볼 베어링, 롤러 베어링 등. 편집 삭제" [ref=e678] [cursor=pointer]:
+            - cell "베어링" [ref=e679]
+            - cell "Bearing" [ref=e680]
+            - cell "轴承" [ref=e681]
+            - cell "기구/기계" [ref=e682]
+            - cell "회전축을 지지하며 마찰을 줄이는 부품. 볼 베어링, 롤러 베어링 등." [ref=e683]
+            - cell "편집 삭제" [ref=e684]:
+              - generic [ref=e685]:
+                - button "편집" [ref=e686]
+                - button "삭제" [ref=e687]
+          - row "볼스크류 Ball Screw 滚珠丝杆 기구/기계 볼을 이용하여 회전 운동을 직선 운동으로 변환하는 정밀 이송 장치. 편집 삭제" [ref=e688] [cursor=pointer]:
+            - cell "볼스크류" [ref=e689]
+            - cell "Ball Screw" [ref=e690]
+            - cell "滚珠丝杆" [ref=e691]
+            - cell "기구/기계" [ref=e692]
+            - cell "볼을 이용하여 회전 운동을 직선 운동으로 변환하는 정밀 이송 장치." [ref=e693]
+            - cell "편집 삭제" [ref=e694]:
+              - generic [ref=e695]:
+                - button "편집" [ref=e696]
+                - button "삭제" [ref=e697]
+          - row "LM가이드 LM Guide (Linear Motion Guide) 直线导轨 기구/기계 리니어 볼 베어링을 이용한 직선 이동 안내 장치. 편집 삭제" [ref=e698] [cursor=pointer]:
+            - cell "LM가이드" [ref=e699]
+            - cell "LM Guide (Linear Motion Guide)" [ref=e700]
+            - cell "直线导轨" [ref=e701]
+            - cell "기구/기계" [ref=e702]
+            - cell "리니어 볼 베어링을 이용한 직선 이동 안내 장치." [ref=e703]
+            - cell "편집 삭제" [ref=e704]:
+              - generic [ref=e705]:
+                - button "편집" [ref=e706]
+                - button "삭제" [ref=e707]
+          - row "클램프 Clamp 夹具 기구/기계 공작물이나 부품을 고정하는 장치. 편집 삭제" [ref=e708] [cursor=pointer]:
+            - cell "클램프" [ref=e709]
+            - cell "Clamp" [ref=e710]
+            - cell "夹具" [ref=e711]
+            - cell "기구/기계" [ref=e712]
+            - cell "공작물이나 부품을 고정하는 장치." [ref=e713]
+            - cell "편집 삭제" [ref=e714]:
+              - generic [ref=e715]:
+                - button "편집" [ref=e716]
+                - button "삭제" [ref=e717]
+          - row "지그 Jig 夹具 기구/기계 공작물의 위치를 정확하게 잡아주는 안내 장치. 편집 삭제" [ref=e718] [cursor=pointer]:
+            - cell "지그" [ref=e719]
+            - cell "Jig" [ref=e720]
+            - cell "夹具" [ref=e721]
+            - cell "기구/기계" [ref=e722]
+            - cell "공작물의 위치를 정확하게 잡아주는 안내 장치." [ref=e723]
+            - cell "편집 삭제" [ref=e724]:
+              - generic [ref=e725]:
+                - button "편집" [ref=e726]
+                - button "삭제" [ref=e727]
+          - row "노즐 Nozzle 喷嘴 기구/기계 냉각수, 공기, 윤활유 등을 분사하는 출구 부품. 편집 삭제" [ref=e728] [cursor=pointer]:
+            - cell "노즐" [ref=e729]
+            - cell "Nozzle" [ref=e730]
+            - cell "喷嘴" [ref=e731]
+            - cell "기구/기계" [ref=e732]
+            - cell "냉각수, 공기, 윤활유 등을 분사하는 출구 부품." [ref=e733]
+            - cell "편집 삭제" [ref=e734]:
+              - generic [ref=e735]:
+                - button "편집" [ref=e736]
+                - button "삭제" [ref=e737]
+          - row "그리스 Grease 润滑脂 기구/기계 베어링, LM가이드 등 마찰 부위에 도포하는 반고체 윤활제. 편집 삭제" [ref=e738] [cursor=pointer]:
+            - cell "그리스" [ref=e739]
+            - cell "Grease" [ref=e740]
+            - cell "润滑脂" [ref=e741]
+            - cell "기구/기계" [ref=e742]
+            - cell "베어링, LM가이드 등 마찰 부위에 도포하는 반고체 윤활제." [ref=e743]
+            - cell "편집 삭제" [ref=e744]:
+              - generic [ref=e745]:
+                - button "편집" [ref=e746]
+                - button "삭제" [ref=e747]
+          - 'row "공압 Pneumatic 气动 기구/기계 압축 공기를 이용하여 실린더, 밸브 등을 구동하는 시스템. 공급 압력: ... 편집 삭제" [ref=e748] [cursor=pointer]':
+            - cell "공압" [ref=e749]
+            - cell "Pneumatic" [ref=e750]
+            - cell "气动" [ref=e751]
+            - cell "기구/기계" [ref=e752]
+            - 'cell "압축 공기를 이용하여 실린더, 밸브 등을 구동하는 시스템. 공급 압력: ..." [ref=e753]'
+            - cell "편집 삭제" [ref=e754]:
+              - generic [ref=e755]:
+                - button "편집" [ref=e756]
+                - button "삭제" [ref=e757]
+          - row "레귤레이터 Regulator 调压阀 기구/기계 공급 압력을 일정하게 조절하는 장치. 편집 삭제" [ref=e758] [cursor=pointer]:
+            - cell "레귤레이터" [ref=e759]
+            - cell "Regulator" [ref=e760]
+            - cell "调压阀" [ref=e761]
+            - cell "기구/기계" [ref=e762]
+            - cell "공급 압력을 일정하게 조절하는 장치." [ref=e763]
+            - cell "편집 삭제" [ref=e764]:
+              - generic [ref=e765]:
+                - button "편집" [ref=e766]
+                - button "삭제" [ref=e767]
+          - row "진공 Vacuum 真空 기구/기계 대기압보다 낮은 압력 상태. 흡착 패드, 코팅 챔버 등에 사용. 편집 삭제" [ref=e768] [cursor=pointer]:
+            - cell "진공" [ref=e769]
+            - cell "Vacuum" [ref=e770]
+            - cell "真空" [ref=e771]
+            - cell "기구/기계" [ref=e772]
+            - cell "대기압보다 낮은 압력 상태. 흡착 패드, 코팅 챔버 등에 사용." [ref=e773]
+            - cell "편집 삭제" [ref=e774]:
+              - generic [ref=e775]:
+                - button "편집" [ref=e776]
+                - button "삭제" [ref=e777]
+          - row "이젝터 Ejector 真空发生器 기구/기계 압축 공기를 이용하여 진공을 발생시키는 장치. 편집 삭제" [ref=e778] [cursor=pointer]:
+            - cell "이젝터" [ref=e779]
+            - cell "Ejector" [ref=e780]
+            - cell "真空发生器" [ref=e781]
+            - cell "기구/기계" [ref=e782]
+            - cell "압축 공기를 이용하여 진공을 발생시키는 장치." [ref=e783]
+            - cell "편집 삭제" [ref=e784]:
+              - generic [ref=e785]:
+                - button "편집" [ref=e786]
+                - button "삭제" [ref=e787]
+          - row "흡착패드 Vacuum Pad 真空吸盘 기구/기계 진공 흡착력으로 제품을 들어올리는 고무 패드. 편집 삭제" [ref=e788] [cursor=pointer]:
+            - cell "흡착패드" [ref=e789]
+            - cell "Vacuum Pad" [ref=e790]
+            - cell "真空吸盘" [ref=e791]
+            - cell "기구/기계" [ref=e792]
+            - cell "진공 흡착력으로 제품을 들어올리는 고무 패드." [ref=e793]
+            - cell "편집 삭제" [ref=e794]:
+              - generic [ref=e795]:
+                - button "편집" [ref=e796]
+                - button "삭제" [ref=e797]
+          - row "초경합금 Cemented Carbide 硬质合金 소재/부품 텅스텐 카바이드(WC)와 코발트(Co) 등을 소결한 고경도 합금. 절삭공... 편집 삭제" [ref=e798] [cursor=pointer]:
+            - cell "초경합금" [ref=e799]
+            - cell "Cemented Carbide" [ref=e800]
+            - cell "硬质合金" [ref=e801]
+            - cell "소재/부품" [ref=e802]
+            - cell "텅스텐 카바이드(WC)와 코발트(Co) 등을 소결한 고경도 합금. 절삭공..." [ref=e803]
+            - cell "편집 삭제" [ref=e804]:
+              - generic [ref=e805]:
+                - button "편집" [ref=e806]
+                - button "삭제" [ref=e807]
+          - row "인서트 Insert 刀片 소재/부품 절삭공구의 교체 가능한 절삭 팁. 초경합금 기재에 PVD/CVD 코팅을 ... 편집 삭제" [ref=e808] [cursor=pointer]:
+            - cell "인서트" [ref=e809]
+            - cell "Insert" [ref=e810]
+            - cell "刀片" [ref=e811]
+            - cell "소재/부품" [ref=e812]
+            - cell "절삭공구의 교체 가능한 절삭 팁. 초경합금 기재에 PVD/CVD 코팅을 ..." [ref=e813]
+            - cell "편집 삭제" [ref=e814]:
+              - generic [ref=e815]:
+                - button "편집" [ref=e816]
+                - button "삭제" [ref=e817]
+          - row "텅스텐 Tungsten (W) 钨 소재/부품 원자번호 74. 융점이 가장 높은 금속. 초경합금(WC)의 주요 원소. 편집 삭제" [ref=e818] [cursor=pointer]:
+            - cell "텅스텐" [ref=e819]
+            - cell "Tungsten (W)" [ref=e820]
+            - cell "钨" [ref=e821]
+            - cell "소재/부품" [ref=e822]
+            - cell "원자번호 74. 융점이 가장 높은 금속. 초경합금(WC)의 주요 원소." [ref=e823]
+            - cell "편집 삭제" [ref=e824]:
+              - generic [ref=e825]:
+                - button "편집" [ref=e826]
+                - button "삭제" [ref=e827]
+          - row "코발트 Cobalt (Co) 钴 소재/부품 초경합금에서 WC 입자를 결합시키는 바인더 금속. 편집 삭제" [ref=e828] [cursor=pointer]:
+            - cell "코발트" [ref=e829]
+            - cell "Cobalt (Co)" [ref=e830]
+            - cell "钴" [ref=e831]
+            - cell "소재/부품" [ref=e832]
+            - cell "초경합금에서 WC 입자를 결합시키는 바인더 금속." [ref=e833]
+            - cell "편집 삭제" [ref=e834]:
+              - generic [ref=e835]:
+                - button "편집" [ref=e836]
+                - button "삭제" [ref=e837]
+          - row "서멧 Cermet 金属陶瓷 소재/부품 세라믹과 금속의 복합재료. TiCN 기반 인서트에 사용. 편집 삭제" [ref=e838] [cursor=pointer]:
+            - cell "서멧" [ref=e839]
+            - cell "Cermet" [ref=e840]
+            - cell "金属陶瓷" [ref=e841]
+            - cell "소재/부품" [ref=e842]
+            - cell "세라믹과 금속의 복합재료. TiCN 기반 인서트에 사용." [ref=e843]
+            - cell "편집 삭제" [ref=e844]:
+              - generic [ref=e845]:
+                - button "편집" [ref=e846]
+                - button "삭제" [ref=e847]
+          - row "다이아몬드 Diamond 金刚石 소재/부품 가장 경도가 높은 물질. PCD(다결정 다이아몬드) 공구 또는 연삭 휠에... 편집 삭제" [ref=e848] [cursor=pointer]:
+            - cell "다이아몬드" [ref=e849]
+            - cell "Diamond" [ref=e850]
+            - cell "金刚石" [ref=e851]
+            - cell "소재/부품" [ref=e852]
+            - cell "가장 경도가 높은 물질. PCD(다결정 다이아몬드) 공구 또는 연삭 휠에..." [ref=e853]
+            - cell "편집 삭제" [ref=e854]:
+              - generic [ref=e855]:
+                - button "편집" [ref=e856]
+                - button "삭제" [ref=e857]
+          - row "CBN CBN (Cubic Boron Nitride) 立方氮化硼 소재/부품 다이아몬드 다음으로 경도가 높은 물질. 고경도 가공용 공구에 사용. 편집 삭제" [ref=e858] [cursor=pointer]:
+            - cell "CBN" [ref=e859]
+            - cell "CBN (Cubic Boron Nitride)" [ref=e860]
+            - cell "立方氮化硼" [ref=e861]
+            - cell "소재/부품" [ref=e862]
+            - cell "다이아몬드 다음으로 경도가 높은 물질. 고경도 가공용 공구에 사용." [ref=e863]
+            - cell "편집 삭제" [ref=e864]:
+              - generic [ref=e865]:
+                - button "편집" [ref=e866]
+                - button "삭제" [ref=e867]
+          - row "소모품 Consumable Parts 消耗品 소재/부품 정기적으로 교체가 필요한 부품. 그리퍼 패드, O링, 필터, 벨트 등. 편집 삭제" [ref=e868] [cursor=pointer]:
+            - cell "소모품" [ref=e869]
+            - cell "Consumable Parts" [ref=e870]
+            - cell "消耗品" [ref=e871]
+            - cell "소재/부품" [ref=e872]
+            - cell "정기적으로 교체가 필요한 부품. 그리퍼 패드, O링, 필터, 벨트 등." [ref=e873]
+            - cell "편집 삭제" [ref=e874]:
+              - generic [ref=e875]:
+                - button "편집" [ref=e876]
+                - button "삭제" [ref=e877]
+          - row "O링 O-Ring O形圈 소재/부품 단면이 원형인 고무 밀봉 부품. 공압/진공 기밀 유지에 사용. 편집 삭제" [ref=e878] [cursor=pointer]:
+            - cell "O링" [ref=e879]
+            - cell "O-Ring" [ref=e880]
+            - cell "O形圈" [ref=e881]
+            - cell "소재/부품" [ref=e882]
+            - cell "단면이 원형인 고무 밀봉 부품. 공압/진공 기밀 유지에 사용." [ref=e883]
+            - cell "편집 삭제" [ref=e884]:
+              - generic [ref=e885]:
+                - button "편집" [ref=e886]
+                - button "삭제" [ref=e887]
+          - row "연삭 Grinding 研磨 공정 연삭 휠을 이용하여 초경합금 인서트를 정밀 가공하는 공정. 편집 삭제" [ref=e888] [cursor=pointer]:
+            - cell "연삭" [ref=e889]
+            - cell "Grinding" [ref=e890]
+            - cell "研磨" [ref=e891]
+            - cell "공정" [ref=e892]
+            - cell "연삭 휠을 이용하여 초경합금 인서트를 정밀 가공하는 공정." [ref=e893]
+            - cell "편집 삭제" [ref=e894]:
+              - generic [ref=e895]:
+                - button "편집" [ref=e896]
+                - button "삭제" [ref=e897]
+          - row "호닝 Honing 珩磨 공정 인서트 절삭날에 미세한 라운드를 형성하여 칩핑을 방지하는 공정. 편집 삭제" [ref=e898] [cursor=pointer]:
+            - cell "호닝" [ref=e899]
+            - cell "Honing" [ref=e900]
+            - cell "珩磨" [ref=e901]
+            - cell "공정" [ref=e902]
+            - cell "인서트 절삭날에 미세한 라운드를 형성하여 칩핑을 방지하는 공정." [ref=e903]
+            - cell "편집 삭제" [ref=e904]:
+              - generic [ref=e905]:
+                - button "편집" [ref=e906]
+                - button "삭제" [ref=e907]
+          - row "소결 Sintering 烧结 공정 분말 재료를 고온·고압으로 압축하여 고체를 형성하는 공정. 초경합금 제조... 편집 삭제" [ref=e908] [cursor=pointer]:
+            - cell "소결" [ref=e909]
+            - cell "Sintering" [ref=e910]
+            - cell "烧结" [ref=e911]
+            - cell "공정" [ref=e912]
+            - cell "분말 재료를 고온·고압으로 압축하여 고체를 형성하는 공정. 초경합금 제조..." [ref=e913]
+            - cell "편집 삭제" [ref=e914]:
+              - generic [ref=e915]:
+                - button "편집" [ref=e916]
+                - button "삭제" [ref=e917]
+          - row "프레스 Press 压机 공정 분말을 금형에 넣고 압축하여 성형체(그린바디)를 만드는 공정 및 장비. 편집 삭제" [ref=e918] [cursor=pointer]:
+            - cell "프레스" [ref=e919]
+            - cell "Press" [ref=e920]
+            - cell "压机" [ref=e921]
+            - cell "공정" [ref=e922]
+            - cell "분말을 금형에 넣고 압축하여 성형체(그린바디)를 만드는 공정 및 장비." [ref=e923]
+            - cell "편집 삭제" [ref=e924]:
+              - generic [ref=e925]:
+                - button "편집" [ref=e926]
+                - button "삭제" [ref=e927]
+          - row "폴리싱 Polishing 抛光 공정 표면을 매끄럽게 연마하여 경면 상태로 만드는 공정. 편집 삭제" [ref=e928] [cursor=pointer]:
+            - cell "폴리싱" [ref=e929]
+            - cell "Polishing" [ref=e930]
+            - cell "抛光" [ref=e931]
+            - cell "공정" [ref=e932]
+            - cell "표면을 매끄럽게 연마하여 경면 상태로 만드는 공정." [ref=e933]
+            - cell "편집 삭제" [ref=e934]:
+              - generic [ref=e935]:
+                - button "편집" [ref=e936]
+                - button "삭제" [ref=e937]
+          - row "래핑 Lapping 研磨 공정 연마재를 이용하여 고정밀 평면을 가공하는 공정. 편집 삭제" [ref=e938] [cursor=pointer]:
+            - cell "래핑" [ref=e939]
+            - cell "Lapping" [ref=e940]
+            - cell "研磨" [ref=e941]
+            - cell "공정" [ref=e942]
+            - cell "연마재를 이용하여 고정밀 평면을 가공하는 공정." [ref=e943]
+            - cell "편집 삭제" [ref=e944]:
+              - generic [ref=e945]:
+                - button "편집" [ref=e946]
+                - button "삭제" [ref=e947]
+          - row "마킹 Marking 标记 공정 인서트 표면에 제품 정보(모델명, LOT 번호 등)를 각인하는 공정. 편집 삭제" [ref=e948] [cursor=pointer]:
+            - cell "마킹" [ref=e949]
+            - cell "Marking" [ref=e950]
+            - cell "标记" [ref=e951]
+            - cell "공정" [ref=e952]
+            - cell "인서트 표면에 제품 정보(모델명, LOT 번호 등)를 각인하는 공정." [ref=e953]
+            - cell "편집 삭제" [ref=e954]:
+              - generic [ref=e955]:
+                - button "편집" [ref=e956]
+                - button "삭제" [ref=e957]
+          - row "레이저 마킹 Laser Marking 激光标记 공정 레이저 빔으로 인서트 표면에 문자, 코드를 각인하는 비접촉 마킹 공정. 편집 삭제" [ref=e958] [cursor=pointer]:
+            - cell "레이저 마킹" [ref=e959]
+            - cell "Laser Marking" [ref=e960]
+            - cell "激光标记" [ref=e961]
+            - cell "공정" [ref=e962]
+            - cell "레이저 빔으로 인서트 표면에 문자, 코드를 각인하는 비접촉 마킹 공정." [ref=e963]
+            - cell "편집 삭제" [ref=e964]:
+              - generic [ref=e965]:
+                - button "편집" [ref=e966]
+                - button "삭제" [ref=e967]
+          - row "패킹 Packing 包装 공정 완제품 인서트를 블리스터 또는 박스에 포장하는 최종 공정. 편집 삭제" [ref=e968] [cursor=pointer]:
+            - cell "패킹" [ref=e969]
+            - cell "Packing" [ref=e970]
+            - cell "包装" [ref=e971]
+            - cell "공정" [ref=e972]
+            - cell "완제품 인서트를 블리스터 또는 박스에 포장하는 최종 공정." [ref=e973]
+            - cell "편집 삭제" [ref=e974]:
+              - generic [ref=e975]:
+                - button "편집" [ref=e976]
+                - button "삭제" [ref=e977]
+          - row "어닐링 Annealing 退火 공정 가열 후 서서히 냉각하여 재료의 내부 응력을 제거하고 조직을 안정화하는 ... 편집 삭제" [ref=e978] [cursor=pointer]:
+            - cell "어닐링" [ref=e979]
+            - cell "Annealing" [ref=e980]
+            - cell "退火" [ref=e981]
+            - cell "공정" [ref=e982]
+            - cell "가열 후 서서히 냉각하여 재료의 내부 응력을 제거하고 조직을 안정화하는 ..." [ref=e983]
+            - cell "편집 삭제" [ref=e984]:
+              - generic [ref=e985]:
+                - button "편집" [ref=e986]
+                - button "삭제" [ref=e987]
+          - row "로봇 Robot 机器人 로봇/자동화 인서트 이송, 적재, 검사 등 반복 작업을 자동 수행하는 산업용 다관절 ... 편집 삭제" [ref=e988] [cursor=pointer]:
+            - cell "로봇" [ref=e989]
+            - cell "Robot" [ref=e990]
+            - cell "机器人" [ref=e991]
+            - cell "로봇/자동화" [ref=e992]
+            - cell "인서트 이송, 적재, 검사 등 반복 작업을 자동 수행하는 산업용 다관절 ..." [ref=e993]
+            - cell "편집 삭제" [ref=e994]:
+              - generic [ref=e995]:
+                - button "편집" [ref=e996]
+                - button "삭제" [ref=e997]
+          - row "핸들러 Handler 搬运机 로봇/자동화 프레스, 검사기 등에서 인서트를 공급·배출하는 자동화 장치. 편집 삭제" [ref=e998] [cursor=pointer]:
+            - cell "핸들러" [ref=e999]
+            - cell "Handler" [ref=e1000]
+            - cell "搬运机" [ref=e1001]
+            - cell "로봇/자동화" [ref=e1002]
+            - cell "프레스, 검사기 등에서 인서트를 공급·배출하는 자동화 장치." [ref=e1003]
+            - cell "편집 삭제" [ref=e1004]:
+              - generic [ref=e1005]:
+                - button "편집" [ref=e1006]
+                - button "삭제" [ref=e1007]
+          - row "로더 Loader 装载机 로봇/자동화 장비에 인서트 또는 팔레트를 자동 투입하는 장치. 편집 삭제" [ref=e1008] [cursor=pointer]:
+            - cell "로더" [ref=e1009]
+            - cell "Loader" [ref=e1010]
+            - cell "装载机" [ref=e1011]
+            - cell "로봇/자동화" [ref=e1012]
+            - cell "장비에 인서트 또는 팔레트를 자동 투입하는 장치." [ref=e1013]
+            - cell "편집 삭제" [ref=e1014]:
+              - generic [ref=e1015]:
+                - button "편집" [ref=e1016]
+                - button "삭제" [ref=e1017]
+          - row "언로더 Unloader 卸载机 로봇/자동화 장비에서 인서트 또는 팔레트를 자동 배출하는 장치. 편집 삭제" [ref=e1018] [cursor=pointer]:
+            - cell "언로더" [ref=e1019]
+            - cell "Unloader" [ref=e1020]
+            - cell "卸载机" [ref=e1021]
+            - cell "로봇/자동화" [ref=e1022]
+            - cell "장비에서 인서트 또는 팔레트를 자동 배출하는 장치." [ref=e1023]
+            - cell "편집 삭제" [ref=e1024]:
+              - generic [ref=e1025]:
+                - button "편집" [ref=e1026]
+                - button "삭제" [ref=e1027]
+          - row "소터 Sorter 分选机 로봇/자동화 인서트를 품종, 등급별로 자동 분류하는 장치. 편집 삭제" [ref=e1028] [cursor=pointer]:
+            - cell "소터" [ref=e1029]
+            - cell "Sorter" [ref=e1030]
+            - cell "分选机" [ref=e1031]
+            - cell "로봇/자동화" [ref=e1032]
+            - cell "인서트를 품종, 등급별로 자동 분류하는 장치." [ref=e1033]
+            - cell "편집 삭제" [ref=e1034]:
+              - generic [ref=e1035]:
+                - button "편집" [ref=e1036]
+                - button "삭제" [ref=e1037]
+          - row "리팔레팅 Re-palleting 重新装盘 로봇/자동화 코팅 완료된 인서트를 팔레트에서 꺼내 다른 용기에 재배열하는 공정. 편집 삭제" [ref=e1038] [cursor=pointer]:
+            - cell "리팔레팅" [ref=e1039]
+            - cell "Re-palleting" [ref=e1040]
+            - cell "重新装盘" [ref=e1041]
+            - cell "로봇/자동화" [ref=e1042]
+            - cell "코팅 완료된 인서트를 팔레트에서 꺼내 다른 용기에 재배열하는 공정." [ref=e1043]
+            - cell "편집 삭제" [ref=e1044]:
+              - generic [ref=e1045]:
+                - button "편집" [ref=e1046]
+                - button "삭제" [ref=e1047]
+          - row "LOT LOT (Lot Number) 批号 로봇/자동화 동일 조건에서 생산된 제품의 묶음 단위 번호. 이력 추적에 사용. 편집 삭제" [ref=e1048] [cursor=pointer]:
+            - cell "LOT" [ref=e1049]
+            - cell "LOT (Lot Number)" [ref=e1050]
+            - cell "批号" [ref=e1051]
+            - cell "로봇/자동화" [ref=e1052]
+            - cell "동일 조건에서 생산된 제품의 묶음 단위 번호. 이력 추적에 사용." [ref=e1053]
+            - cell "편집 삭제" [ref=e1054]:
+              - generic [ref=e1055]:
+                - button "편집" [ref=e1056]
+                - button "삭제" [ref=e1057]
+          - row "트레이서빌리티 Traceability 追溯性 로봇/자동화 제품의 원재료부터 출하까지 전 공정 이력을 추적할 수 있는 체계. 편집 삭제" [ref=e1058] [cursor=pointer]:
+            - cell "트레이서빌리티" [ref=e1059]
+            - cell "Traceability" [ref=e1060]
+            - cell "追溯性" [ref=e1061]
+            - cell "로봇/자동화" [ref=e1062]
+            - cell "제품의 원재료부터 출하까지 전 공정 이력을 추적할 수 있는 체계." [ref=e1063]
+            - cell "편집 삭제" [ref=e1064]:
+              - generic [ref=e1065]:
+                - button "편집" [ref=e1066]
+                - button "삭제" [ref=e1067]
+          - row "바코드 Barcode 条形码 로봇/자동화 제품 식별을 위한 선형 또는 2차원 코드. 스캐너로 읽어 이력을 관리. 편집 삭제" [ref=e1068] [cursor=pointer]:
+            - cell "바코드" [ref=e1069]
+            - cell "Barcode" [ref=e1070]
+            - cell "条形码" [ref=e1071]
+            - cell "로봇/자동화" [ref=e1072]
+            - cell "제품 식별을 위한 선형 또는 2차원 코드. 스캐너로 읽어 이력을 관리." [ref=e1073]
+            - cell "편집 삭제" [ref=e1074]:
+              - generic [ref=e1075]:
+                - button "편집" [ref=e1076]
+                - button "삭제" [ref=e1077]
+          - row "사이클 타임 Cycle Time 循环时间 로봇/자동화 한 개 제품의 가공/검사/이송에 소요되는 시간. 편집 삭제" [ref=e1078] [cursor=pointer]:
+            - cell "사이클 타임" [ref=e1079]
+            - cell "Cycle Time" [ref=e1080]
+            - cell "循环时间" [ref=e1081]
+            - cell "로봇/자동화" [ref=e1082]
+            - cell "한 개 제품의 가공/검사/이송에 소요되는 시간." [ref=e1083]
+            - cell "편집 삭제" [ref=e1084]:
+              - generic [ref=e1085]:
+                - button "편집" [ref=e1086]
+                - button "삭제" [ref=e1087]
+          - row "이더넷 Ethernet 以太网 통신/네트워크 산업용 장비 간 데이터 통신에 사용되는 표준 네트워크 프로토콜. 편집 삭제" [ref=e1088] [cursor=pointer]:
+            - cell "이더넷" [ref=e1089]
+            - cell "Ethernet" [ref=e1090]
+            - cell "以太网" [ref=e1091]
+            - cell "통신/네트워크" [ref=e1092]
+            - cell "산업용 장비 간 데이터 통신에 사용되는 표준 네트워크 프로토콜." [ref=e1093]
+            - cell "편집 삭제" [ref=e1094]:
+              - generic [ref=e1095]:
+                - button "편집" [ref=e1096]
+                - button "삭제" [ref=e1097]
+          - row "CC-Link CC-Link CC-Link 통신/네트워크 미쓰비시 전기 개발 산업용 필드버스 네트워크. PLC와 I/O 모듈 간 ... 편집 삭제" [ref=e1098] [cursor=pointer]:
+            - cell "CC-Link" [ref=e1099]
+            - cell "CC-Link" [ref=e1100]
+            - cell "CC-Link" [ref=e1101]
+            - cell "통신/네트워크" [ref=e1102]
+            - cell "미쓰비시 전기 개발 산업용 필드버스 네트워크. PLC와 I/O 모듈 간 ..." [ref=e1103]
+            - cell "편집 삭제" [ref=e1104]:
+              - generic [ref=e1105]:
+                - button "편집" [ref=e1106]
+                - button "삭제" [ref=e1107]
+          - row "RS-232 RS-232 RS-232 통신/네트워크 직렬 통신 표준. 장비와 PC 간 1:1 통신에 사용. 최대 15m. 편집 삭제" [ref=e1108] [cursor=pointer]:
+            - cell "RS-232" [ref=e1109]
+            - cell "RS-232" [ref=e1110]
+            - cell "RS-232" [ref=e1111]
+            - cell "통신/네트워크" [ref=e1112]
+            - cell "직렬 통신 표준. 장비와 PC 간 1:1 통신에 사용. 최대 15m." [ref=e1113]
+            - cell "편집 삭제" [ref=e1114]:
+              - generic [ref=e1115]:
+                - button "편집" [ref=e1116]
+                - button "삭제" [ref=e1117]
+          - row "RS-485 RS-485 RS-485 통신/네트워크 다중 드롭 직렬 통신 표준. 장거리(최대 1,200m), 다수 장치 연결... 편집 삭제" [ref=e1118] [cursor=pointer]:
+            - cell "RS-485" [ref=e1119]
+            - cell "RS-485" [ref=e1120]
+            - cell "RS-485" [ref=e1121]
+            - cell "통신/네트워크" [ref=e1122]
+            - cell "다중 드롭 직렬 통신 표준. 장거리(최대 1,200m), 다수 장치 연결..." [ref=e1123]
+            - cell "편집 삭제" [ref=e1124]:
+              - generic [ref=e1125]:
+                - button "편집" [ref=e1126]
+                - button "삭제" [ref=e1127]
+          - row "부적합 Non-Conformance (NC) 不合格 품질/관리 제품 또는 공정이 규정된 요구 사항을 충족하지 못하는 상태. 편집 삭제" [ref=e1128] [cursor=pointer]:
+            - cell "부적합" [ref=e1129]
+            - cell "Non-Conformance (NC)" [ref=e1130]
+            - cell "不合格" [ref=e1131]
+            - cell "품질/관리" [ref=e1132]
+            - cell "제품 또는 공정이 규정된 요구 사항을 충족하지 못하는 상태." [ref=e1133]
+            - cell "편집 삭제" [ref=e1134]:
+              - generic [ref=e1135]:
+                - button "편집" [ref=e1136]
+                - button "삭제" [ref=e1137]
+          - row "불량 Defect 缺陷 품질/관리 인서트의 외관, 치수, 코팅 등이 품질 기준에 미달하는 상태. 편집 삭제" [ref=e1138] [cursor=pointer]:
+            - cell "불량" [ref=e1139]
+            - cell "Defect" [ref=e1140]
+            - cell "缺陷" [ref=e1141]
+            - cell "품질/관리" [ref=e1142]
+            - cell "인서트의 외관, 치수, 코팅 등이 품질 기준에 미달하는 상태." [ref=e1143]
+            - cell "편집 삭제" [ref=e1144]:
+              - generic [ref=e1145]:
+                - button "편집" [ref=e1146]
+                - button "삭제" [ref=e1147]
+          - row "정기 점검 Periodic Maintenance 定期检查 품질/관리 장비의 성능과 수명을 유지하기 위해 일정 주기로 수행하는 점검 활동. 편집 삭제" [ref=e1148] [cursor=pointer]:
+            - cell "정기 점검" [ref=e1149]
+            - cell "Periodic Maintenance" [ref=e1150]
+            - cell "定期检查" [ref=e1151]
+            - cell "품질/관리" [ref=e1152]
+            - cell "장비의 성능과 수명을 유지하기 위해 일정 주기로 수행하는 점검 활동." [ref=e1153]
+            - cell "편집 삭제" [ref=e1154]:
+              - generic [ref=e1155]:
+                - button "편집" [ref=e1156]
+                - button "삭제" [ref=e1157]
+          - row "유지보수 Maintenance 维护 품질/관리 장비의 정상 작동을 유지하기 위한 점검, 수리, 부품 교체 등의 활동. 편집 삭제" [ref=e1158] [cursor=pointer]:
+            - cell "유지보수" [ref=e1159]
+            - cell "Maintenance" [ref=e1160]
+            - cell "维护" [ref=e1161]
+            - cell "품질/관리" [ref=e1162]
+            - cell "장비의 정상 작동을 유지하기 위한 점검, 수리, 부품 교체 등의 활동." [ref=e1163]
+            - cell "편집 삭제" [ref=e1164]:
+              - generic [ref=e1165]:
+                - button "편집" [ref=e1166]
+                - button "삭제" [ref=e1167]
+          - row "출하검사 Final Inspection 出货检查 품질/관리 제품 출하 전 최종 품질 확인을 위해 수행하는 검사. 편집 삭제" [ref=e1168] [cursor=pointer]:
+            - cell "출하검사" [ref=e1169]
+            - cell "Final Inspection" [ref=e1170]
+            - cell "出货检查" [ref=e1171]
+            - cell "품질/관리" [ref=e1172]
+            - cell "제품 출하 전 최종 품질 확인을 위해 수행하는 검사." [ref=e1173]
+            - cell "편집 삭제" [ref=e1174]:
+              - generic [ref=e1175]:
+                - button "편집" [ref=e1176]
+                - button "삭제" [ref=e1177]
+          - row "SPC SPC (Statistical Process Control) 统计过程控制 품질/관리 통계적 기법을 이용하여 공정의 변동을 모니터링하고 관리하는 품질 관리 방... 편집 삭제" [ref=e1178] [cursor=pointer]:
+            - cell "SPC" [ref=e1179]
+            - cell "SPC (Statistical Process Control)" [ref=e1180]
+            - cell "统计过程控制" [ref=e1181]
+            - cell "품질/관리" [ref=e1182]
+            - cell "통계적 기법을 이용하여 공정의 변동을 모니터링하고 관리하는 품질 관리 방..." [ref=e1183]
+            - cell "편집 삭제" [ref=e1184]:
+              - generic [ref=e1185]:
+                - button "편집" [ref=e1186]
+                - button "삭제" [ref=e1187]
+          - row "미쓰비시 Mitsubishi Electric 三菱电机 제조사/브랜드 일본 전기/자동화 기업. WTA 장비의 PLC(MELSEC), HMI(G... 편집 삭제" [ref=e1188] [cursor=pointer]:
+            - cell "미쓰비시" [ref=e1189]
+            - cell "Mitsubishi Electric" [ref=e1190]
+            - cell "三菱电机" [ref=e1191]
+            - cell "제조사/브랜드" [ref=e1192]
+            - cell "일본 전기/자동화 기업. WTA 장비의 PLC(MELSEC), HMI(G..." [ref=e1193]
+            - cell "편집 삭제" [ref=e1194]:
+              - generic [ref=e1195]:
+                - button "편집" [ref=e1196]
+                - button "삭제" [ref=e1197]
+          - row "MELSEC MELSEC MELSEC 제조사/브랜드 미쓰비시 전기의 PLC 브랜드. iQ-R, FX 시리즈 등. WTA 장비... 편집 삭제" [ref=e1198] [cursor=pointer]:
+            - cell "MELSEC" [ref=e1199]
+            - cell "MELSEC" [ref=e1200]
+            - cell "MELSEC" [ref=e1201]
+            - cell "제조사/브랜드" [ref=e1202]
+            - cell "미쓰비시 전기의 PLC 브랜드. iQ-R, FX 시리즈 등. WTA 장비..." [ref=e1203]
+            - cell "편집 삭제" [ref=e1204]:
+              - generic [ref=e1205]:
+                - button "편집" [ref=e1206]
+                - button "삭제" [ref=e1207]
+          - row "GOT GOT (Graphic Operation Terminal) GOT 제조사/브랜드 미쓰비시 전기의 HMI 터치스크린 브랜드. GT Designer로 화면 ... 편집 삭제" [ref=e1208] [cursor=pointer]:
+            - cell "GOT" [ref=e1209]
+            - cell "GOT (Graphic Operation Terminal)" [ref=e1210]
+            - cell "GOT" [ref=e1211]
+            - cell "제조사/브랜드" [ref=e1212]
+            - cell "미쓰비시 전기의 HMI 터치스크린 브랜드. GT Designer로 화면 ..." [ref=e1213]
+            - cell "편집 삭제" [ref=e1214]:
+              - generic [ref=e1215]:
+                - button "편집" [ref=e1216]
+                - button "삭제" [ref=e1217]
+          - row "GX Works GX Works GX Works 제조사/브랜드 미쓰비시 MELSEC PLC의 프로그래밍 소프트웨어. 편집 삭제" [ref=e1218] [cursor=pointer]:
+            - cell "GX Works" [ref=e1219]
+            - cell "GX Works" [ref=e1220]
+            - cell "GX Works" [ref=e1221]
+            - cell "제조사/브랜드" [ref=e1222]
+            - cell "미쓰비시 MELSEC PLC의 프로그래밍 소프트웨어." [ref=e1223]
+            - cell "편집 삭제" [ref=e1224]:
+              - generic [ref=e1225]:
+                - button "편집" [ref=e1226]
+                - button "삭제" [ref=e1227]
+          - row "키엔스 Keyence 基恩士 제조사/브랜드 일본 센서/비전/측정 전문 기업. WTA 검사기에 비전 시스템 공급. 편집 삭제" [ref=e1228] [cursor=pointer]:
+            - cell "키엔스" [ref=e1229]
+            - cell "Keyence" [ref=e1230]
+            - cell "基恩士" [ref=e1231]
+            - cell "제조사/브랜드" [ref=e1232]
+            - cell "일본 센서/비전/측정 전문 기업. WTA 검사기에 비전 시스템 공급." [ref=e1233]
+            - cell "편집 삭제" [ref=e1234]:
+              - generic [ref=e1235]:
+                - button "편집" [ref=e1236]
+                - button "삭제" [ref=e1237]
+          - row "SMC SMC Corporation SMC 제조사/브랜드 일본 공압 기기 전문 기업. 실린더, 밸브, 이젝터 등 공압 부품 공급. 편집 삭제" [ref=e1238] [cursor=pointer]:
+            - cell "SMC" [ref=e1239]
+            - cell "SMC Corporation" [ref=e1240]
+            - cell "SMC" [ref=e1241]
+            - cell "제조사/브랜드" [ref=e1242]
+            - cell "일본 공압 기기 전문 기업. 실린더, 밸브, 이젝터 등 공압 부품 공급." [ref=e1243]
+            - cell "편집 삭제" [ref=e1244]:
+              - generic [ref=e1245]:
+                - button "편집" [ref=e1246]
+                - button "삭제" [ref=e1247]
+          - row "옴론 Omron 欧姆龙 제조사/브랜드 일본 자동화/센서 전문 기업. 안전 릴레이, 센서, 비전 시스템 공급. 편집 삭제" [ref=e1248] [cursor=pointer]:
+            - cell "옴론" [ref=e1249]
+            - cell "Omron" [ref=e1250]
+            - cell "欧姆龙" [ref=e1251]
+            - cell "제조사/브랜드" [ref=e1252]
+            - cell "일본 자동화/센서 전문 기업. 안전 릴레이, 센서, 비전 시스템 공급." [ref=e1253]
+            - cell "편집 삭제" [ref=e1254]:
+              - generic [ref=e1255]:
+                - button "편집" [ref=e1256]
+                - button "삭제" [ref=e1257]
+          - row "코그넥스 Cognex 康耐视 제조사/브랜드 미국 머신비전 전문 기업. 산업용 카메라, 이미지 처리 소프트웨어 공급. 편집 삭제" [ref=e1258] [cursor=pointer]:
+            - cell "코그넥스" [ref=e1259]
+            - cell "Cognex" [ref=e1260]
+            - cell "康耐视" [ref=e1261]
+            - cell "제조사/브랜드" [ref=e1262]
+            - cell "미국 머신비전 전문 기업. 산업용 카메라, 이미지 처리 소프트웨어 공급." [ref=e1263]
+            - cell "편집 삭제" [ref=e1264]:
+              - generic [ref=e1265]:
+                - button "편집" [ref=e1266]
+                - button "삭제" [ref=e1267]
+          - row "IAI IAI (Intelligent Actuator Inc.) IAI 제조사/브랜드 일본 전동 액추에이터 전문 기업. 전동 실린더, 직교 로봇 공급. 편집 삭제" [ref=e1268] [cursor=pointer]:
+            - cell "IAI" [ref=e1269]
+            - cell "IAI (Intelligent Actuator Inc.)" [ref=e1270]
+            - cell "IAI" [ref=e1271]
+            - cell "제조사/브랜드" [ref=e1272]
+            - cell "일본 전동 액추에이터 전문 기업. 전동 실린더, 직교 로봇 공급." [ref=e1273]
+            - cell "편집 삭제" [ref=e1274]:
+              - generic [ref=e1275]:
+                - button "편집" [ref=e1276]
+                - button "삭제" [ref=e1277]
+          - row "페스토 Festo 费斯托 제조사/브랜드 독일 공압/자동화 기업. 공압 실린더, 밸브, 그리퍼 등 공급. 편집 삭제" [ref=e1278] [cursor=pointer]:
+            - cell "페스토" [ref=e1279]
+            - cell "Festo" [ref=e1280]
+            - cell "费斯托" [ref=e1281]
+            - cell "제조사/브랜드" [ref=e1282]
+            - cell "독일 공압/자동화 기업. 공압 실린더, 밸브, 그리퍼 등 공급." [ref=e1283]
+            - cell "편집 삭제" [ref=e1284]:
+              - generic [ref=e1285]:
+                - button "편집" [ref=e1286]
+                - button "삭제" [ref=e1287]

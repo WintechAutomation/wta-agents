@@ -1,0 +1,24 @@
+2026-04-03T19:17:28Z INF Starting tunnel tunnelID=8c8a326c-09ea-4294-a812-1899a68ce8df
+2026-04-03T19:17:28Z INF Version 2026.3.0 (Checksum 59b12880b24af581cf5b1013db601c7d843b9b097e9c78aa5957c7f39f741885)
+2026-04-03T19:17:28Z INF GOOS: windows, GOVersion: go1.24.13, GoArch: amd64
+2026-04-03T19:17:28Z INF Settings: map[token:*****]
+2026-04-03T19:17:28Z INF cloudflared will not automatically update on Windows systems.
+2026-04-03T19:17:28Z INF Generated Connector ID: 3117b1bb-e096-456f-8091-25746b2bd608
+2026-04-03T19:17:28Z INF Initial protocol quic
+2026-04-03T19:17:28Z INF ICMP proxy will use 192.168.0.211 as source for IPv4
+2026-04-03T19:17:28Z INF ICMP proxy will use fe80::dd8f:31e4:2588:f3a4 in zone 이더넷 3 as source for IPv6
+2026-04-03T19:17:28Z INF ICMP proxy will use 192.168.0.211 as source for IPv4
+2026-04-03T19:17:28Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.53
+2026-04-03T19:17:28Z INF ICMP proxy will use fe80::dd8f:31e4:2588:f3a4 in zone 이더넷 3 as source for IPv6
+2026-04-03T19:17:28Z INF Starting metrics server on 127.0.0.1:20241/metrics
+2026-04-03T19:17:28Z INF Registered tunnel connection connIndex=0 connection=d643e079-fb27-4e6a-a74f-6af70573343c event=0 ip=198.41.200.53 location=icn01 protocol=quic
+2026-04-03T19:17:28Z INF cloudflared does not support loading the system root certificate pool on Windows. Please use --origin-ca-pool <PATH> to specify the path to the certificate pool
+2026-04-03T19:17:28Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=1 event=0 ip=198.41.192.27
+2026-04-03T19:17:28Z INF cloudflared does not support loading the system root certificate pool on Windows. Please use --origin-ca-pool <PATH> to specify the path to the certificate pool
+2026-04-03T19:17:28Z INF cloudflared does not support loading the system root certificate pool on Windows. Please use --origin-ca-pool <PATH> to specify the path to the certificate pool
+2026-04-03T19:17:28Z INF Updated to new configuration config="{\"ingress\":[{\"hostname\":\"mes-wta.com\",\"originRequest\":{},\"service\":\"http://localhost:8100\"},{\"hostname\":\"agent.mes-wta.com\",\"originRequest\":{},\"service\":\"http://localhost:5555\"},{\"hostname\":\"cs-api.mes-wta.com\",\"originRequest\":{},\"service\":\"http://localhost:5612\"},{\"service\":\"http_status:404\"}],\"warp-routing\":{\"enabled\":false}}" version=10
+2026-04-03T19:17:29Z INF Registered tunnel connection connIndex=1 connection=39227350-2b2e-4b80-a290-392f18540937 event=0 ip=198.41.192.27 location=icn06 protocol=quic
+2026-04-03T19:17:29Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=2 event=0 ip=198.41.192.7
+2026-04-03T19:17:30Z INF Registered tunnel connection connIndex=2 connection=07b55420-57c5-497d-a50c-106d3a5164d2 event=0 ip=198.41.192.7 location=icn06 protocol=quic
+2026-04-03T19:17:30Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=3 event=0 ip=198.41.200.233
+2026-04-03T19:17:31Z INF Registered tunnel connection connIndex=3 connection=6938d741-7aaf-4463-a745-306468de650a event=0 ip=198.41.200.233 location=icn01 protocol=quic

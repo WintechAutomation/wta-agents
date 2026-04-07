@@ -1,0 +1,141 @@
+{
+  "_comment": "WTA CI 가이드 — HTML 슬라이드 문서 디자인 표준",
+  "version": "1.0",
+  "updated": "2026-03-31",
+
+  "brand": {
+    "name": "WTA",
+    "fullName": "(주)윈텍오토메이션",
+    "tagline": "WTA"
+  },
+
+  "colors": {
+    "primary": "#D42027",
+    "primaryHover": "#b51b22",
+    "primaryMuted": "rgba(212, 32, 39, 0.35)",
+    "secondary": "#44546A",
+    "accent": {
+      "blue":      "#4472C4",
+      "lightBlue": "#5B9BD5",
+      "orange":    "#ED7D31",
+      "green":     "#70AD47"
+    },
+    "background": {
+      "page":   "#e8e8e8",
+      "slide":  "#ffffff",
+      "header": "#f5f7fc",
+      "row":    "#eef1f7"
+    },
+    "text": {
+      "primary":   "#333333",
+      "secondary": "#888888",
+      "muted":     "#999999",
+      "onDark":    "rgba(255,255,255,0.7)",
+      "onDarkFaint": "rgba(255,255,255,0.5)"
+    },
+    "state": {
+      "highlight": { "bg": "#fff7ed", "text": "#ED7D31" },
+      "best":      { "bg": "#f0fdf4", "text": "#70AD47" },
+      "danger":    { "bg": "#fff1f2", "text": "#D42027" }
+    }
+  },
+
+  "typography": {
+    "fontFamily": "'맑은 고딕', 'Malgun Gothic', 'Noto Sans CJK KR', sans-serif",
+    "heading": {
+      "size":          "clamp(22px, 3.2vw, 40px)",
+      "weight":        800,
+      "letterSpacing": "-0.02em",
+      "color":         "#333333"
+    },
+    "subtitle": {
+      "size":   "clamp(12px, 1.6vw, 20px)",
+      "weight": 400,
+      "color":  "#888888"
+    },
+    "tableHead": {
+      "size":   "clamp(10px, 1.3vw, 16px)",
+      "weight": 700
+    },
+    "tableBody": {
+      "size":   "clamp(9px, 1.2vw, 15px)",
+      "weight": 400
+    },
+    "footer": {
+      "size":   "clamp(9px, 1vw, 13px)",
+      "weight": 400
+    },
+    "logo": {
+      "size":          "clamp(14px, 1.8vw, 22px)",
+      "weight":        900,
+      "letterSpacing": "2px"
+    }
+  },
+
+  "layout": {
+    "maxWidth":    "1280px",
+    "aspectRatio": "16/9",
+    "borderRadius": "2px",
+    "boxShadow":   "0 4px 20px rgba(0,0,0,0.15)",
+    "padding": {
+      "header": "2.8% 5% 1.5% 12%",
+      "body":   "1% 4% 2.5% 4%"
+    }
+  },
+
+  "decorations": {
+    "cornerTriangle": {
+      "_comment": "좌상단 빨간 삼각형 장식",
+      "color":   "#D42027",
+      "width":   "8%",
+      "height":  "18%",
+      "opacity": 0.85,
+      "clipPath": "polygon(0 0, 100% 0, 55% 100%, 0 100%)"
+    },
+    "divider": {
+      "_comment": "헤더 아래 구분선",
+      "top":    "13%",
+      "left":   "6%",
+      "width":  "90%",
+      "height": "1px",
+      "color":  "rgba(212, 32, 39, 0.35)"
+    },
+    "footer": {
+      "height":     "3.5%",
+      "background": "#44546A"
+    }
+  },
+
+  "assets": {
+    "_comment": "template.pptx에서 추출 (2026-03-31). 원본명 image1~5.jpeg 보존.",
+    "logo":           "workspaces/docs-agent/ci/assets/logo.png",
+    "logoWhite":      "workspaces/docs-agent/ci/assets/logo_white.png",
+    "bgSlideHeader":  "workspaces/docs-agent/ci/assets/bg-slide-header.jpeg",
+    "bgTitle":        "workspaces/docs-agent/ci/assets/bg-title.jpeg",
+    "bgSlide":        "workspaces/docs-agent/ci/assets/bg-slide.jpeg",
+    "bgSlideAlt":     "workspaces/docs-agent/ci/assets/bg-slide-alt.jpeg",
+    "bgEnding":       "workspaces/docs-agent/ci/assets/bg-ending.jpeg"
+  },
+
+  "components": {
+    "nav": {
+      "btnPadding":   "10px 24px",
+      "btnRadius":    "4px",
+      "dotSize":      "10px",
+      "dotActiveScale": 1.4
+    },
+    "table": {
+      "cellPadding":   "5px 8px",
+      "borderColor":   "#e0e0e0",
+      "labelBg":       "#f5f7fc",
+      "labelColor":    "#44546A"
+    },
+    "opinionCard": {
+      "bg":           "#f8f9fc",
+      "radius":       "10px",
+      "padding":      "4% 5%",
+      "shadow":       "0 1px 4px rgba(0,0,0,0.05)",
+      "borderColors": ["#4472C4", "#5B9BD5", "#ED7D31", "#70AD47"]
+    }
+  }
+}

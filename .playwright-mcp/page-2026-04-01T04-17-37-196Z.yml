@@ -1,0 +1,19 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - heading "WTA File Share" [level=1] [ref=e3]
+    - paragraph [ref=e4]: Secure file sharing — Wintec Automation
+  - generic [ref=e5]:
+    - generic [ref=e7] [cursor=pointer]:
+      - generic [ref=e8]: 📤
+      - paragraph [ref=e9]:
+        - text: Drag files here to upload
+        - text: or browse files
+    - generic [ref=e10]:
+      - generic [ref=e11]: 🔒
+      - heading "Private Sharing" [level=3] [ref=e12]
+      - paragraph [ref=e13]:
+        - text: Each file gets a unique download link.
+        - text: Only the link holder can access the file.
+        - text: No file listing — your files stay private.
+  - generic [ref=e14]: © 2026 Wintec Automation
+  - generic: ✅ Link copied!

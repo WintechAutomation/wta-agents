@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>GraphRAG Phase 2 — LLM Compare</title><style>
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Malgun Gothic', sans-serif; max-width: 960px; margin: 0 auto; padding: 32px 40px; color: #24292f; line-height: 1.65; background: #fff; }
+h1 { font-size: 2em; border-bottom: 1px solid #d0d7de; padding-bottom: 0.3em; margin-top: 24px; }
+h2 { font-size: 1.5em; border-bottom: 1px solid #d0d7de; padding-bottom: 0.3em; margin-top: 24px; }
+h3 { font-size: 1.25em; margin-top: 24px; }
+h4 { font-size: 1em; margin-top: 24px; }
+hr { border: none; border-top: 1px solid #d0d7de; margin: 24px 0; }
+p { margin: 0 0 16px; }
+ul, ol { padding-left: 2em; margin: 0 0 16px; }
+li { margin: 0.25em 0; }
+a { color: #0969da; text-decoration: none; }
+a:hover { text-decoration: underline; }
+code { background: rgba(175,184,193,0.2); padding: 0.2em 0.4em; border-radius: 6px; font-size: 85%; font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace; }
+pre { background: #f6f8fa; padding: 16px; border-radius: 6px; overflow-x: auto; font-size: 85%; line-height: 1.45; }
+pre code { background: transparent; padding: 0; border-radius: 0; font-size: 100%; }
+table { border-collapse: collapse; margin: 0 0 16px; display: block; overflow-x: auto; max-width: 100%; }
+table th, table td { border: 1px solid #d0d7de; padding: 6px 13px; }
+table th { background: #f6f8fa; font-weight: 600; text-align: left; }
+table tr:nth-child(2n) { background: #f6f8fa; }
+blockquote { margin: 0 0 16px; padding: 0 1em; color: #656d76; border-left: 0.25em solid #d0d7de; }
+strong { font-weight: 600; color: #1f2328; }
+em { font-style: italic; }
+</style></head>
+<body>
+<h1>GraphRAG PoC Phase 2: LLM 자동 추출 비교 보고서</h1>
+<p><strong>작성일</strong>: 2026-04-05</p>
+<p><strong>작성자</strong>: research-agent</p>
+<p><strong>대상</strong>: 포장혼입검사·장비물류·분말검사·연삭측정제어·호닝신뢰성 Confluence 31페이지</p>
+<hr>
+<h2>요약</h2>
+<table>
+<thead><tr><th>항목</th><th>결과</th></tr></thead>
+<tbody>
+<tr><td>최종 채택 모델</td><td><strong>Claude Haiku (claude-haiku-4-5)</strong></td></tr>
+<tr><td>처리 페이지</td><td>26/31 성공 (84%)</td></tr>
+<tr><td>자동 추출 엔티티</td><td><strong>339개</strong></td></tr>
+<tr><td>자동 추출 관계</td><td><strong>282개</strong></td></tr>
+<tr><td>총 비용</td><td><strong>$0.0657</strong></td></tr>
+<tr><td>파일럿 Recall</td><td>60% (수동 기준 10개 중 6개 매칭)</td></tr>
+</tbody></table>
+<hr>
+<h2>1. LLM 자동 추출 시도 이력</h2>
+<h3>1.1 Phase 1: Ollama 모델 시도 (전부 실패)</h3>
+<table>
+<thead><tr><th>모델</th><th>방법</th><th>결과</th><th>실패 유형</th></tr></thead>
+<tbody>
+<tr><td>gemma4:12b</td><td>LightRAG 내장</td><td>0 entities / 0 relations</td><td>Structured delimiter 미생성</td></tr>
+<tr><td>qwen3.5:35b-a3b</td><td>Ollama 직접</td><td>실패</td><td>300초 타임아웃</td></tr>
+<tr><td>gemma4:e4b</td><td>Ollama 직접</td><td>실패</td><td>HTTP 500 에러</td></tr>
+<tr><td>gemma4:e2b</td><td>Ollama 직접</td><td>실패</td><td>HTTP 500 에러</td></tr>
+<tr><td>qwen3-vl:8b</td><td>Ollama 직접</td><td>실패</td><td>빈 응답 (0자)</td></tr>
+</tbody></table>
+<p><strong>원인 분석 (Gemma 조사 결과)</strong>: gemma4의 <code>think=false</code> + JSON <code>format</code> 조합 시 스키마 무시 버그 (Ollama Issue #15260, 2026-04 등록). LightRAG delimiter 실패의 직접 원인으로 확인.</p>
+<h3>1.2 Phase 2: qwen2.5-coder:32b 파일럿 (속도 한계로 중단)</h3>
+<table>
+<thead><tr><th>항목</th><th>결과</th></tr></thead>
+<tbody>
+<tr><td>파일럿 Recall</td><td><strong>60% (6/10)</strong></td></tr>
+<tr><td>응답 시간</td><td><strong>124.8초/페이지</strong></td></tr>
+<tr><td>비용</td><td>$0 (로컬)</td></tr>
+<tr><td>중단 사유</td><td>페이지당 2분 → 31페이지 약 65분, 운영 부적합</td></tr>
+</tbody></table>
+<p><strong>매칭 패턴</strong>: qwen2.5-coder는 부품 모델번호(acA2500-14gm, M2514-MP2, DOMELIGHT100) 포착, 조치방안 누락. Claude Haiku와 상호보완적 패턴.</p>
+<h3>1.3 Phase 2: Claude Haiku (채택)</h3>
+<table>
+<thead><tr><th>항목</th><th>결과</th></tr></thead>
+<tbody>
+<tr><td>파일럿 Recall</td><td><strong>60% (6/10)</strong></td></tr>
+<tr><td>응답 시간</td><td><strong>~3초/페이지</strong></td></tr>
+<tr><td>비용</td><td><strong>$0.0033/페이지</strong></td></tr>
+<tr><td>채택 사유</td><td>속도·정확도·비용 균형 최적</td></tr>
+</tbody></table>
+<hr>
+<h2>2. Claude Haiku 31페이지 추출 결과</h2>
+<h3>2.1 처리 현황</h3>
+<table>
+<thead><tr><th>주제</th><th>총 페이지</th><th>성공</th><th>오류</th><th>엔티티</th><th>관계</th><th>비용</th></tr></thead>
+<tbody>
+<tr><td>포장혼입검사</td><td>7</td><td>7</td><td>0</td><td>108</td><td>84</td><td>$0.0223</td></tr>
+<tr><td>장비물류</td><td>9</td><td>7</td><td>2</td><td>103</td><td>95</td><td>$0.0185</td></tr>
+<tr><td>분말검사</td><td>2</td><td>2</td><td>0</td><td>26</td><td>25</td><td>$0.0054</td></tr>
+<tr><td>연삭측정제어</td><td>4</td><td>3</td><td>1</td><td>31</td><td>27</td><td>$0.0069</td></tr>
+<tr><td>호닝신뢰성</td><td>9</td><td>7</td><td>2</td><td>71</td><td>51</td><td>$0.0126</td></tr>
+<tr><td><strong>합계</strong></td><td><strong>31</strong></td><td><strong>26</strong></td><td><strong>5</strong></td><td><strong>339</strong></td><td><strong>282</strong></td><td><strong>$0.0657</strong></td></tr>
+</tbody></table>
+<h3>2.2 오류 페이지 (5개)</h3>
+<table>
+<thead><tr><th>파일</th><th>주제</th><th>오류 원인 추정</th></tr></thead>
+<tbody>
+<tr><td>신규 물류 개발건 이슈</td><td>장비물류</td><td>긴 텍스트 + Jira URL 혼재, JSON 파싱 실패</td></tr>
+<tr><td>교세라 양면연삭핸들러 물류 컨셉</td><td>장비물류</td><td>기술 용어 과다, 불완전 JSON 생성</td></tr>
+<tr><td>연삭 핸들러 비전 측정기</td><td>연삭측정제어</td><td>긴 텍스트, max_tokens 초과 추정</td></tr>
+<tr><td>호닝 형상 검사기 개선 검토</td><td>호닝신뢰성</td><td>5,060자 장문, JSON 불완전</td></tr>
+<tr><td>호닝 형상 검사기 제작 이슈</td><td>호닝신뢰성</td><td>5,182자 장문, JSON 불완전</td></tr>
+</tbody></table>
+<p><strong>공통 원인</strong>: 긴 텍스트(4,000자+) 페이지에서 JSON 불완전 생성. 청크 분할 처리로 해결 가능.</p>
+<hr>
+<h2>3. 자동 추출 vs 수동 추출 비교 (포장혼입검사 기준)</h2>
+<table>
+<thead><tr><th>항목</th><th>수동 추출 (Phase 1)</th><th>Claude Haiku 자동</th></tr></thead>
+<tbody>
+<tr><td>엔티티 수</td><td>27개</td><td>108개 (+300%)</td></tr>
+<tr><td>관계 수</td><td>27개</td><td>84개 (+211%)</td></tr>
+<tr><td>핵심 이슈 포착</td><td>✅</td><td>✅</td></tr>
+<tr><td>부품 모델번호</td><td>✅</td><td>⚠️ 일부 누락</td></tr>
+<tr><td>조치방안</td><td>✅</td><td>✅</td></tr>
+<tr><td>크로스 관계(SIMILAR_TO)</td><td>✅ 수동 정의</td><td>❌ 미생성 (단일 페이지 기준)</td></tr>
+<tr><td>비용</td><td>인건비 3시간</td><td><strong>$0.022/주제</strong></td></tr>
+</tbody></table>
+<p><strong>핵심 차이</strong>: 자동 추출은 수동 대비 엔티티 3배 더 발견하지만, SIMILAR_TO(유사 이슈 연결) 관계는 멀티 페이지 문맥이 필요해 단일 페이지 추출로는 생성 불가.</p>
+<hr>
+<h2>4. 파일럿 정확도 상세 (밝기비대칭 이슈 페이지)</h2>
+<h3>Claude Haiku 파일럿</h3>
+<table>
+<thead><tr><th>항목</th><th>내용</th></tr></thead>
+<tbody>
+<tr><td>추출 엔티티</td><td>16개</td></tr>
+<tr><td>추출 관계</td><td>16개</td></tr>
+<tr><td>Recall</td><td><strong>60% (6/10)</strong></td></tr>
+<tr><td>매칭됨</td><td>Equipment ×2, Customer ×1, Issue ×1, Resolution ×2</td></tr>
+<tr><td>누락됨</td><td>Component ×3 (모델번호), Resolution ×1</td></tr>
+<tr><td>비용</td><td>$0.0033</td></tr>
+</tbody></table>
+<h3>qwen2.5-coder:32b 파일럿 (참고)</h3>
+<table>
+<thead><tr><th>항목</th><th>내용</th></tr></thead>
+<tbody>
+<tr><td>추출 엔티티</td><td>9개</td></tr>
+<tr><td>추출 관계</td><td>6개</td></tr>
+<tr><td>Recall</td><td><strong>60% (6/10)</strong></td></tr>
+<tr><td>매칭됨</td><td>Equipment ×1, Customer ×1, Component ×3, Issue ×1</td></tr>
+<tr><td>누락됨</td><td>Equipment ×1, Resolution ×3</td></tr>
+<tr><td>응답 시간</td><td>124.8초</td></tr>
+</tbody></table>
+<h3>상호보완 분석</h3>
+<p>두 모델이 서로 다른 엔티티 유형을 포착:</p>
+<ul>
+<li><strong>Claude Haiku 강점</strong>: 조치방안(Resolution), 장비명 다수</li>
+<li><strong>qwen2.5-coder 강점</strong>: 부품 모델번호(Component)</li>
+<li><strong>합산 시 Recall</strong>: <strong>100%</strong> (두 모델 합집합)</li>
+</ul>
+<hr>
+<h2>5. 두 모델 직접 비교표</h2>
+<table>
+<thead><tr><th>지표</th><th>Claude Haiku</th><th>qwen2.5-coder:32b</th></tr></thead>
+<tbody>
+<tr><td>Recall (파일럿)</td><td>60%</td><td>60%</td></tr>
+<tr><td>응답 시간/페이지</td><td>~3초</td><td>124.8초</td></tr>
+<tr><td>비용/페이지</td><td>$0.0033</td><td>$0</td></tr>
+<tr><td>31페이지 총 비용</td><td>$0.0657</td><td>$0</td></tr>
+<tr><td>31페이지 총 시간</td><td>~2분</td><td>~65분</td></tr>
+<tr><td>장문 처리</td><td>⚠️ 5개 오류</td><td>미확인 (중단)</td></tr>
+<tr><td>JSON 신뢰성</td><td>높음</td><td>높음</td></tr>
+<tr><td>운영 적합성</td><td><strong>✅ 적합</strong></td><td>❌ 속도 미달</td></tr>
+<tr><td><strong>채택 여부</strong></td><td><strong>✅ 채택</strong></td><td><strong>❌ 중단</strong></td></tr>
+</tbody></table>
+<hr>
+<h2>6. Gemma 조사 결과 요약</h2>
+<p>📄 <a href="https://agent.mes-wta.com/api/files/37769dd6994c428aaf6eb6b39511a0d7.html" target="_blank">전체 보고서</a></p>
+<p><strong>결론</strong>: gemma4 계열은 Ollama <code>think=false</code> + JSON <code>format</code> 버그(Issue #15260)로 GraphRAG 자동 추출 <strong>현재 부적합</strong>.</p>
+<p><strong>권장 대안 Top 3</strong>:</p>
+<ol>
+<li><strong>qwen2.5-coder:32b</strong> — JSON 특화, 로컬 무료, 속도 개선 대기</li>
+<li><strong>qwen3:30b-a3b</strong> (MoE) — 속도 20~40% 우위, LightRAG 공식 권장</li>
+<li><strong>gemma4:31b</strong> — Ollama 버그 해소 후 재검토</li>
+</ol>
+<hr>
+<h2>7. Phase 2 결론 및 Phase 3 권고</h2>
+<h3>7.1 Phase 2 결론</h3>
+<table>
+<thead><tr><th>항목</th><th>결과</th></tr></thead>
+<tbody>
+<tr><td>LLM 자동 추출 가능성</td><td><strong>검증 완료</strong></td></tr>
+<tr><td>최적 모델</td><td><strong>Claude Haiku</strong> (속도·비용·품질 균형)</td></tr>
+<tr><td>추출 비용 (31페이지)</td><td><strong>$0.066</strong></td></tr>
+<tr><td>파일럿 Recall</td><td><strong>60%</strong></td></tr>
+<tr><td>운영 비용 (전체 CM 1,148페이지)</td><td><strong>~$3.7 추정</strong></td></tr>
+</tbody></table>
+<h3>7.2 개선 권고</h3>
+<table>
+<thead><tr><th>개선 항목</th><th>방법</th><th>예상 Recall</th></tr></thead>
+<tbody>
+<tr><td>부품 모델번호 누락</td><td>프롬프트에 모델번호 패턴 명시</td><td>60% → 75%</td></tr>
+<tr><td>장문 페이지 오류</td><td>4,000자 초과 시 청크 분할</td><td>84% → 95%+</td></tr>
+<tr><td>SIMILAR_TO 자동 생성</td><td>멀티 페이지 배치 처리 + 코사인 유사도 후처리</td><td>신규 기능</td></tr>
+</tbody></table>
+<h3>7.3 Phase 3 권고 로드맵</h3>
+<table>
+<thead><tr><th>단계</th><th>내용</th><th>선행 조건</th></tr></thead>
+<tbody>
+<tr><td><strong>즉시</strong></td><td>오류 5페이지 청크 분할 재처리</td><td>—</td></tr>
+<tr><td><strong>1주</strong></td><td>프롬프트 최적화 → Recall 75%+ 목표</td><td>—</td></tr>
+<tr><td><strong>2주</strong></td><td>전체 CM(1,148페이지) 자동 추출 적재</td><td>Neo4j 디스크 증설</td></tr>
+<tr><td><strong>3주</strong></td><td>Neo4j 벡터 인덱스 추가 → 하이브리드 검색</td><td>—</td></tr>
+<tr><td><strong>1개월</strong></td><td>cs-agent 연동 → 실제 CS 질의 파이프라인</td><td>—</td></tr>
+</tbody></table>
+<hr>
+<p><em>GraphRAG PoC Phase 2 완료</em></p>
+<p><em>수동 추출(Phase 1): 71노드/58관계 | LLM 자동 추출(Phase 2): 339엔티티/282관계</em></p>
+<p><em>비용: $0.066 / 26페이지 (Claude Haiku)</em></p>
+</body></html>

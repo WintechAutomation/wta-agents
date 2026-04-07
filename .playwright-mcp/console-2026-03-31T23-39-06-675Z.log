@@ -1,0 +1,25 @@
+[     141ms] [ERROR] Failed to load resource: the server responded with a status of 404 (NOT FOUND) @ http://localhost:5555/api/glossary?:0
+[     141ms] [ERROR] 용어집 로드 실패 SyntaxError: Unexpected token '<', "<!doctype "... is not valid JSON @ http://localhost:5555/assets/index-DBq6FRkt.js:341
+[     456ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-DBq6FRkt.js:11
+[   96742ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-DBq6FRkt.js:11
+[  486496ms] [ERROR] WebSocket connection to 'ws://localhost:5555/socket.io/?EIO=4&transport=websocket' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:5555/assets/index-DBq6FRkt.js:11
+[  491336ms] [ERROR] WebSocket connection to 'ws://localhost:5555/socket.io/?EIO=4&transport=websocket' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:5555/assets/index-DBq6FRkt.js:11
+[  496807ms] [ERROR] WebSocket connection to 'ws://localhost:5555/socket.io/?EIO=4&transport=websocket' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:5555/assets/index-DBq6FRkt.js:11
+[  504142ms] [ERROR] WebSocket connection to 'ws://localhost:5555/socket.io/?EIO=4&transport=websocket' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:5555/assets/index-DBq6FRkt.js:11
+[  511508ms] [ERROR] WebSocket connection to 'ws://localhost:5555/socket.io/?EIO=4&transport=websocket' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:5555/assets/index-DBq6FRkt.js:11
+[  518840ms] [ERROR] WebSocket connection to 'ws://localhost:5555/socket.io/?EIO=4&transport=websocket' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:5555/assets/index-DBq6FRkt.js:11
+[  526192ms] [ERROR] WebSocket connection to 'ws://localhost:5555/socket.io/?EIO=4&transport=websocket' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:5555/assets/index-DBq6FRkt.js:11
+[  533529ms] [ERROR] WebSocket connection to 'ws://localhost:5555/socket.io/?EIO=4&transport=websocket' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:5555/assets/index-DBq6FRkt.js:11
+[  540888ms] [ERROR] WebSocket connection to 'ws://localhost:5555/socket.io/?EIO=4&transport=websocket' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:5555/assets/index-DBq6FRkt.js:11
+[  548254ms] [ERROR] WebSocket connection to 'ws://localhost:5555/socket.io/?EIO=4&transport=websocket' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:5555/assets/index-DBq6FRkt.js:11
+[  555627ms] [ERROR] WebSocket connection to 'ws://localhost:5555/socket.io/?EIO=4&transport=websocket' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:5555/assets/index-DBq6FRkt.js:11
+[  563121ms] [ERROR] WebSocket connection to 'ws://localhost:5555/socket.io/?EIO=4&transport=websocket' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:5555/assets/index-DBq6FRkt.js:11
+[  570554ms] [ERROR] WebSocket connection to 'ws://localhost:5555/socket.io/?EIO=4&transport=websocket' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:5555/assets/index-DBq6FRkt.js:11
+[  578097ms] [ERROR] WebSocket connection to 'ws://localhost:5555/socket.io/?EIO=4&transport=websocket' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:5555/assets/index-DBq6FRkt.js:11
+[  586130ms] [ERROR] WebSocket connection to 'ws://localhost:5555/socket.io/?EIO=4&transport=websocket' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:5555/assets/index-DBq6FRkt.js:11
+[  594212ms] [ERROR] WebSocket connection to 'ws://localhost:5555/socket.io/?EIO=4&transport=websocket' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:5555/assets/index-DBq6FRkt.js:11
+[  604423ms] [ERROR] WebSocket connection to 'ws://localhost:5555/socket.io/?EIO=4&transport=websocket' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:5555/assets/index-DBq6FRkt.js:11
+[  614492ms] [ERROR] WebSocket connection to 'ws://localhost:5555/socket.io/?EIO=4&transport=websocket' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:5555/assets/index-DBq6FRkt.js:11
+[  626393ms] [ERROR] WebSocket connection to 'ws://localhost:5555/socket.io/?EIO=4&transport=websocket' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:5555/assets/index-DBq6FRkt.js:11
+[  633423ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-DBq6FRkt.js:11
+[  679766ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-DBq6FRkt.js:11

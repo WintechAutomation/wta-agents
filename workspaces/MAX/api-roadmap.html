@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MES DB API 구축 로드맵</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: '맑은 고딕', 'Malgun Gothic', sans-serif; background: #f5f7fa; color: #333; padding: 40px 20px; }
+  .container { max-width: 960px; margin: 0 auto; }
+  h1 { font-size: 24px; color: #1a1a2e; margin-bottom: 4px; }
+  .subtitle { font-size: 14px; color: #888; margin-bottom: 32px; }
+
+  .section { margin-bottom: 24px; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); overflow: hidden; }
+  .section-header { padding: 14px 24px; font-size: 15px; font-weight: 700; color: #fff; }
+  .section-header.green { background: #2E7D32; }
+  .section-header.blue { background: #4472C4; }
+  .section-header.orange { background: #E65100; }
+  .section-header.red { background: #C62828; }
+  .section-header.gray { background: #546E7A; }
+
+  table { width: 100%; border-collapse: collapse; }
+  th { background: #f8f9fb; text-align: left; padding: 10px 24px; font-size: 12px; color: #666; border-bottom: 1px solid #eee; }
+  td { padding: 11px 24px; font-size: 13px; border-bottom: 1px solid #f0f0f0; line-height: 1.5; }
+  tr:last-child td { border-bottom: none; }
+
+  .tag { display: inline-block; padding: 2px 10px; border-radius: 6px; font-size: 11px; font-weight: 600; }
+  .tag-done { background: #E8F5E9; color: #2E7D32; }
+  .tag-ready { background: #E3F2FD; color: #1565C0; }
+  .tag-empty { background: #FFF3E0; color: #E65100; }
+  .tag-none { background: #FFEBEE; color: #C62828; }
+  .tag-erp { background: #F3E5F5; color: #6A1B9A; }
+  .tag-few { background: #FFF8E1; color: #F57F17; }
+
+  .summary-box { background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); padding: 24px; margin-bottom: 24px; }
+  .summary-box h2 { font-size: 17px; font-weight: 700; color: #1a1a2e; margin-bottom: 14px; }
+  .stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .stat-card { background: #f8f9fb; border-radius: 10px; padding: 16px; text-align: center; }
+  .stat-num { font-size: 28px; font-weight: 800; }
+  .stat-num.green { color: #2E7D32; }
+  .stat-num.blue { color: #4472C4; }
+  .stat-num.orange { color: #E65100; }
+  .stat-num.red { color: #C62828; }
+  .stat-label { font-size: 12px; color: #888; margin-top: 4px; }
+
+  .priority { margin-top: 24px; }
+  .priority h2 { font-size: 17px; font-weight: 700; color: #1a1a2e; margin-bottom: 14px; }
+  .pri-item { display: flex; gap: 14px; margin-bottom: 12px; align-items: flex-start; }
+  .pri-num { width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; color: #fff; flex-shrink: 0; }
+  .pri-num.p1 { background: #C62828; }
+  .pri-num.p2 { background: #E65100; }
+  .pri-num.p3 { background: #4472C4; }
+  .pri-num.p4 { background: #546E7A; }
+  .pri-text strong { font-size: 14px; display: block; }
+  .pri-text span { font-size: 12px; color: #666; }
+
+  .footer { margin-top: 28px; text-align: center; font-size: 12px; color: #aaa; }
+
+  @media(max-width:700px) {
+    .stat-grid { grid-template-columns: repeat(2, 1fr); }
+    td, th { padding: 8px 12px; font-size: 12px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <h1>MES DB API 구축 로드맵</h1>
+  <p class="subtitle">작성일: 2026-04-03 | db-manager 조사 기반 정리</p>
+
+  <!-- 요약 -->
+  <div class="summary-box">
+    <h2>현황 요약</h2>
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="stat-num green">14개</div>
+        <div class="stat-label">등록된 API</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num blue">4개</div>
+        <div class="stat-label">테이블 있음 (바로 API화)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num orange">2개</div>
+        <div class="stat-label">테이블 있으나 데이터 부족</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num red">2개</div>
+        <div class="stat-label">ERP 확인 필요</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 기등록 API -->
+  <div class="section">
+    <div class="section-header green">기등록 API (14개) — 바로 사용 가능</div>
+    <table>
+      <tr><th>API명</th><th>설명</th><th>파라미터</th></tr>
+      <tr><td>project_by_name</td><td>프로젝트명으로 조회</td><td>keyword (필수)</td></tr>
+      <tr><td>active_projects</td><td>진행중 프로젝트 목록</td><td>없음</td></tr>
+      <tr><td>active_press_projects</td><td>진행중 프레스 프로젝트</td><td>없음</td></tr>
+      <tr><td>project_status_values</td><td>프로젝트 상태 종류</td><td>없음</td></tr>
+      <tr><td>project_schedule</td><td>프로젝트 세부일정</td><td>project_code (필수)</td></tr>
+      <tr><td>nc_recent</td><td>최근 부적합 50건</td><td>없음</td></tr>
+      <tr><td>nc_by_project</td><td>프로젝트별 부적합</td><td>project_code (필수)</td></tr>
+      <tr><td>nc_overdue</td><td>기한 초과 미조치 부적합</td><td>importance (선택)</td></tr>
+      <tr><td>nc_weekly_summary</td><td>부적합 주간 요약</td><td>없음</td></tr>
+      <tr><td>nc_new_this_week</td><td>이번 주 신규 부적합</td><td>없음</td></tr>
+      <tr><td>orders_list</td><td>수주 목록 최근 50건</td><td>없음</td></tr>
+      <tr><td>shipment_recent</td><td>최근 출하 50건</td><td>없음</td></tr>
+      <tr><td>shipment_by_status</td><td>출하 상태별 목록</td><td>status (필수)</td></tr>
+      <tr><td>cs_inventory_zero</td><td>CS 재고 0인 항목</td><td>없음</td></tr>
+    </table>
+  </div>
+
+  <!-- 신규 필요 API — 바로 가능 -->
+  <div class="section">
+    <div class="section-header blue">신규 필요 API — MES 테이블 있음, 바로 API 등록 가능</div>
+    <table>
+      <tr><th>업무 영역</th><th>MES 테이블</th><th>데이터</th><th>필요 API</th></tr>
+      <tr>
+        <td><strong>공정별 진행현황</strong></td>
+        <td>api_projectdetailedschedule<br>api_projectprocess</td>
+        <td><span class="tag tag-done">활용중</span></td>
+        <td>project_progress — 프로젝트 공정별 진행률/상태</td>
+      </tr>
+      <tr>
+        <td><strong>반납현황</strong></td>
+        <td>defect_delivery_request</td>
+        <td><span class="tag tag-done">233건</span></td>
+        <td>delivery_request_list — 반납/불량반송 목록<br>delivery_request_by_project — 프로젝트별 반납</td>
+      </tr>
+      <tr>
+        <td><strong>출하현황 (확장)</strong></td>
+        <td>shipment_table</td>
+        <td><span class="tag tag-done">614건</span></td>
+        <td>shipment_by_project — 프로젝트별 출하<br>shipment_by_customer — 고객사별 출하<br>shipment_by_date — 기간별 출하</td>
+      </tr>
+      <tr>
+        <td><strong>수입검사</strong></td>
+        <td>api_checklistinspection<br>api_checklistinspectionitem</td>
+        <td><span class="tag tag-few">7건 (초기)</span></td>
+        <td>inspection_list — 수입검사 목록<br>inspection_by_project — 프로젝트별 검사</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- 데이터 부족/미등록 -->
+  <div class="section">
+    <div class="section-header orange">데이터 부족 — 테이블 있으나 활용 안 됨</div>
+    <table>
+      <tr><th>업무 영역</th><th>MES 테이블</th><th>상태</th><th>조치 필요</th></tr>
+      <tr>
+        <td><strong>자재 입고</strong></td>
+        <td>api_materialsupply<br>api_material</td>
+        <td><span class="tag tag-empty">0건</span></td>
+        <td>데이터 입력 프로세스 수립 필요<br>또는 ERP 입고 데이터 연동</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- ERP 확인 필요 -->
+  <div class="section">
+    <div class="section-header red">ERP 확인 필요 — MES에 테이블 없음</div>
+    <table>
+      <tr><th>업무 영역</th><th>MES 테이블</th><th>상태</th><th>방안</th></tr>
+      <tr>
+        <td><strong>발주현황 (구매)</strong></td>
+        <td>없음</td>
+        <td><span class="tag tag-none">미구축</span></td>
+        <td><span class="tag tag-erp">ERP 조회</span> mirae 스키마에서 구매발주 테이블 확인 후 읽기전용 API</td>
+      </tr>
+      <tr>
+        <td><strong>반출현황</strong></td>
+        <td>없음</td>
+        <td><span class="tag tag-none">미구축</span></td>
+        <td><span class="tag tag-erp">ERP 조회</span> 또는 MES에 신규 테이블 설계</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- 우선순위 -->
+  <div class="summary-box priority">
+    <h2>구축 우선순위 (제안)</h2>
+    <div class="pri-item">
+      <div class="pri-num p1">1</div>
+      <div class="pri-text">
+        <strong>공정별 진행현황 + 출하현황 확장 API</strong>
+        <span>테이블/데이터 모두 충분. 쿼리 등록만으로 바로 사용 가능. 영업팀 요구 높음.</span>
+      </div>
+    </div>
+    <div class="pri-item">
+      <div class="pri-num p2">2</div>
+      <div class="pri-text">
+        <strong>반납현황 + 수입검사 API</strong>
+        <span>테이블 있음. 데이터 축적 병행하며 API 등록.</span>
+      </div>
+    </div>
+    <div class="pri-item">
+      <div class="pri-num p3">3</div>
+      <div class="pri-text">
+        <strong>ERP 연동 — 발주현황, 자재 입고</strong>
+        <span>ERP DB 접근 복구 후 테이블 확인 → 읽기전용 API 구축. ERP .env 비밀번호 확인 필요.</span>
+      </div>
+    </div>
+    <div class="pri-item">
+      <div class="pri-num p4">4</div>
+      <div class="pri-text">
+        <strong>반출현황 테이블 신규 설계</strong>
+        <span>ERP에도 없으면 MES 신규 테이블 필요 (부서장 승인 사항).</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">WTA AI팀 (MAX) | 2026-04-03</div>
+
+</div>
+</body>
+</html>

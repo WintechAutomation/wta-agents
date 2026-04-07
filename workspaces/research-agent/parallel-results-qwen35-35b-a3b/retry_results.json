@@ -1,0 +1,1446 @@
+[
+  {
+    "page_id": "9463300099",
+    "topic": "연삭측정제어",
+    "title": "2026-01-14 연삭 핸들러 비전 측정기",
+    "idx": 1,
+    "extracted": {
+      "entities": [
+        {
+          "type": "Equipment",
+          "id": "E001",
+          "name": "연삭 핸들러",
+          "properties": {}
+        },
+        {
+          "type": "Equipment",
+          "id": "E002",
+          "name": "비전 측정기",
+          "properties": {}
+        },
+        {
+          "type": "Equipment",
+          "id": "E003",
+          "name": "초음파 세척기",
+          "properties": {}
+        },
+        {
+          "type": "Equipment",
+          "id": "E004",
+          "name": "에어나이프",
+          "properties": {}
+        },
+        {
+          "type": "Product",
+          "id": "P001",
+          "name": "인서트",
+          "properties": {}
+        },
+        {
+          "type": "Process",
+          "id": "PR001",
+          "name": "초음파 세척",
+          "properties": {}
+        },
+        {
+          "type": "Process",
+          "id": "PR002",
+          "name": "건조",
+          "properties": {}
+        },
+        {
+          "type": "Process",
+          "id": "PR003",
+          "name": "비전 측정",
+          "properties": {}
+        },
+        {
+          "type": "Process",
+          "id": "PR004",
+          "name": "연삭",
+          "properties": {}
+        },
+        {
+          "type": "Component",
+          "id": "C001",
+          "name": "브러시",
+          "properties": {}
+        },
+        {
+          "type": "Component",
+          "id": "C002",
+          "name": "스테이지",
+          "properties": {}
+        },
+        {
+          "type": "Component",
+          "id": "C003",
+          "name": "카메라",
+          "properties": {}
+        },
+        {
+          "type": "Component",
+          "id": "C004",
+          "name": "필터",
+          "properties": {}
+        },
+        {
+          "type": "Issue",
+          "id": "I001",
+          "name": "측정 오차",
+          "properties": {}
+        },
+        {
+          "type": "Issue",
+          "id": "I002",
+          "name": "진동",
+          "properties": {}
+        },
+        {
+          "type": "Issue",
+          "id": "I003",
+          "name": "습기",
+          "properties": {}
+        },
+        {
+          "type": "Resolution",
+          "id": "R001",
+          "name": "에어나이프 설치",
+          "properties": {}
+        },
+        {
+          "type": "Resolution",
+          "id": "R002",
+          "name": "완전 밀폐 구조",
+          "properties": {}
+        },
+        {
+          "type": "Resolution",
+          "id": "R003",
+          "name": "반전기 적용",
+          "properties": {}
+        },
+        {
+          "type": "Resolution",
+          "id": "R004",
+          "name": "수온 관리",
+          "properties": {}
+        }
+      ],
+      "relations": [
+        {
+          "type": "USES_COMPONENT",
+          "from_id": "E002",
+          "to_id": "C003",
+          "properties": {}
+        },
+        {
+          "type": "USES_COMPONENT",
+          "from_id": "E002",
+          "to_id": "C002",
+          "properties": {}
+        },
+        {
+          "type": "USES_COMPONENT",
+          "from_id": "E003",
+          "to_id": "C004",
+          "properties": {}
+        },
+        {
+          "type": "INVOLVES_COMPONENT",
+          "from_id": "PR001",
+          "to_id": "C001",
+          "properties": {}
+        },
+        {
+          "type": "USES_COMPONENT",
+          "from_id": "E004",
+          "to_id": "C004",
+          "properties": {}
+        },
+        {
+          "type": "HAS_SUBPROCESS",
+          "from_id": "PR001",
+          "to_id": "PR002",
+          "properties": {}
+        },
+        {
+          "type": "HAS_SUBPROCESS",
+          "from_id": "PR002",
+          "to_id": "PR003",
+          "properties": {}
+        },
+        {
+          "type": "INVOLVES_COMPONENT",
+          "from_id": "PR003",
+          "to_id": "P001",
+          "properties": {}
+        },
+        {
+          "type": "HAS_ISSUE",
+          "from_id": "E002",
+          "to_id": "I001",
+          "properties": {}
+        },
+        {
+          "type": "HAS_ISSUE",
+          "from_id": "E002",
+          "to_id": "I002",
+          "properties": {}
+        },
+        {
+          "type": "HAS_ISSUE",
+          "from_id": "E002",
+          "to_id": "I003",
+          "properties": {}
+        },
+        {
+          "type": "RESOLVED_BY",
+          "from_id": "I002",
+          "to_id": "R001",
+          "properties": {}
+        },
+        {
+          "type": "RESOLVED_BY",
+          "from_id": "I003",
+          "to_id": "R002",
+          "properties": {}
+        },
+        {
+          "type": "RESOLVED_BY",
+          "from_id": "I001",
+          "to_id": "R003",
+          "properties": {}
+        },
+        {
+          "type": "RESOLVED_BY",
+          "from_id": "I001",
+          "to_id": "R004",
+          "properties": {}
+        },
+        {
+          "type": "USES_COMPONENT",
+          "from_id": "E001",
+          "to_id": "P001",
+          "properties": {}
+        }
+      ]
+    },
+    "elapsed_sec": 57.6
+  },
+  {
+    "page_id": "8316485870",
+    "topic": "장비물류",
+    "title": "장비별 물류 교체시간",
+    "idx": 2,
+    "extracted": {
+      "entities": [
+        {
+          "type": "Equipment",
+          "id": "equip_001",
+          "name": "프레스 엘리베이터",
+          "properties": {}
+        },
+        {
+          "type": "Equipment",
+          "id": "equip_002",
+          "name": "SPM 15",
+          "properties": {}
+        },
+        {
+          "type": "Equipment",
+          "id": "equip_003",
+          "name": "SPM 45",
+          "properties": {}
+        },
+        {
+          "type": "Equipment",
+          "id": "equip_004",
+          "name": "PVD",
+          "properties": {}
+        },
+        {
+          "type": "Equipment",
+          "id": "equip_005",
+          "name": "검사기",
+          "properties": {}
+        },
+        {
+          "type": "Equipment",
+          "id": "equip_006",
+          "name": "포장기",
+          "properties": {}
+        },
+        {
+          "type": "Component",
+          "id": "comp_001",
+          "name": "플레이트",
+          "properties": {}
+        },
+        {
+          "type": "Component",
+          "id": "comp_002",
+          "name": "금형",
+          "properties": {}
+        },
+        {
+          "type": "Component",
+          "id": "comp_003",
+          "name": "팔레트",
+          "properties": {}
+        },
+        {
+          "type": "Component",
+          "id": "comp_004",
+          "name": "막대",
+          "properties": {}
+        },
+        {
+          "type": "Process",
+          "id": "proc_001",
+          "name": "금형 청소",
+          "properties": {}
+        },
+        {
+          "type": "Process",
+          "id": "proc_002",
+          "name": "로딩",
+          "properties": {}
+        },
+        {
+          "type": "Process",
+          "id": "proc_003",
+          "name": "언로딩",
+          "properties": {}
+        },
+        {
+          "type": "Process",
+          "id": "proc_004",
+          "name": "검사",
+          "properties": {}
+        },
+        {
+          "type": "Process",
+          "id": "proc_005",
+          "name": "포장",
+          "properties": {}
+        },
+        {
+          "type": "Product",
+          "id": "prod_001",
+          "name": "한국야금 KP3",
+          "properties": {}
+        },
+        {
+          "type": "Tool",
+          "id": "tool_001",
+          "name": "피더",
+          "properties": {}
+        },
+        {
+          "type": "Tool",
+          "id": "tool_002",
+          "name": "모터",
+          "properties": {}
+        },
+        {
+          "type": "Tool",
+          "id": "tool_003",
+          "name": "컨베이어",
+          "properties": {}
+        }
+      ],
+      "relations": [
+        {
+          "type": "USES_COMPONENT",
+          "from_id": "equip_001",
+          "to_id": "comp_001",
+          "properties": {}
+        },
+        {
+          "type": "USES_COMPONENT",
+          "from_id": "equip_002",
+          "to_id": "comp_001",
+          "properties": {}
+        },
+        {
+          "type": "USES_COMPONENT",
+          "from_id": "equip_003",
+          "to_id": "comp_001",
+          "properties": {}
+        },
+        {
+          "type": "USES_COMPONENT",
+          "from_id": "equip_002",
+          "to_id": "comp_002",
+          "properties": {}
+        },
+        {
+          "type": "USES_COMPONENT",
+          "from_id": "equip_003",
+          "to_id": "comp_003",
+          "properties": {}
+        },
+        {
+          "type": "USES_COMPONENT",
+          "from_id": "equip_004",
+          "to_id": "comp_004",
+          "properties": {}
+        },
+        {
+          "type": "USES_COMPONENT",
+          "from_id": "equip_005",
+          "to_id": "comp_003",
+          "properties": {}
+        },
+        {
+          "type": "USES_COMPONENT",
+          "from_id": "equip_006",
+          "to_id": "comp_003",
+          "properties": {}
+        },
+        {
+          "type": "INVOLVES_COMPONENT",
+          "from_id": "proc_001",
+          "to_id": "comp_002",
+          "properties": {}
+        },
+        {
+          "type": "INVOLVES_COMPONENT",
+          "from_id": "proc_002",
+          "to_id": "comp_003",
+          "properties": {}
+        },
+        {
+          "type": "INVOLVES_COMPONENT",
+          "from_id": "proc_003",
+          "to_id": "comp_003",
+          "properties": {}
+        },
+        {
+          "type": "INVOLVES_COMPONENT",
+          "from_id": "proc_004",
+          "to_id": "comp_001",
+          "properties": {}
+        },
+        {
+          "type": "INVOLVES_COMPONENT",
+          "from_id": "proc_005",
+          "to_id": "comp_003",
+          "properties": {}
+        },
+        {
+          "type": "USES_TOOL",
+          "from_id": "equip_005",
+          "to_id": "tool_001",
+          "properties": {}
+        },
+        {
+          "type": "USES_TOOL",
+          "from_id": "equip_005",
+          "to_id": "tool_002",
+          "properties": {}
+        },
+        {
+          "type": "USES_TOOL",
+          "from_id": "equip_005",
+          "to_id": "tool_003",
+          "properties": {}
+        },
+        {
+          "type": "USES_COMPONENT",
+          "from_id": "equip_005",
+          "to_id": "prod_001",
+          "properties": {}
+        },
+        {
+          "type": "USES_COMPONENT",
+          "from_id": "equip_006",
+          "to_id": "prod_001",
+          "properties": {}
+        }
+      ]
+    },
+    "elapsed_sec": 35.2
+  },
+  {
+    "page_id": "8517419053",
+    "topic": "장비물류",
+    "title": "신규 물류 개발건 이슈",
+    "idx": 3,
+    "extracted": {
+      "entities": [
+        {
+          "type": "Equipment",
+          "id": "eq_001",
+          "name": "후지산기 핸들러",
+          "properties": {}
+        },
+        {
+          "type": "Equipment",
+          "id": "eq_002",
+          "name": "로딩 트랜스퍼",
+          "properties": {}
+        },
+        {
+          "type": "Equipment",
+          "id": "eq_003",
+          "name": "리프트 도어",
+          "properties": {}
+        },
+        {
+          "type": "Equipment",
+          "id": "eq_004",
+          "name": "분리장치",
+          "properties": {}
+        },
+        {
+          "type": "Component",
+          "id": "comp_001",
+          "name": "상부 카메라 간격링",
+          "properties": {}
+        },
+        {
+          "type": "Component",
+          "id": "comp_002",
+          "name": "팔레트 감지센서",
+          "properties": {}
+        },
+        {
+          "type": "Component",
+          "id": "comp_003",
+          "name": "받침 클램프",
+          "properties": {}
+        },
+        {
+          "type": "Component",
+          "id": "comp_004",
+          "name": "로딩 받침 클램프 센서",
+          "properties": {}
+        },
+        {
+          "type": "Component",
+          "id": "comp_005",
+          "name": "스토퍼",
+          "properties": {}
+        },
+        {
+          "type": "Component",
+          "id": "comp_006",
+          "name": "실린더",
+          "properties": {}
+        },
+        {
+          "type": "Component",
+          "id": "comp_007",
+          "name": "로드리스 실린더 마그네틱 커플링",
+          "properties": {}
+        },
+        {
+          "type": "Component",
+          "id": "comp_008",
+          "name": "트랜스퍼 LM",
+          "properties": {}
+        },
+        {
+          "type": "Component",
+          "id": "comp_009",
+          "name": "90도 실린더 스프링",
+          "properties": {}
+        },
+        {
+          "type": "Component",
+          "id": "comp_010",
+          "name": "받침 가이드 롤러",
+          "properties": {}
+        },
+        {
+          "type": "Issue",
+          "id": "iss_001",
+          "name": "간격링 부착 누락",
+          "properties": {}
+        },
+        {
+          "type": "Issue",
+          "id": "iss_002",
+          "name": "팔레트 감지센서 미부착",
+          "properties": {}
+        },
+        {
+          "type": "Issue",
+          "id": "iss_003",
+          "name": "실린더 동작 불안정",
+          "properties": {}
+        },
+        {
+          "type": "Issue",
+          "id": "iss_004",
+          "name": "트랜스퍼 간섭영향",
+          "properties": {}
+        },
+        {
+          "type": "Issue",
+          "id": "iss_005",
+          "name": "마그네틱 커플링 슬립",
+          "properties": {}
+        },
+        {
+          "type": "Issue",
+          "id": "iss_006",
+          "name": "스프링 복귀 안됨",
+          "properties": {}
+        }
+      ],
+      "relations": [
+        {
+          "type": "HAS_ISSUE",
+          "from_id": "eq_001",
+          "to_id": "iss_001",
+          "properties": {}
+        },
+        {
+          "type": "HAS_ISSUE",
+          "from_id": "eq_001",
+          "to_id": "iss_002",
+          "properties": {}
+        },
+        {
+          "type": "HAS_ISSUE",
+          "from_id": "eq_004",
+          "to_id": "iss_003",
+          "properties": {}
+        },
+        {
+          "type": "HAS_ISSUE",
+          "from_id": "eq_002",
+          "to_id": "iss_004",
+          "properties": {}
+        },
+        {
+          "type": "HAS_ISSUE",
+          "from_id": "eq_002",
+          "to_id": "iss_005",
+          "properties": {}
+        },
+        {
+          "type": "HAS_ISSUE",
+          "from_id": "eq_002",
+          "to_id": "iss_006",
+          "properties": {}
+        },
+        {
+          "type": "INVOLVES_COMPONENT",
+          "from_id": "iss_001",
+          "to_id": "comp_001",
+          "properties": {}
+        },
+        {
+          "type": "INVOLVES_COMPONENT",
+          "from_id": "iss_002",
+          "to_id": "comp_002",
+          "properties": {}
+        },
+        {
+          "type": "INVOLVES_COMPONENT",
+          "from_id": "iss_003",
+          "to_id": "comp_006",
+          "properties": {}
+        },
+        {
+          "type": "INVOLVES_COMPONENT",
+          "from_id": "iss_005",
+          "to_id": "comp_007",
+          "properties": {}
+        },
+        {
+          "type": "INVOLVES_COMPONENT",
+          "from_id": "iss_006",
+          "to_id": "comp_009",
+          "properties": {}
+        },
+        {
+          "type": "USES_COMPONENT",
+          "from_id": "eq_001",
+          "to_id": "comp_003",
+          "properties": {}
+        },
+        {
+          "type": "USES_COMPONENT",
+          "from_id": "eq_001",
+          "to_id": "comp_004",
+          "properties": {}
+        },
+        {
+          "type": "USES_COMPONENT",
+          "from_id": "eq_001",
+          "to_id": "comp_005",
+          "properties": {}
+        },
+        {
+          "type": "USES_COMPONENT",
+          "from_id": "eq_002",
+          "to_id": "comp_008",
+          "properties": {}
+        },
+        {
+          "type": "USES_COMPONENT",
+          "from_id": "eq_002",
+          "to_id": "comp_010",
+          "properties": {}
+        }
+      ]
+    },
+    "elapsed_sec": 89.6
+  },
+  {
+    "page_id": "8081965089",
+    "topic": "호닝신뢰성",
+    "title": "호닝 형상 검사기 개선 검토",
+    "idx": 4,
+    "extracted": {
+      "entities": [
+        {
+          "type": "Equipment",
+          "id": "eq_001",
+          "name": "호닝 형상 검사기",
+          "properties": {}
+        },
+        {
+          "type": "Component",
+          "id": "comp_001",
+          "name": "전면부 명판",
+          "properties": {}
+        },
+        {
+          "type": "Component",
+          "id": "comp_002",
+          "name": "스위치 후면 커버",
+          "properties": {}
+        },
+        {
+          "type": "Component",
+          "id": "comp_003",
+          "name": "Area Sensor Brkt",
+          "properties": {}
+        },
+        {
+          "type": "Component",
+          "id": "comp_004",
+          "name": "Keyboard Plate",
+          "properties": {}
+        },
+        {
+          "type": "Component",
+          "id": "comp_005",
+          "name": "EFU",
+          "properties": {}
+        },
+        {
+          "type": "Component",
+          "id": "comp_006",
+          "name": "모니터",
+          "properties": {
+            "model": "HDL-T240P-PCT-RZ"
+          }
+        },
+        {
+          "type": "Component",
+          "id": "comp_007",
+          "name": "모터 케이블",
+          "properties": {}
+        },
+        {
+          "type": "Component",
+          "id": "comp_008",
+          "name": "제진대",
+          "properties": {}
+        },
+        {
+          "type": "Component",
+          "id": "comp_009",
+          "name": "Auto Stage",
+          "properties": {}
+        },
+        {
+          "type": "Component",
+          "id": "comp_010",
+          "name": "Limit 센서",
+          "properties": {}
+        },
+        {
+          "type": "Process",
+          "id": "proc_001",
+          "name": "호닝 형상 검사기 개선 검토",
+          "properties": {}
+        },
+        {
+          "type": "Person",
+          "id": "per_001",
+          "name": "기구설계",
+          "properties": {}
+        },
+        {
+          "type": "Person",
+          "id": "per_002",
+          "name": "CS팀",
+          "properties": {}
+        },
+        {
+          "type": "Resolution",
+          "id": "res_001",
+          "name": "모니터 교체",
+          "properties": {
+            "detail": "HDL-T240P-PCT-RZ 선정"
+          }
+        },
+        {
+          "type": "Resolution",
+          "id": "res_002",
+          "name": "케이블 변경",
+          "properties": {
+            "detail": "비가동형에서 가동형으로 변경"
+          }
+        },
+        {
+          "type": "Resolution",
+          "id": "res_003",
+          "name": "Auto Stage 변경",
+          "properties": {
+            "detail": "하부 축 교체 및 모터 방향 선정"
+          }
+        },
+        {
+          "type": "Resolution",
+          "id": "res_004",
+          "name": "낙하 방지 Cover 추가",
+          "properties": {
+            "vendor": "교세라"
+          }
+        },
+        {
+          "type": "Resolution",
+          "id": "res_005",
+          "name": "EFU 필터 적용",
+          "properties": {
+            "detail": "2중 필터 적용"
+          }
+        },
+        {
+          "type": "Resolution",
+          "id": "res_006",
+          "name": "명판 부착 방식 개선",
+          "properties": {
+            "detail": "홀 사이즈 동일화"
+          }
+        },
+        {
+          "type": "Resolution",
+          "id": "res_007",
+          "name": "제진대 탭 위치 수정",
+          "properties": {
+            "detail": "하부 탭 높이 변경"
+          }
+        }
+      ],
+      "relations": [
+        {
+          "type": "INVOLVES_COMPONENT",
+          "from_id": "proc_001",
+          "to_id": "comp_001",
+          "properties": {}
+        },
+        {
+          "type": "INVOLVES_COMPONENT",
+          "from_id": "proc_001",
+          "to_id": "comp_002",
+          "properties": {}
+        },
+        {
+          "type": "INVOLVES_COMPONENT",
+          "from_id": "proc_001",
+          "to_id": "comp_003",
+          "properties": {}
+        },
+        {
+          "type": "INVOLVES_COMPONENT",
+          "from_id": "proc_001",
+          "to_id": "comp_004",
+          "properties": {}
+        },
+        {
+          "type": "INVOLVES_COMPONENT",
+          "from_id": "proc_001",
+          "to_id": "comp_005",
+          "properties": {}
+        },
+        {
+          "type": "INVOLVES_COMPONENT",
+          "from_id": "proc_001",
+          "to_id": "comp_006",
+          "properties": {}
+        },
+        {
+          "type": "INVOLVES_COMPONENT",
+          "from_id": "proc_001",
+          "to_id": "comp_007",
+          "properties": {}
+        },
+        {
+          "type": "INVOLVES_COMPONENT",
+          "from_id": "proc_001",
+          "to_id": "comp_008",
+          "properties": {}
+        },
+        {
+          "type": "INVOLVES_COMPONENT",
+          "from_id": "proc_001",
+          "to_id": "comp_009",
+          "properties": {}
+        },
+        {
+          "type": "INVOLVES_COMPONENT",
+          "from_id": "proc_001",
+          "to_id": "comp_010",
+          "properties": {}
+        },
+        {
+          "type": "RESOLVED_BY",
+          "from_id": "comp_006",
+          "to_id": "res_001",
+          "properties": {}
+        },
+        {
+          "type": "RESOLVED_BY",
+          "from_id": "comp_007",
+          "to_id": "res_002",
+          "properties": {}
+        },
+        {
+          "type": "RESOLVED_BY",
+          "from_id": "comp_009",
+          "to_id": "res_003",
+          "properties": {}
+        },
+        {
+          "type": "RESOLVED_BY",
+          "from_id": "comp_009",
+          "to_id": "res_004",
+          "properties": {}
+        },
+        {
+          "type": "RESOLVED_BY",
+          "from_id": "comp_005",
+          "to_id": "res_005",
+          "properties": {}
+        },
+        {
+          "type": "RESOLVED_BY",
+          "from_id": "comp_001",
+          "to_id": "res_006",
+          "properties": {}
+        },
+        {
+          "type": "RESOLVED_BY",
+          "from_id": "comp_008",
+          "to_id": "res_007",
+          "properties": {}
+        },
+        {
+          "type": "INVOLVED_IN",
+          "from_id": "per_001",
+          "to_id": "proc_001",
+          "properties": {}
+        },
+        {
+          "type": "INVOLVED_IN",
+          "from_id": "per_002",
+          "to_id": "proc_001",
+          "properties": {}
+        },
+        {
+          "type": "USES_COMPONENT",
+          "from_id": "eq_001",
+          "to_id": "comp_006",
+          "properties": {}
+        }
+      ]
+    },
+    "elapsed_sec": 91.8
+  },
+  {
+    "page_id": "8138785229",
+    "topic": "호닝신뢰성",
+    "title": "호닝 형상 검사기 제작 이슈 및 조치 내용",
+    "idx": 5,
+    "extracted": {
+      "entities": [
+        {
+          "type": "Equipment",
+          "id": "eq_001",
+          "name": "호닝 형상 검사기",
+          "properties": {}
+        },
+        {
+          "type": "Component",
+          "id": "comp_001",
+          "name": "전면 도어 아크릴 판",
+          "properties": {
+            "part_number": "02-114-18-2"
+          }
+        },
+        {
+          "type": "Component",
+          "id": "comp_002",
+          "name": "측면 자동 투입구 작은 도어 - 레일",
+          "properties": {
+            "part_number": "C-SSRY27Y16"
+          }
+        },
+        {
+          "type": "Component",
+          "id": "comp_003",
+          "name": "도어 힌지 블럭",
+          "properties": {
+            "part_number": "02-114-22-2"
+          }
+        },
+        {
+          "type": "Component",
+          "id": "comp_004",
+          "name": "스냅링",
+          "properties": {
+            "type": "E형"
+          }
+        },
+        {
+          "type": "Component",
+          "id": "comp_005",
+          "name": "모니터 케이블 Brkt",
+          "properties": {}
+        },
+        {
+          "type": "Component",
+          "id": "comp_006",
+          "name": "Upper Cover Filter Guide",
+          "properties": {}
+        },
+        {
+          "type": "Component",
+          "id": "comp_007",
+          "name": "U88 측판 Foot",
+          "properties": {}
+        },
+        {
+          "type": "Component",
+          "id": "comp_008",
+          "name": "U88 측판 Rib",
+          "properties": {}
+        },
+        {
+          "type": "Component",
+          "id": "comp_009",
+          "name": "Motor",
+          "properties": {
+            "model": "EZI-SERVO2-PE-42M-A"
+          }
+        },
+        {
+          "type": "Component",
+          "id": "comp_010",
+          "name": "Main Switch Cover",
+          "properties": {
+            "part_number": "02-114-15-1"
+          }
+        },
+        {
+          "type": "Component",
+          "id": "comp_011",
+          "name": "공압 Box",
+          "properties": {}
+        },
+        {
+          "type": "Component",
+          "id": "comp_012",
+          "name": "IO 단자대",
+          "properties": {}
+        },
+        {
+          "type": "Component",
+          "id": "comp_013",
+          "name": "좌측 도어 실린더",
+          "properties": {}
+        },
+        {
+          "type": "Process",
+          "id": "proc_001",
+          "name": "탭 작업",
+          "properties": {}
+        },
+        {
+          "type": "Process",
+          "id": "proc_002",
+          "name": "용접",
+          "properties": {}
+        },
+        {
+          "type": "Issue",
+          "id": "iss_001",
+          "name": "레일 모델링 오류",
+          "properties": {}
+        },
+        {
+          "type": "Issue",
+          "id": "iss_002",
+          "name": "간섭 발생",
+          "properties": {}
+        },
+        {
+          "type": "Issue",
+          "id": "iss_003",
+          "name": "탭 누락",
+          "properties": {}
+        },
+        {
+          "type": "Resolution",
+          "id": "res_001",
+          "name": "레일 모델링 수정",
+          "properties": {}
+        }
+      ],
+      "relations": [
+        {
+          "type": "HAS_ISSUE",
+          "from_id": "eq_001",
+          "to_id": "iss_001",
+          "properties": {}
+        },
+        {
+          "type": "HAS_ISSUE",
+          "from_id": "eq_001",
+          "to_id": "iss_002",
+          "properties": {}
+        },
+        {
+          "type": "HAS_ISSUE",
+          "from_id": "eq_001",
+          "to_id": "iss_003",
+          "properties": {}
+        },
+        {
+          "type": "INVOLVES_COMPONENT",
+          "from_id": "eq_001",
+          "to_id": "comp_001",
+          "properties": {}
+        },
+        {
+          "type": "INVOLVES_COMPONENT",
+          "from_id": "eq_001",
+          "to_id": "comp_002",
+          "properties": {}
+        },
+        {
+          "type": "INVOLVES_COMPONENT",
+          "from_id": "eq_001",
+          "to_id": "comp_003",
+          "properties": {}
+        },
+        {
+          "type": "INVOLVES_COMPONENT",
+          "from_id": "eq_001",
+          "to_id": "comp_009",
+          "properties": {}
+        },
+        {
+          "type": "RESOLVED_BY",
+          "from_id": "iss_001",
+          "to_id": "res_001",
+          "properties": {}
+        },
+        {
+          "type": "INVOLVED_IN",
+          "from_id": "comp_002",
+          "to_id": "proc_001",
+          "properties": {}
+        },
+        {
+          "type": "INVOLVED_IN",
+          "from_id": "comp_003",
+          "to_id": "proc_002",
+          "properties": {}
+        },
+        {
+          "type": "USES_COMPONENT",
+          "from_id": "eq_001",
+          "to_id": "comp_011",
+          "properties": {}
+        },
+        {
+          "type": "USES_COMPONENT",
+          "from_id": "eq_001",
+          "to_id": "comp_012",
+          "properties": {}
+        }
+      ]
+    },
+    "elapsed_sec": 99.7
+  },
+  {
+    "page_id": "8315830532",
+    "topic": "호닝신뢰성",
+    "title": "호닝 형상 검사기 DR 회의록 23/12/11",
+    "idx": 6,
+    "extracted": {
+      "entities": [
+        {
+          "type": "Equipment",
+          "id": "eq_001",
+          "name": "호닝 형상 검사기",
+          "properties": {}
+        },
+        {
+          "type": "Component",
+          "id": "comp_001",
+          "name": "Frame",
+          "properties": {}
+        },
+        {
+          "type": "Component",
+          "id": "comp_002",
+          "name": "Cover",
+          "properties": {}
+        },
+        {
+          "type": "Component",
+          "id": "comp_003",
+          "name": "PDU",
+          "properties": {}
+        },
+        {
+          "type": "Component",
+          "id": "comp_004",
+          "name": "에어 펌프",
+          "properties": {}
+        },
+        {
+          "type": "Component",
+          "id": "comp_005",
+          "name": "센서",
+          "properties": {}
+        },
+        {
+          "type": "Component",
+          "id": "comp_006",
+          "name": "마그네틱",
+          "properties": {}
+        },
+        {
+          "type": "Component",
+          "id": "comp_007",
+          "name": "모터",
+          "properties": {}
+        },
+        {
+          "type": "Component",
+          "id": "comp_008",
+          "name": "속판",
+          "properties": {}
+        },
+        {
+          "type": "Component",
+          "id": "comp_009",
+          "name": "메인 전원 브라켓",
+          "properties": {}
+        },
+        {
+          "type": "Component",
+          "id": "comp_010",
+          "name": "아크릴 도어",
+          "properties": {}
+        },
+        {
+          "type": "Component",
+          "id": "comp_011",
+          "name": "기어비",
+          "properties": {}
+        },
+        {
+          "type": "Component",
+          "id": "comp_012",
+          "name": "엔코더",
+          "properties": {}
+        },
+        {
+          "type": "Component",
+          "id": "comp_013",
+          "name": "타이밍 벨트",
+          "properties": {}
+        },
+        {
+          "type": "Component",
+          "id": "comp_014",
+          "name": "광학계 배선 브라켓",
+          "properties": {}
+        },
+        {
+          "type": "Issue",
+          "id": "iss_001",
+          "name": "지게차 이동성 부족",
+          "properties": {}
+        },
+        {
+          "type": "Issue",
+          "id": "iss_002",
+          "name": "공압 장치 배치 공간 부족",
+          "properties": {}
+        },
+        {
+          "type": "Issue",
+          "id": "iss_003",
+          "name": "에어 펌프 교체 어려움",
+          "properties": {}
+        },
+        {
+          "type": "Issue",
+          "id": "iss_004",
+          "name": "도어 닫힘 미확인",
+          "properties": {}
+        },
+        {
+          "type": "Issue",
+          "id": "iss_005",
+          "name": "볼트 튀어나옴",
+          "properties": {}
+        },
+        {
+          "type": "Issue",
+          "id": "iss_006",
+          "name": "아크릴 도어 마찰",
+          "properties": {}
+        }
+      ],
+      "relations": [
+        {
+          "type": "HAS_ISSUE",
+          "from_id": "eq_001",
+          "to_id": "iss_001",
+          "properties": {}
+        },
+        {
+          "type": "HAS_ISSUE",
+          "from_id": "eq_001",
+          "to_id": "iss_002",
+          "properties": {}
+        },
+        {
+          "type": "HAS_ISSUE",
+          "from_id": "eq_001",
+          "to_id": "iss_003",
+          "properties": {}
+        },
+        {
+          "type": "HAS_ISSUE",
+          "from_id": "eq_001",
+          "to_id": "iss_004",
+          "properties": {}
+        },
+        {
+          "type": "HAS_ISSUE",
+          "from_id": "eq_001",
+          "to_id": "iss_005",
+          "properties": {}
+        },
+        {
+          "type": "HAS_ISSUE",
+          "from_id": "eq_001",
+          "to_id": "iss_006",
+          "properties": {}
+        },
+        {
+          "type": "USES_COMPONENT",
+          "from_id": "eq_001",
+          "to_id": "comp_001",
+          "properties": {}
+        },
+        {
+          "type": "USES_COMPONENT",
+          "from_id": "eq_001",
+          "to_id": "comp_002",
+          "properties": {}
+        },
+        {
+          "type": "USES_COMPONENT",
+          "from_id": "eq_001",
+          "to_id": "comp_003",
+          "properties": {}
+        },
+        {
+          "type": "USES_COMPONENT",
+          "from_id": "eq_001",
+          "to_id": "comp_004",
+          "properties": {}
+        },
+        {
+          "type": "USES_COMPONENT",
+          "from_id": "eq_001",
+          "to_id": "comp_005",
+          "properties": {}
+        },
+        {
+          "type": "USES_COMPONENT",
+          "from_id": "eq_001",
+          "to_id": "comp_006",
+          "properties": {}
+        },
+        {
+          "type": "USES_COMPONENT",
+          "from_id": "eq_001",
+          "to_id": "comp_007",
+          "properties": {}
+        },
+        {
+          "type": "USES_COMPONENT",
+          "from_id": "eq_001",
+          "to_id": "comp_008",
+          "properties": {}
+        },
+        {
+          "type": "USES_COMPONENT",
+          "from_id": "eq_001",
+          "to_id": "comp_009",
+          "properties": {}
+        },
+        {
+          "type": "USES_COMPONENT",
+          "from_id": "eq_001",
+          "to_id": "comp_010",
+          "properties": {}
+        },
+        {
+          "type": "USES_COMPONENT",
+          "from_id": "eq_001",
+          "to_id": "comp_011",
+          "properties": {}
+        },
+        {
+          "type": "USES_COMPONENT",
+          "from_id": "eq_001",
+          "to_id": "comp_012",
+          "properties": {}
+        },
+        {
+          "type": "USES_COMPONENT",
+          "from_id": "eq_001",
+          "to_id": "comp_013",
+          "properties": {}
+        },
+        {
+          "type": "USES_COMPONENT",
+          "from_id": "eq_001",
+          "to_id": "comp_014",
+          "properties": {}
+        }
+      ]
+    },
+    "elapsed_sec": 103.2
+  }
+]

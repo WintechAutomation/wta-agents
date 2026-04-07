@@ -1,0 +1,18 @@
+[
+  {
+    "manager": "조광현",
+    "nc_count": 1,
+    "nc_ids": "NC#186",
+    "project": "JPJMMHIM0001",
+    "key": "JPJMMHIM0001-165",
+    "url": "https://iwta.atlassian.net/browse/JPJMMHIM0001-165"
+  },
+  {
+    "manager": "정정일",
+    "nc_count": 9,
+    "nc_ids": "NC#342, NC#343, NC#344, NC#349, NC#352, NC#367, NC#368, NC#370, NC#371",
+    "project": "JPJMMHIM0001",
+    "key": "JPJMMHIM0001-166",
+    "url": "https://iwta.atlassian.net/browse/JPJMMHIM0001-166"
+  }
+]

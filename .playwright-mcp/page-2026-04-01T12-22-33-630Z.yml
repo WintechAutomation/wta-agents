@@ -1,0 +1,268 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - complementary [ref=e4]:
+      - generic [ref=e5]:
+        - generic [ref=e6]:
+          - generic [ref=e7]: WTA AI
+          - generic [ref=e8]: 에이전트 대시보드 v2
+        - button "◀" [ref=e9]
+      - navigation [ref=e10]:
+        - link "🏢 에이전트 오피스" [ref=e11] [cursor=pointer]:
+          - /url: /v2/office
+          - generic [ref=e12]: 🏢
+          - generic [ref=e13]: 에이전트 오피스
+        - link "⚡ 운영 대시보드" [ref=e14] [cursor=pointer]:
+          - /url: /v2/dashboard
+          - generic [ref=e15]: ⚡
+          - generic [ref=e16]: 운영 대시보드
+        - link "📊 시스템 개요" [ref=e17] [cursor=pointer]:
+          - /url: /v2/overview
+          - generic [ref=e18]: 📊
+          - generic [ref=e19]: 시스템 개요
+        - link "📚 Knowledge Base" [ref=e20] [cursor=pointer]:
+          - /url: /v2/knowledge
+          - generic [ref=e21]: 📚
+          - generic [ref=e22]: Knowledge Base
+        - link "📋 작업 큐" [ref=e23] [cursor=pointer]:
+          - /url: /v2/task-queue
+          - generic [ref=e24]: 📋
+          - generic [ref=e25]: 작업 큐
+        - link "⏰ 스케줄 관리" [ref=e26] [cursor=pointer]:
+          - /url: /v2/cron
+          - generic [ref=e27]: ⏰
+          - generic [ref=e28]: 스케줄 관리
+        - link "💬 CS 세션" [ref=e29] [cursor=pointer]:
+          - /url: /v2/cs-sessions
+          - generic [ref=e30]: 💬
+          - generic [ref=e31]: CS 세션
+        - link "📖 기술용어집" [ref=e32] [cursor=pointer]:
+          - /url: /v2/glossary
+          - generic [ref=e33]: 📖
+          - generic [ref=e34]: 기술용어집
+        - link "🔨 매뉴얼 빌더" [ref=e35] [cursor=pointer]:
+          - /url: /v2/manual-builder
+          - generic [ref=e36]: 🔨
+          - generic [ref=e37]: 매뉴얼 빌더
+        - link "📁 업무공간" [ref=e38] [cursor=pointer]:
+          - /url: /v2/workspace
+          - generic [ref=e39]: 📁
+          - generic [ref=e40]: 업무공간
+      - generic [ref=e42]:
+        - generic [ref=e43]: 시스템
+        - generic [ref=e44]:
+          - generic [ref=e45]: 온라인
+          - generic [ref=e46]: 0/12
+        - generic [ref=e47]:
+          - generic [ref=e48]: 업타임
+          - generic [ref=e49]: 0h 0m
+    - main [ref=e50]:
+      - generic [ref=e51]:
+        - generic [ref=e52]:
+          - heading "📊 시스템 개요" [level=1] [ref=e53]
+          - paragraph [ref=e54]: WTA AI 에이전트 시스템 현황 · 모니터 · 분석
+        - generic [ref=e55]:
+          - generic [ref=e56]:
+            - generic [ref=e57]: 온라인 에이전트
+            - generic [ref=e58]: 0/12
+            - generic [ref=e59]: 실시간
+          - generic [ref=e60]:
+            - generic [ref=e61]: 총 도구 호출
+            - generic [ref=e62]: "0"
+            - generic [ref=e63]: 세션 누적
+          - generic [ref=e64]:
+            - generic [ref=e65]: 시스템 업타임
+            - generic [ref=e66]: 0h 0m
+            - generic [ref=e67]: 마지막 재시작 이후
+          - generic [ref=e68]:
+            - generic [ref=e69]: MES 연동
+            - generic [ref=e70]: 정상
+            - generic [ref=e71]: mes-wta.com
+        - generic [ref=e72]:
+          - generic [ref=e73]: 온라인 에이전트
+          - generic [ref=e75]: 온라인 에이전트 없음
+        - generic [ref=e76]:
+          - generic [ref=e77]:
+            - generic [ref=e78]: 카테고리별 에이전트 활동
+            - generic [ref=e80]:
+              - list [ref=e82]:
+                - listitem [ref=e83]:
+                  - img "전체 legend icon" [ref=e84]
+                  - text: 전체
+                - listitem [ref=e86]:
+                  - img "활동 legend icon" [ref=e87]
+                  - text: 활동
+              - application [ref=e89]:
+                - generic [ref=e102]:
+                  - generic [ref=e104]:
+                    - generic [ref=e106]: "0"
+                    - generic [ref=e108]: "1"
+                    - generic [ref=e110]: "2"
+                    - generic [ref=e112]: "3"
+                    - generic [ref=e114]: "4"
+                  - generic [ref=e117]:
+                    - generic [ref=e119]: 운영
+                    - generic [ref=e122]: 데이터
+                    - generic [ref=e125]: CS
+                    - generic [ref=e128]: 개발
+                    - generic [ref=e131]: 품질관리
+          - generic [ref=e132]:
+            - generic [ref=e133]: 에이전트 모델 분포
+            - generic [ref=e135]:
+              - list [ref=e137]:
+                - listitem [ref=e138]:
+                  - img "Haiku legend icon" [ref=e139]
+                  - text: Haiku
+                - listitem [ref=e141]:
+                  - img "Opus legend icon" [ref=e142]
+                  - text: Opus
+                - listitem [ref=e144]:
+                  - img "Sonnet legend icon" [ref=e145]
+                  - text: Sonnet
+              - application [ref=e147]
+        - heading "🖥️ 에이전트 모니터" [level=2] [ref=e148]
+        - generic [ref=e149]:
+          - generic [ref=e150]:
+            - generic [ref=e151]: 👑
+            - generic [ref=e153]:
+              - generic [ref=e154]: MAX
+              - generic [ref=e155]: 오프라인
+          - generic [ref=e156]:
+            - generic [ref=e157]: 📊
+            - generic [ref=e159]:
+              - generic [ref=e160]: DB매니저
+              - generic [ref=e161]: 오프라인
+          - generic [ref=e162]:
+            - generic [ref=e163]: 🛠️
+            - generic [ref=e165]:
+              - generic [ref=e166]: CS담당
+              - generic [ref=e167]: 오프라인
+          - generic [ref=e168]:
+            - generic [ref=e169]: 💰
+            - generic [ref=e171]:
+              - generic [ref=e172]: 영업팀
+              - generic [ref=e173]: 오프라인
+          - generic [ref=e174]:
+            - generic [ref=e175]: 💻
+            - generic [ref=e177]:
+              - generic [ref=e178]: 개발팀
+              - generic [ref=e179]: 오프라인
+          - generic [ref=e180]:
+            - generic [ref=e181]: 📋
+            - generic [ref=e183]:
+              - generic [ref=e184]: 관리팀
+              - generic [ref=e185]: 오프라인
+          - generic [ref=e186]:
+            - generic [ref=e187]: 🔧
+            - generic [ref=e189]:
+              - generic [ref=e190]: 크래프터
+              - generic [ref=e191]: 오프라인
+          - generic [ref=e192]:
+            - generic [ref=e193]: 🔍
+            - generic [ref=e195]:
+              - generic [ref=e196]: NC관리
+              - generic [ref=e197]: 오프라인
+          - generic [ref=e198]:
+            - generic [ref=e199]: 🔬
+            - generic [ref=e201]:
+              - generic [ref=e202]: 출하품질
+              - generic [ref=e203]: 오프라인
+          - generic [ref=e204]:
+            - generic [ref=e205]: 🚨
+            - generic [ref=e207]:
+              - generic [ref=e208]: 제품개선
+              - generic [ref=e209]: 오프라인
+          - generic [ref=e210]:
+            - generic [ref=e211]: 💬
+            - generic [ref=e213]:
+              - generic [ref=e214]: 슬랙봇
+              - generic [ref=e215]: 오프라인
+          - generic [ref=e216]:
+            - generic [ref=e217]: 📅
+            - generic [ref=e219]:
+              - generic [ref=e220]: 일정관리
+              - generic [ref=e221]: 오프라인
+          - generic [ref=e222]:
+            - generic [ref=e223]: 📝
+            - generic [ref=e225]:
+              - generic [ref=e226]: 독스(Docs)
+              - generic [ref=e227]: 오프라인
+        - generic [ref=e228]:
+          - generic [ref=e229]:
+            - heading "에이전트별 도구 호출 수" [level=2] [ref=e230]
+            - generic [ref=e231]: 데이터 없음
+          - generic [ref=e232]:
+            - heading "도구별 사용량 (Top 10)" [level=2] [ref=e233]
+            - generic [ref=e234]: 데이터 없음
+        - generic [ref=e235]:
+          - heading "최근 도구 사용 타임라인" [level=2] [ref=e236]
+          - generic [ref=e237]: 활동 없음 — 에이전트가 작업을 시작하면 여기에 표시됩니다
+        - heading "📈 분석" [level=2] [ref=e238]
+        - generic [ref=e239]:
+          - generic [ref=e240]: 에이전트별 메시지 수
+          - generic [ref=e241]: 메시지 데이터 없음
+        - generic [ref=e242]:
+          - generic [ref=e243]:
+            - generic [ref=e244]: 세션 볼륨 추이 (7일)
+            - application [ref=e247]:
+              - generic [ref=e257]:
+                - generic [ref=e259]: 3/26
+                - generic [ref=e261]: 3/27
+                - generic [ref=e263]: 3/28
+                - generic [ref=e265]: 3/29
+                - generic [ref=e267]: 3/30
+                - generic [ref=e269]: 3/31
+                - generic [ref=e271]: 4/1
+          - generic [ref=e272]:
+            - generic [ref=e273]:
+              - generic [ref=e274]: 도구별 사용량
+              - generic [ref=e275]: 시뮬레이션
+            - application [ref=e278]:
+              - generic [ref=e283]:
+                - generic [ref=e284]:
+                  - generic [ref=e286]: "0"
+                  - generic [ref=e288]: "40"
+                  - generic [ref=e290]: "80"
+                  - generic [ref=e292]: "120"
+                  - generic [ref=e294]: "160"
+                - generic [ref=e295]:
+                  - generic [ref=e297]: db_query
+                  - generic [ref=e299]: web_search
+                  - generic [ref=e301]: report_gen
+          - generic [ref=e302]:
+            - generic [ref=e303]: 에이전트별 활동량
+            - generic [ref=e304]:
+              - generic [ref=e305]:
+                - generic [ref=e306]: 👑 MAX
+                - generic [ref=e309]: "324"
+              - generic [ref=e313]: "137"
+              - generic [ref=e314]:
+                - generic [ref=e315]: 💬 슬랙봇
+                - generic [ref=e318]: "79"
+              - generic [ref=e319]:
+                - generic [ref=e320]: 📝 독스(Docs)
+                - generic [ref=e323]: "73"
+              - generic [ref=e324]:
+                - generic [ref=e325]: 📋 관리팀
+                - generic [ref=e328]: "51"
+              - generic [ref=e329]:
+                - generic [ref=e330]: 🔧 크래프터
+                - generic [ref=e333]: "28"
+              - generic [ref=e334]:
+                - generic [ref=e335]: 💻 개발팀
+                - generic [ref=e338]: "18"
+              - generic [ref=e339]:
+                - generic [ref=e340]: 💰 영업팀
+                - generic [ref=e343]: "15"
+          - generic [ref=e344]:
+            - generic [ref=e345]:
+              - generic [ref=e346]: 태스크 완료율
+              - generic [ref=e347]: 시뮬레이션
+            - generic [ref=e348]:
+              - generic [ref=e349]:
+                - img [ref=e350]
+                - generic [ref=e354]: 83%
+              - generic [ref=e355]:
+                - generic [ref=e356]: 전체 47건
+                - generic [ref=e357]: 완료 39건
+                - generic [ref=e358]: 미완료 8건
+  - generic [ref=e359]: 3/26

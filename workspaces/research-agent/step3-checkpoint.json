@@ -1,0 +1,44 @@
+{
+  "step": "Phase 3 Step 3",
+  "status": "paused_by_instruction",
+  "paused_at": "2026-04-06T00:35:00+09:00",
+  "reason": "부서장 즉시 중단 지시 (이유 미통보)",
+  "progress": {
+    "pages_extracted": 0,
+    "pages_total": 768,
+    "cost_incurred_usd": 0.0,
+    "neo4j_nodes_added": 0
+  },
+  "ready_to_resume": {
+    "confluence_space": "CM",
+    "cloud_id": "aa39af27-f906-4c9b-ae6a-774072aac35d",
+    "total_pages": 768,
+    "local_page_list": "workspaces/research-agent/cm-pages-all.json (767개 ID+제목, 갱신 2026-04-04)",
+    "local_body_cache": "없음 — 재개 시 Confluence API fetch 필요",
+    "prompt_version": "v3",
+    "neo4j_label": "CMFull",
+    "estimated_cost_usd": 4.6,
+    "scripts": {
+      "extract": "claude_extract_v3_all.py (수정 필요 - Confluence 직접 호출)",
+      "load": "load_v3_neo4j.py (CMFull 라벨 수정 필요)"
+    }
+  },
+  "embedding_server_note": {
+    "instruction": "임베딩 서버 주소 환경변수로 분리 (2026-04-06 부서장 지시)",
+    "env_var": "OLLAMA_HOST",
+    "default": "http://localhost:11434 (2026-04-06 전환 완료)",
+    "previous": "http://182.224.6.147:11434",
+    "hardcoded_files_to_fix": [
+      "poc-index.py (OLLAMA_BASE)",
+      "poc-llm-extract.py (OLLAMA_BASE)",
+      "qwen_extract.py (OLLAMA_BASE)"
+    ],
+    "v3_scripts_status": "Ollama 미사용 (Claude API 전용) — 조치 불필요"
+  },
+  "completed_phases": {
+    "phase1_manual": "71노드/58관계 (포장혼입검사 31페이지 수동)",
+    "phase2_v1": "339엔티티/282관계 (Claude Haiku v1, $0.066)",
+    "phase3_step1": "285엔티티/251관계 (오류 5페이지 청크 재처리, $0.055)",
+    "phase3_step2_v3": "663엔티티/578관계 (v3 프롬프트, Recall 90%, $0.180)"
+  }
+}

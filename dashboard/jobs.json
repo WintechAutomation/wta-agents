@@ -1,0 +1,74 @@
+[
+  {
+    "id": "cs-embed",
+    "name": "CS 임베딩 동기화",
+    "description": "CS 이력 데이터를 벡터DB에 임베딩 (신규 건만)",
+    "command": "C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python311\\python.exe C:\\MES\\wta-agents\\scripts\\cs-embed.py",
+    "cron": "0 2 * * *",
+    "enabled": true,
+    "created_at": "2026-03-29 09:32:32"
+  },
+  {
+    "id": "0a3ac496",
+    "name": "NC 주간 리포트",
+    "description": "매주 월요일 08:32 KST — nc-manager 부적합 주간 리포트 생성 후 #품질관리 슬랙 발송",
+    "command": "\"C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python311\\python.exe\" \"C:\\MES\\wta-agents\\scripts\\trigger-agent.py\" nc-manager \"[주간 자동 리포트] 이번 주 부적합 현황 분석 리포트를 생성해서 슬랙 #품질관리 채널에 발송해주세요.\"",
+    "cron": "32 8 * * 1",
+    "enabled": true,
+    "created_at": "2026-03-29 11:38:37"
+  },
+  {
+    "id": "bb65e097",
+    "name": "NC 일일 에스컬레이션 점검",
+    "description": "매일 08:05 KST — nc-manager 기한 초과 부적합 점검, issue-manager 이슈 생성 및 MAX 보고",
+    "command": "\"C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python311\\python.exe\" \"C:\\MES\\wta-agents\\scripts\\trigger-agent.py\" nc-manager \"[일일 에스컬레이션 자동 점검] 현재 기한이 초과된 부적합 건을 확인하고, 해당 건에 대해 issue-manager에 이슈를 생성한 뒤 MAX에게 보고해주세요.\"",
+    "cron": "5 8 * * *",
+    "enabled": true,
+    "created_at": "2026-03-29 11:38:39"
+  },
+  {
+    "id": "auto-commit",
+    "name": "자동 커밋",
+    "description": "10분 주기 — git add -A, commit, push (변경사항 있을 때만)",
+    "command": "\"C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python311\\python.exe\" \"C:\\MES\\wta-agents\\scripts\\auto-commit.py\" --once",
+    "cron": "*/10 * * * *",
+    "enabled": true,
+    "created_at": "2026-04-03 23:00:00"
+  },
+  {
+    "id": "health-check",
+    "name": "시스템 헬스체크",
+    "description": "1시간 주기 — MES/대시보드/슬랙봇/Docker/Ollama 상태 점검, 이상 시 MAX 자동 알림",
+    "command": "\"C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python311\\python.exe\" \"C:\\MES\\wta-agents\\scripts\\health-check-once.py\"",
+    "cron": "0 * * * *",
+    "enabled": true,
+    "created_at": "2026-04-03 23:00:00"
+  },
+  {
+    "id": "lunch-recommend",
+    "name": "점심 메뉴 추천",
+    "description": "평일 10:00 KST — #밥먹기 슬랙 채널에 랜덤 점심 메뉴 추천",
+    "command": "\"C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python311\\python.exe\" \"C:\\MES\\wta-agents\\scripts\\lunch-recommend.py\"",
+    "cron": "0 10 * * 1-5",
+    "enabled": true,
+    "created_at": "2026-04-03 23:00:00"
+  },
+  {
+    "id": "daily-report",
+    "name": "일일 업무보고 트리거",
+    "description": "매일 22:00 KST — MAX에게 전 팀원 일일 업무보고 수집 요청",
+    "command": "\"C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python311\\python.exe\" \"C:\\MES\\wta-agents\\scripts\\daily-report-trigger.py\"",
+    "cron": "0 22 * * *",
+    "enabled": true,
+    "created_at": "2026-04-03 23:00:00"
+  },
+  {
+    "id": "weekly-report-control",
+    "name": "제어팀 주간업무보고서 자동생성",
+    "description": "매주 월요일 07:00 KST — 전주 Confluence 보고서를 복사하여 금주 보고서 생성 (날짜 자동 shift)",
+    "command": "\"C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python311\\python.exe\" \"C:\\MES\\wta-agents\\scripts\\weekly-report-control.py\"",
+    "cron": "0 7 * * 1",
+    "enabled": true,
+    "created_at": "2026-04-06 06:45:00"
+  }
+]

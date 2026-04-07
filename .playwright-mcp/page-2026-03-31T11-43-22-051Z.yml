@@ -1,0 +1,239 @@
+- generic [ref=e29]:
+  - complementary [ref=e30]:
+    - generic [ref=e31]:
+      - generic [ref=e32]:
+        - img "WTA" [ref=e33]
+        - generic [ref=e34]: CS Agent
+      - button [ref=e35]:
+        - img [ref=e36]
+    - generic [ref=e40]:
+      - img [ref=e42]
+      - generic [ref=e45]:
+        - paragraph [ref=e46]: Administrator
+        - paragraph [ref=e47]: HQ
+    - navigation [ref=e48]:
+      - link "대시보드" [ref=e49] [cursor=pointer]:
+        - /url: /
+        - img [ref=e50]
+        - text: 대시보드
+      - link "CS 이력" [ref=e55] [cursor=pointer]:
+        - /url: /cs
+        - img [ref=e56]
+        - text: CS 이력
+      - link "업무 스케줄" [ref=e59] [cursor=pointer]:
+        - /url: /schedule
+        - img [ref=e60]
+        - text: 업무 스케줄
+      - link "장비" [ref=e62] [cursor=pointer]:
+        - /url: /equipment
+        - img [ref=e63]
+        - text: 장비
+      - link "장비 셋업" [ref=e66] [cursor=pointer]:
+        - /url: /setup
+        - img [ref=e67]
+        - text: 장비 셋업
+      - link "재고" [ref=e69] [cursor=pointer]:
+        - /url: /inventory
+        - img [ref=e70]
+        - text: 재고
+      - link "부품 판매" [ref=e74] [cursor=pointer]:
+        - /url: /sales
+        - img [ref=e75]
+        - text: 부품 판매
+      - link "갤러리" [ref=e79] [cursor=pointer]:
+        - /url: /gallery
+        - img [ref=e80]
+        - text: 갤러리
+      - link "견적서 관리" [ref=e84] [cursor=pointer]:
+        - /url: /quotes
+        - img [ref=e85]
+        - text: 견적서 관리
+      - link "라벨 출력" [ref=e88] [cursor=pointer]:
+        - /url: /labels
+        - img [ref=e89]
+        - text: 라벨 출력
+      - link "설정" [ref=e93] [cursor=pointer]:
+        - /url: /settings
+        - img [ref=e94]
+        - text: 설정
+    - button "로그아웃" [ref=e97]:
+      - img [ref=e98]
+      - text: 로그아웃
+  - generic [ref=e101]:
+    - banner [ref=e102]:
+      - generic [ref=e103]:
+        - button [ref=e104]:
+          - img [ref=e105]
+        - img "WTA" [ref=e106]
+      - generic [ref=e107]:
+        - button "다크 모드 전환" [ref=e108]:
+          - img [ref=e109]
+        - button "Language" [ref=e112]:
+          - img [ref=e113]
+    - main [ref=e116]:
+      - generic [ref=e605]:
+        - generic [ref=e606]:
+          - button "뒤로" [ref=e607]:
+            - img [ref=e608]
+            - text: 뒤로
+          - generic [ref=e610]:
+            - button "CS 보고서" [ref=e611]:
+              - img [ref=e612]
+              - text: CS 보고서
+            - button "수정" [ref=e615]:
+              - img [ref=e616]
+              - text: 수정
+            - button "삭제" [ref=e619]:
+              - img [ref=e620]
+              - text: 삭제
+        - generic [ref=e623]:
+          - generic [ref=e625]:
+            - generic [ref=e626]:
+              - paragraph
+              - heading "Kyocera 검사기 1 호기 AP1135 신제품 마그네틱 암 사용 불가" [level=2] [ref=e627]
+            - button "종료" [ref=e629]:
+              - img [ref=e630]
+              - text: 종료
+          - generic [ref=e634]:
+            - heading "기본 정보" [level=3] [ref=e636]
+            - generic [ref=e637]:
+              - generic [ref=e638]:
+                - generic [ref=e639]: 접수일
+                - generic [ref=e640]: 2026-03-15 00:00
+              - generic [ref=e641]:
+                - generic [ref=e642]: 접수자
+                - generic [ref=e643]: 박리휘/朴李辉
+              - generic [ref=e644]:
+                - generic [ref=e645]: 처리방법
+                - generic [ref=e646]: 원격 조치
+              - generic [ref=e647]:
+                - generic [ref=e648]: CS 처리자
+                - generic [ref=e649]: 박리휘
+              - generic [ref=e650]:
+                - generic [ref=e651]: 영업담당
+                - generic [ref=e652]: "-"
+              - generic [ref=e653]:
+                - generic [ref=e654]: 유/무상
+                - generic [ref=e655]: 무상
+              - generic [ref=e656]:
+                - generic [ref=e657]: 완료일
+                - generic [ref=e658]: 2026-03-16
+              - generic [ref=e659]:
+                - generic [ref=e660]: 등록일
+                - generic [ref=e661]: 2026-03-20 04:35
+              - generic [ref=e662]:
+                - generic [ref=e663]: 수정일
+                - generic [ref=e664]: 2026-03-28 01:02
+          - generic [ref=e665]:
+            - heading "고객 정보" [level=3] [ref=e667]
+            - generic [ref=e668]:
+              - generic [ref=e669]:
+                - generic [ref=e670]: 고객
+                - generic [ref=e671]: 깐저우 교세라
+              - generic [ref=e672]:
+                - generic [ref=e673]: 장비명
+                - 'button "중국 교세라 검사기 F1 #1" [ref=e674]'
+              - generic [ref=e675]:
+                - generic [ref=e676]: 프로젝트번호
+                - generic [ref=e677]: CNCKYHF10001
+              - generic [ref=e678]:
+                - generic [ref=e679]: 모델구분
+                - generic [ref=e680]: 검사기
+              - generic [ref=e681]:
+                - generic [ref=e682]: 시리얼번호
+                - generic [ref=e683]: WHIM1MA001
+              - generic [ref=e684]:
+                - generic [ref=e685]: 출하일
+                - generic [ref=e686]: 2025-11-03
+              - generic [ref=e687]:
+                - generic [ref=e688]: 관련 부서
+                - generic [ref=e689]: "-"
+          - generic [ref=e690]:
+            - heading "증상 및 원인" [level=3] [ref=e692]
+            - generic [ref=e694]:
+              - paragraph [ref=e695]: 증상 및 원인
+              - paragraph [ref=e696]: 신규 암 사용 시 배치 각도 편차가 과도하게 발생함
+          - generic [ref=e697]:
+            - heading "조치 내용" [level=3] [ref=e699]
+            - generic [ref=e701]:
+              - paragraph [ref=e702]: 조치내용 / 결과
+              - paragraph [ref=e703]: 신로봇 암 사용 중단 구형 로봇 암 사용
+          - generic [ref=e704]:
+            - button "증상 첨부파일" [ref=e705]:
+              - generic [ref=e706]:
+                - img [ref=e707]
+                - heading "증상 첨부파일" [level=3] [ref=e709]
+              - img [ref=e710]
+            - generic [ref=e712]:
+              - button "파일 업로드" [ref=e713]:
+                - img [ref=e714]
+                - text: 파일 업로드
+              - paragraph [ref=e717]: 첨부파일 없음
+          - generic [ref=e718]:
+            - button "처리결과 첨부파일" [ref=e719]:
+              - generic [ref=e720]:
+                - img [ref=e721]
+                - heading "처리결과 첨부파일" [level=3] [ref=e723]
+              - img [ref=e724]
+            - generic [ref=e726]:
+              - button "파일 업로드" [ref=e727]:
+                - img [ref=e728]
+                - text: 파일 업로드
+              - paragraph [ref=e731]: 첨부파일 없음
+          - generic [ref=e732]:
+            - button "작업 공수" [ref=e733]:
+              - generic [ref=e734]:
+                - img [ref=e735]
+                - heading "작업 공수" [level=3] [ref=e738]
+              - img [ref=e739]
+            - generic [ref=e742]:
+              - generic [ref=e743]:
+                - textbox "작업자" [ref=e744]
+                - textbox "작업시간(H)" [ref=e745]
+              - generic [ref=e746]:
+                - textbox [ref=e747]
+                - textbox [ref=e748]
+              - button "추가" [ref=e749]:
+                - img [ref=e750]
+                - text: 추가
+          - generic [ref=e751]:
+            - button "사용 부품/자재" [ref=e752]:
+              - generic [ref=e753]:
+                - img [ref=e754]
+                - heading "사용 부품/자재" [level=3] [ref=e758]
+              - img [ref=e759]
+            - generic [ref=e762]:
+              - generic [ref=e763]:
+                - textbox "품명" [ref=e764]
+                - textbox "수량" [ref=e765]
+              - generic [ref=e766]:
+                - textbox "단가" [ref=e767]
+                - textbox "금액" [ref=e768]
+              - button "추가" [ref=e769]:
+                - img [ref=e770]
+                - text: 추가
+  - navigation [ref=e299]:
+    - link "업무 스케줄" [ref=e300] [cursor=pointer]:
+      - /url: /schedule
+      - img [ref=e302]
+      - generic [ref=e304]: 업무 스케줄
+    - link "CS 이력" [ref=e305] [cursor=pointer]:
+      - /url: /cs
+      - img [ref=e307]
+      - generic [ref=e310]: CS 이력
+    - link "장비" [ref=e311] [cursor=pointer]:
+      - /url: /equipment
+      - img [ref=e313]
+      - generic [ref=e316]: 장비
+    - link "장비 셋업" [ref=e317] [cursor=pointer]:
+      - /url: /setup
+      - img [ref=e319]
+      - generic [ref=e321]: 장비 셋업
+    - link "재고" [ref=e322] [cursor=pointer]:
+      - /url: /inventory
+      - img [ref=e324]
+      - generic [ref=e328]: 재고
+    - link "더보기" [ref=e329] [cursor=pointer]:
+      - /url: /more
+      - img [ref=e331]
+      - generic [ref=e336]: 더보기

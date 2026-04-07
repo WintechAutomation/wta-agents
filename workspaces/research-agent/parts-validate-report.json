@@ -1,0 +1,533 @@
+{
+  "summary": {
+    "total": 542,
+    "empty": 0,
+    "too_short": 0,
+    "cid_issues": 0,
+    "has_table": 1,
+    "has_korean": 40
+  },
+  "categories": {
+    "4_servo": {
+      "total": 411,
+      "empty": [],
+      "too_short": [],
+      "cid_issues": [],
+      "no_table": [],
+      "broken_text": [],
+      "samples": [
+        {
+          "file": "Applied Motion_TSM23S-Q_InstallGuide_EN.md",
+          "size_bytes": 55150,
+          "chars": 54396,
+          "has_table": true,
+          "has_korean": false,
+          "cid_count": 0,
+          "preview": "p; MOONS' Automation  ## Contents  |                                                                "
+        },
+        {
+          "file": "Fastech_Unknown_Manual_KO_6.md",
+          "size_bytes": 107472,
+          "chars": 65259,
+          "has_table": false,
+          "has_korean": true,
+          "cid_count": 0,
+          "preview": "2  2  안전상의 주의사항  -  목  차  -  １． 안전상의 주의사항 .........................................................."
+        },
+        {
+          "file": "LS_STEP-ST_Manual_KO.md",
+          "size_bytes": 40582,
+          "chars": 24891,
+          "has_table": false,
+          "has_korean": true,
+          "cid_count": 0,
+          "preview": "ú¿ú¿ú¿ú¿ú¿ú¿ú¿ú¿ú¿ú¿ú¿ú¿ú¿ú¿ú¿ú¿ú¿ú ¿ú¿ú¿ú¿ú¿ú¿ú¿ú¿ú¿ú¿ú¿ú¿ú¿ú¿ú¿ú¿ú¿ú¿ú¿ú¿ú¿ú¿ú¿ú¿ú  ú¿ú¿ú¿ú¿ú¿ú¿ú¿"
+        },
+        {
+          "file": "LS_Unknown_Manual_KO_7.md",
+          "size_bytes": 3767,
+          "chars": 2163,
+          "has_table": false,
+          "has_korean": true,
+          "cid_count": 0,
+          "preview": "  PLSP PLSN  PLSP PLSN  AD  서보앰프 입력단자  역회전시 (CW 방향)  정회전시  (CCW 방향)  ｒ-F  역회전  정회전  주２) 앱솔루트 시스템인 경우"
+        },
+        {
+          "file": "LS_WMX2_InstallGuide_EN_2.md",
+          "size_bytes": 203800,
+          "chars": 195249,
+          "has_table": false,
+          "has_korean": true,
+          "cid_count": 0,
+          "preview": "s, Inc.  ---  ## 페이지 2  OPERATOR’S MANUAL FOR WMX2 CONSOLE      Warning / Important Notice  Warning "
+        },
+        {
+          "file": "Nexcom_Unknown_InstallGuide_EN.md",
+          "size_bytes": 54725,
+          "chars": 50617,
+          "has_table": false,
+          "has_korean": true,
+          "cid_count": 0,
+          "preview": " ---  ## 페이지 2  Legal Information  Legal Information  All Neousys Technology Inc. products shall be "
+        },
+        {
+          "file": "Rockwell_Unknown_Manual_KO.md",
+          "size_bytes": 185474,
+          "chars": 93945,
+          "has_table": false,
+          "has_korean": true,
+          "cid_count": 0,
+          "preview": "이 다릅니다. 전자 제어 장치 의 적용, 설치 및 유지보수에 대한 안전 지침(매뉴얼 SGI-1.1, 현지 로 크웰 오토메이션 영업 사무소 또는 http://ww.rockwellau"
+        },
+        {
+          "file": "Unknown_RTX64S_CommManual_EN.md",
+          "size_bytes": 13180,
+          "chars": 12183,
+          "has_table": false,
+          "has_korean": true,
+          "cid_count": 0,
+          "preview": "are provided with RTX64 for  use with the RT-TCP/IP Stack.  NOTE: You can write your own custom driv"
+        },
+        {
+          "file": "Unknown_Unknown_Manual_KO_16.md",
+          "size_bytes": 14795,
+          "chars": 6985,
+          "has_table": false,
+          "has_korean": true,
+          "cid_count": 0,
+          "preview": " ..............10-2  10.2 보호 기능 일람.......................10-3  10.3 이상시의 처치........................."
+        },
+        {
+          "file": "Unknown_Unknown_SetupGuide_EN.md",
+          "size_bytes": 64464,
+          "chars": 61656,
+          "has_table": false,
+          "has_korean": true,
+          "cid_count": 0,
+          "preview": "creen  Menu: It is the function to operate MC or PLC program stored in the PC.  Menu: It is the func"
+        }
+      ]
+    },
+    "5_inverter": {
+      "total": 3,
+      "empty": [],
+      "too_short": [],
+      "cid_issues": [],
+      "no_table": [],
+      "broken_text": [],
+      "samples": [
+        {
+          "file": "Unknown_FR-E800_Manual_KO.md",
+          "size_bytes": 166370,
+          "chars": 84036,
+          "has_table": false,
+          "has_korean": true,
+          "cid_count": 0,
+          "preview": "840-0.4K(0016)~22K(0440) FR-E860-0.75K(0017)~7.5K(0120) FR-E820S-0.1K(0008)~2.2K(0110) FR-E820-0.1K("
+        },
+        {
+          "file": "Unknown_FR-E800_Manual_KO_2.md",
+          "size_bytes": 354261,
+          "chars": 191679,
+          "has_table": false,
+          "has_korean": true,
+          "cid_count": 0,
+          "preview": "8)~22K(0900) FR-E840-0.4K(0016)~22K(0440) FR-E820S-0.1K(0008)~2.2K(0110) FR-E820-0.1K(0008)~22K(0900"
+        },
+        {
+          "file": "Unknown_FR-E800_Manual_KO_3.md",
+          "size_bytes": 1434629,
+          "chars": 756731,
+          "has_table": false,
+          "has_korean": true,
+          "cid_count": 0,
+          "preview": "FR-E840-0.4K(0016)~22K(0440) FR-E860-0.75K(0017)~7.5K(0120) FR-E820S-0.1K(0008)~2.2K(0110) FR-E820-0"
+        }
+      ]
+    },
+    "6_plc": {
+      "total": 32,
+      "empty": [],
+      "too_short": [],
+      "cid_issues": [],
+      "no_table": [],
+      "broken_text": [],
+      "samples": [
+        {
+          "file": "ABB_Unknown_CommManual_EN.md",
+          "size_bytes": 107877,
+          "chars": 102008,
+          "has_table": false,
+          "has_korean": true,
+          "cid_count": 0,
+          "preview": "                                                    MODBUS.ORG  Content  1  Introduction............"
+        },
+        {
+          "file": "ABB_Unknown_ParameterManual_EN_2.md",
+          "size_bytes": 89678,
+          "chars": 85835,
+          "has_table": false,
+          "has_korean": true,
+          "cid_count": 0,
+          "preview": " MESSAGING ON TCP/IP IMPLEMENTATION GUIDE  V1.0b  CONTENTS  1  INTRODUCTION ........................"
+        },
+        {
+          "file": "ACS_Unknown_CommManual_KO_2.md",
+          "size_bytes": 5641,
+          "chars": 3376,
+          "has_table": false,
+          "has_korean": true,
+          "cid_count": 0,
+          "preview": "Touch  MJ2  RJ 45  SPiiPlus COM Port  DSUB 9 Pin  Signal name Pin No. Pin No.  1  SHELL  Pin No.  Si"
+        },
+        {
+          "file": "Beckhoff_DO0049R01-MGW_UserManual_EN.md",
+          "size_bytes": 28308,
+          "chars": 26065,
+          "has_table": false,
+          "has_korean": true,
+          "cid_count": 0,
+          "preview": " ## 페이지 2  Table of Contents KUNBUS GmbH  Table of Contents  1 General Information.................."
+        },
+        {
+          "file": "Crevis_NA-9286_ParameterManual_EN_2.md",
+          "size_bytes": 1218,
+          "chars": 1153,
+          "has_table": false,
+          "has_korean": true,
+          "cid_count": 0,
+          "preview": "         FnIO S-Series  How to set the parameter with CoDeSys  1. Add some modules which you want to"
+        },
+        {
+          "file": "LS_TCPIPC_InstallGuide_EN.md",
+          "size_bytes": 38442,
+          "chars": 36753,
+          "has_table": false,
+          "has_korean": true,
+          "cid_count": 0,
+          "preview": "river for the ME-LGR Line of  Control Modules, utilizing drv_melgr_mtcpip  About this Document......"
+        },
+        {
+          "file": "LS_Unknown_SetupGuide_EN.md",
+          "size_bytes": 56588,
+          "chars": 52131,
+          "has_table": false,
+          "has_korean": true,
+          "cid_count": 0,
+          "preview": "rch 2008  COPYRIGHT  Copyright ® 1999 - 2008 ACS Motion Control Ltd. Changes are periodically made t"
+        },
+        {
+          "file": "Mitsubishi_MELSECNET_Manual_KO.md",
+          "size_bytes": 654775,
+          "chars": 291159,
+          "has_table": false,
+          "has_korean": true,
+          "cid_count": 0,
+          "preview": "에서소개하는관련매뉴얼을잘읽고안전에대해충분히 주의를기울여올바르게취급하시기바랍니다.  본매뉴얼의'주의사항'은본제품에관련된사항만기재하였습니다. PLC 시스템에서의안전을위한주의 사항은사용"
+        },
+        {
+          "file": "Mitsubishi_Unknown_CommManual_KO.md",
+          "size_bytes": 784446,
+          "chars": 339367,
+          "has_table": false,
+          "has_korean": true,
+          "cid_count": 0,
+          "preview": "얼및본매뉴얼에서소개하는관련매뉴얼을잘읽고안전에대해충분  히주위를기울여올바르게취급하시기바랍니다. 본매뉴얼의'주의사항'은본제품에관련된사항만기재하였습니다. PLC 시스템에서의안전을위한주의"
+        },
+        {
+          "file": "Unknown_CC-LINK_Manual_KO.md",
+          "size_bytes": 26825,
+          "chars": 13361,
+          "has_table": false,
+          "has_korean": true,
+          "cid_count": 0,
+          "preview": "서 진심으로 감사드립니다.  ABSODEX 는 일반 산업용 조립기계, 검사기계 등의 간헐작동 턴테이블 등을  유연하게 고정밀도로 구동하기 위해서 개발된 다이렉트 드라이브 인덱스 유"
+        }
+      ]
+    },
+    "7_pneumatic": {
+      "total": 8,
+      "empty": [],
+      "too_short": [],
+      "cid_issues": [],
+      "no_table": [],
+      "broken_text": [],
+      "samples": [
+        {
+          "file": "EtherCAT_PNOZ_Safety_KO.md",
+          "size_bytes": 10046,
+          "chars": 5313,
+          "has_table": false,
+          "has_korean": true,
+          "cid_count": 0,
+          "preview": " 이래 소형 안전 컨트롤러  PNOZmulti는 현재 수많은 어플리케이션  에 사용되고 있습니다. 전 세계 많은 고객  들이 소형 안전 컨트롤러 분야를 리딩하는  이 제품을 신뢰하"
+        },
+        {
+          "file": "Unknown_PNOZ_FunctionsManual_EN.md",
+          "size_bytes": 4168,
+          "chars": 3702,
+          "has_table": false,
+          "has_korean": true,
+          "cid_count": 0,
+          "preview": "elated characteristics in accordance with EN ISO 13849-1  Prerequisites: Common cause failure (CCF)"
+        },
+        {
+          "file": "Unknown_PNOZ_FunctionsManual_KO.md",
+          "size_bytes": 11417,
+          "chars": 7357,
+          "has_table": false,
+          "has_korean": true,
+          "cid_count": 0,
+          "preview": "  1. PNOZmulti Configurator 실행  2. Project 생성  3. Hardware Configuration  4. Assignment List 등록  5. "
+        },
+        {
+          "file": "Unknown_PNOZ_InstallGuide_EN.md",
+          "size_bytes": 7219,
+          "chars": 6566,
+          "has_table": false,
+          "has_korean": true,
+          "cid_count": 0,
+          "preview": " across contacts via safety switch Monitored reset with falling edge Contact expansion through pos"
+        },
+        {
+          "file": "Unknown_PNOZ_InstallGuide_EN_2.md",
+          "size_bytes": 34199,
+          "chars": 31795,
+          "has_table": false,
+          "has_korean": true,
+          "cid_count": 0,
+          "preview": "  Preface  This document is the original document.  All rights to this documentation are reserved by"
+        },
+        {
+          "file": "Unknown_Unknown_InstallGuide_EN.md",
+          "size_bytes": 43680,
+          "chars": 40219,
+          "has_table": false,
+          "has_korean": true,
+          "cid_count": 0,
+          "preview": "ual 1002660-EN-06  ---  ## 페이지 2  Preface  This document is a translation of the original document. "
+        },
+        {
+          "file": "WAGO_SMPS_Manual_KO.md",
+          "size_bytes": 7119,
+          "chars": 4272,
+          "has_table": false,
+          "has_korean": true,
+          "cid_count": 0,
+          "preview": "플라이 (2587 시리즈)는 5A, 10A, 20A의 세 가지 출력 전류 모델을 제공하며, AC 220V를 DC 24V로 효율적으로 변환합니다. 또한 컴팩트한 디자인으로 제어 캐비"
+        },
+        {
+          "file": "Yaskawa_Unknown_Manual_KO.md",
+          "size_bytes": 298568,
+          "chars": 162921,
+          "has_table": false,
+          "has_korean": true,
+          "cid_count": 0,
+          "preview": "X, PNOZcompact, PNOZelog 및 PNOZpower  • 구성 가능한 소형 컨트롤러 PNOZmulti 2, PNOZmulti Mini, PNOZmulti  • 컨트롤"
+        }
+      ]
+    },
+    "8_etc": {
+      "total": 88,
+      "empty": [],
+      "too_short": [],
+      "cid_issues": [],
+      "no_table": [],
+      "broken_text": [],
+      "samples": [
+        {
+          "file": "ACS_ACS_CommManual_KO.md",
+          "size_bytes": 5246,
+          "chars": 2616,
+          "has_table": false,
+          "has_korean": true,
+          "cid_count": 0,
+          "preview": "us MMI를실행하게되면위와같은화면이나오게됨. 기존의최종접속하였던부분이있게 된다면아래의화면이자동으로나타나게됨.  나타나지않는경우는MMI설치후최초접속시(이럴 경우에는Communica"
+        },
+        {
+          "file": "ACS_MC4U_SetupGuide_EN.md",
+          "size_bytes": 6699,
+          "chars": 6249,
+          "has_table": false,
+          "has_korean": true,
+          "cid_count": 0,
+          "preview": " DDM3U-2-320V-5A, DDM3U-2-320V-10A, DDM3U-2-320V-20A  2 Universal Drives per Card 320V, up to 40A pe"
+        },
+        {
+          "file": "Beckhoff_Unknown_SetupGuide_EN.md",
+          "size_bytes": 5578,
+          "chars": 5308,
+          "has_table": false,
+          "has_korean": true,
+          "cid_count": 0,
+          "preview": "ontroller for 4 or 8 axes with ± 10V drive interface  • Two versions: Economical (LT), and High Perf"
+        },
+        {
+          "file": "LS_LF-CM_InstallGuide_EN.md",
+          "size_bytes": 9106,
+          "chars": 8740,
+          "has_table": false,
+          "has_korean": true,
+          "cid_count": 0,
+          "preview": "print SPiiPlus 2 and 4 axis control module  • \t PLCopen compliant. Can be programmed in any of the f"
+        },
+        {
+          "file": "LS_NTM_SetupGuide_EN.md",
+          "size_bytes": 4583,
+          "chars": 4372,
+          "has_table": false,
+          "has_korean": true,
+          "cid_count": 0,
+          "preview": "zed axes • Open Architecture - ACS’ and third party EtherCAT devices, drives and I/O • A rich set of"
+        },
+        {
+          "file": "LS_PMAC2A_InstallGuide_EN_3.md",
+          "size_bytes": 88006,
+          "chars": 77638,
+          "has_table": false,
+          "has_korean": true,
+          "cid_count": 0,
+          "preview": "PMAC2A-PC/104 ACC-2P Hardware Reference  ^4 4Ax-603672-xHxx  ^5 April 4, 2007  Single Source Machine"
+        },
+        {
+          "file": "LS_TURBO_UserManual_EN.md",
+          "size_bytes": 1442257,
+          "chars": 1395905,
+          "has_table": false,
+          "has_korean": true,
+          "cid_count": 0,
+          "preview": "-TUxx  ^5 September 12, 2008  Single Source Machine Control                                         "
+        },
+        {
+          "file": "Mitsubishi_Unknown_Manual_KO.md",
+          "size_bytes": 5500,
+          "chars": 3164,
+          "has_table": false,
+          "has_korean": true,
+          "cid_count": 0,
+          "preview": "i PLC Serial Modul DSUB 9Pin male  Signal name Pin No.  SPiiPlus COM Port  DTR  4  DSUB 9 Pin[Female"
+        },
+        {
+          "file": "Panasonic_UDM_InstallGuide_EN.md",
+          "size_bytes": 7363,
+          "chars": 7053,
+          "has_table": false,
+          "has_korean": true,
+          "cid_count": 0,
+          "preview": "single and dual axis Drive Modules for EtherCAT networks  •\t 85 to 265Vac, up to 7.5A continuous and"
+        },
+        {
+          "file": "Unknown_ACSPL_Manual_KO.md",
+          "size_bytes": 8929,
+          "chars": 5241,
+          "has_table": false,
+          "has_korean": true,
+          "cid_count": 0,
+          "preview": "F 시키는기능을함. (AXIS)_VEL : 해당축모터의속도를지정하는변수. (AXIS)_ACC : 해당축모터의가속도를지정하는변수. (AXIS)_DEC : 해당축모터의감속도를지정하는변"
+        }
+      ]
+    }
+  },
+  "ocr_reprocess_targets": [
+    {
+      "category": "4_servo",
+      "file": "Fastech_SERVO-ST_Manual_KO.md",
+      "broken_count": 357
+    },
+    {
+      "category": "4_servo",
+      "file": "Fastech_STEP-HPB_Manual_KO.md",
+      "broken_count": 297
+    },
+    {
+      "category": "4_servo",
+      "file": "Fastech_STEP-ST_Manual_KO.md",
+      "broken_count": 459
+    },
+    {
+      "category": "4_servo",
+      "file": "Fastech_Unknown_Manual_KO_4.md",
+      "broken_count": 704
+    },
+    {
+      "category": "4_servo",
+      "file": "LS_SERVO-ST_Manual_KO.md",
+      "broken_count": 660
+    },
+    {
+      "category": "4_servo",
+      "file": "LS_STEP-HPB_Manual_KO.md",
+      "broken_count": 319
+    },
+    {
+      "category": "4_servo",
+      "file": "LS_STEP-ST_Manual_KO.md",
+      "broken_count": 526
+    },
+    {
+      "category": "4_servo",
+      "file": "LS_Unknown_Manual_KO_12.md",
+      "broken_count": 704
+    },
+    {
+      "category": "4_servo",
+      "file": "Mitsubishi_MR-J4_Manual_KO.md",
+      "broken_count": 3801
+    },
+    {
+      "category": "4_servo",
+      "file": "Panasonic_Unknown_Manual_KO.md",
+      "broken_count": 223
+    },
+    {
+      "category": "4_servo",
+      "file": "Samsung_CSD5-CA001C_CommManual_EN.md",
+      "broken_count": 269
+    },
+    {
+      "category": "4_servo",
+      "file": "Unknown_SSERVO_Manual_KO.md",
+      "broken_count": 935
+    },
+    {
+      "category": "4_servo",
+      "file": "Yaskawa_SGDV_Safety_EN.md",
+      "broken_count": 22
+    },
+    {
+      "category": "4_servo",
+      "file": "Yaskawa_SIJP_Manual_KO.md",
+      "broken_count": 8
+    },
+    {
+      "category": "4_servo",
+      "file": "Yaskawa_SIJP_Manual_KO_2.md",
+      "broken_count": 8
+    },
+    {
+      "category": "4_servo",
+      "file": "Yaskawa_SIKP_Manual_KO.md",
+      "broken_count": 8
+    },
+    {
+      "category": "4_servo",
+      "file": "Yaskawa_SIKP_Manual_KO_2.md",
+      "broken_count": 10
+    },
+    {
+      "category": "4_servo",
+      "file": "Yaskawa_SIKP_Manual_KO_4.md",
+      "broken_count": 6
+    },
+    {
+      "category": "4_servo",
+      "file": "Yaskawa_SIKP_Manual_KO_5.md",
+      "broken_count": 1
+    },
+    {
+      "category": "4_servo",
+      "file": "Yaskawa_Unknown_Manual_KO.md",
+      "broken_count": 1
+    }
+  ]
+}

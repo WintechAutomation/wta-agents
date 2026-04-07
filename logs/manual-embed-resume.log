@@ -1,0 +1,393 @@
+[manual-embed] 20:24:16 대상: 2234개 PDF 파일
+[manual-embed] 20:24:16 스키마/테이블 확인 완료
+[manual-embed] 20:24:16   메타: Mitsubishi/RH-F/InstallGuide/EN
+[manual-embed] 20:24:16     표준명: Mitsubishi_RH-F_InstallGuide_EN.pdf
+[manual-embed] 20:24:17     리네이밍: (영문)RH-F시리즈_로봇본체셋업에서보수까지.pdf -> Mitsubishi_RH-F_InstallGuide_EN_3.pdf
+[manual-embed] 20:24:17   파싱: Mitsubishi_RH-F_InstallGuide_EN_3.pdf (115페이지)
+[manual-embed] 20:24:17     텍스트: 319개 청크
+[manual-embed] 20:24:43     표: 132개
+[manual-embed] 20:25:01     벡터 다이어그램 렌더링: 71페이지
+[manual-embed] 20:25:06     이미지: 133개
+[manual-embed] 20:25:03     PDF 업로드 완료: pdfs/Mitsubishi_RH-F_InstallGuide_EN_2.pdf
+[manual-embed] 20:25:03     파싱 MD 저장: Mitsubishi_RH-F_InstallGuide_EN.md (279602자)
+[manual-embed] 20:25:03     파싱 MD 업로드 완료: parsed/Mitsubishi_RH-F_InstallGuide_EN.md
+[manual-embed] 20:25:03 처리 실패: (영문)RH-F시리즈_로봇본체셋업에서보수까지.pdf \u2014 expected 2000 dimensions, not 1024
+
+[manual-embed] 20:25:03   메타: Unknown/Unknown/Manual/EN
+[manual-embed] 20:25:03     표준명: Unknown_Unknown_Manual_EN.pdf
+[manual-embed] 20:25:03     리네이밍: 1.현품도착시목록.PDF -> Unknown_Unknown_Manual_EN_9.pdf
+[manual-embed] 20:25:03   파싱: Unknown_Unknown_Manual_EN_9.pdf (2페이지)
+[manual-embed] 20:25:03     텍스트: 3개 청크
+[manual-embed] 20:25:04     표: 2개
+[manual-embed] 20:25:04     벡터 다이어그램 렌더링: 1페이지
+[manual-embed] 20:25:04     이미지: 1개
+[manual-embed] 20:25:04 처리 실패: 1.현품도착시목록.PDF \u2014 current transaction is aborted, commands ignored until end of transaction block
+
+[manual-embed] 20:25:04   메타: Unknown/Unknown/Manual/EN
+[manual-embed] 20:25:04     표준명: Unknown_Unknown_Manual_EN.pdf
+[manual-embed] 20:25:04     리네이밍: 10.추천예비부품에대하여.PDF -> Unknown_Unknown_Manual_EN_10.pdf
+[manual-embed] 20:25:04   파싱: Unknown_Unknown_Manual_EN_10.pdf (2페이지)
+[manual-embed] 20:25:04     텍스트: 3개 청크
+[manual-embed] 20:25:04     표: 3개
+[manual-embed] 20:25:05     벡터 다이어그램 렌더링: 2페이지
+[manual-embed] 20:25:05     이미지: 2개
+[manual-embed] 20:25:05 처리 실패: 10.추천예비부품에대하여.PDF \u2014 current transaction is aborted, commands ignored until end of transaction block
+
+[manual-embed] 20:25:05   메타: Unknown/Unknown/Manual/EN
+[manual-embed] 20:25:05     표준명: Unknown_Unknown_Manual_EN.pdf
+[manual-embed] 20:25:05     리네이밍: 2.운반방법.PDF -> Unknown_Unknown_Manual_EN_11.pdf
+[manual-embed] 20:25:05   파싱: Unknown_Unknown_Manual_EN_11.pdf (2페이지)
+[manual-embed] 20:25:05     텍스트: 2개 청크
+[manual-embed] 20:25:05     표: 4개
+[manual-embed] 20:25:06     벡터 다이어그램 렌더링: 2페이지
+[manual-embed] 20:25:06     이미지: 2개
+[manual-embed] 20:25:06 처리 실패: 2.운반방법.PDF \u2014 current transaction is aborted, commands ignored until end of transaction block
+
+[manual-embed] 20:25:06   메타: Unknown/Unknown/Manual/EN
+[manual-embed] 20:25:06     표준명: Unknown_Unknown_Manual_EN.pdf
+[manual-embed] 20:25:06     리네이밍: 3.설치.PDF -> Unknown_Unknown_Manual_EN_12.pdf
+[manual-embed] 20:25:06   파싱: Unknown_Unknown_Manual_EN_12.pdf (6페이지)
+[manual-embed] 20:25:06     텍스트: 6개 청크
+[manual-embed] 20:25:06     표: 6개
+[manual-embed] 20:25:07     벡터 다이어그램 렌더링: 3페이지
+[manual-embed] 20:25:07     이미지: 3개
+[manual-embed] 20:25:07 처리 실패: 3.설치.PDF \u2014 current transaction is aborted, commands ignored until end of transaction block
+
+[manual-embed] 20:25:07   메타: ABB/HAC029963/Datasheet/EN
+[manual-embed] 20:25:07     표준명: ABB_HAC029963_Datasheet_EN.pdf
+[manual-embed] 20:25:07     리네이밍: 3HAC029963 PS IRB 360-en.pdf -> ABB_HAC029963_Datasheet_EN_2.pdf
+[manual-embed] 20:25:07   파싱: ABB_HAC029963_Datasheet_EN_2.pdf (54페이지)
+[manual-embed] 20:25:07     텍스트: 88개 청크
+[manual-embed] 20:25:21     표: 78개
+[manual-embed] 20:25:28     벡터 다이어그램 렌더링: 34페이지
+[manual-embed] 20:25:29     이미지: 36개
+[manual-embed] 20:25:29 처리 실패: 3HAC029963 PS IRB 360-en.pdf \u2014 current transaction is aborted, commands ignored until end of transaction block
+
+[manual-embed] 20:25:29   메타: Unknown/Unknown/WiringGuide/EN
+[manual-embed] 20:25:29     표준명: Unknown_Unknown_WiringGuide_EN.pdf
+[manual-embed] 20:25:29     리네이밍: 4.배선.PDF -> Unknown_Unknown_WiringGuide_EN_2.pdf
+[manual-embed] 20:25:29   파싱: Unknown_Unknown_WiringGuide_EN_2.pdf (6페이지)
+[manual-embed] 20:25:29     텍스트: 6개 청크
+[manual-embed] 20:25:31     표: 6개
+[manual-embed] 20:25:32     벡터 다이어그램 렌더링: 5페이지
+[manual-embed] 20:25:32     이미지: 5개
+[manual-embed] 20:25:32 처리 실패: 4.배선.PDF \u2014 current transaction is aborted, commands ignored until end of transaction block
+
+[manual-embed] 20:25:32   메타: Unknown/Unknown/Manual/EN
+[manual-embed] 20:25:32     표준명: Unknown_Unknown_Manual_EN.pdf
+[manual-embed] 20:25:32     리네이밍: 5.기본시방.PDF -> Unknown_Unknown_Manual_EN_13.pdf
+[manual-embed] 20:25:32   파싱: Unknown_Unknown_Manual_EN_13.pdf (4페이지)
+[manual-embed] 20:25:32     텍스트: 5개 청크
+[manual-embed] 20:25:33     표: 4개
+[manual-embed] 20:25:33     벡터 다이어그램 렌더링: 3페이지
+[manual-embed] 20:25:33     이미지: 3개
+[manual-embed] 20:25:33 처리 실패: 5.기본시방.PDF \u2014 current transaction is aborted, commands ignored until end of transaction block
+
+[manual-embed] 20:25:33   메타: Unknown/Unknown/InstallGuide/KO
+[manual-embed] 20:25:33     표준명: Unknown_Unknown_InstallGuide_KO.pdf
+[manual-embed] 20:25:36     리네이밍: 597-0027-06KO.pdf -> Unknown_Unknown_InstallGuide_KO_2.pdf
+[manual-embed] 20:25:36   파싱: Unknown_Unknown_InstallGuide_KO_2.pdf (66페이지)
+[manual-embed] 20:25:38     텍스트: 100개 청크
+[manual-embed] 20:34:41 대상: 897개 PDF 파일
+[manual-embed] 20:34:41 스키마/테이블 확인 완료
+[manual-embed] 20:34:41   메타: ABB/ABB/Datasheet/EN
+[manual-embed] 20:34:41     표준명: ABB_ABB_Datasheet_EN.pdf
+[manual-embed] 20:34:42   파싱: ABB_ABB_Datasheet_EN.pdf (54페이지)
+[manual-embed] 20:34:42     텍스트: 88개 청크
+[manual-embed] 20:34:55     표: 78개
+[manual-embed] 20:35:02     벡터 다이어그램 렌더링: 34페이지
+[manual-embed] 20:35:03     이미지: 36개
+[manual-embed] 20:35:26     PDF 업로드 완료: pdfs/ABB_ABB_Datasheet_EN.pdf
+[manual-embed] 20:35:26     파싱 MD 저장: ABB_ABB_Datasheet_EN.md (77152자)
+[manual-embed] 20:35:26     파싱 MD 업로드 완료: parsed/ABB_ABB_Datasheet_EN.md
+[manual-embed] 20:35:34     -> 202개 청크 저장 완료 (source: ABB_ABB_Datasheet_EN.pdf)
+[manual-embed] 20:35:34   메타: ABB/ABB/Datasheet/EN
+[manual-embed] 20:35:34     표준명: ABB_ABB_Datasheet_EN.pdf
+[manual-embed] 20:35:34     리네이밍: ABB_ABB_Datasheet_EN_2.pdf -> ABB_ABB_Datasheet_EN_3.pdf
+[manual-embed] 20:35:34   파싱: ABB_ABB_Datasheet_EN_3.pdf (2페이지)
+[manual-embed] 20:35:34     텍스트: 9개 청크
+[manual-embed] 20:35:34     표: 0개
+[manual-embed] 20:35:35     이미지: 2개
+[manual-embed] 20:35:36     PDF 업로드 완료: pdfs/ABB_ABB_Datasheet_EN_3.pdf
+[manual-embed] 20:35:36     파싱 MD 저장: ABB_ABB_Datasheet_EN.md (6801자)
+[manual-embed] 20:35:36     파싱 MD 업로드 완료: parsed/ABB_ABB_Datasheet_EN.md
+[manual-embed] 20:35:36     -> 11개 청크 저장 완료 (source: ABB_ABB_Datasheet_EN.pdf)
+[manual-embed] 20:35:36   메타: ABB/ABB/Manual/EN
+[manual-embed] 20:35:36     표준명: ABB_ABB_Manual_EN.pdf
+[manual-embed] 20:35:36   파싱: ABB_ABB_Manual_EN.pdf (15페이지)
+[manual-embed] 20:35:36     텍스트: 14개 청크
+[manual-embed] 20:35:36     표: 4개
+[manual-embed] 20:35:37     벡터 다이어그램 렌더링: 1페이지
+[manual-embed] 20:35:38     이미지: 23개
+[manual-embed] 20:35:42     PDF 업로드 완료: pdfs/ABB_ABB_Manual_EN.pdf
+[manual-embed] 20:35:42     파싱 MD 저장: ABB_ABB_Manual_EN.md (7162자)
+[manual-embed] 20:35:42     파싱 MD 업로드 완료: parsed/ABB_ABB_Manual_EN.md
+[manual-embed] 20:35:42     -> 41개 청크 저장 완료 (source: ABB_ABB_Manual_EN.pdf)
+[manual-embed] 20:35:42   메타: ABB/ABB/Datasheet/EN
+[manual-embed] 20:35:42     표준명: ABB_ABB_Datasheet_EN.pdf
+[manual-embed] 20:35:43     리네이밍: ABB_HAC029963_Datasheet_EN.pdf -> ABB_ABB_Datasheet_EN_4.pdf
+[manual-embed] 20:35:43   파싱: ABB_ABB_Datasheet_EN_4.pdf (54페이지)
+[manual-embed] 20:35:43     텍스트: 88개 청크
+[manual-embed] 20:35:56     표: 78개
+[manual-embed] 20:36:03     벡터 다이어그램 렌더링: 34페이지
+[manual-embed] 20:36:03     이미지: 36개
+[manual-embed] 20:36:24     PDF 업로드 완료: pdfs/ABB_ABB_Datasheet_EN_4.pdf
+[manual-embed] 20:36:24     파싱 MD 저장: ABB_ABB_Datasheet_EN.md (77230자)
+[manual-embed] 20:36:25     파싱 MD 업로드 완료: parsed/ABB_ABB_Datasheet_EN.md
+[manual-embed] 20:36:30     -> 202개 청크 저장 완료 (source: ABB_ABB_Datasheet_EN.pdf)
+[manual-embed] 20:36:30   메타: ABB/ABB/Datasheet/EN
+[manual-embed] 20:36:30     표준명: ABB_ABB_Datasheet_EN.pdf
+[manual-embed] 20:36:30     리네이밍: ABB_IRB360_Datasheet_EN.pdf -> ABB_ABB_Datasheet_EN_5.pdf
+[manual-embed] 20:36:31   파싱: ABB_ABB_Datasheet_EN_5.pdf (2페이지)
+[manual-embed] 20:36:31     텍스트: 9개 청크
+[manual-embed] 20:36:31     표: 0개
+[manual-embed] 20:36:31     이미지: 2개
+[manual-embed] 20:36:32     PDF 업로드 완료: pdfs/ABB_ABB_Datasheet_EN_5.pdf
+[manual-embed] 20:36:32     파싱 MD 저장: ABB_ABB_Datasheet_EN.md (6802자)
+[manual-embed] 20:36:32     파싱 MD 업로드 완료: parsed/ABB_ABB_Datasheet_EN.md
+[manual-embed] 20:36:33     -> 11개 청크 저장 완료 (source: ABB_ABB_Datasheet_EN.pdf)
+[manual-embed] 20:36:33   메타: ABB/ABB/Manual/EN
+[manual-embed] 20:36:33     표준명: ABB_ABB_Manual_EN.pdf
+[manual-embed] 20:36:33     리네이밍: ABB_IRB_Introduction_EN.pdf -> ABB_ABB_Manual_EN_2.pdf
+[manual-embed] 20:36:33   파싱: ABB_ABB_Manual_EN_2.pdf (15페이지)
+[manual-embed] 20:36:33     텍스트: 14개 청크
+[manual-embed] 20:36:33     표: 4개
+[manual-embed] 20:36:33     벡터 다이어그램 렌더링: 1페이지
+[manual-embed] 20:36:35     이미지: 23개
+[manual-embed] 20:36:35     -> 변경 없음, 건너뜀
+[manual-embed] 20:36:35   메타: Cognex/Unknown/InstallGuide/EN
+[manual-embed] 20:36:35     표준명: Cognex_Unknown_InstallGuide_EN.pdf
+[manual-embed] 20:36:35   파싱: Cognex_Unknown_InstallGuide_EN.pdf (68페이지)
+[manual-embed] 20:36:35     텍스트: 112개 청크
+[manual-embed] 20:36:40     표: 21개
+[manual-embed] 20:36:41     벡터 다이어그램 렌더링: 7페이지
+[manual-embed] 20:36:47     이미지: 46개
+[manual-embed] 20:37:13     PDF 업로드 완료: pdfs/Cognex_Unknown_InstallGuide_EN.pdf
+[manual-embed] 20:37:13     파싱 MD 저장: Cognex_Unknown_InstallGuide_EN.md (102001자)
+[manual-embed] 20:37:13     파싱 MD 업로드 완료: parsed/Cognex_Unknown_InstallGuide_EN.md
+[manual-embed] 20:37:17     -> 179개 청크 저장 완료 (source: Cognex_Unknown_InstallGuide_EN.pdf)
+[manual-embed] 20:37:17   메타: Cognex/Unknown/InstallGuide/EN
+[manual-embed] 20:37:17     표준명: Cognex_Unknown_InstallGuide_EN.pdf
+[manual-embed] 20:37:17     리네이밍: Cognex_Unknown_InstallGuide_EN_2.pdf -> Cognex_Unknown_InstallGuide_EN_4.pdf
+[manual-embed] 20:37:17   파싱: Cognex_Unknown_InstallGuide_EN_4.pdf (46페이지)
+[manual-embed] 20:37:17     텍스트: 82개 청크
+[manual-embed] 20:37:20     표: 24개
+[manual-embed] 20:37:22     벡터 다이어그램 렌더링: 16페이지
+[manual-embed] 20:37:32     이미지: 55개
+[manual-embed] 20:37:51     PDF 업로드 완료: pdfs/Cognex_Unknown_InstallGuide_EN_4.pdf
+[manual-embed] 20:37:51     파싱 MD 저장: Cognex_Unknown_InstallGuide_EN.md (82328자)
+[manual-embed] 20:37:51     파싱 MD 업로드 완료: parsed/Cognex_Unknown_InstallGuide_EN.md
+[manual-embed] 20:37:56     -> 161개 청크 저장 완료 (source: Cognex_Unknown_InstallGuide_EN.pdf)
+[manual-embed] 20:37:56   메타: Cognex/Unknown/InstallGuide/EN
+[manual-embed] 20:37:56     표준명: Cognex_Unknown_InstallGuide_EN.pdf
+[manual-embed] 20:37:56     리네이밍: Cognex_Unknown_InstallGuide_EN_3.pdf -> Cognex_Unknown_InstallGuide_EN_5.pdf
+[manual-embed] 20:37:56   파싱: Cognex_Unknown_InstallGuide_EN_5.pdf (46페이지)
+[manual-embed] 20:37:56     텍스트: 82개 청크
+[manual-embed] 20:37:59     표: 24개
+[manual-embed] 20:38:02     벡터 다이어그램 렌더링: 16페이지
+[manual-embed] 20:38:12     이미지: 55개
+[manual-embed] 20:38:12     -> 변경 없음, 건너뜀
+[manual-embed] 20:38:12   메타: Cognex/Unknown/Manual/KO
+[manual-embed] 20:38:12     표준명: Cognex_Unknown_Manual_KO.pdf
+[manual-embed] 20:38:12   파싱: Cognex_Unknown_Manual_KO.pdf (40페이지)
+[manual-embed] 20:38:12     텍스트: 44개 청크
+[manual-embed] 20:38:22     표: 24개
+[manual-embed] 20:38:26     벡터 다이어그램 렌더링: 23페이지
+[manual-embed] 20:38:26     이미지: 26개
+[manual-embed] 20:38:39     PDF 업로드 완료: pdfs/Cognex_Unknown_Manual_KO.pdf
+[manual-embed] 20:38:39     파싱 MD 저장: Cognex_Unknown_Manual_KO.md (35123자)
+[manual-embed] 20:38:39     파싱 MD 업로드 완료: parsed/Cognex_Unknown_Manual_KO.md
+[manual-embed] 20:38:43     -> 94개 청크 저장 완료 (source: Cognex_Unknown_Manual_KO.pdf)
+[manual-embed] 20:38:43   메타: LS/EN-05F/Datasheet/EN
+[manual-embed] 20:38:43     표준명: LS_EN-05F_Datasheet_EN.pdf
+[manual-embed] 20:38:43   파싱: LS_EN-05F_Datasheet_EN.pdf (20페이지)
+[manual-embed] 20:38:44     텍스트: 44개 청크
+[manual-embed] 20:39:23     표: 28개
+[manual-embed] 20:39:31     벡터 다이어그램 렌더링: 16페이지
+[manual-embed] 20:39:31     이미지: 17개
+[manual-embed] 20:39:45     PDF 업로드 완료: pdfs/LS_EN-05F_Datasheet_EN.pdf
+[manual-embed] 20:39:45     파싱 MD 저장: LS_EN-05F_Datasheet_EN.md (48681자)
+[manual-embed] 20:39:45     파싱 MD 업로드 완료: parsed/LS_EN-05F_Datasheet_EN.md
+[manual-embed] 20:39:48     -> 89개 청크 저장 완료 (source: LS_EN-05F_Datasheet_EN.pdf)
+[manual-embed] 20:39:48   메타: LS/SANMOTION/SetupGuide/EN
+[manual-embed] 20:39:48     표준명: LS_SANMOTION_SetupGuide_EN.pdf
+[manual-embed] 20:39:49   파싱: LS_SANMOTION_SetupGuide_EN.pdf (120페이지)
+[manual-embed] 20:39:49     텍스트: 278개 청크
+[manual-embed] 20:39:59     표: 42개
+[manual-embed] 20:40:03     벡터 다이어그램 렌더링: 17페이지
+[manual-embed] 20:40:15     이미지: 183개
+[manual-embed] 20:41:06     PDF 업로드 완료: pdfs/LS_SANMOTION_SetupGuide_EN.pdf
+[manual-embed] 20:41:06     파싱 MD 저장: LS_SANMOTION_SetupGuide_EN.md (231567자)
+[manual-embed] 20:41:06     파싱 MD 업로드 완료: parsed/LS_SANMOTION_SetupGuide_EN.md
+[manual-embed] 20:41:29     -> 503개 청크 저장 완료 (source: LS_SANMOTION_SetupGuide_EN.pdf)
+[manual-embed] 20:41:29   메타: LS/Unknown/CommManual/EN
+[manual-embed] 20:41:29     표준명: LS_Unknown_CommManual_EN.pdf
+[manual-embed] 20:41:29   파싱: LS_Unknown_CommManual_EN.pdf (15페이지)
+[manual-embed] 20:41:29     텍스트: 23개 청크
+[manual-embed] 20:41:30     표: 4개
+[manual-embed] 20:41:31     벡터 다이어그램 렌더링: 5페이지
+[manual-embed] 20:41:32     이미지: 25개
+[manual-embed] 20:41:37     PDF 업로드 완료: pdfs/LS_Unknown_CommManual_EN.pdf
+[manual-embed] 20:41:37     파싱 MD 저장: LS_Unknown_CommManual_EN.md (21091자)
+[manual-embed] 20:41:37     파싱 MD 업로드 완료: parsed/LS_Unknown_CommManual_EN.md
+[manual-embed] 20:41:39     -> 52개 청크 저장 완료 (source: LS_Unknown_CommManual_EN.pdf)
+[manual-embed] 20:41:39   메타: LS/Unknown/CommManual/EN
+[manual-embed] 20:41:39     표준명: LS_Unknown_CommManual_EN.pdf
+[manual-embed] 20:41:39     리네이밍: LS_Unknown_CommManual_EN_2.pdf -> LS_Unknown_CommManual_EN_4.pdf
+[manual-embed] 20:41:39   파싱: LS_Unknown_CommManual_EN_4.pdf (83페이지)
+[manual-embed] 20:41:40     텍스트: 125개 청크
+[manual-embed] 20:41:44     표: 99개
+[manual-embed] 20:41:54     벡터 다이어그램 렌더링: 76페이지
+[manual-embed] 20:41:54     이미지: 76개
+[manual-embed] 20:42:23     PDF 업로드 완료: pdfs/LS_Unknown_CommManual_EN_4.pdf
+[manual-embed] 20:42:23     파싱 MD 저장: LS_Unknown_CommManual_EN.md (98001자)
+[manual-embed] 20:42:24     파싱 MD 업로드 완료: parsed/LS_Unknown_CommManual_EN.md
+[manual-embed] 20:42:36     -> 300개 청크 저장 완료 (source: LS_Unknown_CommManual_EN.pdf)
+[manual-embed] 20:42:36   메타: LS/Unknown/CommManual/EN
+[manual-embed] 20:42:36     표준명: LS_Unknown_CommManual_EN.pdf
+[manual-embed] 20:42:36     리네이밍: LS_Unknown_CommManual_EN_3.pdf -> LS_Unknown_CommManual_EN_5.pdf
+[manual-embed] 20:42:37   파싱: LS_Unknown_CommManual_EN_5.pdf (83페이지)
+[manual-embed] 20:42:37     텍스트: 125개 청크
+[manual-embed] 20:42:41     표: 99개
+[manual-embed] 20:42:51     벡터 다이어그램 렌더링: 76페이지
+[manual-embed] 20:42:51     이미지: 76개
+[manual-embed] 20:42:51     -> 변경 없음, 건너뜀
+[manual-embed] 20:42:51   메타: LS/Unknown/Datasheet/EN
+[manual-embed] 20:42:51     표준명: LS_Unknown_Datasheet_EN.pdf
+[manual-embed] 20:42:52   파싱: LS_Unknown_Datasheet_EN.pdf (21페이지)
+[manual-embed] 20:42:52     텍스트: 65개 청크
+[manual-embed] 20:43:32     표: 31개
+[manual-embed] 20:43:39     벡터 다이어그램 렌더링: 16페이지
+[manual-embed] 20:43:39     이미지: 17개
+[manual-embed] 20:43:55     PDF 업로드 완료: pdfs/LS_Unknown_Datasheet_EN.pdf
+[manual-embed] 20:43:55     파싱 MD 저장: LS_Unknown_Datasheet_EN.md (60925자)
+[manual-embed] 20:43:55     파싱 MD 업로드 완료: parsed/LS_Unknown_Datasheet_EN.md
+[manual-embed] 20:44:00     -> 113개 청크 저장 완료 (source: LS_Unknown_Datasheet_EN.pdf)
+[manual-embed] 20:44:00   메타: LS/Unknown/ProgrammingManual/EN
+[manual-embed] 20:44:00     표준명: LS_Unknown_ProgrammingManual_EN.pdf
+[manual-embed] 20:44:00   파싱: LS_Unknown_ProgrammingManual_EN.pdf (32페이지)
+[manual-embed] 20:44:00     텍스트: 41개 청크
+[manual-embed] 20:44:04     표: 45개
+[manual-embed] 20:44:08     벡터 다이어그램 렌더링: 26페이지
+[manual-embed] 20:44:08     이미지: 32개
+[manual-embed] 20:44:25     PDF 업로드 완료: pdfs/LS_Unknown_ProgrammingManual_EN.pdf
+[manual-embed] 20:44:25     파싱 MD 저장: LS_Unknown_ProgrammingManual_EN.md (40118자)
+[manual-embed] 20:44:25     파싱 MD 업로드 완료: parsed/LS_Unknown_ProgrammingManual_EN.md
+[manual-embed] 20:44:28     -> 118개 청크 저장 완료 (source: LS_Unknown_ProgrammingManual_EN.pdf)
+[manual-embed] 20:44:28   메타: Mitsubishi/BFP-A8586-D/MaintenanceManual/KO
+[manual-embed] 20:44:28     표준명: Mitsubishi_BFP-A8586-D_MaintenanceManual_KO.pdf
+[manual-embed] 20:44:29     리네이밍: Mitsubishi_BFP-A8586-D_Manual_KO.pdf -> Mitsubishi_BFP-A8586-D_MaintenanceManual_KO_3.pdf
+[manual-embed] 20:44:29   파싱: Mitsubishi_BFP-A8586-D_MaintenanceManual_KO_3.pdf (445페이지)
+[manual-embed] 20:44:29     텍스트: 795개 청크
+[manual-embed] 20:44:55     표: 256개
+[manual-embed] 20:45:13     벡터 다이어그램 렌더링: 115페이지
+[manual-embed] 20:45:32     이미지: 374개
+[manual-embed] 20:49:31     PDF 업로드 완료: pdfs/Mitsubishi_BFP-A8586-D_MaintenanceManual_KO_3.pdf
+[manual-embed] 20:49:31     파싱 MD 저장: Mitsubishi_BFP-A8586-D_MaintenanceManual_KO.md (702755자)
+[manual-embed] 20:49:31     파싱 MD 업로드 완료: parsed/Mitsubishi_BFP-A8586-D_MaintenanceManual_KO.md
+[manual-embed] 20:50:18     -> 1425개 청크 저장 완료 (source: Mitsubishi_BFP-A8586-D_MaintenanceManual_KO.pdf)
+[manual-embed] 20:50:18   메타: Mitsubishi/BFP-A8586-D/MaintenanceManual/KO
+[manual-embed] 20:50:18     표준명: Mitsubishi_BFP-A8586-D_MaintenanceManual_KO.pdf
+[manual-embed] 20:50:18     리네이밍: Mitsubishi_BFP-A8586-D_Manual_KO_2.pdf -> Mitsubishi_BFP-A8586-D_MaintenanceManual_KO_4.pdf
+[manual-embed] 20:50:18   파싱: Mitsubishi_BFP-A8586-D_MaintenanceManual_KO_4.pdf (445페이지)
+[manual-embed] 20:50:19     텍스트: 795개 청크
+[manual-embed] 20:50:45     표: 256개
+[manual-embed] 20:51:03     벡터 다이어그램 렌더링: 115페이지
+[manual-embed] 20:51:21     이미지: 374개
+[manual-embed] 20:51:21     -> 변경 없음, 건너뜀
+[manual-embed] 20:51:21   메타: Mitsubishi/BFP-A8618/UserManual/EN
+[manual-embed] 20:51:21     표준명: Mitsubishi_BFP-A8618_UserManual_EN.pdf
+[manual-embed] 20:51:21   파싱: Mitsubishi_BFP-A8618_UserManual_EN.pdf (404페이지)
+[manual-embed] 20:51:22     텍스트: 909개 청크
+[manual-embed] 20:51:45     표: 300개
+[manual-embed] 20:51:56     벡터 다이어그램 렌더링: 66페이지
+[manual-embed] 20:52:38     이미지: 640개
+[manual-embed] 20:55:37     PDF 업로드 완료: pdfs/Mitsubishi_BFP-A8618_UserManual_EN.pdf
+[manual-embed] 20:55:37     파싱 MD 저장: Mitsubishi_BFP-A8618_UserManual_EN.md (802205자)
+[manual-embed] 20:55:37     파싱 MD 업로드 완료: parsed/Mitsubishi_BFP-A8618_UserManual_EN.md
+[manual-embed] 20:56:33     -> 1849개 청크 저장 완료 (source: Mitsubishi_BFP-A8618_UserManual_EN.pdf)
+[manual-embed] 20:56:33   메타: Mitsubishi/CC-L/InstallGuide/EN
+[manual-embed] 20:56:33     표준명: Mitsubishi_CC-L_InstallGuide_EN.pdf
+[manual-embed] 20:56:33   파싱: Mitsubishi_CC-L_InstallGuide_EN.pdf (45페이지)
+[manual-embed] 20:56:33     텍스트: 113개 청크
+[manual-embed] 20:56:38     표: 34개
+[manual-embed] 20:56:42     벡터 다이어그램 렌더링: 22페이지
+[manual-embed] 20:56:45     이미지: 64개
+[manual-embed] 20:57:12     PDF 업로드 완료: pdfs/Mitsubishi_CC-L_InstallGuide_EN.pdf
+[manual-embed] 20:57:12     파싱 MD 저장: Mitsubishi_CC-L_InstallGuide_EN.md (123626자)
+[manual-embed] 20:57:12     파싱 MD 업로드 완료: parsed/Mitsubishi_CC-L_InstallGuide_EN.md
+[manual-embed] 20:57:20     -> 211개 청크 저장 완료 (source: Mitsubishi_CC-L_InstallGuide_EN.pdf)
+[manual-embed] 20:57:20   메타: Mitsubishi/CR-3/SetupGuide/KO
+[manual-embed] 20:57:20     표준명: Mitsubishi_CR-3_SetupGuide_KO.pdf
+[manual-embed] 20:57:20     리네이밍: Mitsubishi_CR-3_Manual_KO.pdf -> Mitsubishi_CR-3_SetupGuide_KO_2.pdf
+[manual-embed] 20:57:20   파싱: Mitsubishi_CR-3_SetupGuide_KO_2.pdf (57페이지)
+[manual-embed] 20:57:20     텍스트: 80개 청크
+[manual-embed] 20:57:23     표: 42개
+[manual-embed] 20:57:25     벡터 다이어그램 렌더링: 15페이지
+[manual-embed] 20:57:29     이미지: 53개
+[manual-embed] 20:57:52     PDF 업로드 완료: pdfs/Mitsubishi_CR-3_SetupGuide_KO_2.pdf
+[manual-embed] 20:57:52     파싱 MD 저장: Mitsubishi_CR-3_SetupGuide_KO.md (65398자)
+[manual-embed] 20:57:52     파싱 MD 업로드 완료: parsed/Mitsubishi_CR-3_SetupGuide_KO.md
+[manual-embed] 20:57:58     -> 175개 청크 저장 완료 (source: Mitsubishi_CR-3_SetupGuide_KO.pdf)
+[manual-embed] 20:57:59   메타: Mitsubishi/CR123478/MaintenanceManual/KO
+[manual-embed] 20:57:59     표준명: Mitsubishi_CR123478_MaintenanceManual_KO.pdf
+[manual-embed] 20:57:59     리네이밍: Mitsubishi_CR123478_Manual_KO.pdf -> Mitsubishi_CR123478_MaintenanceManual_KO_2.pdf
+[manual-embed] 20:57:59   파싱: Mitsubishi_CR123478_MaintenanceManual_KO_2.pdf (52페이지)
+[manual-embed] 20:57:59     텍스트: 127개 청크
+[manual-embed] 20:58:02     표: 2개
+[manual-embed] 20:58:08     벡터 다이어그램 렌더링: 39페이지
+[manual-embed] 20:58:09     이미지: 48개
+[manual-embed] 20:58:38     PDF 업로드 완료: pdfs/Mitsubishi_CR123478_MaintenanceManual_KO_2.pdf
+[manual-embed] 20:58:38     파싱 MD 저장: Mitsubishi_CR123478_MaintenanceManual_KO.md (88748자)
+[manual-embed] 20:58:38     파싱 MD 업로드 완료: parsed/Mitsubishi_CR123478_MaintenanceManual_KO.md
+[manual-embed] 20:58:46     -> 177개 청크 저장 완료 (source: Mitsubishi_CR123478_MaintenanceManual_KO.pdf)
+[manual-embed] 20:58:46   메타: Mitsubishi/CR123478/SetupGuide/KO
+[manual-embed] 20:58:46     표준명: Mitsubishi_CR123478_SetupGuide_KO.pdf
+[manual-embed] 20:58:46     리네이밍: Mitsubishi_CR123478_Manual_KO_2.pdf -> Mitsubishi_CR123478_SetupGuide_KO_2.pdf
+[manual-embed] 20:58:46   파싱: Mitsubishi_CR123478_SetupGuide_KO_2.pdf (427페이지)
+[manual-embed] 20:58:47     텍스트: 846개 청크
+[manual-embed] 20:59:13     표: 280개
+[manual-embed] 20:59:34     벡터 다이어그램 렌더링: 125페이지
+[manual-embed] 20:59:48     이미지: 304개
+[manual-embed] 21:03:59     PDF 업로드 완료: pdfs/Mitsubishi_CR123478_SetupGuide_KO_2.pdf
+[manual-embed] 21:03:59     파싱 MD 저장: Mitsubishi_CR123478_SetupGuide_KO.md (745360자)
+[manual-embed] 21:03:59     파싱 MD 업로드 완료: parsed/Mitsubishi_CR123478_SetupGuide_KO.md
+[manual-embed] 21:04:47     -> 1430개 청크 저장 완료 (source: Mitsubishi_CR123478_SetupGuide_KO.pdf)
+[manual-embed] 21:04:47   메타: Mitsubishi/CR1DA/InstallGuide/EN
+[manual-embed] 21:04:47     표준명: Mitsubishi_CR1DA_InstallGuide_EN.pdf
+[manual-embed] 21:04:48   파싱: Mitsubishi_CR1DA_InstallGuide_EN.pdf (83페이지)
+[manual-embed] 21:04:49     텍스트: 225개 청크
+[manual-embed] 21:05:46     표: 112개
+[manual-embed] 21:06:05     벡터 다이어그램 렌더링: 50페이지
+[manual-embed] 21:06:12     이미지: 94개
+[manual-embed] 21:06:58     PDF 업로드 완료: pdfs/Mitsubishi_CR1DA_InstallGuide_EN.pdf
+[manual-embed] 21:06:58     파싱 MD 저장: Mitsubishi_CR1DA_InstallGuide_EN.md (204948자)
+[manual-embed] 21:06:58     파싱 MD 업로드 완료: parsed/Mitsubishi_CR1DA_InstallGuide_EN.md
+[manual-embed] 21:07:32     -> 431개 청크 저장 완료 (source: Mitsubishi_CR1DA_InstallGuide_EN.pdf)
+[manual-embed] 21:07:32   메타: Mitsubishi/CR1QA/InstallGuide/EN
+[manual-embed] 21:07:32     표준명: Mitsubishi_CR1QA_InstallGuide_EN.pdf
+[manual-embed] 21:07:33   파싱: Mitsubishi_CR1QA_InstallGuide_EN.pdf (93페이지)
+[manual-embed] 21:07:34     텍스트: 267개 청크
+[manual-embed] 21:08:45     표: 136개
+[manual-embed] 21:09:04     벡터 다이어그램 렌더링: 62페이지
+[manual-embed] 21:09:09     이미지: 108개
+[manual-embed] 21:10:03     PDF 업로드 완료: pdfs/Mitsubishi_CR1QA_InstallGuide_EN.pdf
+[manual-embed] 21:10:03     파싱 MD 저장: Mitsubishi_CR1QA_InstallGuide_EN.md (238377자)
+[manual-embed] 21:10:03     파싱 MD 업로드 완료: parsed/Mitsubishi_CR1QA_InstallGuide_EN.md
+[manual-embed] 21:10:22     -> 511개 청크 저장 완료 (source: Mitsubishi_CR1QA_InstallGuide_EN.pdf)
+[manual-embed] 21:10:22   메타: Mitsubishi/CR1/InstallGuide/EN
+[manual-embed] 21:10:22     표준명: Mitsubishi_CR1_InstallGuide_EN.pdf
+[manual-embed] 21:10:22   파싱: Mitsubishi_CR1_InstallGuide_EN.pdf (47페이지)
+[manual-embed] 21:10:23     텍스트: 167개 청크
+[manual-embed] 21:10:29     표: 34개
+[manual-embed] 21:10:34     벡터 다이어그램 렌더링: 28페이지
+[manual-embed] 21:10:35     이미지: 40개
+[manual-embed] 21:13:17     PDF 업로드 완료: pdfs/Mitsubishi_CR1_InstallGuide_EN.pdf
+[manual-embed] 21:13:17     파싱 MD 저장: Mitsubishi_CR1_InstallGuide_EN.md (231721자)
+[manual-embed] 21:13:17     파싱 MD 업로드 완료: parsed/Mitsubishi_CR1_InstallGuide_EN.md
+[manual-embed] 21:13:29     -> 241개 청크 저장 완료 (source: Mitsubishi_CR1_InstallGuide_EN.pdf)
+[manual-embed] 21:13:29   메타: Mitsubishi/CR1/InstallGuide/EN
+[manual-embed] 21:13:29     표준명: Mitsubishi_CR1_InstallGuide_EN.pdf
+[manual-embed] 21:13:30     리네이밍: Mitsubishi_CR1_InstallGuide_EN_2.pdf -> Mitsubishi_CR1_InstallGuide_EN_6.pdf
+[manual-embed] 21:13:30   파싱: Mitsubishi_CR1_InstallGuide_EN_6.pdf (67페이지)
+[manual-embed] 21:13:30     텍스트: 195개 청크

@@ -1,0 +1,88 @@
+[     412ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-ByxiMj3o.js:11
+[   71846ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-ByxiMj3o.js:11
+[  493019ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-ByxiMj3o.js:11
+[ 2264426ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-ByxiMj3o.js:11
+[ 3103178ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-ByxiMj3o.js:11
+[ 3140024ms] [ERROR] Failed to load resource: the server responded with a status of 404 (NOT FOUND) @ http://localhost:5555/assets/WebGLRenderer-Arp6KTBF.js:0
+[ 3140026ms] Failed to fetch dynamically imported module: http://localhost:5555/assets/WebGLRenderer-Arp6KTBF.js
+[ 3141683ms] TypeError: this._cancelResize is not a function
+    at e.destroy (http://localhost:5555/assets/index-ByxiMj3o.js:25:5338)
+    at http://localhost:5555/assets/index-ByxiMj3o.js:25:6635
+    at Array.forEach (<anonymous>)
+    at e.destroy (http://localhost:5555/assets/index-ByxiMj3o.js:25:6613)
+    at http://localhost:5555/assets/index-ByxiMj3o.js:307:15688
+    at Wc (http://localhost:5555/assets/index-ByxiMj3o.js:9:92181)
+    at zl (http://localhost:5555/assets/index-ByxiMj3o.js:9:110016)
+    at Il (http://localhost:5555/assets/index-ByxiMj3o.js:9:109254)
+    at Ll (http://localhost:5555/assets/index-ByxiMj3o.js:9:109618)
+    at Il (http://localhost:5555/assets/index-ByxiMj3o.js:9:109316)
+[ 3147331ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[ 3192377ms] [ERROR] Failed to load resource: the server responded with a status of 404 (NOT FOUND) @ http://localhost:5555/api/workspace/tree?depth=1:0
+[ 3202483ms] [ERROR] Failed to load resource: the server responded with a status of 404 (NOT FOUND) @ http://localhost:5555/api/manual-builder/files:0
+[ 3202484ms] [ERROR] Failed to load resource: the server responded with a status of 404 (NOT FOUND) @ http://localhost:5555/api/manual-builder/stats:0
+[ 3269058ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[ 3365238ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[ 6036919ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[ 6158583ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[ 6191568ms] [ERROR] WebSocket connection to 'ws://localhost:5555/socket.io/?EIO=4&transport=websocket' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[ 6196468ms] [ERROR] WebSocket connection to 'ws://localhost:5555/socket.io/?EIO=4&transport=websocket' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[ 6203775ms] [ERROR] WebSocket connection to 'ws://localhost:5555/socket.io/?EIO=4&transport=websocket' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[ 6211082ms] [ERROR] WebSocket connection to 'ws://localhost:5555/socket.io/?EIO=4&transport=websocket' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[ 6218388ms] [ERROR] WebSocket connection to 'ws://localhost:5555/socket.io/?EIO=4&transport=websocket' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[ 6225696ms] [ERROR] WebSocket connection to 'ws://localhost:5555/socket.io/?EIO=4&transport=websocket' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[ 6233001ms] [ERROR] WebSocket connection to 'ws://localhost:5555/socket.io/?EIO=4&transport=websocket' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[ 6240310ms] [ERROR] WebSocket connection to 'ws://localhost:5555/socket.io/?EIO=4&transport=websocket' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[ 6247616ms] [ERROR] WebSocket connection to 'ws://localhost:5555/socket.io/?EIO=4&transport=websocket' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[ 6254923ms] [ERROR] WebSocket connection to 'ws://localhost:5555/socket.io/?EIO=4&transport=websocket' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[ 6262230ms] [ERROR] WebSocket connection to 'ws://localhost:5555/socket.io/?EIO=4&transport=websocket' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[ 6269535ms] [ERROR] WebSocket connection to 'ws://localhost:5555/socket.io/?EIO=4&transport=websocket' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[ 6276840ms] [ERROR] WebSocket connection to 'ws://localhost:5555/socket.io/?EIO=4&transport=websocket' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[ 6284148ms] [ERROR] WebSocket connection to 'ws://localhost:5555/socket.io/?EIO=4&transport=websocket' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[ 6291458ms] [ERROR] WebSocket connection to 'ws://localhost:5555/socket.io/?EIO=4&transport=websocket' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[ 6298774ms] [ERROR] WebSocket connection to 'ws://localhost:5555/socket.io/?EIO=4&transport=websocket' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[ 6306101ms] [ERROR] WebSocket connection to 'ws://localhost:5555/socket.io/?EIO=4&transport=websocket' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[ 6313427ms] [ERROR] WebSocket connection to 'ws://localhost:5555/socket.io/?EIO=4&transport=websocket' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[ 6318743ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[ 6390529ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[ 6490824ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[ 6537083ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[ 6908560ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[ 6954942ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[ 7050080ms] [ERROR] WebSocket connection to 'ws://localhost:5555/socket.io/?EIO=4&transport=websocket' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[ 7051588ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[ 7097770ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[ 7143864ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[ 7215141ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[ 7336501ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[ 7458090ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[ 7526372ms] [ERROR] WebSocket connection to 'ws://localhost:5555/socket.io/?EIO=4&transport=websocket' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[ 7528383ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[ 7574651ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[ 7620624ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[ 7692424ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[ 7764023ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[ 7810787ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[ 7856987ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[ 7902862ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[ 7949035ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[ 8020497ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[ 8141677ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[ 8188242ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[ 8284606ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[ 8705663ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[ 8776734ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[ 8823502ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[ 8894971ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[ 9166277ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[ 9612987ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[12509739ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[14531132ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[14577905ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[14623909ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[14669908ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[14716407ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[14763058ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[14809048ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[14855724ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[14902180ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-BcyGHLOz.js:11
+[15048644ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-BcyGHLOz.js:11

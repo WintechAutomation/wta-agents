@@ -1,0 +1,30 @@
+{"_header": true, "channel_id": "C0AQ235J7QQ", "channel_name": "cs"}
+{"ts": "2026-04-02 09:34:47", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "박용 ~"}
+{"ts": "2026-04-02 09:36:34", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "용아"}
+{"ts": "2026-04-02 09:36:48", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "<@U0AP5B0F71C> 대답"}
+{"ts": "2026-04-02 12:10:15", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "지금pc에 전원은 들어오는데 부팅이 안되는데 사진처럼 보면 유분인지 물인지가 흘러 \n그게 원인이 되는것같은데 이럴때 발생될수있는 상황이랑 해결방법 정리해줘", "files": [{"name": "a75eb376-67b3-4299-a887-ed43c85c019f.jpg", "type": "jpg", "saved_path": "C:\\MES\\wta-agents\\slack_chatlog\\C0AQ235J7QQ_files\\20260402_121015_a75eb376-67b3-4299-a887-ed43c85c019f.jpg"}, {"name": "7b5119e4-02f5-4784-b577-3043eee084bc.jpg", "type": "jpg", "saved_path": "C:\\MES\\wta-agents\\slack_chatlog\\C0AQ235J7QQ_files\\20260402_121015_7b5119e4-02f5-4784-b577-3043eee084bc.jpg"}]}
+{"ts": "2026-04-02 12:12:11", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "답을 안하네?"}
+{"ts": "2026-04-02 12:12:38", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "?"}
+{"ts": "2026-04-02 12:14:01", "user_id": "U0APMDZNX8S", "username": "제어설계 - 지건승", "text": "<@U0AP5B0F71C> \n지금pc에 전원은 들어오는데 부팅이 안되는데 사진처럼 보면 유분인지 물인지가 흘러 \n그게 원인이 되는것같은데 이럴때 발생될수있는 상황이랑 해결방법 정리해줘"}
+{"ts": "2026-04-02 13:42:37", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "이 방은 cs 용으로 ai 사용이 활용에 문제없겟는지 검증하는 방입니다."}
+{"ts": "2026-04-02 13:42:46", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "추후에는 이형태로 운영 되는건 아니니까"}
+{"ts": "2026-04-02 13:43:09", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "<@U0AP5B0F71C>   &lt;&lt;&lt; <@U0AP5B0F71C> 를 쓰시고 기술문의를 해봐주시면 됩니다."}
+{"ts": "2026-04-02 13:54:13", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "그치 용아 여기서"}
+{"ts": "2026-04-02 13:57:24", "user_id": "U0AQBHW4UKT", "username": "박용", "text": "Z轴在清扫模具下冲头的时候发生 如图所示报警 ， 是什么原点导致  以及解决方法 告诉我", "files": [{"name": "43ef8cf4cbacfb02c04da343af5321b0.jpg", "type": "jpg", "saved_path": "C:\\MES\\wta-agents\\slack_chatlog\\C0AQ235J7QQ_files\\20260402_135724_43ef8cf4cbacfb02c04da343af5321b0.jpg"}]}
+{"ts": "2026-04-02 14:00:08", "user_id": "U0AQBHW4UKT", "username": "박용", "text": "Anis Z Move failed. Target[77.407], Now Pos[70.354]\n这是报警信息"}
+{"ts": "2026-04-02 14:02:18", "user_id": "U0AQBHW4UKT", "username": "박용", "text": "Press"}
+{"ts": "2026-04-02 14:05:05", "user_id": "U0AQBHW4UKT", "username": "박용", "text": "我刚才重新设定了Z轴的原点 ， 如果重新设置了原点之后 还是持续发生的  我还要进行哪个操作 ？"}
+{"ts": "2026-04-02 14:17:20", "user_id": "U0AQBHW4UKT", "username": "박용", "text": "硬件检查了没有问题"}
+{"ts": "2026-04-02 14:20:03", "user_id": "U0AQBHW4UKT", "username": "박용", "text": "目前只是在清扫下冲头的时候发生报警， 但是客户现在没有使用下冲头"}
+{"ts": "2026-04-02 14:23:57", "user_id": "U0AQBHW4UKT", "username": "박용", "text": "好的 知道了"}
+{"ts": "2026-04-02 14:28:37", "user_id": "U0AQBHW4UKT", "username": "박용", "text": "END CASE PICKER Axis is Disabled\n包装机 经常出现此报警 ， 硬件上检查了没有问题\n帮我分析此报警会发生的情况 以及解决方案\n我感觉是限位传感器误感应到了之后 导致轴直接停了"}
+{"ts": "2026-04-02 14:31:20", "user_id": "U0AQBHW4UKT", "username": "박용", "text": "好的  你回答的还不错"}
+{"ts": "2026-04-02 14:35:05", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "cs 너가 사용자를 칭찬하는 말투는 삼가하도록해  . 버르장머리없이"}
+{"ts": "2026-04-03 09:48:47", "user_id": "U0AQSUY6S64", "username": "정상호", "text": "<@U0AP5B0F71C> YG1 막대 높이 측정센서가 막대 높이를 측정하려 내려가는 위치 설정을 어떻게 함?"}
+{"ts": "2026-04-03 09:50:31", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "ㅋㅋ 근데 저건 ... 우리도 대답하기 어려운거아닌가.ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ"}
+{"ts": "2026-04-03 09:51:03", "user_id": "U0AQSUY6S64", "username": "정상호", "text": "ㅋㅋ 그렇죠... 소프트도 코드를 까봐야죠"}
+{"ts": "2026-04-03 09:52:24", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "'ㅁ' 뭘 가져오긴하네 ; ㅋ"}
+{"ts": "2026-04-03 14:12:19", "user_id": "U0APHKH0613", "username": "심경기", "text": "<@U0AP5B0F71C> 예전에 PVD TOP 10 에러 유형별 대응/개선 방안 슬라이드 만들어줬던거 링크가 안들어가지는데 다시 링크좀 줄래?"}
+{"ts": "2026-04-03 14:52:00", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "임시링크라"}
+{"ts": "2026-04-03 14:52:07", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "어느기간 지나면 사라짐"}
+{"ts": "2026-04-03 14:52:59", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "<@U0AP5B0F71C>  전에 니가만든적있는 문서 링크다운로드가 안된다는 질문에 업로드 링크를 주는건 무슨짓이야?"}

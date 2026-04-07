@@ -1,0 +1,64 @@
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]: WTA AI
+      - generic [ref=e7]: 에이전트 대시보드 v2
+    - navigation [ref=e8]:
+      - link "🏢 에이전트 오피스" [ref=e9] [cursor=pointer]:
+        - /url: /v2/office
+        - generic [ref=e10]: 🏢
+        - generic [ref=e11]: 에이전트 오피스
+      - link "📊 시스템 개요" [ref=e12] [cursor=pointer]:
+        - /url: /v2/overview
+        - generic [ref=e13]: 📊
+        - generic [ref=e14]: 시스템 개요
+      - link "⚡ 운영 대시보드" [ref=e15] [cursor=pointer]:
+        - /url: /v2/dashboard
+        - generic [ref=e16]: ⚡
+        - generic [ref=e17]: 운영 대시보드
+      - link "📈 분석" [ref=e18] [cursor=pointer]:
+        - /url: /v2/analytics
+        - generic [ref=e19]: 📈
+        - generic [ref=e20]: 분석
+      - link "🖥️ 실시간 모니터" [ref=e21] [cursor=pointer]:
+        - /url: /v2/monitor
+        - generic [ref=e22]: 🖥️
+        - generic [ref=e23]: 실시간 모니터
+      - link "📚 Knowledge Base" [ref=e24] [cursor=pointer]:
+        - /url: /v2/knowledge
+        - generic [ref=e25]: 📚
+        - generic [ref=e26]: Knowledge Base
+    - generic [ref=e27]:
+      - generic [ref=e28]: 시스템
+      - generic [ref=e29]:
+        - generic [ref=e30]: 온라인
+        - generic [ref=e31]: 0/12
+      - generic [ref=e32]:
+        - generic [ref=e33]: 업타임
+        - generic [ref=e34]: 0h 0m
+  - main [ref=e35]:
+    - generic [ref=e36]:
+      - generic [ref=e37]:
+        - heading "🏢 에이전트 오피스" [level=1] [ref=e38]
+        - paragraph [ref=e39]:
+          - text: WTA AI 팀원 13명 — 한국 직장인 픽셀아트 오피스
+          - generic [ref=e40]: 0명 온라인
+      - generic [ref=e41]:
+        - generic [ref=e42]: Opus — 임원급
+        - generic [ref=e44]: Sonnet — 과장/대리
+        - generic [ref=e46]: Haiku — 신입
+        - generic [ref=e48]: 캐릭터를 탭/호버하면 정보 표시
+      - generic [ref=e51]:
+        - generic [ref=e52]: 👑 MAX
+        - generic [ref=e54]: 📊 DB매니저
+        - generic [ref=e56]: 🛠️ CS담당
+        - generic [ref=e58]: 💰 영업팀
+        - generic [ref=e60]: 💻 개발팀
+        - generic [ref=e62]: 📋 관리팀
+        - generic [ref=e64]: 🔧 크래프터
+        - generic [ref=e66]: 🔍 NC관리
+        - generic [ref=e68]: 🔬 출하품질
+        - generic [ref=e70]: 🚨 이슈관리
+        - generic [ref=e72]: 💬 슬랙봇
+        - generic [ref=e74]: 📅 일정관리
+        - generic [ref=e76]: 📝 독스(Docs)

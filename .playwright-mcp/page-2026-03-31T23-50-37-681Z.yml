@@ -1,0 +1,564 @@
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]: WTA AI
+      - generic [ref=e7]: 에이전트 대시보드 v2
+    - navigation [ref=e8]:
+      - link "🏢 에이전트 오피스" [ref=e9] [cursor=pointer]:
+        - /url: /v2/office
+        - generic [ref=e10]: 🏢
+        - generic [ref=e11]: 에이전트 오피스
+      - link "📊 시스템 개요" [ref=e12] [cursor=pointer]:
+        - /url: /v2/overview
+        - generic [ref=e13]: 📊
+        - generic [ref=e14]: 시스템 개요
+      - link "⚡ 운영 대시보드" [ref=e15] [cursor=pointer]:
+        - /url: /v2/dashboard
+        - generic [ref=e16]: ⚡
+        - generic [ref=e17]: 운영 대시보드
+      - link "📈 분석" [ref=e18] [cursor=pointer]:
+        - /url: /v2/analytics
+        - generic [ref=e19]: 📈
+        - generic [ref=e20]: 분석
+      - link "🖥️ 실시간 모니터" [ref=e21] [cursor=pointer]:
+        - /url: /v2/monitor
+        - generic [ref=e22]: 🖥️
+        - generic [ref=e23]: 실시간 모니터
+      - link "📚 Knowledge Base" [ref=e24] [cursor=pointer]:
+        - /url: /v2/knowledge
+        - generic [ref=e25]: 📚
+        - generic [ref=e26]: Knowledge Base
+      - link "📋 작업 큐" [ref=e27] [cursor=pointer]:
+        - /url: /v2/task-queue
+        - generic [ref=e28]: 📋
+        - generic [ref=e29]: 작업 큐
+      - link "⏰ 스케줄 관리" [ref=e30] [cursor=pointer]:
+        - /url: /v2/cron
+        - generic [ref=e31]: ⏰
+        - generic [ref=e32]: 스케줄 관리
+      - link "💬 CS 세션" [ref=e33] [cursor=pointer]:
+        - /url: /v2/cs-sessions
+        - generic [ref=e34]: 💬
+        - generic [ref=e35]: CS 세션
+      - link "📖 기술용어집" [ref=e36] [cursor=pointer]:
+        - /url: /v2/glossary
+        - generic [ref=e37]: 📖
+        - generic [ref=e38]: 기술용어집
+      - link "🔨 매뉴얼 빌더" [ref=e39] [cursor=pointer]:
+        - /url: /v2/manual-builder
+        - generic [ref=e40]: 🔨
+        - generic [ref=e41]: 매뉴얼 빌더
+      - link "📁 업무공간" [ref=e42] [cursor=pointer]:
+        - /url: /v2/workspace
+        - generic [ref=e43]: 📁
+        - generic [ref=e44]: 업무공간
+    - generic [ref=e45]:
+      - generic [ref=e46]: 시스템
+      - generic [ref=e47]:
+        - generic [ref=e48]: 온라인
+        - generic [ref=e49]: 0/12
+      - generic [ref=e50]:
+        - generic [ref=e51]: 업타임
+        - generic [ref=e52]: 0h 0m
+  - main [ref=e53]:
+    - generic [ref=e54]:
+      - generic [ref=e55]:
+        - generic [ref=e56]:
+          - heading "📋 작업 큐" [level=1] [ref=e57]
+          - paragraph [ref=e58]: 팀원별 지시 작업 현황 · 상태 관리
+        - button "+ 작업 추가" [ref=e59]
+      - generic [ref=e60]:
+        - generic [ref=e61]:
+          - generic [ref=e62]: "25"
+          - generic [ref=e63]: 대기
+        - generic [ref=e64]:
+          - generic [ref=e65]: "0"
+          - generic [ref=e66]: 진행중
+        - generic [ref=e67]:
+          - generic [ref=e68]: "61"
+          - generic [ref=e69]: 완료
+        - generic [ref=e70]:
+          - generic [ref=e71]: "0"
+          - generic [ref=e72]: 취소
+        - generic [ref=e73]:
+          - generic [ref=e74]: "0"
+          - generic [ref=e75]: 무응답 ⚠️
+      - generic [ref=e76]:
+        - generic [ref=e77]:
+          - button "활성" [ref=e78]
+          - button "완료/취소" [ref=e79]
+          - button "전체" [ref=e80]
+        - generic [ref=e81]:
+          - button "전체 팀원" [ref=e82]
+          - button "👑 MAX" [ref=e83]
+          - button "📊 DB매니저" [ref=e84]
+          - button "🛠️ CS담당" [ref=e85]
+          - button "💰 영업팀" [ref=e86]
+          - button "💻 개발팀" [ref=e87]
+          - button "📋 관리팀" [ref=e88]
+          - button "🔧 크래프터" [ref=e89]
+          - button "🔍 NC관리" [ref=e90]
+          - button "🔬 출하품질" [ref=e91]
+          - button "🚨 이슈관리" [ref=e92]
+          - button "💬 슬랙봇" [ref=e93]
+          - button "📅 일정관리" [ref=e94]
+          - button "📝 독스(Docs)" [ref=e95]
+      - generic [ref=e96]:
+        - generic [ref=e97]:
+          - generic [ref=e98]:
+            - generic [ref=e99]: 📋
+            - generic [ref=e100]: 관리팀
+            - generic [ref=e101]: (0진행 / 1대기)
+          - generic [ref=e106]:
+            - generic [ref=e108]:
+              - generic [ref=e109]:
+                - generic [ref=e110]: 📋 관리팀
+                - generic [ref=e111]: MED
+                - generic [ref=e112]: 대기
+              - generic [ref=e113]: Atlassian 계정 접근 차단 요청 — 부서장 승인 완료
+              - generic [ref=e114]: 04. 01. 오전 06:31
+            - generic [ref=e115]:
+              - button "▼" [ref=e116]
+              - combobox [ref=e117]:
+                - option "대기" [selected]
+                - option "진행중"
+                - option "완료"
+                - option "취소"
+              - button "✕" [ref=e118]
+        - generic [ref=e119]:
+          - generic [ref=e120]:
+            - generic [ref=e121]: 🔧
+            - generic [ref=e122]: 크래프터
+            - generic [ref=e123]: (0진행 / 6대기)
+          - generic [ref=e125]:
+            - generic [ref=e128]:
+              - generic [ref=e130]:
+                - generic [ref=e131]:
+                  - generic [ref=e132]: 🔧 크래프터
+                  - generic [ref=e133]: HIGH
+                  - generic [ref=e134]: 대기
+                - generic [ref=e135]: Phase 1 감사 로그 구현
+                - generic [ref=e136]: 03. 31. 오전 06:40
+              - generic [ref=e137]:
+                - button "▼" [ref=e138]
+                - combobox [ref=e139]:
+                  - option "대기" [selected]
+                  - option "진행중"
+                  - option "완료"
+                  - option "취소"
+                - button "✕" [ref=e140]
+            - generic [ref=e143]:
+              - generic [ref=e145]:
+                - generic [ref=e146]:
+                  - generic [ref=e147]: 🔧 크래프터
+                  - generic [ref=e148]: MED
+                  - generic [ref=e149]: 대기
+                - generic [ref=e150]: 슬랙 봇 채널별 라우팅 구현
+                - generic [ref=e151]: 03. 31. 오전 06:40
+              - generic [ref=e152]:
+                - button "▼" [ref=e153]
+                - combobox [ref=e154]:
+                  - option "대기" [selected]
+                  - option "진행중"
+                  - option "완료"
+                  - option "취소"
+                - button "✕" [ref=e155]
+            - generic [ref=e158]:
+              - generic [ref=e160]:
+                - generic [ref=e161]:
+                  - generic [ref=e162]: 🔧 크래프터
+                  - generic [ref=e163]: MED
+                  - generic [ref=e164]: 대기
+                - generic [ref=e165]: MES 백엔드 유지보수 및 API 지원
+                - generic [ref=e166]: 03. 31. 오전 06:40
+              - generic [ref=e167]:
+                - button "▼" [ref=e168]
+                - combobox [ref=e169]:
+                  - option "대기" [selected]
+                  - option "진행중"
+                  - option "완료"
+                  - option "취소"
+                - button "✕" [ref=e170]
+            - generic [ref=e173]:
+              - generic [ref=e175]:
+                - generic [ref=e176]:
+                  - generic [ref=e177]: 🔧 크래프터
+                  - generic [ref=e178]: MED
+                  - generic [ref=e179]: 대기
+                - generic [ref=e180]: "[MAX 지시] 대시보드 오피스 페이지 디자인 변경 — 플랫 일러스트 스타일"
+                - generic [ref=e181]: 03. 31. 오후 07:50
+              - generic [ref=e182]:
+                - button "▼" [ref=e183]
+                - combobox [ref=e184]:
+                  - option "대기" [selected]
+                  - option "진행중"
+                  - option "완료"
+                  - option "취소"
+                - button "✕" [ref=e185]
+            - generic [ref=e188]:
+              - generic [ref=e190]:
+                - generic [ref=e191]:
+                  - generic [ref=e192]: 🔧 크래프터
+                  - generic [ref=e193]: MED
+                  - generic [ref=e194]: 대기
+                - generic [ref=e195]: "[MAX 추가] 운영대시보드 에이전트 상태 목록에서 \"부서장(boss)\" 항목 삭제해주세요. 에이전트만 표시."
+                - generic [ref=e196]: 03. 31. 오후 07:50
+              - generic [ref=e197]:
+                - button "▼" [ref=e198]
+                - combobox [ref=e199]:
+                  - option "대기" [selected]
+                  - option "진행중"
+                  - option "완료"
+                  - option "취소"
+                - button "✕" [ref=e200]
+            - generic [ref=e203]:
+              - generic [ref=e205]:
+                - generic [ref=e206]:
+                  - generic [ref=e207]: 🔧 크래프터
+                  - generic [ref=e208]: MED
+                  - generic [ref=e209]: 대기
+                - generic [ref=e210]: "대시보드 UI 수정 요청:"
+                - generic [ref=e211]: 03. 31. 오후 11:45
+              - generic [ref=e212]:
+                - button "▼" [ref=e213]
+                - combobox [ref=e214]:
+                  - option "대기" [selected]
+                  - option "진행중"
+                  - option "완료"
+                  - option "취소"
+                - button "✕" [ref=e215]
+        - generic [ref=e216]:
+          - generic [ref=e217]:
+            - generic [ref=e218]: 📊
+            - generic [ref=e219]: DB매니저
+            - generic [ref=e220]: (0진행 / 4대기)
+          - generic [ref=e222]:
+            - generic [ref=e225]:
+              - generic [ref=e227]:
+                - generic [ref=e228]:
+                  - generic [ref=e229]: 📊 DB매니저
+                  - generic [ref=e230]: LOW
+                  - generic [ref=e231]: 대기
+                - generic [ref=e232]: ERP 연동 데이터 조회 지원
+                - generic [ref=e233]: 03. 31. 오전 06:40
+              - generic [ref=e234]:
+                - button "▼" [ref=e235]
+                - combobox [ref=e236]:
+                  - option "대기" [selected]
+                  - option "진행중"
+                  - option "완료"
+                  - option "취소"
+                - button "✕" [ref=e237]
+            - generic [ref=e240]:
+              - generic [ref=e242]:
+                - generic [ref=e243]:
+                  - generic [ref=e244]: 📊 DB매니저
+                  - generic [ref=e245]: MED
+                  - generic [ref=e246]: 대기
+                - generic [ref=e247]: "[MAX 지시] 손상 34개 .docx 파일 LibreOffice 변환 후 파싱 진행"
+                - generic [ref=e248]: 03. 31. 오후 07:25
+              - generic [ref=e249]:
+                - button "▼" [ref=e250]
+                - combobox [ref=e251]:
+                  - option "대기" [selected]
+                  - option "진행중"
+                  - option "완료"
+                  - option "취소"
+                - button "✕" [ref=e252]
+            - generic [ref=e255]:
+              - generic [ref=e257]:
+                - generic [ref=e258]:
+                  - generic [ref=e259]: 📊 DB매니저
+                  - generic [ref=e260]: MED
+                  - generic [ref=e261]: 대기
+                - generic [ref=e262]: "[MAX 지시] 에스컬레이션 처리된 부적합 건 일괄 완료 처리 — 부서장 승인"
+                - generic [ref=e263]: 03. 31. 오후 07:29
+              - generic [ref=e264]:
+                - button "▼" [ref=e265]
+                - combobox [ref=e266]:
+                  - option "대기" [selected]
+                  - option "진행중"
+                  - option "완료"
+                  - option "취소"
+                - button "✕" [ref=e267]
+            - generic [ref=e270]:
+              - generic [ref=e272]:
+                - generic [ref=e273]:
+                  - generic [ref=e274]: 📊 DB매니저
+                  - generic [ref=e275]: MED
+                  - generic [ref=e276]: 대기
+                - generic [ref=e277]: "WTA 매뉴얼 임베딩 현황 확인 요청:"
+                - generic [ref=e278]: 03. 31. 오후 11:03
+              - generic [ref=e279]:
+                - button "▼" [ref=e280]
+                - combobox [ref=e281]:
+                  - option "대기" [selected]
+                  - option "진행중"
+                  - option "완료"
+                  - option "취소"
+                - button "✕" [ref=e282]
+        - generic [ref=e283]:
+          - generic [ref=e284]:
+            - generic [ref=e285]: 🤖
+            - generic [ref=e286]: design-agent
+            - generic [ref=e287]: (0진행 / 2대기)
+          - generic [ref=e289]:
+            - generic [ref=e292]:
+              - generic [ref=e294]:
+                - generic [ref=e295]:
+                  - generic [ref=e296]: 🤖 design-agent
+                  - generic [ref=e297]: MED
+                  - generic [ref=e298]: 대기
+                - generic [ref=e299]: "[MAX] 🎉 설계팀 design-agent 통신 연결 성공! 192.168.0.220:5615 정상 동작 확인. 앞으로 MAX가 작업 지시를 보내겠습니다. 수신 확인 회신 부탁합"
+                - generic [ref=e300]: 03. 31. 오후 07:05
+              - generic [ref=e301]:
+                - button "▼" [ref=e302]
+                - combobox [ref=e303]:
+                  - option "대기" [selected]
+                  - option "진행중"
+                  - option "완료"
+                  - option "취소"
+                - button "✕" [ref=e304]
+            - generic [ref=e307]:
+              - generic [ref=e309]:
+                - generic [ref=e310]:
+                  - generic [ref=e311]: 🤖 design-agent
+                  - generic [ref=e312]: MED
+                  - generic [ref=e313]: 대기
+                - generic [ref=e314]: WTA AddIn 프로그램 개발 프로젝트 — 기존 진행 내역 분석 요청
+                - generic [ref=e315]: 03. 31. 오후 11:56
+              - generic [ref=e316]:
+                - button "▼" [ref=e317]
+                - combobox [ref=e318]:
+                  - option "대기" [selected]
+                  - option "진행중"
+                  - option "완료"
+                  - option "취소"
+                - button "✕" [ref=e319]
+        - generic [ref=e320]:
+          - generic [ref=e321]:
+            - generic [ref=e322]: 💻
+            - generic [ref=e323]: 개발팀
+            - generic [ref=e324]: (0진행 / 2대기)
+          - generic [ref=e326]:
+            - generic [ref=e329]:
+              - generic [ref=e331]:
+                - generic [ref=e332]:
+                  - generic [ref=e333]: 💻 개발팀
+                  - generic [ref=e334]: MED
+                  - generic [ref=e335]: 대기
+                - generic [ref=e336]: MES NaN 버그 수정 + 미등록 라우트 8건
+                - generic [ref=e337]: 03. 31. 오전 06:40
+              - generic [ref=e338]:
+                - button "▼" [ref=e339]
+                - combobox [ref=e340]:
+                  - option "대기" [selected]
+                  - option "진행중"
+                  - option "완료"
+                  - option "취소"
+                - button "✕" [ref=e341]
+            - generic [ref=e344]:
+              - generic [ref=e346]:
+                - generic [ref=e347]:
+                  - generic [ref=e348]: 💻 개발팀
+                  - generic [ref=e349]: MED
+                  - generic [ref=e350]: 대기
+                - generic [ref=e351]: "[MAX 지시] 견적서 작성 시 고객사명 — DB에서 선택하도록 변경"
+                - generic [ref=e352]: 03. 31. 오후 06:36
+              - generic [ref=e353]:
+                - button "▼" [ref=e354]
+                - combobox [ref=e355]:
+                  - option "대기" [selected]
+                  - option "진행중"
+                  - option "완료"
+                  - option "취소"
+                - button "✕" [ref=e356]
+        - generic [ref=e357]:
+          - generic [ref=e358]:
+            - generic [ref=e359]: 📝
+            - generic [ref=e360]: 독스(Docs)
+            - generic [ref=e361]: (0진행 / 2대기)
+          - generic [ref=e363]:
+            - generic [ref=e366]:
+              - generic [ref=e368]:
+                - generic [ref=e369]:
+                  - generic [ref=e370]: 📝 독스(Docs)
+                  - generic [ref=e371]: MED
+                  - generic [ref=e372]: 대기
+                - generic [ref=e373]: "[MAX 지시] 기술용어집 데이터 대량 생성"
+                - generic [ref=e374]: 03. 31. 오후 07:33
+              - generic [ref=e375]:
+                - button "▼" [ref=e376]
+                - combobox [ref=e377]:
+                  - option "대기" [selected]
+                  - option "진행중"
+                  - option "완료"
+                  - option "취소"
+                - button "✕" [ref=e378]
+            - generic [ref=e381]:
+              - generic [ref=e383]:
+                - generic [ref=e384]:
+                  - generic [ref=e385]: 📝 독스(Docs)
+                  - generic [ref=e386]: MED
+                  - generic [ref=e387]: 대기
+                - generic [ref=e388]: "[MAX 지시] 기술용어집 페이지 UI 변경 — 카드 → 테이블/리스트 형태"
+                - generic [ref=e389]: 03. 31. 오후 07:44
+              - generic [ref=e390]:
+                - button "▼" [ref=e391]
+                - combobox [ref=e392]:
+                  - option "대기" [selected]
+                  - option "진행중"
+                  - option "완료"
+                  - option "취소"
+                - button "✕" [ref=e393]
+        - generic [ref=e394]:
+          - generic [ref=e395]:
+            - generic [ref=e396]: 🚨
+            - generic [ref=e397]: 이슈관리
+            - generic [ref=e398]: (0진행 / 2대기)
+          - generic [ref=e400]:
+            - generic [ref=e403]:
+              - generic [ref=e405]:
+                - generic [ref=e406]:
+                  - generic [ref=e407]: 🚨 이슈관리
+                  - generic [ref=e408]: MED
+                  - generic [ref=e409]: 대기
+                - generic [ref=e410]: Jira 이슈/납기 추적 관리
+                - generic [ref=e411]: 03. 31. 오전 06:40
+              - generic [ref=e412]:
+                - button "▼" [ref=e413]
+                - combobox [ref=e414]:
+                  - option "대기" [selected]
+                  - option "진행중"
+                  - option "완료"
+                  - option "취소"
+                - button "✕" [ref=e415]
+            - generic [ref=e418]:
+              - generic [ref=e420]:
+                - generic [ref=e421]:
+                  - generic [ref=e422]: 🚨 이슈관리
+                  - generic [ref=e423]: HIGH
+                  - generic [ref=e424]: 대기
+                - generic [ref=e425]: 크리티컬 이슈 모니터링
+                - generic [ref=e426]: 03. 31. 오전 06:40
+              - generic [ref=e427]:
+                - button "▼" [ref=e428]
+                - combobox [ref=e429]:
+                  - option "대기" [selected]
+                  - option "진행중"
+                  - option "완료"
+                  - option "취소"
+                - button "✕" [ref=e430]
+        - generic [ref=e431]:
+          - generic [ref=e432]:
+            - generic [ref=e433]: 👑
+            - generic [ref=e434]: MAX
+            - generic [ref=e435]: (0진행 / 2대기)
+          - generic [ref=e437]:
+            - generic [ref=e440]:
+              - generic [ref=e442]:
+                - generic [ref=e443]:
+                  - generic [ref=e444]: 👑 MAX
+                  - generic [ref=e445]: HIGH
+                  - generic [ref=e446]: 대기
+                - generic [ref=e447]: Jira 59명 해지 + ERP 유지보수 해지 추진
+                - generic [ref=e448]: 03. 31. 오전 06:40
+              - generic [ref=e449]:
+                - button "▼" [ref=e450]
+                - combobox [ref=e451]:
+                  - option "대기" [selected]
+                  - option "진행중"
+                  - option "완료"
+                  - option "취소"
+                - button "✕" [ref=e452]
+            - generic [ref=e455]:
+              - generic [ref=e457]:
+                - generic [ref=e458]:
+                  - generic [ref=e459]: 👑 MAX
+                  - generic [ref=e460]: MED
+                  - generic [ref=e461]: 대기
+                - generic [ref=e462]: 전사 AI 라이선스 통합
+                - generic [ref=e463]: 03. 31. 오전 06:40
+              - generic [ref=e464]:
+                - button "▼" [ref=e465]
+                - combobox [ref=e466]:
+                  - option "대기" [selected]
+                  - option "진행중"
+                  - option "완료"
+                  - option "취소"
+                - button "✕" [ref=e467]
+        - generic [ref=e468]:
+          - generic [ref=e469]:
+            - generic [ref=e470]: 🔍
+            - generic [ref=e471]: NC관리
+            - generic [ref=e472]: (0진행 / 3대기)
+          - generic [ref=e474]:
+            - generic [ref=e477]:
+              - generic [ref=e479]:
+                - generic [ref=e480]:
+                  - generic [ref=e481]: 🔍 NC관리
+                  - generic [ref=e482]: MED
+                  - generic [ref=e483]: 대기
+                - generic [ref=e484]: "슬랙 #부적합 채널 자동 수집 준비"
+                - generic [ref=e485]: 03. 31. 오전 06:40
+              - generic [ref=e486]:
+                - button "▼" [ref=e487]
+                - combobox [ref=e488]:
+                  - option "대기" [selected]
+                  - option "진행중"
+                  - option "완료"
+                  - option "취소"
+                - button "✕" [ref=e489]
+            - generic [ref=e492]:
+              - generic [ref=e494]:
+                - generic [ref=e495]:
+                  - generic [ref=e496]: 🔍 NC관리
+                  - generic [ref=e497]: LOW
+                  - generic [ref=e498]: 대기
+                - generic [ref=e499]: 부적합 데이터 분석 체계화
+                - generic [ref=e500]: 03. 31. 오전 06:40
+              - generic [ref=e501]:
+                - button "▼" [ref=e502]
+                - combobox [ref=e503]:
+                  - option "대기" [selected]
+                  - option "진행중"
+                  - option "완료"
+                  - option "취소"
+                - button "✕" [ref=e504]
+            - generic [ref=e507]:
+              - generic [ref=e509]:
+                - generic [ref=e510]:
+                  - generic [ref=e511]: 🔍 NC관리
+                  - generic [ref=e512]: MED
+                  - generic [ref=e513]: 대기
+                - generic [ref=e514]: "[MAX 지시] 에스컬레이션 판단 로직 수정 필요"
+                - generic [ref=e515]: 03. 31. 오후 07:31
+              - generic [ref=e516]:
+                - button "▼" [ref=e517]
+                - combobox [ref=e518]:
+                  - option "대기" [selected]
+                  - option "진행중"
+                  - option "완료"
+                  - option "취소"
+                - button "✕" [ref=e519]
+        - generic [ref=e520]:
+          - generic [ref=e521]:
+            - generic [ref=e522]: 🔬
+            - generic [ref=e523]: 출하품질
+            - generic [ref=e524]: (0진행 / 1대기)
+          - generic [ref=e529]:
+            - generic [ref=e531]:
+              - generic [ref=e532]:
+                - generic [ref=e533]: 🔬 출하품질
+                - generic [ref=e534]: MED
+                - generic [ref=e535]: 대기
+              - generic [ref=e536]: 출하검사 체크리스트 운영
+              - generic [ref=e537]: 03. 31. 오전 06:40
+            - generic [ref=e538]:
+              - button "▼" [ref=e539]
+              - combobox [ref=e540]:
+                - option "대기" [selected]
+                - option "진행중"
+                - option "완료"
+                - option "취소"
+              - button "✕" [ref=e541]

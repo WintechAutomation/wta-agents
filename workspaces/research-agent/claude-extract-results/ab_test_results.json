@@ -1,0 +1,432 @@
+{
+  "v1_baseline": {
+    "entities": 13,
+    "relations": 11,
+    "recall_pct": 40.0,
+    "matched": [
+      "Equipment:Korloy 포장기 #6",
+      "Customer:Korloy",
+      "Resolution:광축 중심과 조명 중심 상하좌우 ±1mm 이내 세팅",
+      "Resolution:컨베이어 벨트 기준 조명 높이 10mm 수준 세팅 권장"
+    ],
+    "missed": [
+      "Equipment:혼입검사기",
+      "Component:acA2500-14gm",
+      "Component:M2514-MP2",
+      "Component:DOMELIGHT100",
+      "Issue:Korloy 포장기 #6 밝기 비대칭",
+      "Resolution:측정 가능 제품군 제한"
+    ],
+    "cost_usd": 0.002959,
+    "raw": {
+      "extracted": {
+        "entities": [
+          {
+            "type": "Customer",
+            "id": "customer_korean_metallurgy",
+            "name": "한국 야금",
+            "properties": {
+              "country": "한국"
+            }
+          },
+          {
+            "type": "Equipment",
+            "id": "equipment_korloy_packaging_6",
+            "name": "Korloy 포장기 #6(#25-3)",
+            "properties": {
+              "type": "포장혼입검사",
+              "model": "#6(#25-3)",
+              "customer": "한국 야금"
+            }
+          },
+          {
+            "type": "Product",
+            "id": "product_c_type_mirror",
+            "name": "C형 경면 제품",
+            "properties": {
+              "type": "경면 제품",
+              "material": "금속"
+            }
+          },
+          {
+            "type": "Product",
+            "id": "product_w_type_mirror",
+            "name": "W형 경면 제품",
+            "properties": {
+              "type": "경면 제품",
+              "material": "금속"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "component_camera_aca2500",
+            "name": "카메라",
+            "properties": {
+              "model": "acA2500-14gm",
+              "type": "카메라"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "component_lens_m2514",
+            "name": "렌즈",
+            "properties": {
+              "model": "M2514-MP2",
+              "type": "렌즈"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "component_domelight100",
+            "name": "조명",
+            "properties": {
+              "model": "DOMELIGHT100",
+              "type": "조명"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "component_nose_r",
+            "name": "Nose-r부",
+            "properties": {
+              "type": "부품"
+            }
+          },
+          {
+            "type": "Issue",
+            "id": "issue_brightness_asymmetry",
+            "name": "혼입 검사 특정 제품 밝기 비대칭",
+            "properties": {
+              "title": "Korloy 포장기 #6(#25-3) 혼입 검사 특정 제품 밝기 비대칭",
+              "status": "분석완료",
+              "symptom": "C, W형 경면 제품 이미지에서 한쪽 부분이 비정상적으로 밝게 시인되어 Nose-r부의 치수가 상이하게 측정됨",
+              "root_cause": "광축 중심과 조명 중심이 한쪽으로 치우쳐져 있고, 광축 중심이 조명 중심보다 좌측 하단에 위치함"
+            }
+          },
+          {
+            "type": "Resolution",
+            "id": "resolution_optical_alignment",
+            "name": "광축 및 조명 중심 정렬 조치",
+            "properties": {
+              "description": "광축 중심과 조명의 중심을 상하좌우 ±1mm 이내로 세팅하고, 컨베이어 벨트 기준 조명 높이를 10mm 수준으로 설정",
+              "category": "광학계 조정",
+              "effectiveness": "중심 기준 ±1mm 내에서 C, W형 경면 제품 밝기 비대칭 개선 가능"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_inspection_setup",
+            "name": "혼입검사부 광학계 초기 세팅",
+            "properties": {
+              "description": "혼입검사부 광학계의 초기 설정 및 조정"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_lighting_distance_test",
+            "name": "조명 거리 조정 테스트",
+            "properties": {
+              "description": "조명 밑단부터 벨트까지의 거리 조정 (11mm ~ 19mm, 2mm step)"
+            }
+          },
+          {
+            "type": "Process",
+            "id": "process_product_position_test",
+            "name": "제품 위치 조정 테스트",
+            "properties": {
+              "description": "이미지 기준 중앙에서 제품 배치 후 위, 아래로 이동 (각각 5mm, 1mm step)하여 시인성 변화 확인"
+            }
+          }
+        ],
+        "relations": [
+          {
+            "type": "OWNS",
+            "from_id": "customer_korean_metallurgy",
+            "to_id": "equipment_korloy_packaging_6",
+            "properties": {}
+          },
+          {
+            "type": "HAS_ISSUE",
+            "from_id": "equipment_korloy_packaging_6",
+            "to_id": "issue_brightness_asymmetry",
+            "properties": {}
+          },
+          {
+            "type": "RESOLVED_BY",
+            "from_id": "issue_brightness_asymmetry",
+            "to_id": "resolution_optical_alignment",
+            "properties": {}
+          },
+          {
+            "type": "INVOLVED_IN",
+            "from_id": "product_c_type_mirror",
+            "to_id": "issue_brightness_asymmetry",
+            "properties": {}
+          },
+          {
+            "type": "INVOLVED_IN",
+            "from_id": "product_w_type_mirror",
+            "to_id": "issue_brightness_asymmetry",
+            "properties": {}
+          },
+          {
+            "type": "INVOLVES_COMPONENT",
+            "from_id": "issue_brightness_asymmetry",
+            "to_id": "component_nose_r",
+            "properties": {}
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "equipment_korloy_packaging_6",
+            "to_id": "component_camera_aca2500",
+            "properties": {}
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "equipment_korloy_packaging_6",
+            "to_id": "component_lens_m2514",
+            "properties": {}
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "equipment_korloy_packaging_6",
+            "to_id": "component_domelight100",
+            "properties": {}
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "process_inspection_setup",
+            "to_id": "process_lighting_distance_test",
+            "properties": {}
+          },
+          {
+            "type": "HAS_SUBPROCESS",
+            "from_id": "process_inspection_setup",
+            "to_id": "process_product_position_test",
+            "properties": {}
+          }
+        ]
+      },
+      "usage": {
+        "input_tokens": 1996,
+        "output_tokens": 1968,
+        "cost_usd": 0.002959
+      },
+      "chunks": 1
+    }
+  },
+  "v2_improved": {
+    "entities": 11,
+    "relations": 10,
+    "recall_pct": 60.0,
+    "matched": [
+      "Equipment:Korloy 포장기 #6",
+      "Customer:Korloy",
+      "Issue:Korloy 포장기 #6 밝기 비대칭",
+      "Resolution:광축 중심과 조명 중심 상하좌우 ±1mm 이내 세팅",
+      "Resolution:컨베이어 벨트 기준 조명 높이 10mm 수준 세팅 권장",
+      "Resolution:측정 가능 제품군 제한"
+    ],
+    "missed": [
+      "Equipment:혼입검사기",
+      "Component:acA2500-14gm",
+      "Component:M2514-MP2",
+      "Component:DOMELIGHT100"
+    ],
+    "cost_usd": 0.002899,
+    "raw": {
+      "extracted": {
+        "entities": [
+          {
+            "type": "Customer",
+            "id": "korean_metallurgy",
+            "name": "한국 야금",
+            "properties": {
+              "country": "Korea"
+            }
+          },
+          {
+            "type": "Equipment",
+            "id": "korloy_packing_6",
+            "name": "Korloy 포장기 #6",
+            "properties": {
+              "model": "#25-3",
+              "type": "혼입 검사",
+              "customer": "한국 야금"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "camera_aca2500",
+            "name": "카메라",
+            "properties": {
+              "model": "acA2500-14gm",
+              "type": "카메라",
+              "spec": ""
+            }
+          },
+          {
+            "type": "Component",
+            "id": "lens_m2514",
+            "name": "렌즈",
+            "properties": {
+              "model": "M2514-MP2",
+              "type": "렌즈",
+              "spec": "LWD 169mm"
+            }
+          },
+          {
+            "type": "Component",
+            "id": "light_domelight100",
+            "name": "조명",
+            "properties": {
+              "model": "DOMELIGHT100",
+              "type": "조명",
+              "spec": ""
+            }
+          },
+          {
+            "type": "Product",
+            "id": "product_c_type",
+            "name": "C형 경면 제품",
+            "properties": {
+              "type": "C형",
+              "material": "경면",
+              "description": ""
+            }
+          },
+          {
+            "type": "Product",
+            "id": "product_w_type",
+            "name": "W형 경면 제품",
+            "properties": {
+              "type": "W형",
+              "material": "경면",
+              "description": ""
+            }
+          },
+          {
+            "type": "Issue",
+            "id": "issue_brightness_asymmetry",
+            "name": "Korloy 포장기 #6 C,W형 경면 제품 밝기 비대칭",
+            "properties": {
+              "symptom": "한쪽 부분이 비정상적으로 밝게 시인되어 Nose-r부의 치수가 상이하게 측정되는 현상",
+              "root_cause": "광축 중심과 조명 중심이 한쪽으로 치우쳐져 있음. 광축 중심이 조명 중심보다 좌측 하단에 위치",
+              "status": "분석 완료"
+            }
+          },
+          {
+            "type": "Resolution",
+            "id": "res_axis_alignment",
+            "name": "광축 중심과 조명 중심 ±1mm 이내 세팅",
+            "properties": {
+              "description": "광축 중심과 조명의 중심을 상하좌우 ±1mm 이내 세팅",
+              "category": "광학계 세팅",
+              "effectiveness": ""
+            }
+          },
+          {
+            "type": "Resolution",
+            "id": "res_light_height_setting",
+            "name": "조명 높이 10mm 수준 세팅",
+            "properties": {
+              "description": "컨베이어 벨트 기준 조명 높이 10mm 수준으로 세팅 (제품 간섭이 없는 선에서 가까울 수록 유리함)",
+              "category": "조명 조정",
+              "effectiveness": ""
+            }
+          },
+          {
+            "type": "Resolution",
+            "id": "res_product_measurement_limit",
+            "name": "측정 가능 제품군 제한",
+            "properties": {
+              "description": "경면 제품 및 랜드부의 경사가 큰 제품의 경우 해당 현상 재발 가능성이 있으므로 측정 가능 제품군을 제한",
+              "category": "제품 운영 정책",
+              "effectiveness": ""
+            }
+          }
+        ],
+        "relations": [
+          {
+            "type": "OWNS",
+            "from_id": "korean_metallurgy",
+            "to_id": "korloy_packing_6",
+            "properties": {}
+          },
+          {
+            "type": "HAS_ISSUE",
+            "from_id": "korloy_packing_6",
+            "to_id": "issue_brightness_asymmetry",
+            "properties": {}
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "korloy_packing_6",
+            "to_id": "camera_aca2500",
+            "properties": {}
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "korloy_packing_6",
+            "to_id": "lens_m2514",
+            "properties": {}
+          },
+          {
+            "type": "USES_COMPONENT",
+            "from_id": "korloy_packing_6",
+            "to_id": "light_domelight100",
+            "properties": {}
+          },
+          {
+            "type": "INVOLVED_IN",
+            "from_id": "product_c_type",
+            "to_id": "issue_brightness_asymmetry",
+            "properties": {}
+          },
+          {
+            "type": "INVOLVED_IN",
+            "from_id": "product_w_type",
+            "to_id": "issue_brightness_asymmetry",
+            "properties": {}
+          },
+          {
+            "type": "RESOLVED_BY",
+            "from_id": "issue_brightness_asymmetry",
+            "to_id": "res_axis_alignment",
+            "properties": {}
+          },
+          {
+            "type": "RESOLVED_BY",
+            "from_id": "issue_brightness_asymmetry",
+            "to_id": "res_light_height_setting",
+            "properties": {}
+          },
+          {
+            "type": "RESOLVED_BY",
+            "from_id": "issue_brightness_asymmetry",
+            "to_id": "res_product_measurement_limit",
+            "properties": {}
+          }
+        ]
+      },
+      "usage": {
+        "input_tokens": 3001,
+        "output_tokens": 1719,
+        "cost_usd": 0.002899
+      },
+      "chunks": 1
+    }
+  },
+  "v3_improved": {
+    "prompt_version": "v3",
+    "runs_recall": [
+      80.0,
+      100.0,
+      90.0
+    ],
+    "avg_recall": 90.0,
+    "entities": 12,
+    "relations": 13,
+    "cost_usd": 0.003266
+  }
+}

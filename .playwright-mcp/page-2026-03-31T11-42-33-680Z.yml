@@ -1,0 +1,367 @@
+- generic [ref=e29]:
+  - complementary [ref=e30]:
+    - generic [ref=e31]:
+      - generic [ref=e32]:
+        - img "WTA" [ref=e33]
+        - generic [ref=e34]: CS Agent
+      - button [ref=e35]:
+        - img [ref=e36]
+    - generic [ref=e40]:
+      - img [ref=e42]
+      - generic [ref=e45]:
+        - paragraph [ref=e46]: Administrator
+        - paragraph [ref=e47]: HQ
+    - navigation [ref=e48]:
+      - link "대시보드" [ref=e49] [cursor=pointer]:
+        - /url: /
+        - img [ref=e50]
+        - text: 대시보드
+      - link "CS 이력" [ref=e55] [cursor=pointer]:
+        - /url: /cs
+        - img [ref=e56]
+        - text: CS 이력
+      - link "업무 스케줄" [ref=e59] [cursor=pointer]:
+        - /url: /schedule
+        - img [ref=e60]
+        - text: 업무 스케줄
+      - link "장비" [ref=e62] [cursor=pointer]:
+        - /url: /equipment
+        - img [ref=e63]
+        - text: 장비
+      - link "장비 셋업" [ref=e66] [cursor=pointer]:
+        - /url: /setup
+        - img [ref=e67]
+        - text: 장비 셋업
+      - link "재고" [ref=e69] [cursor=pointer]:
+        - /url: /inventory
+        - img [ref=e70]
+        - text: 재고
+      - link "부품 판매" [ref=e74] [cursor=pointer]:
+        - /url: /sales
+        - img [ref=e75]
+        - text: 부품 판매
+      - link "갤러리" [ref=e79] [cursor=pointer]:
+        - /url: /gallery
+        - img [ref=e80]
+        - text: 갤러리
+      - link "견적서 관리" [ref=e84] [cursor=pointer]:
+        - /url: /quotes
+        - img [ref=e85]
+        - text: 견적서 관리
+      - link "라벨 출력" [ref=e88] [cursor=pointer]:
+        - /url: /labels
+        - img [ref=e89]
+        - text: 라벨 출력
+      - link "설정" [ref=e93] [cursor=pointer]:
+        - /url: /settings
+        - img [ref=e94]
+        - text: 설정
+    - button "로그아웃" [ref=e97]:
+      - img [ref=e98]
+      - text: 로그아웃
+  - generic [ref=e101]:
+    - banner [ref=e102]:
+      - generic [ref=e103]:
+        - button [ref=e104]:
+          - img [ref=e105]
+        - img "WTA" [ref=e106]
+      - generic [ref=e107]:
+        - button "다크 모드 전환" [ref=e108]:
+          - img [ref=e109]
+        - button "Language" [ref=e112]:
+          - img [ref=e113]
+    - main [ref=e116]:
+      - generic [ref=e337]:
+        - generic [ref=e338]:
+          - generic [ref=e339]:
+            - generic [ref=e340]:
+              - img [ref=e341]
+              - textbox "키워드, 장비 S/N, 고객명으로 검색" [ref=e344]
+            - button "검색" [ref=e345]
+          - generic [ref=e346]:
+            - generic [ref=e347]:
+              - button "전체" [ref=e348]
+              - button "진행중" [ref=e349]
+              - button "완료" [ref=e350]
+              - button "대기" [ref=e351]
+            - button "필터" [ref=e352]:
+              - img [ref=e353]
+              - text: 필터
+        - generic [ref=e355]:
+          - paragraph [ref=e356]: 검색 5160
+          - generic [ref=e357]:
+            - img [ref=e358]
+            - combobox [ref=e361]:
+              - option "최신순" [selected]
+              - option "오래된순"
+              - option "접수일 최신"
+              - option "접수일 오래된"
+              - option "고객사순"
+              - option "상태순"
+        - generic [ref=e362]:
+          - 'button "Kyocera 검사기 1 호기 AP1135 신제품 마그네틱 암 사용 불가 깐저우 교세라 · 중국 교세라 검사기 F1 #1 S/N: WHIM1MA001 종료 2026-03-15 신규 암 사용 시 배치 각도 편차가 과도하게 발생함" [ref=e363]':
+            - generic [ref=e365]:
+              - generic [ref=e366]:
+                - paragraph [ref=e367]: Kyocera 검사기 1 호기 AP1135 신제품 마그네틱 암 사용 불가
+                - paragraph [ref=e368]:
+                  - text: 깐저우 교세라 ·
+                  - 'link "중국 교세라 검사기 F1 #1" [ref=e369]'
+                - paragraph [ref=e370]: "S/N: WHIM1MA001"
+              - generic [ref=e371]:
+                - generic [ref=e372]: 종료
+                - generic [ref=e373]: 2026-03-15
+            - paragraph [ref=e374]: 신규 암 사용 시 배치 각도 편차가 과도하게 발생함
+          - 'button "Kyocera 검사기 1 호기 제품 팔레트 위치 틀어짐으로 인해 고배율 렌즈 불량률 15% 증가 깐저우 교세라 · 중국 교세라 검사기 F1 #1 S/N: WHIM1MA001 종료 2026-03-16 제품이 팔레트 위치에 틀어짐 발생하여 고배율 카메라 불량률 15% 증가 제품 위치 틀어짐으로 검사 범위가 내부로 이동" [ref=e375]':
+            - generic [ref=e377]:
+              - generic [ref=e378]:
+                - paragraph [ref=e379]: Kyocera 검사기 1 호기 제품 팔레트 위치 틀어짐으로 인해 고배율 렌즈 불량률 15% 증가
+                - paragraph [ref=e380]:
+                  - text: 깐저우 교세라 ·
+                  - 'link "중국 교세라 검사기 F1 #1" [ref=e381]'
+                - paragraph [ref=e382]: "S/N: WHIM1MA001"
+              - generic [ref=e383]:
+                - generic [ref=e384]: 종료
+                - generic [ref=e385]: 2026-03-16
+            - paragraph [ref=e386]: 제품이 팔레트 위치에 틀어짐 발생하여 고배율 카메라 불량률 15% 증가 제품 위치 틀어짐으로 검사 범위가 내부로 이동
+          - 'button "Kyocera 검사기 1 호기 동일 제품 동일 레시피 저배율 검사 결과 상이 깐저우 교세라 · 중국 교세라 검사기 F1 #1 S/N: WHIM1MA001 종료 2026-03-16 동일 제품, 동일 배합으로 저배율 검사 시 결과가 상이함. 저배율 현미경은 70um 이하 결함만 검출 가능. 1차 검사 결함 크기: 66um 2차 검사 결함 크기: 85um * 56" [ref=e387]':
+            - generic [ref=e389]:
+              - generic [ref=e390]:
+                - paragraph [ref=e391]: Kyocera 검사기 1 호기 동일 제품 동일 레시피 저배율 검사 결과 상이
+                - paragraph [ref=e392]:
+                  - text: 깐저우 교세라 ·
+                  - 'link "중국 교세라 검사기 F1 #1" [ref=e393]'
+                - paragraph [ref=e394]: "S/N: WHIM1MA001"
+              - generic [ref=e395]:
+                - generic [ref=e396]: 종료
+                - generic [ref=e397]: 2026-03-16
+            - paragraph [ref=e398]: "동일 제품, 동일 배합으로 저배율 검사 시 결과가 상이함. 저배율 현미경은 70um 이하 결함만 검출 가능. 1차 검사 결함 크기: 66um 2차 검사 결함 크기: 85um * 56"
+          - 'button "Kyocera 검사기 1 호기 종료 정지 시 간헐적으로 인덱스 배열 한계 초과 현상 발생 깐저우 교세라 · 중국 교세라 검사기 F1 #1 S/N: WHIM1MA001 종료 2026-03-15 적재된 파렛트가 가득 찬 상태에서 종료 시 인덱스 배열 범위 초과 에러 발생 프로그램 버그" [ref=e399]':
+            - generic [ref=e401]:
+              - generic [ref=e402]:
+                - paragraph [ref=e403]: Kyocera 검사기 1 호기 종료 정지 시 간헐적으로 인덱스 배열 한계 초과 현상 발생
+                - paragraph [ref=e404]:
+                  - text: 깐저우 교세라 ·
+                  - 'link "중국 교세라 검사기 F1 #1" [ref=e405]'
+                - paragraph [ref=e406]: "S/N: WHIM1MA001"
+              - generic [ref=e407]:
+                - generic [ref=e408]: 종료
+                - generic [ref=e409]: 2026-03-15
+            - paragraph [ref=e410]: 적재된 파렛트가 가득 찬 상태에서 종료 시 인덱스 배열 범위 초과 에러 발생 프로그램 버그
+          - 'button "R축이 제품 정렬시 조금씩 틀어짐 발생 YG1 · YG1 프레스 #10-9 S/N: JKKY-17FEB61 종료 2026-03-14 1. R축이 제품 정렬시 조금씩 틀어짐 발생 2. 마스터/슬레이브 핀 이상 없음 마스터 커넥터 이상없음 드라이브 커넥터 이상없음 3. 케이블베어 내부 배선 단선으로 판단되어 교체 진행 요청" [ref=e411]':
+            - generic [ref=e413]:
+              - generic [ref=e414]:
+                - paragraph [ref=e415]: R축이 제품 정렬시 조금씩 틀어짐 발생
+                - paragraph [ref=e416]:
+                  - text: YG1 ·
+                  - 'link "YG1 프레스 #10-9" [ref=e417]'
+                - paragraph [ref=e418]: "S/N: JKKY-17FEB61"
+              - generic [ref=e419]:
+                - generic [ref=e420]: 종료
+                - generic [ref=e421]: 2026-03-14
+            - paragraph [ref=e422]: 1. R축이 제품 정렬시 조금씩 틀어짐 발생 2. 마스터/슬레이브 핀 이상 없음 마스터 커넥터 이상없음 드라이브 커넥터 이상없음 3. 케이블베어 내부 배선 단선으로 판단되어 교체 진행 요청
+          - 'button "EMPTY_CASE_TRS 밀림 현상 조치 교세라 · 교세라 포장기 #2 S/N: KKY-18JAN008 종료 2026-03-14 1. EMPTY_CASE_TRS 밀림 현상으로 케이스 픽업 위치 틀어짐. 2. 벨트 부분이 마모되어 벨트 교체 진행." [ref=e423]':
+            - generic [ref=e425]:
+              - generic [ref=e426]:
+                - paragraph [ref=e427]: EMPTY_CASE_TRS 밀림 현상 조치
+                - paragraph [ref=e428]:
+                  - text: 교세라 ·
+                  - 'link "교세라 포장기 #2" [ref=e429]'
+                - paragraph [ref=e430]: "S/N: KKY-18JAN008"
+              - generic [ref=e431]:
+                - generic [ref=e432]: 종료
+                - generic [ref=e433]: 2026-03-14
+            - paragraph [ref=e434]: 1. EMPTY_CASE_TRS 밀림 현상으로 케이스 픽업 위치 틀어짐. 2. 벨트 부분이 마모되어 벨트 교체 진행.
+          - 'button "2죠 툴 앞쪽을 3죠로 교체 요청 한국야금 · 한국야금 프레스 15t-2 (Dor,EP15) S/N: WPRS1N7002 종료 2026-03-14 1. 페스토 2죠 그립툴을 3죠 툴로 교체 요청 2. 앞쪽 회전부분만 교체 진행으로 작업 가능성 파악중 - 툴 종류감지 / 분진 / 에어 관로 등" [ref=e435]':
+            - generic [ref=e437]:
+              - generic [ref=e438]:
+                - paragraph [ref=e439]: 2죠 툴 앞쪽을 3죠로 교체 요청
+                - paragraph [ref=e440]:
+                  - text: 한국야금 ·
+                  - link "한국야금 프레스 15t-2 (Dor,EP15)" [ref=e441]
+                - paragraph [ref=e442]: "S/N: WPRS1N7002"
+              - generic [ref=e443]:
+                - generic [ref=e444]: 종료
+                - generic [ref=e445]: 2026-03-14
+            - paragraph [ref=e446]: 1. 페스토 2죠 그립툴을 3죠 툴로 교체 요청 2. 앞쪽 회전부분만 교체 진행으로 작업 가능성 파악중 - 툴 종류감지 / 분진 / 에어 관로 등
+          - 'button "X2축 로봇 케리지 흔들림으로 적재 이상 한국야금 · 한국야금 프레스 #25-2 S/N: JYKKO-19JUN106 종료 2026-03-14 1. NC 16t-4호기로 이설된 핸들러 이며, 케리지 마모 2. 로봇 교체 필요 - 해당 장비용 스페어 보유 / 문제시 바로 조치" [ref=e447]':
+            - generic [ref=e449]:
+              - generic [ref=e450]:
+                - paragraph [ref=e451]: X2축 로봇 케리지 흔들림으로 적재 이상
+                - paragraph [ref=e452]:
+                  - text: 한국야금 ·
+                  - 'link "한국야금 프레스 #25-2" [ref=e453]'
+                - paragraph [ref=e454]: "S/N: JYKKO-19JUN106"
+              - generic [ref=e455]:
+                - generic [ref=e456]: 종료
+                - generic [ref=e457]: 2026-03-14
+            - paragraph [ref=e458]: 1. NC 16t-4호기로 이설된 핸들러 이며, 케리지 마모 2. 로봇 교체 필요 - 해당 장비용 스페어 보유 / 문제시 바로 조치
+          - 'button "플렛폼이 튀어 나온 상태에서 EL 업다운을하면 EL 레일 및 플레폼 1개 파손 한국야금 · 한국야금 프레스 #20-4 종료 2026-03-14 1. 플렛폼이 튀어 나온 상태에서 EL 업다운을하면 EL 레일 및 플레폼 1개 파손 2. 엘리베이터 측면 레일의 경우 일체형 가공이라 양쪽면 신규 제작 파손된 플레폼 제작 3. 교체 진행 예정" [ref=e459]':
+            - generic [ref=e461]:
+              - generic [ref=e462]:
+                - paragraph [ref=e463]: 플렛폼이 튀어 나온 상태에서 EL 업다운을하면 EL 레일 및 플레폼 1개 파손
+                - paragraph [ref=e464]:
+                  - text: 한국야금 ·
+                  - 'link "한국야금 프레스 #20-4" [ref=e465]'
+              - generic [ref=e466]:
+                - generic [ref=e467]: 종료
+                - generic [ref=e468]: 2026-03-14
+            - paragraph [ref=e469]: 1. 플렛폼이 튀어 나온 상태에서 EL 업다운을하면 EL 레일 및 플레폼 1개 파손 2. 엘리베이터 측면 레일의 경우 일체형 가공이라 양쪽면 신규 제작 파손된 플레폼 제작 3. 교체 진행 예정
+          - 'button "X2축 로봇 흔들림 발생 한국야금 · 한국야금 프레스 #6-1 S/N: JKKKO-17MAY064 종료 2026-03-14 1. X2축 로봇 흔들림 발생 2. 장시간 사용으로 볼스트류 마모로 예상됨. 3. 교체 진행 LCP070-RT-400L-20-H" [ref=e470]':
+            - generic [ref=e472]:
+              - generic [ref=e473]:
+                - paragraph [ref=e474]: X2축 로봇 흔들림 발생
+                - paragraph [ref=e475]:
+                  - text: 한국야금 ·
+                  - 'link "한국야금 프레스 #6-1" [ref=e476]'
+                - paragraph [ref=e477]: "S/N: JKKKO-17MAY064"
+              - generic [ref=e478]:
+                - generic [ref=e479]: 종료
+                - generic [ref=e480]: 2026-03-14
+            - paragraph [ref=e481]: 1. X2축 로봇 흔들림 발생 2. 장시간 사용으로 볼스트류 마모로 예상됨. 3. 교체 진행 LCP070-RT-400L-20-H
+          - 'button "Z축 흔들림으로 작은 제품 픽업 실패 한국야금 · 한국야금 PVD #1 S/N: KKO-17FEB001(6) 종료 2026-03-14 1. 파렛트에서 제품 실패가 발생함 Z축 흔들림 발생 2. 연삭 가루에 의해 LM가이스 마모로 발생 3. LM 가이드 교체(3/9)" [ref=e482]':
+            - generic [ref=e484]:
+              - generic [ref=e485]:
+                - paragraph [ref=e486]: Z축 흔들림으로 작은 제품 픽업 실패
+                - paragraph [ref=e487]:
+                  - text: 한국야금 ·
+                  - 'link "한국야금 PVD #1" [ref=e488]'
+                - paragraph [ref=e489]: "S/N: KKO-17FEB001(6)"
+              - generic [ref=e490]:
+                - generic [ref=e491]: 종료
+                - generic [ref=e492]: 2026-03-14
+            - paragraph [ref=e493]: 1. 파렛트에서 제품 실패가 발생함 Z축 흔들림 발생 2. 연삭 가루에 의해 LM가이스 마모로 발생 3. LM 가이드 교체(3/9)
+          - 'button "케이씽 실패 및 누름 장치 기능 안됨 YG1 · YG1 포장기 #4 (#22-5) S/N: WPAK1Q1001 종료 2026-03-14 1. 커버를 씌울때 완전히 씌워지지 않는 경우가 발생 2. 스테이지의 고정 볼트가 노브로 되어 있어 손으로 잠그는 상테에서, 일정 시간 사용시 진동으로 풀리면서 위치가 틀어짐 -- 커버 조립 안됨 (마이크로 미터 사용으로 높이 조절시 제대로 조정이 안되어 있고 노브로만 조여 있음) 높이 조절후 씌우는데는 문제 없어 졌지만, 상부 누름 장치의 완충이 안되어 원복이 안되는 상태에서 누르다보다 씌워지지 않는 상태 그대로 발생 3. 누름 장치 조정하여 수리 - 이후 개선하여 교체 필요함." [ref=e494]':
+            - generic [ref=e496]:
+              - generic [ref=e497]:
+                - paragraph [ref=e498]: 케이씽 실패 및 누름 장치 기능 안됨
+                - paragraph [ref=e499]:
+                  - text: YG1 ·
+                  - 'link "YG1 포장기 #4 (#22-5)" [ref=e500]'
+                - paragraph [ref=e501]: "S/N: WPAK1Q1001"
+              - generic [ref=e502]:
+                - generic [ref=e503]: 종료
+                - generic [ref=e504]: 2026-03-14
+            - paragraph [ref=e505]: 1. 커버를 씌울때 완전히 씌워지지 않는 경우가 발생 2. 스테이지의 고정 볼트가 노브로 되어 있어 손으로 잠그는 상테에서, 일정 시간 사용시 진동으로 풀리면서 위치가 틀어짐 -- 커버 조립 안됨 (마이크로 미터 사용으로 높이 조절시 제대로 조정이 안되어 있고 노브로만 조여 있음) 높이 조절후 씌우는데는 문제 없어 졌지만, 상부 누름 장치의 완충이 안되어 원복이 안되는 상태에서 누르다보다 씌워지지 않는 상태 그대로 발생 3. 누름 장치 조정하여 수리 - 이후 개선하여 교체 필요함.
+          - 'button "빈 소형 케이스 공급시 틀어짐으로 끼임 발생 YG1 · YG1 포장기 #4 (#22-5) S/N: WPAK1Q1001 종료 2026-03-11 1. 매거진에서 빈 소형 케이스 공급후 푸서로봇으로 밀때 틀어짐으로 끼임 발생 2. FD1에서 발생/ FD2에서도 밀다가 못 미는 현상 발생 3. 현장 확인시 각 위치가 1미리 정도 위치 변화가 있고 , 공급시 Z축 높이도 소형의 경우 걸림이 있음. Z축 높이를 2.5에서 조금 높여 2.8로 셋팅 4. 중형 케이스 Z축 높이는 1에서 0.5로 변경 5. 각 매거진 위치 및 FD1,FD2위치 값 수정 6. FD 2의 경우 케이스 얼라인 실린더가 틀어져 클램프가 안되어 분행 수 재조립 진행 우레탄 스토퍼가 볼트가 덜 조립되어 밀착이 안되다보니 클램프를 더 못하고 있었음. 7. 전체 위치 수정하고, 재 조립후 모니터링" [ref=e506]':
+            - generic [ref=e508]:
+              - generic [ref=e509]:
+                - paragraph [ref=e510]: 빈 소형 케이스 공급시 틀어짐으로 끼임 발생
+                - paragraph [ref=e511]:
+                  - text: YG1 ·
+                  - 'link "YG1 포장기 #4 (#22-5)" [ref=e512]'
+                - paragraph [ref=e513]: "S/N: WPAK1Q1001"
+              - generic [ref=e514]:
+                - generic [ref=e515]: 종료
+                - generic [ref=e516]: 2026-03-11
+            - paragraph [ref=e517]: 1. 매거진에서 빈 소형 케이스 공급후 푸서로봇으로 밀때 틀어짐으로 끼임 발생 2. FD1에서 발생/ FD2에서도 밀다가 못 미는 현상 발생 3. 현장 확인시 각 위치가 1미리 정도 위치 변화가 있고 , 공급시 Z축 높이도 소형의 경우 걸림이 있음. Z축 높이를 2.5에서 조금 높여 2.8로 셋팅 4. 중형 케이스 Z축 높이는 1에서 0.5로 변경 5. 각 매거진 위치 및 FD1,FD2위치 값 수정 6. FD 2의 경우 케이스 얼라인 실린더가 틀어져 클램프가 안되어 분행 수 재조립 진행 우레탄 스토퍼가 볼트가 덜 조립되어 밀착이 안되다보니 클램프를 더 못하고 있었음. 7. 전체 위치 수정하고, 재 조립후 모니터링
+          - 'button "Kyocera 검사기 1 호기 신형 마그네틱 암이 계속 그립 상태에 있음 깐저우 교세라 · 중국 교세라 검사기 F1 #1 S/N: WHIM1MA001 종료 2026-03-12 새 마그네틱 암이 계속 그립 상태에 있음 내부 마그네틱이 탈락하여 발생" [ref=e518]':
+            - generic [ref=e520]:
+              - generic [ref=e521]:
+                - paragraph [ref=e522]: Kyocera 검사기 1 호기 신형 마그네틱 암이 계속 그립 상태에 있음
+                - paragraph [ref=e523]:
+                  - text: 깐저우 교세라 ·
+                  - 'link "중국 교세라 검사기 F1 #1" [ref=e524]'
+                - paragraph [ref=e525]: "S/N: WHIM1MA001"
+              - generic [ref=e526]:
+                - generic [ref=e527]: 종료
+                - generic [ref=e528]: 2026-03-12
+            - paragraph [ref=e529]: 새 마그네틱 암이 계속 그립 상태에 있음 내부 마그네틱이 탈락하여 발생
+          - 'button "청두 창장 프레스 로봇 2 호기 운전 시 모든 제품이 폐기함으로 배출됨 청두 창청 · 청두 창청 프레스 #2 (Ost,SP160) S/N: WPRS2OC002 종료 2026-03-12 동작 중 모든 제품이 폐기함으로 배출됨 관련 신호 릴레이 고장" [ref=e530]':
+            - generic [ref=e532]:
+              - generic [ref=e533]:
+                - paragraph [ref=e534]: 청두 창장 프레스 로봇 2 호기 운전 시 모든 제품이 폐기함으로 배출됨
+                - paragraph [ref=e535]:
+                  - text: 청두 창청 ·
+                  - 'link "청두 창청 프레스 #2 (Ost,SP160)" [ref=e536]'
+                - paragraph [ref=e537]: "S/N: WPRS2OC002"
+              - generic [ref=e538]:
+                - generic [ref=e539]: 종료
+                - generic [ref=e540]: 2026-03-12
+            - paragraph [ref=e541]: 동작 중 모든 제품이 폐기함으로 배출됨 관련 신호 릴레이 고장
+          - 'button "Kyocera 검사기 1 호기 신형 마그네틱 암 (대) 제품 픽업 시 제품 표면에 이물질 부착되어 과검 발생 깐저우 교세라 · 중국 교세라 검사기 F1 #1 S/N: WHIM1MA001 종료 2026-03-12 신형 마그네틱 암 (대) 이 제품을 그립할 때 제품 표면에 이물질이 부착되어 과검출이 발생함. 그립 각도 문제 의심됨." [ref=e542]':
+            - generic [ref=e544]:
+              - generic [ref=e545]:
+                - paragraph [ref=e546]: Kyocera 검사기 1 호기 신형 마그네틱 암 (대) 제품 픽업 시 제품 표면에 이물질 부착되어 과검 발생
+                - paragraph [ref=e547]:
+                  - text: 깐저우 교세라 ·
+                  - 'link "중국 교세라 검사기 F1 #1" [ref=e548]'
+                - paragraph [ref=e549]: "S/N: WHIM1MA001"
+              - generic [ref=e550]:
+                - generic [ref=e551]: 종료
+                - generic [ref=e552]: 2026-03-12
+            - paragraph [ref=e553]: 신형 마그네틱 암 (대) 이 제품을 그립할 때 제품 표면에 이물질이 부착되어 과검출이 발생함. 그립 각도 문제 의심됨.
+          - 'button "Kyocera 검사기 1 호기 종료 정지 시 가끔 발생: 팔레트와 상승 실린더 간섭 현상 깐저우 교세라 · 중국 교세라 검사기 F1 #1 S/N: WHIM1MA001 종료 2026-03-12 마무리 정지 시 간헐적으로 팔레트와 상승 실린더 간 간섭 현상 발생 pitch 이동 거리가 과도함" [ref=e554]':
+            - generic [ref=e556]:
+              - generic [ref=e557]:
+                - paragraph [ref=e558]: "Kyocera 검사기 1 호기 종료 정지 시 가끔 발생: 팔레트와 상승 실린더 간섭 현상"
+                - paragraph [ref=e559]:
+                  - text: 깐저우 교세라 ·
+                  - 'link "중국 교세라 검사기 F1 #1" [ref=e560]'
+                - paragraph [ref=e561]: "S/N: WHIM1MA001"
+              - generic [ref=e562]:
+                - generic [ref=e563]: 종료
+                - generic [ref=e564]: 2026-03-12
+            - paragraph [ref=e565]: 마무리 정지 시 간헐적으로 팔레트와 상승 실린더 간 간섭 현상 발생 pitch 이동 거리가 과도함
+          - 'button "해성 K 값 검사기 1 호기 L 형 제품 정상 측정 불가 깐조우 하이썽 · 하이썽 호닝형상검사기 #1 (#23-3) S/N: WHON1PA001 종료 2026-03-12 해당 제품의 알고리즘이 올바르게 적용되지 않았습니다." [ref=e566]':
+            - generic [ref=e568]:
+              - generic [ref=e569]:
+                - paragraph [ref=e570]: 해성 K 값 검사기 1 호기 L 형 제품 정상 측정 불가
+                - paragraph [ref=e571]:
+                  - text: 깐조우 하이썽 ·
+                  - 'link "하이썽 호닝형상검사기 #1 (#23-3)" [ref=e572]'
+                - paragraph [ref=e573]: "S/N: WHON1PA001"
+              - generic [ref=e574]:
+                - generic [ref=e575]: 종료
+                - generic [ref=e576]: 2026-03-12
+            - paragraph [ref=e577]: 해당 제품의 알고리즘이 올바르게 적용되지 않았습니다.
+          - 'button "화수이 CVD 3 호기 H2GR1 R 축 교체 후 원점 불일치 화루이 · 화루이 CVD #3 (선제작#1) S/N: CH-21MAY016 종료 2026-03-11 H2GR1 R 축 교체 후 원점이 맞지 않음" [ref=e578]':
+            - generic [ref=e580]:
+              - generic [ref=e581]:
+                - paragraph [ref=e582]: 화수이 CVD 3 호기 H2GR1 R 축 교체 후 원점 불일치
+                - paragraph [ref=e583]:
+                  - text: 화루이 ·
+                  - 'link "화루이 CVD #3 (선제작#1)" [ref=e584]'
+                - paragraph [ref=e585]: "S/N: CH-21MAY016"
+              - generic [ref=e586]:
+                - generic [ref=e587]: 종료
+                - generic [ref=e588]: 2026-03-11
+            - paragraph [ref=e589]: H2GR1 R 축 교체 후 원점이 맞지 않음
+          - 'button "옥크테이 프레스 로봇 6 번기 제품 전자저울에 적재 시 취출하지 않아 알람 발생 아크텍 · 깐저우 아크텍 프레스 #6 S/N: GDCA-21SEP167 종료 2026-03-11 제품을 전자저울에 놓았을 때 취출되지 않아 알람이 발생했습니다. 원인은 경로상 제품 위치를 측정할 때 Y 축 리미트 위치를 초과했기 때문입니다. 정상 동작을 위해서는 Y 축 위치가 131 을 초과해야 합니다." [ref=e590]':
+            - generic [ref=e592]:
+              - generic [ref=e593]:
+                - paragraph [ref=e594]: 옥크테이 프레스 로봇 6 번기 제품 전자저울에 적재 시 취출하지 않아 알람 발생
+                - paragraph [ref=e595]:
+                  - text: 아크텍 ·
+                  - 'link "깐저우 아크텍 프레스 #6" [ref=e596]'
+                - paragraph [ref=e597]: "S/N: GDCA-21SEP167"
+              - generic [ref=e598]:
+                - generic [ref=e599]: 종료
+                - generic [ref=e600]: 2026-03-11
+            - paragraph [ref=e601]: 제품을 전자저울에 놓았을 때 취출되지 않아 알람이 발생했습니다. 원인은 경로상 제품 위치를 측정할 때 Y 축 리미트 위치를 초과했기 때문입니다. 정상 동작을 위해서는 Y 축 위치가 131 을 초과해야 합니다.
+        - button "새 CS 등록" [ref=e603]:
+          - img [ref=e604]
+  - navigation [ref=e299]:
+    - link "업무 스케줄" [ref=e300] [cursor=pointer]:
+      - /url: /schedule
+      - img [ref=e302]
+      - generic [ref=e304]: 업무 스케줄
+    - link "CS 이력" [active] [ref=e305] [cursor=pointer]:
+      - /url: /cs
+      - img [ref=e307]
+      - generic [ref=e310]: CS 이력
+    - link "장비" [ref=e311] [cursor=pointer]:
+      - /url: /equipment
+      - img [ref=e313]
+      - generic [ref=e316]: 장비
+    - link "장비 셋업" [ref=e317] [cursor=pointer]:
+      - /url: /setup
+      - img [ref=e319]
+      - generic [ref=e321]: 장비 셋업
+    - link "재고" [ref=e322] [cursor=pointer]:
+      - /url: /inventory
+      - img [ref=e324]
+      - generic [ref=e328]: 재고
+    - link "더보기" [ref=e329] [cursor=pointer]:
+      - /url: /more
+      - img [ref=e331]
+      - generic [ref=e336]: 더보기

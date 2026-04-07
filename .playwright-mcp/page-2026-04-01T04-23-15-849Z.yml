@@ -1,0 +1,9 @@
+- generic [active] [ref=e1]:
+  - heading "WTA 파일 공유" [level=1] [ref=e3]
+  - generic [ref=e5] [cursor=pointer]:
+    - generic [ref=e6]: 📁
+    - paragraph [ref=e7]:
+      - text: 파일을 여기로 드래그하세요
+      - text: 또는 파일 선택
+  - generic [ref=e8]: © 2026 (주)윈텍오토메이션
+  - generic: ✅ 링크 복사 완료

@@ -1,0 +1,10 @@
+=== Confluence 문서 ===
+제목: ATC Tool 일정
+페이지ID: 9202892812
+주제: 장비물류
+경로: 기구설계팀 > 연구개발 > AutoToolChange 모듈개발 > ATC Tool 일정
+URL: https://iwta.atlassian.net/wiki/spaces/DGN/pages/9202892812
+이미지: 0개
+========================
+
+기구설계팀 > 연구개발 > AutoToolChange 모듈개발 > ATC Tool 일정 ATC Tool 일정 📄 페이지 ID: 9202892812 🔖 버전: 2 🖼️ 이미지: 0개 개발 구분 상세 개발 업무내용 일정 회전부 R축 모듈 개발 사양 정의 ~11/7 기술조사 (샤프트 에어 관로 가공성, 오링 윤활 코팅검토) 진행중 ~ 11/21 구조설계 배선처리 (슬립링) 회전부 모듈 테스트 제작 (제작 균일성, 조립성 검토) ~11/28 Master & Slave 툴별 표준 사양 검토 및 구조설계 ~12/14 에어 조인트부 확정 테스트 제작 및 사내테스트 12/20 ~12/30 🔗 원본: https://iwta.atlassian.net/wiki/spaces/DGN/pages/9202892812

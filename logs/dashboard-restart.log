@@ -1,0 +1,278 @@
+C:\Python314\Lib\site-packages\engineio\async_drivers\eventlet.py:1: EventletDeprecationWarning: 
+Eventlet is deprecated. It is currently being maintained in bugfix mode, and
+we strongly recommend against using it for new projects.
+
+If you are already using Eventlet, we recommend migrating to a different
+framework.  For more detail see
+https://eventlet.readthedocs.io/en/latest/asyncio/migration.html
+
+  from eventlet.green.threading import Event
+Exception in thread Thread-48 (_readerthread):
+Traceback (most recent call last):
+  File "C:\Python314\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Python314\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\subprocess.py", line 1613, in _readerthread
+    buffer.append(fh.read())
+                  ~~~~~~~^^
+UnicodeDecodeError: 'cp949' codec can't decode byte 0xed in position 9: illegal multibyte sequence
+Exception in thread Thread-50 (_readerthread):
+Traceback (most recent call last):
+  File "C:\Python314\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Python314\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\subprocess.py", line 1613, in _readerthread
+    buffer.append(fh.read())
+                  ~~~~~~~^^
+UnicodeDecodeError: 'cp949' codec can't decode byte 0xed in position 9: illegal multibyte sequence
+Exception in thread Thread-52 (_readerthread):
+Traceback (most recent call last):
+  File "C:\Python314\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Python314\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\subprocess.py", line 1613, in _readerthread
+    buffer.append(fh.read())
+                  ~~~~~~~^^
+UnicodeDecodeError: 'cp949' codec can't decode byte 0xed in position 9: illegal multibyte sequence
+Exception in thread Thread-54 (_readerthread):
+Traceback (most recent call last):
+  File "C:\Python314\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Python314\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\subprocess.py", line 1613, in _readerthread
+    buffer.append(fh.read())
+                  ~~~~~~~^^
+UnicodeDecodeError: 'cp949' codec can't decode byte 0xed in position 9: illegal multibyte sequence
+Exception in thread Thread-58 (_readerthread):
+Traceback (most recent call last):
+  File "C:\Python314\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Python314\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\subprocess.py", line 1613, in _readerthread
+    buffer.append(fh.read())
+                  ~~~~~~~^^
+UnicodeDecodeError: 'cp949' codec can't decode byte 0xed in position 9: illegal multibyte sequence
+Exception in thread Thread-62 (_readerthread):
+Traceback (most recent call last):
+  File "C:\Python314\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Python314\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\subprocess.py", line 1613, in _readerthread
+    buffer.append(fh.read())
+                  ~~~~~~~^^
+UnicodeDecodeError: 'cp949' codec can't decode byte 0xec in position 147: illegal multibyte sequence
+Exception in thread Thread-64 (_readerthread):
+Traceback (most recent call last):
+  File "C:\Python314\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Python314\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\subprocess.py", line 1613, in _readerthread
+    buffer.append(fh.read())
+                  ~~~~~~~^^
+UnicodeDecodeError: 'cp949' codec can't decode byte 0xec in position 147: illegal multibyte sequence
+server=agent.mes-wta.com//socket.io/ client=127.0.0.1:59851 socket shutdown error: [WinError 10038] 소켓 이외의 개체에 작업을 시도했습니다server=agent.mes-wta.com//socket.io/ client=127.0.0.1:59788 socket shutdown error: [WinError 10038] 소켓 이외의 개체에 작업을 시도했습니다Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\site-packages\eventlet\hubs\selects.py", line 59, in wait
+    listeners.get(fileno, hub.noop).cb(fileno)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\site-packages\eventlet\greenthread.py", line 272, in main
+    result = function(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\site-packages\eventlet\wsgi.py", line 911, in process_request
+    self.protocol(conn_state, self)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\site-packages\eventlet\wsgi.py", line 371, in __init__
+    self.finish()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\site-packages\eventlet\wsgi.py", line 830, in finish
+    BaseHTTPServer.BaseHTTPRequestHandler.finish(self)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\socketserver.py", line 819, in finish
+    self.wfile.close()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\socket.py", line 724, in write
+    return self._sock.send(b)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\site-packages\eventlet\greenio\base.py", line 383, in send
+    return self._send_loop(self.fd.send, data, flags)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\site-packages\eventlet\greenio\base.py", line 370, in _send_loop
+    return send_method(data, *args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionAbortedError: [WinError 10053] 현재 연결은 사용자의 호스트 시스템의 소프트웨어의 의해 중단되었습니다
+Removing descriptor: 1784
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\site-packages\eventlet\hubs\selects.py", line 59, in wait
+    listeners.get(fileno, hub.noop).cb(fileno)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\site-packages\eventlet\greenthread.py", line 272, in main
+    result = function(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\site-packages\eventlet\wsgi.py", line 911, in process_request
+    self.protocol(conn_state, self)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\site-packages\eventlet\wsgi.py", line 371, in __init__
+    self.finish()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\site-packages\eventlet\wsgi.py", line 830, in finish
+    BaseHTTPServer.BaseHTTPRequestHandler.finish(self)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\socketserver.py", line 819, in finish
+    self.wfile.close()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\socket.py", line 724, in write
+    return self._sock.send(b)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\site-packages\eventlet\greenio\base.py", line 383, in send
+    return self._send_loop(self.fd.send, data, flags)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\site-packages\eventlet\greenio\base.py", line 370, in _send_loop
+    return send_method(data, *args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionAbortedError: [WinError 10053] 현재 연결은 사용자의 호스트 시스템의 소프트웨어의 의해 중단되었습니다
+Removing descriptor: 1660
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\site-packages\eventlet\hubs\selects.py", line 59, in wait
+    listeners.get(fileno, hub.noop).cb(fileno)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\site-packages\eventlet\greenthread.py", line 272, in main
+    result = function(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\site-packages\eventlet\wsgi.py", line 911, in process_request
+    self.protocol(conn_state, self)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\site-packages\eventlet\wsgi.py", line 371, in __init__
+    self.finish()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\site-packages\eventlet\wsgi.py", line 830, in finish
+    BaseHTTPServer.BaseHTTPRequestHandler.finish(self)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\socketserver.py", line 819, in finish
+    self.wfile.close()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\socket.py", line 724, in write
+    return self._sock.send(b)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\site-packages\eventlet\greenio\base.py", line 383, in send
+    return self._send_loop(self.fd.send, data, flags)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\site-packages\eventlet\greenio\base.py", line 370, in _send_loop
+    return send_method(data, *args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionAbortedError: [WinError 10053] 현재 연결은 사용자의 호스트 시스템의 소프트웨어의 의해 중단되었습니다
+Removing descriptor: 1352
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\site-packages\eventlet\hubs\hub.py", line 471, in fire_timers
+    timer()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\site-packages\eventlet\hubs\timer.py", line 59, in __call__
+    cb(*args, **kw)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\site-packages\eventlet\greenthread.py", line 272, in main
+    result = function(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\site-packages\eventlet\wsgi.py", line 911, in process_request
+    self.protocol(conn_state, self)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\site-packages\eventlet\wsgi.py", line 371, in __init__
+    self.finish()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\site-packages\eventlet\wsgi.py", line 830, in finish
+    BaseHTTPServer.BaseHTTPRequestHandler.finish(self)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\socketserver.py", line 819, in finish
+    self.wfile.close()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\socket.py", line 724, in write
+    return self._sock.send(b)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\site-packages\eventlet\greenio\base.py", line 383, in send
+    return self._send_loop(self.fd.send, data, flags)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\site-packages\eventlet\greenio\base.py", line 370, in _send_loop
+    return send_method(data, *args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionAbortedError: [WinError 10053] 현재 연결은 사용자의 호스트 시스템의 소프트웨어의 의해 중단되었습니다
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\site-packages\eventlet\hubs\hub.py", line 471, in fire_timers
+    timer()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\site-packages\eventlet\hubs\timer.py", line 59, in __call__
+    cb(*args, **kw)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\site-packages\eventlet\greenthread.py", line 272, in main
+    result = function(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\site-packages\eventlet\wsgi.py", line 911, in process_request
+    self.protocol(conn_state, self)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\site-packages\eventlet\wsgi.py", line 371, in __init__
+    self.finish()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\site-packages\eventlet\wsgi.py", line 830, in finish
+    BaseHTTPServer.BaseHTTPRequestHandler.finish(self)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\socketserver.py", line 819, in finish
+    self.wfile.close()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\socket.py", line 724, in write
+    return self._sock.send(b)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\site-packages\eventlet\greenio\base.py", line 383, in send
+    return self._send_loop(self.fd.send, data, flags)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\site-packages\eventlet\greenio\base.py", line 370, in _send_loop
+    return send_method(data, *args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionAbortedError: [WinError 10053] 현재 연결은 사용자의 호스트 시스템의 소프트웨어의 의해 중단되었습니다
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\site-packages\eventlet\hubs\hub.py", line 471, in fire_timers
+    timer()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\site-packages\eventlet\hubs\timer.py", line 59, in __call__
+    cb(*args, **kw)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\site-packages\eventlet\greenthread.py", line 272, in main
+    result = function(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\site-packages\eventlet\wsgi.py", line 911, in process_request
+    self.protocol(conn_state, self)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\site-packages\eventlet\wsgi.py", line 371, in __init__
+    self.finish()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\site-packages\eventlet\wsgi.py", line 830, in finish
+    BaseHTTPServer.BaseHTTPRequestHandler.finish(self)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\socketserver.py", line 819, in finish
+    self.wfile.close()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\socket.py", line 724, in write
+    return self._sock.send(b)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\site-packages\eventlet\greenio\base.py", line 383, in send
+    return self._send_loop(self.fd.send, data, flags)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\site-packages\eventlet\greenio\base.py", line 370, in _send_loop
+    return send_method(data, *args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionAbortedError: [WinError 10053] 현재 연결은 사용자의 호스트 시스템의 소프트웨어의 의해 중단되었습니다
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\site-packages\eventlet\hubs\hub.py", line 471, in fire_timers
+    timer()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\site-packages\eventlet\hubs\timer.py", line 59, in __call__
+    cb(*args, **kw)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\site-packages\eventlet\greenthread.py", line 272, in main
+    result = function(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\site-packages\eventlet\wsgi.py", line 911, in process_request
+    self.protocol(conn_state, self)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\site-packages\eventlet\wsgi.py", line 371, in __init__
+    self.finish()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\site-packages\eventlet\wsgi.py", line 830, in finish
+    BaseHTTPServer.BaseHTTPRequestHandler.finish(self)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\socketserver.py", line 819, in finish
+    self.wfile.close()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\socket.py", line 724, in write
+    return self._sock.send(b)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\site-packages\eventlet\greenio\base.py", line 383, in send
+    return self._send_loop(self.fd.send, data, flags)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\site-packages\eventlet\greenio\base.py", line 370, in _send_loop
+    return send_method(data, *args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionAbortedError: [WinError 10053] 현재 연결은 사용자의 호스트 시스템의 소프트웨어의 의해 중단되었습니다
+Execution of job "_update_knowledge_cache (trigger: interval[0:01:00], next run at: 2026-04-07 07:33:23 KST)" skipped: maximum number of running instances reached (1)
+Execution of job "_update_knowledge_cache (trigger: interval[0:01:00], next run at: 2026-04-07 07:38:23 KST)" skipped: maximum number of running instances reached (1)
+Execution of job "_update_knowledge_cache (trigger: interval[0:01:00], next run at: 2026-04-07 13:35:26 KST)" skipped: maximum number of running instances reached (1)
+Execution of job "_update_knowledge_cache (trigger: interval[0:01:00], next run at: 2026-04-07 13:36:26 KST)" skipped: maximum number of running instances reached (1)
+Execution of job "_update_knowledge_cache (trigger: interval[0:01:00], next run at: 2026-04-07 13:37:26 KST)" skipped: maximum number of running instances reached (1)
+Execution of job "_update_knowledge_cache (trigger: interval[0:01:00], next run at: 2026-04-07 13:38:26 KST)" skipped: maximum number of running instances reached (1)

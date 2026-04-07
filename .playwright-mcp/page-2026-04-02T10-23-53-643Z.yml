@@ -1,0 +1,319 @@
+- generic [active] [ref=e1]:
+  - link "📥 PPT 다운로드" [ref=e3] [cursor=pointer]:
+    - /url: https://mes-wta.com/api/export/slide-cs-chatbot-pptx
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "사내 CS AI 챗봇 시스템 구축 보고" [level=1] [ref=e6]:
+        - text: 사내 CS AI 챗봇 시스템
+        - text: 구축 보고
+      - generic [ref=e7]: 데이터 학습 현황 및 운영 성과
+      - generic [ref=e8]:
+        - text: (주)윈텍오토메이션 생산관리팀 (AI운영팀)
+        - text: 2026년 4월 2일
+    - generic [ref=e9]:
+      - generic [ref=e11]: 시스템 개요
+      - generic [ref=e12]:
+        - generic [ref=e13]:
+          - heading "목적" [level=4] [ref=e14]
+          - paragraph [ref=e15]: CS 기술지원 응답 자동화 — 축적된 장비 노하우 데이터를 AI가 즉시 검색·응답
+          - paragraph [ref=e16]: 슬랙 기반 실시간 소통 — 직원이 평소 쓰는 채널에서 바로 질문, AI가 바로 답변
+        - paragraph [ref=e17]:
+          - strong [ref=e18]: 시스템 아키텍처
+        - generic [ref=e19]:
+          - generic [ref=e20]:
+            - generic [ref=e21]: 🏢 WTA 사내 서버 — 전체 처리 흐름
+            - generic [ref=e22]:
+              - generic [ref=e23]: 💬 슬랙 (Socket Mode)
+              - generic [ref=e24]: →
+              - generic [ref=e25]: 🤖 slack-bot (Haiku)
+              - generic [ref=e26]: →
+              - generic [ref=e27]: 🛠️ cs-agent (Opus)
+              - generic [ref=e28]: →
+              - generic [ref=e29]: 📊 RAG 벡터검색 (pgvector)
+              - generic [ref=e30]: →
+              - generic [ref=e31]: 💬 슬랙 자동 응답
+          - generic [ref=e32]:
+            - generic [ref=e33]: 📊 데이터 소스
+            - generic [ref=e34]: 🗄️ CS이력 265K 청크
+            - generic [ref=e35]: 📖 WTA매뉴얼 120K 청크
+            - generic [ref=e36]: 📋 기술문서 2K 청크
+            - generic [ref=e37]: ⚙️ 부품매뉴얼 633 청크
+        - generic [ref=e38]:
+          - generic [ref=e39]:
+            - heading "통신 방식" [level=4] [ref=e40]
+            - paragraph [ref=e41]: • P2P HTTP 직접통신 (중앙 서버 불필요)
+            - paragraph [ref=e42]: • 오프라인 메시지 큐 (자동 재전달)
+            - paragraph [ref=e43]: • 에이전트 간 MCP 채널 연동
+          - generic [ref=e44]:
+            - heading "멀티모델 파이프라인" [level=4] [ref=e45]
+            - paragraph [ref=e46]:
+              - text: •
+              - strong [ref=e47]: Haiku
+              - text: — 접수·라우팅 (빠른 분류)
+            - paragraph [ref=e48]:
+              - text: •
+              - strong [ref=e49]: Opus
+              - text: — 고급 기술응답 (이미지 분석)
+            - paragraph [ref=e50]:
+              - text: •
+              - strong [ref=e51]: Sonnet
+              - text: — 일반 업무처리
+      - generic [ref=e52]: "01"
+    - generic [ref=e53]:
+      - generic [ref=e55]: 데이터 학습 현황
+      - generic [ref=e56]:
+        - generic [ref=e57]:
+          - generic [ref=e58]:
+            - generic [ref=e59]: 9.3GB+
+            - generic [ref=e60]: 벡터 DB 총 용량
+          - generic [ref=e61]:
+            - generic [ref=e62]: 391,000+
+            - generic [ref=e63]: 총 벡터 청크 수
+          - generic [ref=e64]:
+            - generic [ref=e65]: 99.7%
+            - generic [ref=e66]: 임베딩 완료율
+        - table [ref=e67]:
+          - rowgroup [ref=e68]:
+            - row "데이터셋 청크 수 용량 상태" [ref=e69]:
+              - columnheader "데이터셋" [ref=e70]
+              - columnheader "청크 수" [ref=e71]
+              - columnheader "용량" [ref=e72]
+              - columnheader "상태" [ref=e73]
+            - row "CS이력 RAG 265,635 6.1GB 완료" [ref=e74]:
+              - cell "CS이력 RAG" [ref=e75]
+              - cell "265,635" [ref=e76]:
+                - strong [ref=e77]: 265,635
+              - cell "6.1GB" [ref=e78]
+              - cell "완료" [ref=e79]:
+                - generic [ref=e80]: 완료
+            - row "WTA 자체 매뉴얼 120,492 3.1GB 완료 (656/656)" [ref=e81]:
+              - cell "WTA 자체 매뉴얼" [ref=e82]
+              - cell "120,492" [ref=e83]:
+                - strong [ref=e84]: 120,492
+              - cell "3.1GB" [ref=e85]
+              - cell "완료 (656/656)" [ref=e86]:
+                - generic [ref=e87]: 완료 (656/656)
+            - row "기술문서 2,095 - 완료" [ref=e88]:
+              - cell "기술문서" [ref=e89]
+              - cell "2,095" [ref=e90]:
+                - strong [ref=e91]: 2,095
+              - cell "-" [ref=e92]
+              - cell "완료" [ref=e93]:
+                - generic [ref=e94]: 완료
+            - row "부품매뉴얼 (892개) 633 - 완료" [ref=e95]:
+              - cell "부품매뉴얼 (892개)" [ref=e96]
+              - cell "633" [ref=e97]:
+                - strong [ref=e98]: "633"
+              - cell "-" [ref=e99]
+              - cell "완료" [ref=e100]:
+                - generic [ref=e101]: 완료
+            - row "CS이력 원본 임베딩 3,318건 - 완료" [ref=e102]:
+              - cell "CS이력 원본 임베딩" [ref=e103]
+              - cell "3,318건" [ref=e104]:
+                - strong [ref=e105]: 3,318건
+              - cell "-" [ref=e106]
+              - cell "완료" [ref=e107]:
+                - generic [ref=e108]: 완료
+        - generic [ref=e109]:
+          - heading "임베딩 모델" [level=4] [ref=e110]
+          - paragraph [ref=e111]:
+            - text: •
+            - strong [ref=e112]: Qwen3-Embedding-8B
+            - text: (2000차원) — 한국어·영어·중국어 고성능 임베딩
+          - paragraph [ref=e113]: • PostgreSQL pgvector 기반 코사인 유사도 Top-K 검색 — 벡터 인덱스 최적화
+      - generic [ref=e114]: "02"
+    - generic [ref=e115]:
+      - generic [ref=e117]: 슬랙 채널별 AI 자동 라우팅
+      - generic [ref=e118]:
+        - paragraph [ref=e119]: 각 슬랙 채널에 전담 AI 에이전트를 배치하여, 직원 대화가 자동으로 업무 데이터로 전환됩니다.
+        - table [ref=e120]:
+          - rowgroup [ref=e121]:
+            - row "슬랙 채널 AI 에이전트 주요 기능" [ref=e122]:
+              - columnheader "슬랙 채널" [ref=e123]
+              - columnheader "AI 에이전트" [ref=e124]
+              - columnheader "주요 기능" [ref=e125]
+            - row "#cs 🛠️ cs-agent (Opus) CS 기술지원 — RAG 검색 + 이미지 분석" [ref=e126]:
+              - cell "#cs" [ref=e127]:
+                - strong [ref=e128]: "#cs"
+              - cell "🛠️ cs-agent (Opus)" [ref=e129]
+              - cell "CS 기술지원 — RAG 검색 + 이미지 분석" [ref=e130]
+            - row "#부적합 🔍 nc-manager LLM 자동판단 → MES 부적합 등록" [ref=e131]:
+              - cell "#부적합" [ref=e132]:
+                - strong [ref=e133]: "#부적합"
+              - cell "🔍 nc-manager" [ref=e134]
+              - cell "LLM 자동판단 → MES 부적합 등록" [ref=e135]
+            - row "#영업 💰 sales-agent 수주·견적·매출 조회 및 분석" [ref=e136]:
+              - cell "#영업" [ref=e137]:
+                - strong [ref=e138]: "#영업"
+              - cell "💰 sales-agent" [ref=e139]
+              - cell "수주·견적·매출 조회 및 분석" [ref=e140]
+            - row "#개발 💻 dev-agent MES 버그 리포트·기능 요청 처리" [ref=e141]:
+              - cell "#개발" [ref=e142]:
+                - strong [ref=e143]: "#개발"
+              - cell "💻 dev-agent" [ref=e144]
+              - cell "MES 버그 리포트·기능 요청 처리" [ref=e145]
+            - row "#docs 📝 docs-agent 문서 작성·번역·매뉴얼 검색" [ref=e146]:
+              - cell "#docs" [ref=e147]:
+                - strong [ref=e148]: "#docs"
+              - cell "📝 docs-agent" [ref=e149]
+              - cell "문서 작성·번역·매뉴얼 검색" [ref=e150]
+            - row "#제어-* ⚡ control-agent 개인별 제어설계 기술지원" [ref=e151]:
+              - cell "#제어-*" [ref=e152]:
+                - strong [ref=e153]: "#제어-*"
+              - cell "⚡ control-agent" [ref=e154]
+              - cell "개인별 제어설계 기술지원" [ref=e155]
+            - row "#admin 📋 admin-agent 인프라 모니터링·계정 관리" [ref=e156]:
+              - cell "#admin" [ref=e157]:
+                - strong [ref=e158]: "#admin"
+              - cell "📋 admin-agent" [ref=e159]
+              - cell "인프라 모니터링·계정 관리" [ref=e160]
+        - generic [ref=e161]:
+          - 'heading "핵심 비전: 직원 대화 → AI 자동 수집 → 정형 데이터 → MES DB" [level=4] [ref=e162]'
+          - paragraph [ref=e163]: • 직원이 슬랙에서 자연스럽게 대화하면, AI가 자동으로 구조화된 데이터를 생성
+          - paragraph [ref=e164]: • 부적합 보고서, CS 이력, 장비 이슈 등이 수동 입력 없이 MES에 축적
+          - paragraph [ref=e165]:
+            - text: •
+            - strong [ref=e166]: 현실 직원 → AI 데이터 채널 확보
+            - text: (전사 핵심 과제)
+      - generic [ref=e167]: "03"
+    - generic [ref=e168]:
+      - generic [ref=e170]: 운영 성과
+      - generic [ref=e171]:
+        - generic [ref=e172]:
+          - generic [ref=e173]:
+            - generic [ref=e174]: 154건
+            - generic [ref=e175]: CS 챗봇 세션
+          - generic [ref=e176]:
+            - generic [ref=e177]: 614건
+            - generic [ref=e178]: 처리 메시지
+          - generic [ref=e179]:
+            - generic [ref=e180]: 100%
+            - generic [ref=e181]: 긍정 피드백
+        - generic [ref=e182]:
+          - generic [ref=e183]:
+            - heading "Before (기존 방식)" [level=4] [ref=e184]
+            - list [ref=e185]:
+              - listitem [ref=e186]: "✗ CS 응답: 수 시간 ~ 1일 소요"
+              - listitem [ref=e187]: "✗ 매뉴얼 검색: 수십 개 PDF 수동 탐색"
+              - listitem [ref=e188]: "✗ 부적합 등록: 수동 양식 작성 (5~10분)"
+              - listitem [ref=e189]: "✗ 기술 노하우: 특정 담당자 의존"
+              - listitem [ref=e190]: "✗ 야간/주말: 응답 불가"
+          - generic [ref=e191]:
+            - heading "After (AI 챗봇)" [level=4] [ref=e192]
+            - list [ref=e193]:
+              - listitem [ref=e194]:
+                - text: "✓ CS 응답:"
+                - strong [ref=e195]: 수 분 이내
+                - text: 자동 응답
+              - listitem [ref=e196]:
+                - text: "✓ RAG 검색:"
+                - strong [ref=e197]: 39만 청크
+                - text: 즉시 탐색
+              - listitem [ref=e198]:
+                - text: "✓ 부적합: 슬랙 대화에서"
+                - strong [ref=e199]: 자동 파싱·등록
+              - listitem [ref=e200]: "✓ 노하우: AI에 축적, 누구나 접근 가능"
+              - listitem [ref=e201]:
+                - text: ✓
+                - strong [ref=e202]: 24/7
+                - text: ": 야간·주말 무인 응답"
+        - paragraph [ref=e203]: "운영 기간: 2025년 5월 ~ 2026년 3월 (11개월)"
+      - generic [ref=e204]: "04"
+    - generic [ref=e205]:
+      - generic [ref=e207]: 부적합 자동 등록 프로세스
+      - generic [ref=e208]:
+        - paragraph [ref=e209]: "슬랙 #부적합 채널에서 직원이 보고하면, AI가 자동으로 구조화하여 MES에 등록합니다."
+        - generic [ref=e210]:
+          - generic [ref=e211]:
+            - strong [ref=e212]: ① 직원 보고
+            - text: "#부적합에 자유 형식 작성"
+          - generic [ref=e213]: →
+          - generic [ref=e214]:
+            - strong [ref=e215]: ② AI 파싱
+            - text: 장비·모델·증상 자동 분류
+          - generic [ref=e216]: →
+          - generic [ref=e217]:
+            - strong [ref=e218]: ③ MES 등록
+            - text: 부적합 테이블 자동 INSERT
+          - generic [ref=e219]: →
+          - generic [ref=e220]:
+            - strong [ref=e221]: ④ 알림
+            - text: 담당자 자동 알림
+        - heading "도입 효과" [level=4] [ref=e223]
+        - table [ref=e224]:
+          - rowgroup [ref=e225]:
+            - row "항목 기존 AI 적용 후 개선율" [ref=e226]:
+              - columnheader "항목" [ref=e227]
+              - columnheader "기존" [ref=e228]
+              - columnheader "AI 적용 후" [ref=e229]
+              - columnheader "개선율" [ref=e230]
+            - row "등록 소요시간 5~10분 (수동) 30초 이내 (자동) 95% 단축" [ref=e231]:
+              - cell "등록 소요시간" [ref=e232]
+              - cell "5~10분 (수동)" [ref=e233]
+              - cell "30초 이내 (자동)" [ref=e234]:
+                - strong [ref=e235]: 30초 이내 (자동)
+              - cell "95% 단축" [ref=e236]
+            - row "누락률 20~30% 추정 0% (전수 등록) 100% 개선" [ref=e237]:
+              - cell "누락률" [ref=e238]
+              - cell "20~30% 추정" [ref=e239]
+              - cell "0% (전수 등록)" [ref=e240]:
+                - strong [ref=e241]: 0% (전수 등록)
+              - cell "100% 개선" [ref=e242]
+            - row "데이터 표준화 담당자별 상이 100% 표준 양식 완전 표준화" [ref=e243]:
+              - cell "데이터 표준화" [ref=e244]
+              - cell "담당자별 상이" [ref=e245]
+              - cell "100% 표준 양식" [ref=e246]:
+                - strong [ref=e247]: 100% 표준 양식
+              - cell "완전 표준화" [ref=e248]
+            - row "축적 데이터 684건 (부적합 보고서) 지속 자동 누적 실시간 축적" [ref=e249]:
+              - cell "축적 데이터" [ref=e250]
+              - cell "684건 (부적합 보고서)" [ref=e251]
+              - cell "지속 자동 누적" [ref=e252]:
+                - strong [ref=e253]: 지속 자동 누적
+              - cell "실시간 축적" [ref=e254]
+      - generic [ref=e255]: "05"
+    - generic [ref=e256]:
+      - generic [ref=e258]: 향후 계획
+      - generic [ref=e260]:
+        - generic [ref=e261]:
+          - heading "멀티모델 파이프라인 고도화" [level=4] [ref=e262]
+          - paragraph [ref=e263]:
+            - text: •
+            - strong [ref=e264]: Haiku
+            - text: ": 접수·라우팅 (빠른 분류)"
+          - paragraph [ref=e265]:
+            - text: •
+            - strong [ref=e266]: Opus
+            - text: ": 이미지 분석 (장비 사진·도면)"
+          - paragraph [ref=e267]:
+            - text: •
+            - strong [ref=e268]: Sonnet
+            - text: ": 일반 기술응답"
+          - paragraph [ref=e269]: → 비용 최적화 + 품질 극대화
+        - generic [ref=e270]:
+          - heading "JSONL 축적 → 자가학습" [level=4] [ref=e271]
+          - paragraph [ref=e272]: • 모든 CS 세션을 JSONL 로그로 축적
+          - paragraph [ref=e273]: • 반복 패턴 자동 추출 → 스킬 생성
+          - paragraph [ref=e274]: • 시간이 갈수록 응답 정확도 향상
+          - paragraph [ref=e275]: → 운영할수록 똑똑해지는 시스템
+        - generic [ref=e276]:
+          - heading "다국어 CS 대응 강화" [level=4] [ref=e277]
+          - paragraph [ref=e278]: • 7개국 60+ 고객사 기술지원
+          - paragraph [ref=e279]: • 중국/일본/유럽 고객사 직접 응답
+          - paragraph [ref=e280]: • 매뉴얼 자동 번역 (한↔영↔중)
+          - paragraph [ref=e281]: → 해외 CS 대응시간 혁신적 단축
+        - generic [ref=e282]:
+          - heading "학습 데이터 완성도" [level=4] [ref=e283]
+          - paragraph [ref=e284]:
+            - text: "• 부품매뉴얼:"
+            - strong [ref=e285]: 892/892개 (100%)
+          - paragraph [ref=e286]:
+            - text: "• WTA매뉴얼:"
+            - strong [ref=e287]: 656/656파일 (99.7%)
+          - paragraph [ref=e288]:
+            - text: "• CS이력:"
+            - strong [ref=e289]: 3,318건
+            - text: 임베딩 완료
+          - paragraph [ref=e290]: → 핵심 데이터 학습 거의 완료
+      - generic [ref=e291]: "06"
+  - generic [ref=e293]: CONFIDENTIAL — (주)윈텍오토메이션 생산관리팀 (AI운영팀)

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>몰디노 프레스 프로젝트 현황 — #영업-일본</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: '맑은 고딕', 'Malgun Gothic', sans-serif; background: #f5f7fa; color: #333; padding: 40px 20px; }
+  .container { max-width: 800px; margin: 0 auto; }
+  h1 { font-size: 22px; color: #1a1a2e; margin-bottom: 4px; }
+  .subtitle { font-size: 13px; color: #888; margin-bottom: 28px; }
+  .card { background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); padding: 20px 24px; margin-bottom: 20px; }
+  .card h2 { font-size: 16px; color: #1a1a2e; margin-bottom: 12px; border-bottom: 2px solid #4472C4; padding-bottom: 8px; }
+  table { width: 100%; border-collapse: collapse; margin-bottom: 8px; }
+  th { background: #f8f9fb; text-align: left; padding: 8px 14px; font-size: 12px; color: #666; }
+  td { padding: 10px 14px; font-size: 13px; border-bottom: 1px solid #f0f0f0; }
+  .tag { display: inline-block; padding: 2px 10px; border-radius: 6px; font-size: 11px; font-weight: 600; }
+  .tag-warn { background: #FFF3E0; color: #E65100; }
+  .tag-late { background: #FFEBEE; color: #C62828; }
+  .tag-info { background: #E3F2FD; color: #1565C0; }
+  .chat-log { list-style: none; }
+  .chat-log li { padding: 10px 0; border-bottom: 1px solid #f0f0f0; font-size: 13px; line-height: 1.6; }
+  .chat-log li:last-child { border-bottom: none; }
+  .chat-user { font-weight: 700; color: #4472C4; }
+  .chat-ai { font-weight: 700; color: #2E7D32; }
+  .note { background: #FFF8E1; border-left: 4px solid #F57F17; padding: 12px 16px; border-radius: 0 8px 8px 0; font-size: 13px; margin-top: 12px; }
+  .footer { margin-top: 24px; text-align: center; font-size: 11px; color: #bbb; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <h1>몰디노 프레스 프로젝트 현황</h1>
+  <p class="subtitle">채널: #영업-일본 | 2026-04-03 17:30 KST | MAX 정리</p>
+
+  <!-- 프로젝트 현황 -->
+  <div class="card">
+    <h2>프로젝트 조회 결과</h2>
+    <table>
+      <tr><th>코드</th><th>프로젝트명</th><th>상태</th><th>납기</th></tr>
+      <tr>
+        <td>JPJMOHP0001</td>
+        <td>몰디노 핸들러 #1 (Kob, 20t, 환형)</td>
+        <td><span class="tag tag-warn">진행중</span></td>
+        <td><span class="tag tag-warn">2026-04-09 ⚠️</span></td>
+      </tr>
+      <tr>
+        <td>JPJMOHS20001</td>
+        <td>몰디노 PVD-L #1</td>
+        <td><span class="tag tag-warn">진행중</span></td>
+        <td><span class="tag tag-late">2026-03-19 (지연)</span></td>
+      </tr>
+    </table>
+    <div class="note">
+      JPJMOHP0001: 납기 04-09로 촉박 (D-6)<br>
+      JPJMOHS20001: 납기 03-19 이미 경과 — 지연 상태 확인 필요
+    </div>
+  </div>
+
+  <!-- 입고 현황 -->
+  <div class="card">
+    <h2>자재 입고 현황</h2>
+    <p style="font-size:14px; color:#666; padding: 12px 0;">
+      MES DB 내 자재 입고 데이터: <span class="tag tag-late">0건 (미등록)</span>
+    </p>
+    <div class="note">
+      입고 관리는 현재 ERP 또는 별도 시스템에서 운영 중으로 판단됩니다.<br>
+      구매팀 직접 확인이 필요합니다.
+    </div>
+  </div>
+
+  <!-- 대화 로그 -->
+  <div class="card">
+    <h2>대화 기록</h2>
+    <ul class="chat-log">
+      <li><span class="chat-user">조한종:</span> 몰디노 프레스 프로젝트 제작중인거 지금 입고진행현황 알려줘</li>
+      <li><span class="chat-ai">MAX:</span> 몰디노 관련 진행중 프로젝트 2건 확인.
+        <br>• JPJMOHP0001 — 핸들러 #1 (Kob, 20t, 환형) | 납기 2026-04-09
+        <br>• JPJMOHS20001 — PVD-L #1 | 납기 2026-03-19 (지연)
+        <br>MES DB에 자재 입고 데이터 미등록. ERP 또는 구매팀 확인 필요.</li>
+    </ul>
+  </div>
+
+  <!-- 후속 조치 -->
+  <div class="card">
+    <h2>후속 조치 필요</h2>
+    <table>
+      <tr><th>항목</th><th>담당</th><th>상태</th></tr>
+      <tr><td>JPJMOHP0001 입고 현황 확인</td><td>구매팀</td><td><span class="tag tag-info">확인 필요</span></td></tr>
+      <tr><td>JPJMOHS20001 납기 지연 사유 확인</td><td>프로젝트 담당자</td><td><span class="tag tag-late">지연</span></td></tr>
+      <tr><td>MES 자재 입고 API 구축</td><td>AI팀 (db-manager)</td><td><span class="tag tag-info">계획중</span></td></tr>
+    </table>
+  </div>
+
+  <div class="footer">WTA AI팀 (MAX) | 자동 생성 문서</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,219 @@
+
+============================================================
+[1/18] Starting: CBN (2 files)
+[1/18] OK CBN (12s)
+
+STDERR: :48:11 
+ó�� ���: 2�� ����
+[docling] 03:48:11 
+[1/2] Dain_Precision_cBN_User_Manual.docx
+[docling] 03:48:11   Skip (embedded): Dain_Precision_cBN_User_Manual.docx
+[docling] 03:48:11 
+[2/2] Maintenance.docx
+[docling] 03:48:11   Skip (parsed): Maintenance.docx
+[docling] 03:48:11 
+============================================================
+[docling] 03:48:11 �Ϸ�: 0�� ó��, 2�� ��ŵ, 0�� ����
+[docling] 03:48:11 �� ûũ: 0��
+[docling] 03:48:11 ============================================================
+
+
+============================================================
+[2/18] Starting: CVD (33 files)
+[2/18] OK CVD (13s)
+
+STDERR: 32/33] Zhuzhou_CVD_3_6_Outline_Manual.docx
+[docling] 03:48:23   Skip (parsed): Zhuzhou_CVD_3_6_Outline_Manual.docx
+[docling] 03:48:23 
+[33/33] Zhuzhou_DiamondCVD2UnitUser_Manual.pdf
+[docling] 03:48:23   Skip (parsed): Zhuzhou_DiamondCVD2UnitUser_Manual.pdf
+[docling] 03:48:23 
+============================================================
+[docling] 03:48:23 �Ϸ�: 0�� ó��, 29�� ��ŵ, 4�� ����
+[docling] 03:48:23 �� ûũ: 0��
+[docling] 03:48:23 ============================================================
+
+
+============================================================
+[3/18] Starting: Double_Side_Grinder (7 files)
+[3/18] OK Double_Side_Grinder (12s)
+
+STDERR: Korea_Tungsten_Double_Side_Grinder_Conveyor_Type_Maintenance.docx
+[docling] 03:48:35 
+[7/7] Korea_Tungsten_Double_Side_Grinder_Equipment_Outline_Manual.docx
+[docling] 03:48:35   Skip (parsed): Korea_Tungsten_Double_Side_Grinder_Equipment_Outline_Manual.docx
+[docling] 03:48:35 
+============================================================
+[docling] 03:48:35 �Ϸ�: 0�� ó��, 7�� ��ŵ, 0�� ����
+[docling] 03:48:35 �� ûũ: 0��
+[docling] 03:48:35 ============================================================
+
+
+============================================================
+[4/18] Starting: Fujisanki_Grinding_Handler (17 files)
+[4/18] OK Fujisanki_Grinding_Handler (12s)
+
+STDERR: tline_Manual.docx
+[docling] 03:48:47   Skip (embedded): YG-1_Fujisanki_Outline_Manual.docx
+[docling] 03:48:47 
+[17/17] YG1_Fujisanki_Grinder_Handler_Manual_ver1.4_1.pdf
+[docling] 03:48:47   Skip (embedded): YG1_Fujisanki_Grinder_Handler_Manual_ver1.4_1.pdf
+[docling] 03:48:47 
+============================================================
+[docling] 03:48:47 �Ϸ�: 0�� ó��, 16�� ��ŵ, 1�� ����
+[docling] 03:48:47 �� ûũ: 0��
+[docling] 03:48:47 ============================================================
+
+
+============================================================
+[5/18] Starting: Honing (26 files)
+[5/18] OK Honing (13s)
+
+STDERR:  (embedded): SW_Manual.pdf
+[docling] 03:49:00 
+[25/26] WBM_2th_Handler_20181126.pdf
+[docling] 03:49:00   Skip (embedded): WBM_2th_Handler_20181126.pdf
+[docling] 03:49:00 
+[26/26] WBM_Maintenance.docx
+[docling] 03:49:00   Skip (parsed): WBM_Maintenance.docx
+[docling] 03:49:00 
+============================================================
+[docling] 03:49:00 �Ϸ�: 0�� ó��, 26�� ��ŵ, 0�� ����
+[docling] 03:49:00 �� ûũ: 0��
+[docling] 03:49:00 ============================================================
+
+
+============================================================
+[6/18] Starting: Honing_Inspection (6 files)
+[6/18] OK Honing_Inspection (11s)
+
+STDERR: l.docx
+[docling] 03:49:11   Skip (parsed): Korea_Kyocera_Honing_ShapeInspection_Manual.docx
+[docling] 03:49:11 
+[6/6] Korea_Kyocera_Honing_ShapeInspection_Manual_PDF.pdf
+[docling] 03:49:11   Skip (parsed): Korea_Kyocera_Honing_ShapeInspection_Manual_PDF.pdf
+[docling] 03:49:11 
+============================================================
+[docling] 03:49:11 �Ϸ�: 0�� ó��, 6�� ��ŵ, 0�� ����
+[docling] 03:49:11 �� ûũ: 0��
+[docling] 03:49:11 ============================================================
+
+
+============================================================
+[7/18] Starting: Inspection (75 files)
+[7/18] OK Inspection (14s)
+
+STDERR: ] 03:49:25 
+[74/75] User_Manual_ver.6.1_F1_IOI2.0_ver_jp.docx
+[docling] 03:49:25   Skip (parsed): User_Manual_ver.6.1_F1_IOI2.0_ver_jp.docx
+[docling] 03:49:25 
+[75/75] ZCCCT_User_Manual_F10.pdf
+[docling] 03:49:25   Skip (parsed): ZCCCT_User_Manual_F10.pdf
+[docling] 03:49:25 
+============================================================
+[docling] 03:49:25 �Ϸ�: 0�� ó��, 64�� ��ŵ, 11�� ����
+[docling] 03:49:25 �� ûũ: 0��
+[docling] 03:49:25 ============================================================
+
+
+============================================================
+[8/18] Starting: Labeling (8 files)
+[8/18] OK Labeling (11s)
+
+STDERR: ling] 03:49:36 
+[7/8] Maintenance_Kyocera_250813.docx
+[docling] 03:49:36   Skip (parsed): Maintenance_Kyocera_250813.docx
+[docling] 03:49:36 
+[8/8] press_handler_HP3_Manual_EN_PPW.docx
+[docling] 03:49:36   Skip (parsed): press_handler_HP3_Manual_EN_PPW.docx
+[docling] 03:49:36 
+============================================================
+[docling] 03:49:36 �Ϸ�: 0�� ó��, 8�� ��ŵ, 0�� ����
+[docling] 03:49:36 �� ûũ: 0��
+[docling] 03:49:36 ============================================================
+
+
+============================================================
+[9/18] Starting: Laser_Marking (7 files)
+[9/18] OK Laser_Marking (10s)
+
+STDERR: rking_1_Kyocera_Maintenance.docx
+[docling] 03:49:46   Skip (parsed): Laser_Marking_1_Kyocera_Maintenance.docx
+[docling] 03:49:46 
+[7/7] LaserMarking_Equipment_Outline_Manual.docx
+[docling] 03:49:46   Skip (parsed): LaserMarking_Equipment_Outline_Manual.docx
+[docling] 03:49:46 
+============================================================
+[docling] 03:49:46 �Ϸ�: 0�� ó��, 7�� ��ŵ, 0�� ����
+[docling] 03:49:46 �� ûũ: 0��
+[docling] 03:49:46 ============================================================
+
+
+============================================================
+[10/18] Starting: Macoho (3 files)
+[10/18] OK Macoho (11s)
+
+STDERR: andler_Operator_Manual_181126.pdf
+[docling] 03:49:57 
+[2/3] Maintenance.docx
+[docling] 03:49:57   Skip (embedded): Maintenance.docx
+[docling] 03:49:57 
+[3/3] RH-F_Instruction_Manual-KR.pdf
+[docling] 03:49:57   Skip (embedded): RH-F_Instruction_Manual-KR.pdf
+[docling] 03:49:57 
+============================================================
+[docling] 03:49:57 �Ϸ�: 0�� ó��, 3�� ��ŵ, 0�� ����
+[docling] 03:49:57 �� ûũ: 0��
+[docling] 03:49:57 ============================================================
+
+
+============================================================
+[11/18] Starting: Mask_Auto (12 files)
+[11/18] OK Mask_Auto (11s)
+
+STDERR: nder_Manual_20220316_Photo_Revised.docx
+[docling] 03:50:07   Skip (parsed): Stahli_Grinder_Manual_20220316_Photo_Revised.docx
+[docling] 03:50:07 
+[12/12] Stahli_Grinder_Manual_220318.docx
+[docling] 03:50:07   Skip (parsed): Stahli_Grinder_Manual_220318.docx
+[docling] 03:50:07 
+============================================================
+[docling] 03:50:07 �Ϸ�: 0�� ó��, 9�� ��ŵ, 3�� ����
+[docling] 03:50:07 �� ûũ: 0��
+[docling] 03:50:07 ============================================================
+
+
+============================================================
+[12/18] Starting: PVD (83 files)
+[12/18] OK PVD (11s)
+
+STDERR: g_PVD_Manual_Chinese.pdf
+[docling] 03:50:18   Skip (embedded): Weikai_Loading_PVD_Manual_Chinese.pdf
+[docling] 03:50:18 
+[83/83] WT1732_Korea_Tungsten_PVD_Handler_Manual.pdf
+[docling] 03:50:18   Skip (embedded): WT1732_Korea_Tungsten_PVD_Handler_Manual.pdf
+[docling] 03:50:18 
+============================================================
+[docling] 03:50:18 �Ϸ�: 0�� ó��, 83�� ��ŵ, 0�� ����
+[docling] 03:50:18 �� ûũ: 0��
+[docling] 03:50:18 ============================================================
+
+
+============================================================
+[13/18] Starting: Packaging (48 files)
+[13/18] OK Packaging (1558s)
+
+STDERR: PackagingUser_Manual3_4Unit.pdf
+[docling] 04:16:16   Skip (embedded): Zhuzhou_DiamondPackagingUser_Manual3_4Unit.pdf
+[docling] 04:16:16 
+[48/48] zhuzhou_okePackagingUser_Manual.pdf
+[docling] 04:16:16   Skip (embedded): zhuzhou_okePackagingUser_Manual.pdf
+[docling] 04:16:16 
+============================================================
+[docling] 04:16:16 �Ϸ�: 5�� ó��, 41�� ��ŵ, 2�� ����
+[docling] 04:16:16 �� ûũ: 763��
+[docling] 04:16:16 ============================================================
+
+
+============================================================
+[14/18] Starting: Press (188 files)

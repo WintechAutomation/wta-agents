@@ -1,0 +1,1 @@
+[     816ms] [WARNING] <Router basename="/v2"> is not able to match the URL "/" because it does not start with the basename, so the <Router> won't render anything. @ https://agent.mes-wta.com/assets/index-BP0CWmOO.js:9

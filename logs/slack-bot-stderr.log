@@ -1,0 +1,86 @@
+[slack-bot] 02:22:35 봇 User ID: U0AP5B0F71C
+[slack-bot] 02:22:36 WTA 슬랙 봇 프로세스 시작 \u2014 PID 25028 \u2014 2026-04-06 02:22:36 KST
+[slack-bot] 02:22:36 WTA 슬랙 봇 시작 (P2P 직접 통신)...
+[slack-bot] 02:22:36 채널 캐시 갱신: 39개
+[slack-bot] 02:22:36 Socket Mode 연결 시작... (시도 #1)
+[slack-bot] 02:22:36 P2P HTTP 서버 시작 (포트 5612)
+[slack-bot] 02:22:37 A new session has been established (session id: 8edac018-91d3-4b38-a2b2-045db794ab22)
+[slack-bot] 02:22:37 Bolt app is running!
+[slack-bot] 02:22:37 Starting to receive messages from a new connection (session id: 8edac018-91d3-4b38-a2b2-045db794ab22)
+[slack-bot] 02:23:34 [api/chat/stream] init: eb424e7f - 이게 뭐게
+[slack-bot] 02:23:34 [api/chat/stream] images 첨부: eb424e7f (1장)
+[slack-bot] 02:23:34 직접 전송 완료 → cs-agent:5602
+[slack-bot] 02:23:34 [api/chat/stream] webchat-req 전송 → cs-agent: eb424e7f
+[slack-bot] 02:23:40 [webchat-raw] eb424e7f chunk(248b, pipes=0): '**파나소닉 MINAS-A6B 알람코드표**는 서보 드라이브(모터 컨트롤러)에서 발생하는 오류 상태를 나타내는 코드입니다.\n\n**예시:**\n- **Err11.0** = 전원 부족 문제\n- **Err14.0** = 전류 과다 (모터 선 단락 등)\n- **Err21.0** = 엔코더 케이블 문제\n\n각 코드마다 **원인과 해결 방법**이 다르므로, 서보에 에러가 표시되면 코드를 확인하고 해당 처치 방법을 따르면 됩니다.\n\n다른 질문이 있으신가요?'
+[slack-bot] 02:23:40 [webchat-push] webchat-chunk eb424e7f (248b) OK
+[slack-bot] 02:24:05 [webchat-raw] eb424e7f chunk(172b, pipes=0): '\n\n사진을 확인했습니다.\n\n**제품: Samsung 990 PRO NVMe SSD (4TB)**\n- 고성능 NVMe M.2 SSD\n- PCIe 4.0 인터페이스\n- 저장용량: 4TB\n\n이것은 **컴퓨터 저장장치**로, 서보 알람코드표와는 무관한 제품입니다.\n\n장비 매뉴얼이나 기술 질문이 있으면 말씀해주세요.'
+[slack-bot] 02:24:05 [webchat-push] webchat-chunk eb424e7f (172b) OK
+[slack-bot] 02:24:10 [webchat-push] webchat-done eb424e7f (0b) OK
+[slack-bot] 02:24:10 [api/chat/stream] 완료: eb424e7f
+[slack-bot] 02:24:51 [api/chat/stream] init: 60716014 - (이미지 분석)
+[slack-bot] 02:24:51 [api/chat/stream] images 첨부: 60716014 (1장)
+[slack-bot] 02:24:51 직접 전송 완료 → cs-agent:5602
+[slack-bot] 02:24:51 [api/chat/stream] webchat-req 전송 → cs-agent: 60716014
+[slack-bot] 02:24:58 [webchat-raw] 60716014 chunk(132b, pipes=0): '이미지를 첨부해주시면 분석해드립니다.\n\n**이미지 첨부 방법:**\n1. 채팅창에서 사진/이미지 선택\n2. 질문과 함께 전송\n\n예: "이거 뭐야?" + 이미지 업로드\n\n기술 장비, 오류 화면, 부품 사진 등 무엇이든 분석 가능합니다. \U0001f5bc\ufe0f'
+[slack-bot] 02:24:58 [webchat-push] webchat-chunk 60716014 (132b) OK
+[slack-bot] 02:25:23 [api/chat/stream] init: 87f49f5e - test
+[slack-bot] 02:25:23 직접 전송 완료 → cs-agent:5602
+[slack-bot] 02:25:23 [api/chat/stream] webchat-req 전송 → cs-agent: 87f49f5e
+[slack-bot] 02:25:24 [webchat-raw] 60716014 chunk(283b, pipes=0): '**이미지 분석 결과:**\n\n**부품 유형:** 에어 실린더 / 그리퍼 / 흡착 유닛\n\n**구성 요소:**\n- 금속 마운팅 베이스 (좌측)\n- 흰색 에어 실린더 (우측 중앙)\n- 제어 튜브 (검은색/흰색 호스)\n- 상단 액추에이터 (모터 또는 펌프 장치)\n\n**용도:** 자동화 장비의 부품 이송, 파지, 흡착 기능\n\n**더 구체적인 정보를 위해:**\n1. 부품에 인쇄된 브랜드/모델명 알려주기\n2. 사용하는 장비 이름\n3. 구체적인 문제나 질문\n\n알려주시면 더 상세한 기술 정보를 제공해드릴 수 있습니다.'
+[slack-bot] 02:25:24 [webchat-push] webchat-chunk 60716014 (283b) OK
+[slack-bot] 02:25:30 [webchat-raw] 87f49f5e chunk(77b, pipes=0): '안녕하세요! \U0001f4ac\n\nCS 챗봇입니다.\n- 장비 매뉴얼 검색\n- 에러코드 조회\n- 기술 질문 응답\n- 이미지 분석\n\n무엇을 도와드릴까요? \U0001f6e0\ufe0f'
+[slack-bot] 02:25:30 [webchat-push] webchat-chunk 87f49f5e (77b) OK
+[slack-bot] 02:25:37 [webchat-push] webchat-done 60716014 (0b) OK
+[slack-bot] 02:25:37 [api/chat/stream] 완료: 60716014
+[slack-bot] 02:25:39 [webchat-push] webchat-done 87f49f5e (0b) OK
+[slack-bot] 02:25:39 [api/chat/stream] 프록시 에러 87f49f5e: [WinError 10053] 현재 연결은 사용자의 호스트 시스템의 소프트웨어의 의해 중단되었습니다
+[slack-bot] 02:26:02 [api/chat/stream] init: e4e12aef - test
+[slack-bot] 02:26:02 직접 전송 완료 → cs-agent:5602
+[slack-bot] 02:26:02 [api/chat/stream] webchat-req 전송 → cs-agent: e4e12aef
+[slack-bot] 02:26:07 [api/chat/stream] init: 5ae3dbd8 - (이미지 분석)
+[slack-bot] 02:26:07 [api/chat/stream] images 첨부: 5ae3dbd8 (1장)
+[slack-bot] 02:26:07 직접 전송 완료 → cs-agent:5602
+[slack-bot] 02:26:07 [api/chat/stream] webchat-req 전송 → cs-agent: 5ae3dbd8
+[slack-bot] 02:26:08 [webchat-raw] e4e12aef chunk(42b, pipes=0): '안녕하세요! CS 챗봇입니다. 장비 관련 질문이 있으시면 말씀해주세요. \U0001f6e0\ufe0f'
+[slack-bot] 02:26:08 [webchat-push] webchat-chunk e4e12aef (42b) OK
+[slack-bot] 02:26:13 [webchat-push] webchat-done e4e12aef (0b) OK
+[slack-bot] 02:26:13 [api/chat/stream] 완료: e4e12aef
+[slack-bot] 02:26:21 [api/chat/stream] init: ec576ab0 - test
+[slack-bot] 02:26:21 직접 전송 완료 → cs-agent:5602
+[slack-bot] 02:26:21 [api/chat/stream] webchat-req 전송 → cs-agent: ec576ab0
+[slack-bot] 02:26:37 [webchat-raw] 5ae3dbd8 chunk(445b, pipes=0): '**이미지 분석 결과:**\n\n**제품 유형:** 산업용 전기 제어 캐비넷 (Control Panel)\n\n**주요 구성:**\n- **제어 부품:**\n  - PLC (Programmable Logic Controller) 또는 마이크로컨트롤러\n  - 릴레이 모듈 (다중 채널)\n  - 온도 제어기/써모스탯\n  - 전력 분배 유닛\n  \n- **신호 표시:**\n  - 상태 표시등 (빨간색 LED)\n  - 제어 스위치\n  \n- **배선:**\n  - 빨간색/검은색 통신/전원 케이블\n  - 노란색/검정 줄무늬 배선 덕트 (접지/정렬용)\n\n**용도:** \n- 공정 자동화, 생산 장비 제어\n- 모터, 솔레노이드, 센서 제어\n- 온도/압력/속도 모니터링\n\n**더 구체적인 분석을 위해:**\n- 캐비넷에 붙은 제품명/모델 알려주기'
+[slack-bot] 02:26:37 [webchat-push] webchat-chunk 5ae3dbd8 (445b) OK
+[slack-bot] 02:26:40 [webchat-raw] ec576ab0 chunk(41b, pipes=0): '안녕하세요! CS 챗봇입니다. 장비 기술 질문이 있으면 말씀해주세요. \U0001f6e0\ufe0f'
+[slack-bot] 02:26:40 [webchat-push] webchat-chunk ec576ab0 (41b) OK
+[slack-bot] 02:26:40 [api/chat/stream] 프록시 에러 ec576ab0: [WinError 10053] 현재 연결은 사용자의 호스트 시스템의 소프트웨어의 의해 중단되었습니다
+[slack-bot] 02:26:47 [api/chat/stream] init: 856c29d4 - test
+[slack-bot] 02:26:47 [api/chat/stream] images 첨부: 856c29d4 (1장)
+[slack-bot] 02:26:47 직접 전송 완료 → cs-agent:5602
+[slack-bot] 02:26:47 [api/chat/stream] webchat-req 전송 → cs-agent: 856c29d4
+[slack-bot] 02:26:52 [webchat-push] webchat-done 5ae3dbd8 (0b) OK
+[slack-bot] 02:26:52 [api/chat/stream] 완료: 5ae3dbd8
+[slack-bot] 02:26:58 [webchat-push] webchat-done ec576ab0 (0b) OK
+[slack-bot] 02:27:07 [api/chat/stream] 프록시 에러 856c29d4: [WinError 10053] 현재 연결은 사용자의 호스트 시스템의 소프트웨어의 의해 중단되었습니다
+[slack-bot] 02:27:25 [api/chat/stream] init: 48f57143 - (이미지 분석)
+[slack-bot] 02:27:25 [api/chat/stream] images 첨부: 48f57143 (1장)
+[slack-bot] 02:27:25 직접 전송 완료 → cs-agent:5602
+[slack-bot] 02:27:25 [api/chat/stream] webchat-req 전송 → cs-agent: 48f57143
+[slack-bot] 02:28:07 [api/chat/stream] init: 713beb42 - 한글 질문 테스트입니다
+[slack-bot] 02:28:07 [api/chat/stream] images 첨부: 713beb42 (1장)
+[slack-bot] 02:28:07 직접 전송 완료 → cs-agent:5602
+[slack-bot] 02:28:07 [api/chat/stream] webchat-req 전송 → cs-agent: 713beb42
+[slack-bot] 02:28:27 [api/chat/stream] 프록시 에러 713beb42: [WinError 10053] 현재 연결은 사용자의 호스트 시스템의 소프트웨어의 의해 중단되었습니다
+[slack-bot] 02:28:34 [api/chat/stream] init: 697a6153 - 첨부된 이미지에 무엇이 보이나요? 간단히 답변해주세요.
+[slack-bot] 02:28:34 [api/chat/stream] images 첨부: 697a6153 (1장)
+[slack-bot] 02:28:34 직접 전송 완료 → cs-agent:5602
+[slack-bot] 02:28:34 [api/chat/stream] webchat-req 전송 → cs-agent: 697a6153
+[slack-bot] 02:29:25 [api/chat/stream] 완료: 48f57143
+[slack-bot] 02:30:17 [api/chat/stream] init: 1a7c92a5 - 안녕
+[slack-bot] 02:30:17 직접 전송 완료 → cs-agent:5602
+[slack-bot] 02:30:17 [api/chat/stream] webchat-req 전송 → cs-agent: 1a7c92a5
+[slack-bot] 02:30:34 [api/chat/stream] 완료: 697a6153
+[slack-bot] 02:31:17 [api/chat/stream] 프록시 에러 1a7c92a5: [WinError 10053] 현재 연결은 사용자의 호스트 시스템의 소프트웨어의 의해 중단되었습니다
+[slack-bot] 02:33:21 [api/chat/stream] init: 7c84de3c - 에러네 ?
+[slack-bot] 02:33:21 직접 전송 완료 → cs-agent:5602
+[slack-bot] 02:33:21 [api/chat/stream] webchat-req 전송 → cs-agent: 7c84de3c
+[slack-bot] 02:35:21 [api/chat/stream] 완료: 7c84de3c

@@ -1,0 +1,4 @@
+[     511ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-CjKrEBQ_.js:11
+[  121643ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-CjKrEBQ_.js:11
+[  199641ms] [ERROR] WebSocket connection to 'ws://localhost:5555/socket.io/?EIO=4&transport=websocket' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:5555/assets/index-CjKrEBQ_.js:11
+[  202498ms] [LOG] [socket] connected @ http://localhost:5555/assets/index-CjKrEBQ_.js:11

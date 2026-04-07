@@ -1,0 +1,135 @@
+액세스가 거부되었습니다.
+====================================
+[1/8] Starting: 1_robot (208 files)
+
+============================================================
+[1/8] Starting: 1_robot (223 files)
+
+============================================================
+[1/8] Starting: 1_robot (223 files)
+
+============================================================
+[1/8] Starting: 1_robot (223 files)
+
+============================================================
+[1/8] Starting: 1_robot (223 files)
+[1/8] OK 1_robot (13804s)
+
+STDERR: 21:10 [221/223] Yaskawa_Unknown_MaintenanceManual_KO.pdf
+[batch] 21:25:48   OK: Yaskawa_Unknown_MaintenanceManual_KO.pdf -- 498 chunks, 183 rendered, 201p
+[batch] 21:25:48 [222/223] Yaskawa_Unknown_Manual_KO.pdf
+[batch] 21:25:49   Skip (already parsed): Yaskawa_Unknown_Manual_KO.pdf
+[batch] 21:25:49 [223/223] Yaskawa_Unknown_WiringGuide_KO.pdf
+[batch] 21:47:28   OK: Yaskawa_Unknown_WiringGuide_KO.pdf -- 1587 chunks, 380 rendered, 424p
+[batch] 21:47:28 
+Done: 67 processed, 24860 chunks, 3 errors
+
+============================================================
+[2/8] Starting: 2_sensor (137 files)
+[1/8] OK 1_robot (13710s)
+
+STDERR: 21:09 [221/223] Yaskawa_Unknown_MaintenanceManual_KO.pdf
+[batch] 21:25:59   OK: Yaskawa_Unknown_MaintenanceManual_KO.pdf -- 498 chunks, 183 rendered, 201p
+[batch] 21:25:59 [222/223] Yaskawa_Unknown_Manual_KO.pdf
+[batch] 21:26:00   Skip (already parsed): Yaskawa_Unknown_Manual_KO.pdf
+[batch] 21:26:00 [223/223] Yaskawa_Unknown_WiringGuide_KO.pdf
+[batch] 21:47:36   OK: Yaskawa_Unknown_WiringGuide_KO.pdf -- 1587 chunks, 380 rendered, 424p
+[batch] 21:47:36 
+Done: 61 processed, 22788 chunks, 4 errors
+
+============================================================
+[2/8] Starting: 2_sensor (137 files)
+[1/8] OK 1_robot (13668s)
+
+STDERR: 21:11 [221/223] Yaskawa_Unknown_MaintenanceManual_KO.pdf
+[batch] 21:26:12   OK: Yaskawa_Unknown_MaintenanceManual_KO.pdf -- 498 chunks, 183 rendered, 201p
+[batch] 21:26:12 [222/223] Yaskawa_Unknown_Manual_KO.pdf
+[batch] 21:26:14   Skip (already parsed): Yaskawa_Unknown_Manual_KO.pdf
+[batch] 21:26:14 [223/223] Yaskawa_Unknown_WiringGuide_KO.pdf
+[batch] 21:47:45   OK: Yaskawa_Unknown_WiringGuide_KO.pdf -- 1587 chunks, 380 rendered, 424p
+[batch] 21:47:46 
+Done: 61 processed, 21955 chunks, 3 errors
+
+============================================================
+[2/8] Starting: 2_sensor (137 files)
+[2/8] OK 2_sensor (2988s)
+
+STDERR: df -- 5 chunks, 1 rendered, 1p
+[batch] 22:37:21 [135/137] Unknown_VJ1620HR_Manual_KO.pdf
+[batch] 22:37:21   Skip (already parsed): Unknown_VJ1620HR_Manual_KO.pdf
+[batch] 22:37:21 [136/137] Unknown_VJ7330_InstallGuide_KO.pdf
+[batch] 22:37:21   Skip (already parsed): Unknown_VJ7330_InstallGuide_KO.pdf
+[batch] 22:37:21 [137/137] Unknown_XENON-1900SD_Manual_KO.pdf
+[batch] 22:37:21   Skip (already parsed): Unknown_XENON-1900SD_Manual_KO.pdf
+[batch] 22:37:21 
+Done: 53 processed, 7579 chunks, 2 errors
+
+============================================================
+[3/8] Starting: 3_hmi (243 files)
+[2/8] OK 2_sensor (2985s)
+
+STDERR: own_VJ1620HR_CommManual_KO.pdf
+[batch] 22:37:26 [135/137] Unknown_VJ1620HR_Manual_KO.pdf
+[batch] 22:37:26   Skip (already parsed): Unknown_VJ1620HR_Manual_KO.pdf
+[batch] 22:37:26 [136/137] Unknown_VJ7330_InstallGuide_KO.pdf
+[batch] 22:37:26   Skip (already parsed): Unknown_VJ7330_InstallGuide_KO.pdf
+[batch] 22:37:26 [137/137] Unknown_XENON-1900SD_Manual_KO.pdf
+[batch] 22:37:26   Skip (already parsed): Unknown_XENON-1900SD_Manual_KO.pdf
+[batch] 22:37:26 
+Done: 49 processed, 7166 chunks, 0 errors
+
+============================================================
+[3/8] Starting: 3_hmi (243 files)
+[2/8] OK 2_sensor (2977s)
+
+STDERR: own_VJ1620HR_CommManual_KO.pdf
+[batch] 22:37:28 [135/137] Unknown_VJ1620HR_Manual_KO.pdf
+[batch] 22:37:28   Skip (already parsed): Unknown_VJ1620HR_Manual_KO.pdf
+[batch] 22:37:28 [136/137] Unknown_VJ7330_InstallGuide_KO.pdf
+[batch] 22:37:28   Skip (already parsed): Unknown_VJ7330_InstallGuide_KO.pdf
+[batch] 22:37:28 [137/137] Unknown_XENON-1900SD_Manual_KO.pdf
+[batch] 22:37:28   Skip (already parsed): Unknown_XENON-1900SD_Manual_KO.pdf
+[batch] 22:37:28 
+Done: 46 processed, 7114 chunks, 1 errors
+
+============================================================
+[3/8] Starting: 3_hmi (243 files)
+[3/8] ERROR(rc=1) 3_hmi (2000s)
+
+STDERR: al_KO_2.pdf -- 1274 chunks, 537 rendered, 546p
+[batch] 22:59:56 [97/243] Unknown_GT15_Manual_KO.pdf
+[batch] 23:00:09   Skip (already parsed): Unknown_GT15_Manual_KO.pdf
+[batch] 23:00:09 [98/243] Unknown_GT15_Manual_KO_2.pdf
+[batch] 23:00:09   Skip (already parsed): Unknown_GT15_Manual_KO_2.pdf
+[batch] 23:00:09 [99/243] Unknown_GT16_CommManual_KO.pdf
+[batch] 23:06:19   OK: Unknown_GT16_CommManual_KO.pdf -- 979 chunks, 324 rendered, 334p
+[batch] 23:06:19 [100/243] Unknown_GT16_CommManual_KO_2.pdf
+
+============================================================
+[4/8] Starting: 4_servo (411 files)
+[3/8] ERROR(rc=1) 3_hmi (1995s)
+
+STDERR: al_KO_2.pdf -- 1274 chunks, 537 rendered, 546p
+[batch] 23:00:07 [97/243] Unknown_GT15_Manual_KO.pdf
+[batch] 23:00:20   Skip (already parsed): Unknown_GT15_Manual_KO.pdf
+[batch] 23:00:20 [98/243] Unknown_GT15_Manual_KO_2.pdf
+[batch] 23:00:20   Skip (already parsed): Unknown_GT15_Manual_KO_2.pdf
+[batch] 23:00:20 [99/243] Unknown_GT16_CommManual_KO.pdf
+[batch] 23:06:27   OK: Unknown_GT16_CommManual_KO.pdf -- 979 chunks, 324 rendered, 334p
+[batch] 23:06:27 [100/243] Unknown_GT16_CommManual_KO_2.pdf
+
+============================================================
+[4/8] Starting: 4_servo (411 files)
+[3/8] ERROR(rc=1) 3_hmi (1994s)
+
+STDERR: al_KO_2.pdf -- 1274 chunks, 537 rendered, 546p
+[batch] 22:59:40 [97/243] Unknown_GT15_Manual_KO.pdf
+[batch] 22:59:52   Skip (already parsed): Unknown_GT15_Manual_KO.pdf
+[batch] 22:59:52 [98/243] Unknown_GT15_Manual_KO_2.pdf
+[batch] 22:59:52   Skip (already parsed): Unknown_GT15_Manual_KO_2.pdf
+[batch] 22:59:52 [99/243] Unknown_GT16_CommManual_KO.pdf
+[batch] 23:05:46   OK: Unknown_GT16_CommManual_KO.pdf -- 979 chunks, 324 rendered, 334p
+[batch] 23:05:46 [100/243] Unknown_GT16_CommManual_KO_2.pdf
+
+============================================================
+[4/8] Starting: 4_servo (411 files)
