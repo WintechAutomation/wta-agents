@@ -1,0 +1,14 @@
+{"time":"2026-04-08T16:22:08.4159707+09:00","level":"INFO","msg":"설정 로드 완료","port":8100,"env":"production"}
+{"time":"2026-04-08T16:22:08.500155+09:00","level":"INFO","msg":"PostgreSQL 연결 성공"}
+{"time":"2026-04-08T16:22:08.5083089+09:00","level":"INFO","msg":"ERP SQL Server 연결 성공"}
+{"time":"2026-04-08T16:22:08.5117723+09:00","level":"INFO","msg":"ERP 관리 기능 활성화"}
+{"time":"2026-04-08T16:22:08.5117723+09:00","level":"INFO","msg":"NAS 관리 기능 활성화","host":"192.168.1.6","port":"5001"}
+{"time":"2026-04-08T16:22:08.5125048+09:00","level":"INFO","msg":"SPA 정적 파일 서빙 활성화","dist":"..\\frontend\\dist"}
+{"time":"2026-04-08T16:22:08.5130209+09:00","level":"INFO","msg":"서버 시작","addr":":8100"}
+{"time":"2026-04-08T16:22:26.2422807+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"GET","path":"/health","latency":0,"ip":"::1"}
+{"time":"2026-04-08T16:22:57.093841+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"GET","path":"/api/erp/inventory/full-status","latency":4054001700,"ip":"::1","user_id":10,"username":"hjcho","query":"search=CKR20-145-1065L&fr_date=2020-01-01"}
+{"time":"2026-04-08T16:23:00.2358131+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"GET","path":"/api/erp/inventory/full-status","latency":3128652400,"ip":"::1","user_id":10,"username":"hjcho","query":"fr_date=2024-01-01"}
+{"time":"2026-04-08T16:23:37.0810542+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"GET","path":"/health","latency":0,"ip":"::1"}
+{"time":"2026-04-08T16:25:00.0796423+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"GET","path":"/wp-admin/install.php","latency":55703500,"ip":"2a06:98c0:3600::103","query":"step=1"}
+{"time":"2026-04-08T16:27:21.5056791+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"GET","path":"/wp-admin/install.php","latency":0,"ip":"2a06:98c0:3600::103","query":"step=1"}
+{"time":"2026-04-08T16:28:13.4911184+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"GET","path":"/health","latency":0,"ip":"::1"}
