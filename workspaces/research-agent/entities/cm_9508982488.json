@@ -1,0 +1,165 @@
+{
+  "page_id": "9508982488",
+  "title": "프레스측에 도킹시에 작업 위치 및 리미트, 안전 위치 파라메터 설정 방법",
+  "entities": [
+    {
+      "id": "eq_001",
+      "name": "프레스기",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "eq_002",
+      "name": "X1 축",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "eq_003",
+      "name": "X2 축",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "eq_004",
+      "name": "X 축",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "eq_005",
+      "name": "Y 축",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "eq_006",
+      "name": "Z 축",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "eq_007",
+      "name": "상 펀치",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "eq_008",
+      "name": "하 펀치",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "eq_009",
+      "name": "패스라인",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "eq_010",
+      "name": "도그바",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "eq_011",
+      "name": "X_safety 센서",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "comp_001",
+      "name": "백큠",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_002",
+      "name": "2jaw 툴",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_003",
+      "name": "청소툴",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_004",
+      "name": "금형",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_005",
+      "name": "헤드",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_006",
+      "name": "핸들러",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "proc_001",
+      "name": "작업 위치 설정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_002",
+      "name": "진입 대기 위치 설정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_003",
+      "name": "리미트 설정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_004",
+      "name": "청소툴 설정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_005",
+      "name": "안전 위치 파라메터 설정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_006",
+      "name": "X 축 조작",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_007",
+      "name": "센서 위치 변경",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "manual_001",
+      "name": "SafetyPosition.xml",
+      "type": "Manual",
+      "properties": {
+        "path": "\\WintechAutomation\\WMI\\Data\\Positions\\SafetyPosition.xml"
+      }
+    },
+    {
+      "id": "manual_002",
+      "name": "작업 위치 및 리미트, 안전 위치 파라메터 설정 매뉴얼",
+      "type": "Manual",
+      "properties": {}
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,128 @@
+{
+  "page_id": "9508982655",
+  "title": "프레스핸들러 현장 설치 상세매뉴얼",
+  "entities": [
+    {
+      "id": "e1",
+      "name": "프레스핸들러",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e2",
+      "name": "하펀치",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e3",
+      "name": "Z축",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e4",
+      "name": "도킹",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e5",
+      "name": "원점복귀",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e6",
+      "name": "툴교체",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e7",
+      "name": "플레이트 교체",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e8",
+      "name": "오토셋업",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e9",
+      "name": "WMI/DATA/POSITION/SAFETYPOSITION.xml",
+      "type": "Manual",
+      "properties": {}
+    },
+    {
+      "id": "e10",
+      "name": "Y값 에러",
+      "type": "Issue",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "e4",
+      "target": "e5",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e4",
+      "target": "e6",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e4",
+      "target": "e7",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "DOCUMENTS"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "HAS_ISSUE"
+    }
+  ]
+}
