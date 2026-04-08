@@ -135,3 +135,7 @@
 {"ts": "2026-04-08 18:35:43", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "POD-22024-4-PEI-LKCB cell 프레스는 특수 사양으로 프레스 계산 제외임 한금야금 프레스 cell 프로젝트로 확인되서 적용된 품목 확인좀 해줘"}
 {"ts": "2026-04-08 18:38:11", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "POD-22024-4-PEI-LKCB 이건 왜 제외 안해"}
 {"ts": "2026-04-08 18:38:23", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "88602이것도 ;;"}
+{"ts": "2026-04-08 18:41:46", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "내가 기존에 요구했던게 cell 프레스를 제외가 아닌 품목 예시로 어떤 품목이 cell이 포함되서 프레스가 중복 적용된걸 지적한거임 cell 프레스 관련 전부 프레스 제외가 아니라"}
+{"ts": "2026-04-08 18:45:05", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "MXYW81460113AL13-S1 이품목은 호닝형상검사기 이며 검사기와는 다름 검사기 중복 제외"}
+{"ts": "2026-04-08 18:47:09", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "EZI-EC-42M-A 품목이 cell 프레스 적용으로 프레스 범주로 들어가 있는경우 오히려 소결,포장기가 들어가야지.."}
+{"ts": "2026-04-08 18:49:21", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "bom 장비 유형으로 확인을 요청한적이 없는데 어째서 그렇게 진행된건지? 발주 이력으로 확인 요청하지 않음?"}
