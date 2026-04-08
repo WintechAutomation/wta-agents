@@ -1,0 +1,16 @@
+{
+  "page_id": "9508917278",
+  "title": "EZI SERVO II Plus-E 세팅 관련 매뉴얼",
+  "entities": [
+    {
+      "id": "manual_EZIServoIIPlusE",
+      "name": "EZI SERVO II Plus-E 세팅 매뉴얼",
+      "type": "Manual",
+      "properties": {
+        "equipment": "EZI SERVO II Plus-E",
+        "description": "EZI SERVO II Plus-E 세팅 매뉴얼 목차"
+      }
+    }
+  ],
+  "relations": []
+}

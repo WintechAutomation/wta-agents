@@ -226,8 +226,8 @@ export default function OverviewPage() {
     <div className="p-6 space-y-6">
       {/* 헤더 */}
       <div>
-        <h1 className="text-lg font-bold text-white" style={{ color: '#ffffff' }}>📊 시스템 개요</h1>
-        <p className="text-gray-400 text-sm mt-1">WTA AI 에이전트 시스템 현황 · 모니터 · 분석</p>
+        <h1 className="text-sm font-bold text-white" style={{ color: '#ffffff' }}>📊 시스템 개요</h1>
+        <p className="text-gray-500 text-xs mt-0.5">WTA AI 에이전트 시스템 현황 · 모니터 · 분석</p>
       </div>
 
       {/* ── KPI 카드 ── */}

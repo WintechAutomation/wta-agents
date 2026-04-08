@@ -175,8 +175,8 @@ export default function CronPage() {
       {/* 헤더 */}
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-lg font-bold text-white" style={{ color: '#ffffff' }}>⏰ 스케줄 관리</h1>
-          <p className="text-gray-400 text-sm mt-1">크론 작업 등록 · 실행 이력 · 다음 실행 시각</p>
+          <h1 className="text-sm font-bold text-white" style={{ color: '#ffffff' }}>⏰ 스케줄 관리</h1>
+          <p className="text-gray-500 text-xs mt-0.5">크론 작업 등록 · 실행 이력 · 다음 실행 시각</p>
         </div>
         <button
           onClick={() => { setShowForm(true); setForm(EMPTY_FORM) }}

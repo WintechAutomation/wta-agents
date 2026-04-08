@@ -1,0 +1,114 @@
+import json, sys
+sys.stdout.reconfigure(encoding='utf-8')
+
+batch34 = [
+  {
+    "page_id": "9509143446",
+    "title": "(국문) 미쯔비시 CVD #1 작업절차서",
+    "entities": [
+      {"id": "manual_MitsubishiCVD1", "name": "미쯔비시 CVD #1 작업절차서 (국문)", "type": "Manual", "properties": {
+        "equipment": "미쯔비시 CVD #1",
+        "language": "Korean",
+        "description": "장비 사용/설정/조작/관리 기능 상세 설명. 자동 작업 전 숙독 필요."
+      }}
+    ],
+    "relations": []
+  },
+  {
+    "page_id": "9509142529",
+    "title": "CVD Sorter",
+    "entities": [
+      {"id": "comp_CVDSorter", "name": "CVD Sorter", "type": "Component", "properties": {
+        "description": "CVD 소터 개요"
+      }}
+    ],
+    "relations": []
+  },
+  {
+    "page_id": "9508931934",
+    "title": "레이저 마킹기 CWAVE2.exe 매뉴얼",
+    "entities": [
+      {"id": "proc_CWAVE2Setup", "name": "레이저 마킹기 CWAVE2 설정", "type": "Process", "properties": {
+        "lang_setup": "File → System Parameter → Language 선택 후 OK → 프로그램 재부팅",
+        "text_setup": "아이콘 클릭 → 화면 클릭 TEXT 생성 → Font/Text Size 등 파라미터 설정",
+        "resize": "Object 선택 → 외곽 8개 점 드래그로 크기 조절 또는 Position/Size 직접 지정"
+      }}
+    ],
+    "relations": []
+  },
+  {
+    "page_id": "9508932746",
+    "title": "레이저 마킹기 CWAVE2.exe 매뉴얼 (한국어)",
+    "entities": [
+      {"id": "proc_CWAVE2SetupKO", "name": "레이저 마킹기 CWAVE2 설정 (한국어)", "type": "Process", "properties": {
+        "language": "Korean",
+        "lang_setup": "File → System Parameter → Language 선택 후 OK → 재부팅",
+        "text_setup": "아이콘 클릭 → TEXT 생성 → Font/Text Size 파라미터 설정",
+        "resize": "Object 외곽 8개 점 드래그 또는 Position/Size 지정"
+      }}
+    ],
+    "relations": []
+  },
+  {
+    "page_id": "9507147065",
+    "title": "수동 작업 - DIJET 포장기 #1",
+    "entities": [
+      {"id": "proc_ManualWorkDIJET1", "name": "수동 작업 - DIJET 포장기 #1", "type": "Process", "properties": {
+        "menu_path": "HMI 메인화면 → 적재설정 → 우측 하단 수동 작업 메뉴",
+        "pallet_supply": "팔레트 공급: 대기 중 팔레트를 작업 위치로 공급",
+        "pallet_extract": "팔레트 취출: 작업 위치 팔레트를 취출 위치로 이동",
+        "case_supply": "케이스 공급: Magazine에서 Feeder로 케이스 공급 (이송 유닛 Magazine → Feeder)"
+      }}
+    ],
+    "relations": []
+  },
+  {
+    "page_id": "9507146587",
+    "title": "자동 작업 - DIJET 포장기 #1",
+    "entities": [
+      {"id": "proc_AutoWorkDIJET1", "name": "자동 작업 - DIJET 포장기 #1", "type": "Process", "properties": {
+        "start": "메인화면 → 운전 시작 버튼",
+        "stop_finish": "마무리 정지: 제품공급 완료 후 정위치에서 정지",
+        "stop_immediate": "즉시 정지: 현재 위치에서 즉시 정지"
+      }}
+    ],
+    "relations": []
+  },
+  {
+    "page_id": "9507146776",
+    "title": "티칭 작업 - DIJET 포장기 #1",
+    "entities": [
+      {"id": "proc_TeachingWorkDIJET1", "name": "티칭 작업 - DIJET 포장기 #1", "type": "Process", "properties": {
+        "pallet_detect": "팔레트 제품 검출 (H1, H2)",
+        "steps": [
+          "조명 밝기 설정 (제품 선명하게)",
+          "생성 버튼 → 제품 모서리 시계/반시계 방향으로 클릭 → 완료",
+          "원점 버튼 → 방향 선택 → 등록",
+          "잉크젯 사용 시 원점 X방향을 제품 형상 꼭지점 방향으로 설정"
+        ]
+      }}
+    ],
+    "relations": []
+  },
+  {
+    "page_id": "9507145999",
+    "title": "자동 작업 준비 - 도구 준비 - DIJET 포장기 #1",
+    "entities": [
+      {"id": "proc_AutoWorkPrepDIJET1", "name": "자동 작업 준비 - 도구 준비 DIJET 포장기 #1", "type": "Process", "properties": {
+        "pallet_prep": "팔레트 공급부 도어 열기 → 작업 팔레트 공급 (최대 15층) → 도어 닫기",
+        "pallet_types": "10X10 / 5X10 / 6X6 팔레트",
+        "pallet_start": "오른쪽 밑부터 픽업 시작",
+        "case_prep": "Case Magazine 도어 열기 → 제품 크기에 맞는 케이스 공급"
+      }}
+    ],
+    "relations": []
+  }
+]
+
+prog_path = 'C:/MES/wta-agents/workspaces/db-manager'
+with open(f'{prog_path}/entities/batch34_combined.json', 'w', encoding='utf-8') as f:
+    json.dump(batch34, f, ensure_ascii=False, indent=2)
+for item in batch34:
+    with open(f'{prog_path}/entities/cm_{item["page_id"]}.json', 'w', encoding='utf-8') as f:
+        json.dump(item, f, ensure_ascii=False, indent=2)
+print(f'Saved {len(batch34)}')

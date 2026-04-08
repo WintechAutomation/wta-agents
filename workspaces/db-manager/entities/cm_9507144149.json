@@ -3,40 +3,14 @@
   "title": "Magazine",
   "entities": [
     {
-      "id": "comp_EmptyCaseTRS",
-      "name": "EMPTY_CASE_TRS 축",
-      "type": "Component",
-      "properties": {
-        "function": "각 매거진 중앙으로 이동"
-      }
-    },
-    {
-      "id": "comp_LowerCylinder",
-      "name": "하부 실린더",
-      "type": "Component",
-      "properties": {
-        "operation": "상승하여 중앙 정렬 확인"
-      }
-    },
-    {
-      "id": "proc_MagazinePositionSet",
-      "name": "매거진 위치 설정",
+      "id": "proc_PackingMachineMagazineSetup",
+      "name": "포장기 매거진 위치 설정",
       "type": "Process",
       "properties": {
-        "steps": "EMPTY_CASE_TRS를 매거진 중앙으로 이동 → 하부 실린더 상승으로 중앙 확인 → 값 입력 → 즉시 적용"
+        "description": "EMPTY_CASE_TRS 축을 각 매거진 중앙으로 이동 후 하부 실린더 상승하여 중앙 일치 확인",
+        "method": "값 입력 후 즉시 적용 버튼 클릭"
       }
     }
   ],
-  "relations": [
-    {
-      "source": "proc_MagazinePositionSet",
-      "target": "comp_EmptyCaseTRS",
-      "type": "INVOLVES_COMPONENT"
-    },
-    {
-      "source": "proc_MagazinePositionSet",
-      "target": "comp_LowerCylinder",
-      "type": "INVOLVES_COMPONENT"
-    }
-  ]
+  "relations": []
 }

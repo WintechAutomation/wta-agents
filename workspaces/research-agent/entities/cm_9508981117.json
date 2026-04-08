@@ -1,0 +1,139 @@
+{
+  "page_id": "9508981117",
+  "title": "#사내 셋업 간 문제 해결 방법",
+  "entities": [
+    {
+      "id": "eq_001",
+      "name": "WMX Controller",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "eq_002",
+      "name": "WMXServer",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "eq_003",
+      "name": "WMI",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "eq_004",
+      "name": "서버",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "comp_001",
+      "name": "Parameters.csv",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_002",
+      "name": "Input.csv",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_003",
+      "name": "Output.csv",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_004",
+      "name": "!주의사항.txt",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_005",
+      "name": "Config.csv",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_006",
+      "name": "Hardware.xlsx",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_007",
+      "name": "DeviceInfo.xml",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "proc_001",
+      "name": "런처 실행",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_002",
+      "name": "센서 확인 실패",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_003",
+      "name": "원점 복귀",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_004",
+      "name": "WMX Controller check",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_005",
+      "name": "EcConfigurator 실행",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "issue_001",
+      "name": "PLATE_013 오류",
+      "type": "Issue",
+      "properties": {}
+    },
+    {
+      "id": "issue_002",
+      "name": "후면 클램프 Unlock 오류",
+      "type": "Issue",
+      "properties": {}
+    },
+    {
+      "id": "issue_003",
+      "name": "SLAVE_COUNT_NOT_MATCH NG",
+      "type": "Issue",
+      "properties": {}
+    },
+    {
+      "id": "issue_004",
+      "name": "SafetyPosition Init Failed",
+      "type": "Issue",
+      "properties": {}
+    },
+    {
+      "id": "issue_005",
+      "name": "메인공압 공급 불가",
+      "type": "Issue",
+      "properties": {}
+    },
+    {
+      "id": "manual_001",
+      "name": "사내 셋업 간 문제 해결 방법",
+      "type": "Manual",
+      "properties": {}
+    }
+  ],
+  "relations": []
+}

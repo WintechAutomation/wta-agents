@@ -3,44 +3,15 @@
   "title": "I/O 체크",
   "entities": [
     {
-      "id": "proc_IOCheck",
-      "name": "I/O 체크",
+      "id": "proc_PackingMachineIOCheck",
+      "name": "포장기 I/O 체크 및 초기 설정",
       "type": "Process",
       "properties": {
-        "magazine_lock": "프로그램상 검은 패드 닫힘=잠금; 배선 설계상 열림=ON → Output.csv MAGAZINE 잠금 항목 Revers=TRUE 세팅",
-        "temp_sensor": "DeviceInfo.xml에 TEMPSENSOR Com포트 번호 확인; MOXA 커넥터 2-wire RS-485(스위치 1,2번 ON) 확인",
-        "light_check": "조명 컨트롤러를 수동(LOC)으로 전환 후 채널별 조명 일치 확인 (CH1=X2_CAM, CH2=X1 그리퍼, CH3=COUNT_X)",
-        "light_fix": "채널 불일치 시 조명 컨트롤 후면 핀을 올바른 채널로 변경"
-      }
-    },
-    {
-      "id": "comp_SignalOutputCSV",
-      "name": "Output.csv (Signal 폴더)",
-      "type": "Component",
-      "properties": {
-        "field": "MAGAZINE 잠금 Revers 플래그",
-        "path": "WMI/Data/Signal/Output.csv"
-      }
-    },
-    {
-      "id": "comp_DeviceInfoXml",
-      "name": "DeviceInfo.xml",
-      "type": "Component",
-      "properties": {
-        "field": "TEMPSENSOR Com포트 번호"
+        "magazine_lock": "검은 패드 닫힘=잠금 상태. Output.csv MAGAZINE 잠금 부분 Revers=TRUE 세팅 필요",
+        "device_info": "DeviceInfo.xml에서 TEMPSENSOR Com포트 확인, MOXA 2-wire RS-485(스위치 1,2번 ON)",
+        "light_check": "조명 컨트롤러 수동(LOC)으로 채널 확인 (CH1:X2_CAM, CH2:X1축 그리퍼, CH3:COUNT_X축)"
       }
     }
   ],
-  "relations": [
-    {
-      "source": "proc_IOCheck",
-      "target": "comp_SignalOutputCSV",
-      "type": "INVOLVES_COMPONENT"
-    },
-    {
-      "source": "proc_IOCheck",
-      "target": "comp_DeviceInfoXml",
-      "type": "INVOLVES_COMPONENT"
-    }
-  ]
+  "relations": []
 }

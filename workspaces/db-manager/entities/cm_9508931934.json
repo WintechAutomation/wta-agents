@@ -1,0 +1,17 @@
+{
+  "page_id": "9508931934",
+  "title": "레이저 마킹기 CWAVE2.exe 매뉴얼",
+  "entities": [
+    {
+      "id": "proc_CWAVE2Setup",
+      "name": "레이저 마킹기 CWAVE2 설정",
+      "type": "Process",
+      "properties": {
+        "lang_setup": "File → System Parameter → Language 선택 후 OK → 프로그램 재부팅",
+        "text_setup": "아이콘 클릭 → 화면 클릭 TEXT 생성 → Font/Text Size 등 파라미터 설정",
+        "resize": "Object 선택 → 외곽 8개 점 드래그로 크기 조절 또는 Position/Size 직접 지정"
+      }
+    }
+  ],
+  "relations": []
+}

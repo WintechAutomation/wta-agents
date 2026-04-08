@@ -92,8 +92,8 @@ export default function HybridSearchPage() {
     <div className="p-4 md:p-6 h-full flex flex-col gap-4 overflow-hidden">
       {/* 헤더 + 검색 */}
       <div className="flex-shrink-0">
-        <h1 className="text-xl font-bold text-white mb-1">하이브리드 검색 비교</h1>
-        <p className="text-sm text-gray-400 mb-3">
+        <h1 className="text-sm font-bold text-white mb-1">하이브리드 검색 비교</h1>
+        <p className="text-xs text-gray-500 mb-3">
           같은 질문, 같은 LLM — 검색 소스만 다르게 해서 답변 차이를 비교
         </p>
         <div className="flex gap-2">

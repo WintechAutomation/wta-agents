@@ -128,9 +128,9 @@ export default function AnalyticsPage() {
 
   return (
     <div className="p-6">
-      <div className="mb-6">
-        <h1 className="text-lg font-bold text-white">📈 분석</h1>
-        <p className="text-gray-400 text-sm mt-1">세션 볼륨 추이 · 도구 사용량 · 에이전트 활동</p>
+      <div className="mb-1">
+        <h1 className="text-sm font-bold text-white">📈 분석</h1>
+        <p className="text-gray-500 text-xs mt-0.5">세션 볼륨 추이 · 도구 사용량 · 에이전트 활동</p>
       </div>
 
       {/* 에이전트별 메시지 수 바 차트 */}

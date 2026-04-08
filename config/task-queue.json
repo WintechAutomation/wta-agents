@@ -1583,6 +1583,90 @@
       "updated_at": "2026-04-08 22:46:06",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-crafter-fda159",
+      "agent": "crafter",
+      "task": "부서장 피드백: 모든 페이지에서 제목 부분 높이가 너무 크다. 높이를 반절로 줄여줘.",
+      "message": "부서장 피드백: 모든 페이지에서 제목 부분 높이가 너무 크다. 높이를 반절로 줄여줘.\n\n- 페이지 타이틀 영역의 font-size, padding, margin 모두 절반으로 축소\n- 모든 페이지에 공통 적용 (Layout 레벨 또는 공통 헤더 컴포넌트가 있으면 거기서 수정)\n- 개별 페이지의 h1/제목 영역도 확인\n\n빌드 확인 후 보고.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 22:50:19",
+      "updated_at": "2026-04-08 22:50:19",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-crafter-ece9f5",
+      "agent": "crafter",
+      "task": "추가 피드백: 페이지 제목줄 위에 불필요한 여백도 없애줘. 제목 위 padding/margin 최소화.",
+      "message": "추가 피드백: 페이지 제목줄 위에 불필요한 여백도 없애줘. 제목 위 padding/margin 최소화.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 22:50:42",
+      "updated_at": "2026-04-08 22:50:42",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-crafter-4a8a27",
+      "agent": "crafter",
+      "task": "추가 피드백: 에이전트 오피스에서 작업 중 표시를 \"작업 중\" 텍스트 대신 시각적 애니메이션으로 변경해줘.",
+      "message": "추가 피드백: 에이전트 오피스에서 작업 중 표시를 \"작업 중\" 텍스트 대신 시각적 애니메이션으로 변경해줘.\n\n아이디어:\n- 에이전트 노드 주변에 회전하는 링/아크 애니메이션 (spinning arc)\n- 또는 노드 테두리가 점선으로 회전하는 효과 (rotating dashed border)\n- 또는 펄스(pulse) + 회전 조합\n\n관제센터 느낌에 맞게, 작업 중인 에이전트가 뭔가 돌아가고 있다는 걸 직관적으로 보여주는 방식으로.\n\n빌드 확인 후 보고.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 22:51:31",
+      "updated_at": "2026-04-08 22:51:31",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-crafter-270f6f",
+      "agent": "crafter",
+      "task": "추가 피드백: 에이전트 오피스 하단의 에이전트 상태 그리드(팀별 카드) 삭제해줘. 불필요하다고 함.",
+      "message": "추가 피드백: 에이전트 오피스 하단의 에이전트 상태 그리드(팀별 카드) 삭제해줘. 불필요하다고 함.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 22:52:00",
+      "updated_at": "2026-04-08 22:52:00",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-crafter-c815cd",
+      "agent": "crafter",
+      "task": "추가 수정: 에이전트 오피스 우측 패널을 오버레이/토글이 아니라 항상 고정으로 떠있는 형태로 변경. 레이아웃 우측에 고정 패널로 배치해줘.",
+      "message": "추가 수정: 에이전트 오피스 우측 패널을 오버레이/토글이 아니라 항상 고정으로 떠있는 형태로 변경. 레이아웃 우측에 고정 패널로 배치해줘.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 22:52:28",
+      "updated_at": "2026-04-08 22:52:28",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-crafter-173360",
+      "agent": "crafter",
+      "task": "추가: 대시보드 전체 폰트를 맑은 고딕으로 변경. 현재 system-ui/Segoe UI가 기본인데 굴림으로 보임.",
+      "message": "추가: 대시보드 전체 폰트를 맑은 고딕으로 변경. 현재 system-ui/Segoe UI가 기본인데 굴림으로 보임.\n\nindex.css의 :root font와 --sans 변수를:\nfont-family: '맑은 고딕', 'Malgun Gothic', -apple-system, sans-serif\n\n로 변경해줘. tailwind config에 fontFamily 설정이 있으면 거기도.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 22:53:53",
+      "updated_at": "2026-04-08 22:53:53",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-admin-agent-4ff2ba",
+      "agent": "admin-agent",
+      "task": "테스트 메일 발송 요청.",
+      "message": "테스트 메일 발송 요청. \n\n수신: hjcho@wta.kr\n발신: .env의 IMAP_USER 계정 (SMTP 설정 사용)\nSMTP: gw.wta.kr:465 (SSL)\n제목: [WTA AI] 테스트 메일\n본문: WTA AI팀 MAX에서 발송한 테스트 메일입니다. 정상 수신 확인 부탁드립니다. (발송시각: 2026-04-08 22:57 KST)\n\n.env에서 SMTP 관련 설정 읽어서 Python smtplib으로 발송해줘. 스크립트는 워크스페이스에 저장.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 22:57:42",
+      "updated_at": "2026-04-08 22:57:42",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }

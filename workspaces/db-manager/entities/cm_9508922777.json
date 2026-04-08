@@ -1,0 +1,21 @@
+{
+  "page_id": "9508922777",
+  "title": "원점 설정 매뉴얼 [Loading]",
+  "entities": [
+    {
+      "id": "proc_LoadingHomeSetup",
+      "name": "원점 설정 - Loading 축",
+      "type": "Process",
+      "properties": {
+        "steps": [
+          "WMXServer Motion Manager에서 X/CAMERA 축 Disable",
+          "두 축 모두 (-) 방향으로 끝까지 밀기",
+          "시스템 설정 → Hardware Org에서 해당 축 확인 버튼 → 즉시 적용",
+          "Z축을 Motion Manager에서 1% 속도로 천천히 상승 → Limit 지점까지",
+          "Hardware Org에서 Z축 확인 및 즉시 적용"
+        ]
+      }
+    }
+  ],
+  "relations": []
+}

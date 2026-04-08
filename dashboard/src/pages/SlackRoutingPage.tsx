@@ -157,8 +157,8 @@ export default function SlackRoutingPage() {
       {/* 헤더 */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
         <div>
-          <h1 className="text-xl font-bold text-white">슬랙 채널 라우팅 설정</h1>
-          <p className="text-sm text-gray-400 mt-1">채널별 에이전트 매핑 · 멘션 필수 여부 · 자동응답 설정</p>
+          <h1 className="text-sm font-bold text-white">슬랙 채널 라우팅 설정</h1>
+          <p className="text-xs text-gray-500 mt-0.5">채널별 에이전트 매핑 · 멘션 필수 여부 · 자동응답 설정</p>
         </div>
         <div className="flex gap-2">
           <button

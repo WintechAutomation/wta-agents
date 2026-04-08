@@ -182,7 +182,7 @@ export default function TaskQueuePage() {
       {/* 헤더 */}
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-lg font-bold text-white" style={{ color: '#ffffff' }}>📋 작업 큐</h1>
+          <h1 className="text-sm font-bold text-white" style={{ color: '#ffffff' }}>📋 작업 큐</h1>
           <p className="text-gray-400 text-[11px]">팀원별 지시 작업 현황 · 상태 관리</p>
         </div>
         <button

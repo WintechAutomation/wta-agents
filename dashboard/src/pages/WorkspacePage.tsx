@@ -335,8 +335,8 @@ export default function WorkspacePage() {
       {/* 헤더 */}
       <div className="p-4 border-b border-gray-800 flex-shrink-0 flex items-start justify-between">
         <div>
-          <h1 className="text-xl font-bold text-white" style={{ color: '#ffffff' }}>{'\uD83D\uDCC1'} 업무공간</h1>
-          <p className="text-gray-400 text-sm mt-1">
+          <h1 className="text-sm font-bold text-white" style={{ color: '#ffffff' }}>{'\uD83D\uDCC1'} 업무공간</h1>
+          <p className="text-gray-500 text-xs mt-0.5">
             문서 탐색기 — 폴더 클릭 시 하위 항목 로드
           </p>
         </div>

@@ -1,0 +1,17 @@
+{
+  "page_id": "9509146098",
+  "title": "#작업 위치 설정(F1 검사기)",
+  "entities": [
+    {
+      "id": "proc_F1InspectorWorkPosSetup",
+      "name": "작업 위치 설정 (F1 검사기)",
+      "type": "Process",
+      "properties": {
+        "purpose": "장비 자동 운전 시 각 동작의 기본 위치 설정",
+        "method": "해당 위치로 축 이동 → [READ] 버튼 → [SAVE] 버튼",
+        "note": "코드에서 사용 위치 확인 후 작업. 비슷한 장비 코드 복사 시 미사용 위치 포함될 수 있으므로 코드 확인 필수"
+      }
+    }
+  ],
+  "relations": []
+}

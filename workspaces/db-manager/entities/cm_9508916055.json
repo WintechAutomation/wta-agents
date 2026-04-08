@@ -1,0 +1,15 @@
+{
+  "page_id": "9508916055",
+  "title": "제어 CS 메뉴얼",
+  "entities": [
+    {
+      "id": "manual_ControlCS",
+      "name": "제어 CS 메뉴얼",
+      "type": "Manual",
+      "properties": {
+        "description": "제어 관련 CS 메뉴얼 목차"
+      }
+    }
+  ],
+  "relations": []
+}

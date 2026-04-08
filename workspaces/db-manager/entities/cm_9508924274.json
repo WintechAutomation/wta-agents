@@ -1,0 +1,15 @@
+{
+  "page_id": "9508924274",
+  "title": "작업위치 - [Loading 전용]",
+  "entities": [
+    {
+      "id": "comp_LoadingWorkPositions",
+      "name": "Loading 전용 작업 위치 파라미터",
+      "type": "Component",
+      "properties": {
+        "description": "Loading 전용 작업 위치 파라미터 설정"
+      }
+    }
+  ],
+  "relations": []
+}

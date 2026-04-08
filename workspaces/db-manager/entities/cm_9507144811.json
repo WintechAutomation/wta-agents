@@ -3,17 +3,17 @@
   "title": "Large Label",
   "entities": [
     {
-      "id": "proc_LargeLabelSetup",
-      "name": "Large Label 위치 설정",
+      "id": "proc_PackingMachineLargeLabelSetup",
+      "name": "포장기 대형 라벨(A라벨) 위치 설정",
       "type": "Process",
       "properties": {
-        "label_x": "I/O 라벨A 가이드 전진 ON 후 흡착부가 라벨 흰면 중앙 잡는 위치로 세팅 (프린터 충돌 주의)",
-        "label_z": "출력된 라벨이 스테이지에 붙지 않도록 적당히 누르지 않는 높이",
-        "label_y": "리미트 센서 감지 시 프린터 충돌 방지 위치로 리미트 센서 조정 (초록 LED)",
-        "label_t": "원점 제대로 잡으면 0",
-        "attach_x_y_t": "케이스 정가운데, 평행하게 붙는 위치 (ATTACH_Y: 라벨 노란라인이 케이스 측면에 붙는 위치)",
-        "attach_z": "롤러가 케이스 측면 끝까지 라벨 눌러 붙이는 위치",
-        "thick_label_offset": "두꺼운 라벨과 일반 라벨 간 차이 보정 Offset"
+        "label_x": "라벨A 가이드 전진 ON 후 흡착부가 라벨 흰면 중앙을 잡는 위치 (프린터 충돌 주의)",
+        "label_z": "라벨이 스테이지에 붙지 않을 높이",
+        "label_y": "리미트 센서 감지 주의 — 프린터 미충돌 위치로 센서 조정",
+        "label_t": "원점 정확히 설정 시 0",
+        "attach_xyz_t": "케이스 중앙 평행 부착 위치. ATTACH_Y는 라벨 노란 라인이 케이스 측면에 붙는 위치",
+        "attach_z": "롤러가 케이스 측면 끝까지 라벨을 눌러 붙일 위치",
+        "thick_label_offset": "두꺼운 라벨과 일반 라벨 간 차이 보정값"
       }
     }
   ],

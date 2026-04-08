@@ -3,17 +3,17 @@
   "title": "Small Label",
   "entities": [
     {
-      "id": "proc_SmallLabelSetup",
-      "name": "Small Label 위치 설정",
+      "id": "proc_PackingMachineSmallLabelSetup",
+      "name": "포장기 소형 라벨(B라벨) 위치 설정",
       "type": "Process",
       "properties": {
-        "printer": "B_LABEL (정면 기준 오른쪽 라벨 프린터)",
-        "label_x": "I/O output 라벨B 가이드 전진 후 LABEL_X를 라벨 흡착부 평행 위치로 조정",
+        "b_label": "정면 기준 오른쪽 라벨 프린터",
+        "label_x": "I/O output 라벨B 가이드 전진 후 흡착부와 평행한 위치",
         "label_y": "출력된 라벨 끝과 흡착부 끝이 평행하게 맞는 위치",
-        "label_z": "출력된 라벨이 스테이지에 붙지 않도록 설정",
-        "label_t": "R축 원점 정확하면 0",
-        "attach_t": "소형 라벨은 흡착 후 180도 회전 부착 → ATTACH_T = -180",
-        "thick_case_offset": "두꺼운 너비 라벨 사용 시 중심 센터 차이 Offset 설정"
+        "label_z": "라벨이 스테이지에 붙지 않을 높이",
+        "label_t": "원점 정확히 설정 시 0",
+        "attach_t": "소형 라벨 흡착 후 180도 회전 → -180으로 세팅",
+        "thick_case_offset": "두꺼운 케이스 사용 시 Z값 차이 보정"
       }
     }
   ],

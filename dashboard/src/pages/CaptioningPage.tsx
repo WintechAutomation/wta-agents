@@ -111,7 +111,7 @@ export default function CaptioningPage() {
     <div className="p-4 md:p-6 space-y-6 max-w-7xl mx-auto">
       {/* 헤더 */}
       <div className="flex items-center justify-between">
-        <h1 className="text-xl font-bold text-white flex items-center gap-2">
+        <h1 className="text-sm font-bold text-white flex items-center gap-2">
           <span className="text-2xl">📸</span>
           이미지 캡셔닝 모니터링
         </h1>

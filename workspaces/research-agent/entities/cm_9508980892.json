@@ -1,0 +1,181 @@
+{
+  "page_id": "9508980892",
+  "title": "#높이 측정 테스트 설정하기",
+  "entities": [
+    {
+      "id": "eq_001",
+      "name": "높이 측정 센서",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "eq_002",
+      "name": "레이저 툴",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "eq_003",
+      "name": "2Jaw/3Jaw 툴 그리퍼",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "comp_001",
+      "name": "카본판",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_002",
+      "name": "프레스 도킹 커버",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_003",
+      "name": "플레이트",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_004",
+      "name": "종이테이프",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "proc_001",
+      "name": "높이 측정 테스트 설정하기",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_002",
+      "name": "시스템 설정 변경",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_003",
+      "name": "레이저 툴 간 캘리브레이션",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_004",
+      "name": "높이 측정 위치 값 세팅",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_005",
+      "name": "XML 파일 수정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_006",
+      "name": "Change 버튼 클릭",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "issue_001",
+      "name": "로봇 충돌 위험",
+      "type": "Issue",
+      "properties": {}
+    },
+    {
+      "id": "manual_001",
+      "name": "HeightSensorPosition.xml",
+      "type": "Manual",
+      "properties": {
+        "path": "WintechAutomation\\WMI\\Data\\Positions\\HeightSensorPosition.xml"
+      }
+    },
+    {
+      "id": "manual_002",
+      "name": "SENSOR_TO_GRIPPER 설정 매뉴얼",
+      "type": "Manual",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "source": "proc_001",
+      "target": "proc_002",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "proc_001",
+      "target": "proc_003",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "proc_001",
+      "target": "proc_004",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "proc_001",
+      "target": "proc_005",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "proc_001",
+      "target": "proc_006",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "proc_002",
+      "target": "eq_001",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "proc_003",
+      "target": "eq_002",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "proc_003",
+      "target": "eq_003",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "proc_004",
+      "target": "comp_001",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "proc_004",
+      "target": "comp_003",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "proc_005",
+      "target": "manual_001",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "proc_006",
+      "target": "comp_001",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "proc_003",
+      "target": "issue_001",
+      "type": "HAS_ISSUE"
+    },
+    {
+      "source": "proc_003",
+      "target": "manual_002",
+      "type": "DOCUMENTS"
+    },
+    {
+      "source": "proc_001",
+      "target": "manual_001",
+      "type": "DOCUMENTS"
+    }
+  ]
+}

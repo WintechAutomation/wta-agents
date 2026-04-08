@@ -1,0 +1,16 @@
+{
+  "page_id": "9509145815",
+  "title": "사내 셋업 메뉴얼(F1 검사기)",
+  "entities": [
+    {
+      "id": "manual_F1InspectorSetup",
+      "name": "F1 검사기 사내 셋업 메뉴얼",
+      "type": "Manual",
+      "properties": {
+        "equipment": "F1 검사기",
+        "description": "사내 셋업 메뉴얼 목차"
+      }
+    }
+  ],
+  "relations": []
+}

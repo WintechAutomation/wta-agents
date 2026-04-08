@@ -167,11 +167,11 @@ export default function ManualBuilderPage() {
   return (
     <div className="p-6">
       {/* 헤더 */}
-      <div className="mb-6">
-        <h1 className="text-lg font-bold text-white flex items-center gap-2" style={{ color: '#ffffff' }}>
+      <div className="mb-1">
+        <h1 className="text-sm font-bold text-white flex items-center gap-2" style={{ color: '#ffffff' }}>
           <span>📖</span> 매뉴얼 빌더
         </h1>
-        <p className="text-sm text-gray-500 mt-1">
+        <p className="text-xs text-gray-500 mt-0.5">
           매뉴얼 PDF 업로드, 파싱, 벡터 임베딩, 검색 테스트
         </p>
       </div>

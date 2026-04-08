@@ -63,10 +63,10 @@ export default function SkillsPage() {
       {/* 헤더 */}
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-xl font-bold text-white flex items-center gap-2">
+          <h1 className="text-sm font-bold text-white flex items-center gap-2">
             🧠 AI 스킬 라이브러리
           </h1>
-          <p className="text-sm text-gray-400 mt-1">
+          <p className="text-xs text-gray-500 mt-0.5">
             전사 AI 에이전트가 사용하는 스킬 목록
           </p>
         </div>

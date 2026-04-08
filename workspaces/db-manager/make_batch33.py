@@ -1,0 +1,98 @@
+import json, sys
+sys.stdout.reconfigure(encoding='utf-8')
+
+batch33 = [
+  {
+    "page_id": "9508918057",
+    "title": "CCTV 영상 다운로드",
+    "entities": [
+      {"id": "proc_CCTVDownload", "name": "CCTV 영상 다운로드", "type": "Process", "properties": {
+        "description": "CCTV 영상 다운로드 절차"
+      }}
+    ],
+    "relations": []
+  },
+  {
+    "page_id": "9508916055",
+    "title": "제어 CS 메뉴얼",
+    "entities": [
+      {"id": "manual_ControlCS", "name": "제어 CS 메뉴얼", "type": "Manual", "properties": {
+        "description": "제어 관련 CS 메뉴얼 목차"
+      }}
+    ],
+    "relations": []
+  },
+  {
+    "page_id": "9509011467",
+    "title": "CSD5 메뉴얼",
+    "entities": [
+      {"id": "manual_CSD5", "name": "CSD5 서보드라이브 메뉴얼", "type": "Manual", "properties": {
+        "equipment": "CSD5 서보드라이브",
+        "description": "CSD5 메뉴얼 목차"
+      }}
+    ],
+    "relations": []
+  },
+  {
+    "page_id": "9365291054",
+    "title": "CS 이력 & Manual 홈",
+    "entities": [
+      {"id": "manual_CSManualHome", "name": "CS 이력 및 매뉴얼 홈페이지", "type": "Manual", "properties": {
+        "description": "CS 이력 및 매뉴얼 스페이스 홈"
+      }}
+    ],
+    "relations": []
+  },
+  {
+    "page_id": "9508983261",
+    "title": "측면 디버링 [CUSTOM] 사용 매뉴얼",
+    "entities": [
+      {"id": "manual_SideDeburringCustom", "name": "측면 디버링 CUSTOM 사용 매뉴얼", "type": "Manual", "properties": {
+        "description": "측면 디버링 커스텀 기능 사용 매뉴얼"
+      }}
+    ],
+    "relations": []
+  },
+  {
+    "page_id": "9509142722",
+    "title": "CVD 작업 위치 및 파일 세팅",
+    "entities": [
+      {"id": "comp_CVDWorkPositionSetup", "name": "CVD 작업 위치 및 파일 세팅", "type": "Component", "properties": {
+        "description": "CVD 장비 작업 위치 파라미터 및 파일 세팅"
+      }}
+    ],
+    "relations": []
+  },
+  {
+    "page_id": "9509142551",
+    "title": "CVD 원점 위치 세팅",
+    "entities": [
+      {"id": "proc_CVDHomeSetup", "name": "CVD 원점 위치 세팅", "type": "Process", "properties": {
+        "H1X_H2X": "리니어 축 → 센서로 Homing. HomeShiftDistance와 HomeDirection 확인 후 Save to Controller",
+        "H1CAM_H2CAM": "disable 상태로 화살표 방향으로 밀기 → 시스템 설정 Hardware Org에서 확인 버튼 및 즉시 적용",
+        "TRAY": "Step 방식",
+        "DRAWER": "disable 상태로 화살표 방향으로 밀기 → Hardware Org 설정"
+      }}
+    ],
+    "relations": []
+  },
+  {
+    "page_id": "9509142540",
+    "title": "CVD 사내 셋업 메뉴얼",
+    "entities": [
+      {"id": "manual_CVDSetup", "name": "CVD 사내 셋업 메뉴얼", "type": "Manual", "properties": {
+        "equipment": "CVD 장비",
+        "description": "CVD 사내 셋업 메뉴얼 목차"
+      }}
+    ],
+    "relations": []
+  }
+]
+
+prog_path = 'C:/MES/wta-agents/workspaces/db-manager'
+with open(f'{prog_path}/entities/batch33_combined.json', 'w', encoding='utf-8') as f:
+    json.dump(batch33, f, ensure_ascii=False, indent=2)
+for item in batch33:
+    with open(f'{prog_path}/entities/cm_{item["page_id"]}.json', 'w', encoding='utf-8') as f:
+        json.dump(item, f, ensure_ascii=False, indent=2)
+print(f'Saved {len(batch33)}')

@@ -172,9 +172,9 @@ export default function OfficePage() {
   return (
     <div className="px-2 py-3 min-h-screen" style={{ background: '#0F172A' }}>
       {/* 헤더 */}
-      <div className="mb-3 px-1">
-        <h1 className="text-lg font-bold text-slate-100">Agent Control Center</h1>
-        <p className="text-slate-500 text-sm mt-0.5">
+      <div className="mb-1 px-1">
+        <h1 className="text-sm font-bold text-slate-100">Agent Control Center</h1>
+        <p className="text-slate-500 text-xs mt-0">
           WTA Multi-Agent System — {Object.keys(AGENT_PROFILES).length} agents
         </p>
       </div>

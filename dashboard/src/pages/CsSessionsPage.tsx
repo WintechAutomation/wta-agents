@@ -472,8 +472,8 @@ export default function CsSessionsPage() {
       {/* 헤더 */}
       <div className="p-4 border-b border-gray-800 flex-shrink-0 flex items-start justify-between">
         <div>
-          <h1 className="text-xl font-bold text-white" style={{ color: '#ffffff' }}>CS 질의응답 세션</h1>
-          <p className="text-gray-400 text-sm mt-1">
+          <h1 className="text-sm font-bold text-white" style={{ color: '#ffffff' }}>CS 질의응답 세션</h1>
+          <p className="text-gray-500 text-xs mt-0.5">
             cs-agent의 CS RAG 질의응답 기록 ({total}건)
           </p>
         </div>

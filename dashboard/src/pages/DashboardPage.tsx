@@ -125,7 +125,7 @@ export default function DashboardPage() {
     <div className="p-4 md:p-6 space-y-4 h-full flex flex-col">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-lg font-bold text-white" style={{ color: '#ffffff' }}>운영 대시보드</h1>
+          <h1 className="text-sm font-bold text-white" style={{ color: '#ffffff' }}>운영 대시보드</h1>
           <p className="text-gray-400 text-xs">에이전트 상태 · 메시지 전송 · 실시간 로그</p>
         </div>
         <button

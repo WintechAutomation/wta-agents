@@ -59,8 +59,8 @@ export default function MonitorPage() {
   return (
     <div className="p-6 space-y-6">
       <div>
-        <h1 className="text-lg font-bold text-white">🖥️ 실시간 모니터</h1>
-        <p className="text-gray-400 text-sm mt-1">에이전트 상태 · 도구 사용 모니터링</p>
+        <h1 className="text-sm font-bold text-white">🖥️ 실시간 모니터</h1>
+        <p className="text-gray-500 text-xs mt-0.5">에이전트 상태 · 도구 사용 모니터링</p>
       </div>
 
       {/* 요약 통계 */}

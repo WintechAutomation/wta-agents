@@ -1,0 +1,15 @@
+{
+  "page_id": "9507143776",
+  "title": "PackingMachine",
+  "entities": [
+    {
+      "id": "equip_PackingMachine",
+      "name": "포장기 (Packing Machine)",
+      "type": "Equipment",
+      "properties": {
+        "description": "포장기 장비 개요 페이지"
+      }
+    }
+  ],
+  "relations": []
+}

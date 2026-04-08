@@ -1,0 +1,23 @@
+{
+  "page_id": "9508931792",
+  "title": "MDB 파일 Read시 조건식 데이터 에러관련",
+  "entities": [
+    {
+      "id": "issue_MDBFileError",
+      "name": "MDB 파일 조건식 데이터 에러 (일어/중국어 환경)",
+      "type": "Issue",
+      "properties": {
+        "symptom": "윈도우 언어를 일본어/중국어로 변경 시 Inspection.mdb 읽기 오류 '조건식의 데이터 형식이 일치하지 않습니다.'",
+        "cause": "mdb 파일의 날짜 형식 언어 불일치",
+        "resolution": "중국 수출 장비의 Inspection.mdb 파일을 가져와 적용"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "source": "issue_MDBFileError",
+      "target": "issue_MDBFileError",
+      "type": "RESOLVED_BY"
+    }
+  ]
+}

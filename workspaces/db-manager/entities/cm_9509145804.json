@@ -1,0 +1,15 @@
+{
+  "page_id": "9509145804",
+  "title": "F1 검사기",
+  "entities": [
+    {
+      "id": "equip_F1Inspector",
+      "name": "F1 검사기",
+      "type": "Equipment",
+      "properties": {
+        "description": "F1 검사기 장비 개요"
+      }
+    }
+  ],
+  "relations": []
+}

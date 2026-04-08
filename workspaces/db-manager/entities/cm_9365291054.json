@@ -1,0 +1,15 @@
+{
+  "page_id": "9365291054",
+  "title": "CS 이력 & Manual 홈",
+  "entities": [
+    {
+      "id": "manual_CSManualHome",
+      "name": "CS 이력 및 매뉴얼 홈페이지",
+      "type": "Manual",
+      "properties": {
+        "description": "CS 이력 및 매뉴얼 스페이스 홈"
+      }
+    }
+  ],
+  "relations": []
+}

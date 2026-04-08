@@ -258,8 +258,8 @@ export default function KnowledgePage() {
     <div className="p-6 space-y-6">
       {/* 헤더 */}
       <div>
-        <h1 className="text-lg font-bold text-white" style={{ color: '#ffffff' }}>Knowledge Base 현황</h1>
-        <p className="text-gray-400 text-sm mt-1">
+        <h1 className="text-sm font-bold text-white" style={{ color: '#ffffff' }}>Knowledge Base 현황</h1>
+        <p className="text-gray-500 text-xs mt-0.5">
           WTA AI 지식 자산 현황판 — 데이터: {kbData.updated_at}
           {lastRefresh && (
             <span className="ml-2 text-green-500/60 text-xs">갱신 {lastRefresh}</span>

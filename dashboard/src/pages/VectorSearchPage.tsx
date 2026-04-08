@@ -79,11 +79,11 @@ export default function VectorSearchPage() {
   return (
     <div style={{ maxWidth: 1100, margin: '0 auto', padding: '24px 16px' }}>
       {/* 헤더 */}
-      <div style={{ marginBottom: 20 }}>
-        <h1 style={{ fontSize: 22, fontWeight: 700, margin: 0, display: 'flex', alignItems: 'center', gap: 8 }}>
+      <div style={{ marginBottom: 4 }}>
+        <h1 style={{ fontSize: 14, fontWeight: 700, margin: 0, display: 'flex', alignItems: 'center', gap: 8 }}>
           🔍 벡터 검색
         </h1>
-        <p style={{ color: '#6b7280', fontSize: 13, marginTop: 4 }}>
+        <p style={{ color: '#6b7280', fontSize: 12, marginTop: 2 }}>
           pgvector 코사인 유사도 기반 문서 검색 (Qwen3-Embedding-8B)
         </p>
       </div>

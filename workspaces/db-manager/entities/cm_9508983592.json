@@ -1,0 +1,16 @@
+{
+  "page_id": "9508983592",
+  "title": "KUNBUS 사내 테스트",
+  "entities": [
+    {
+      "id": "proc_KUNBUSInternalTest",
+      "name": "KUNBUS 사내 테스트",
+      "type": "Process",
+      "properties": {
+        "description": "KUNBUS Gateway EtherCAT 사내 테스트 절차",
+        "hardware_note": "테스트 물품 위치: 제어팀"
+      }
+    }
+  ],
+  "relations": []
+}

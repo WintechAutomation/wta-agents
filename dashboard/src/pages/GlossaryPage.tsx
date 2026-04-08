@@ -95,8 +95,8 @@ export default function GlossaryPage() {
       {/* 헤더 */}
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-xl font-bold text-white" style={{ color: '#ffffff' }}>기술용어집</h1>
-          <p className="text-sm text-gray-400 mt-0.5">
+          <h1 className="text-sm font-bold text-white" style={{ color: '#ffffff' }}>기술용어집</h1>
+          <p className="text-xs text-gray-500 mt-0.5">
             WTA 장비 기술 용어 — 한/영/중 3개 국어
           </p>
         </div>
