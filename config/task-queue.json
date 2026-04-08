@@ -923,6 +923,30 @@
       "updated_at": "2026-04-08 18:36:42",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-db-manager-5614a1",
+      "agent": "db-manager",
+      "task": "김근형님 피드백. 장비유형 매칭 방식 변경 필요.",
+      "message": "김근형님 피드백. 장비유형 매칭 방식 변경 필요.\n\n현재 BOM 기반 equip_map이 실제 사용처와 다른 경우가 많다고 합니다.\n\n변경: BOM 기반 → 발주이력(MCA210T) 기반으로 교체\n- 각 품목코드별 발주된 프로젝트명 목록 조회\n- 프로젝트명에서 장비유형 추출 (예: \"한국야금 소결 #5\" → 소결)\n- 한 품목이 여러 프로젝트에 발주 → 다중 장비유형\n- erp_data.json [9]번 필드를 발주이력 기반 장비유형 배열로 교체\n\n기존 BOM 기반 데이터 대체입니다. 완료 후 보고 바랍니다.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 18:50:03",
+      "updated_at": "2026-04-08 18:50:03",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-docs-agent-e238e7",
+      "agent": "docs-agent",
+      "task": "db-manager가 발주이력 기반 equip_map 교체 완료했습니다. erp_data.json [9]번 필드 갱신됨.",
+      "message": "db-manager가 발주이력 기반 equip_map 교체 완료했습니다. erp_data.json [9]번 필드 갱신됨.\n\n- 3,265개 품목 발주이력 기반 장비유형 매핑\n- 소결, 포장기, 소결취출기 등 패턴 추가됨\n\nHTML 재적용 후 김근형님께 알림 부탁합니다. \"Cell\" 프레스 제외 필터도 유지해주세요.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 18:52:56",
+      "updated_at": "2026-04-08 18:52:56",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }

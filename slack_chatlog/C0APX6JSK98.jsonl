@@ -139,3 +139,6 @@
 {"ts": "2026-04-08 18:45:05", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "MXYW81460113AL13-S1 이품목은 호닝형상검사기 이며 검사기와는 다름 검사기 중복 제외"}
 {"ts": "2026-04-08 18:47:09", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "EZI-EC-42M-A 품목이 cell 프레스 적용으로 프레스 범주로 들어가 있는경우 오히려 소결,포장기가 들어가야지.."}
 {"ts": "2026-04-08 18:49:21", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "bom 장비 유형으로 확인을 요청한적이 없는데 어째서 그렇게 진행된건지? 발주 이력으로 확인 요청하지 않음?"}
+{"ts": "2026-04-08 18:51:22", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "MADHT1505BA1 해당 품목은 최근 진행이력이 전부 cs로 한정되어 있는품목이라 장비 사용 예정으로 보기 어려워 수정해줘"}
+{"ts": "2026-04-08 18:53:15", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "cs/무상자재가 어떤 품목들인지 따로 정립된게 없을거임 만약 빼게되는 품목이 있으면 나한테 따로 리스트 만들어서 줘봐 내가 확인해야하는 내용일듯"}
+{"ts": "2026-04-08 18:55:48", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "장비유형_확인필요_품목:1  Failed to load resource: the server responded with a status of 404 ()\n;;"}

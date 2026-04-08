@@ -30,16 +30,18 @@ print(f'equip-map 품목 수: {len(equip_map_raw):,}')
 
 # ── 장비유형 키워드 → 분류 매핑 ──────────────────────────────────
 EQUIP_TYPES = {
-    '프레스': ['프레스', 'press', 'Press', 'PRESS', 'Dorst', 'dorst', 'EP16', 'Kob', 'kob', '상부'],
-    '교정': ['교정', '교세'],
-    '핸들러': ['핸들러', 'handler', 'Handler', 'HIM', 'him'],
-    'CVD': ['CVD', 'cvd'],
-    '검사기': ['검사기', '검사', 'inspection', 'Inspection'],
-    '트랙크코더': ['트랙크코더', '트랙크', 'Traque', 'traque'],
-    'CBN': ['CBN', 'cbn'],
+    '프레스': ['프레스', 'Press', 'PRESS', 'Dorst', 'dorst', 'EP16', 'Kob', 'kob', '기후 프레스'],
+    '교정': ['교정기', '교정'],
+    '핸들러': ['핸들러', 'Handler', 'HIM'],
+    'CVD': ['CVD'],
+    'PVD': ['PVD'],
+    '검사기': ['검사기', 'F2 #', 'F검사기'],
+    '소결': ['소결취출기', '소결 #', '소결#', ' 소결'],
+    '포장기': ['포장기'],
+    '트랙크코더': ['트랙크코더', '트랙크', 'Traque'],
+    'CBN': ['CBN'],
     '알사기': ['알사기', '알사'],
-    '호닝형상': ['호닝', '형상'],
-    'PVD': ['PVD', 'pvd'],
+    '호닝형상': ['호닝', '형상기'],
 }
 
 def extract_equip_types(pjt_names):
