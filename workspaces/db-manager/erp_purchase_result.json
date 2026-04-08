@@ -1,0 +1,1147 @@
+{
+  "all_procedures": [
+    {
+      "name": "FN_CHAR_CNT",
+      "type": "FUNCTION"
+    },
+    {
+      "name": "FN_CLOSE_YN",
+      "type": "FUNCTION"
+    },
+    {
+      "name": "FN_CONVERT",
+      "type": "FUNCTION"
+    },
+    {
+      "name": "FN_DAY_CALCU",
+      "type": "FUNCTION"
+    },
+    {
+      "name": "FN_DAY_CALCU2",
+      "type": "FUNCTION"
+    },
+    {
+      "name": "FN_DESC",
+      "type": "FUNCTION"
+    },
+    {
+      "name": "FN_END_AMT",
+      "type": "FUNCTION"
+    },
+    {
+      "name": "FN_ENDAMTCALC",
+      "type": "FUNCTION"
+    },
+    {
+      "name": "FN_EXPI_CALCU",
+      "type": "FUNCTION"
+    },
+    {
+      "name": "fn_format_date",
+      "type": "FUNCTION"
+    },
+    {
+      "name": "FN_GET_DATA",
+      "type": "FUNCTION"
+    },
+    {
+      "name": "FN_GetNextNumber",
+      "type": "FUNCTION"
+    },
+    {
+      "name": "FN_MAKE_CALCU",
+      "type": "FUNCTION"
+    },
+    {
+      "name": "FN_MAKE_QUERY",
+      "type": "FUNCTION"
+    },
+    {
+      "name": "FN_MAKE_SQL",
+      "type": "FUNCTION"
+    },
+    {
+      "name": "FN_MAKE_SQL1",
+      "type": "FUNCTION"
+    },
+    {
+      "name": "FN_MAKE_SQL2",
+      "type": "FUNCTION"
+    },
+    {
+      "name": "FN_PRIORITY",
+      "type": "FUNCTION"
+    },
+    {
+      "name": "FN_SPACE_MOVE",
+      "type": "FUNCTION"
+    },
+    {
+      "name": "FN_TWO_LEN",
+      "type": "FUNCTION"
+    },
+    {
+      "name": "FN_ZERO_MOVE",
+      "type": "FUNCTION"
+    },
+    {
+      "name": "FN_ZERO_MOVE2",
+      "type": "FUNCTION"
+    },
+    {
+      "name": "FN_ZERO_MOVE3",
+      "type": "FUNCTION"
+    },
+    {
+      "name": "fnLpad",
+      "type": "FUNCTION"
+    },
+    {
+      "name": "fnRpad",
+      "type": "FUNCTION"
+    },
+    {
+      "name": "getKoreanCurrency",
+      "type": "FUNCTION"
+    },
+    {
+      "name": "cust_conversion",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "IBA101S",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "MCA209Q",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "MCA210S_PO",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "PPB700S_BASE_INSERT",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "PPB700S_CAL",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "PPB700S_DELETE",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SCM_P_MHA200T_STS_SAVE",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SCM_P_SME100N_STS_SAVE",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SCM_P_SME100N_SUB_SAVE",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SCM_P_SMP100N_REQ_CHANGE_DVRY",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SCM_P_SMP100N_SAVE",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SCM_P_SMP400N_SAVE",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SCM_P_SQA100N_DELETE",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SCM_P_SQA100N_FILE_DELETE",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SCM_P_SQA100N_QUERY",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SIGN_UPDATE",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_BBA350T_CREATE",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_BBA650T_CREATE",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_CALCULATE_01",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_CALCULATE_02",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_CALCULATE_03",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_CALCULATE_03_KM",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_CALCULATE_04",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_CALCULATE_04_KM",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_CALCULATE_05",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_CALCULATE_06",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_CALCULATE_06_KM",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_CALCULATE_06_SITE",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_CALCULATE_08",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_CALCULATE_08_KM",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_CALCULATE_10",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_CALCULATE_10_KM",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_CALCULATE_11",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_CALCULATE_11_KM",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_CALCULATE_12",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_CALCULATE_13",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_CALU_DUR",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_CONV_POSTFIX",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_CONVERSION",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_convert_accnt01",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_COST_SERVICE_AMT_TOT",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_Crypt",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_DATEDIFF",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_DUTYDIVI",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_EMPMASTER_INTERFACE",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_ExpandBOMNew",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_ExpandBOMNew_CHK",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_ExpandBOMNew2",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_GET_DATA",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_GET_TAX",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_GET_TAX_MM",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_GET_TAX_OLD",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_GET_TAX_YEAR",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_GET_TAX_YEAR_2014",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_GET_TAX_YEAR_2015",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_GET_TAX_YEAR2",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_GET_TAX1",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_GetNextNumber",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_GIFT_JAN2",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_GIFT_JAN2_2013",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_GIFT_JAN22",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_IBA100T_COMMON",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_IMSI_BOM_ROLLUP",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_KBA040T_D",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_KBA040T_I",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_KBA040T_S",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_KBA040T_U",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_KCA020T_CON_DELETE",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_KCA060T_CON_DELETE",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_KCA060T_CON_INSERT",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_kga010b_00",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_kga010b_01",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_kga010b_02",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_kga010b_03",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_kga010b_04",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_KGA010T_KGA020T_CHECK",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_KGA010T_KGA020T_RESTORE",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_KIA010T_B1_D",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_KIA010T_B1_I",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_KIA010T_B2_D",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_KIA010T_B2_I",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_KIA010T_S",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_KIA030T_S",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_KIA210T_d",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_KIA210T_I",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_KTX900T",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_KTX901T",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_KTX903T",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_KTX904T",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_KTX911T",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_KTX912T",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_KTX914T",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_KTX915T",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_KTX916T",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_KTX917T",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_KTX918T",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_KTX919T",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_KTX920T",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_KTX921T",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_KTX947T",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_KTX948T",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_KTX949T",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_KTX950T",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_KTX951T",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_KTX952T",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_KTX953T",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_KTX954T",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_KTX955T",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_KTX956T",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_KTX957T",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_KTX958T",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_KTX959T",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_KTX959T_1",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_KTX960T",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_KTX961T",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_KTX962T",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_KTX963T",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_KTX964T",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_KTX965T",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_KTX966T",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_MAD101S",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "sp_mail_send_x",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_MATERIAL_APP_UPDATE",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_MBA200T_BATCH",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_MBA200T_BATCH2",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_MBA200T_OUT_BATCH",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_MBA200T_OUT_BATCH_NEW",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_MBA200T_QTY_CHK",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_MBA210T_ACCEPT",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_MBA210T_ACCEPT_WIN",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_MBA210T_TRANCE",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_MBA220S",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_MCA200T_EXPECT_ADJUST",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_MCA200T_EXPECT_ADJUST_PDT",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_MCA200T_UDT",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_MCA207_SEL1",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_MCA207_SEL2",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_MCA207_SEL3",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_MCA207_SEL4",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_MCA207_SEL5",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_MCA207_SEL6",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_MCA210S",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_MCA210S_PO",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_MGA107S",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_MGA107S_2",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_MHA300T_STATE",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_MONTH_CALCU",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_PAYREPORT",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_PJT_WHCD",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_PJTNO",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_PO_DELETE",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_PO_SMS_SEND",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_PPB060TPTM",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_PPB100_DEL",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_PPB100B0",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_PPB100B1",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_PPB100B2",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_PPB100B3",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_PPB100B3_back",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_PPB100B4",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_PPB100B9",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_PPB200B1",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_PPB300B1",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_PPB400B_QTY",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_PPB400B0",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_PPE100B",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_PPE110N",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_PPE120N",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_PPE130N",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_PPE140N",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_PPE140N_OLD",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_PPE200N",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_PPE200N_XX",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_PPE210_S",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_PPETAXCALC",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_PPETAXCALC_OLD",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_PPT900T",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_PPT901T",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_PTA030T_BATCH",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_PTA083_S",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_PTA084_S",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_PTA084S2",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_PTA085_S",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_PTA300B",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_PYA060_TMP",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_PYA060B1",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_PYA060B1_2014",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_PYA060B1_test",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_PYA090T",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_PYA090T_SUB",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_PYA200T_CREATE_CRYPT",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_PYA220_CRecord",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_PYA220_CRecord_2014",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_PYA220_CRecord_NEW",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_PYA220_CRecord_NEW1",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_PYA220T",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_PYA220T_2014",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_RESTORE",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_RFA200N_SELECT",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_SALEAMT_DT_COUNT",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_SAMPLE1_D",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_SAMPLE1_I",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_SAMPLE1_S",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_SAMPLE1_U",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_SAMPLE2_D",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_SAMPLE2_S01",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_SAMPLE2_S02",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_SAMPLE3_D",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_SAMPLE3_I",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_SAMPLE3_S",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_SAMPLE3_U",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_SAMPLE4_D",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_SAMPLE4_I",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_SAMPLE4_S",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_SAMPLE4_U",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_SCA100S_PDT",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_SetExpandedBOMNew",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_SetExpandedBOMNew_CHK",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_SetExpandedBOMNew2",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_UpdateStock",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_UpdateStock_DIV",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_UpdateStock_TOT",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_YEAR_CALCU",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "USP_BBA650T_CREATE",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "USP_MBA210T_TRANCE_SWAT",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "USP_MBA210T_TRANCE_SWAT_X",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "USP_MBA210T_TRANCE_SWAT_X_WIN",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "usp_rethrowerror",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "ZAA210T_SP01",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "ZAA210T_SP02",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "ZAA210T_SP03",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "ZAA210T_SP04",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "ZAA210T_SP05",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "ZAA210T_SP06",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "ZAA210T_SP07",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "ZAA210T_SP09",
+      "type": "PROCEDURE"
+    }
+  ],
+  "proc_SP_MBA200T_BATCH": "CREATE PROCEDURE [mirae].[SP_MBA200T_BATCH]\r\n(\r\n\t@IN_PROCTYPE\tVARCHAR(2),\t\t\t\t-- 작업구분(Y:작업, N:취소)\r\n\t@IN_FRPJTNO\t\tVARCHAR(30),\t\t\t-- Project Code(From)\r\n\t@IN_TOPJTNO\t\tVARCHAR(30),\t\t\t-- Project Code(To)\r\n\t@IN_NEEDDT\t\tVARCHAR(10),\t\t\t-- 필요일자\r\n\t@IN_REQDT\t\tVARCHAR(10),\t\t\t-- 요청일자\r\n\t@IN_REQNO\t\tVARCHAR(30),\t\t\t-- 구매요청자사번\r\n\t@IN_DEPTCD\t\tVARCHAR(20),\t\t\t-- 구매요청 부서코드\r\n\t@IN_ITEMGB\t\tVARCHAR(2),\t\t\t\t-- 품목타입(전장, 기구)\r\n\t@IN_STOCKYN\t\tVARCHAR(1),\t\t\t\t-- 재고감안(X)\r\n\t@IN_SAFEYN\t\tVARCHAR(1),\t\t\t\t-- 안전재고(X)\r\n\t@IN_ITEMCD\t\tVARCHAR(30),\t\t\t-- 반제품코드\r\n\t@IN_ASKGB\t\tVARCHAR(2),\t\t\t\t-- 요청사유\r\n\t@IN_RMK\t\t\tVARCHAR(100),\t\t\t-- 비고\r\n\t@O_PO_PLAN_NO\tVARCHAR(20) OUTPUT,\t\t-- 작업후 구매요청번호\r\n\t@SuccFlag\t\tINT OUTPUT,\t\t\t\t-- Error Flag\r\n\t@O_ERR_TXT\t\tVARCHAR(300) OUTPUT\t\t-- Error 문\r\n)\r\nAS\r\n\r\nSET NOCOUNT ON\r\nBEGIN TRY\r\n\tDECLARE @SO_NO\t\t\tVARCHAR(20),\r\n\t\t\t@PJT_NO\t\t\tVARCHAR(30),\r\n\t\t\t@SO_QTY\t\t\tNUMERIC,\r\n\t\t\t@ITEM_GUBUN\t\tVARCHAR(2),\r\n\t\t\t@BOM_LEVEL\t\tVARCHAR(2),\r\n\t\t\t@sNextNumber\tVARCHAR(20),\r\n\t\t\t@INextSeq\t\tINTEGER,\r\n\t\t\t@lLoop\t\t\tINTEGER;\r\n\tDECLARE @CUR_OPEN\t\tINT;\r\n\tDECLARE @T_ITEM_CD\t\tVARCHAR(20),\r\n\t\t\t@C_ITEM_CD\t\tVARCHAR(20),\r\n\t\t\t@ITEM_CD\t\tVARCHAR(20),\r\n\t\t\t@UNIT_QTY\t\tNUMERIC,\r\n\t\t\t@IN_QTY\t\t\tNUMERIC, \r\n\t\t\t@PO_LT\t\t\tNUMERIC,\r\n\t\t\t@INV_UNIT\t\tVARCHAR(3)\r\n\tDECLARE @lStockQty\t\tNUMERIC;\r\n\tDECLARE @lSafeQty\t\tNUMERIC,\r\n\t        @ICNT INT;\r\n\tDECLARE\t@NEED_QTY\t\tNUMERIC,\r\n\t\t\t@REQ_QTY\t\tNUMERIC,\r\n\t\t\t@CHANGE_QTY\t\tNUMERIC;\r\n\tDECLARE @QC_KIND\t\tVARCHAR(1);\r\n\r\n\tSET @lStockQty\t= 0;\r\n\tSET @lSafeQty\t= 0;\r\n\t\r\n\tSET @SuccFlag\t= 0;\r\n\tSET @O_ERR_TXT = '';\r\n\t\r\n\tIF @IN_PROCTYPE = 'Y'\r\n\t\tBEGIN\r\n\t\t\t-- 0.해당프로젝트의 수주상태가 종료인가를 체크 함('ZZ')\r\n\t\t\tSELECT\t@ICNT = ISNULL(COUNT(*),0)\r\n\t\t\t  FROM  SCA200T\r\n\t\t\t WHERE  PJT_NO\t>=     @IN_FRPJTNO\r\n\t\t  \t   AND  PJT_NO\t<=     @IN_TOPJTNO\r\n\t\t\t   AND  SO_STS\t=       'ZZ';\r\n\t\t\t\r\n\t\t\tIF @ICNT > 0 \r\n\t\t\t\tBEGIN\r\n\t\t\t\t\tSET @O_ERR_TXT = '범위에 종료된 프로젝트가 있습니다. 더 이상 구매요청을 진행할 수 없습니다.';\r\n\t\t\t\t\tSET @SuccFlag = -1;\r\n\t\t\t\t\tRAISERROR(@O_ERR_TXT, 16,0);\r\n\t\t\t\tEND\r\n\t\t\t\r\n\t\t\t-- 0.해당프로젝트의 BOM정보 존재 여부 체크\t\r\n\t\t    SELECT\t@ICNT = ISNULL(COUNT(*),0) \r\n\t\t      FROM\tBBA020T\r\n\t\t     WHERE  P_ITEM_CD\t>=     @IN_FRPJTNO\r\n\t\t\t   AND  P_ITEM_CD\t<=     @IN_TOPJTNO\r\n\t\t\t\r\n\t\t\tIF @ICNT = 0  \r\n\t\t\t   BEGIN\r\n\t\t\t\t\tSET @O_ERR_TXT = 'BOM정보가 없는 프로젝트가 있습니다.';\r\n\t\t\t\t\tSET @SuccFlag = 1;\r\n\t\t\t\t\tRAISERROR(@O_ERR_TXT, 16,0);\r\n\t\t\t\tEND\r\n\t\t\t\r\n\t\t\t-- 1.해당프로젝트의 수주상태가 종료인가를 체크 함('ZZ')\r\n\t\t\tSELECT\t@SO_NO = SO_NO, @PJT_NO = PJT_NO\r\n\t\t\tFROM    SCA200T\r\n\t\t\tWHERE   PJT_NO\t>=     @IN_FRPJTNO\r\n\t\t\tAND     PJT_NO\t<=     @IN_TOPJTNO;\r\n\t\t\t\r\n\t\t\t-- 2.프로젝트 수주 여부 검사(SO_NO, PJT_NO)\r\n\t\t\t-- 구매요청번호 자동생성\t\r\n\t\t\tEXEC SP_GETNEXTNUMBER 'PR',@IN_REQDT,'MBA200T','PO_PLAN_NO', @sNextNumber OUTPUT, @SuccFlag OUTPUT, @O_ERR_TXT OUTPUT;\r\n\t\t\tIF @SuccFlag <> '0'\r\n\t\t\t\tBEGIN\r\n\t\t\t\t\tRAISERROR (@O_ERR_TXT, 16, 0);\r\n\t\t\t\t\tEND\r\n\t\t\tSET @INextSeq = 0;\r\n\t\t\tSET @lLoop  = 0;\r\n\t\t\t\t\r\n\t\t\tDECLARE MBA_REC CURSOR FOR\t\t\t\r\n\t\t\t\tSELECT\tA.SO_NO, A.PJT_NO, A.SO_QTY, B.ITEM_GUBUN, C.BOM_LEVEL\r\n\t\t\t\t FROM\tSCA200T A\r\n\t\t\t\t\t\tINNER JOIN BBA010T B\r\n\t\t\t\t\t\tON  A.PJT_NO = B.ITEM_CD\r\n\t\t\t\t\t\tINNER JOIN BAA060T C\r\n\t\t\t\t\t\tON  A.MODEL_NO = C.MODEL\r\n\t\t\t\t WHERE\tA.PJT_NO >= @IN_FRPJTNO\r\n\t\t\t\t AND\tA.PJT_NO <= @IN_TOPJTNO\r\n\t\t\t\t ORDER\tBY PJT_NO;\r\n\t\t\t \r\n\t\t\tOPEN MBA_REC;\r\n\t\t\tFETCH NEXT FROM MBA_REC\t\r\n\t\t\tINTO @SO_NO, @PJT_NO, @SO_QTY, @ITEM_GUBUN, @BOM_LEVEL;\r\n\t\t\t\r\n\t\t\tWHILE @@FETCH_STATUS = 0\r\n\t\t\t\tBEGIN\r\n\t\t\t\r\n\t\t\t\t\tEXEC SP_SetExpandedBOMNew @PJT_NO, @IN_ITEMCD, @BOM_LEVEL, @SO_QTY, @IN_ITEMGB, '', @SuccFlag OUTPUT, @O_ERR_TXT OUTPUT;\r\n\t\t\t\t\tIF @@ERROR <> 0 or @O_ERR_TXT <> ''\r\n\t\t\t\t\t\tBEGIN\t\r\n\t\t\t\t\t\t\tSET @O_ERR_TXT = @O_ERR_TXT;\r\n\t\t\t\t\t\t\tRAISERROR(@O_ERR_TXT, 16,0);\r\n\t\t\t\t\t\tEND\r\n\t\t\t\t\t--/*\r\n\t\t\t\t\t--DECLARE BBA_REC1 CURSOR FOR\r\n\t\t\t\t\t\r\n\t\t\t\t\t--\tSELECT\tA.T_ITEM_CD,    A.C_ITEM_CD,    A.ITEM_CD,  A.UNIT_QTY,\r\n\t\t\t\t\t--\t\t\tISNULL(B.IN_QTY, 0) AS IN_QTY,  C.PO_LT,    C.INV_UNIT\r\n\t\t\t\t\t--\tFROM\tBBA022T A\r\n\t\t\t\t\t--\t\t\tLEFT OUTER JOIN (SELECT T_ITEM_CD, P_ITEM_CD, ITEM_CD, SUM(REQ_QTY + STOCK_QTY) AS IN_QTY \r\n\t\t\t\t\t--\t\t\t\t\t\t\t FROM MBA210T WHERE PJT_NO = @PJT_NO GROUP BY PJT_NO, T_ITEM_CD, P_ITEM_CD, ITEM_CD)B\r\n\t\t\t\t\t--\t\t\tON  A.T_ITEM_CD = B.T_ITEM_CD\r\n\t\t\t\t\t--\t\t\tAND A.C_ITEM_CD = B.P_ITE",
+  "proc_SP_MBA200T_BATCH2": "\r\n\r\nCREATE PROCEDURE [mirae].[SP_MBA200T_BATCH2]\r\n(\r\n\t@IN_PROCTYPE\tVARCHAR(2),\t\t\t\t-- 작업구분(Y:작업, N:취소)\r\n\t@IN_FRPJTNO\t\tVARCHAR(30),\t\t\t-- Project Code(From)\r\n\t@IN_TOPJTNO\t\tVARCHAR(30),\t\t\t-- Project Code(To)\r\n\t@IN_NEEDDT\t\tVARCHAR(10),\t\t\t-- 필요일자\r\n\t@IN_REQDT\t\tVARCHAR(10),\t\t\t-- 요청일자\r\n\t@IN_REQNO\t\tVARCHAR(30),\t\t\t-- 구매요청자사번\r\n\t@IN_DEPTCD\t\tVARCHAR(20),\t\t\t-- 구매요청 부서코드\r\n\t@IN_ITEMGB\t\tVARCHAR(2),\t\t\t\t-- 품목타입(전장, 기구)\r\n\t@IN_STOCKYN\t\tVARCHAR(1),\t\t\t\t-- 재고감안(X)\r\n\t@IN_SAFEYN\t\tVARCHAR(1),\t\t\t\t-- 안전재고(X)\r\n\t@IN_ITEMCD\t\tVARCHAR(30),\t\t\t-- 반제품코드\r\n\t@IN_ASKGB\t\tVARCHAR(2),\t\t\t\t-- 요청사유\r\n\t@IN_RMK\t\t\tVARCHAR(100),\t\t\t-- 비고\r\n\t@O_PO_PLAN_NO\tVARCHAR(20) OUTPUT,\t\t-- 작업후 구매요청번호\r\n\t@SuccFlag\t\tINT OUTPUT,\t\t\t\t-- Error Flag\r\n\t@O_ERR_TXT\t\tVARCHAR(300) OUTPUT\t\t-- Error 문\r\n)\r\nAS\r\n\r\nSET NOCOUNT ON\r\nBEGIN TRY\r\n\tDECLARE @SO_NO\t\t\tVARCHAR(20),\r\n\t\t\t@PJT_NO\t\t\tVARCHAR(30),\r\n\t\t\t@SO_QTY\t\t\tNUMERIC,\r\n\t\t\t@ITEM_GUBUN\t\tVARCHAR(2),\r\n\t\t\t@BOM_LEVEL\t\tVARCHAR(2),\r\n\t\t\t@sNextNumber\tVARCHAR(20),\r\n\t\t\t@INextSeq\t\tINTEGER,\r\n\t\t\t@lLoop\t\t\tINTEGER;\r\n\tDECLARE @CUR_OPEN\t\tINT;\r\n\tDECLARE @T_ITEM_CD\t\tVARCHAR(20),\r\n\t\t\t@C_ITEM_CD\t\tVARCHAR(20),\r\n\t\t\t@ITEM_CD\t\tVARCHAR(20),\r\n\t\t\t@UNIT_QTY\t\tNUMERIC,\r\n\t\t\t@IN_QTY\t\t\tNUMERIC, \r\n\t\t\t@PO_LT\t\t\tNUMERIC,\r\n\t\t\t@INV_UNIT\t\tVARCHAR(3)\r\n\tDECLARE @lStockQty\t\tNUMERIC;\r\n\tDECLARE @lSafeQty\t\tNUMERIC,\r\n\t        @ICNT INT;\r\n\tDECLARE\t@NEED_QTY\t\tNUMERIC,\r\n\t\t\t@REQ_QTY\t\tNUMERIC,\r\n\t\t\t@CHANGE_QTY\t\tNUMERIC;\r\n\tDECLARE @QC_KIND\t\tVARCHAR(1);\r\n\r\n\tSET @lStockQty\t= 0;\r\n\tSET @lSafeQty\t= 0;\r\n\t\r\n\tSET @SuccFlag\t= 0;\r\n\tSET @O_ERR_TXT = '';\r\n\t\r\n\tIF @IN_PROCTYPE = 'Y'\r\n\t\tBEGIN\r\n\t\t\t-- 0.해당프로젝트의 수주상태가 종료인가를 체크 함('ZZ')\r\n\t\t\tSELECT\t@ICNT = ISNULL(COUNT(*),0)\r\n\t\t\t  FROM  SCA200T\r\n\t\t\t WHERE  PJT_NO\t>=     @IN_FRPJTNO\r\n\t\t  \t   AND  PJT_NO\t<=     @IN_TOPJTNO\r\n\t\t\t   AND  SO_STS\t=       'ZZ';\r\n\t\t\t\r\n\t\t\tIF @ICNT > 0 \r\n\t\t\t\tBEGIN\r\n\t\t\t\t\tSET @O_ERR_TXT = '범위에 종료된 프로젝트가 있습니다. 더 이상 구매요청을 진행할 수 없습니다.';\r\n\t\t\t\t\tSET @SuccFlag = -1;\r\n\t\t\t\t\tRAISERROR(@O_ERR_TXT, 16,0);\r\n\t\t\t\tEND\r\n\t\t\t\r\n\t\t\t-- 0.해당프로젝트의 BOM정보 존재 여부 체크\t\r\n\t\t    SELECT\t@ICNT = ISNULL(COUNT(*),0) \r\n\t\t      FROM\tBBA020T\r\n\t\t     WHERE  P_ITEM_CD\t>=     @IN_FRPJTNO\r\n\t\t\t   AND  P_ITEM_CD\t<=     @IN_TOPJTNO\r\n\t\t\t\r\n\t\t\tIF @ICNT = 0  \r\n\t\t\t   BEGIN\r\n\t\t\t\t\tSET @O_ERR_TXT = 'BOM정보가 없는 프로젝트가 있습니다.';\r\n\t\t\t\t\tSET @SuccFlag = 1;\r\n\t\t\t\t\tRAISERROR(@O_ERR_TXT, 16,0);\r\n\t\t\t\tEND\r\n\t\t\t\r\n\t\t\t-- 1.해당프로젝트의 수주상태가 종료인가를 체크 함('ZZ')\r\n\t\t\tSELECT\t@SO_NO = SO_NO, @PJT_NO = PJT_NO\r\n\t\t\tFROM    SCA200T\r\n\t\t\tWHERE   PJT_NO\t>=     @IN_FRPJTNO\r\n\t\t\tAND     PJT_NO\t<=     @IN_TOPJTNO;\r\n\t\t\t\r\n\t\t\t-- 2.프로젝트 수주 여부 검사(SO_NO, PJT_NO)\r\n\t\t\t-- 구매요청번호 자동생성\t\r\n\t\t\tEXEC SP_GETNEXTNUMBER 'PR',@IN_REQDT,'MBA200T','PO_PLAN_NO', @sNextNumber OUTPUT, @SuccFlag OUTPUT, @O_ERR_TXT OUTPUT;\r\n\t\t\tIF @SuccFlag <> '0'\r\n\t\t\t\tBEGIN\r\n\t\t\t\t\tRAISERROR (@O_ERR_TXT, 16, 0);\r\n\t\t\t\t\tEND\r\n\t\t\tSET @INextSeq = 0;\r\n\t\t\tSET @lLoop  = 0;\r\n\t\t\t\t\r\n\t\t\tDECLARE MBA_REC CURSOR FOR\t\t\t\r\n\t\t\t\tSELECT\tA.SO_NO, A.PJT_NO, A.SO_QTY, B.ITEM_GUBUN, C.BOM_LEVEL\r\n\t\t\t\t FROM\tSCA200T A\r\n\t\t\t\t\t\tINNER JOIN BBA010T B\r\n\t\t\t\t\t\tON  A.PJT_NO = B.ITEM_CD\r\n\t\t\t\t\t\tINNER JOIN BAA060T C\r\n\t\t\t\t\t\tON  A.MODEL_NO = C.MODEL\r\n\t\t\t\t WHERE\tA.PJT_NO >= @IN_FRPJTNO\r\n\t\t\t\t AND\tA.PJT_NO <= @IN_TOPJTNO\r\n\t\t\t\t ORDER\tBY PJT_NO;\r\n\t\t\t \r\n\t\t\tOPEN MBA_REC;\r\n\t\t\tFETCH NEXT FROM MBA_REC\t\r\n\t\t\tINTO @SO_NO, @PJT_NO, @SO_QTY, @ITEM_GUBUN, @BOM_LEVEL;\r\n\t\t\t\r\n\t\t\tWHILE @@FETCH_STATUS = 0\r\n\t\t\t\tBEGIN\r\n\t\t\t\r\n\t\t\t\t\tEXEC SP_SetExpandedBOMNew2 @PJT_NO, @IN_ITEMCD, @BOM_LEVEL, @SO_QTY, @IN_ITEMGB, '', @SuccFlag OUTPUT, @O_ERR_TXT OUTPUT;\r\n\t\t\t\t\tIF @@ERROR <> 0 or @O_ERR_TXT <> ''\r\n\t\t\t\t\t\tBEGIN\t\r\n\t\t\t\t\t\t\tSET @O_ERR_TXT = @O_ERR_TXT;\r\n\t\t\t\t\t\t\tRAISERROR(@O_ERR_TXT, 16,0);\r\n\t\t\t\t\t\tEND\r\n\t\t\t\t\t--/*\r\n\t\t\t\t\t--DECLARE BBA_REC1 CURSOR FOR\r\n\t\t\t\t\t\r\n\t\t\t\t\t--\tSELECT\tA.T_ITEM_CD,    A.C_ITEM_CD,    A.ITEM_CD,  A.UNIT_QTY,\r\n\t\t\t\t\t--\t\t\tISNULL(B.IN_QTY, 0) AS IN_QTY,  C.PO_LT,    C.INV_UNIT\r\n\t\t\t\t\t--\tFROM\tBBA022T A\r\n\t\t\t\t\t--\t\t\tLEFT OUTER JOIN (SELECT T_ITEM_CD, P_ITEM_CD, ITEM_CD, SUM(REQ_QTY + STOCK_QTY) AS IN_QTY \r\n\t\t\t\t\t--\t\t\t\t\t\t\t FROM MBA210T WHERE PJT_NO = @PJT_NO GROUP BY PJT_NO, T_ITEM_CD, P_ITEM_CD, ITEM_CD)B\r\n\t\t\t\t\t--\t\t\tON  A.T_ITEM_CD = B.T_ITEM_CD\r\n\t\t\t\t\t--\t\t\tAND A.C_ITEM_CD = B",
+  "proc_SP_MBA200T_OUT_BATCH": "-- exec SP_MBA200T_OUT_BATCH '*1206006', '1', '20120621', '20120620', '9999994', '3200', '', 0, ''\r\n-- =============================================\r\n-- Author:\t\t<Author,,Name>\r\n-- Create date: <Create Date,,>\r\n-- Description:\t예외발주PJT, 차수별 구매요청등록\r\n-- =============================================\r\nCREATE PROCEDURE [mirae].[SP_MBA200T_OUT_BATCH]\r\n\t@IN_PJTNO\t\tVARCHAR(30),\t-- 프로젝트번호\r\n\t@IN_TITEMCD\t\tVARCHAR(30),\t-- SUB UNIT\t\tTODO : 2012.11.14 ADD\r\n\t@IN_CHA\t\t\tVARCHAR(02),\t-- 차수\r\n\t@IN_NEEDDT\t\tVARCHAR(10),\t-- 필요일\r\n\t@IN_REQDT\t\tVARCHAR(10),\t-- 구매요청일\r\n\t@IN_REQNO\t\tVARCHAR(30),\t-- 구매요청자\r\n\t@IN_DEPTCD\t\tVARCHAR(20),\t-- 구매요청부서\r\n\t@IN_REMARK\t\tVARCHAR(200),\t-- 비고\r\n\t@O_PO_PLAN_NO\tVARCHAR(20) OUTPUT,\r\n\t@SuccFlag\t\tINT OUTPUT,\r\n\t@O_ERR_TXT\t\tVARCHAR(300) OUTPUT\r\nAS\r\n\r\n--SET NOCOUNT ON\r\nBEGIN TRY\r\n\tDECLARE @SO_NO\t\t\t\tVARCHAR(20),\r\n\t\t\t@SO_QTY\t\t\t\tNUMERIC,\r\n\t\t\t@sNextNumber\t\tVARCHAR(20),\r\n\t\t\t@INextSeq\t\t\tINTEGER,\r\n\t\t\t@C1_PJT_NO\t\t\tVARCHAR(30),\r\n\t\t\t@C1_T_ITEM_CD\t\tVARCHAR(20),\r\n\t\t\t@C1_P_ITEM_CD\t\tVARCHAR(20),\r\n\t\t\t@C1_ITEM_CD\t\t\tVARCHAR(20),\r\n\t\t\t@C1_UNIT_QTY\t\tNUMERIC,\r\n\t\t\t@C1_IN_QTY\t\t\tNUMERIC, \r\n\t\t\t@C1_PO_LT\t\t\tNUMERIC,\r\n\t\t\t@C1_INV_UNIT\t\tVARCHAR(3),\r\n\t        @ICNT INT;\r\n\t                                \r\n\tSET @SuccFlag\t= 0;\r\n\tSET @O_ERR_TXT = '';\r\n\r\n\t-- 1.해당프로젝트의 수주상태가 종료인가를 체크 함('ZZ')\r\n\tset @ICNT = 0;\r\n\tSELECT     @ICNT = COUNT(*)\r\n\tFROM       SCA200T\r\n\tWHERE      PJT_NO\t=     @IN_PJTNO\r\n\tAND        SO_STS\t=       'ZZ';\r\n\r\n\tIF @ICNT > 0\r\n\t\tBEGIN\r\n\t\t\tSET @O_ERR_TXT = '이 프로젝트는 종료된 프로젝입니다. 더이상 구매요청을 진행할수 없습니다.';\r\n\t\t\tSET @SuccFlag = 1;\r\n\t\t\tRAISERROR(@O_ERR_TXT, 16,0);\r\n\t\t\t\r\n\t\tEND\r\n\t\r\n\t-- 수주번호, 수량 가져오기\r\n\tSELECT     @SO_NO = SO_NO, @SO_QTY = SO_QTY\r\n\tFROM       SCA200T\r\n\tWHERE      PJT_NO\t=     @IN_PJTNO;\r\n\r\n \t-- 2.Bom존재하는지 여부\r\n\tSET @ICNT = 0;\r\n\tSELECT @ICNT = ISNULL(COUNT(*),0) FROM BBA350T\r\n    WHERE   PJT_NO\t\t=\t@IN_PJTNO\r\n    AND\t\tT_ITEM_CD\t=\t@IN_TITEMCD\t\t\t-- TODO : 2012.11.14 ADD\r\n\tAND     BOM_CH\t\t=\t@IN_CHA\r\n\t\r\n\tIF @ICNT = 0  \r\n\t   BEGIN\r\n\t\t\tSET @O_ERR_TXT = '해당 프로젝트의 BOM정보가 없습니다.';\r\n\t\t\tSET @SuccFlag = -1;\r\n\t\t\tRAISERROR(@O_ERR_TXT, 16,0);\r\n\t\tEND\r\n\r\n\t-- 3.구매요청번호 자동생성\t\r\n\tEXEC SP_GETNEXTNUMBER 'PR',@IN_REQDT,'MBA200T','PO_PLAN_NO', @sNextNumber OUTPUT, @SuccFlag OUTPUT, @O_ERR_TXT OUTPUT;\r\n\t\r\n\t-- 4.Bom Select\r\n\tSET @INextSeq = 0;\r\n\r\n\tDECLARE BBA_REC1 CURSOR FOR\r\n\t\tSELECT\tA.PJT_NO, \r\n\t\t\t\tA.T_ITEM_CD, A.T_ITEM_CD AS P_ITEM_CD,\t\t\r\n\t\t\t\tA.ITEM_CD, \r\n\t\t\t\tSUM(A.UNIT_QTY) AS UNIT_QTY, \r\n\t\t\t\tMAX(ISNULL(B.IN_QTY, 0)) AS IN_QTY, \r\n\t\t\t\tC.PO_LT, \r\n\t\t\t\tC.INV_UNIT\r\n\t\tFROM\tBBA350T A\r\n\t\t\t\tLEFT OUTER JOIN (\r\n\t\t\t\t\t\t\t\t SELECT PJT_NO, T_ITEM_CD, P_ITEM_CD, ITEM_CD, SUM(REQ_QTY + STOCK_QTY) AS IN_QTY \r\n\t\t\t\t\t\t\t\t FROM MBA210T WHERE PJT_NO = @IN_PJTNO\r\n\t\t\t\t\t\t\t\t AND T_ITEM_CD = @IN_TITEMCD\t\t\t-- TODO : 2012.11.14 ADD\r\n\t\t\t\t\t\t\t\t GROUP BY PJT_NO, T_ITEM_CD, P_ITEM_CD, ITEM_CD\r\n\t\t\t\t\t\t\t\t ) B\r\n\t\t\t\tON  A.PJT_NO\t= B.PJT_NO\r\n\t\t\t\tAND\tA.T_ITEM_CD = B.T_ITEM_CD\t-- TODO : 2012.11.14 ADD\r\n\t\t\t\tAND A.ITEM_CD   = B.ITEM_CD\r\n\t\t\t\t--AND A.P_ITEM_CD   = B.P_ITEM_CD\r\n\t\t\t\tINNER JOIN BBA010T C\r\n\t\t\t\tON  A.ITEM_CD\t= C.ITEM_CD\r\n\t\t\t\tAND ITEM_ACCNT <> '30'\r\n\t\t\t\t AND SUPPLY_TYPE <> 'WO'\r\n\t\tWHERE\tA.PJT_NO\t= @IN_PJTNO\r\n\t\tAND\t\tA.T_ITEM_CD = @IN_TITEMCD\t\t\t-- TODO : 2012.11.14 ADD\r\n\t\tAND\t\tA.BOM_CH\t= @IN_CHA\r\n\t\tAND\t\tA.USE_YN = 'Y'\r\n\t\tGROUP BY A.PJT_NO, A.T_ITEM_CD, A.ITEM_CD, C.PO_LT, C.INV_UNIT;\r\n\tOPEN BBA_REC1\r\n\tFETCH NEXT FROM BBA_REC1 INTO @C1_PJT_NO, @C1_T_ITEM_CD, @C1_P_ITEM_CD, @C1_ITEM_CD, @C1_UNIT_QTY, @C1_IN_QTY, @C1_PO_LT, @C1_INV_UNIT\r\n\t\t\r\n\tWHILE @@FETCH_STATUS = 0\r\n\t\tBEGIN\r\n\t\t\tSET @INextSeq = @INextSeq +1;\r\n\t\t\tINSERT INTO MBA210T\r\n\t\t\t\t\t\t(PO_PLAN_NO,            SO_NO,\t\t\t\tPJT_NO,\r\n\t\t\t\t\t\tPO_PLAN_SEQ,            T_ITEM_CD,\r\n\t\t\t\t\t\tP_ITEM_CD,              ITEM_CD,\t\t\tCOMP_QTY,       NEED_QTY,\r\n\t\t\t\t\t\tSTOCK_QTY,              SAFETY_QTY,\t\t\tIN_QTY,         REQ_QTY,\r\n\t\t\t\t\t\tNEED_DT,                PO_PLAN_STS,\t\tDVRY_DT,        PO_UNIT,\r\n\t\t\t\t\t\tPO_PLAN_KIND,           CHANGE_QTY,\t\t\tREMARK)\r\n\t\t\t\t\t\tVALUES     \r\n\t\t\t\t\t\t(@sNextNumber,\t\t\t@SO_NO,\t\t\t\t@C1_PJT_NO,\r\n\t\t\t\t\t\t@INextSeq ,\t\t\t\t@C1_T_ITEM_CD,\r\n\t\t\t\t\t\t@C1_P_ITEM_CD,\t\t\t\t@C1_ITEM_CD,\r\n\t\t\t",
+  "proc_SP_MBA200T_OUT_BATCH_NEW": "CREATE PROCEDURE [mirae].[SP_MBA200T_OUT_BATCH_NEW]\r\n\t@IN_PJTNO\t\tVARCHAR(30),\t-- 프로젝트번호\r\n\t@IN_TITEMCD\t\tVARCHAR(30),\t-- SUB UNIT\t\t\r\n\t@IN_CHA\t\t\tVARCHAR(02),\t-- 차수\r\n\t@IN_NEEDDT\t\tVARCHAR(10),\t-- 필요일\r\n\t@IN_REQDT\t\tVARCHAR(10),\t-- 구매요청일\r\n\t@IN_REQNO\t\tVARCHAR(30),\t-- 구매요청자\r\n\t@IN_DEPTCD\t\tVARCHAR(20),\t-- 구매요청부서\r\n\t@IN_REMARK\t\tVARCHAR(200),\t-- 비고\r\n\t@O_PO_PLAN_NO\tVARCHAR(20) OUTPUT,\r\n\t@SuccFlag\t\tINT OUTPUT,\r\n\t@O_ERR_TXT\t\tVARCHAR(300) OUTPUT\r\nAS\r\n\r\n--SET NOCOUNT ON\r\nBEGIN TRY\r\n\tDECLARE @SO_NO\t\t\t\tVARCHAR(20),\r\n\t\t\t@SO_QTY\t\t\t\tNUMERIC,\r\n\t\t\t@sNextNumber\t\tVARCHAR(20),\r\n\t\t\t@INextSeq\t\t\tINTEGER,\r\n\t\t\t@C1_PJT_NO\t\t\tVARCHAR(30),\r\n\t\t\t@C1_T_ITEM_CD\t\tVARCHAR(20),\r\n\t\t\t@C1_P_ITEM_CD\t\tVARCHAR(20),\r\n\t\t\t@C1_ITEM_CD\t\t\tVARCHAR(20),\r\n\t\t\t@C1_UNIT_QTY\t\tNUMERIC,\r\n\t\t\t@C1_IN_QTY\t\t\tNUMERIC, \r\n\t\t\t@C1_PO_LT\t\t\tNUMERIC,\r\n\t\t\t@C1_INV_UNIT\t\tVARCHAR(3),\r\n\t\t\t@C1_QC_KIND\t\t\tVARCHAR(1),\r\n\t\t\t@C1_REV\t\t\t\tVARCHAR(4),\r\n\t        @ICNT INT;\r\n\t                                \r\n\tSET @SuccFlag\t= 0;\r\n\tSET @O_ERR_TXT = '';\r\n\r\n\t-- 1.해당프로젝트의 수주상태가 종료인가를 체크 함('ZZ')\r\n\tSET @ICNT = 0;\r\n\tSELECT     @ICNT = COUNT(*)\r\n\tFROM       SCA200T\r\n\tWHERE      PJT_NO\t=     @IN_PJTNO\r\n\tAND        SO_STS\t=       'ZZ';\r\n\tIF @ICNT > 0\r\n\t\tBEGIN\r\n\t\t\tSET @O_ERR_TXT = '이 프로젝트는 종료된 프로젝트입니다. 더 이상 구매요청을 진행할 수 없습니다.';\r\n\t\t\tSET @SuccFlag = 1;\r\n\t\t\tRAISERROR(@O_ERR_TXT, 16,0);\r\n\t\tEND\r\n\t\r\n\t-- 수주번호, 수량 가져오기\r\n\tSELECT     @SO_NO = SO_NO, @SO_QTY = SO_QTY\r\n\tFROM       SCA200T\r\n\tWHERE      PJT_NO\t=     @IN_PJTNO;\r\n\tIF (@SO_QTY <= 0)\r\n\t\tBEGIN\r\n\t\t\tSET @O_ERR_TXT = '수주 수량이 0보다 작은 경우, 구매요청을 진행할 수 없습니다. 수주 수량을 확인해 주세요.';\r\n\t\t\tSET @SuccFlag = 1;\r\n\t\t\tRAISERROR(@O_ERR_TXT, 16,0);\r\n\t\tEND\r\n\r\n \t-- 2.Bom존재하는지 여부\r\n\tSET\t@ICNT\t=\t0;\r\n\tSELECT\t@ICNT\t=\tISNULL(COUNT(*), 0)\r\n\tFROM\tBBA650T\r\n    WHERE\tPJT_NO\t\t=\t@IN_PJTNO\r\n    AND\t\tT_ITEM_CD\t=\t@IN_TITEMCD\r\n\tAND\t\tBOM_CH\t\t=\t@IN_CHA;\r\n\tIF @ICNT = 0  \r\n\t   BEGIN\r\n\t\t\tSET @O_ERR_TXT = '해당 프로젝트의 BOM 정보가 없습니다.';\r\n\t\t\tSET @SuccFlag = -1;\r\n\t\t\tRAISERROR(@O_ERR_TXT, 16,0);\r\n\t\tEND\r\n\r\n\t-- 3.구매요청번호 자동생성\t\r\n\tEXEC SP_GETNEXTNUMBER 'PR', @IN_REQDT,'MBA200T', 'PO_PLAN_NO', @sNextNumber OUTPUT, @SuccFlag OUTPUT, @O_ERR_TXT OUTPUT;\r\n\t\r\n\t-- 4.Bom Select\r\n\tSET @INextSeq = 0;\r\n\r\n\tDECLARE BBA_REC1 CURSOR FOR\r\n\t\tSELECT\tA.PJT_NO, \r\n\t\t\t--\tA.T_ITEM_CD, A.T_ITEM_CD AS P_ITEM_CD, -- A.P_ITEM_CD,\t\t\r\n\t\t\t\tA.T_ITEM_CD, A.P_ITEM_CD,\t\t\r\n\t\t\t\tA.ITEM_CD, \r\n\t\t\t\tSUM(A.UNIT_QTY) AS UNIT_QTY, \r\n\t\t\t\tMAX(ISNULL(B.IN_QTY, 0)) AS IN_QTY, \r\n\t\t\t\tC.PO_LT, \r\n\t\t\t\tC.INV_UNIT,\r\n\t\t\t\tC.QC_KIND,\r\n\t\t\t\tA.REV\r\n\t\tFROM\tBBA650T A\r\n\t\t\t\tLEFT OUTER JOIN (\r\n\t\t\t\t\t\t\t\t SELECT PJT_NO, T_ITEM_CD, P_ITEM_CD, ITEM_CD, SUM(REQ_QTY + STOCK_QTY) AS IN_QTY \r\n\t\t\t\t\t\t\t\t FROM MBA210T WHERE PJT_NO = @IN_PJTNO\r\n\t\t\t\t\t\t\t\t AND T_ITEM_CD = @IN_TITEMCD\t\t\t-- TODO : 2012.11.14 ADD\r\n\t\t\t\t\t\t\t\t GROUP BY PJT_NO, T_ITEM_CD, P_ITEM_CD, ITEM_CD\r\n\t\t\t\t\t\t\t\t ) B\r\n\t\t\t\tON  A.PJT_NO\t= B.PJT_NO\r\n\t\t\t\tAND\tA.T_ITEM_CD = B.T_ITEM_CD\r\n\t\t\t\tAND\tA.P_ITEM_CD = B.P_ITEM_CD\r\n\t\t\t\tAND A.ITEM_CD   = B.ITEM_CD\r\n\t\t\t\tINNER JOIN BBA010T C\r\n\t\t\t\tON  A.ITEM_CD\t= C.ITEM_CD\r\n\t\t\t\t--AND ITEM_ACCNT <> '30'  --lcj 2017 10.10 반제품 발주가능\r\n\t\t\t\t AND SUPPLY_TYPE <> 'WO'\r\n\t\tWHERE\tA.PJT_NO\t= @IN_PJTNO\r\n\t\tAND\t\tA.T_ITEM_CD = @IN_TITEMCD\r\n\t\tAND\t\tA.BOM_CH\t= @IN_CHA\r\n\t\tAND\t\tA.USE_YN = 'Y'\r\n\t\tGROUP BY A.PJT_NO, A.T_ITEM_CD, A.P_ITEM_CD, A.ITEM_CD, C.PO_LT, C.INV_UNIT, C.QC_KIND, A.REV;\r\n\t\r\n\tOPEN BBA_REC1;\r\n\r\n\tFETCH NEXT FROM BBA_REC1 INTO @C1_PJT_NO, @C1_T_ITEM_CD, @C1_P_ITEM_CD, @C1_ITEM_CD, @C1_UNIT_QTY, @C1_IN_QTY, @C1_PO_LT, @C1_INV_UNIT, @C1_QC_KIND, @C1_REV;\r\n\t\t\r\n\tWHILE @@FETCH_STATUS = 0\r\n\t\tBEGIN\r\n\t\t\tSET @INextSeq = @INextSeq +1;\r\n\t\t\tINSERT INTO MBA210T\r\n\t\t\t\t\t\t(PO_PLAN_NO,            SO_NO,\t\t\t\tPJT_NO,\r\n\t\t\t\t\t\tPO_PLAN_SEQ,            T_ITEM_CD,\r\n\t\t\t\t\t\tP_ITEM_CD,              ITEM_CD,\t\t\tCOMP_QTY,       NEED_QTY,\r\n\t\t\t\t\t\tSTOCK_QTY,              SAFETY_QTY,\t\t\tIN_QTY,         REQ_QTY,\r\n\t\t\t\t\t\tNEED_DT,                PO_PLAN_STS,\t\tDVRY_DT,        PO_UNIT,\r\n\t\t\t\t\t\tPO_PLAN_KIND,           CHANGE_QTY,\t\t\tREMARK,\t\t\tQC_KIND,\r\n\t\t\t\t\t\tREV)\r\n\t\t\t\t\t\tVALUES     \r\n\t\t\t\t\t\t(@sNextNumber,\t\t\t@SO_NO,\t\t\t\t@C1_PJT_NO,\r\n\t\t\t\t\t\t@INextSeq ,\t\t\t\t@C1_T_ITEM_CD,\r\n\t\t\t\t\t\t@C1_P_ITEM_CD,\t\t\t\t@C1_",
+  "proc_SP_MBA200T_QTY_CHK": "-- -----------------------\r\n-- BOM 사용 안함 수량 SELECT\r\n-- ------------------------\r\n--EXEC [mirae].[SP_MBA200T_QTY_CHK] 'SCL05002','SCL05002','',''\r\nCREATE PROCEDURE [mirae].[SP_MBA200T_QTY_CHK]\r\n(\t\r\n\t@IN_FRPJTNO\t\tVARCHAR(30),\t\t\t-- Project Code(From)\r\n\t@IN_TOPJTNO\t\tVARCHAR(30),\t\t\t-- Project Code(To)\t\r\n\t@SuccFlag\t\tINT OUTPUT,\t\t\t\t-- Error Flag\r\n\t@O_ERR_TXT\t\tVARCHAR(300) OUTPUT\t\t-- Error 문\r\n)\r\nAS\r\n\r\nSET NOCOUNT ON\r\nBEGIN TRY\r\n\tDECLARE @SO_NO\t\t\tVARCHAR(20),\r\n\t\t\t@PJT_NO\t\t\tVARCHAR(30),\r\n\t\t\t@SO_QTY\t\t\tNUMERIC,\r\n\t\t\t@ITEM_GUBUN\t\tVARCHAR(2),\r\n\t\t\t@BOM_LEVEL\t\tVARCHAR(2),\r\n\t\t\t@sNextNumber\tVARCHAR(20),\r\n\t\t\t@INextSeq\t\tINTEGER,\r\n\t\t\t@lLoop\t\t\tINTEGER;\r\n\tDECLARE @CUR_OPEN\t\tINT;\r\n\tDECLARE @T_ITEM_CD\t\tVARCHAR(20),\r\n\t\t\t@C_ITEM_CD\t\tVARCHAR(20),\r\n\t\t\t@ITEM_CD\t\tVARCHAR(20),\r\n\t\t\t@UNIT_QTY\t\tNUMERIC,\r\n\t\t\t@IN_QTY\t\t\tNUMERIC, \r\n\t\t\t@PO_LT\t\t\tNUMERIC,\r\n\t\t\t@INV_UNIT\t\tVARCHAR(3)\r\n\tDECLARE @lStockQty\t\tNUMERIC;\r\n\tDECLARE @lSafeQty\t\tNUMERIC,\r\n\t        @ICNT INT;\r\n\t                                \r\n\tSET @lStockQty\t= 0;\r\n\tSET @lSafeQty\t= 0;\r\n\t\r\n\tSET @SuccFlag\t= 0;\r\n\tSET @O_ERR_TXT = '';\t\r\n\t\r\n\t\t\t\t\r\n\tDECLARE MBA_REC CURSOR FOR\t\t\t\r\n\t\tSELECT\tA.SO_NO, A.PJT_NO, A.SO_QTY, B.ITEM_GUBUN, C.BOM_LEVEL\r\n\t\t FROM\tSCA200T A\r\n\t\t\t\tINNER JOIN BBA010T B\r\n\t\t\t\tON  A.PJT_NO = B.ITEM_CD\r\n\t\t\t\tINNER JOIN BAA060T C\r\n\t\t\t\tON  A.MODEL_NO = C.MODEL\r\n\t\t WHERE\tA.PJT_NO >= @IN_FRPJTNO\r\n\t\t AND\tA.PJT_NO <= @IN_TOPJTNO\r\n\t\t ORDER\tBY PJT_NO;\r\n\t \r\n\tOPEN MBA_REC;\r\n\tFETCH NEXT FROM MBA_REC\t\r\n\tINTO @SO_NO, @PJT_NO, @SO_QTY, @ITEM_GUBUN, @BOM_LEVEL;\r\n\t\r\n\tWHILE @@FETCH_STATUS = 0\r\n\t\tBEGIN\r\n\t\r\n\t\t\tEXEC SP_SetExpandedBOMNew_CHK @PJT_NO, '', @BOM_LEVEL, @SO_QTY, '', '', @SuccFlag OUTPUT, @O_ERR_TXT OUTPUT;\r\n\t\t--\tEXEC SP_SetExpandedBOMNew @PJT_NO, @IN_ITEMCD, @BOM_LEVEL, @SO_QTY, @IN_ITEMGB, '', @SuccFlag OUTPUT, @O_ERR_TXT OUTPUT;\r\n\t\t\tIF @@ERROR <> 0 or @O_ERR_TXT <> ''\r\n\t\t\t\tBEGIN\t\r\n\t\t\t\t\tSET @O_ERR_TXT = @O_ERR_TXT;\r\n\t\t\t\t\tRAISERROR(@O_ERR_TXT, 16,0);\r\n\t\t\t\tEND\r\n\t\t\t\r\n\t\t\tSELECT * FROM  BBA022T;\r\n\t\t\t\r\n\t\t\tSET @lLoop = @lLoop +1;\r\n\t\t\tFETCH NEXT FROM MBA_REC\t\r\n\t\t\tINTO @SO_NO, @PJT_NO, @SO_QTY, @ITEM_GUBUN, @BOM_LEVEL;\r\n\t\tEND\r\n\t\t\r\n\t\tCLOSE MBA_REC;\r\n\t\tDEALLOCATE MBA_REC;\r\n\r\nEND TRY \r\nBEGIN CATCH\r\n\t\r\n\tSELECT @ICNT = CURSOR_STATUS('global','MBA_REC');\r\n\tIF @ICNT = 1\r\n\tBEGIN \r\n\t\tCLOSE MBA_REC;\r\n\t\tDEALLOCATE MBA_REC;\r\n\tEND;\r\n\r\n\tSET @SuccFlag = 1;\r\n\t\r\n    SELECT @SuccFlag  = 1, @O_ERR_TXT =  '에러메시지 : ' + ERROR_MESSAGE() + char(13)+char(10)\r\n\t\t\t\t\t\t\t\t       + '에러행번호 : ' + CAST(error_line() as varchar)  + char(13)+char(10)\r\n\t\t\t\t\t\t\t\t       + '에러 프로시저 : ' + ISNULL(error_procedure(), '없음');                \t\r\nEND CATCH\r\n",
+  "mda100t": {
+    "columns": [
+      "ACPT_NO",
+      "ACPT_SEQ",
+      "ACPT_DT",
+      "ITEM_CD",
+      "PO_UNIT",
+      "ACPT_QTY",
+      "IN_PLAN_QTY",
+      "BAD_QTY",
+      "CUST_CD",
+      "WH_TYPE",
+      "WH_CD",
+      "STS",
+      "OUT_METH",
+      "PO_PRSN",
+      "TR_PRSN",
+      "TEST_PRSN",
+      "TEST_DT",
+      "ORG_PART",
+      "PO_TYPE",
+      "PO_NO",
+      "PO_SEQ",
+      "DOM_FORIGN",
+      "LOCATION_NO",
+      "IN_QTY",
+      "TR_NO",
+      "TR_SEQ",
+      "BL_NO",
+      "LC_NO",
+      "SO_NO",
+      "PJT_NO",
+      "T_ITEM_CD",
+      "P_ITEM_CD",
+      "PROGRESS",
+      "IN_PATH",
+      "DEL_NO",
+      "DEL_SEQ",
+      "REV",
+      "SAMPLE_QTY"
+    ],
+    "has_pjt_no": true
+  },
+  "mda200t": {
+    "columns": [
+      "ACPT_NO",
+      "ACPT_SEQ",
+      "BAD_CD",
+      "TEST_DT",
+      "BAD_KIND",
+      "ITEM_CD",
+      "BAD_QTY",
+      "CUST_CD",
+      "REMARKS",
+      "ORG_PART",
+      "SO_NO",
+      "PJT_NO",
+      "STS2",
+      "BAD_PRT"
+    ],
+    "count": 2
+  },
+  "mba200tv_def": "CREATE VIEW  [mirae].[MBA200TV]                                                                                             \r\n\t         (ACPT_NO,ACPT_SEQ  ,  ITEM_CD  , \t                                         \r\n                TEST_DT ,  BAD_KIND\t,   BAD_CD\t,                                        \r\n                  PO_NO\t,PO_SEQ\t,TR_NO\t\t,                                            \r\n                  QC_STS\t                                                                      \r\n ) AS                                                                                                           \r\n                                                                                                                 \r\n                                                                                                                 \r\nSELECT A.ACPT_NO,A.ACPT_SEQ,A.ITEM_CD,        \r\n       A.TEST_DT,A.BAD_KIND,A.BAD_CD,\r\n       B.PO_NO,B.PO_SEQ,TR_NO ,\r\n      CASE  WHEN ISNULL((SELECT COUNT(*) FROM MGA100T WHERE TYPE = '2' AND PO_NO = B.PO_NO AND PO_SEQ = B.PO_SEQ),0) <> 0  THEN '입고'  ELSE \r\n           ( CASE  WHEN SIGNIN_STS =   'ZZ'  THEN '입고' \r\n                   WHEN SIGNIN_STS <>  'ZZ'  THEN '반출' END)   END   AS QC_STS\r\n FROM MDA200T A\r\n       INNER JOIN  MDA100T B\r\n       ON A.ACPT_NO = B.ACPT_NO\r\n         AND   A.ACPT_SEQ = B.ACPT_SEQ \r\n         AND   A.ITEM_CD = B.ITEM_CD \r\n       LEFT OUTER JOIN  MZA200T C\r\n        ON  C.REMARK  = B.PO_NO\r\n        AND C.PJT_NO  = B.PJT_NO\r\n        AND C.ITEM_CD = B.ITEM_CD\r\n--WHERE A.ACPT_NO = B.ACPT_NO\r\n--  AND    B.ACPT_SEQ = B.ACPT_SEQ\r\n",
+  "mba200tv_cols": [
+    "ACPT_NO",
+    "ACPT_SEQ",
+    "ITEM_CD",
+    "TEST_DT",
+    "BAD_KIND",
+    "BAD_CD",
+    "PO_NO",
+    "PO_SEQ",
+    "TR_NO",
+    "QC_STS"
+  ],
+  "mba_ckr_hp3c_sample": [
+    {
+      "plan_no": "PR260300161",
+      "item_cd": "CKR20-145-1065L",
+      "pjt_no": "HP3C22601004",
+      "plan_dt": "20260324",
+      "need_qty": 1.0,
+      "sts": "30",
+      "po_no": "*"
+    }
+  ]
+}
