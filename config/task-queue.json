@@ -455,6 +455,18 @@
       "updated_at": "2026-04-08 11:37:07",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-admin-agent-bbf55f",
+      "agent": "admin-agent",
+      "task": "부서장 지시: wta-agents/agents/ 폴더의 agent.md 파일들을 workspaces/ 쪽으로 통합해주세요.",
+      "message": "부서장 지시: wta-agents/agents/ 폴더의 agent.md 파일들을 workspaces/ 쪽으로 통합해주세요.\n\n현재 agents/ 폴더에 있는 파일:\n1. agents/control-agent/agent.md → workspaces/control-agent/ 에 이미 CLAUDE.md가 있으면 agent.md 내용을 CLAUDE.md에 병합. 없으면 CLAUDE.md로 이름 변경하여 이동.\n2. agents/purchase-agent/agent.md → 동일\n3. agents/research-agent/agent.md → 동일\n\n통합 후 agents/ 폴더는 삭제해주세요. 각 workspaces의 기존 CLAUDE.md와 중복 내용이 있으면 기존 것 우선, 누락된 내용만 추가하세요.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 11:41:31",
+      "updated_at": "2026-04-08 11:41:31",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }

@@ -25,7 +25,7 @@ EQUIP_PLAN = {
     'CBN': 1,
     '검사기': 6,
     '호닝형상': 6,
-    'HGM': 4,
+    'PVD': 4,
 }
 
 
@@ -92,8 +92,8 @@ def classify_equip(pjt_names):
             types.add('검사기')
         if '호닝' in pjt:
             types.add('호닝형상')
-        if 'HGM' in pu or 'HIM' in pu:
-            types.add('HGM')
+        if 'PVD' in pu:
+            types.add('PVD')
     return types
 
 
