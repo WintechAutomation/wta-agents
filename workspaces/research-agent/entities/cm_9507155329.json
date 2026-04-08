@@ -1,0 +1,118 @@
+{
+  "page_id": "9507155329",
+  "title": "3-2.  조립 및 설치",
+  "entities": [
+    {
+      "id": "eng_001",
+      "name": "Wintech Automation 엔지니어",
+      "type": "Person",
+      "properties": {}
+    },
+    {
+      "id": "eq_001",
+      "name": "설비",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "proc_001",
+      "name": "조립 및 설치",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_002",
+      "name": "공압 설치",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_003",
+      "name": "전기 설치",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "comp_001",
+      "name": "공압 연결",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_002",
+      "name": "전기 연결",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_003",
+      "name": "공급 전원 케이블",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_004",
+      "name": "컨트롤 판넬 외부 커버",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "doc_001",
+      "name": "설비 명판",
+      "type": "Manual",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "source": "eng_001",
+      "target": "proc_001",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "proc_001",
+      "target": "eq_001",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "proc_001",
+      "target": "proc_002",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "proc_001",
+      "target": "proc_003",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "proc_002",
+      "target": "comp_001",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "proc_003",
+      "target": "comp_002",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "proc_003",
+      "target": "comp_003",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "proc_003",
+      "target": "comp_004",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "doc_001",
+      "target": "proc_002",
+      "type": "DOCUMENTS"
+    },
+    {
+      "source": "doc_001",
+      "target": "proc_003",
+      "type": "DOCUMENTS"
+    }
+  ]
+}

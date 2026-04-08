@@ -1,0 +1,113 @@
+{
+  "page_id": "9507155454",
+  "title": "3-5.  기본 조작",
+  "entities": [
+    {
+      "id": "eq_001",
+      "name": "설비",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "comp_001",
+      "name": "POWER 램프",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_002",
+      "name": "START 버튼",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_003",
+      "name": "PAUSE 버튼",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_004",
+      "name": "E-STOP 버튼",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "proc_001",
+      "name": "자동생산 작업",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_002",
+      "name": "시작",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_003",
+      "name": "일시정지",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_004",
+      "name": "비상정지",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "manual_001",
+      "name": "3-5. 기본 조작",
+      "type": "Manual",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "source": "eq_001",
+      "target": "comp_001",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eq_001",
+      "target": "comp_002",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eq_001",
+      "target": "comp_003",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eq_001",
+      "target": "comp_004",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "proc_001",
+      "target": "proc_002",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "proc_001",
+      "target": "proc_003",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "proc_001",
+      "target": "proc_004",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "manual_001",
+      "target": "eq_001",
+      "type": "DOCUMENTS"
+    },
+    {
+      "source": "manual_001",
+      "target": "proc_001",
+      "type": "DOCUMENTS"
+    }
+  ]
+}
