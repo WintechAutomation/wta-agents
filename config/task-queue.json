@@ -1763,6 +1763,66 @@
       "updated_at": "2026-04-08 23:17:32",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-crafter-3ee26f",
+      "agent": "crafter",
+      "task": "token usage UI",
+      "message": "",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 23:31:50",
+      "updated_at": "2026-04-08 23:31:50",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-crafter-55bb49",
+      "agent": "crafter",
+      "task": "에이전트 컨트롤 센터에 토큰 사용량 표시 UI 추가",
+      "message": "OfficePage에 전체 Claude API 토큰 사용량 표시. admin-agent가 10분마다 POST /api/usage로 전송하면 실시간 반영. API endpoint + 프론트엔드 UI 구현.",
+      "status": "done",
+      "priority": "high",
+      "created_at": "2026-04-08 23:32:04",
+      "updated_at": "2026-04-08 23:35:50",
+      "last_report_at": null,
+      "completed_at": "2026-04-08 23:35:50"
+    },
+    {
+      "id": "tq-admin-agent-ffeb54",
+      "agent": "admin-agent",
+      "task": "Claude API 토큰 사용량 10분 주기 수집",
+      "message": "Claude Code /usage 정보를 10분마다 조회하여 대시보드 API(POST /api/usage)로 전송. 전체 팀 공용 토큰 하나만 수집.",
+      "status": "in_progress",
+      "priority": "high",
+      "created_at": "2026-04-08 23:32:06",
+      "updated_at": "2026-04-08 23:32:47",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-crafter-8ba437",
+      "agent": "crafter",
+      "task": "작업 지시: 에이전트 컨트롤 센터(OfficePage)에 토큰 사용량 표시 기능 추가",
+      "message": "작업 지시: 에이전트 컨트롤 센터(OfficePage)에 토큰 사용량 표시 기능 추가\n\n요구사항:\n1. 대시보드 백엔드(app.py)에 API 추가:\n   - POST /api/usage — admin-agent가 사용량 데이터 전송 (JSON: {tokens_used, tokens_limit, cost, period, updated_at})\n   - GET /api/usage — 프론트엔드에서 최신 사용량 조회\n   - 데이터는 메모리 또는 파일로 저장 (DB 불필요)\n\n2. 프론트엔드 OfficePage.tsx에 사용량 표시:\n   - 에이전트 컨트롤 센터 페이지 적절한 위치에 토큰 사용량 표시\n   - 10분마다 GET /api/usage로 갱신 (또는 socketio로 실시간)\n   - 표시 항목: 토큰 사용량, 비용, 마지막 갱신 시간\n   - 디자인은 기존 NOC 스타일에 맞게\n\n3. 빌드까지 완료 후 보고\n\n작업큐: tq-crafter-55bb49",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 23:32:21",
+      "updated_at": "2026-04-08 23:32:21",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-admin-agent-15ccac",
+      "agent": "admin-agent",
+      "task": "작업 지시: Claude API 토큰 사용량 10분 주기 수집",
+      "message": "작업 지시: Claude API 토큰 사용량 10분 주기 수집\n\n요구사항:\n1. Claude Code CLI의 /usage 정보 또는 Anthropic API 사용량을 10분마다 조회\n2. 조회 결과를 대시보드 API로 전송: POST http://localhost:5555/api/usage\n3. JSON 형식: {\"tokens_used\": 숫자, \"tokens_limit\": 숫자, \"cost\": 금액, \"period\": \"기간\", \"updated_at\": \"ISO시간\"}\n4. 전체 팀이 하나의 토큰을 공유하므로 하나의 사용량만 수집하면 됨\n5. APScheduler(대시보드 jobs.json)로 스케줄 등록하거나, 별도 수집 스크립트를 대시보드 스케줄러에 등록\n\n참고: crafter가 대시보드 API(POST/GET /api/usage) 엔드포인트를 구현 중. API 준비되면 연동.\n\n작업큐: tq-admin-agent-ffeb54",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 23:32:26",
+      "updated_at": "2026-04-08 23:32:26",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }

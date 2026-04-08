@@ -1,7 +1,17 @@
 // 에이전트 관제센터 (NOC 스타일) — React + CSS/SVG
-import { useState, useEffect, useRef, useMemo } from 'react'
+import { useState, useEffect, useRef, useMemo, useCallback } from 'react'
 import { useAgentStore, AGENT_PROFILES } from '@/store/agentStore'
+import { io } from 'socket.io-client'
 import agentsConfig from '@agents'
+
+// ── 토큰 사용량 타입 ──────────────────────────────────────────
+interface UsageData {
+  tokens_used: number
+  tokens_limit: number
+  cost: number
+  period: string
+  updated_at: string
+}
 
 // ── 부서별 그룹 정의 ──────────────────────────────────────────
 interface DeptGroup {
@@ -86,6 +96,14 @@ function calcRadialLayout(cx: number, cy: number, radius: number): NodePos[] {
   return nodes
 }
 
+// ── 토큰 수 포맷 (1234567 → "1.23M") ──────────────────────────────
+function formatTokens(n: number): string {
+  if (n >= 1_000_000_000) return `${(n / 1_000_000_000).toFixed(1)}B`
+  if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(1)}M`
+  if (n >= 1_000) return `${(n / 1_000).toFixed(1)}K`
+  return String(n)
+}
+
 // ── 최근 메시지 시간 포맷 ────────────────────────────────────────
 function formatTime(timeStr: string): string {
   if (!timeStr) return ''
@@ -103,7 +121,27 @@ export default function OfficePage() {
 
   const [selectedAgent, setSelectedAgent] = useState<string | null>(null)
   const [pulseLines, setPulseLines] = useState<Set<string>>(new Set())
+  const [usage, setUsage] = useState<UsageData | null>(null)
   const svgRef = useRef<SVGSVGElement>(null)
+
+  // 토큰 사용량 fetch + socket 수신
+  const fetchUsage = useCallback(() => {
+    fetch('/api/usage')
+      .then((r) => r.json())
+      .then((d) => { if (d.ok && d.data?.tokens_used) setUsage(d.data) })
+      .catch(() => {})
+  }, [])
+
+  useEffect(() => {
+    fetchUsage()
+    const interval = setInterval(fetchUsage, 600_000) // 10분 폴링
+    const socket = io('/', { path: '/socket.io', transports: ['websocket', 'polling'] })
+    socket.on('usage_update', (data: UsageData) => setUsage(data))
+    return () => {
+      clearInterval(interval)
+      socket.disconnect()
+    }
+  }, [fetchUsage])
 
   const onlineSet = useMemo(
     () => new Set(agents.filter((a) => a.online).map((a) => a.agent_id)),
@@ -165,7 +203,10 @@ export default function OfficePage() {
   const activePairSet = useMemo(() => {
     const set = new Set<string>()
     for (const lineKey of pulseLines) {
-      const [from, to] = lineKey.split('-')
+      const sepIdx = lineKey.indexOf('|')
+      if (sepIdx < 0) continue
+      const from = lineKey.slice(0, sepIdx)
+      const to = lineKey.slice(sepIdx + 1)
       set.add([from, to].sort().join('|'))
     }
     return set
@@ -180,7 +221,7 @@ export default function OfficePage() {
     lastMsgIdRef.current = latest.id
     const from = latest.from
     const to = latest.to
-    const lineKey = `${from}-${to}`
+    const lineKey = `${from}|${to}`
     setPulseLines((prev) => new Set(prev).add(lineKey))
     setTimeout(() => {
       setPulseLines((prev) => {
@@ -219,6 +260,22 @@ export default function OfficePage() {
         <KpiCard label="TOOL CALLS" value={totalToolCalls} color="#3b82f6" />
         <KpiCard label="UPTIME" value={stats.uptime} color="#a855f7" />
         <KpiCard label="MESSAGES" value={stats.total_messages} color="#f59e0b" />
+        {usage && (
+          <>
+            <KpiCard
+              label="TOKENS"
+              value={formatTokens(usage.tokens_used)}
+              color="#e879f9"
+              sub={usage.tokens_limit ? `/ ${formatTokens(usage.tokens_limit)}` : undefined}
+            />
+            <KpiCard
+              label="COST"
+              value={`$${usage.cost.toFixed(2)}`}
+              color="#fb923c"
+              sub={usage.period || undefined}
+            />
+          </>
+        )}
       </div>
 
       <div className="flex gap-3 flex-1 min-h-0">
@@ -641,7 +698,7 @@ export default function OfficePage() {
 }
 
 // ── KPI 카드 ────────────────────────────────────────────────────
-function KpiCard({ label, value, color }: { label: string; value: string | number; color: string }) {
+function KpiCard({ label, value, color, sub }: { label: string; value: string | number; color: string; sub?: string }) {
   return (
     <div
       className="flex items-center gap-2 rounded-lg border px-3 py-1.5"
@@ -658,6 +715,7 @@ function KpiCard({ label, value, color }: { label: string; value: string | numbe
       <span className="text-sm font-bold font-mono" style={{ color }}>
         {value}
       </span>
+      {sub && <span className="text-xs text-slate-600 font-mono">{sub}</span>}
     </div>
   )
 }

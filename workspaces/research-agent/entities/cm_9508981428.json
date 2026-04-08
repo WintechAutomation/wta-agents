@@ -1,0 +1,129 @@
+{
+  "page_id": "9508981428",
+  "title": "기본 작업 위치",
+  "entities": [
+    {
+      "id": "eq_001",
+      "name": "CARBONPLATE1",
+      "type": "Equipment",
+      "properties": {
+        "description": "플레이트 원점"
+      }
+    },
+    {
+      "id": "proc_001",
+      "name": "플레이트 정보 설정",
+      "type": "Process",
+      "properties": {
+        "sub_items": [
+          "플레이트 형상",
+          "크기",
+          "offset"
+        ]
+      }
+    },
+    {
+      "id": "proc_002",
+      "name": "기본 작업 위치 도달",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_003",
+      "name": "Y축 이동",
+      "type": "Process",
+      "properties": {
+        "target": "상단"
+      }
+    },
+    {
+      "id": "iss_001",
+      "name": "스트로크 부족",
+      "type": "Issue",
+      "properties": {
+        "context": "Y축이 상단까지 이동하기"
+      }
+    },
+    {
+      "id": "iss_002",
+      "name": "기본위치 도달 불가",
+      "type": "Issue",
+      "properties": {}
+    },
+    {
+      "id": "comp_001",
+      "name": "offset",
+      "type": "Component",
+      "properties": {
+        "usage": "왼쪽 상단으로 원점 설정"
+      }
+    },
+    {
+      "id": "comp_002",
+      "name": "Y축",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_003",
+      "name": "전면 엘리베이터",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "man_001",
+      "name": "기본 작업 위치",
+      "type": "Manual",
+      "properties": {
+        "file_path": "D:\\WintechAutomation\\WMI\\Data\\Systemdata.xml"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "source": "eq_001",
+      "target": "proc_001",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "proc_001",
+      "target": "comp_001",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "proc_001",
+      "target": "comp_002",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "proc_002",
+      "target": "iss_002",
+      "type": "HAS_ISSUE"
+    },
+    {
+      "source": "proc_003",
+      "target": "iss_001",
+      "type": "HAS_ISSUE"
+    },
+    {
+      "source": "comp_003",
+      "target": "comp_002",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "comp_001",
+      "target": "proc_002",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "man_001",
+      "target": "eq_001",
+      "type": "DOCUMENTS"
+    },
+    {
+      "source": "man_001",
+      "target": "proc_001",
+      "type": "DOCUMENTS"
+    }
+  ]
+}

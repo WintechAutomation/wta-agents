@@ -1,0 +1,211 @@
+{
+  "page_id": "9508981329",
+  "title": "원점 위치",
+  "entities": [
+    {
+      "id": "e1",
+      "name": "원점 위치",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e2",
+      "name": "HMI",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e3",
+      "name": "시스템설정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e4",
+      "name": "하드웨어 원점 위치",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e5",
+      "name": "Z 축",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e6",
+      "name": "로봇",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e7",
+      "name": "브레이크 해제 버튼",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e8",
+      "name": "하드웨어 스토퍼",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e9",
+      "name": "X 축",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e10",
+      "name": "X2 축",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e11",
+      "name": "Y 축",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e12",
+      "name": "FeederY 축",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e13",
+      "name": "메인 모니터",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e14",
+      "name": "Elevator_L",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e15",
+      "name": "엘리베이터",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e16",
+      "name": "플레이트",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e17",
+      "name": "Feeder 컨베이어",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e18",
+      "name": "LIFT",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e19",
+      "name": "컨베이어부",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e20",
+      "name": "R 축",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e21",
+      "name": "Deb_L",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e22",
+      "name": "Deb_R",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e23",
+      "name": "원점 Offset",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e24",
+      "name": "Limit 센서",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e25",
+      "name": "원점위치 탭",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e26",
+      "name": "WMXServer.exe",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e27",
+      "name": "AxisParameter",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e28",
+      "name": "HomeShiftDistance",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e29",
+      "name": "Controller",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e30",
+      "name": "Deviceinfo.xml",
+      "type": "Manual",
+      "properties": {}
+    },
+    {
+      "id": "e31",
+      "name": "EZI_SERVO_II_PLUS_E",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e32",
+      "name": "좌측 브러쉬",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e33",
+      "name": "우측 브러쉬",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e34",
+      "name": "HomeData.xml",
+      "type": "Manual",
+      "properties": {}
+    }
+  ],
+  "relations": []
+}

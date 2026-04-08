@@ -90,6 +90,15 @@
     "created_at": "2026-04-08 08:00:00"
   },
   {
+    "id": "collect-usage",
+    "name": "Claude API 사용량 수집",
+    "description": "10분 주기 — Claude Code JSONL 파싱, 오늘 토큰/비용 집계 후 대시보드 전송",
+    "command": "\"C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python311\\python.exe\" \"C:\\MES\\wta-agents\\scripts\\collect-usage.py\"",
+    "cron": "*/10 * * * *",
+    "enabled": true,
+    "created_at": "2026-04-08 23:00:00"
+  },
+  {
     "id": "task-queue-cleanup",
     "name": "작업큐 자동 정리",
     "description": "매시 정각 — done 24h 이상 삭제, in_progress 2h 이상 MAX 알림, 중복 pending 정리",

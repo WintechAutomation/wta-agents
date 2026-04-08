@@ -1,0 +1,145 @@
+{
+  "page_id": "9508925834",
+  "title": "장비 구조",
+  "entities": [
+    {
+      "id": "eq_001",
+      "name": "장비",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "comp_001",
+      "name": "메인 전원 스위치",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_002",
+      "name": "메인 공압 밸브",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_003",
+      "name": "메인 공압 조절 밸브",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_004",
+      "name": "모니터",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_005",
+      "name": "시작버튼",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_006",
+      "name": "일시정지버튼",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_007",
+      "name": "E-STOP",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_008",
+      "name": "키보드&모우스",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_009",
+      "name": "TP",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_010",
+      "name": "하부 전장 판넬",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_011",
+      "name": "막대 공급 인덱스",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_012",
+      "name": "팔레트 공급위치",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_013",
+      "name": "팔레트 취출 위치",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_014",
+      "name": "스프링 공급 장치",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_015",
+      "name": "ROT 축",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_016",
+      "name": "X 축",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_017",
+      "name": "반전기",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "proc_001",
+      "name": "메인 공압 ON/OFF",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_002",
+      "name": "공압 강약 조절",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_003",
+      "name": "막대 조립",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_004",
+      "name": "제품 반전 이송",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_005",
+      "name": "반전적재",
+      "type": "Process",
+      "properties": {}
+    }
+  ],
+  "relations": []
+}

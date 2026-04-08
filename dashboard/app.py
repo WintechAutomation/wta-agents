@@ -981,6 +981,33 @@ def api_tool_log_stats():
         return {"ok": False, "error": str(e)}, 500
 
 
+# ── 토큰 사용량 API ──────────────────────────────────────────
+_usage_data: dict = {}
+
+@app.route("/api/usage", methods=["POST"])
+def api_usage_post():
+    """admin-agent가 토큰 사용량 데이터 전송"""
+    try:
+        global _usage_data
+        data = request.get_json(force=True)
+        _usage_data = {
+            "tokens_used": data.get("tokens_used", 0),
+            "tokens_limit": data.get("tokens_limit", 0),
+            "cost": data.get("cost", 0),
+            "period": data.get("period", ""),
+            "updated_at": data.get("updated_at", ""),
+        }
+        socketio.emit("usage_update", _usage_data)
+        return {"ok": True}
+    except Exception as e:
+        return {"ok": False, "error": str(e)}, 500
+
+@app.route("/api/usage", methods=["GET"])
+def api_usage_get():
+    """프론트엔드에서 최신 사용량 조회"""
+    return {"ok": True, "data": _usage_data}
+
+
 # ── WebSocket 이벤트 ──
 @socketio.on("connect")
 def handle_connect():
