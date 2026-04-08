@@ -1,0 +1,9 @@
+{"time":"2026-04-08T17:18:44.0000806+09:00","level":"INFO","msg":"설정 로드 완료","port":8100,"env":"production"}
+{"time":"2026-04-08T17:18:44.084017+09:00","level":"INFO","msg":"PostgreSQL 연결 성공"}
+{"time":"2026-04-08T17:18:44.0916634+09:00","level":"INFO","msg":"ERP SQL Server 연결 성공"}
+{"time":"2026-04-08T17:18:44.0926089+09:00","level":"INFO","msg":"ERP 관리 기능 활성화"}
+{"time":"2026-04-08T17:18:44.0933057+09:00","level":"INFO","msg":"NAS 관리 기능 활성화","host":"192.168.1.6","port":"5001"}
+{"time":"2026-04-08T17:18:44.0933057+09:00","level":"INFO","msg":"SPA 정적 파일 서빙 활성화","dist":"..\\frontend\\dist"}
+{"time":"2026-04-08T17:18:44.0933057+09:00","level":"INFO","msg":"서버 시작","addr":":8100"}
+{"time":"2026-04-08T17:18:58.4075129+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"GET","path":"/health","latency":147100,"ip":"::1"}
+{"time":"2026-04-08T17:19:50.545884+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"GET","path":"/api/erp/inventory/full-status","latency":15005935200,"ip":"::1","user_id":10,"username":"hjcho","query":"fr_date=2024-01-01"}
