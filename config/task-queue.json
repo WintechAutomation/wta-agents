@@ -851,6 +851,18 @@
       "updated_at": "2026-04-08 17:55:06",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-docs-agent-5799ce",
+      "agent": "docs-agent",
+      "task": "db-manager가 equip_map 완료했습니다. erp_data.json [9]번 필드가 장비유형 배열로 업데이트됨.",
+      "message": "db-manager가 equip_map 완료했습니다. erp_data.json [9]번 필드가 장비유형 배열로 업데이트됨.\n\n- 3,296건 장비유형 배열 반영\n- 범용부품 다중장비 매핑 포함 (예: 01-00-002-0 → ['CVD', 'PVD', '검사기', '교정', '프레스', '핸들러', '호닝형상'])\n\nHTML 재적용 진행해주세요. 기존 키워드 매칭 대신 이 배열 데이터를 우선 사용하도록.\n김근형님께 알림도 부탁합니다.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 18:03:37",
+      "updated_at": "2026-04-08 18:03:37",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }

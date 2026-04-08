@@ -32,47 +32,30 @@ PROJECTS = [
 # 이미지 최대 폭 (cm)
 IMG_MAX_WIDTH_CM = 12
 
-# Confluence 메타데이터 제거 패턴
-REMOVE_PATTERNS = [
-    # 자동생성 멘트 (한 줄 전체)
-    re.compile(r'.*자동\s*생성.*', re.IGNORECASE),
-    # image-meta.json 언급 (한 줄 전체)
-    re.compile(r'.*image-meta\.json.*', re.IGNORECASE),
-    # 페이지 ID 행
-    re.compile(r'^\s*페이지\s*ID\s*[:：]\s*\d+\s*$'),
-    # 원본 링크 행
-    re.compile(r'^\s*원본\s*링크\s*[:：].*atlassian.*$', re.IGNORECASE),
-    # 이미지 파일명만 있는 행 (실제 이미지 없이 파일명만 텍스트로)
-    re.compile(r'^\s*image-\d{8}-\d{6}\.\w+\s*$'),
-]
-
-# 인라인 제거 패턴 (행 전체가 아닌 부분 매칭)
-INLINE_REMOVE_PATTERNS = [
+# Confluence 메타데이터 제거: 멀티라인 패턴 (줄바꿈 포함 텍스트에서 제거)
+MULTILINE_REMOVE = [
+    # "자동 생성됨/생성된" 멘트만 (연구노트 자동생성 안내문)
+    re.compile(r'[^\n]*(?:본\s*연구노트는|이\s*문서는)[^\n]*자동\s*생성[^\n]*', re.IGNORECASE),
+    # image-meta.json 언급 (줄 전체)
+    re.compile(r'[^\n]*image-meta\.json[^\n]*', re.IGNORECASE),
+    # 페이지 ID (멀티라인: "페이지 ID" + 줄바꿈 + ": 숫자")
+    re.compile(r'페이지\s*ID\s*[:：]?\s*\n?\s*[:：]?\s*\d+', re.IGNORECASE),
+    # 원본 링크 (멀티라인: "원본 링크" + URL)
+    re.compile(r'원본\s*링크\s*[:：]?\s*\n?\s*[:：]?\s*https?://[^\s\n]+(?:atlassian|confluence)[^\s\n]*', re.IGNORECASE),
+    # atlassian URL 단독 행
+    re.compile(r'^\s*https?://[^\s]*atlassian[^\s]*\s*$', re.MULTILINE),
+    # 이미지 파일명 텍스트 (인라인)
     re.compile(r'image-\d{8}-\d{6}\.\w+'),
 ]
 
 
 def clean_text(text):
     """Confluence 메타데이터 텍스트 제거"""
-    lines = text.split('\n')
-    cleaned = []
-    for line in lines:
-        skip = False
-        for pat in REMOVE_PATTERNS:
-            if pat.match(line):
-                skip = True
-                break
-        if skip:
-            continue
-        # 인라인 패턴 제거
-        for pat in INLINE_REMOVE_PATTERNS:
-            line = pat.sub('', line)
-        # 빈 줄이 된 경우에도 유지 (원문 구조 보존)
-        cleaned.append(line)
-    result = '\n'.join(cleaned)
+    for pat in MULTILINE_REMOVE:
+        text = pat.sub('', text)
     # 연속 빈 줄 정리 (3개 이상 → 2개)
-    result = re.sub(r'\n{3,}', '\n\n', result)
-    return result.strip()
+    text = re.sub(r'\n{3,}', '\n\n', text)
+    return text.strip()
 
 
 class HTMLContentExtractor(HTMLParser):
@@ -123,7 +106,7 @@ class HTMLContentExtractor(HTMLParser):
 
     def handle_endtag(self, tag):
         if tag in ('h1', 'h2', 'h3', 'h4'):
-            text = ''.join(self._current_text).strip()
+            text = clean_text(''.join(self._current_text).strip())
             if text:
                 prefix = ''
                 if self._heading_level == 2:
@@ -151,9 +134,10 @@ class HTMLContentExtractor(HTMLParser):
     def _flush_text(self):
         text = ''.join(self._current_text).strip()
         if text:
-            # 연속 줄바꿈 정리
-            text = re.sub(r'\n{3,}', '\n\n', text)
-            self.elements.append(('text', text))
+            # Confluence 메타데이터 제거
+            text = clean_text(text)
+            if text:
+                self.elements.append(('text', text))
         self._current_text = []
 
     def finalize(self):
@@ -292,41 +276,41 @@ def add_image_to_cell(cell, img_bytes, fmt='jpeg'):
 def build_section_text(overview_html, detail_sections_html):
     """HTML 섹션들을 docx 셀별 텍스트+이미지로 구성
 
+    원문 텍스트를 한 글자도 빠짐없이 포함 (요약/축소 금지).
+    Confluence 메타데이터(자동생성 멘트, 이미지파일명, 페이지ID, 원본링크)만 제거.
+
     Returns:
-        dict with keys: 'goal', 'method', 'results', 'analysis'
+        dict with keys: 'goal', 'method', 'results'
         각 값은 [(type, content), ...] 리스트
     """
 
-    # 개요에서 연구 목표 추출
+    # 개요에서 연구 목표 추출 — 전문 포함
     goal_elements = []
     if overview_html:
         elements = parse_html_to_elements(overview_html)
         for elem in elements:
-            if elem[0] == 'text':
-                goal_elements.append(elem)
-            elif elem[0] == 'image':
+            if elem[0] in ('text', 'image', 'heading'):
                 goal_elements.append(elem)
 
-    # 세부 섹션을 method(실험/개발내용), results(결과), analysis(고찰)로 분배
+    # 세부 섹션 — 모든 텍스트+이미지를 빠짐없이 포함
+    # method: 핵심내용(텍스트 위주), results: 주요이미지+첨부자료(이미지 위주)
     method_elements = []
     results_elements = []
 
     for title, section_html in detail_sections_html:
         elements = parse_html_to_elements(section_html)
-        # 핵심내용 → method, 주요이미지/결과 → results
         current_target = method_elements
         for elem in elements:
             if elem[0] == 'heading':
                 text = elem[1]
-                if '주요 이미지' in text or '결과' in text or '데이터' in text:
+                if '주요 이미지' in text or '관련 첨부' in text:
                     current_target = results_elements
                 elif '핵심 내용' in text:
                     current_target = method_elements
             current_target.append(elem)
 
-    # 이미지가 없는 결과 섹션에 method의 이미지를 일부 이동
+    # results에 이미지가 없으면 method의 이미지를 이동
     if not any(e[0] == 'image' for e in results_elements):
-        # method에서 이미지를 결과로 이동
         new_method = []
         for elem in method_elements:
             if elem[0] == 'image':

@@ -1,0 +1,45 @@
+function recalcAll() {
+  const cutoff = new Date();
+  cutoff.setFullYear(cutoff.getFullYear() - 5);
+  for (let i = 0; i < DATA.length; i++) {
+    const r = DATA[i];
+    // 5년 이상 발주 품목은 사용예정 제외
+    let tooOld = false;
+    if (r[7]) {
+      const d = new Date(r[7]);
+      if (!isNaN(d) && d < cutoff) tooOld = true;
+    }
+    const types = tooOld ? [] : parseEquipTypes(r[9], r[8]);
+    if (types.length === 0) {
+      r[9] = '';
+      r[10] = 0; r[11] = 0;
+      r[12] = r[3]; r[13] = r[4];
+      continue;
+    }
+    const eqQty = types.reduce((s, t) => s + (EQUIP_PLAN[t] || 0), 0);
+    const unitP = (r[3] > 0) ? r[4] / r[3] : 0;
+    // 라벨 갱신
+    if (types.length === 1) {
+      r[9] = types[0] + '(' + EQUIP_PLAN[types[0]] + ')';
+    } else {
+      r[9] = types.map(t => t + '(' + EQUIP_PLAN[t] + ')').join('/') + ' 중복';
+    }
+    const useQty = Math.min(eqQty, r[3]);
+    r[10] = useQty;
+    r[11] = Math.round(useQty * unitP);
+    r[12] = Math.max(0, r[3] - eqQty);
+    r[13] = Math.round(r[12] * unitP);
+  }
+  // 요약 카드 업데이트
+  let totalUseAmt = 0, totalRemainAmt = 0;
+  for (const r of DATA) { totalUseAmt += r[11]; totalRemainAmt += r[13]; }
+  const cards = document.querySelectorAll('.summary-card');
+  const totalCount = document.getElementById('total-count');
+  if (totalCount) totalCount.textContent = DATA.length.toLocaleString() + '건';
+  if (cards[2]) { cards[2].querySelector('.value').textContent = '-' + totalUseAmt.toLocaleString() + '원'; cards[2].querySelector('.sub-value').textContent = '(약 ' + (totalUseAmt/100000000).toFixed(1) + '억원)'; }
+  if (cards[3]) { cards[3].querySelector('.value').textContent = totalRemainAmt.toLocaleString() + '원'; cards[3].querySelector('.sub-value').textContent = '(약 ' + (totalRemainAmt/100000000).toFixed(1) + '억원)'; }
+
+  saveEquipPlan();
+  renderEquipCards();
+  applyFilters();
+}

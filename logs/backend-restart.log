@@ -34,3 +34,7 @@
 {"time":"2026-04-08T17:47:26.4327419+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"GET","path":"/site/wp-includes/wlwmanifest.xml","latency":0,"ip":"193.32.126.230"}
 {"time":"2026-04-08T17:47:26.6505079+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"GET","path":"/cms/wp-includes/wlwmanifest.xml","latency":292700,"ip":"193.32.126.230"}
 {"time":"2026-04-08T17:48:49.6148113+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"GET","path":"/","latency":642100,"ip":"117.33.163.216"}
+{"time":"2026-04-08T17:55:48.5444868+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"GET","path":"/api/erp/inventory/full-status","latency":17115068500,"ip":"::1","user_id":10,"username":"hjcho","query":"search=DTP7H-D&fr_date=2020-01-01"}
+{"time":"2026-04-08T17:58:14.0690827+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"GET","path":"/health","latency":0,"ip":"::1"}
+{"time":"2026-04-08T18:00:00.1462907+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"GET","path":"/health","latency":0,"ip":"::1"}
+exit status 0xffffffff
