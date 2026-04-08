@@ -791,6 +791,18 @@
       "updated_at": "2026-04-08 17:20:20",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-docs-agent-3718c7",
+      "agent": "docs-agent",
+      "task": "부서장 지시. 경상연구개발 연구노트 업데이트 작업.",
+      "message": "부서장 지시. 경상연구개발 연구노트 업데이트 작업.\n\n소스 (참고 HTML):\n- workspaces/docs-agent/연구개발-1-장비물류.html\n- workspaces/docs-agent/연구개발-2-분말검사.html\n- workspaces/docs-agent/연구개발-3-연삭측정제어.html\n- workspaces/docs-agent/연구개발-4-포장혼입검사.html\n- workspaces/docs-agent/연구개발-5-호닝신뢰성.html\n\n대상 (업데이트할 docx):\n- reports/MAX/경상연구개발/연구노트-1-장비물류.docx\n- reports/MAX/경상연구개발/연구노트-2-분말검사.docx\n- reports/MAX/경상연구개발/연구노트-3-연삭측정제어.docx\n- reports/MAX/경상연구개발/연구노트-4-포장혼입검사.docx\n- reports/MAX/경상연구개발/연구노트-5-호닝신뢰성.docx\n\n주의사항:\n- HTML 내용을 토대로 연구노트 docx 내용 업데이트\n- 이미지는 크게 넣을 필요 없음, 적당한 사이즈로 줄여서 포함\n- 기존 docx 템플릿/양식은 유지하면서 내용만 업데이트\n\n완료 후 보고 바랍니다.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 17:48:48",
+      "updated_at": "2026-04-08 17:48:48",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }
