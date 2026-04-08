@@ -1,0 +1,103 @@
+{
+  "page_id": "9508981285",
+  "title": "원점 매뉴얼",
+  "entities": [
+    {
+      "id": "e1",
+      "name": "원점 매뉴얼",
+      "type": "Manual",
+      "properties": {}
+    },
+    {
+      "id": "e2",
+      "name": "원점 세팅",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e3",
+      "name": "HMI",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e4",
+      "name": "시스템설정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e5",
+      "name": "하드웨어 원점",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e6",
+      "name": "2 단컨베이어",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e7",
+      "name": "LIFT",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e8",
+      "name": "엘레베이터",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e9",
+      "name": "FEEDER_Y",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e10",
+      "name": "Elevator",
+      "type": "Component",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "DOCUMENTS"
+    },
+    {
+      "source": "e2",
+      "target": "e4",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e4",
+      "target": "e5",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e3",
+      "target": "e4",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e6",
+      "target": "e7",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e8",
+      "target": "e9",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e8",
+      "target": "e10",
+      "type": "USES_COMPONENT"
+    }
+  ]
+}

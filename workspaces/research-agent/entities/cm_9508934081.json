@@ -1,0 +1,201 @@
+{
+  "page_id": "9508934081",
+  "title": "현재 테이블 목록",
+  "entities": [
+    {
+      "id": "machines",
+      "name": "machines",
+      "type": "Equipment",
+      "properties": {
+        "description": "장비 종류"
+      }
+    },
+    {
+      "id": "machine_units",
+      "name": "machine_units",
+      "type": "Component",
+      "properties": {
+        "description": "장비 내 유닛"
+      }
+    },
+    {
+      "id": "machine_info",
+      "name": "machine_info",
+      "type": "Equipment",
+      "properties": {
+        "description": "장비 정보"
+      }
+    },
+    {
+      "id": "departments",
+      "name": "departments",
+      "type": "Process",
+      "properties": {
+        "description": "부서"
+      }
+    },
+    {
+      "id": "alarm_mains",
+      "name": "alarm_mains",
+      "type": "Process",
+      "properties": {
+        "description": "메인 알람"
+      }
+    },
+    {
+      "id": "alarm_details",
+      "name": "alarm_details",
+      "type": "Process",
+      "properties": {
+        "description": "상세 알람"
+      }
+    },
+    {
+      "id": "alarm_actions",
+      "name": "alarm_actions",
+      "type": "Process",
+      "properties": {
+        "description": "알람 조치 방법"
+      }
+    },
+    {
+      "id": "alarm_infos",
+      "name": "alarm_infos",
+      "type": "Process",
+      "properties": {
+        "description": "알람 정보"
+      }
+    },
+    {
+      "id": "signal_logs",
+      "name": "signal_logs",
+      "type": "Process",
+      "properties": {
+        "description": "입출력 이력"
+      }
+    },
+    {
+      "id": "alarm_logs",
+      "name": "alarm_logs",
+      "type": "Process",
+      "properties": {
+        "description": "알람 이력"
+      }
+    },
+    {
+      "id": "lot_logs",
+      "name": "lot_logs",
+      "type": "Process",
+      "properties": {
+        "description": "생산이력"
+      }
+    },
+    {
+      "id": "workstate_logs",
+      "name": "workstate_logs",
+      "type": "Process",
+      "properties": {
+        "description": "작업 상태 이력"
+      }
+    },
+    {
+      "id": "alarm_count",
+      "name": "alarm_count",
+      "type": "Process",
+      "properties": {
+        "description": "alarm_log INSERT 발생 시점 시간 데이터 저장"
+      }
+    },
+    {
+      "id": "table_definition_doc",
+      "name": "테이블 정의서",
+      "type": "Manual",
+      "properties": {
+        "status": "추가 예정",
+        "date": "-23.02.17"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "source": "machines",
+      "target": "machine_units",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "machines",
+      "target": "machine_info",
+      "type": "OWNS"
+    },
+    {
+      "source": "alarm_logs",
+      "target": "alarm_count",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "table_definition_doc",
+      "target": "machines",
+      "type": "DOCUMENTS"
+    },
+    {
+      "source": "table_definition_doc",
+      "target": "machine_units",
+      "type": "DOCUMENTS"
+    },
+    {
+      "source": "table_definition_doc",
+      "target": "machine_info",
+      "type": "DOCUMENTS"
+    },
+    {
+      "source": "table_definition_doc",
+      "target": "departments",
+      "type": "DOCUMENTS"
+    },
+    {
+      "source": "table_definition_doc",
+      "target": "alarm_mains",
+      "type": "DOCUMENTS"
+    },
+    {
+      "source": "table_definition_doc",
+      "target": "alarm_details",
+      "type": "DOCUMENTS"
+    },
+    {
+      "source": "table_definition_doc",
+      "target": "alarm_actions",
+      "type": "DOCUMENTS"
+    },
+    {
+      "source": "table_definition_doc",
+      "target": "alarm_infos",
+      "type": "DOCUMENTS"
+    },
+    {
+      "source": "table_definition_doc",
+      "target": "signal_logs",
+      "type": "DOCUMENTS"
+    },
+    {
+      "source": "table_definition_doc",
+      "target": "alarm_logs",
+      "type": "DOCUMENTS"
+    },
+    {
+      "source": "table_definition_doc",
+      "target": "lot_logs",
+      "type": "DOCUMENTS"
+    },
+    {
+      "source": "table_definition_doc",
+      "target": "workstate_logs",
+      "type": "DOCUMENTS"
+    },
+    {
+      "source": "table_definition_doc",
+      "target": "alarm_count",
+      "type": "DOCUMENTS"
+    }
+  ]
+}

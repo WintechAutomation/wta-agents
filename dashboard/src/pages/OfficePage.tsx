@@ -11,6 +11,11 @@ interface UsageData {
   cost: number
   period: string
   updated_at: string
+  weekly_tokens?: number
+  weekly_cost?: number
+  weekly_limit?: number
+  weekly_period?: string
+  session_remaining_pct?: number | null
 }
 
 // ── 부서별 그룹 정의 ──────────────────────────────────────────
@@ -128,7 +133,7 @@ export default function OfficePage() {
   const fetchUsage = useCallback(() => {
     fetch('/api/usage')
       .then((r) => r.json())
-      .then((d) => { if (d.ok && d.data?.tokens_used) setUsage(d.data) })
+      .then((d) => { if (d.ok && d.data) setUsage(d.data) })
       .catch(() => {})
   }, [])
 
@@ -297,17 +302,24 @@ export default function OfficePage() {
         {usage && (
           <>
             <KpiCard
-              label="TOKENS"
-              value={formatTokens(usage.tokens_used)}
+              label="WEEKLY"
+              value={formatTokens(usage.weekly_tokens ?? usage.tokens_used)}
               color="#e879f9"
-              sub={usage.tokens_limit ? `/ ${formatTokens(usage.tokens_limit)}` : undefined}
+              sub={usage.weekly_limit ? `/ ${formatTokens(usage.weekly_limit)}` : undefined}
             />
             <KpiCard
               label="COST"
-              value={`$${usage.cost.toFixed(2)}`}
+              value={`$${(usage.weekly_cost ?? usage.cost ?? 0).toFixed(0)}`}
               color="#fb923c"
-              sub={usage.period || undefined}
+              sub={usage.weekly_period || usage.period || undefined}
             />
+            {usage.session_remaining_pct != null && (
+              <KpiCard
+                label="REMAINING"
+                value={`${usage.session_remaining_pct}%`}
+                color={usage.session_remaining_pct > 30 ? '#22c55e' : usage.session_remaining_pct > 10 ? '#f59e0b' : '#ef4444'}
+              />
+            )}
           </>
         )}
       </div>

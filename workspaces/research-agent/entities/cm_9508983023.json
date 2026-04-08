@@ -1,0 +1,251 @@
+{
+  "page_id": "9508983023",
+  "title": "측면 디버링 매뉴얼",
+  "entities": [
+    {
+      "id": "e1",
+      "name": "측면 디버링 매뉴얼",
+      "type": "Manual",
+      "properties": {}
+    },
+    {
+      "id": "e2",
+      "name": "측면 디버링",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e3",
+      "name": "측면 브러쉬",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e4",
+      "name": "측면 브러쉬 로봇",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e5",
+      "name": "Z축",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e6",
+      "name": "R축",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e7",
+      "name": "툴 에어 블로우",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e8",
+      "name": "툴",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e9",
+      "name": "측면 브러쉬 사용 여부 결정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e10",
+      "name": "측면 브러쉬 접근 속도 설정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e11",
+      "name": "Z축 동작 이동거리 설정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e12",
+      "name": "브러쉬 로봇 사이 간격 설정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e13",
+      "name": "로봇 동작 속도 설정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e14",
+      "name": "브러쉬 로봇 이동 속도 설정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e15",
+      "name": "제품 역회전 설정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e16",
+      "name": "툴 에어 블로우 사용 여부 설정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e17",
+      "name": "툴 회전 속도 설정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e18",
+      "name": "디버링 모션 수행 시간 설정",
+      "type": "Process",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "DOCUMENTS"
+    },
+    {
+      "source": "e2",
+      "target": "e9",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e2",
+      "target": "e10",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e2",
+      "target": "e11",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e2",
+      "target": "e12",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e2",
+      "target": "e13",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e2",
+      "target": "e14",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e2",
+      "target": "e15",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e2",
+      "target": "e16",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e2",
+      "target": "e17",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e2",
+      "target": "e18",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e4",
+      "name": "e3",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e4",
+      "target": "e5",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e4",
+      "target": "e6",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e8",
+      "target": "e7",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e8",
+      "target": "e6",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e9",
+      "target": "e3",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e10",
+      "target": "e3",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e11",
+      "target": "e5",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e12",
+      "target": "e4",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e13",
+      "target": "e5",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e14",
+      "target": "e4",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e15",
+      "target": "e6",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e16",
+      "target": "e7",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e17",
+      "target": "e8",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e17",
+      "target": "e6",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e18",
+      "target": "e6",
+      "type": "USES_COMPONENT"
+    }
+  ]
+}
