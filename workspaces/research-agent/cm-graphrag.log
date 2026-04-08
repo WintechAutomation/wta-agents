@@ -2519,6 +2519,8 @@
 [ra-graphrag] 03:15:47 임베딩 오류: HTTPConnectionPool(host='182.224.6.147', port=11434): Read timed out. (read timeout=120)
 [ra-graphrag] 03:17:17 엔티티 추출 오류 [2026년 3월 23일 업무보고]: HTTPConnectionPool(host='182.224.6.147', port=11434): Read timed out. (read timeout=90)
 [ra-graphrag] 03:17:17 [273/439] 9639886849 — 2026년 3월 24일 업무보고
-graphrag] 03:08:24 임베딩 오류: HTTPConnectionPool(host='182.224.6.147', port=11434): Read timed out. (read timeout=120)
-[ra-graphrag] 03:09:50 중간저장: 임베딩 267건 / 그래프 270건 | 누적 2090노드
-[ra-graphrag] 03:09:50 [271/439] 9631727621 — [예제] 2026년 3월 23일 업무보고
+[ra-graphrag] 03:20:02 임베딩 오류: HTTPConnectionPool(host='182.224.6.147', port=11434): Read timed out. (read timeout=120)
+[ra-graphrag] 03:21:32 엔티티 추출 오류 [2026년 3월 24일 업무보고]: HTTPConnectionPool(host='182.224.6.147', port=11434): Read timed out. (read timeout=90)
+[ra-graphrag] 03:21:32 [274/439] 9643099008 — 2026년 3월 25일 업무보고
+[ra-graphrag] 03:24:41 임베딩 오류: HTTPConnectionPool(host='182.224.6.147', port=11434): Read timed out. (read timeout=120)
+[ra-graphrag] 03:26:02 Received notification from DBMS server: <GqlStatusObject gql_status='03N42', status_description='If a part of a query contains multiple disconnected patterns, this will build a cartesian product between all those parts. This may produce a large amount of data and slow down query processing. While occasionally intended, it may often be possible to reformulate the query that avoids the use of this cross product, perhaps by adding a relationship between the different parts or by using OPTIONAL MATCH (identifier is: (b))', position=<SummaryInputPo

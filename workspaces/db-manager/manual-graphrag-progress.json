@@ -13,15 +13,26 @@
     "3_hmi/SAIA PCD .pdf",
     "3_hmi/TOP Designer 사용설명서 (051230).pdf",
     "4_servo/表紙_お願いRev.1.pdf",
-    "4_servo/A5_motor_with_gear_dxf_list_Rev1.pdf"
+    "4_servo/A5_motor_with_gear_dxf_list_Rev1.pdf",
+    "4_servo/SMOTOR-UM002C-KO-P-200807.pdf",
+    "4_servo/180629_Catalog_General-Catalog_KOR_L.pdf",
+    "4_servo/180202_Ezi-SERVOII EtherCAT 4X_KOR.pdf",
+    "4_servo/A5_긾___DXF긲_귽깑뫮뤖__rev3.pdf",
+    "5_inverter/iMASTER U1 간단 매뉴얼_ADT-U1-01-K201902[04].pdf",
+    "6_plc/ZS-L_2010.pdf",
+    "6_plc/AJ65BT-D62 User's Manual.pdf",
+    "7_pneumatic/Back-UPS Pro_BR550GI_APC.pdf"
   ],
   "failed": [
-    "4_servo/편면Panasonic Servo 20160127 (일산 이구스 다이덴).pdf"
+    "4_servo/편면Panasonic Servo 20160127 (일산 이구스 다이덴).pdf",
+    "4_servo/ELM1M-1500MA130F-H.pdf",
+    "6_plc/modbus_y_uss1_76.pdf",
+    "7_pneumatic/Safect 종합 카다로그 K-ver.04.pdf"
   ],
   "stats": {
-    "done": 10,
+    "done": 20,
     "total_nodes": 8,
     "total_rels": 6,
-    "avg_sec": 73.38392832279206
+    "avg_sec": 86.79366693496704
   }
 }
