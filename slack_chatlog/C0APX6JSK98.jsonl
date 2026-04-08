@@ -103,3 +103,8 @@
 {"ts": "2026-04-08 15:14:11", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "<@U0AP5B0F71C> 내역이 안나오는데?"}
 {"ts": "2026-04-08 15:20:14", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "<@U0AP5B0F71C> 페이지 접속햇는데 내용이 안나와"}
 {"ts": "2026-04-08 15:25:06", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "<@U0AP5B0F71C> 조치한게맞아? 여전히 내역은 안나오는데?"}
+{"ts": "2026-04-08 15:32:18", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "<https://agent.mes-wta.com/erp_재고현황_발주내역>\n\n여기는 여전히 안나와\nUncaught ReferenceError: Cannot access 'filtered' before initialization\n    at loadData (erp_재고현황_발주내역:160:12)\n    at erp_재고현황_발주내역:164:1"}
+{"ts": "2026-04-08 15:34:00", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "erp_재고현황_발주내역:229 Uncaught ReferenceError: Cannot access 'EQUIP_PLAN' before initialization\n    at parseEquipTypes (erp_재고현황_발주내역:229:33)\n    at renderEquipCards (erp_재고현황_발주내역:275:19)\n    at loadData (erp_재고현황_발주내역:162:3)\n    at erp_재고현황_발주내역:165:1"}
+{"ts": "2026-04-08 15:35:20", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "erp_재고현황_발주내역:234 Uncaught ReferenceError: Cannot access 'EQUIP_PLAN' before initialization\n    at parseEquipTypes (erp_재고현황_발주내역:234:33)\n    at renderEquipCards (erp_재고현황_발주내역:280:19)\n    at loadData (erp_재고현황_발주내역:167:3)\n    at erp_재고현황_발주내역:170:1"}
+{"ts": "2026-04-08 15:38:01", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "Uncaught SyntaxError: Unexpected identifier 'EQUIP_PLAN' (at erp_재고현황_발주내역:173:7)"}
+{"ts": "2026-04-08 15:38:20", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "야 html 코드 전체를 코드리뷰라도 해야하는거 아니냐? 뭔 에러가 계속 꼬리를물어"}
