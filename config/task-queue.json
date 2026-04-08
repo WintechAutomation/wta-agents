@@ -1079,6 +1079,18 @@
       "updated_at": "2026-04-08 20:12:31",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-db-manager-446c60",
+      "agent": "db-manager",
+      "task": "김근형님 추가 요청. CS성 품목 리스트 확장 조회.",
+      "message": "김근형님 추가 요청. CS성 품목 리스트 확장 조회.\n\n조건 변경:\n- 기간: 최근 2년 (2024.04~현재)\n- 기준: 해당 기간 발주이력에서 CS/수리/교체/판매/무상 프로젝트 비율이 100%인 품목\n- 과거 장비 발주는 무시\n- 이전 CS 48건과 중복 제거, 신규 건만 추출\n- 필요 필드: 품목코드, 품명, 현재고수량, 금액, 최근프로젝트명, 발주이력장비유형\n\nreports/김근형/에 저장 후 바로 보고 바랍니다.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 20:28:51",
+      "updated_at": "2026-04-08 20:28:51",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }
