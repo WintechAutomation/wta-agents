@@ -203,6 +203,42 @@
       "updated_at": "2026-04-08 09:21:37",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-crafter-c06e6d",
+      "agent": "crafter",
+      "task": "부서장 지시: wELEC에서 테스트용 도면 하나 만들어줘.",
+      "message": "부서장 지시: wELEC에서 테스트용 도면 하나 만들어줘.\n\nCloudflare 터널 URL로 접속해서 실제로:\n1. 프로젝트 생성 (예: \"테스트 프로젝트\")\n2. 시트 생성\n3. 심볼 배치 — 간단한 전기 회로 구성 (예: 차단기 → 릴레이 → 모터 등)\n4. 배선 연결\n5. 완성된 도면 스크린샷 캡처\n\n실제 사용자 관점에서 도면 그리기 전체 흐름을 테스트하고, 스크린샷과 함께 결과 보고해줘.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 09:34:32",
+      "updated_at": "2026-04-08 09:34:32",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-db-manager-b30870",
+      "agent": "db-manager",
+      "task": "docs-agent 경유, 김근형님 추가 확인건. ERP 현업 화면과 DB 직접 조회 불일치 원인 추적.",
+      "message": "docs-agent 경유, 김근형님 추가 확인건. ERP 현업 화면과 DB 직접 조회 불일치 원인 추적.\n\n김근형님이 ERP 화면에서 CKR20-145-1065L을 직접 조회해서 메이써루이 프레스 발주이력을 확인했는데, MCA210T에서는 안 나옴.\n\n확인 사항:\n1. ERP \"발주현황조회(현업용)\" 메뉴가 참조하는 테이블/뷰/프로시저 확인 — MCA210T가 아닌 다른 테이블 가능성\n2. MCA210T 외 발주 관련 테이블 전체 목록 재조사 (MCA*, PUR*, BUY* 등 패턴)\n3. CKR20-145-1065L로 mirae 스키마 전체 테이블 LIKE 검색 — 어떤 테이블에 이 품목코드가 존재하는지\n\n결과는 docs-agent에게 전달해줘.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 09:35:54",
+      "updated_at": "2026-04-08 09:35:54",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-admin-agent-4bc05c",
+      "agent": "admin-agent",
+      "task": "부서장 요청: 슬랙 가입자 vs MES 가입자 비교 분석",
+      "message": "부서장 요청: 슬랙 가입자 vs MES 가입자 비교 분석\n\n1. 현재 슬랙 워크스페이스 가입 인원 목록\n2. MES 시스템 가입 인원 목록\n3. 두 목록 비교: 슬랙O/MES X, 슬랙X/MES O, 둘 다 가입, 둘 다 미가입\n\n결과를 이름/부서/이메일로 정리해서 보고해줘.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 09:39:32",
+      "updated_at": "2026-04-08 09:39:32",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }

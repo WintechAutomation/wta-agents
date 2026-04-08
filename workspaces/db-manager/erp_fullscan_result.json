@@ -1,0 +1,246 @@
+{
+  "total_objects": 490,
+  "pattern_tables": {
+    "MCA": [
+      "MCA200T",
+      "MCA210T",
+      "MCA260T_SW",
+      "MCA210TV",
+      "MCA220TV"
+    ],
+    "IBA": [
+      "IBA010T",
+      "IBA020T",
+      "IBA100T",
+      "IBA200T",
+      "IBA500T_WIN",
+      "IBA800T",
+      "IBA900T",
+      "IBA999T"
+    ],
+    "IBC": [
+      "IBC300T"
+    ],
+    "MBA": [
+      "MBA200T",
+      "MBA210T",
+      "MBA200TV"
+    ]
+  },
+  "tables_with_item_cd": [
+    "BBA010T",
+    "BBA011T",
+    "BBA014T",
+    "BBA015T",
+    "BBA021T",
+    "BBA022T",
+    "BBA350T",
+    "BBA600T",
+    "BBA650T",
+    "BBA660T",
+    "BBA661T",
+    "BBA700T",
+    "BBA700T_WIN",
+    "BBA800T",
+    "BBA810T",
+    "CBA100T",
+    "CBA110T",
+    "CCB100T",
+    "CCB200T",
+    "IBA010T",
+    "iba010t_2020",
+    "IBA100T",
+    "IBA200T",
+    "iba200t_202112",
+    "IBA500T_WIN",
+    "IBA800T",
+    "IBA999T",
+    "IBC300T",
+    "item_99",
+    "item_del",
+    "item_r",
+    "itemcd",
+    "MAD111T",
+    "MBA200TV",
+    "MBA210T",
+    "MCA210T",
+    "MCA210TV",
+    "MCA260T_SW",
+    "MDA100T",
+    "MDA200T",
+    "MGA100T",
+    "MGA200T",
+    "MGA400T",
+    "MGA500T",
+    "MGA800T",
+    "MHA300T",
+    "MHA400T",
+    "MHA400TV",
+    "MHA450T",
+    "MHA510T",
+    "MPA200T",
+    "MZA200T",
+    "P_BBA010T",
+    "P_SCA110T",
+    "P_SCA200T",
+    "P_SCA300T",
+    "P_WCA100T",
+    "P_WCA110T",
+    "P_WCA200T",
+    "SCA500T",
+    "SCA600T",
+    "SFA400T",
+    "STOCK01",
+    "TBL020T",
+    "TEB020T",
+    "temp_base",
+    "temp_pord",
+    "temp01",
+    "tmp901",
+    "tmp902",
+    "top_code",
+    "TR01",
+    "tr02",
+    "tr02-1",
+    "TR3",
+    "WBA010T",
+    "WBA010T_SW",
+    "WDB200T",
+    "WDB300T",
+    "WGA100T",
+    "WIA200T",
+    "WZA010T"
+  ],
+  "found_in_tables": [
+    {
+      "table": "BBA010T",
+      "count": 1
+    },
+    {
+      "table": "BBA700T_WIN",
+      "count": 4
+    },
+    {
+      "table": "CCB100T",
+      "count": 32
+    },
+    {
+      "table": "IBA100T",
+      "count": 1
+    },
+    {
+      "table": "IBA200T",
+      "count": 92
+    },
+    {
+      "table": "IBA800T",
+      "count": 21
+    },
+    {
+      "table": "IBC300T",
+      "count": 1
+    },
+    {
+      "table": "MAD111T",
+      "count": 262
+    },
+    {
+      "table": "MBA210T",
+      "count": 282
+    },
+    {
+      "table": "MCA210T",
+      "count": 60
+    },
+    {
+      "table": "MCA210TV",
+      "count": 1
+    },
+    {
+      "table": "MDA100T",
+      "count": 69
+    },
+    {
+      "table": "MGA100T",
+      "count": 337
+    },
+    {
+      "table": "MGA500T",
+      "count": 3
+    },
+    {
+      "table": "MHA300T",
+      "count": 68
+    }
+  ],
+  "po_procedures": [
+    {
+      "name": "MCA209Q",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "MCA210S_PO",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_CONV_POSTFIX",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_MCA200T_EXPECT_ADJUST",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_MCA200T_EXPECT_ADJUST_PDT",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_MCA200T_UDT",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_MCA207_SEL1",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_MCA207_SEL2",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_MCA207_SEL3",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_MCA207_SEL4",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_MCA207_SEL5",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_MCA207_SEL6",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_MCA210S",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_MCA210S_PO",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_PAYREPORT",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_PO_DELETE",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "SP_PO_SMS_SEND",
+      "type": "PROCEDURE"
+    }
+  ]
+}
