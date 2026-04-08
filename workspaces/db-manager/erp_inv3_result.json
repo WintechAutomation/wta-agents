@@ -1,0 +1,143 @@
+{
+  "mca210tv_columns": [
+    "PO_DT",
+    "ITEM_CD",
+    "CUST_CD",
+    "PO_PRICE",
+    "FOR_PRICE"
+  ],
+  "mca210tv_definition": "CREATE VIEW [mirae].[MCA210TV]\r\n\t\t\t(PO_DT,\t\tITEM_CD,\tCUST_CD,\tPO_PRICE,\tFOR_PRICE) AS\r\n\r\nSELECT\t\tDISTINCT\tA.PO_DT,\tB.ITEM_CD,\tMAX(A.CUST_CD),\tMAX(B.PO_PRICE),\tMAX(B.FOR_PRICE)\r\nFROM \t\tMCA200T A,\tMCA210T B,\r\n\t\t\t(SELECT\tD.ITEM_CD,\tMAX(PO_DT) AS PO_DT FROM MCA200T C,MCA210T D\r\n\t\t\t WHERE C.PO_NO = D.PO_NO AND C.PO_DT <= CONVERT(VARCHAR(8), GETDATE(), 112)\r\n\t\t\t GROUP BY D.ITEM_CD) C\r\nWHERE \t\tA.PO_NO\t\t=\tB.PO_NO\r\nAND      \tA.PO_DT \t= \tC.PO_DT\r\nAND      \tB.ITEM_CD \t= \tC.ITEM_CD\r\nGROUP BY\tB.ITEM_CD, A.PO_DT\r\n",
+  "POD010T": {
+    "count": 0,
+    "columns": [
+      "POSSESS_GB",
+      "EMP_NO",
+      "CAR_NO",
+      "CAR_NAME",
+      "MODEL",
+      "ACQUIRE_AMT",
+      "ACQUIRE_DT",
+      "DISPOSE_DT",
+      "EXAM_FR_DT",
+      "EXAM_TO_DT",
+      "INSURANCE_GB",
+      "INSURANCE_COMPANY",
+      "INSURANCE_FR_DT",
+      "INSURANCE_TO_DT",
+      "INSURANCE_AMT",
+      "CHARGE_WORK",
+      "RELEASE_DT",
+      "MILEAGE",
+      "INSURANCE_PHONE",
+      "LICENSE_NUM",
+      "LICENSE_END_DT",
+      "RUN_FR_DT",
+      "RUN_TO_DT",
+      "REMARK",
+      "STATE"
+    ],
+    "has_pjt_no": false,
+    "has_item_cd": false
+  },
+  "POD100T": {
+    "count": 1,
+    "columns": [
+      "EMP_NO",
+      "CAR_TYPE",
+      "CAR_CLASS",
+      "CAR_NO"
+    ],
+    "has_pjt_no": false,
+    "has_item_cd": false
+  },
+  "POD200T": {
+    "count": 118,
+    "columns": [
+      "REQ_DT",
+      "EMP_NO",
+      "TOT_AMT",
+      "OIL_AMT",
+      "PASS_AMT",
+      "PARK_AMT",
+      "DAILY_AMT",
+      "FOOD_AMT",
+      "STAY_AMT",
+      "ETC_AMT",
+      "TIME_AMT",
+      "COM_STS",
+      "SUPP_DT",
+      "MARK_STS",
+      "EX_DT",
+      "EX_NO",
+      "EX_SEQ",
+      "REMARK",
+      "DEPT_CD"
+    ],
+    "has_pjt_no": false,
+    "has_item_cd": false
+  },
+  "POD210T": {
+    "count": 696,
+    "columns": [
+      "REQ_DT",
+      "EMP_NO",
+      "MARK_DT",
+      "MARK_SEQ",
+      "MOVE_PURP",
+      "MOVE_SEC",
+      "MOVE_DIST",
+      "OIL_AMT",
+      "PASS_AMT",
+      "PARK_AMT",
+      "DAILY_AMT",
+      "FOOD_AMT",
+      "STAY_AMT",
+      "ETC_AMT",
+      "START_TIME",
+      "END_TIME",
+      "TOTAL_TIME",
+      "TIME_AMT",
+      "SO_NO",
+      "RMK",
+      "TOUR_CHK",
+      "MEANS",
+      "EX_NO",
+      "EX_DT",
+      "DEPT_CD"
+    ],
+    "has_pjt_no": false,
+    "has_item_cd": false
+  },
+  "POD220T": {
+    "count": 4,
+    "columns": [
+      "MARK_DT",
+      "MARK_SEQ",
+      "EMP_NO",
+      "TRIP_OBJECT",
+      "TRIP_PLACE",
+      "DUTY_AMT",
+      "DUTY_CURRENCY",
+      "DUTY_EX",
+      "DUTY_DAY",
+      "DUTY_T_AMT",
+      "STAY_AMT",
+      "STAY_CURRENCY",
+      "STAY_EX",
+      "STAY_T_AMT",
+      "ETC_AMT",
+      "ETC_CURRENCY",
+      "ETC_EX",
+      "ETC_T_AMT",
+      "RMK",
+      "T_AMT"
+    ],
+    "has_pjt_no": false,
+    "has_item_cd": false
+  },
+  "mca220tv_columns": [
+    "PJT_NO",
+    "TOT_PO_QTY",
+    "TOT_PO_AMT"
+  ]
+}

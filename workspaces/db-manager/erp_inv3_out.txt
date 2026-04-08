@@ -1,0 +1,41 @@
+=== MCA210TV 컬럼 ===
+['PO_DT', 'ITEM_CD', 'CUST_CD', 'PO_PRICE', 'FOR_PRICE']
+
+MCA210TV 뷰 정의 (앞 1000자):
+CREATE VIEW [mirae].[MCA210TV]
+			(PO_DT,		ITEM_CD,	CUST_CD,	PO_PRICE,	FOR_PRICE) AS
+
+SELECT		DISTINCT	A.PO_DT,	B.ITEM_CD,	MAX(A.CUST_CD),	MAX(B.PO_PRICE),	MAX(B.FOR_PRICE)
+FROM 		MCA200T A,	MCA210T B,
+			(SELECT	D.ITEM_CD,	MAX(PO_DT) AS PO_DT FROM MCA200T C,MCA210T D
+			 WHERE C.PO_NO = D.PO_NO AND C.PO_DT <= CONVERT(VARCHAR(8), GETDATE(), 112)
+			 GROUP BY D.ITEM_CD) C
+WHERE 		A.PO_NO		=	B.PO_NO
+AND      	A.PO_DT 	= 	C.PO_DT
+AND      	B.ITEM_CD 	= 	C.ITEM_CD
+GROUP BY	B.ITEM_CD, A.PO_DT
+
+
+=== POD 테이블 컬럼 ===
+POD010T (0건): PJT_NO=False, ITEM_CD=False
+  컬럼: ['POSSESS_GB', 'EMP_NO', 'CAR_NO', 'CAR_NAME', 'MODEL', 'ACQUIRE_AMT', 'ACQUIRE_DT', 'DISPOSE_DT', 'EXAM_FR_DT', 'EXAM_TO_DT', 'INSURANCE_GB', 'INSURANCE_COMPANY', 'INSURANCE_FR_DT', 'INSURANCE_TO_DT', 'INSURANCE_AMT', 'CHARGE_WORK', 'RELEASE_DT', 'MILEAGE', 'INSURANCE_PHONE', 'LICENSE_NUM', 'LICENSE_END_DT', 'RUN_FR_DT', 'RUN_TO_DT', 'REMARK', 'STATE']
+POD100T (1건): PJT_NO=False, ITEM_CD=False
+  컬럼: ['EMP_NO', 'CAR_TYPE', 'CAR_CLASS', 'CAR_NO']
+POD200T (118건): PJT_NO=False, ITEM_CD=False
+  컬럼: ['REQ_DT', 'EMP_NO', 'TOT_AMT', 'OIL_AMT', 'PASS_AMT', 'PARK_AMT', 'DAILY_AMT', 'FOOD_AMT', 'STAY_AMT', 'ETC_AMT', 'TIME_AMT', 'COM_STS', 'SUPP_DT', 'MARK_STS', 'EX_DT', 'EX_NO', 'EX_SEQ', 'REMARK', 'DEPT_CD']
+POD210T (696건): PJT_NO=False, ITEM_CD=False
+  컬럼: ['REQ_DT', 'EMP_NO', 'MARK_DT', 'MARK_SEQ', 'MOVE_PURP', 'MOVE_SEC', 'MOVE_DIST', 'OIL_AMT', 'PASS_AMT', 'PARK_AMT', 'DAILY_AMT', 'FOOD_AMT', 'STAY_AMT', 'ETC_AMT', 'START_TIME', 'END_TIME', 'TOTAL_TIME', 'TIME_AMT', 'SO_NO', 'RMK', 'TOUR_CHK', 'MEANS', 'EX_NO', 'EX_DT', 'DEPT_CD']
+POD220T (4건): PJT_NO=False, ITEM_CD=False
+  컬럼: ['MARK_DT', 'MARK_SEQ', 'EMP_NO', 'TRIP_OBJECT', 'TRIP_PLACE', 'DUTY_AMT', 'DUTY_CURRENCY', 'DUTY_EX', 'DUTY_DAY', 'DUTY_T_AMT', 'STAY_AMT', 'STAY_CURRENCY', 'STAY_EX', 'STAY_T_AMT', 'ETC_AMT', 'ETC_CURRENCY', 'ETC_EX', 'ETC_T_AMT', 'RMK', 'T_AMT']
+
+=== MCA220TV 컬럼 ===
+['PJT_NO', 'TOT_PO_QTY', 'TOT_PO_AMT']
+MCA220TV 정의 (앞 500자): 
+
+CREATE VIEW  [mirae].MCA220TV                                                                                             
+	(PJT_NO ,TOT_PO_QTY ,TOT_PO_AMT                                                        
+ ) AS                                                                                                           
+                                                                                                                 
+  SELECT A.PJT_NO,COUNT(PO_QTY) TOT_PO_QTY, SUM(PO_AM
+
+저장완료
