@@ -1,0 +1,96 @@
+{
+  "page_id": "9507150369",
+  "title": "-(한글 버전)-  4-2-1-2.  적재설정 - 작업 수량 변경",
+  "entities": [
+    {
+      "id": "proc_001",
+      "name": "적재설정 - 작업 수량 변경",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_002",
+      "name": "적재설정 선택",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_003",
+      "name": "수량 변경 버튼 클릭",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_004",
+      "name": "작업수량 선택",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_005",
+      "name": "수량 입력",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "comp_001",
+      "name": "팔레트",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_002",
+      "name": "수량 버튼",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_003",
+      "name": "작업 수량 버튼",
+      "type": "Component",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "source": "proc_001",
+      "target": "proc_002",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "proc_001",
+      "target": "proc_003",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "proc_001",
+      "target": "proc_004",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "proc_001",
+      "target": "proc_005",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "proc_003",
+      "target": "comp_002",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "proc_003",
+      "target": "comp_001",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "proc_004",
+      "target": "comp_003",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "proc_004",
+      "target": "comp_001",
+      "type": "USES_COMPONENT"
+    }
+  ]
+}

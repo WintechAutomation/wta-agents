@@ -1,0 +1,163 @@
+{
+  "page_id": "9508983920",
+  "title": "4-1. 메인화면 설명",
+  "entities": [
+    {
+      "id": "eq_001",
+      "name": "메인화면",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "comp_001",
+      "name": "상태알림램프",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_002",
+      "name": "SPM",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_003",
+      "name": "에러보기 버튼",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_004",
+      "name": "원점복귀 버튼",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_005",
+      "name": "운전시작/정지 버튼",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_006",
+      "name": "엘리베이터 설정",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_007",
+      "name": "환경설정",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_008",
+      "name": "청소설정",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_009",
+      "name": "티칭선택",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_010",
+      "name": "모델관리",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_011",
+      "name": "지원메뉴",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_012",
+      "name": "프로그램 종료 버튼",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_013",
+      "name": "적재 상태 미리보기",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_014",
+      "name": "적재 수량/목표수량",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "proc_001",
+      "name": "작업 상태 표시",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_002",
+      "name": "생산 정보 모니터링",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_003",
+      "name": "프로그램 조작",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_004",
+      "name": "적재 상태 모니터링",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_005",
+      "name": "원점복귀",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_006",
+      "name": "자동작업 운전",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_007",
+      "name": "티칭 진행",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_008",
+      "name": "플레이트 정렬",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "issue_001",
+      "name": "에러 발생",
+      "type": "Issue",
+      "properties": {}
+    },
+    {
+      "id": "issue_002",
+      "name": "알람 발생",
+      "type": "Issue",
+      "properties": {}
+    },
+    {
+      "id": "issue_003",
+      "name": "비상 정지",
+      "type": "Issue",
+      "properties": {}
+    }
+  ],
+  "relations": []
+}

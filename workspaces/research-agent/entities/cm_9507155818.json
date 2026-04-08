@@ -1,0 +1,115 @@
+{
+  "page_id": "9507155818",
+  "title": "4-2-1-1.  적재설정 - 작업 팔레트 추가",
+  "entities": [
+    {
+      "id": "e1",
+      "name": "적재설정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e2",
+      "name": "작업 팔레트 추가",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e3",
+      "name": "메인화면",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e4",
+      "name": "제품",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e5",
+      "name": "모델",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e6",
+      "name": "라벨 정보",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e7",
+      "name": "작업",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e8",
+      "name": "바코드 리더기",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e9",
+      "name": "수량",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e10",
+      "name": "참고 페이지",
+      "type": "Manual",
+      "properties": {
+        "url": "https://iwta.atlassian.net/wiki/spaces/CM/pages/9507155977"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e3",
+      "target": "e1",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "DOCUMENTS"
+    }
+  ]
+}
