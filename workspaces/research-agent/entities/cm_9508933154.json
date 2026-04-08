@@ -1,0 +1,80 @@
+{
+  "page_id": "9508933154",
+  "title": "로고 만드는법",
+  "entities": [
+    {
+      "id": "eq_inkjet",
+      "name": "잉크젯마킹기",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "comp_usb",
+      "name": "USB",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "proc_dot",
+      "name": "돗트 찍기",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_resize",
+      "name": "크기조정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_save",
+      "name": "다른 이름으로 저장",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_transfer",
+      "name": "파일 불러오기",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "manual_logo",
+      "name": "로고 만드는법",
+      "type": "Manual",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "source": "manual_logo",
+      "target": "eq_inkjet",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "manual_logo",
+      "target": "proc_dot",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "manual_logo",
+      "target": "proc_resize",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "manual_logo",
+      "target": "proc_save",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "manual_logo",
+      "target": "proc_transfer",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "eq_inkjet",
+      "target": "comp_usb",
+      "type": "USES_COMPONENT"
+    }
+  ]
+}

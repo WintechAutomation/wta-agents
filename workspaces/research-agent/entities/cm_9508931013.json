@@ -1,0 +1,259 @@
+{
+  "page_id": "9508931013",
+  "title": "개선 필요사항",
+  "entities": [
+    {
+      "id": "e1",
+      "name": "ROT축 그리퍼",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e2",
+      "name": "G1 그리퍼",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e3",
+      "name": "G2 그리퍼",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e4",
+      "name": "ROT_CLAMP",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e5",
+      "name": "Peek재질",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e6",
+      "name": "막대 제품감지 센서",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e7",
+      "name": "스페이서 공급부",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e8",
+      "name": "모터 브러시",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e9",
+      "name": "공급 원형판",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e10",
+      "name": "호퍼 상승/하강 실린더",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e11",
+      "name": "반전부",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e12",
+      "name": "와셔",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e13",
+      "name": "와셔 컨베이어 센서",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e14",
+      "name": "언로딩",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e15",
+      "name": "EV_LEFT",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e16",
+      "name": "EV_CENTER",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e17",
+      "name": "EV_RIGHT",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e18",
+      "name": "실린더 전/후진 스토퍼",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e19",
+      "name": "기구적 조정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e20",
+      "name": "위치 재설정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e21",
+      "name": "앰프 셋팅",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e22",
+      "name": "작업자",
+      "type": "Person",
+      "properties": {}
+    },
+    {
+      "id": "e23",
+      "name": "위치 얼라인 틀어짐",
+      "type": "Issue",
+      "properties": {}
+    },
+    {
+      "id": "e24",
+      "name": "마모",
+      "type": "Issue",
+      "properties": {}
+    },
+    {
+      "id": "e25",
+      "name": "소음",
+      "type": "Issue",
+      "properties": {}
+    },
+    {
+      "id": "e26",
+      "name": "구분 불가",
+      "type": "Issue",
+      "properties": {}
+    },
+    {
+      "id": "e27",
+      "name": "조절 어려움",
+      "type": "Issue",
+      "properties": {}
+    },
+    {
+      "id": "e28",
+      "name": "동작실패",
+      "type": "Issue",
+      "properties": {}
+    },
+    {
+      "id": "e29",
+      "name": "갈림",
+      "type": "Issue",
+      "properties": {}
+    },
+    {
+      "id": "e30",
+      "name": "넘어오는 현상",
+      "type": "Issue",
+      "properties": {}
+    },
+    {
+      "id": "e31",
+      "name": "감지 불가능",
+      "type": "Issue",
+      "properties": {}
+    },
+    {
+      "id": "e32",
+      "name": "작업공간 협소",
+      "type": "Issue",
+      "properties": {}
+    },
+    {
+      "id": "e33",
+      "name": "감지미흡",
+      "type": "Issue",
+      "properties": {}
+    },
+    {
+      "id": "e34",
+      "name": "버림량 과다",
+      "type": "Issue",
+      "properties": {}
+    },
+    {
+      "id": "e35",
+      "name": "그립 끼임",
+      "type": "Issue",
+      "properties": {}
+    },
+    {
+      "id": "e36",
+      "name": "정밀도 불안정",
+      "type": "Issue",
+      "properties": {}
+    },
+    {
+      "id": "e37",
+      "name": "위치 달라짐",
+      "type": "Issue",
+      "properties": {}
+    },
+    {
+      "id": "e38",
+      "name": "진동 및 이격",
+      "type": "Issue",
+      "properties": {}
+    },
+    {
+      "id": "e39",
+      "name": "제품 떨어짐",
+      "type": "Issue",
+      "properties": {}
+    },
+    {
+      "id": "e40",
+      "name": "픽업실패",
+      "type": "Issue",
+      "properties": {}
+    },
+    {
+      "id": "e41",
+      "name": "와셔 튐",
+      "type": "Issue",
+      "properties": {}
+    },
+    {
+      "id": "e42",
+      "name": "블로우 버림 처리 미흡",
+      "type": "Issue",
+      "properties": {}
+    }
+  ],
+  "relations": []
+}

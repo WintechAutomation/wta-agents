@@ -1,0 +1,113 @@
+{
+  "page_id": "9507160389",
+  "title": "　조립 및 설치",
+  "entities": [
+    {
+      "id": "eng_01",
+      "name": "Wintech Automation 엔지니어",
+      "type": "Person",
+      "properties": {}
+    },
+    {
+      "id": "equip_01",
+      "name": "설비",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "proc_01",
+      "name": "조립 및 설치",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_02",
+      "name": "공압 설치",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_03",
+      "name": "전기 설치",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "comp_01",
+      "name": "공압 연결",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_02",
+      "name": "전기 연결",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_03",
+      "name": "공급 전원 케이블",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_04",
+      "name": "컨트롤 판넬 외부 커버",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "manual_01",
+      "name": "설비 명판",
+      "type": "Manual",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "source": "eng_01",
+      "target": "proc_01",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "equip_01",
+      "target": "proc_01",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "proc_01",
+      "target": "proc_02",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "proc_01",
+      "target": "proc_03",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "proc_02",
+      "target": "comp_01",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "proc_03",
+      "target": "comp_02",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "proc_03",
+      "target": "comp_03",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "equip_01",
+      "target": "comp_04",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "equip_01",
+      "target": "manual_01",
+      "type": "DOCUMENTS"
+    }
+  ]
+}

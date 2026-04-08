@@ -1,0 +1,133 @@
+{
+  "page_id": "9508982433",
+  "title": "돌기 플레이트 설정 매뉴얼",
+  "entities": [
+    {
+      "id": "e1",
+      "name": "돌기 플레이트 설정 매뉴얼",
+      "type": "Manual",
+      "properties": {}
+    },
+    {
+      "id": "e2",
+      "name": "인서트 지름",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e3",
+      "name": "카본 플레이트",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e4",
+      "name": "돌기 플레이트",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e5",
+      "name": "인서트 지름 조정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e6",
+      "name": "카본 플레이트 설정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e7",
+      "name": "돌기 플레이트 ON 설정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e8",
+      "name": "간격 측정 및 입력",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e9",
+      "name": "가로 처음위치 조정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e10",
+      "name": "세로 처음위치 조정",
+      "type": "Process",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e5",
+      "target": "e2",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e6",
+      "target": "e3",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e7",
+      "target": "e4",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e8",
+      "target": "e4",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e9",
+      "target": "e4",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e10",
+      "target": "e4",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "DOCUMENTS"
+    }
+  ]
+}

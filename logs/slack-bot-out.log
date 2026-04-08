@@ -435,3 +435,10 @@ CS
 [slack-bot] 21:35:41 Connected to a new endpoint...
 [slack-bot] 21:35:41 Stopped receiving messages from a connection (session id: 408e478a-db7c-40f9-bf3b-1aee658af26f)
 [slack-bot] 21:35:41 Starting to receive messages from a new connection (session id: a08649e2-0750-4e78-9289-35e76b6b9194)
+[slack-bot] 00:02:14 [수신] admin-agent: 통신 라인 테스트 (슬랙 발신 형식 아님 \u2014 무시)
+[slack-bot] 00:02:48 [수신] schedule-agent: 통신 라인 테스트 (슬랙 발신 형식 아님 \u2014 무시)
+[slack-bot] 00:03:03 채널 캐시 갱신: 43개
+[slack-bot] 00:03:03 채널 ID 없음: #구매
+[slack-bot] 00:03:03 [수신] MAX: 통신 테스트: admin-agent, schedule-agent, cs-agent 에게 각각 "통신 라인 테스트" 메시지를 보내줘. send_m (슬랙 발신 형식 아님 \u2014 무시)
+[slack-bot] 00:04:18 채널 캐시 갱신: 43개
+[slack-bot] 00:04:18 채널 ID 없음: #구매

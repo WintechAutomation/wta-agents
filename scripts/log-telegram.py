@@ -14,9 +14,15 @@ import sys
 import json
 import urllib.request
 import urllib.error
+from datetime import datetime, timezone, timedelta
 
 DASHBOARD_URL = os.environ.get("DASHBOARD_URL", "http://localhost:5555")
 HUB_URL = "http://localhost:5600"
+TELEGRAM_JSONL = os.path.join(
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+    "slack_chatlog", "telegram.jsonl",
+)
+KST = timezone(timedelta(hours=9))
 
 
 def log_to_hub(direction: str, from_label: str, content: str) -> None:
@@ -78,8 +84,36 @@ def main():
     if not text:
         sys.exit(0)
 
+    # JSONL 파일에 아웃바운드 로깅
+    _append_to_jsonl({
+        "ts": datetime.now(KST).strftime("%Y-%m-%d %H:%M:%S"),
+        "direction": "outbound",
+        "user": "MAX",
+        "text": text,
+    })
+
     # 아웃바운드 (MAX → 부서장) 로깅
     log_to_hub("outbound", "boss", text)
+
+
+def _ensure_header():
+    """JSONL 파일이 없거나 빈 경우 헤더 행 작성."""
+    if os.path.exists(TELEGRAM_JSONL) and os.path.getsize(TELEGRAM_JSONL) > 0:
+        return
+    os.makedirs(os.path.dirname(TELEGRAM_JSONL), exist_ok=True)
+    with open(TELEGRAM_JSONL, "a", encoding="utf-8") as f:
+        header = {"_header": True, "channel": "telegram", "chat_id": "6035183523"}
+        f.write(json.dumps(header, ensure_ascii=False) + "\n")
+
+
+def _append_to_jsonl(record: dict):
+    """JSONL 파일에 레코드 1행 append."""
+    try:
+        _ensure_header()
+        with open(TELEGRAM_JSONL, "a", encoding="utf-8") as f:
+            f.write(json.dumps(record, ensure_ascii=False) + "\n")
+    except Exception:
+        pass
 
 
 if __name__ == "__main__":

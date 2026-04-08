@@ -1,0 +1,229 @@
+{
+  "page_id": "9508924715",
+  "title": "막대, 제품 감지 센서 세팅",
+  "entities": [
+    {
+      "id": "eq_001",
+      "name": "ROT Clamp 유닛",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "eq_002",
+      "name": "HMI 메인화면",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "eq_003",
+      "name": "화이바 앰프",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "comp_001",
+      "name": "광센서",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_002",
+      "name": "제품 감지 센서",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_003",
+      "name": "막대 감지 센서",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_004",
+      "name": "센서 테이프",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_005",
+      "name": "볼트",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_006",
+      "name": "가공 블럭",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "proc_001",
+      "name": "막대, 제품 감지 센서 세팅",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_002",
+      "name": "막대 감지 위치 세팅",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_003",
+      "name": "제품 감지 위치 세팅",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_004",
+      "name": "센서 감지 범위 기준 세팅",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_005",
+      "name": "화이바 앰프 감도 설정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_006",
+      "name": "하드웨어 세팅 변경",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_007",
+      "name": "블럭 위치 조정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_008",
+      "name": "캘리브레이션 설정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "issue_001",
+      "name": "수치 변화 없음",
+      "type": "Issue",
+      "properties": {}
+    },
+    {
+      "id": "issue_002",
+      "name": "감지 되지 않음",
+      "type": "Issue",
+      "properties": {}
+    },
+    {
+      "id": "issue_003",
+      "name": "검출이 원활하지 않음",
+      "type": "Issue",
+      "properties": {}
+    },
+    {
+      "id": "manual_001",
+      "name": "fx-500_pro_K 메뉴얼",
+      "type": "Manual",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "source": "eq_001",
+      "target": "comp_001",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eq_001",
+      "target": "comp_002",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eq_001",
+      "target": "comp_003",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "proc_001",
+      "target": "proc_002",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "proc_001",
+      "target": "proc_003",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "proc_001",
+      "target": "proc_004",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "proc_002",
+      "target": "proc_007",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "proc_002",
+      "target": "proc_006",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "proc_003",
+      "target": "proc_007",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "proc_004",
+      "target": "proc_008",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "proc_002",
+      "target": "issue_001",
+      "type": "HAS_ISSUE"
+    },
+    {
+      "source": "proc_002",
+      "target": "issue_002",
+      "type": "HAS_ISSUE"
+    },
+    {
+      "source": "proc_005",
+      "target": "issue_003",
+      "type": "HAS_ISSUE"
+    },
+    {
+      "source": "proc_002",
+      "target": "comp_005",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "proc_002",
+      "target": "comp_006",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "proc_002",
+      "target": "comp_004",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "proc_005",
+      "target": "manual_001",
+      "type": "DOCUMENTS"
+    },
+    {
+      "source": "proc_005",
+      "target": "eq_003",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "proc_004",
+      "target": "eq_002",
+      "type": "USES_COMPONENT"
+    }
+  ]
+}
