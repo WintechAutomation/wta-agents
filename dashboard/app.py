@@ -996,6 +996,11 @@ def api_usage_post():
             "cost": data.get("cost", 0),
             "period": data.get("period", ""),
             "updated_at": data.get("updated_at", ""),
+            "weekly_tokens": data.get("weekly_tokens", 0),
+            "weekly_cost": data.get("weekly_cost", 0),
+            "weekly_period": data.get("weekly_period", ""),
+            "weekly_limit": data.get("weekly_limit", 0),
+            "session_remaining_pct": data.get("session_remaining_pct"),
         }
         socketio.emit("usage_update", _usage_data)
         return {"ok": True}

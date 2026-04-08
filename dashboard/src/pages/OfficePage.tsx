@@ -212,33 +212,59 @@ export default function OfficePage() {
     return set
   }, [pulseLines])
 
-  // 최근 메시지로 연결선 펄스 애니메이션
-  const lastMsgIdRef = useRef(0)
+  // 통신 애니메이션: 2초마다 /api/history 폴링하여 새 메시지 감지
+  const seenIdsRef = useRef(new Set<number>())
+  const initDoneRef = useRef(false)
   useEffect(() => {
-    if (messages.length === 0) return
-    const latest = messages[messages.length - 1]
-    if (latest.id <= lastMsgIdRef.current) return
-    lastMsgIdRef.current = latest.id
-    const from = latest.from
-    const to = latest.to
-    // 양방향 키 모두 등록 (sort 매칭 보장)
-    const sortedKey = [from, to].sort().join('|')
-    console.log('[pulse] new message', latest.id, from, '→', to, 'key:', sortedKey)
-    console.log('[pulse] nodePos keys:', Object.keys(nodePos))
-    console.log('[pulse] allPairs sample key:', allPairs.length > 0 ? [allPairs[0].a, allPairs[0].b].sort().join('|') : 'none')
-    setPulseLines((prev) => {
-      const next = new Set(prev)
-      next.add(sortedKey)
-      return next
-    })
-    setTimeout(() => {
-      setPulseLines((prev) => {
-        const next = new Set(prev)
-        next.delete(sortedKey)
-        return next
-      })
-    }, 5000)
-  }, [messages, nodePos, allPairs])
+    const agentIds = new Set(Object.keys(nodePos))
+    const poll = async () => {
+      try {
+        const res = await fetch('/api/history?limit=20')
+        const data = await res.json()
+        const msgs = (data.messages ?? []) as { id: number; from: string; to: string; type: string }[]
+        if (msgs.length === 0) return
+        // 초회: 기존 메시지 ID만 기록하고 애니메이션 없이 리턴
+        if (!initDoneRef.current) {
+          initDoneRef.current = true
+          for (const msg of msgs) seenIdsRef.current.add(msg.id)
+          return
+        }
+        for (const msg of msgs) {
+          if (seenIdsRef.current.has(msg.id)) continue
+          seenIdsRef.current.add(msg.id)
+          // nodePos에 있는 에이전트 간 통신만 표시
+          const from = agentIds.has(msg.from) ? msg.from : null
+          const to = agentIds.has(msg.to) ? msg.to : null
+          if (!from && !to) continue
+          // 한쪽만 매칭되면 MAX와 연결
+          const a = from || 'MAX'
+          const b = to || 'MAX'
+          if (a === b) continue
+          const sortedKey = [a, b].sort().join('|')
+          setPulseLines((prev) => {
+            const next = new Set(prev)
+            next.add(sortedKey)
+            return next
+          })
+          setTimeout(() => {
+            setPulseLines((prev) => {
+              const next = new Set(prev)
+              next.delete(sortedKey)
+              return next
+            })
+          }, 5000)
+        }
+        // 메모리 관리: 오래된 ID 정리
+        if (seenIdsRef.current.size > 500) {
+          const arr = Array.from(seenIdsRef.current).sort((a, b) => a - b)
+          seenIdsRef.current = new Set(arr.slice(-200))
+        }
+      } catch { /* ignore */ }
+    }
+    poll()
+    const interval = setInterval(poll, 2000)
+    return () => clearInterval(interval)
+  }, [nodePos])
 
   // 최근 메시지 피드 (10건, 선택 에이전트 필터링)
   const recentMessages = useMemo(() => {

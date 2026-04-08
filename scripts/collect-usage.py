@@ -1,5 +1,11 @@
 """Claude Code 토큰 사용량 수집 → 대시보드 /api/usage 전송
 10분마다 APScheduler(jobs.json)로 실행.
+
+데이터 소스: ~/.claude/projects/**/*.jsonl (type=assistant 레코드)
+- /usage CLI 명령: 인터랙티브 TUI 전용, subprocess 불가
+- Anthropic REST API: /v1/usage 없음
+- claude.ai OAuth API: 403 (클라이언트 토큰 접근 불가)
+- JSONL 파싱이 유일한 방법
 """
 import glob
 import json
@@ -13,27 +19,33 @@ DASHBOARD_URL = "http://localhost:5555/api/usage"
 JSONL_PATTERN = os.path.join(os.path.expanduser("~"), ".claude", "projects", "**", "*.jsonl")
 
 # Sonnet 4.6 가격 (USD/token)
-PRICE_INPUT          = 3.00   / 1_000_000   # $3/MTok
-PRICE_OUTPUT         = 15.00  / 1_000_000   # $15/MTok
-PRICE_CACHE_CREATE   = 3.75   / 1_000_000   # $3.75/MTok
-PRICE_CACHE_READ     = 0.30   / 1_000_000   # $0.30/MTok
+PRICE_INPUT        = 3.00  / 1_000_000   # $3/MTok
+PRICE_OUTPUT       = 15.00 / 1_000_000   # $15/MTok
+PRICE_CACHE_CREATE = 3.75  / 1_000_000   # $3.75/MTok
+PRICE_CACHE_READ   = 0.30  / 1_000_000   # $0.30/MTok
 
-# 일일 토큰 한도 (MAX Plan 기준 대략값, 정확한 한도 없을 경우 표시용)
-TOKENS_LIMIT = 0  # 0 = unknown
-
-
-def kst_today_prefix() -> str:
-    """오늘 날짜 KST 기준 ISO prefix (YYYY-MM-DD)"""
-    kst = timezone(timedelta(hours=9))
-    return datetime.now(kst).strftime("%Y-%m-%d")
+# Claude Max 플랜 주간 토큰 한도 (부서장 /usage 77% 기준 역산)
+# 1.06B / 0.77 ≈ 1.38B
+WEEKLY_TOKENS_LIMIT = 1_380_000_000
 
 
-def collect_today_usage() -> dict:
-    """오늘 JSONL 파일에서 assistant 사용량 합산 (requestId 기준 최종 레코드만)"""
-    today = kst_today_prefix()
+def kst_now() -> datetime:
+    return datetime.now(timezone(timedelta(hours=9)))
+
+
+def week_range_kst() -> tuple[str, str]:
+    """이번 주 월요일~일요일 날짜 범위 (KST, UTC ISO prefix 기준)"""
+    now = kst_now()
+    monday = now - timedelta(days=now.weekday())
+    sunday = monday + timedelta(days=6)
+    return monday.strftime("%Y-%m-%d"), sunday.strftime("%Y-%m-%d")
+
+
+def aggregate_usage(date_prefixes: list[str]) -> dict:
+    """주어진 날짜 prefix 목록 범위의 JSONL에서 usage 집계.
+    requestId 기준 중복 제거 (output_tokens 최대값 유지).
+    """
     files = glob.glob(JSONL_PATTERN, recursive=True)
-
-    # requestId → 최종 usage (output_tokens 가장 큰 레코드)
     best: dict[str, dict] = {}
 
     for fpath in files:
@@ -48,12 +60,11 @@ def collect_today_usage() -> dict:
                     except json.JSONDecodeError:
                         continue
 
-                    # 오늘 레코드만
                     ts = rec.get("timestamp", "")
-                    if not ts.startswith(today):
+                    # 날짜 범위 필터
+                    if not any(ts.startswith(d) for d in date_prefixes):
                         continue
 
-                    # assistant 타입만
                     if rec.get("type") != "assistant":
                         continue
 
@@ -68,62 +79,78 @@ def collect_today_usage() -> dict:
                     rid = rec.get("requestId", "")
                     out = usage.get("output_tokens", 0)
 
-                    # 같은 requestId면 output_tokens 가장 높은 것만 유지
                     if rid not in best or out > best[rid].get("output_tokens", 0):
                         best[rid] = {
-                            "input_tokens":          usage.get("input_tokens", 0),
-                            "output_tokens":         out,
-                            "cache_creation_tokens": usage.get("cache_creation_input_tokens", 0),
-                            "cache_read_tokens":     usage.get("cache_read_input_tokens", 0),
+                            "input":    usage.get("input_tokens", 0),
+                            "output":   out,
+                            "cc":       usage.get("cache_creation_input_tokens", 0),
+                            "cr":       usage.get("cache_read_input_tokens", 0),
                         }
         except Exception:
             pass
 
-    # 합산
-    total_input   = sum(v["input_tokens"]          for v in best.values())
-    total_output  = sum(v["output_tokens"]          for v in best.values())
-    total_cc      = sum(v["cache_creation_tokens"]  for v in best.values())
-    total_cr      = sum(v["cache_read_tokens"]      for v in best.values())
+    ti = sum(v["input"]  for v in best.values())
+    to = sum(v["output"] for v in best.values())
+    tc = sum(v["cc"]     for v in best.values())
+    tr = sum(v["cr"]     for v in best.values())
 
-    tokens_used = total_input + total_output + total_cc + total_cr
-    cost = (
-        total_input  * PRICE_INPUT +
-        total_output * PRICE_OUTPUT +
-        total_cc     * PRICE_CACHE_CREATE +
-        total_cr     * PRICE_CACHE_READ
-    )
-
-    kst = timezone(timedelta(hours=9))
+    cost = ti * PRICE_INPUT + to * PRICE_OUTPUT + tc * PRICE_CACHE_CREATE + tr * PRICE_CACHE_READ
     return {
-        "tokens_used":  tokens_used,
-        "tokens_limit": TOKENS_LIMIT,
-        "cost":         round(cost, 6),
-        "period":       today,
-        "updated_at":   datetime.now(kst).isoformat(),
-        # 상세 (참고용, 대시보드 무시 가능)
-        "_detail": {
-            "input": total_input,
-            "output": total_output,
-            "cache_create": total_cc,
-            "cache_read": total_cr,
-            "requests": len(best),
-        },
+        "tokens": ti + to + tc + tr,
+        "cost":   round(cost, 6),
+        "requests": len(best),
+        "detail": {"input": ti, "output": to, "cache_create": tc, "cache_read": tr},
     }
 
 
-def main():
-    payload = collect_today_usage()
-    detail  = payload.pop("_detail")
+def date_range_prefixes(start: str, end: str) -> list[str]:
+    """'YYYY-MM-DD' 범위의 모든 날짜 prefix 목록 생성"""
+    from datetime import date
+    s = date.fromisoformat(start)
+    e = date.fromisoformat(end)
+    prefixes = []
+    cur = s
+    while cur <= e:
+        prefixes.append(cur.isoformat())
+        cur += timedelta(days=1)
+    return prefixes
 
-    print(f"[collect-usage] 기간={payload['period']} "
-          f"토큰={payload['tokens_used']:,} "
-          f"비용=${payload['cost']:.4f} "
-          f"요청수={detail['requests']}")
+
+def main():
+    now = kst_now()
+    today = now.strftime("%Y-%m-%d")
+    week_start, week_end = week_range_kst()
+
+    # 오늘 집계
+    daily = aggregate_usage([today])
+    # 주간 집계
+    week_prefixes = date_range_prefixes(week_start, week_end)
+    weekly = aggregate_usage(week_prefixes)
+
+    period_str = f"{week_start} ~ {week_end}"
+
+    print(f"[collect-usage] 오늘={today} 토큰={daily['tokens']:,} 비용=${daily['cost']:.4f} 요청={daily['requests']}")
+    print(f"[collect-usage] 주간={period_str} 토큰={weekly['tokens']:,} 비용=${weekly['cost']:.4f} 요청={weekly['requests']}")
+
+    payload = {
+        "tokens_used":          daily["tokens"],
+        "tokens_limit":         0,           # API/CLI 조회 불가, unknown
+        "cost":                 daily["cost"],
+        "period":               today,
+        "updated_at":           now.isoformat(),
+        # 주간 데이터
+        "weekly_tokens":        weekly["tokens"],
+        "weekly_cost":          weekly["cost"],
+        "weekly_period":        period_str,
+        # 주간 한도 대비 잔여율
+        "weekly_limit":          WEEKLY_TOKENS_LIMIT,
+        "session_remaining_pct": round((1 - weekly["tokens"] / WEEKLY_TOKENS_LIMIT) * 100, 1),
+    }
 
     try:
         r = requests.post(DASHBOARD_URL, json=payload, timeout=5)
         if r.status_code == 200 and r.json().get("ok"):
-            print(f"[collect-usage] 대시보드 전송 완료")
+            print("[collect-usage] 대시보드 전송 완료")
         else:
             print(f"[collect-usage] 대시보드 응답 이상: {r.status_code} {r.text[:200]}", file=sys.stderr)
     except Exception as e:

@@ -1847,6 +1847,18 @@
       "updated_at": "2026-04-08 23:46:16",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-admin-agent-d36d77",
+      "agent": "admin-agent",
+      "task": "collect-usage.py 수정 요청:",
+      "message": "collect-usage.py 수정 요청:\n\n부서장이 /usage에서 이번주 77% 사용이라고 확인함.\n현재 이번주 토큰: ~1.06B → 77%이면 주간 한도 ≈ 1,380,000,000 (1.38B)\n\n수정사항:\n1. WEEKLY_TOKENS_LIMIT = 1_380_000_000 설정\n2. session_remaining_pct 계산: round((1 - weekly_tokens / WEEKLY_TOKENS_LIMIT) * 100, 1)\n3. POST /api/usage에 weekly_limit, session_remaining_pct 포함\n\n바로 수정하고 한번 실행해서 대시보드에 반영해줘.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 23:57:35",
+      "updated_at": "2026-04-08 23:57:35",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }
