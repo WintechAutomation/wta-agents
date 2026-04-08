@@ -9,7 +9,7 @@ from datetime import datetime, timezone, timedelta
 KST = timezone(timedelta(hours=9))
 NOW = datetime.now(KST)
 
-DATA_PATH = Path(r'C:\MES\wta-agents\workspaces\db-manager\erp_inventory_full.json')
+DATA_PATH = Path(r'C:\MES\wta-agents\workspaces\db-manager\erp_inventory_full_v2.json')
 OUTPUT = Path(r'C:\MES\wta-agents\reports\김근형\erp_재고현황_발주내역.html')
 
 ITEM_KIND_MAP = {
@@ -43,10 +43,14 @@ def main():
 
     total_items = len(data)
     has_po_list = [d for d in data if d.get('has_po')]
-    no_po_list = [d for d in data if not d.get('has_po')]
+    past_po_list = [d for d in data if not d.get('has_po') and d.get('all_time_last_po_dt')]
+    never_po_list = [d for d in data if not d.get('has_po') and not d.get('all_time_last_po_dt')]
+    no_po_list = past_po_list + never_po_list
     total_amt = sum(d.get('stock_amt', 0) for d in data)
     po_amt = sum(d.get('stock_amt', 0) for d in has_po_list)
-    no_po_amt = sum(d.get('stock_amt', 0) for d in no_po_list)
+    past_po_amt = sum(d.get('stock_amt', 0) for d in past_po_list)
+    never_po_amt = sum(d.get('stock_amt', 0) for d in never_po_list)
+    no_po_amt = past_po_amt + never_po_amt
 
     # 품목구분별 통계
     kind_stats = {}
@@ -64,6 +68,13 @@ def main():
     js_data = []
     for i, d in enumerate(data):
         kind_label = ITEM_KIND_MAP.get(d.get('item_kind', ''), d.get('item_kind', ''))
+        # po_status: 2=24년이후있음, 1=과거있음, 0=이력없음
+        if d.get('has_po'):
+            po_status = 2
+        elif d.get('all_time_last_po_dt'):
+            po_status = 1
+        else:
+            po_status = 0
         js_data.append([
             i + 1,                                    # 0: rank
             escape_html(d.get('item_cd', '')),        # 1: item_cd
@@ -71,12 +82,13 @@ def main():
             escape_html(d.get('spec', '') or ''),     # 3: spec
             d.get('stock_qty', 0),                    # 4: qty
             d.get('stock_amt', 0),                    # 5: amt
-            1 if d.get('has_po') else 0,              # 6: has_po
-            d.get('last_po_dt', '') or '',             # 7: last_po_dt
+            po_status,                                # 6: po_status (0/1/2)
+            d.get('last_po_dt', '') or '',             # 7: last_po_dt (2024~)
             d.get('po_count', 0),                     # 8: po_count
             escape_html(d.get('last_pjt_name', '') or ''),  # 9: pjt
             kind_label,                               # 10: kind
             escape_html(d.get('location', '') or ''), # 11: location
+            d.get('all_time_last_po_dt', '') or '',   # 12: all_time_last_po_dt
         ])
 
     js_data_str = json.dumps(js_data, ensure_ascii=False)
@@ -148,7 +160,8 @@ def main():
 
   .badge {{ display: inline-block; padding: 2px 7px; border-radius: 10px; font-size: 7.5pt; font-weight: 600; }}
   .po-yes {{ background: #e8f5e9; color: #2e7d32; }}
-  .po-no {{ background: #fce4ec; color: #c62828; }}
+  .po-past {{ background: #fff3e0; color: #e65100; }}
+  .po-no {{ background: #f5f5f5; color: #888; }}
 
   .footer {{ font-size: 8pt; color: #888; margin-top: 16px; text-align: right; }}
   .table-wrap {{ max-height: 70vh; overflow-y: auto; border: 1px solid #e0e0e0; border-radius: 4px; }}
@@ -178,14 +191,19 @@ def main():
       <div class="sub-value">약 {total_amt/100_000_000:.1f}억원</div>
     </div>
     <div class="summary-card">
-      <div class="label">발주 있음 (2024.01~)</div>
+      <div class="label">2024년 이후 발주 있음</div>
       <div class="value green">{len(has_po_list):,}건</div>
       <div class="sub-value">{fmt_amt(po_amt)}원</div>
     </div>
     <div class="summary-card">
-      <div class="label">발주 없음</div>
-      <div class="value orange">{len(no_po_list):,}건</div>
-      <div class="sub-value">{fmt_amt(no_po_amt)}원</div>
+      <div class="label">과거 발주만 있음</div>
+      <div class="value orange">{len(past_po_list):,}건</div>
+      <div class="sub-value">{fmt_amt(past_po_amt)}원</div>
+    </div>
+    <div class="summary-card">
+      <div class="label">발주이력 없음</div>
+      <div class="value" style="color:#888;">{len(never_po_list):,}건</div>
+      <div class="sub-value">{fmt_amt(never_po_amt)}원</div>
     </div>
   </div>
 
@@ -195,9 +213,10 @@ def main():
 
   <div class="toolbar">
     <input type="text" class="search-box" id="search" placeholder="품목코드/품목명/규격/프로젝트 검색..." oninput="applyFilters()"/>
-    <button class="filter-btn active" data-po="all" onclick="setPo('all')">전체</button>
-    <button class="filter-btn" data-po="yes" onclick="setPo('yes')">발주있음</button>
-    <button class="filter-btn" data-po="no" onclick="setPo('no')">발주없음</button>
+    <button class="filter-btn active" data-po="all" onclick="setPo('all')">전체 ({total_items:,})</button>
+    <button class="filter-btn" data-po="2" onclick="setPo('2')">24년이후 발주 ({len(has_po_list):,})</button>
+    <button class="filter-btn" data-po="1" onclick="setPo('1')">과거발주만 ({len(past_po_list):,})</button>
+    <button class="filter-btn" data-po="0" onclick="setPo('0')">발주이력없음 ({len(never_po_list):,})</button>
     <span class="result-count" id="result-count"></span>
   </div>
 
@@ -212,10 +231,11 @@ def main():
         <th class="center" style="width:50px;" onclick="sortBy(10)">구분</th>
         <th class="right" style="width:55px;" onclick="sortBy(4)">수량</th>
         <th class="right" style="width:105px;" onclick="sortBy(5)">재고금액(원)</th>
-        <th class="center" style="width:55px;" onclick="sortBy(6)">발주</th>
-        <th class="center" style="width:80px;" onclick="sortBy(7)">최근발주일</th>
-        <th class="right" style="width:40px;">건수</th>
-        <th style="width:180px;">프로젝트</th>
+        <th class="center" style="width:70px;" onclick="sortBy(6)">발주상태</th>
+        <th class="center" style="width:78px;" onclick="sortBy(7)">최근발주(24~)</th>
+        <th class="center" style="width:78px;" onclick="sortBy(12)">최근발주(전체)</th>
+        <th class="right" style="width:36px;">건수</th>
+        <th style="width:170px;">프로젝트</th>
       </tr>
     </thead>
     <tbody id="tbody"></tbody>
@@ -247,8 +267,11 @@ function renderRows(rows) {{
     let ac = '';
     if (amt >= 50000000) ac = ' class="amt-high"';
     else if (amt >= 10000000) ac = ' class="amt-mid"';
-    const badge = r[6] ? '<span class="badge po-yes">있음</span>' : '<span class="badge po-no">없음</span>';
-    const pjt = r[9].length > 28 ? r[9].substring(0,26)+'..' : r[9];
+    let badge;
+    if (r[6]===2) badge='<span class="badge po-yes">24년이후 발주</span>';
+    else if (r[6]===1) badge='<span class="badge po-past">과거발주</span>';
+    else badge='<span class="badge po-no">이력없음</span>';
+    const pjt = r[9].length > 26 ? r[9].substring(0,24)+'..' : r[9];
     html += '<tr>' +
       '<td class="center">'+(i+1)+'</td>' +
       '<td class="code">'+r[1]+'</td>' +
@@ -259,6 +282,7 @@ function renderRows(rows) {{
       '<td class="right"'+ac+'>'+fmtN(r[5])+'</td>' +
       '<td class="center">'+badge+'</td>' +
       '<td class="center">'+(r[7]||'-')+'</td>' +
+      '<td class="center">'+(r[12]||'-')+'</td>' +
       '<td class="right">'+(r[8]||'-')+'</td>' +
       '<td class="pjt">'+(pjt||'-')+'</td></tr>';
   }}
@@ -269,8 +293,7 @@ function renderRows(rows) {{
 function applyFilters() {{
   const q = document.getElementById('search').value.toLowerCase();
   filtered = DATA.filter(r => {{
-    if (poFilter === 'yes' && !r[6]) return false;
-    if (poFilter === 'no' && r[6]) return false;
+    if (poFilter !== 'all' && r[6] !== parseInt(poFilter)) return false;
     if (kindFilter && r[10] !== kindFilter) return false;
     if (q) {{
       const txt = (r[1]+' '+r[2]+' '+r[3]+' '+r[9]).toLowerCase();

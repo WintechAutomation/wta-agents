@@ -131,6 +131,54 @@
       "updated_at": "2026-04-08 08:50:00",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-crafter-68d33c",
+      "agent": "crafter",
+      "task": "부서장 피드백 - 긴급:",
+      "message": "부서장 피드백 - 긴급:\n\n프로젝트 생성이 안 된다고 합니다. 외부 URL에서 프로젝트 생성 버튼 클릭 시 동작하지 않는 것으로 보임.\n\n확인 및 수정 사항:\n1. 프로젝트 탐색기에서 프로젝트 생성 버튼이 실제로 동작하는지 확인\n2. API 연결 문제인지 (Cloudflare 터널 경유 시 API 호출이 백엔드로 안 가는 건 아닌지)\n3. 프론트엔드에서 백엔드 API URL이 localhost:8200으로 하드코딩되어 있다면 Cloudflare 경유 시 접근 불가\n4. CORS 문제 가능성\n\n즉시 확인하고 수정해줘.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 08:53:37",
+      "updated_at": "2026-04-08 08:53:37",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-db-manager-e2ba9f",
+      "agent": "db-manager",
+      "task": "docs-agent 경유, 김근형님 추가 지적건.",
+      "message": "docs-agent 경유, 김근형님 추가 지적건.\n\n확인 사항 3가지:\n1. 프로젝트 HP3C22601004(메이써루이 프레스 #14)의 전체 발주 품목 리스트 조회 — CKR20-145-1065L이 포함되어 있는지\n2. 현재 발주 조회가 품목코드(ITEM_CD) 단독 매칭인데, 같은 발주번호(PO_NO)에 다른 품목코드로 들어간 경우를 놓치고 있는 건 아닌지 확인\n3. CKR20-145-1065L과 유사 품목코드(CKR20-*)로도 발주 테이블 조회\n\n결과는 docs-agent에게 전달해줘.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 08:56:16",
+      "updated_at": "2026-04-08 08:56:16",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-crafter-19d673",
+      "agent": "crafter",
+      "task": "부서장 피드백 - 긴급:",
+      "message": "부서장 피드백 - 긴급:\n\n시트 페이지에서 도면 그리기가 안 됩니다. 프로젝트 생성 후 시트를 열었는데 아무것도 안 나온다고 합니다.\n\n확인 사항:\n1. 프로젝트 탐색기에서 시트 클릭 시 JointJS 캔버스가 로드되는지\n2. 심볼 라이브러리 탭에서 심볼을 캔버스에 드래그앤드롭하는 기능이 동작하는지\n3. 캔버스 자체가 렌더링되고 있는지 (빈 화면인지, 캔버스는 있는데 심볼만 안 보이는 건지)\n4. 브라우저 콘솔 에러 확인\n\n즉시 확인하고 수정해줘.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 08:56:28",
+      "updated_at": "2026-04-08 08:56:28",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-admin-agent-53f24f",
+      "agent": "admin-agent",
+      "task": "부서장 지시: 슬랙 구매팀 인원 초대",
+      "message": "부서장 지시: 슬랙 구매팀 인원 초대\n\n구매팀 전원 슬랙 초대 필요. 단, **홍대한 이사는 제외**.\n\n1. 먼저 구매팀 인원 목록 확인 (ERP 또는 다우오피스 등에서)\n2. 홍대한 이사 제외한 나머지 전원 슬랙 워크스페이스에 초대\n3. 초대 완료 후 결과 보고",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 08:57:27",
+      "updated_at": "2026-04-08 08:57:27",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }

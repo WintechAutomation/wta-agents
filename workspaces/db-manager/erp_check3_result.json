@@ -1,0 +1,2488 @@
+{
+  "check1_pjt_po_items": {
+    "project_no": "HP3C22601004",
+    "total_lines": 381,
+    "ckr_included": false,
+    "ckr_records": [],
+    "all_items": [
+      {
+        "item_cd": "07-00-102-0",
+        "item_nm": "Motor Spacer",
+        "po_no": "PO260400094",
+        "po_dt": "20260407"
+      },
+      {
+        "item_cd": "07-00-102-0",
+        "item_nm": "Motor Spacer",
+        "po_no": "PO260400094",
+        "po_dt": "20260407"
+      },
+      {
+        "item_cd": "07-00-102-0",
+        "item_nm": "Motor Spacer",
+        "po_no": "PO260400094",
+        "po_dt": "20260407"
+      },
+      {
+        "item_cd": "07-21-019-1",
+        "item_nm": "Air Blower Nozzle",
+        "po_no": "PO260400091",
+        "po_dt": "20260407"
+      },
+      {
+        "item_cd": "07-21-020-0",
+        "item_nm": "Air Blower Plate",
+        "po_no": "PO260400091",
+        "po_dt": "20260407"
+      },
+      {
+        "item_cd": "07-70-15-1",
+        "item_nm": "Brush",
+        "po_no": "PO260400093",
+        "po_dt": "20260407"
+      },
+      {
+        "item_cd": "KQ2S04-M5N",
+        "item_nm": "Fitting",
+        "po_no": "PO260400092",
+        "po_dt": "20260407"
+      },
+      {
+        "item_cd": "M-3AU-4",
+        "item_nm": "Fitting",
+        "po_no": "PO260400092",
+        "po_dt": "20260407"
+      },
+      {
+        "item_cd": "M-3AU-4",
+        "item_nm": "Fitting",
+        "po_no": "PO260400092",
+        "po_dt": "20260407"
+      },
+      {
+        "item_cd": "M-5P",
+        "item_nm": "Plug",
+        "po_no": "PO260400092",
+        "po_dt": "20260407"
+      },
+      {
+        "item_cd": "C-SHHPSDN8-2",
+        "item_nm": "Hinge",
+        "po_no": "PO260400028",
+        "po_dt": "20260402"
+      },
+      {
+        "item_cd": "MultiFlexCoupling40A",
+        "item_nm": "MultiFlexCoupling40A",
+        "po_no": "PO260400010",
+        "po_dt": "20260401"
+      },
+      {
+        "item_cd": "MultiFlexCoupling40A",
+        "item_nm": "MultiFlexCoupling40A",
+        "po_no": "PO260400010",
+        "po_dt": "20260401"
+      },
+      {
+        "item_cd": "HAR_TRADE",
+        "item_nm": "Harness 직납용",
+        "po_no": "PO260300541",
+        "po_dt": "20260331"
+      },
+      {
+        "item_cd": "HBLSS6",
+        "item_nm": "Profile Brkt",
+        "po_no": "PO260300516",
+        "po_dt": "20260330"
+      },
+      {
+        "item_cd": "6900ZZ",
+        "item_nm": "Bearing",
+        "po_no": "PO260300469",
+        "po_dt": "20260325"
+      },
+      {
+        "item_cd": "6900ZZ",
+        "item_nm": "Bearing",
+        "po_no": "PO260300469",
+        "po_dt": "20260325"
+      },
+      {
+        "item_cd": "6901ZZ",
+        "item_nm": "Ball Bearing",
+        "po_no": "PO260300469",
+        "po_dt": "20260325"
+      },
+      {
+        "item_cd": "B606DDU",
+        "item_nm": "Bearing",
+        "po_no": "PO260300469",
+        "po_dt": "20260325"
+      },
+      {
+        "item_cd": "ARM5SA-08-A",
+        "item_nm": "Regulator",
+        "po_no": "PO260300460",
+        "po_dt": "20260324"
+      },
+      {
+        "item_cd": "AS1201F-M5-04",
+        "item_nm": "Speed Controler Fitting",
+        "po_no": "PO260300460",
+        "po_dt": "20260324"
+      },
+      {
+        "item_cd": "AS2052FS1-08",
+        "item_nm": "Speed Controller Fitting",
+        "po_no": "PO260300460",
+        "po_dt": "20260324"
+      },
+      {
+        "item_cd": "BYGS890",
+        "item_nm": "Handle",
+        "po_no": "PO260300462",
+        "po_dt": "20260324"
+      },
+      {
+        "item_cd": "BYGS890",
+        "item_nm": "Handle",
+        "po_no": "PO260300462",
+        "po_dt": "20260324"
+      },
+      {
+        "item_cd": "CN-73-C2",
+        "item_nm": "Amp Cable",
+        "po_no": "PO260300463",
+        "po_dt": "20260324"
+      },
+      {
+        "item_cd": "FT-42",
+        "item_nm": "Fiber Sensor",
+        "po_no": "PO260300463",
+        "po_dt": "20260324"
+      },
+      {
+        "item_cd": "GLS-1",
+        "item_nm": "Door Sensor",
+        "po_no": "PO260300461",
+        "po_dt": "20260324"
+      },
+      {
+        "item_cd": "KQ2L04-99A",
+        "item_nm": "Fitting",
+        "po_no": "PO260300460",
+        "po_dt": "20260324"
+      },
+      {
+        "item_cd": "KQ2L06-99A",
+        "item_nm": "Fitting",
+        "po_no": "PO260300460",
+        "po_dt": "20260324"
+      },
+      {
+        "item_cd": "KQ2L06-99A",
+        "item_nm": "Fitting",
+        "po_no": "PO260300460",
+        "po_dt": "20260324"
+      },
+      {
+        "item_cd": "M-5P",
+        "item_nm": "Plug",
+        "po_no": "PO260300460",
+        "po_dt": "20260324"
+      },
+      {
+        "item_cd": "MS-DIN-2",
+        "item_nm": "Fiber Sensor Brkt",
+        "po_no": "PO260300463",
+        "po_dt": "20260324"
+      },
+      {
+        "item_cd": "HAR_112_1",
+        "item_nm": "Harness",
+        "po_no": "PO260300418",
+        "po_dt": "20260323"
+      },
+      {
+        "item_cd": "USB-64GB",
+        "item_nm": "PC잡자재",
+        "po_no": "PO260300381",
+        "po_dt": "20260320"
+      },
+      {
+        "item_cd": "01-169-90-0",
+        "item_nm": "Main Panel",
+        "po_no": "PO260300323",
+        "po_dt": "20260318"
+      },
+      {
+        "item_cd": "01-169-91-0",
+        "item_nm": "Sub Panel-1",
+        "po_no": "PO260300323",
+        "po_dt": "20260318"
+      },
+      {
+        "item_cd": "01-169-92-0",
+        "item_nm": "Sub Panel-2",
+        "po_no": "PO260300323",
+        "po_dt": "20260318"
+      },
+      {
+        "item_cd": "DS-2CD1T23G2-LIUF/SL",
+        "item_nm": "CCTV",
+        "po_no": "PO260300315",
+        "po_dt": "20260317"
+      },
+      {
+        "item_cd": "J25Q.1.103SR55",
+        "item_nm": "Cableveyor",
+        "po_no": "PO260300312",
+        "po_dt": "20260317"
+      },
+      {
+        "item_cd": "J25Q.1.103S-XJTS.A1",
+        "item_nm": "End Brkt",
+        "po_no": "PO260300312",
+        "po_dt": "20260317"
+      },
+      {
+        "item_cd": "JN18Q.1.18W-HX.XJTS.",
+        "item_nm": "Energy Chain Braket",
+        "po_no": "PO260300312",
+        "po_dt": "20260317"
+      },
+      {
+        "item_cd": "JN18Q.1.18WR38",
+        "item_nm": "Cableveyor",
+        "po_no": "PO260300312",
+        "po_dt": "20260317"
+      },
+      {
+        "item_cd": "JY25Q.1.50W-FJT",
+        "item_nm": "Energy Chain Braket",
+        "po_no": "PO260300312",
+        "po_dt": "20260317"
+      },
+      {
+        "item_cd": "JY25Q.1.50WR55-23LIN",
+        "item_nm": "Cableveyor",
+        "po_no": "PO260300312",
+        "po_dt": "20260317"
+      },
+      {
+        "item_cd": "JY25Q.1.75W-FJT",
+        "item_nm": "Energy Chain Braket",
+        "po_no": "PO260300312",
+        "po_dt": "20260317"
+      },
+      {
+        "item_cd": "JY25Q.1.75WR55-16LIN",
+        "item_nm": "Cableveyor",
+        "po_no": "PO260300312",
+        "po_dt": "20260317"
+      },
+      {
+        "item_cd": "JY35Q.1.75W-FJT",
+        "item_nm": "Energy Chain Braket",
+        "po_no": "PO260300312",
+        "po_dt": "20260317"
+      },
+      {
+        "item_cd": "JY35Q.1.75WR55",
+        "item_nm": "Energy Chain",
+        "po_no": "PO260300312",
+        "po_dt": "20260317"
+      },
+      {
+        "item_cd": "JY35Q.1-SGP",
+        "item_nm": "Separator",
+        "po_no": "PO260300312",
+        "po_dt": "20260317"
+      },
+      {
+        "item_cd": "PSFGZ15-311-M5-N5-SC",
+        "item_nm": "Shaft",
+        "po_no": "PO260300314",
+        "po_dt": "20260317"
+      },
+      {
+        "item_cd": "6SV0500M4F",
+        "item_nm": "Manifold",
+        "po_no": "PO260300297",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "6SV0500M6F",
+        "item_nm": "Manifold",
+        "po_no": "PO260300297",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "6SV0510M5B200",
+        "item_nm": "Solenoid Valve",
+        "po_no": "PO260300297",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "6SV0520M5B200",
+        "item_nm": "Solenoid Valve",
+        "po_no": "PO260300297",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "6SV0530CM5B200",
+        "item_nm": "Solenoid Valve",
+        "po_no": "PO260300297",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "6SV0530EM5B200",
+        "item_nm": "Solenoid Valve",
+        "po_no": "PO260300297",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "BD-01",
+        "item_nm": "PLUG",
+        "po_no": "PO260300275",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "BD-01",
+        "item_nm": "PLUG",
+        "po_no": "PO260300275",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "BD-01",
+        "item_nm": "PLUG",
+        "po_no": "PO260300275",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "BPOC802",
+        "item_nm": "Fitting",
+        "po_no": "PO260300297",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "BSL01",
+        "item_nm": "Silencer",
+        "po_no": "PO260300297",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "BSL01",
+        "item_nm": "Silencer",
+        "po_no": "PO260300297",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "CN-AMSC6-10-30",
+        "item_nm": "Collar",
+        "po_no": "PO260300299",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "CN-C-MGCBN1",
+        "item_nm": "Magnetic 락",
+        "po_no": "PO260300299",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "CN-C-MGCBN2",
+        "item_nm": "Magnetic 락",
+        "po_no": "PO260300299",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "CN-C-MGCEN1",
+        "item_nm": "Magnetic 락",
+        "po_no": "PO260300299",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "CN-E-CGL01-D75",
+        "item_nm": "Caster",
+        "po_no": "PO260300299",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "CN-E-LMGCC-3",
+        "item_nm": "Magnetic 락",
+        "po_no": "PO260300299",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "CN-E-MSSR10-25",
+        "item_nm": "Set Screw",
+        "po_no": "PO260300299",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "CN-E-PSFJW16-300-M8",
+        "item_nm": "Shaft",
+        "po_no": "PO260300299",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "CN-EX-14A",
+        "item_nm": "Sensor\r\n",
+        "po_no": "PO260300293",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "CN-EX-14A",
+        "item_nm": "Sensor\r\n",
+        "po_no": "PO260300293",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "CN-FPSFJBC-D10-L78",
+        "item_nm": "Shaft",
+        "po_no": "PO260300299",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "CN-FX-501",
+        "item_nm": "Fiber Amp",
+        "po_no": "PO260300293",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "CN-HTBN201S3M-100",
+        "item_nm": "Timming Belt",
+        "po_no": "PO260300299",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "CN-HTBN264S3M-100",
+        "item_nm": "Timming Belt",
+        "po_no": "PO260300299",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "CN-HTBN305S5M-150",
+        "item_nm": "Servo motor belt",
+        "po_no": "PO260300299",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "CN-HTPA26S5M150-A-",
+        "item_nm": "Servo motor pulley",
+        "po_no": "PO260300299",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "CN-HTPM26S3M100-A-P8",
+        "item_nm": "Timing Pulley",
+        "po_no": "PO260300299",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "CN-KEG4-25",
+        "item_nm": "Parallel Keys",
+        "po_no": "PO260300299",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "CN-KES4-25",
+        "item_nm": "KEY",
+        "po_no": "PO260300299",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "CN-LHFSW16",
+        "item_nm": "Ball Bush",
+        "po_no": "PO260300299",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "CN-LPT5-12",
+        "item_nm": "Pin",
+        "po_no": "PO260300299",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "CN-LVBM16-30",
+        "item_nm": "Leveling Bolts",
+        "po_no": "PO260300299",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "CN-LVNM16",
+        "item_nm": "Lock Nut",
+        "po_no": "PO260300299",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "CN-MS2400-UNIVERSAL",
+        "item_nm": "Camlock",
+        "po_no": "PO260300281",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "CN-PSFGZ15-311-M5-N5",
+        "item_nm": "Shaft",
+        "po_no": "PO260300299",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "CN-PSFMR10-131",
+        "item_nm": "Shaft",
+        "po_no": "PO260300299",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "CN-PY12",
+        "item_nm": "Fitting",
+        "po_no": "PO260300297",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "CN-PY6",
+        "item_nm": "Fitting",
+        "po_no": "PO260300297",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "CN-PY8",
+        "item_nm": "Fitting",
+        "po_no": "PO260300297",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "CN-RCL25-10-10",
+        "item_nm": "Clamp Coupling",
+        "po_no": "PO260300299",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "CN-ROFAC30-10-L40-H0",
+        "item_nm": "Flat Belt Idler",
+        "po_no": "PO260300299",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "CN-ROFAC30-10-L40-H0",
+        "item_nm": "Flat Belt Idler",
+        "po_no": "PO260300299",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "CN-SCSW15-15",
+        "item_nm": "Set Collar",
+        "po_no": "PO260300299",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "CN-SDWA-26C-10X10",
+        "item_nm": "Coupling",
+        "po_no": "PO260300299",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "CN-SHDW-66C-19X22",
+        "item_nm": "Coupling",
+        "po_no": "PO260300299",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "CN-SWMS-NH-D57-V45-T",
+        "item_nm": "Washer",
+        "po_no": "PO260300299",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "CN-TT12BK-38W-1430L",
+        "item_nm": "Flat Belt",
+        "po_no": "PO260300299",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "CN-TT12BK-38W-825L",
+        "item_nm": "Flat Belt",
+        "po_no": "PO260300299",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "CN-TT12BK-40W-885L",
+        "item_nm": "Flat Belt",
+        "po_no": "PO260300299",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "CN-UNAH4-10",
+        "item_nm": "Stopper bolt",
+        "po_no": "PO260300299",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "CN-URWH30-16-3",
+        "item_nm": "Urethane Washer",
+        "po_no": "PO260300299",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "CN-ZL112-K15LZ-GN",
+        "item_nm": "Multistage Ejector",
+        "po_no": "PO260300292",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "DPHN210020",
+        "item_nm": "PRESSURE S/W",
+        "po_no": "PO260300297",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "DPSN101020",
+        "item_nm": "Digital Pressure Switch",
+        "po_no": "PO260300297",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "E-LWAD32-D120-M30-L2",
+        "item_nm": "Level Foot",
+        "po_no": "PO260300299",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "FABR090-4-S2-P1",
+        "item_nm": "Reducer",
+        "po_no": "PO260300278",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "F-DPSDEB",
+        "item_nm": "SWITCH BRKT",
+        "po_no": "PO260300297",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "F-GP4010P",
+        "item_nm": "압력계",
+        "po_no": "PO260300297",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "GA400T-P1",
+        "item_nm": "Spacer Attachment",
+        "po_no": "PO260300297",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "GAFR30010SW",
+        "item_nm": "Regulator",
+        "po_no": "PO260300297",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "GAFR40015SNW",
+        "item_nm": "Filter Regulator",
+        "po_no": "PO260300297",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "GZ40015",
+        "item_nm": "Pressure Relief Valve",
+        "po_no": "PO260300297",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "JBY-C-UWANS9-100-30",
+        "item_nm": "Handle",
+        "po_no": "PO260300299",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "JBY-XAM35-A110",
+        "item_nm": "Handle",
+        "po_no": "PO260300299",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "KQ2ZD8-03",
+        "item_nm": "Fitting",
+        "po_no": "PO260300275",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "KQ2ZD8-04",
+        "item_nm": "Fitting",
+        "po_no": "PO260300275",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "MS1H2-15C30CB-A331R",
+        "item_nm": "MS1 ServoMotor",
+        "po_no": "PO260300300",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "MS1H4-20B30CB-A331R",
+        "item_nm": "MS1 ServoMotor",
+        "po_no": "PO260300300",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "MS1H4-20B30CB-A334R",
+        "item_nm": "MS1 ServoMotor",
+        "po_no": "PO260300300",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "MS1H4-40B30CB-A334R",
+        "item_nm": "MS1 ServoMotor",
+        "po_no": "PO260300300",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "MS1H4-75B30CB-A331R",
+        "item_nm": "MS1 ServoMotor",
+        "po_no": "PO260300300",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "P-6SV0500M-R2",
+        "item_nm": "B/P",
+        "po_no": "PO260300297",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "P-6SV0500M-R2",
+        "item_nm": "B/P",
+        "po_no": "PO260300297",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "PAL04",
+        "item_nm": "Sliencer",
+        "po_no": "PO260300297",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "PG6-8",
+        "item_nm": "Fitting",
+        "po_no": "PO260300297",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "PL1203",
+        "item_nm": "Fitting",
+        "po_no": "PO260300297",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "PL1204",
+        "item_nm": "Fitting",
+        "po_no": "PO260300297",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "PL401",
+        "item_nm": "Fitting",
+        "po_no": "PO260300297",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "PL4M5",
+        "item_nm": "Fitting",
+        "po_no": "PO260300297",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "PL4M5",
+        "item_nm": "Fitting",
+        "po_no": "PO260300297",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "PL6M5",
+        "item_nm": "Fitting",
+        "po_no": "PO260300297",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "PL801",
+        "item_nm": "Fitting",
+        "po_no": "PO260300297",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "PL801",
+        "item_nm": "Fitting",
+        "po_no": "PO260300297",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "PL802",
+        "item_nm": "Fitting",
+        "po_no": "PO260300297",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "POC4M5",
+        "item_nm": "Fitting",
+        "po_no": "PO260300297",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "PSA4",
+        "item_nm": "Speed Controller",
+        "po_no": "PO260300297",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "QEH20CA-2R335-ZAH",
+        "item_nm": "LM Rail",
+        "po_no": "PO260300279",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "QEH20CA2R956Z0H",
+        "item_nm": "LM RAIL",
+        "po_no": "PO260300279",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "SV670NS012I",
+        "item_nm": "SV670 ServoDriver",
+        "po_no": "PO260300300",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "SV670NS1R6I",
+        "item_nm": "SV670 ServoDriver",
+        "po_no": "PO260300300",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "SV670NS1R6I",
+        "item_nm": "SV670 ServoDriver",
+        "po_no": "PO260300300",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "SV670NS2R8I",
+        "item_nm": "SV670 ServoDriver",
+        "po_no": "PO260300300",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "SV670NS5R5I",
+        "item_nm": "SV670 ServoDriver",
+        "po_no": "PO260300300",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "TCL16X60S0DMSGS2",
+        "item_nm": "Cylinder",
+        "po_no": "PO260300297",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "XG01-024-100-2",
+        "item_nm": "Handle",
+        "po_no": "PO260300281",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "XG092-033",
+        "item_nm": "Handle",
+        "po_no": "PO260300281",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "X-KZFC10004B",
+        "item_nm": "line Air Filter",
+        "po_no": "PO260300297",
+        "po_dt": "20260316"
+      },
+      {
+        "item_cd": "01-00-003-0",
+        "item_nm": "Anchor Plate",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "01-148-27-0",
+        "item_nm": "Suction Brkt",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "01-148-29-0",
+        "item_nm": "Filter Pipe",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "01-148-82-0",
+        "item_nm": "Docking Cover",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "01-148-98-0",
+        "item_nm": "Hose Holder",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "01-169-01-0",
+        "item_nm": "Main Frame",
+        "po_no": "PO260300221",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "01-169-06-0",
+        "item_nm": "Acrylic Door",
+        "po_no": "PO260300218",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "01-57-05-1",
+        "item_nm": "LED Brkt",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "01-57-07-3",
+        "item_nm": "DUCT",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "01-57-08-0",
+        "item_nm": "DUCT COVER",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "01-57-09-4",
+        "item_nm": "Duct Cover",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "01-57-10-5",
+        "item_nm": "Duct",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "01-57-11-0",
+        "item_nm": "Duct",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "01-57-12-0",
+        "item_nm": "Duct Cover",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "01-57-16-1",
+        "item_nm": "Pannel Brkt",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "01-64-28-0",
+        "item_nm": "Hose Holder",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "01-68-14-0",
+        "item_nm": "Docking Cover",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "01-68-91-1",
+        "item_nm": "Cable Hole Cover",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "02-00-001-2",
+        "item_nm": "Main S/W Plate",
+        "po_no": "PO260300219",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "02-00-004-0",
+        "item_nm": "MAGNETIC BRKT",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "02-00-005-1",
+        "item_nm": "T/P BRKT",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "02-00-007-4",
+        "item_nm": "AMP BRKT",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "02-00-014-3",
+        "item_nm": "SPEED CONTROLER BRKT",
+        "po_no": "PO260300259",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "02-00-015-1",
+        "item_nm": "Fitting Brkt",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "02-00-023-1",
+        "item_nm": "SPEED CONTROLER BRKT",
+        "po_no": "PO260300259",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "02-00-28-1",
+        "item_nm": "Main S/W Brkt",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "02-00-35-0",
+        "item_nm": "Keyboard Hinge Brkt",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "02-00-38-0",
+        "item_nm": "Cable Clamp",
+        "po_no": "PO260300259",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "02-107-80-1",
+        "item_nm": "Duct Hole Cover",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "02-157-01-0",
+        "item_nm": "Left Top Cover",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "02-157-03-0",
+        "item_nm": "Connector Brkt",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "02-157-06-0",
+        "item_nm": "TP Connector Brkt",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "02-157-18-0",
+        "item_nm": "LEFT DOOR 견시창",
+        "po_no": "PO260300218",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "02-157-65-1",
+        "item_nm": "Docking Cover",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "02-157-66-1",
+        "item_nm": "Docking Cover",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "02-177-06-0",
+        "item_nm": "OP DOOR",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "02-177-07-0",
+        "item_nm": "전장도어1",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "02-177-09-0",
+        "item_nm": "Keyboard Plate",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "02-177-10-0",
+        "item_nm": "견시창",
+        "po_no": "PO260300218",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "02-177-109-0",
+        "item_nm": "REAR DOOR",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "02-177-17-0",
+        "item_nm": "LEFT DOOR",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "02-177-21-0",
+        "item_nm": "전장도어",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "02-177-42-0",
+        "item_nm": "Magnetic Fixture",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "02-177-82-0",
+        "item_nm": "LEFT DOOR",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "02-57-02-1",
+        "item_nm": "Acrylic Cover",
+        "po_no": "PO260300218",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "02-57-12-3",
+        "item_nm": "Monitor Cover",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "02-57-13-1",
+        "item_nm": "Monitor Cover2",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "02-57-16-2",
+        "item_nm": "NG BOX",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "02-57-20-2",
+        "item_nm": "Acrylic Cover",
+        "po_no": "PO260300218",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "02-57-22-0",
+        "item_nm": "Magnetic Brkt",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "02-57-25-0",
+        "item_nm": "Arm Brkt",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "02-57-27-0",
+        "item_nm": "FIX PLATE",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "02-61-30-1",
+        "item_nm": "Manual Box",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "02-67-04-1",
+        "item_nm": "Top Cover1",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "02-67-05-1",
+        "item_nm": "Top Cover2",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "02-67-08-2",
+        "item_nm": "전면하부 Door",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "02-67-11-1",
+        "item_nm": "전면하부 DOOR",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "02-67-59-2",
+        "item_nm": "Front Top Cover",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "02-67-83-0",
+        "item_nm": "Left Door 견시창",
+        "po_no": "PO260300218",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "02-67-91-2",
+        "item_nm": "Handle Cover",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "03-34-15-0",
+        "item_nm": "X-Axis Cableveyor Brkt",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "04-100-06-0",
+        "item_nm": "CABLE CHAIN BRKT",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "04-10-022-1",
+        "item_nm": "FIBOX COVER",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "04-29-09-0",
+        "item_nm": "Cable Chain Brkt",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "04-29-12-0",
+        "item_nm": "Regulator Brkt",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "04-29-19-0",
+        "item_nm": "X,Z-Axis Cableveyot Brkt",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "04-29-21-0",
+        "item_nm": "FIBOX",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "04-29-50-0",
+        "item_nm": "Regulator Block",
+        "po_no": "PO260300259",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "08-17-06-2",
+        "item_nm": "Station Fix Bar",
+        "po_no": "PO260300259",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "08-17-20-3",
+        "item_nm": "ATC Station Base",
+        "po_no": "PO260300259",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "12-03-042-1",
+        "item_nm": "Servo motor brkt",
+        "po_no": "PO260300259",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "12-06-11-0",
+        "item_nm": "Stopper Cylinder",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "12-06-15-3",
+        "item_nm": "Sensor Brkt",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "12-06-16-1",
+        "item_nm": "Sensor Brkt",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "12-06-19-0",
+        "item_nm": "Roller Shaft",
+        "po_no": "PO260300259",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "12-06-22-0",
+        "item_nm": "Guide",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "12-06-24-0",
+        "item_nm": "Profile Brkt",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "12-06-25-0",
+        "item_nm": "Motor Plate",
+        "po_no": "PO260300259",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "12-06-26-0",
+        "item_nm": "Motor Fix Plate",
+        "po_no": "PO260300259",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "12-06-28-0",
+        "item_nm": "Pulley Cover",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "12-06-32-3",
+        "item_nm": "Bottom Plate",
+        "po_no": "PO260300259",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "12-06-38-0",
+        "item_nm": "BEARING COVER",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "12-06-43-2",
+        "item_nm": "Lift Sensor Brkt",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "12-06-56-2",
+        "item_nm": "Lift Shaft Link",
+        "po_no": "PO260300259",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "12-06-57-1",
+        "item_nm": "End Cover",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "12-06-70-0",
+        "item_nm": "Tension Block1",
+        "po_no": "PO260300259",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "12-06-71-0",
+        "item_nm": "Tension Block2",
+        "po_no": "PO260300259",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "12-06-75-0",
+        "item_nm": "Pulley",
+        "po_no": "PO260300238",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "12-06-76-3",
+        "item_nm": "Lift Con Brkt",
+        "po_no": "PO260300259",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "12-06-78-1",
+        "item_nm": "Limit Sensor Rail",
+        "po_no": "PO260300237",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "12-06-82-1",
+        "item_nm": "Lift Conveyor Body",
+        "po_no": "PO260300237",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "12-06-83-2",
+        "item_nm": "Flat Belt Pulley",
+        "po_no": "PO260300258",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "12-06-87-1",
+        "item_nm": "Bearing Holder",
+        "po_no": "PO260300259",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "12-06-88-1",
+        "item_nm": "Flat Belt Pulley",
+        "po_no": "PO260300258",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "12-06-89-1",
+        "item_nm": "Bearing Holder",
+        "po_no": "PO260300259",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "12-06-91-1",
+        "item_nm": "Motor Bracket",
+        "po_no": "PO260300259",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "12-06-94-0",
+        "item_nm": "Sensor Brkt",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "12-06-95-1",
+        "item_nm": "Stopper",
+        "po_no": "PO260300259",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "12-06-96-3",
+        "item_nm": "Lift Con Brkt-2",
+        "po_no": "PO260300259",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "12-06-97-0",
+        "item_nm": "Lift Con Brkt",
+        "po_no": "PO260300259",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "12-07-43-1",
+        "item_nm": "Lift Sensor Brkt",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "12-07-47-0",
+        "item_nm": "Limit Sensor Dog",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "12-07-90-0",
+        "item_nm": "Bearing Cover",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "12-07-91-0",
+        "item_nm": "Bearing Cover",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "12-08-78-4",
+        "item_nm": "Shaft Link Cover",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "12-11-20-0",
+        "item_nm": "Guide",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "12-17-21-1",
+        "item_nm": "Guide",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "12-17-29-1",
+        "item_nm": "Stopper",
+        "po_no": "PO260300259",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "12-17-34-0",
+        "item_nm": "Mid Plate",
+        "po_no": "PO260300259",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "12-17-60-0",
+        "item_nm": "Guide",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "12-17-76-2",
+        "item_nm": "Lift Con Brkt",
+        "po_no": "PO260300259",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "12-17-77-0",
+        "item_nm": "Lift Plate",
+        "po_no": "PO260300259",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "12-17-80-0",
+        "item_nm": "Cylinder Brkt",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "12-17-83-0",
+        "item_nm": "Pulley",
+        "po_no": "PO260300258",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "12-17-92-0",
+        "item_nm": "Spacer",
+        "po_no": "PO260300259",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "12-24-01-0",
+        "item_nm": "Conveyor Frame",
+        "po_no": "PO260300237",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "12-24-36-0",
+        "item_nm": "Lift Con Brkt",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "12-24-90-0",
+        "item_nm": "Lift Cylinder Brkt",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "12-25-81-0",
+        "item_nm": "Cable Chain Brkt",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "13-00-008-0",
+        "item_nm": "MOTOR SPACE",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "13-14-01-0",
+        "item_nm": "Roller Shaft",
+        "po_no": "PO260300238",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "13-14-17-2",
+        "item_nm": "Motor Plate",
+        "po_no": "PO260300259",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "13-14-18-0",
+        "item_nm": "Motor Pulley",
+        "po_no": "PO260300238",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "13-14-23-0",
+        "item_nm": "Tension Block1",
+        "po_no": "PO260300259",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "13-14-24-0",
+        "item_nm": "Tension Block2",
+        "po_no": "PO260300259",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "13-15-11-3",
+        "item_nm": "Pulley Cover",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "13-15-14-0",
+        "item_nm": "Conveyor Body",
+        "po_no": "PO260300237",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "13-15-20-1",
+        "item_nm": "Conveyor Body",
+        "po_no": "PO260300237",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "13-15-21-0",
+        "item_nm": "Bearing Holder",
+        "po_no": "PO260300259",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "13-15-22-0",
+        "item_nm": "Pulley",
+        "po_no": "PO260300238",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "13-15-23-0",
+        "item_nm": "Bearing Holder",
+        "po_no": "PO260300259",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "14-00-001-0",
+        "item_nm": "NOZZLE BLCOK",
+        "po_no": "PO260300259",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "14-00-002-0",
+        "item_nm": "AIR BLOCK_01",
+        "po_no": "PO260300259",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "14-00-003-0",
+        "item_nm": "AIR BLOCK_02",
+        "po_no": "PO260300259",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "14-00-005-1",
+        "item_nm": "SUCTION CASE BRKT",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "14-00-006-1",
+        "item_nm": "AIR CURTAIN NOZZLE",
+        "po_no": "PO260300259",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "14-00-007-0",
+        "item_nm": "MANIFOLD",
+        "po_no": "PO260300259",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "14-00-009-1",
+        "item_nm": "NOZZLE COVER",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "14-00-011-1",
+        "item_nm": "회수통",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "14-00-021-0",
+        "item_nm": "Brush Shaft",
+        "po_no": "PO260300238",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "14-12-004-1",
+        "item_nm": "DEBURRING CASE",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "14-12-026-0",
+        "item_nm": "3060 Profile",
+        "po_no": "PO260300237",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "14-12-50-0",
+        "item_nm": "Motor Brkt",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "14-12-92-1",
+        "item_nm": "Y-Pipe",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "14-12-93-0",
+        "item_nm": "Deburring Case",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "14-51-22-0",
+        "item_nm": "BRKT",
+        "po_no": "PO260300259",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "14-51-82-0",
+        "item_nm": "BRUSH",
+        "po_no": "PO260300236",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "14-51-98-0",
+        "item_nm": "Motor Block",
+        "po_no": "PO260300259",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "15-00-013-3",
+        "item_nm": "Scale Cover",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "15-16-03-1",
+        "item_nm": "Sensor Brkt",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "15-16-04-1",
+        "item_nm": "Sensor Post",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "15-16-06-0",
+        "item_nm": "Post Brkt",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "15-16-09-1",
+        "item_nm": "Sensor Brkt-2",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "15-16-15-0",
+        "item_nm": "Post",
+        "po_no": "PO260300237",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "15-52-02-1",
+        "item_nm": "Scale Plate",
+        "po_no": "PO260300259",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "16-80-10-2",
+        "item_nm": "Panel",
+        "po_no": "PO260300254",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "52-00-003-2",
+        "item_nm": "ATC STATION PROFILE",
+        "po_no": "PO260300237",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "52-00-10-0-FPB",
+        "item_nm": "ATC Cover",
+        "po_no": "PO260300235",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "99-72-01-0",
+        "item_nm": "종동 Pulley",
+        "po_no": "PO260300238",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "AD-4212C-300-S",
+        "item_nm": "SCALE",
+        "po_no": "PO260300228",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "BYROD-100SET-C",
+        "item_nm": "Rod Bar",
+        "po_no": "PO260300218",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "CDQ2A16-10DZ-M9BVL",
+        "item_nm": "Cylinder",
+        "po_no": "PO260300229",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "CRBHV4510A",
+        "item_nm": "Crossroller bearing",
+        "po_no": "PO260300227",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "ES28-04",
+        "item_nm": "케이블엔트리 Body",
+        "po_no": "PO260300223",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "EZSPD-60H30CR30P",
+        "item_nm": "Geared Motor&Drive",
+        "po_no": "PO260300233",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "GUN",
+        "item_nm": "GGM MOTOR DRIVE",
+        "po_no": "PO260300230",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "HDR1605D4C7S-310",
+        "item_nm": "Ball Screw",
+        "po_no": "PO260300227",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "HTV-A5QT-CH23-2",
+        "item_nm": "중국 TP",
+        "po_no": "PO260300225",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "J235-240-262-79",
+        "item_nm": "JABARA",
+        "po_no": "PO260300232",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "K35-0005-NB3640S2",
+        "item_nm": "GGM BLDC MOTOR",
+        "po_no": "PO260300230",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "KQ2H08-02NS",
+        "item_nm": "Fitting",
+        "po_no": "PO260300229",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "LPT5-12",
+        "item_nm": "Pin",
+        "po_no": "PO260300217",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "NB1L/2H-C10-30MA",
+        "item_nm": "ELB_CP-10A",
+        "po_no": "PO260300260",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "NXB-63-1P-B3-6KA",
+        "item_nm": "CP",
+        "po_no": "PO260300260",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "NXB-63-1P-B6-6KA",
+        "item_nm": "CP",
+        "po_no": "PO260300260",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "NXB-63-2P-B10-6KA",
+        "item_nm": "CP",
+        "po_no": "PO260300260",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "NXC-18-220V-1A1B",
+        "item_nm": "MC",
+        "po_no": "PO260300260",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "NXM-63S/3300-20A",
+        "item_nm": "MCCB",
+        "po_no": "PO260300260",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "P25",
+        "item_nm": "O-Ring",
+        "po_no": "PO260300227",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "PB(1)-8A",
+        "item_nm": "Reducing Bushing",
+        "po_no": "PO260300244",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "PHRC070-R-550-20-",
+        "item_nm": "Robot(CN)",
+        "po_no": "PO260300253",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "PHRC120-R-150-40B-",
+        "item_nm": "Robot(CN)",
+        "po_no": "PO260300253",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "PHRC160-S-550-75-",
+        "item_nm": "Robot(CN)",
+        "po_no": "PO260300253",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "PHRC160-S-550-75-H-S",
+        "item_nm": "Robot",
+        "po_no": "PO260300253",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "S6DA50B",
+        "item_nm": "Reducer",
+        "po_no": "PO260300227",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "S6I06GD-V12",
+        "item_nm": "INDUCTION MOTOR",
+        "po_no": "PO260300227",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "SR2-C-100V-250V-AC/D",
+        "item_nm": "서지 유닛",
+        "po_no": "PO260300260",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "SUA06ID-V12",
+        "item_nm": "컨트롤러",
+        "po_no": "PO260300227",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "VFU2-66P",
+        "item_nm": "line Air Filter",
+        "po_no": "PO260300231",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "ZHV30",
+        "item_nm": "Vacuum Flow",
+        "po_no": "PO260300229",
+        "po_dt": "20260313"
+      },
+      {
+        "item_cd": "1914SC",
+        "item_nm": "PC잡자재",
+        "po_no": "PO260300200",
+        "po_dt": "20260312"
+      },
+      {
+        "item_cd": "AC600_T2U",
+        "item_nm": "무선랜카드",
+        "po_no": "PO260300200",
+        "po_dt": "20260312"
+      },
+      {
+        "item_cd": "CN-NDR-240-24",
+        "item_nm": "SMPS",
+        "po_no": "PO260300195",
+        "po_dt": "20260312"
+      },
+      {
+        "item_cd": "CSPD-A-005F",
+        "item_nm": "중계케이블",
+        "po_no": "PO260300191",
+        "po_dt": "20260312"
+      },
+      {
+        "item_cd": "DRC-220-16A",
+        "item_nm": "콘센트",
+        "po_no": "PO260300187",
+        "po_dt": "20260312"
+      },
+      {
+        "item_cd": "ER17/33-JST-2PIN",
+        "item_nm": "Maxell Battery",
+        "po_no": "PO260300188",
+        "po_dt": "20260312"
+      },
+      {
+        "item_cd": "GS105E",
+        "item_nm": "PC잡자재",
+        "po_no": "PO260300200",
+        "po_dt": "20260312"
+      },
+      {
+        "item_cd": "HT-HDV030",
+        "item_nm": "PC잡자재",
+        "po_no": "PO260300200",
+        "po_dt": "20260312"
+      },
+      {
+        "item_cd": "IE-C6FS8UG0002",
+        "item_nm": "EtherCAT Cable",
+        "po_no": "PO260300185",
+        "po_dt": "20260312"
+      },
+      {
+        "item_cd": "IE-C6FS8UG0005",
+        "item_nm": "EtherCAT Cable",
+        "po_no": "PO260300185",
+        "po_dt": "20260312"
+      },
+      {
+        "item_cd": "IE-C6FS8UG0020",
+        "item_nm": "EtherCAT Cable",
+        "po_no": "PO260300185",
+        "po_dt": "20260312"
+      },
+      {
+        "item_cd": "IE-C6FS8UG0030",
+        "item_nm": "EtherCAT Cable",
+        "po_no": "PO260300185",
+        "po_dt": "20260312"
+      },
+      {
+        "item_cd": "IE-C6FS8UG0150",
+        "item_nm": "EtherCAT Cable",
+        "po_no": "PO260300185",
+        "po_dt": "20260312"
+      },
+      {
+        "item_cd": "IEC-G10B-1.8M",
+        "item_nm": "파워케이블",
+        "po_no": "PO260300200",
+        "po_dt": "20260312"
+      },
+      {
+        "item_cd": "ISOTR-3P5K-50-400",
+        "item_nm": "판넬용 복권트랜스",
+        "po_no": "PO260300184",
+        "po_dt": "20260312"
+      },
+      {
+        "item_cd": "IV-170T",
+        "item_nm": "TouchMonitor",
+        "po_no": "PO260300183",
+        "po_dt": "20260312"
+      },
+      {
+        "item_cd": "KBD-82M",
+        "item_nm": "미니키보드",
+        "po_no": "PO260300183",
+        "po_dt": "20260312"
+      },
+      {
+        "item_cd": "KFC-120(IV)",
+        "item_nm": "빗살형 팬커버",
+        "po_no": "PO260300187",
+        "po_dt": "20260312"
+      },
+      {
+        "item_cd": "LA155-A1-11ZS",
+        "item_nm": "E-STOP 버튼",
+        "po_no": "PO260300196",
+        "po_dt": "20260312"
+      },
+      {
+        "item_cd": "LA155-A1C-11D-G",
+        "item_nm": "누름형 스위치",
+        "po_no": "PO260300196",
+        "po_dt": "20260312"
+      },
+      {
+        "item_cd": "LA155-A1C-11D-Y",
+        "item_nm": "누름형 스위치",
+        "po_no": "PO260300196",
+        "po_dt": "20260312"
+      },
+      {
+        "item_cd": "LAN-02M",
+        "item_nm": "PC잡자재",
+        "po_no": "PO260300200",
+        "po_dt": "20260312"
+      },
+      {
+        "item_cd": "LAN-03M",
+        "item_nm": "PC잡자재",
+        "po_no": "PO260300200",
+        "po_dt": "20260312"
+      },
+      {
+        "item_cd": "LASERCBL_10M",
+        "item_nm": "LaserCable  GigE",
+        "po_no": "PO260300189",
+        "po_dt": "20260312"
+      },
+      {
+        "item_cd": "LW30-42/3P",
+        "item_nm": "메인스위치",
+        "po_no": "PO260300196",
+        "po_dt": "20260312"
+      },
+      {
+        "item_cd": "MICROSD-128G",
+        "item_nm": "PC잡자재",
+        "po_no": "PO260300200",
+        "po_dt": "20260312"
+      },
+      {
+        "item_cd": "MULTI-TAP-6P/1.5M",
+        "item_nm": "PC잡자재",
+        "po_no": "PO260300200",
+        "po_dt": "20260312"
+      },
+      {
+        "item_cd": "NEXT-362DCP-EX",
+        "item_nm": "PC잡자재",
+        "po_no": "PO260300200",
+        "po_dt": "20260312"
+      },
+      {
+        "item_cd": "NEXT-USB404",
+        "item_nm": "PC잡자재",
+        "po_no": "PO260300200",
+        "po_dt": "20260312"
+      },
+      {
+        "item_cd": "POE4803JM",
+        "item_nm": "PC잡자재",
+        "po_no": "PO260300200",
+        "po_dt": "20260312"
+      },
+      {
+        "item_cd": "R3-0016-N",
+        "item_nm": "16 Digital NPN Output",
+        "po_no": "PO260300198",
+        "po_dt": "20260312"
+      },
+      {
+        "item_cd": "R3-1600",
+        "item_nm": "16 Digital NPN Input",
+        "po_no": "PO260300198",
+        "po_dt": "20260312"
+      },
+      {
+        "item_cd": "R3EC",
+        "item_nm": "Ethercat Coupler",
+        "po_no": "PO260300198",
+        "po_dt": "20260312"
+      },
+      {
+        "item_cd": "SD136-22DS",
+        "item_nm": "메인 전원램프",
+        "po_no": "PO260300196",
+        "po_dt": "20260312"
+      },
+      {
+        "item_cd": "SV-L6U-3",
+        "item_nm": "시그널 타워램프",
+        "po_no": "PO260300196",
+        "po_dt": "20260312"
+      },
+      {
+        "item_cd": "USB2.0-MINI-5P",
+        "item_nm": "PC잡자재",
+        "po_no": "PO260300200",
+        "po_dt": "20260312"
+      },
+      {
+        "item_cd": "USB2.0-MINI-5P-1.5M",
+        "item_nm": "PC잡자재",
+        "po_no": "PO260300200",
+        "po_dt": "20260312"
+      },
+      {
+        "item_cd": "USB3.0-AMAM-3M",
+        "item_nm": "PC잡자재",
+        "po_no": "PO260300200",
+        "po_dt": "20260312"
+      },
+      {
+        "item_cd": "USB-AM-BM-2M",
+        "item_nm": "PC잡자재",
+        "po_no": "PO260300200",
+        "po_dt": "20260312"
+      },
+      {
+        "item_cd": "USBHUB-8P",
+        "item_nm": "PC잡자재",
+        "po_no": "PO260300200",
+        "po_dt": "20260312"
+      },
+      {
+        "item_cd": "WMX2-8AXIS",
+        "item_nm": "WMX2 Licence",
+        "po_no": "PO260300185",
+        "po_dt": "20260312"
+      },
+      {
+        "item_cd": "WYF-S10T1-BD",
+        "item_nm": "NoiseFilter",
+        "po_no": "PO260300187",
+        "po_dt": "20260312"
+      }
+    ]
+  },
+  "check2_po_siblings": {
+    "explanation": "ITEM_CD 단독 매칭은 정상. 같은 PO에 다른 ITEM_CD는 별개 품목이므로 매칭 방식 문제 없음.",
+    "ckr_po_count": 41,
+    "po_nos": [
+      "PO180700007",
+      "PO180900131",
+      "PO180900134",
+      "PO180900137",
+      "PO180900140",
+      "PO180900143",
+      "PO181000395",
+      "PO181000398",
+      "PO181000401",
+      "PO181100349"
+    ]
+  },
+  "check3_ckr20_variants": [
+    {
+      "item_cd": "CKR20-145-1405L",
+      "last_po_dt": "2025-12-11",
+      "total_po_count": 2,
+      "po_count_since_2024": 2
+    },
+    {
+      "item_cd": "CKR20-145-SCarriage",
+      "last_po_dt": "2025-07-14",
+      "total_po_count": 9,
+      "po_count_since_2024": 2
+    },
+    {
+      "item_cd": "CKR20-145EndBlock",
+      "last_po_dt": "2025-05-30",
+      "total_po_count": 5,
+      "po_count_since_2024": 2
+    },
+    {
+      "item_cd": "CKR20-145-1495L",
+      "last_po_dt": "2025-05-20",
+      "total_po_count": 1,
+      "po_count_since_2024": 1
+    },
+    {
+      "item_cd": "CKR20-145-1565L-BELT",
+      "last_po_dt": "2025-04-28",
+      "total_po_count": 1,
+      "po_count_since_2024": 1
+    },
+    {
+      "item_cd": "CKR20-145-1230STBELT",
+      "last_po_dt": "2025-04-09",
+      "total_po_count": 1,
+      "po_count_since_2024": 1
+    },
+    {
+      "item_cd": "CKR20-145-1565L",
+      "last_po_dt": "2025-03-28",
+      "total_po_count": 1,
+      "po_count_since_2024": 1
+    },
+    {
+      "item_cd": "CKR20-145-E/B-DRIVE",
+      "last_po_dt": "2025-02-25",
+      "total_po_count": 2,
+      "po_count_since_2024": 1
+    },
+    {
+      "item_cd": "CKR20-145-1165L",
+      "last_po_dt": "2024-11-29",
+      "total_po_count": 6,
+      "po_count_since_2024": 3
+    },
+    {
+      "item_cd": "CKR20-145-1065L_BELT",
+      "last_po_dt": "2024-09-02",
+      "total_po_count": 2,
+      "po_count_since_2024": 1
+    },
+    {
+      "item_cd": "CKR20-145-1365L-BELT",
+      "last_po_dt": "2024-05-31",
+      "total_po_count": 1,
+      "po_count_since_2024": 1
+    },
+    {
+      "item_cd": "CKR20-145-1250L",
+      "last_po_dt": "2024-05-10",
+      "total_po_count": 1,
+      "po_count_since_2024": 1
+    },
+    {
+      "item_cd": "CKR20-145-1405L-BELT",
+      "last_po_dt": "2024-02-02",
+      "total_po_count": 1,
+      "po_count_since_2024": 1
+    },
+    {
+      "item_cd": "CKR20-145-1265L",
+      "last_po_dt": "2023-11-13",
+      "total_po_count": 6,
+      "po_count_since_2024": 0
+    },
+    {
+      "item_cd": "CKR20-145-1505L-BELT",
+      "last_po_dt": "2023-08-07",
+      "total_po_count": 2,
+      "po_count_since_2024": 0
+    },
+    {
+      "item_cd": "CKR20-145-1065L",
+      "last_po_dt": "2023-05-03",
+      "total_po_count": 41,
+      "po_count_since_2024": 0
+    },
+    {
+      "item_cd": "CKR20-145-1495L-BELT",
+      "last_po_dt": "2023-02-06",
+      "total_po_count": 2,
+      "po_count_since_2024": 0
+    },
+    {
+      "item_cd": "CKR20-145-1465L",
+      "last_po_dt": "2023-01-20",
+      "total_po_count": 2,
+      "po_count_since_2024": 0
+    },
+    {
+      "item_cd": "CKR20-145-1150ST",
+      "last_po_dt": "2022-08-12",
+      "total_po_count": 1,
+      "po_count_since_2024": 0
+    },
+    {
+      "item_cd": "CKR20-145-1100ST",
+      "last_po_dt": "2022-03-28",
+      "total_po_count": 1,
+      "po_count_since_2024": 0
+    },
+    {
+      "item_cd": "CKR20-145-1065L-AS",
+      "last_po_dt": "2022-03-17",
+      "total_po_count": 1,
+      "po_count_since_2024": 0
+    },
+    {
+      "item_cd": "CKR20-145-1765L",
+      "last_po_dt": "2021-09-07",
+      "total_po_count": 1,
+      "po_count_since_2024": 0
+    },
+    {
+      "item_cd": "CKR20-145-1065L_BL",
+      "last_po_dt": "2020-11-05",
+      "total_po_count": 1,
+      "po_count_since_2024": 0
+    },
+    {
+      "item_cd": "CKR20-145-1445L",
+      "last_po_dt": "2020-04-22",
+      "total_po_count": 1,
+      "po_count_since_2024": 0
+    },
+    {
+      "item_cd": "CKR20-145-1355L-Shot",
+      "last_po_dt": "2020-01-07",
+      "total_po_count": 1,
+      "po_count_since_2024": 0
+    },
+    {
+      "item_cd": "CKR20-145-1315L",
+      "last_po_dt": "2019-06-11",
+      "total_po_count": 1,
+      "po_count_since_2024": 0
+    },
+    {
+      "item_cd": "CKR20-145-1365L",
+      "last_po_dt": "2019-04-18",
+      "total_po_count": 2,
+      "po_count_since_2024": 0
+    },
+    {
+      "item_cd": "CKR20-145-1215L",
+      "last_po_dt": "2019-03-28",
+      "total_po_count": 1,
+      "po_count_since_2024": 0
+    },
+    {
+      "item_cd": "CKR20-145-1115L",
+      "last_po_dt": "2019-01-09",
+      "total_po_count": 4,
+      "po_count_since_2024": 0
+    }
+  ]
+}
