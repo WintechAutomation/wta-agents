@@ -1,0 +1,500 @@
+[
+  {
+    "page_id": "9508982931",
+    "title": "TTTM 세팅",
+    "entities": [
+      {
+        "id": "equip_TTTM",
+        "name": "TTTM 장비",
+        "type": "Equipment",
+        "properties": {
+          "description": "기본Offset 탭 있는 TTTM 버전 / 없는 기존 버전 구분"
+        }
+      },
+      {
+        "id": "proc_TTTMSetup",
+        "name": "TTTM 세팅",
+        "type": "Process",
+        "properties": {
+          "steps": "장비 도킹 → 프레스 기본픽업위치 세팅 → Y축 중심 맞춰 디버링 조립 수정 → Offset 수정 저장"
+        }
+      },
+      {
+        "id": "comp_TTTMBaseOffset",
+        "name": "기본 Offset 설정 (TTTM)",
+        "type": "Component",
+        "properties": {
+          "menu": "시스템 변수 설정 → 작업위치 → 기본 Offset",
+          "stations": "PRESS, DEBURRING, DEBURRING_AIR, SCALE_A, SCALE_B, CARBONPLATE1, SAMPLE, ERROR_BOX, UPPER, LOWER",
+          "axes": "X, X2, Y, Z"
+        }
+      },
+      {
+        "id": "tool_HAMHmi",
+        "name": "HAM HMI (시스템 변수 설정)",
+        "type": "Tool",
+        "properties": {
+          "manufacturer": "HAM",
+          "screen": "시스템 변수 설정 → 작업위치 → 기본 Offset"
+        }
+      },
+      {
+        "id": "comp_TTTMLog",
+        "name": "TTTM 오프셋 로그",
+        "type": "Component",
+        "properties": {
+          "path": "LogFiles\\Msg(날짜).log",
+          "trigger": "Offset 저장 시 자동 기록"
+        }
+      }
+    ],
+    "relations": [
+      {
+        "source": "proc_TTTMSetup",
+        "target": "equip_TTTM",
+        "type": "INVOLVES_COMPONENT"
+      },
+      {
+        "source": "proc_TTTMSetup",
+        "target": "comp_TTTMBaseOffset",
+        "type": "INVOLVES_COMPONENT"
+      },
+      {
+        "source": "proc_TTTMSetup",
+        "target": "tool_HAMHmi",
+        "type": "USES_TOOL"
+      },
+      {
+        "source": "proc_TTTMSetup",
+        "target": "comp_TTTMLog",
+        "type": "INVOLVES_COMPONENT"
+      }
+    ]
+  },
+  {
+    "page_id": "9508928293",
+    "title": "(국문, OKE)- 4-2-9. 케이스 관리",
+    "entities": [
+      {
+        "id": "proc_CaseManagement",
+        "name": "케이스 관리",
+        "type": "Process",
+        "properties": {
+          "description": "작업할 케이스 추가, 수정, 삭제 및 설정",
+          "access": "메인화면 → 우측 케이스 관리"
+        }
+      },
+      {
+        "id": "comp_CaseList",
+        "name": "케이스 목록",
+        "type": "Component",
+        "properties": {
+          "ui_area": "[1]",
+          "function": "추가된 케이스 리스트"
+        }
+      },
+      {
+        "id": "comp_CaseCRUD",
+        "name": "케이스 CRUD 버튼",
+        "type": "Component",
+        "properties": {
+          "ui_area": "[2]",
+          "actions": "추가, 삭제, 복사, 저장"
+        }
+      },
+      {
+        "id": "comp_CaseParams",
+        "name": "케이스 파라미터",
+        "type": "Component",
+        "properties": {
+          "ui_area": "[3]",
+          "params": "파일 이름, 케이스 가로 길이, 케이스 세로 길이"
+        }
+      }
+    ],
+    "relations": [
+      {
+        "source": "proc_CaseManagement",
+        "target": "comp_CaseList",
+        "type": "INVOLVES_COMPONENT"
+      },
+      {
+        "source": "proc_CaseManagement",
+        "target": "comp_CaseCRUD",
+        "type": "INVOLVES_COMPONENT"
+      },
+      {
+        "source": "proc_CaseManagement",
+        "target": "comp_CaseParams",
+        "type": "INVOLVES_COMPONENT"
+      }
+    ]
+  },
+  {
+    "page_id": "9508981744",
+    "title": "센서 앰프설정 Response Time / Masking (KEYENCE lr-x series)",
+    "entities": [
+      {
+        "id": "equip_KeyenceLRX",
+        "name": "KEYENCE LR-X 시리즈 센서",
+        "type": "Equipment",
+        "properties": {
+          "manufacturer": "KEYENCE",
+          "model": "LR-X series",
+          "type": "레이저 센서"
+        }
+      },
+      {
+        "id": "proc_KeyenceSensorConfig",
+        "name": "KEYENCE 센서 앰프 설정",
+        "type": "Process",
+        "properties": {
+          "entry": "M 버튼 3초 이상 누름 → 설정 모드 진입",
+          "language": "English(영어)"
+        }
+      },
+      {
+        "id": "comp_ResponseTime",
+        "name": "Response Time (응답 시간)",
+        "type": "Component",
+        "properties": {
+          "options": "500us-limited, 1ms, 3ms(기본), 10ms, 200ms",
+          "menu_item": "A",
+          "note": "간섭방지 4/8 unit 선택 시 변경 제한"
+        }
+      },
+      {
+        "id": "comp_NONCSwitch",
+        "name": "N.O./N.C. 전환",
+        "type": "Component",
+        "properties": {
+          "options": "N.O., N.C.",
+          "menu_item": "B"
+        }
+      },
+      {
+        "id": "comp_ExtInput",
+        "name": "외부 입력 설정",
+        "type": "Component",
+        "properties": {
+          "options": "OFF, Laser OFF(두광 정지), External Set(듀닝), Zero Shift(제로 시프트), Hold Reset, Gyro Alert RST",
+          "menu_item": "C"
+        }
+      },
+      {
+        "id": "comp_GyroMonitor",
+        "name": "Gyro Monitor (자이로 모니터)",
+        "type": "Component",
+        "properties": {
+          "options": "OFF/ON",
+          "menu_item": "D"
+        }
+      }
+    ],
+    "relations": [
+      {
+        "source": "proc_KeyenceSensorConfig",
+        "target": "equip_KeyenceLRX",
+        "type": "MAINTAINS"
+      },
+      {
+        "source": "proc_KeyenceSensorConfig",
+        "target": "comp_ResponseTime",
+        "type": "INVOLVES_COMPONENT"
+      },
+      {
+        "source": "proc_KeyenceSensorConfig",
+        "target": "comp_NONCSwitch",
+        "type": "INVOLVES_COMPONENT"
+      },
+      {
+        "source": "proc_KeyenceSensorConfig",
+        "target": "comp_ExtInput",
+        "type": "INVOLVES_COMPONENT"
+      },
+      {
+        "source": "proc_KeyenceSensorConfig",
+        "target": "comp_GyroMonitor",
+        "type": "INVOLVES_COMPONENT"
+      }
+    ]
+  },
+  {
+    "page_id": "9508926880",
+    "title": "(국문, OKE)- 4-2-1-3. 적재설정 - 공정별 부분 운전",
+    "entities": [
+      {
+        "id": "proc_PartialOperation",
+        "name": "공정별 부분 운전",
+        "type": "Process",
+        "properties": {
+          "description": "선택한 공정만 부분적으로 실행",
+          "access": "메인화면 → 적재설정 선택",
+          "prerequisite": "제품 설정, 팔레트, 케이스 상태 확인 필요"
+        }
+      },
+      {
+        "id": "proc_LoadSettingSelect",
+        "name": "적재설정 선택",
+        "type": "Process",
+        "properties": {
+          "step": "1",
+          "action": "메인화면에서 적재설정 선택"
+        }
+      },
+      {
+        "id": "proc_ProcessSelect",
+        "name": "공정 선택 및 실행",
+        "type": "Process",
+        "properties": {
+          "step": "2",
+          "note": "미설정 공정은 실행 불가"
+        }
+      }
+    ],
+    "relations": [
+      {
+        "source": "proc_PartialOperation",
+        "target": "proc_LoadSettingSelect",
+        "type": "HAS_SUBPROCESS"
+      },
+      {
+        "source": "proc_PartialOperation",
+        "target": "proc_ProcessSelect",
+        "type": "HAS_SUBPROCESS"
+      }
+    ]
+  },
+  {
+    "page_id": "9508925534",
+    "title": "LEFT_ELV, RIGHT_ELV 위치",
+    "entities": [
+      {
+        "id": "proc_ELVPositionSetting",
+        "name": "LEFT_ELV / RIGHT_ELV 위치 설정",
+        "type": "Process",
+        "properties": {
+          "description": "측면 카메라 기준 각 ELV의 중심 위치 설정",
+          "method": "측면 카메라로 EV_L, EV_R이 중심에 오는 위치 확인"
+        }
+      },
+      {
+        "id": "comp_LeftELV",
+        "name": "LEFT_ELV (EV_L)",
+        "type": "Component",
+        "properties": {
+          "calib_field": "EvLeftOrg",
+          "file": "CalibrationData.xml"
+        }
+      },
+      {
+        "id": "comp_RightELV",
+        "name": "RIGHT_ELV (EV_R)",
+        "type": "Component",
+        "properties": {
+          "calib_field": "EvRightOrg",
+          "file": "CalibrationData.xml"
+        }
+      },
+      {
+        "id": "comp_ELVCalibData",
+        "name": "CalibrationData.xml (ELV)",
+        "type": "Component",
+        "properties": {
+          "fields": "EvLeftOrg, EvRightOrg",
+          "purpose": "ELV 중심 포지션 저장"
+        }
+      }
+    ],
+    "relations": [
+      {
+        "source": "proc_ELVPositionSetting",
+        "target": "comp_LeftELV",
+        "type": "INVOLVES_COMPONENT"
+      },
+      {
+        "source": "proc_ELVPositionSetting",
+        "target": "comp_RightELV",
+        "type": "INVOLVES_COMPONENT"
+      },
+      {
+        "source": "proc_ELVPositionSetting",
+        "target": "comp_ELVCalibData",
+        "type": "INVOLVES_COMPONENT"
+      }
+    ]
+  },
+  {
+    "page_id": "9508913470",
+    "title": "WMX 센서 감지 시, 축 멈추게 하는 설정 방법 (EVENT)",
+    "entities": [
+      {
+        "id": "proc_WMXEventSetup",
+        "name": "WMX 이벤트(EVENT) 설정",
+        "type": "Process",
+        "properties": {
+          "description": "센서 감지 시 축 정지 이벤트 등록",
+          "tool": "WMX2Console.exe",
+          "entry": "Evt 탭 클릭"
+        }
+      },
+      {
+        "id": "tool_WMX2Console",
+        "name": "WMX2Console",
+        "type": "Tool",
+        "properties": {
+          "path": "C:\\Program Files\\SoftServo\\WMX2\\WMX2Console.exe",
+          "tabs": "ToPr, PSO, PVO, Ovrd, List, Log, Evt, CLV, SetP, Trq, Aux, AIO, SyGr, Vibr, Dancr, Ax..."
+        }
+      },
+      {
+        "id": "comp_WMXEvent",
+        "name": "WMX 이벤트 (Event Operation)",
+        "type": "Component",
+        "properties": {
+          "input_function": "Bit",
+          "output_motion": "Stop S.Axis (JerkMotion)",
+          "axes": "Axis 0~31",
+          "profile": "Trapezoidal"
+        }
+      },
+      {
+        "id": "proc_WMXEventInit",
+        "name": "이벤트 초기화 및 등록",
+        "type": "Process",
+        "properties": {
+          "function": "Set_LIFTEvent()",
+          "init_flow": "InitializeMotion → InitializeInterface → 이벤트 초기화 → 이벤트 등록",
+          "io_source": "Signal.In[]"
+        }
+      }
+    ],
+    "relations": [
+      {
+        "source": "proc_WMXEventSetup",
+        "target": "tool_WMX2Console",
+        "type": "USES_TOOL"
+      },
+      {
+        "source": "proc_WMXEventSetup",
+        "target": "comp_WMXEvent",
+        "type": "INVOLVES_COMPONENT"
+      },
+      {
+        "source": "proc_WMXEventInit",
+        "target": "comp_WMXEvent",
+        "type": "INVOLVES_COMPONENT"
+      },
+      {
+        "source": "proc_WMXEventInit",
+        "target": "tool_WMX2Console",
+        "type": "USES_TOOL"
+      }
+    ]
+  },
+  {
+    "page_id": "9508926193",
+    "title": "(국문, OKE)- 2-4. 비상정지 버튼",
+    "entities": [
+      {
+        "id": "comp_EStopMultiple",
+        "name": "비상 정지 버튼 (복수)",
+        "type": "Component",
+        "properties": {
+          "standard": "ISO 13850",
+          "effect": "모든 구동 축 전기적 즉시 정지",
+          "reset_method": "결착 버튼 시계방향으로 돌려 풀기"
+        }
+      },
+      {
+        "id": "comp_SafetyDoor",
+        "name": "안전 도어",
+        "type": "Component",
+        "properties": {
+          "location": "각 접근 방향"
+        }
+      },
+      {
+        "id": "comp_WorkDoorOKE",
+        "name": "작업 도어 (OKE)",
+        "type": "Component",
+        "properties": {
+          "location": "각 접근 방향"
+        }
+      },
+      {
+        "id": "proc_EStopReset",
+        "name": "비상정지 해제",
+        "type": "Process",
+        "properties": {
+          "method": "결착 버튼 시계방향 회전하여 풀기 → 재시운전 가능"
+        }
+      }
+    ],
+    "relations": [
+      {
+        "source": "proc_EStopReset",
+        "target": "comp_EStopMultiple",
+        "type": "INVOLVES_COMPONENT"
+      }
+    ]
+  },
+  {
+    "page_id": "9508931345",
+    "title": "Paint DotNet 사용 매뉴얼",
+    "entities": [
+      {
+        "id": "tool_PaintDotNet",
+        "name": "Paint.NET",
+        "type": "Tool",
+        "properties": {
+          "purpose": "매뉴얼 작업 시 HMI UI 버튼 이미지 편집",
+          "key_features": "직사각형 선택, Ctrl+C/V, Ctrl+마우스휠(확대), 격자 보기"
+        }
+      },
+      {
+        "id": "tool_ScreenSaver",
+        "name": "ScreenSaver 캡처 프로그램",
+        "type": "Tool",
+        "properties": {
+          "alternatives": "칼무리",
+          "note": "기본 캡처도구 사용 시 이미지 깨짐 — ScreenSaver/칼무리 권장"
+        }
+      },
+      {
+        "id": "proc_HMIScreenCapture",
+        "name": "HMI UI 버튼 캡처 및 편집",
+        "type": "Process",
+        "properties": {
+          "steps": "전체 화면 캡처(ScreenSaver) → Paint.NET에서 직사각형 선택 → Ctrl+C/Ctrl+V 복사/붙여넣기",
+          "tip": "Ctrl+마우스휠로 확대 후 격자 이용 영역 선택"
+        }
+      },
+      {
+        "id": "manual_HMIButtons",
+        "name": "HMI UI 버튼 매뉴얼",
+        "type": "Manual",
+        "properties": {
+          "screens": "메인, 적재 설정, 모델 설정 등"
+        }
+      }
+    ],
+    "relations": [
+      {
+        "source": "proc_HMIScreenCapture",
+        "target": "tool_PaintDotNet",
+        "type": "USES_TOOL"
+      },
+      {
+        "source": "proc_HMIScreenCapture",
+        "target": "tool_ScreenSaver",
+        "type": "USES_TOOL"
+      },
+      {
+        "source": "manual_HMIButtons",
+        "target": "proc_HMIScreenCapture",
+        "type": "DOCUMENTS"
+      }
+    ]
+  }
+]

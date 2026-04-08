@@ -1,0 +1,13 @@
+{
+  "page_id": "9508929301",
+  "title": "(국문, OKE)- 5-3. 자동 작업",
+  "entities": [
+    {"id": "proc_AutoOperation", "name": "자동 작업 (운전시작)", "type": "Process", "properties": {"description": "자동 운전 실행 및 정지"}},
+    {"id": "proc_OperationStart", "name": "운전 시작", "type": "Process", "properties": {"step": "1", "action": "자동 운전 실행"}},
+    {"id": "proc_OperationStop", "name": "운전 정지", "type": "Process", "properties": {"modes": "[1] 마무리 정지: 제품 공급 완료 후 정 위치에서 정지, [2] 즉시 정지: 현재 위치에서 즉시 정지"}}
+  ],
+  "relations": [
+    {"source": "proc_AutoOperation", "target": "proc_OperationStart", "type": "HAS_SUBPROCESS"},
+    {"source": "proc_AutoOperation", "target": "proc_OperationStop", "type": "HAS_SUBPROCESS"}
+  ]
+}

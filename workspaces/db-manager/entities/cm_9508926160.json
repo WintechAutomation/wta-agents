@@ -1,0 +1,15 @@
+{
+  "page_id": "9508926160",
+  "title": "(국문, OKE)- 2-3. 설비 부착 경고 및 안전 참고 사항",
+  "entities": [
+    {"id": "comp_ElectricalWarning", "name": "전기 경고 라벨", "type": "Component", "properties": {"type": "전기 전압 위험", "caution": "보수 작업 시 주 전원 차단 + 안전 장갑 착용"}},
+    {"id": "comp_PinchWarning", "name": "협착/말릴 위험 라벨", "type": "Component", "properties": {"location": "회전 기구 구동부, 로봇 구동부", "caution": "설비 구동 중 위험 부위 접촉 금지"}},
+    {"id": "comp_CollisionWarning", "name": "충돌 위험 라벨", "type": "Component", "properties": {"location": "로봇 구동부, 기구 돌출부", "caution": "설비 구동 중 위험 부위 접근 금지"}},
+    {"id": "equip_OKE_SafetyLabels", "name": "OKE 설비 안전 경고 라벨", "type": "Equipment", "properties": {"labels": "전기 경고, 협착/말릴 위험, 충돌 위험"}}
+  ],
+  "relations": [
+    {"source": "equip_OKE_SafetyLabels", "target": "comp_ElectricalWarning", "type": "USES_COMPONENT"},
+    {"source": "equip_OKE_SafetyLabels", "target": "comp_PinchWarning", "type": "USES_COMPONENT"},
+    {"source": "equip_OKE_SafetyLabels", "target": "comp_CollisionWarning", "type": "USES_COMPONENT"}
+  ]
+}

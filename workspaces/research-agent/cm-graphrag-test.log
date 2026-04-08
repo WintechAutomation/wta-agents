@@ -1,0 +1,6 @@
+[ra-graphrag] 21:48:01 테스트 모드: 2건
+[ra-graphrag] 21:48:01 PostgreSQL 연결 완료
+[ra-graphrag] 21:48:02 Neo4j 연결 완료
+[ra-graphrag] 21:48:02 처리 시작: 2건 (임베딩완료:0 / 그래프완료:0)
+[ra-graphrag] 21:48:02 BeautifulSoup4: 사용
+[ra-graphrag] 21:48:02 [1/2] 9507145220 — - 케이스 원점 설정

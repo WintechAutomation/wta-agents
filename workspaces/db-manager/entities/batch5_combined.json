@@ -1,0 +1,383 @@
+[
+  {
+    "page_id": "9508927380",
+    "title": "(국문, OKE)- 4-2-3-4. 팔레트 관리 - 복사",
+    "entities": [
+      {
+        "id": "proc_PalletCopy",
+        "name": "팔레트 복사",
+        "type": "Process",
+        "properties": {
+          "steps": "①메인화면 → 팔레트 관리 선택 → ②복사할 팔레트 선택 → ③복사 실행"
+        }
+      }
+    ],
+    "relations": []
+  },
+  {
+    "page_id": "9508934253",
+    "title": "PostgreSQL 자동 백업 및 복구",
+    "entities": [
+      {
+        "id": "tool_AutoBackupRestore",
+        "name": "AutoBackup_Restore.exe",
+        "type": "Tool",
+        "properties": {
+          "purpose": "PostgreSQL DB 자동 백업 및 복원",
+          "backup_path": "D:\\WintechAutomation\\WMI\\DB\\",
+          "retention": "3일",
+          "schedule": "09:00 매일"
+        }
+      },
+      {
+        "id": "proc_PostgresAutoBackup",
+        "name": "PostgreSQL 자동 백업 설정",
+        "type": "Process",
+        "properties": {
+          "steps": "AutoBackup_Restore.exe 실행 → DB이름/bin경로/백업폴더/실행시간 설정 → 백업 및 스케줄러 추가 클릭",
+          "scheduler": "Windows 작업 스케줄러 등록 계정 확인 필요"
+        }
+      },
+      {
+        "id": "proc_PostgresRestore",
+        "name": "PostgreSQL 복구",
+        "type": "Process",
+        "properties": {
+          "steps": "AutoBackup_Restore.exe 복구 탭 → DB이름/bin경로/복원파일(.sql) 선택 → 복구 또는 최신 파일로 복구"
+        }
+      },
+      {
+        "id": "comp_PostgresBackupFile",
+        "name": "PostgreSQL 백업 파일 (.sql)",
+        "type": "Component",
+        "properties": {
+          "path": "D:\\WintechAutomation\\WMI\\DB\\",
+          "retention_days": 3,
+          "changelog": "2025.12.13: D:\\WintechAutomation\\WMI\\DB\\ 경로 변경; 2025.01.13: 3일 보관 설정"
+        }
+      }
+    ],
+    "relations": [
+      {
+        "source": "proc_PostgresAutoBackup",
+        "target": "tool_AutoBackupRestore",
+        "type": "USES_TOOL"
+      },
+      {
+        "source": "proc_PostgresRestore",
+        "target": "tool_AutoBackupRestore",
+        "type": "USES_TOOL"
+      },
+      {
+        "source": "proc_PostgresAutoBackup",
+        "target": "comp_PostgresBackupFile",
+        "type": "INVOLVES_COMPONENT"
+      },
+      {
+        "source": "proc_PostgresRestore",
+        "target": "comp_PostgresBackupFile",
+        "type": "INVOLVES_COMPONENT"
+      }
+    ]
+  },
+  {
+    "page_id": "9508920193",
+    "title": "프레스 핸들러 Z축 케이블 포설방법",
+    "entities": [
+      {
+        "id": "proc_ZAxisCableInstall",
+        "name": "프레스 핸들러 Z축 케이블 포설",
+        "type": "Process",
+        "properties": {
+          "precautions": "장비 전원 OFF 후 작업, 포설 후 제품/케이블 고정 상태 확인"
+        }
+      },
+      {
+        "id": "comp_CableBear",
+        "name": "케이블베이어",
+        "type": "Component",
+        "properties": {
+          "purpose": "Z축 케이블 안내 및 보호"
+        }
+      },
+      {
+        "id": "comp_ZAxisMotorConnector",
+        "name": "Z축 모터 커넥터",
+        "type": "Component",
+        "properties": {
+          "location": "노란색 표시 위치"
+        }
+      },
+      {
+        "id": "comp_ZAxisCable",
+        "name": "Z축 케이블",
+        "type": "Component",
+        "properties": {
+          "routing": "화살표 방향에 맞춰 포설"
+        }
+      }
+    ],
+    "relations": [
+      {
+        "source": "proc_ZAxisCableInstall",
+        "target": "comp_CableBear",
+        "type": "INVOLVES_COMPONENT"
+      },
+      {
+        "source": "proc_ZAxisCableInstall",
+        "target": "comp_ZAxisMotorConnector",
+        "type": "INVOLVES_COMPONENT"
+      },
+      {
+        "source": "proc_ZAxisCableInstall",
+        "target": "comp_ZAxisCable",
+        "type": "INVOLVES_COMPONENT"
+      }
+    ]
+  },
+  {
+    "page_id": "9508983151",
+    "title": "측면 디버링 매뉴얼 (NEW)",
+    "entities": [
+      {
+        "id": "proc_SideDeburring",
+        "name": "측면 디버링",
+        "type": "Process",
+        "properties": {
+          "description": "측면 브러쉬로 제품 측면 디버링 수행"
+        }
+      },
+      {
+        "id": "comp_SideBrush",
+        "name": "측면 브러쉬",
+        "type": "Component",
+        "properties": {
+          "configuration": "좌/우 브러쉬 2개",
+          "motion": "Z축 상하 반복, X축 접근"
+        }
+      },
+      {
+        "id": "comp_SideDeburringParams",
+        "name": "측면 디버링 파라미터",
+        "type": "Component",
+        "properties": {
+          "params": "측면 브러쉬 사용 여부(ON/OFF), 접근 속도(1~100%), Z축 이동거리(0~10mm), 좌우 브러쉬 간격"
+        }
+      }
+    ],
+    "relations": [
+      {
+        "source": "proc_SideDeburring",
+        "target": "comp_SideBrush",
+        "type": "INVOLVES_COMPONENT"
+      },
+      {
+        "source": "proc_SideDeburring",
+        "target": "comp_SideDeburringParams",
+        "type": "INVOLVES_COMPONENT"
+      }
+    ]
+  },
+  {
+    "page_id": "9508929301",
+    "title": "(국문, OKE)- 5-3. 자동 작업",
+    "entities": [
+      {
+        "id": "proc_AutoOperation",
+        "name": "자동 작업 (운전시작)",
+        "type": "Process",
+        "properties": {
+          "description": "자동 운전 실행 및 정지"
+        }
+      },
+      {
+        "id": "proc_OperationStart",
+        "name": "운전 시작",
+        "type": "Process",
+        "properties": {
+          "step": "1",
+          "action": "자동 운전 실행"
+        }
+      },
+      {
+        "id": "proc_OperationStop",
+        "name": "운전 정지",
+        "type": "Process",
+        "properties": {
+          "modes": "[1] 마무리 정지: 제품 공급 완료 후 정 위치에서 정지, [2] 즉시 정지: 현재 위치에서 즉시 정지"
+        }
+      }
+    ],
+    "relations": [
+      {
+        "source": "proc_AutoOperation",
+        "target": "proc_OperationStart",
+        "type": "HAS_SUBPROCESS"
+      },
+      {
+        "source": "proc_AutoOperation",
+        "target": "proc_OperationStop",
+        "type": "HAS_SUBPROCESS"
+      }
+    ]
+  },
+  {
+    "page_id": "9507153094",
+    "title": "-(한글 버전)- 5-4-2. 마킹 검사",
+    "entities": [
+      {
+        "id": "proc_MarkingInspectionKO",
+        "name": "마킹 검사 (한글)",
+        "type": "Process",
+        "properties": {
+          "section": "5-4-2",
+          "language": "Korean",
+          "description": "인서트 마킹 검사 티칭 및 실행"
+        }
+      },
+      {
+        "id": "proc_InsertDetectAreaSet",
+        "name": "인서트 검출 영역 설정",
+        "type": "Process",
+        "properties": {
+          "method": "마우스 드래그 또는 더블 클릭으로 영역 설정"
+        }
+      },
+      {
+        "id": "comp_MarkingInspectParams",
+        "name": "마킹 검사 파라미터",
+        "type": "Component",
+        "properties": {
+          "params": "밝기(이미지 선명도 조정), T(트레커 수 조절), 허용범위(검출값 기준)"
+        }
+      },
+      {
+        "id": "comp_MarkingInspectUI",
+        "name": "마킹 검사 UI (H1)",
+        "type": "Component",
+        "properties": {
+          "label": "마킹검사(H1)",
+          "actions": "영역 설정 → 티칭 → 실행"
+        }
+      }
+    ],
+    "relations": [
+      {
+        "source": "proc_MarkingInspectionKO",
+        "target": "proc_InsertDetectAreaSet",
+        "type": "HAS_SUBPROCESS"
+      },
+      {
+        "source": "proc_MarkingInspectionKO",
+        "target": "comp_MarkingInspectParams",
+        "type": "INVOLVES_COMPONENT"
+      },
+      {
+        "source": "proc_MarkingInspectionKO",
+        "target": "comp_MarkingInspectUI",
+        "type": "INVOLVES_COMPONENT"
+      }
+    ]
+  },
+  {
+    "page_id": "9507152859",
+    "title": "-(한글 버전)- 5-3. 자동 작업",
+    "entities": [
+      {
+        "id": "proc_AutoOperationKO",
+        "name": "자동 작업 (한글)",
+        "type": "Process",
+        "properties": {
+          "section": "5-3",
+          "language": "Korean"
+        }
+      },
+      {
+        "id": "proc_OperationStartKO",
+        "name": "운전 시작 (한글)",
+        "type": "Process",
+        "properties": {
+          "action": "자동 운전 실행"
+        }
+      },
+      {
+        "id": "proc_OperationStopKO",
+        "name": "운전 정지 (한글)",
+        "type": "Process",
+        "properties": {
+          "modes": "[1] 마무리 정지, [2] 즉시 정지"
+        }
+      }
+    ],
+    "relations": [
+      {
+        "source": "proc_AutoOperationKO",
+        "target": "proc_OperationStartKO",
+        "type": "HAS_SUBPROCESS"
+      },
+      {
+        "source": "proc_AutoOperationKO",
+        "target": "proc_OperationStopKO",
+        "type": "HAS_SUBPROCESS"
+      }
+    ]
+  },
+  {
+    "page_id": "9508926160",
+    "title": "(국문, OKE)- 2-3. 설비 부착 경고 및 안전 참고 사항",
+    "entities": [
+      {
+        "id": "comp_ElectricalWarning",
+        "name": "전기 경고 라벨",
+        "type": "Component",
+        "properties": {
+          "type": "전기 전압 위험",
+          "caution": "보수 작업 시 주 전원 차단 + 안전 장갑 착용"
+        }
+      },
+      {
+        "id": "comp_PinchWarning",
+        "name": "협착/말릴 위험 라벨",
+        "type": "Component",
+        "properties": {
+          "location": "회전 기구 구동부, 로봇 구동부",
+          "caution": "설비 구동 중 위험 부위 접촉 금지"
+        }
+      },
+      {
+        "id": "comp_CollisionWarning",
+        "name": "충돌 위험 라벨",
+        "type": "Component",
+        "properties": {
+          "location": "로봇 구동부, 기구 돌출부",
+          "caution": "설비 구동 중 위험 부위 접근 금지"
+        }
+      },
+      {
+        "id": "equip_OKE_SafetyLabels",
+        "name": "OKE 설비 안전 경고 라벨",
+        "type": "Equipment",
+        "properties": {
+          "labels": "전기 경고, 협착/말릴 위험, 충돌 위험"
+        }
+      }
+    ],
+    "relations": [
+      {
+        "source": "equip_OKE_SafetyLabels",
+        "target": "comp_ElectricalWarning",
+        "type": "USES_COMPONENT"
+      },
+      {
+        "source": "equip_OKE_SafetyLabels",
+        "target": "comp_PinchWarning",
+        "type": "USES_COMPONENT"
+      },
+      {
+        "source": "equip_OKE_SafetyLabels",
+        "target": "comp_CollisionWarning",
+        "type": "USES_COMPONENT"
+      }
+    ]
+  }
+]

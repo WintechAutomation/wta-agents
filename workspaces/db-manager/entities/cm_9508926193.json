@@ -1,0 +1,13 @@
+{
+  "page_id": "9508926193",
+  "title": "(국문, OKE)- 2-4. 비상정지 버튼",
+  "entities": [
+    {"id": "comp_EStopMultiple", "name": "비상 정지 버튼 (복수)", "type": "Component", "properties": {"standard": "ISO 13850", "effect": "모든 구동 축 전기적 즉시 정지", "reset_method": "결착 버튼 시계방향으로 돌려 풀기"}},
+    {"id": "comp_SafetyDoor", "name": "안전 도어", "type": "Component", "properties": {"location": "각 접근 방향"}},
+    {"id": "comp_WorkDoorOKE", "name": "작업 도어 (OKE)", "type": "Component", "properties": {"location": "각 접근 방향"}},
+    {"id": "proc_EStopReset", "name": "비상정지 해제", "type": "Process", "properties": {"method": "결착 버튼 시계방향 회전하여 풀기 → 재시운전 가능"}}
+  ],
+  "relations": [
+    {"source": "proc_EStopReset", "target": "comp_EStopMultiple", "type": "INVOLVES_COMPONENT"}
+  ]
+}

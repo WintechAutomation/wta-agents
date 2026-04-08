@@ -1,0 +1,19 @@
+{
+  "page_id": "9508981744",
+  "title": "센서 앰프설정 Response Time / Masking (KEYENCE lr-x series)",
+  "entities": [
+    {"id": "equip_KeyenceLRX", "name": "KEYENCE LR-X 시리즈 센서", "type": "Equipment", "properties": {"manufacturer": "KEYENCE", "model": "LR-X series", "type": "레이저 센서"}},
+    {"id": "proc_KeyenceSensorConfig", "name": "KEYENCE 센서 앰프 설정", "type": "Process", "properties": {"entry": "M 버튼 3초 이상 누름 → 설정 모드 진입", "language": "English(영어)"}},
+    {"id": "comp_ResponseTime", "name": "Response Time (응답 시간)", "type": "Component", "properties": {"options": "500us-limited, 1ms, 3ms(기본), 10ms, 200ms", "menu_item": "A", "note": "간섭방지 4/8 unit 선택 시 변경 제한"}},
+    {"id": "comp_NONCSwitch", "name": "N.O./N.C. 전환", "type": "Component", "properties": {"options": "N.O., N.C.", "menu_item": "B"}},
+    {"id": "comp_ExtInput", "name": "외부 입력 설정", "type": "Component", "properties": {"options": "OFF, Laser OFF(두광 정지), External Set(듀닝), Zero Shift(제로 시프트), Hold Reset, Gyro Alert RST", "menu_item": "C"}},
+    {"id": "comp_GyroMonitor", "name": "Gyro Monitor (자이로 모니터)", "type": "Component", "properties": {"options": "OFF/ON", "menu_item": "D"}}
+  ],
+  "relations": [
+    {"source": "proc_KeyenceSensorConfig", "target": "equip_KeyenceLRX", "type": "MAINTAINS"},
+    {"source": "proc_KeyenceSensorConfig", "target": "comp_ResponseTime", "type": "INVOLVES_COMPONENT"},
+    {"source": "proc_KeyenceSensorConfig", "target": "comp_NONCSwitch", "type": "INVOLVES_COMPONENT"},
+    {"source": "proc_KeyenceSensorConfig", "target": "comp_ExtInput", "type": "INVOLVES_COMPONENT"},
+    {"source": "proc_KeyenceSensorConfig", "target": "comp_GyroMonitor", "type": "INVOLVES_COMPONENT"}
+  ]
+}

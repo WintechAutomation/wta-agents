@@ -1,0 +1,15 @@
+{
+  "page_id": "9507153094",
+  "title": "-(한글 버전)- 5-4-2. 마킹 검사",
+  "entities": [
+    {"id": "proc_MarkingInspectionKO", "name": "마킹 검사 (한글)", "type": "Process", "properties": {"section": "5-4-2", "language": "Korean", "description": "인서트 마킹 검사 티칭 및 실행"}},
+    {"id": "proc_InsertDetectAreaSet", "name": "인서트 검출 영역 설정", "type": "Process", "properties": {"method": "마우스 드래그 또는 더블 클릭으로 영역 설정"}},
+    {"id": "comp_MarkingInspectParams", "name": "마킹 검사 파라미터", "type": "Component", "properties": {"params": "밝기(이미지 선명도 조정), T(트레커 수 조절), 허용범위(검출값 기준)"}},
+    {"id": "comp_MarkingInspectUI", "name": "마킹 검사 UI (H1)", "type": "Component", "properties": {"label": "마킹검사(H1)", "actions": "영역 설정 → 티칭 → 실행"}}
+  ],
+  "relations": [
+    {"source": "proc_MarkingInspectionKO", "target": "proc_InsertDetectAreaSet", "type": "HAS_SUBPROCESS"},
+    {"source": "proc_MarkingInspectionKO", "target": "comp_MarkingInspectParams", "type": "INVOLVES_COMPONENT"},
+    {"source": "proc_MarkingInspectionKO", "target": "comp_MarkingInspectUI", "type": "INVOLVES_COMPONENT"}
+  ]
+}

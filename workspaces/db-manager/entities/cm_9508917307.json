@@ -1,0 +1,14 @@
+{
+  "page_id": "9508917307",
+  "title": "TP 펌웨어 업데이트",
+  "entities": [
+    {"id": "proc_TPFirmwareUpdate", "name": "티칭 팬던트(TP) 펌웨어 업데이트", "type": "Process", "properties": {"steps": "①TP 하부 커버 제거 → ②USB(PC)+5PIN(TP) 케이블 체결 → ③STM32 ST-LINK Utility 설치/실행 → ④접속 후 펌웨어 선택 업데이트 → ⑤파란불 확인", "firmware_path": "D:\\WintechAutomation\\Setup\\TP"}},
+    {"id": "tool_STM32STLink", "name": "STM32 ST-LINK Utility", "type": "Tool", "properties": {"purpose": "TP 펌웨어 업데이트", "path": "D:\\WintechAutomation\\Setup\\TP\\STM32 ST-LINK Utility"}},
+    {"id": "comp_TPFirmwareCable", "name": "TP 펌웨어 업데이트 케이블", "type": "Component", "properties": {"connectors": "USB(PC 측) + 5PIN(TP 측)"}}
+  ],
+  "relations": [
+    {"source": "proc_TPFirmwareUpdate", "target": "tool_STM32STLink", "type": "USES_TOOL"},
+    {"source": "proc_TPFirmwareUpdate", "target": "comp_TPFirmwareCable", "type": "USES_TOOL"},
+    {"source": "issue_TPNotWorking", "target": "proc_TPFirmwareUpdate", "type": "RESOLVED_BY"}
+  ]
+}

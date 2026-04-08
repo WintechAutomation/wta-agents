@@ -1,0 +1,15 @@
+{
+  "page_id": "9508920193",
+  "title": "프레스 핸들러 Z축 케이블 포설방법",
+  "entities": [
+    {"id": "proc_ZAxisCableInstall", "name": "프레스 핸들러 Z축 케이블 포설", "type": "Process", "properties": {"precautions": "장비 전원 OFF 후 작업, 포설 후 제품/케이블 고정 상태 확인"}},
+    {"id": "comp_CableBear", "name": "케이블베이어", "type": "Component", "properties": {"purpose": "Z축 케이블 안내 및 보호"}},
+    {"id": "comp_ZAxisMotorConnector", "name": "Z축 모터 커넥터", "type": "Component", "properties": {"location": "노란색 표시 위치"}},
+    {"id": "comp_ZAxisCable", "name": "Z축 케이블", "type": "Component", "properties": {"routing": "화살표 방향에 맞춰 포설"}}
+  ],
+  "relations": [
+    {"source": "proc_ZAxisCableInstall", "target": "comp_CableBear", "type": "INVOLVES_COMPONENT"},
+    {"source": "proc_ZAxisCableInstall", "target": "comp_ZAxisMotorConnector", "type": "INVOLVES_COMPONENT"},
+    {"source": "proc_ZAxisCableInstall", "target": "comp_ZAxisCable", "type": "INVOLVES_COMPONENT"}
+  ]
+}

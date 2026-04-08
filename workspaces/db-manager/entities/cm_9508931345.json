@@ -1,0 +1,15 @@
+{
+  "page_id": "9508931345",
+  "title": "Paint DotNet 사용 매뉴얼",
+  "entities": [
+    {"id": "tool_PaintDotNet", "name": "Paint.NET", "type": "Tool", "properties": {"purpose": "매뉴얼 작업 시 HMI UI 버튼 이미지 편집", "key_features": "직사각형 선택, Ctrl+C/V, Ctrl+마우스휠(확대), 격자 보기"}},
+    {"id": "tool_ScreenSaver", "name": "ScreenSaver 캡처 프로그램", "type": "Tool", "properties": {"alternatives": "칼무리", "note": "기본 캡처도구 사용 시 이미지 깨짐 — ScreenSaver/칼무리 권장"}},
+    {"id": "proc_HMIScreenCapture", "name": "HMI UI 버튼 캡처 및 편집", "type": "Process", "properties": {"steps": "전체 화면 캡처(ScreenSaver) → Paint.NET에서 직사각형 선택 → Ctrl+C/Ctrl+V 복사/붙여넣기", "tip": "Ctrl+마우스휠로 확대 후 격자 이용 영역 선택"}},
+    {"id": "manual_HMIButtons", "name": "HMI UI 버튼 매뉴얼", "type": "Manual", "properties": {"screens": "메인, 적재 설정, 모델 설정 등"}}
+  ],
+  "relations": [
+    {"source": "proc_HMIScreenCapture", "target": "tool_PaintDotNet", "type": "USES_TOOL"},
+    {"source": "proc_HMIScreenCapture", "target": "tool_ScreenSaver", "type": "USES_TOOL"},
+    {"source": "manual_HMIButtons", "target": "proc_HMIScreenCapture", "type": "DOCUMENTS"}
+  ]
+}

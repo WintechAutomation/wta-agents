@@ -205,14 +205,13 @@ def extract_entities(text: str, title: str) -> dict:
                 'model': EXTRACT_MODEL,
                 'prompt': prompt,
                 'stream': False,
-                'options': {'num_predict': 600, 'temperature': 0.1},
+                'think': False,
+                'options': {'num_predict': 800, 'temperature': 0.1},
             },
             timeout=90,
         )
         if r.status_code == 200:
-            data = r.json()
-            # qwen3.5:35b-a3b는 thinking 필드에 출력, response는 비어있음
-            raw = data.get('response', '').strip() or data.get('thinking', '').strip()
+            raw = r.json().get('response', '').strip()
             match = re.search(r'\{.*\}', raw, re.DOTALL)
             if match:
                 return json.loads(match.group())

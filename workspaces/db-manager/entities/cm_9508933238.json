@@ -1,0 +1,13 @@
+{
+  "page_id": "9508933238",
+  "title": "Domino 프로토콜, 통신 매뉴얼",
+  "entities": [
+    {"id": "equip_DominoInkjet", "name": "Domino 잉크젯 마킹기", "type": "Equipment", "properties": {"manufacturer": "Domino", "model": "Ax350i", "interface": "네트워크 프로토콜"}},
+    {"id": "proc_DominoNetworkConfig", "name": "Domino 네트워크 설정", "type": "Process", "properties": {"steps": "설정 → 프린터 네트워크 → 프로토콜 설정 → 라벨양식(2M7HQ40) → 잉크젯 마킹기 재시작", "label_format": "2M7HQ40", "note": "적용 후 반드시 전원 OFF/ON 으로 적용 확인"}},
+    {"id": "comp_DominoProtocol", "name": "Domino 통신 프로토콜", "type": "Component", "properties": {"setting_path": "설정 → 프린터 네트워크 → 프로토콜 설정"}}
+  ],
+  "relations": [
+    {"source": "proc_DominoNetworkConfig", "target": "equip_DominoInkjet", "type": "MAINTAINS"},
+    {"source": "proc_DominoNetworkConfig", "target": "comp_DominoProtocol", "type": "INVOLVES_COMPONENT"}
+  ]
+}

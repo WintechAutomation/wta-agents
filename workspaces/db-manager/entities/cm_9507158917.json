@@ -1,0 +1,11 @@
+{
+  "page_id": "9507158917",
+  "title": "5-4-2. 마킹 검사",
+  "entities": [
+    {"id": "proc_MarkingInspection_5_4_2", "name": "마킹 검사 5-4-2", "type": "Process", "properties": {"section": "5-4-2", "label": "마킹검사(H1)"}},
+    {"id": "proc_InsertDetectArea_5_4_2", "name": "인서트 검출 영역 설정 5-4-2", "type": "Process", "properties": {"method": "마우스 드래그 또는 더블 클릭"}}
+  ],
+  "relations": [
+    {"source": "proc_MarkingInspection_5_4_2", "target": "proc_InsertDetectArea_5_4_2", "type": "HAS_SUBPROCESS"}
+  ]
+}

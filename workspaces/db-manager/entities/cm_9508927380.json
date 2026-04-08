@@ -1,0 +1,8 @@
+{
+  "page_id": "9508927380",
+  "title": "(국문, OKE)- 4-2-3-4. 팔레트 관리 - 복사",
+  "entities": [
+    {"id": "proc_PalletCopy", "name": "팔레트 복사", "type": "Process", "properties": {"steps": "①메인화면 → 팔레트 관리 선택 → ②복사할 팔레트 선택 → ③복사 실행"}}
+  ],
+  "relations": []
+}

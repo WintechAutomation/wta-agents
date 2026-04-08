@@ -1,0 +1,15 @@
+{
+  "page_id": "9508925534",
+  "title": "LEFT_ELV, RIGHT_ELV 위치",
+  "entities": [
+    {"id": "proc_ELVPositionSetting", "name": "LEFT_ELV / RIGHT_ELV 위치 설정", "type": "Process", "properties": {"description": "측면 카메라 기준 각 ELV의 중심 위치 설정", "method": "측면 카메라로 EV_L, EV_R이 중심에 오는 위치 확인"}},
+    {"id": "comp_LeftELV", "name": "LEFT_ELV (EV_L)", "type": "Component", "properties": {"calib_field": "EvLeftOrg", "file": "CalibrationData.xml"}},
+    {"id": "comp_RightELV", "name": "RIGHT_ELV (EV_R)", "type": "Component", "properties": {"calib_field": "EvRightOrg", "file": "CalibrationData.xml"}},
+    {"id": "comp_ELVCalibData", "name": "CalibrationData.xml (ELV)", "type": "Component", "properties": {"fields": "EvLeftOrg, EvRightOrg", "purpose": "ELV 중심 포지션 저장"}}
+  ],
+  "relations": [
+    {"source": "proc_ELVPositionSetting", "target": "comp_LeftELV", "type": "INVOLVES_COMPONENT"},
+    {"source": "proc_ELVPositionSetting", "target": "comp_RightELV", "type": "INVOLVES_COMPONENT"},
+    {"source": "proc_ELVPositionSetting", "target": "comp_ELVCalibData", "type": "INVOLVES_COMPONENT"}
+  ]
+}
