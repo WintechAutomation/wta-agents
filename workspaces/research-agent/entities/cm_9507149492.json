@@ -1,0 +1,69 @@
+{
+  "page_id": "9507149492",
+  "title": "-4-2-4. 환경설정",
+  "entities": [
+    {
+      "id": "eq_001",
+      "name": "장비",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "proc_001",
+      "name": "기본 작업 설정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_002",
+      "name": "라벨링",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_003",
+      "name": "팔레트 작업 설정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_004",
+      "name": "취출",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "manual_001",
+      "name": "-4-2-4. 환경설정",
+      "type": "Manual",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "source": "eq_001",
+      "target": "proc_001",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "eq_001",
+      "target": "proc_002",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "eq_001",
+      "target": "proc_003",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "eq_001",
+      "target": "proc_004",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "manual_001",
+      "target": "eq_001",
+      "type": "DOCUMENTS"
+    }
+  ]
+}

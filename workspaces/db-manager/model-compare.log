@@ -17,5 +17,40 @@
 [compare] 05:08:48 
 [3/15] [1_robot] 4.배선.PDF
 [compare] 05:08:48   텍스트: 1775자
-ot] 4.배선.PDF
-[compare] 05:08:48   텍스트: 1775자
+[compare] 05:10:06   [a3b+think:False] 엔티티:0 관계:0 시간:77.3초 토큰:2000
+[compare] 05:10:06     샘플: []
+[compare] 05:11:14   [35b_dense] 엔티티:0 관계:0 시간:68.4초 토큰:2000
+[compare] 05:11:14     샘플: []
+[compare] 05:11:14 
+[4/15] [1_robot] Yaskawa Teaching, Cube Setting Manual.pdf
+[compare] 05:11:14   텍스트: 764자
+[compare] 05:11:36   [a3b+think:False] 엔티티:9 관계:8 시간:21.6초 토큰:674
+[compare] 05:11:36     샘플: ['Yaskawa Robot', 'Teaching Pendant (TP)', 'Teaching Mode', 'Ready On Servo', 'Servo Lamp Check']
+[compare] 05:12:33   [35b_dense] 엔티티:0 관계:0 시간:57.3초 토큰:2000
+[compare] 05:12:33     샘플: []
+[compare] 05:12:33 
+[5/15] [1_robot] CR123478 기능과조작상세_bfp-a5945-s.pdf
+[compare] 05:12:33   텍스트: 3247자
+[compare] 05:13:42   [a3b+think:False] 엔티티:20 관계:23 시간:69.4초 토큰:1784
+[compare] 05:13:42     샘플: ['미쓰비시전기 산업용 로봇', 'CR1/CR2/CR3/CR4/CR7/CR8 컨트롤러', '로봇 암', 'ABS 마크', '티칭박스']
+[compare] 05:15:04   [35b_dense] 엔티티:0 관계:0 시간:81.1초 토큰:2000
+[compare] 05:15:04     샘플: []
+[compare] 05:15:04 
+[6/15] [1_robot] bfp-a8885n_NewCR750-QCR751-Q 컨트롤러 설명서 컨트롤러 설정과 기본 조작 에서 보수까지
+[compare] 05:15:04   텍스트: 3213자
+[compare] 05:15:50   [a3b+think:False] 엔티티:0 관계:0 시간:46.7초 토큰:2000
+[compare] 05:15:50     샘플: []
+[compare] 05:17:11   [35b_dense] 엔티티:0 관계:0 시간:80.5초 토큰:2000
+[compare] 05:17:11     샘플: []
+[compare] 05:17:11 
+[7/15] [2_sensor] EX-10 SERIES.pdf
+[compare] 05:17:11   텍스트: 7585자
+[compare] 05:17:59   [a3b+think:False] 엔티티:19 관계:18 시간:47.9초 토큰:1946
+[compare] 05:17:59     샘플: ['EX-10 SERIES Ver.2', '빔 센서', '앰프 내장', '설치 브래킷', 'M3 나사']
+[compare] 05:19:14   [35b_dense] 엔티티:0 관계:0 시간:75.6초 토큰:2000
+[compare] 05:19:14     샘플: []
+[compare] 05:19:14 
+[8/15] [2_sensor] br-laser-product-range-ko.pdf
+[compare] 05:19:15   텍스트: 1871자
+uct-range-ko.pdf
+[compare] 05:19:15   텍스트: 1871자

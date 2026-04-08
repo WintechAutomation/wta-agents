@@ -1,0 +1,104 @@
+{
+  "page_id": "9507151044",
+  "title": "-(한글 버전)-  4-2-4. 환경설정",
+  "entities": [
+    {
+      "id": "env_setup_01",
+      "name": "환경설정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "main_screen_01",
+      "name": "메인화면",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "param_screen_01",
+      "name": "파라메터 설정 화면",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "basic_setting_01",
+      "name": "기본 작업 설정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "case_setting_01",
+      "name": "케이스",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "pallet_setting_01",
+      "name": "팔레트 작업 설정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "ejection_setting_01",
+      "name": "취출",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "wiki_doc_01",
+      "name": "참고 페이지",
+      "type": "Manual",
+      "properties": {
+        "url": "https://iwta.atlassian.net/wiki/spaces/CM/pages/9507149978"
+      }
+    },
+    {
+      "id": "equipment_01",
+      "name": "장비",
+      "type": "Equipment",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "source": "main_screen_01",
+      "target": "env_setup_01",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "env_setup_01",
+      "target": "param_screen_01",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "param_screen_01",
+      "target": "basic_setting_01",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "param_screen_01",
+      "target": "case_setting_01",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "param_screen_01",
+      "target": "pallet_setting_01",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "param_screen_01",
+      "target": "ejection_setting_01",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "basic_setting_01",
+      "target": "equipment_01",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "wiki_doc_01",
+      "target": "env_setup_01",
+      "type": "DOCUMENTS"
+    }
+  ]
+}
