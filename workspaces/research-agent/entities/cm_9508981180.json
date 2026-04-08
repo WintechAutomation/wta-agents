@@ -1,0 +1,140 @@
+{
+  "page_id": "9508981180",
+  "title": "도르스트 인터페이스 테스트",
+  "entities": [
+    {
+      "id": "e1",
+      "name": "도르스트 인터페이스 테스트",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e2",
+      "name": "WMXServer",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e3",
+      "name": "EcConfigurator",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e4",
+      "name": "인터페이스 지그",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e5",
+      "name": "쿤버스",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e6",
+      "name": "프레스",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e7",
+      "name": "랜 케이블",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e8",
+      "name": "GatewayInfo.xml",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e9",
+      "name": "_Config.csv",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e10",
+      "name": "EtherCAT Network",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e11",
+      "name": "KUNBUS_TEST",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e12",
+      "name": "민준기",
+      "type": "Person",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e2",
+      "target": "e3",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e4",
+      "target": "e5",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e4",
+      "target": "e6",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e4",
+      "target": "e7",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e6",
+      "target": "e7",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e12",
+      "target": "e1",
+      "type": "INVOLVED_IN"
+    }
+  ]
+}

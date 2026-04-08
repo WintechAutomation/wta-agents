@@ -1,0 +1,58 @@
+{
+  "page_id": "9508981846",
+  "title": "테스트중] 가이드면 세팅",
+  "entities": [
+    {
+      "id": "eq_001",
+      "name": "가이드면 세팅",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "comp_001",
+      "name": "클램프 우레탄",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "proc_001",
+      "name": "가이드면 세팅",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "issue_001",
+      "name": "판보다 내려오면 안됨",
+      "type": "Issue",
+      "properties": {}
+    },
+    {
+      "id": "issue_002",
+      "name": "두장 안잡게 세팅",
+      "type": "Issue",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "source": "proc_001",
+      "target": "eq_001",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "proc_001",
+      "target": "comp_001",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "proc_001",
+      "target": "issue_001",
+      "type": "HAS_ISSUE"
+    },
+    {
+      "source": "proc_001",
+      "target": "issue_002",
+      "type": "HAS_ISSUE"
+    }
+  ]
+}

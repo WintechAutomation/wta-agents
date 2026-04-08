@@ -1,0 +1,80 @@
+{
+  "page_id": "9507161090",
+  "title": "　적재설정 - 공정별 부분 운전",
+  "entities": [
+    {
+      "id": "proc_01",
+      "name": "적재설정 - 공정별 부분 운전",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "step_01",
+      "name": "적재설정 선택",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "step_02",
+      "name": "작업할 공정 선택",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "comp_01",
+      "name": "제품 설정",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_02",
+      "name": "팔레트",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_03",
+      "name": "케이스",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "manual_01",
+      "name": "적재설정 - 공정별 부분 운전 매뉴얼",
+      "type": "Manual",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "source": "proc_01",
+      "target": "step_01",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "proc_01",
+      "target": "step_02",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "step_02",
+      "target": "comp_01",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "step_02",
+      "target": "comp_02",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "step_02",
+      "target": "comp_03",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "manual_01",
+      "target": "proc_01",
+      "type": "DOCUMENTS"
+    }
+  ]
+}

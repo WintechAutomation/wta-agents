@@ -307,12 +307,7 @@ export default function OfficePage() {
               color="#e879f9"
               sub={usage.weekly_limit ? `/ ${formatTokens(usage.weekly_limit)}` : undefined}
             />
-            <KpiCard
-              label="COST"
-              value={`$${(usage.weekly_cost ?? usage.cost ?? 0).toFixed(0)}`}
-              color="#fb923c"
-              sub={usage.weekly_period || usage.period || undefined}
-            />
+{/* Cost 카드 제거 (부서장 요청) */}
             {usage.session_remaining_pct != null && (
               <KpiCard
                 label="REMAINING"
@@ -817,7 +812,7 @@ export default function OfficePage() {
                       fontSize="10"
                       fontWeight="bold"
                       fill="#60a5fa"
-                      fontFamily="monospace"
+                      fontFamily="'맑은 고딕', 'Malgun Gothic', sans-serif"
                     >
                       mes-wta.com
                     </text>
@@ -932,7 +927,7 @@ export default function OfficePage() {
                       fontSize="10"
                       fontWeight="bold"
                       fill="#fb923c"
-                      fontFamily="monospace"
+                      fontFamily="'맑은 고딕', 'Malgun Gothic', sans-serif"
                     >
                       cs-wta.com
                     </text>
@@ -950,8 +945,8 @@ export default function OfficePage() {
               const dist = Math.sqrt(dx * dx + dy * dy) || 1
               const dirX = dx / dist
               const dirY = dy / dist
-              const netX = raPos.x + dirX * 65
-              const netY = raPos.y + dirY * 65
+              const netX = raPos.x + dirX * 90
+              const netY = raPos.y + dirY * 90
               const perpX = -dirY
               const perpY = dirX
 
@@ -997,7 +992,7 @@ export default function OfficePage() {
                       fontSize="10"
                       fontWeight="bold"
                       fill="#22d3ee"
-                      fontFamily="monospace"
+                      fontFamily="'맑은 고딕', 'Malgun Gothic', sans-serif"
                     >
                       Online
                     </text>
@@ -1064,7 +1059,7 @@ export default function OfficePage() {
                       fontSize="10"
                       fontWeight="bold"
                       fill="#c084fc"
-                      fontFamily="monospace"
+                      fontFamily="'맑은 고딕', 'Malgun Gothic', sans-serif"
                     >
                       NAS
                     </text>
@@ -1133,6 +1128,209 @@ export default function OfficePage() {
                       fontFamily="'맑은 고딕', 'Malgun Gothic', sans-serif"
                     >
                       다우오피스
+                    </text>
+                  </g>
+                </g>
+              )
+            })()}
+
+            {/* ── designPC 시각화 (design-agent 외곽) ── */}
+            {(() => {
+              const daPos = nodePos['design-agent']
+              if (!daPos) return null
+              const dx = daPos.x - CX
+              const dy = daPos.y - CY
+              const dist = Math.sqrt(dx * dx + dy * dy) || 1
+              const dirX = dx / dist
+              const dirY = dy / dist
+              const pcX = daPos.x + dirX * 65
+              const pcY = daPos.y + dirY * 65
+              const perpX = -dirY
+              const perpY = dirX
+
+              return (
+                <g opacity={0.9}>
+                  <line
+                    x1={daPos.x + dirX * 24}
+                    y1={daPos.y + dirY * 24}
+                    x2={pcX - dirX * 16}
+                    y2={pcY - dirY * 16}
+                    stroke="#3b82f6"
+                    strokeWidth={1.5}
+                    strokeDasharray="4 3"
+                    opacity={0.5}
+                  />
+                  <polygon
+                    points={`${pcX - dirX * 18},${pcY - dirY * 18} ${pcX - dirX * 24 + perpX * 3},${pcY - dirY * 24 + perpY * 3} ${pcX - dirX * 24 - perpX * 3},${pcY - dirY * 24 - perpY * 3}`}
+                    fill="#3b82f6"
+                    opacity={0.6}
+                  />
+                  <g>
+                    <rect
+                      x={pcX - 14}
+                      y={pcY - 14}
+                      width={28}
+                      height={28}
+                      rx={6}
+                      fill="#1E293B"
+                      stroke="#3b82f6"
+                      strokeWidth={1.5}
+                    />
+                    {/* 모니터 아이콘 */}
+                    <rect x={pcX - 8} y={pcY - 7} width={16} height={11} rx={1.5} fill="none" stroke="#60a5fa" strokeWidth={1.2} />
+                    {/* 화면 내부 */}
+                    <rect x={pcX - 6} y={pcY - 5} width={12} height={7} rx={0.5} fill="#60a5fa" opacity={0.15} />
+                    {/* 스탠드 */}
+                    <line x1={pcX} y1={pcY + 4} x2={pcX} y2={pcY + 7} stroke="#60a5fa" strokeWidth={1.2} />
+                    <line x1={pcX - 4} y1={pcY + 7} x2={pcX + 4} y2={pcY + 7} stroke="#60a5fa" strokeWidth={1.2} />
+                    <text
+                      x={pcX}
+                      y={pcY + 24}
+                      textAnchor="middle"
+                      fontSize="9"
+                      fontWeight="bold"
+                      fill="#60a5fa"
+                      fontFamily="'맑은 고딕', 'Malgun Gothic', sans-serif"
+                    >
+                      designPC
+                    </text>
+                  </g>
+                </g>
+              )
+            })()}
+
+            {/* ── Atlassian 시각화 (research-agent 외곽, Online 반대편) ── */}
+            {(() => {
+              const raPos = nodePos['research-agent']
+              if (!raPos) return null
+              const dx = raPos.x - CX
+              const dy = raPos.y - CY
+              const dist = Math.sqrt(dx * dx + dy * dy) || 1
+              const dirX = dx / dist
+              const dirY = dy / dist
+              // Online과 수직 방향으로 배치
+              const perpX = -dirY
+              const perpY = dirX
+              const atlX = raPos.x + dirX * 50 + perpX * 75
+              const atlY = raPos.y + dirY * 50 + perpY * 75
+
+              return (
+                <g opacity={0.9}>
+                  <line
+                    x1={raPos.x + perpX * 24}
+                    y1={raPos.y + perpY * 24}
+                    x2={atlX - perpX * 14}
+                    y2={atlY - perpY * 14}
+                    stroke="#2684FF"
+                    strokeWidth={1.5}
+                    strokeDasharray="4 3"
+                    opacity={0.5}
+                  />
+                  <g>
+                    <rect
+                      x={atlX - 14}
+                      y={atlY - 14}
+                      width={28}
+                      height={28}
+                      rx={6}
+                      fill="#1E293B"
+                      stroke="#2684FF"
+                      strokeWidth={1.5}
+                    />
+                    {/* Atlassian "A" 마크 */}
+                    <text
+                      x={atlX}
+                      y={atlY + 2}
+                      textAnchor="middle"
+                      dominantBaseline="middle"
+                      fontSize="16"
+                      fontWeight="900"
+                      fill="#2684FF"
+                      fontFamily="Arial, sans-serif"
+                    >
+                      A
+                    </text>
+                    <text
+                      x={atlX}
+                      y={atlY + 22}
+                      textAnchor="middle"
+                      fontSize="9"
+                      fontWeight="bold"
+                      fill="#2684FF"
+                      fontFamily="'맑은 고딕', 'Malgun Gothic', sans-serif"
+                    >
+                      Atlassian
+                    </text>
+                    <text
+                      x={atlX}
+                      y={atlY + 31}
+                      textAnchor="middle"
+                      fontSize="6"
+                      fill="#6B778C"
+                      fontFamily="'맑은 고딕', 'Malgun Gothic', sans-serif"
+                    >
+                      Jira · Confluence
+                    </text>
+                  </g>
+                </g>
+              )
+            })()}
+
+            {/* ── Telegram 시각화 (MAX 노드 옆) ── */}
+            {(() => {
+              // MAX 왼쪽에 배치
+              const tgX = CX - 75
+              const tgY = CY
+
+              return (
+                <g opacity={0.9}>
+                  <line
+                    x1={CX - 36}
+                    y1={CY}
+                    x2={tgX + 16}
+                    y2={tgY}
+                    stroke="#0088cc"
+                    strokeWidth={1.5}
+                    strokeDasharray="4 3"
+                    opacity={0.5}
+                  />
+                  {/* 화살표 */}
+                  <polygon
+                    points={`${tgX + 18},${tgY} ${tgX + 24},${tgY - 3} ${tgX + 24},${tgY + 3}`}
+                    fill="#0088cc"
+                    opacity={0.6}
+                  />
+                  <g>
+                    <rect
+                      x={tgX - 14}
+                      y={tgY - 14}
+                      width={28}
+                      height={28}
+                      rx={6}
+                      fill="#1E293B"
+                      stroke="#0088cc"
+                      strokeWidth={1.5}
+                    />
+                    {/* 종이비행기 아이콘 */}
+                    <polygon
+                      points={`${tgX - 7},${tgY} ${tgX + 8},${tgY - 6} ${tgX + 3},${tgY + 7}`}
+                      fill="none"
+                      stroke="#29b6f6"
+                      strokeWidth={1.2}
+                      strokeLinejoin="round"
+                    />
+                    <line x1={tgX + 8} y1={tgY - 6} x2={tgX - 1} y2={tgY + 1} stroke="#29b6f6" strokeWidth={0.8} />
+                    <line x1={tgX - 1} y1={tgY + 1} x2={tgX + 3} y2={tgY + 7} stroke="#29b6f6" strokeWidth={0.8} />
+                    <text
+                      x={tgX}
+                      y={tgY + 24}
+                      textAnchor="middle"
+                      fontSize="9"
+                      fontWeight="bold"
+                      fill="#29b6f6"
+                      fontFamily="'맑은 고딕', 'Malgun Gothic', sans-serif"
+                    >
+                      Telegram
                     </text>
                   </g>
                 </g>

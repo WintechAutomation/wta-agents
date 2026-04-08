@@ -1,0 +1,82 @@
+{
+  "page_id": "9507160975",
+  "title": "　적재설정 - 작업 팔레트 추가",
+  "entities": [
+    {
+      "id": "proc_001",
+      "name": "적재설정 - 작업 팔레트 추가",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_002",
+      "name": "적재설정 선택",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_003",
+      "name": "작업할 제품 선택",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_004",
+      "name": "작업 추가",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_005",
+      "name": "수량 입력",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "equip_001",
+      "name": "바코드 리더기",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "manual_001",
+      "name": "적재설정 매뉴얼",
+      "type": "Manual",
+      "properties": {
+        "reference_url": "https://iwta.atlassian.net/l/cp/kc1L00yB"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "source": "proc_001",
+      "target": "proc_002",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "proc_001",
+      "target": "proc_003",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "proc_001",
+      "target": "proc_004",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "proc_001",
+      "target": "proc_005",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "proc_004",
+      "target": "equip_001",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "manual_001",
+      "target": "proc_001",
+      "type": "DOCUMENTS"
+    }
+  ]
+}

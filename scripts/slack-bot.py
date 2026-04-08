@@ -350,6 +350,7 @@ def _load_agents_routing():
 # 시작 시 로드
 _load_agents_routing()
 MY_PORT = 5612
+_BOOT_TIME = time.time()
 
 # ── 프로젝트 슬랙 채널 캐시 (TTL 5분) ──
 _project_channel_cache: dict[str, dict | None] = {}  # channel_id → project dict or None
@@ -2484,6 +2485,11 @@ class AgentMessageHandler(BaseHTTPRequestHandler):
         content: str = msg.get("content", "")
         sender: str = msg.get("from", "unknown")
 
+        # 상태점검 자동응답
+        if content.strip() in ("상태점검", "상태 보고", "상태점검 — 현재 상태 보고해주세요", "health", "status"):
+            self._handle_health_check(sender)
+            return
+
         # 슬랙 파이프라인 V2 마커 파싱 — 에이전트 → slack-bot progressive edit (2026-04-05)
         # 형식: slack-chunk:{id}:{delta}  |  slack-done:{id}  |  slack-error:{id}:{reason}
         if content.startswith(("slack-chunk:", "slack-done:", "slack-error:")):
@@ -2617,6 +2623,45 @@ class AgentMessageHandler(BaseHTTPRequestHandler):
                 log.warning(f"채널 ID 없음: #{ch_name}")
         else:
             log.info(f"[수신] {sender}: {content[:80]} (슬랙 발신 형식 아님 — 무시)")
+
+        self._json({"ok": True})
+
+    def _handle_health_check(self, sender: str):
+        """상태점검 메시지에 자동 응답"""
+        uptime_sec = int(time.time() - _BOOT_TIME)
+        h, rem = divmod(uptime_sec, 3600)
+        m, s = divmod(rem, 60)
+        uptime_str = f"{h}h {m}m {s}s"
+
+        # Socket Mode 연결 상태 확인
+        socket_ok = slack_app.client is not None
+        try:
+            auth = slack_app.client.auth_test()
+            slack_connected = auth.get("ok", False)
+        except Exception:
+            slack_connected = False
+
+        status_msg = (
+            f"slack-bot 상태 보고\n"
+            f"- Slack 연결: {'정상' if slack_connected else '끊김'}\n"
+            f"- Socket Mode: {'활성' if socket_ok else '비활성'}\n"
+            f"- 가동시간: {uptime_str}\n"
+            f"- HTTP 포트: {MY_PORT}"
+        )
+
+        # sender에게 응답
+        try:
+            hub_url = "http://localhost:5600"
+            payload = json.dumps({"to": sender, "message": status_msg}).encode("utf-8")
+            req = urllib.request.Request(
+                f"{hub_url}/api/send",
+                data=payload,
+                headers={"Content-Type": "application/json"},
+                method="POST",
+            )
+            urllib.request.urlopen(req, timeout=3)
+        except Exception as e:
+            log.warning(f"상태점검 응답 전송 실패: {e}")
 
         self._json({"ok": True})
 

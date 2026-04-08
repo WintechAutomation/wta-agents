@@ -1,0 +1,69 @@
+{
+  "page_id": "9507161036",
+  "title": "　적재설정 - 작업 수량 변경",
+  "entities": [
+    {
+      "id": "proc_01",
+      "name": "적재설정 - 작업 수량 변경",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_01_sub_01",
+      "name": "적재설정 선택",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_01_sub_02",
+      "name": "변경할 팔레트의 수량 클릭",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_01_sub_03",
+      "name": "작업수량 선택",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_01_sub_04",
+      "name": "수량 입력",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "manual_01",
+      "name": "적재설정 - 작업 수량 변경 매뉴얼",
+      "type": "Manual",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "source": "proc_01",
+      "target": "proc_01_sub_01",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "proc_01",
+      "target": "proc_01_sub_02",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "proc_01",
+      "target": "proc_01_sub_03",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "proc_01",
+      "target": "proc_01_sub_04",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "manual_01",
+      "target": "proc_01",
+      "type": "DOCUMENTS"
+    }
+  ]
+}
