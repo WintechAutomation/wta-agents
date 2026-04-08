@@ -1,0 +1,60 @@
+{
+  "page_id": "9643426035",
+  "title": "2026年 03月 25日 业务日报",
+  "entities": [
+    {
+      "id": "eng_001",
+      "name": "吴振勤",
+      "type": "Person",
+      "properties": {
+        "department": "质量/售后服务部"
+      }
+    },
+    {
+      "id": "eng_002",
+      "name": "机械手机构部位组装",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "eng_003",
+      "name": "去毛刺吹气装置组装",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "eng_004",
+      "name": "舟皿供应轴配件组装",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "eng_005",
+      "name": "舟皿供应轴配件",
+      "type": "Component",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "source": "eng_001",
+      "target": "eng_002",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "eng_002",
+      "target": "eng_003",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "eng_002",
+      "target": "eng_004",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "eng_004",
+      "target": "eng_005",
+      "type": "USES_COMPONENT"
+    }
+  ]
+}

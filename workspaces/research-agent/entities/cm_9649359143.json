@@ -1,0 +1,91 @@
+{
+  "page_id": "9649359143",
+  "title": "2026年 03月 27日 业务日报",
+  "entities": [
+    {
+      "id": "e1",
+      "name": "机械手机构部位",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e2",
+      "name": "舟皿供应轴",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e3",
+      "name": "皮带",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e4",
+      "name": "电机马达",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e5",
+      "name": "感应器",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e6",
+      "name": "气缸",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e7",
+      "name": "组装",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e8",
+      "name": "吴振勤",
+      "type": "Person",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e2",
+      "target": "e3",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e2",
+      "target": "e4",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e2",
+      "target": "e5",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e2",
+      "target": "e6",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e8",
+      "target": "e7",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "e7",
+      "target": "e1",
+      "type": "HAS_SUBPROCESS"
+    }
+  ]
+}

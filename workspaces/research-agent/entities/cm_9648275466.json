@@ -1,0 +1,36 @@
+{
+  "page_id": "9648275466",
+  "title": "2026年 03月 26日 业务日报",
+  "entities": [
+    {
+      "id": "e1",
+      "name": "吴振勤",
+      "type": "Person",
+      "properties": {}
+    },
+    {
+      "id": "e2",
+      "name": "机械手机构部位组装",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e3",
+      "name": "舟皿供应轴组装",
+      "type": "Process",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "e2",
+      "target": "e3",
+      "type": "HAS_SUBPROCESS"
+    }
+  ]
+}

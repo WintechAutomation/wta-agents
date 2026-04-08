@@ -1,0 +1,47 @@
+{
+  "page_id": "9657976760",
+  "title": "2026年 03月 31日 业务日报",
+  "entities": [
+    {
+      "id": "eq_001",
+      "name": "机械手设备",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "comp_001",
+      "name": "部件",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "proc_001",
+      "name": "机械手机构部位组装",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "person_001",
+      "name": "吴振勤",
+      "type": "Person",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "source": "proc_001",
+      "target": "eq_001",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "proc_001",
+      "target": "comp_001",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "person_001",
+      "target": "proc_001",
+      "type": "INVOLVED_IN"
+    }
+  ]
+}

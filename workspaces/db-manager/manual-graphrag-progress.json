@@ -36,7 +36,12 @@
     "8_etc/HF-W2000 35-30(10).pdf",
     "8_etc/dsd-31F  - .pdf",
     "8_etc/제4장.pdf",
-    "8_etc/SPiiPlus PCI (ver 4-4).pdf"
+    "8_etc/SPiiPlus PCI (ver 4-4).pdf",
+    "8_etc/ACC-28B.pdf",
+    "8_etc/IOMnt_DS_Ver3_0.pdf",
+    "8_etc/ACS Backup방법.pdf",
+    "8_etc/HSSI-ED2.pdf",
+    "8_etc/USB-4750.pdf"
   ],
   "failed": [
     "4_servo/편면Panasonic Servo 20160127 (일산 이구스 다이덴).pdf",
@@ -49,9 +54,10 @@
     "8_etc/ACS 케이블 배선도2(JP).pdf"
   ],
   "stats": {
-    "done": 30,
-    "total_nodes": 265,
-    "total_rels": 255,
-    "avg_sec": 93.87444943586985
+    "done": 42,
+    "total_nodes": 334,
+    "total_rels": 365,
+    "avg_sec": 83.10783519063678,
+    "finished_at": "2026-04-09 04:06:47 KST"
   }
 }
