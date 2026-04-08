@@ -863,6 +863,42 @@
       "updated_at": "2026-04-08 18:03:37",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-docs-agent-f2e3bb",
+      "agent": "docs-agent",
+      "task": "연구노트-2-분말검사.docx 파일 잠김 해제 및 교체 완료했습니다. _new 파일로 정상 교체됨. upload-server도 재시작 완료.",
+      "message": "연구노트-2-분말검사.docx 파일 잠김 해제 및 교체 완료했습니다. _new 파일로 정상 교체됨. upload-server도 재시작 완료.\n\n5건 모두 수정 완료 상태입니다.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 18:10:09",
+      "updated_at": "2026-04-08 18:10:09",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-db-manager-b9d425",
+      "agent": "db-manager",
+      "task": "김근형님 추가 요청. BOM에서 품목별 단위소요량(qty_per_unit) 데이터가 필요합니다.",
+      "message": "김근형님 추가 요청. BOM에서 품목별 단위소요량(qty_per_unit) 데이터가 필요합니다.\n\n예시: 03-11-001-2 같은 품목은 \"1대에 6개 사용\"인데 현재 장비대수로만 계산되어 수량이 안 맞음.\n\nERP BOM에서 품목코드별 단위소요량을 조회해서 erp_data.json에 추가해주세요. MES 백엔드 API 경유.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 18:11:02",
+      "updated_at": "2026-04-08 18:11:02",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-docs-agent-be42b8",
+      "agent": "docs-agent",
+      "task": "db-manager가 BOM 단위소요량(qty_per_unit) 추가 완료. erp_data.json [14]번 필드.",
+      "message": "db-manager가 BOM 단위소요량(qty_per_unit) 추가 완료. erp_data.json [14]번 필드.\n\n- 3,134건 업데이트\n- 예: 03-11-001-2 → qty_per_unit=6 (1대에 6개)\n\nHTML 재적용 후 김근형님께 알림 부탁합니다.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 18:14:08",
+      "updated_at": "2026-04-08 18:14:08",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }
