@@ -161,7 +161,7 @@ def extract_entities(text: str, filename: str) -> dict:
                 'prompt': EXTRACT_PROMPT + f'파일명: {filename}\n\n{truncated}',
                 'stream': False,
                 'think': False,
-                'options': {'num_predict': 800, 'temperature': 0.1},
+                'options': {'num_predict': 2000, 'temperature': 0.1},
             },
             timeout=120,
         )

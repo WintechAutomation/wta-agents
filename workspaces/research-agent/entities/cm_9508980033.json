@@ -1,0 +1,179 @@
+{
+  "page_id": "9508980033",
+  "title": "#공급/취출 반복테스트(2단 컨베이어 타입)",
+  "entities": [
+    {
+      "id": "eq_001",
+      "name": "2단 컨베이어",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "eq_002",
+      "name": "LIFT",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "eq_003",
+      "name": "컨베이어 모터 드라이버",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "comp_001",
+      "name": "플레이트",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_002",
+      "name": "컨베이어 벨트",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_003",
+      "name": "플레이트 감지 센서",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "proc_001",
+      "name": "공급/취출 반복테스트",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_002",
+      "name": "플레이트 공급 시 움직임 확인",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_003",
+      "name": "플레이트 취출 시 움직임 확인",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_004",
+      "name": "제품 상태 확인",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "issue_001",
+      "name": "컨베이어 속도 너무 빠른 경우",
+      "type": "Issue",
+      "properties": {}
+    },
+    {
+      "id": "issue_002",
+      "name": "플레이트 감지 센서의 위치가 안맞는 경우",
+      "type": "Issue",
+      "properties": {}
+    },
+    {
+      "id": "issue_003",
+      "name": "위치의 평형 불량 (대각선으로 높이 불량)",
+      "type": "Issue",
+      "properties": {}
+    },
+    {
+      "id": "issue_004",
+      "name": "컨베이어 벨트 쏠림",
+      "type": "Issue",
+      "properties": {}
+    },
+    {
+      "id": "person_001",
+      "name": "제어팀",
+      "type": "Person",
+      "properties": {}
+    },
+    {
+      "id": "person_002",
+      "name": "제작팀",
+      "type": "Person",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "source": "eq_001",
+      "target": "proc_001",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "eq_002",
+      "target": "proc_001",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "proc_001",
+      "target": "proc_002",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "proc_001",
+      "target": "proc_003",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "proc_001",
+      "target": "proc_004",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "proc_002",
+      "target": "comp_001",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "proc_003",
+      "target": "comp_001",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "proc_004",
+      "target": "comp_001",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eq_001",
+      "target": "comp_002",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eq_001",
+      "target": "comp_003",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eq_003",
+      "target": "issue_001",
+      "type": "HAS_ISSUE"
+    },
+    {
+      "source": "comp_003",
+      "target": "issue_002",
+      "type": "HAS_ISSUE"
+    },
+    {
+      "source": "issue_001",
+      "target": "person_001",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "issue_003",
+      "target": "person_002",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "eq_001",
+      "target": "issue_004",
+      "type": "HAS_ISSUE"
+    }
+  ]
+}
