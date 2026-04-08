@@ -118,3 +118,5 @@
 {"ts": "2026-04-09 07:42:51", "direction": "inbound", "user": "boss", "text": "gemma-4-31b-it (가장 큰 모델, 31B Dense) vLLM으로 로딩 시작했어요. HuggingFace에서 모델 다운로드 + 로딩까지 시간이 좀 걸릴 수 있어요. 완료되면 알려드릴게요!"}
 {"ts": "2026-04-09 07:43:03", "direction": "outbound", "user": "MAX", "text": "👍 31B Dense 모델이면 품질 기대됩니다. 로딩 완료되면 알려주세요. 바로 테스트 진행하겠습니다."}
 {"ts": "2026-04-09 08:06:51", "direction": "outbound", "user": "MAX", "text": "🔍 nc-manager 일일 점검 보고\n\n기한 초과 미조치 부적합 663건\n\nCritical 10건 (3일 초과):\n- MMC 검사기 F2 #1 관련, 198~241일 초과\n- 담당: 조광현(1건), 정정일(9건)\n- 스토퍼 길이, 코팅 누락, 볼스크류 피치 불일치 등 설계결함\n\nHigh 653건: PVD 로딩 #4, 포장기 #6 등\n\nnc-manager가 Jira 에스컬레이션 승인 요청합니다:\n1. Critical 10건만 Jira 이슈 생성\n2. 특정 프로젝트/담당자만\n3. 현황 보고만으로 마무리\n\n어떻게 할까요?"}
+{"ts": "2026-04-09 08:19:30", "direction": "inbound", "user": "boss", "text": "Mmc F2 장비 부적합은 모두 완료처리를 해줘 오늘날짜로."}
+{"ts": "2026-04-09 08:19:57", "direction": "outbound", "user": "MAX", "text": "nc-manager에게 MMC F2 #1 부적합 전체 완료 처리(오늘 날짜) 지시했습니다."}

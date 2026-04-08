@@ -20410,3 +20410,6 @@
 {"agent_id": "nc-manager", "tool_name": "Bash", "timestamp": "2026-04-09 08:05:50"}
 {"agent_id": "nc-manager", "tool_name": "Bash", "timestamp": "2026-04-09 08:05:58"}
 {"agent_id": "nc-manager", "tool_name": "mcp__agent-channel__send_message", "timestamp": "2026-04-09 08:06:29"}
+{"agent_id": "crafter", "tool_name": "mcp__agent-channel__wait_for_channel", "timestamp": "2026-04-09 08:10:20"}
+{"agent_id": "crafter", "tool_name": "mcp__agent-channel__wait_for_channel", "timestamp": "2026-04-09 08:15:26"}
+{"agent_id": "nc-manager", "tool_name": "Bash", "timestamp": "2026-04-09 08:19:57"}
