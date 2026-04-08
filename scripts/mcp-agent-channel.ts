@@ -46,6 +46,8 @@ const AGENT_PORTS: Record<string, number> = Object.fromEntries(
 )
 
 // ── 에이전트 호스트 맵 — host 필드가 없으면 localhost ──
+const HUB_HOST: string = (agentsConfig as Record<string, unknown>)._hubHost as string || '192.168.0.219'
+
 const AGENT_HOSTS: Record<string, string> = Object.fromEntries(
   Object.entries(agentsConfig)
     .filter(([, a]) => (a as { port: number | null }).port !== null)
@@ -66,7 +68,20 @@ if (!MY_PORT) {
 }
 
 const IS_MAX = AGENT_ID === 'MAX'
-const DASHBOARD_URL = 'http://localhost:5555'
+
+// ── 외부 에이전트 localhost → hubHost 변환 ──
+// 자신이 외부(host 필드 있음)이면 다른 에이전트의 localhost를 메인서버 IP로 치환
+const MY_HOST = AGENT_HOSTS[AGENT_ID] || 'localhost'
+const IS_EXTERNAL = MY_HOST !== 'localhost'
+if (IS_EXTERNAL) {
+  for (const [id, host] of Object.entries(AGENT_HOSTS)) {
+    if (host === 'localhost') {
+      AGENT_HOSTS[id] = HUB_HOST
+    }
+  }
+}
+
+const DASHBOARD_URL = IS_EXTERNAL ? `http://${HUB_HOST}:5555` : 'http://localhost:5555'
 const EMBED_URL = 'http://182.224.6.147:11434/api/embed'
 
 const log = (msg: string) =>

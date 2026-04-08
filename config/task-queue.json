@@ -503,6 +503,18 @@
       "updated_at": "2026-04-08 13:26:50",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-crafter-f1dd93",
+      "agent": "crafter",
+      "task": "부서장 승인 건: mcp-agent-channel.ts에 외부 에이전트용 localhost 변환 로직 추가해주세요.",
+      "message": "부서장 승인 건: mcp-agent-channel.ts에 외부 에이전트용 localhost 변환 로직 추가해주세요.\n\n현재 문제: agents.json에서 host 필드가 없는 에이전트는 localhost로 해석됨. 설계팀(192.168.0.220) 같은 외부 에이전트가 MAX로 메시지 보낼 때 자기 PC의 localhost로 보내서 도달 못함.\n\n수정 방향:\n- 자기 자신(AGENT_ID)의 agents.json 설정에 host 필드가 있으면(= 외부 에이전트) localhost를 메인서버 IP로 변환\n- 메인서버 IP는 agents.json에 새 필드(예: hubHost)로 추가하거나, 외부 에이전트 입장에서 host가 없는 에이전트들의 localhost를 특정 IP로 치환\n- 가장 깔끔한 방법: agents.json 최상위에 \"hubHost\": \"192.168.0.219\" (또는 서버 IP) 추가하고, 자신이 external location인 에이전트일 때 localhost를 hubHost로 변환\n\n파일: scripts/mcp-agent-channel.ts, config/agents.json\n수정 후 MAX에게 보고해주세요.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 13:32:24",
+      "updated_at": "2026-04-08 13:32:24",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }
