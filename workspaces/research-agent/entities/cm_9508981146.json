@@ -1,0 +1,135 @@
+{
+  "page_id": "9508981146",
+  "title": "#인터페이스 연결 정리",
+  "entities": [
+    {
+      "id": "eng_1",
+      "name": "인터페이스",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "eng_2",
+      "name": "프레스",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "eng_3",
+      "name": "인터페이스 전원",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "eng_4",
+      "name": "날선",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "eng_5",
+      "name": "링크",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "eng_6",
+      "name": "인디케이터",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "eng_7",
+      "name": "도르스트",
+      "type": "Person",
+      "properties": {}
+    },
+    {
+      "id": "eng_8",
+      "name": "오스트왈더",
+      "type": "Person",
+      "properties": {}
+    },
+    {
+      "id": "eng_9",
+      "name": "고바야시",
+      "type": "Person",
+      "properties": {}
+    },
+    {
+      "id": "eng_10",
+      "name": "인터페이스 연결",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "eng_11",
+      "name": "인터페이스 해제",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "eng_12",
+      "name": "저울 측정",
+      "type": "Process",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "source": "eng_1",
+      "target": "eng_2",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eng_1",
+      "target": "eng_3",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eng_2",
+      "target": "eng_4",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eng_6",
+      "target": "eng_4",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eng_6",
+      "target": "eng_5",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eng_7",
+      "target": "eng_12",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "eng_7",
+      "target": "eng_10",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "eng_7",
+      "target": "eng_11",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "eng_8",
+      "target": "eng_10",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "eng_9",
+      "target": "eng_10",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "eng_10",
+      "target": "eng_11",
+      "type": "HAS_SUBPROCESS"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "page_id": "9508982558",
+  "title": "YG1 고바야시 듀얼 툴 저울 위치(#20)",
+  "entities": [
+    {
+      "id": "proc_YG1KobayashiDualToolScalePos",
+      "name": "YG1 고바야시 듀얼 툴 저울 위치 (#20)",
+      "type": "Process",
+      "properties": {
+        "equipment": "YG1 고바야시 #20",
+        "description": "듀얼 툴 저울 위치 설정"
+      }
+    }
+  ],
+  "relations": []
+}

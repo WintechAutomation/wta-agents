@@ -1,0 +1,18 @@
+{
+  "page_id": "9508931471",
+  "title": "[Windows] 대기 모드 메모리 비우기",
+  "entities": [
+    {
+      "id": "proc_WindowsStandbyMemoryClear",
+      "name": "Windows 대기 모드 메모리 비우기",
+      "type": "Process",
+      "properties": {
+        "tool": "EmptyStandbyList.exe",
+        "path": "C:\\CustomExecutables\\EmptyStandbyList.exe",
+        "method": "작업 스케줄러에서 xml 파일 가져오기로 등록",
+        "access": "시작 메뉴 '작업' 입력 또는 Win+R → control schedtasks"
+      }
+    }
+  ],
+  "relations": []
+}

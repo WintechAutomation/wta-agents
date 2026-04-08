@@ -1,0 +1,19 @@
+{
+  "page_id": "9508933873",
+  "title": "PostgreSql 설치,백업,복원 manual",
+  "entities": [
+    {
+      "id": "proc_PostgreSQLInstallBackupRestore",
+      "name": "PostgreSQL 설치/백업/복원 매뉴얼",
+      "type": "Process",
+      "properties": {
+        "recommended_version": "postgresql-15.1-1-windows-x64 (16버전 복원 문제 있음)",
+        "port": "5432",
+        "default_password": "7111",
+        "pgadmin": "pgAdmin 설치 후 실행, 비밀번호 7111",
+        "backup": "16번 서버에서 진행"
+      }
+    }
+  ],
+  "relations": []
+}

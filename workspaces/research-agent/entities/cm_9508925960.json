@@ -1,0 +1,79 @@
+{
+  "page_id": "9508925960",
+  "title": "툴 교체",
+  "entities": [
+    {
+      "id": "e1",
+      "name": "X 축 툴",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e2",
+      "name": "ROT 축 툴",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e3",
+      "name": "공압 잠금",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e4",
+      "name": "핀 장착",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e5",
+      "name": "너트 조임",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e6",
+      "name": "툴 교체",
+      "type": "Process",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "source": "e6",
+      "target": "e3",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e6",
+      "target": "e4",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e6",
+      "target": "e5",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "e2",
+      "target": "e6",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "e4",
+      "target": "e1",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e4",
+      "target": "e2",
+      "type": "USES_COMPONENT"
+    }
+  ]
+}

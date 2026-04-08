@@ -1,0 +1,15 @@
+{
+  "page_id": "9508979167",
+  "title": "Press",
+  "entities": [
+    {
+      "id": "equip_Press",
+      "name": "Press 장비",
+      "type": "Equipment",
+      "properties": {
+        "description": "Press 장비 개요"
+      }
+    }
+  ],
+  "relations": []
+}

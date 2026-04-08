@@ -1,0 +1,15 @@
+{
+  "page_id": "9508933862",
+  "title": "PostgreSql",
+  "entities": [
+    {
+      "id": "tool_PostgreSQL",
+      "name": "PostgreSQL",
+      "type": "Tool",
+      "properties": {
+        "description": "PostgreSQL 데이터베이스 개요"
+      }
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,144 @@
+[
+  {
+    "page_id": "9508931334",
+    "title": "Paint .Net",
+    "entities": [
+      {
+        "id": "tool_PaintNet",
+        "name": "Paint.NET",
+        "type": "Tool",
+        "properties": {
+          "description": "Paint.NET 이미지 편집 도구"
+        }
+      }
+    ],
+    "relations": []
+  },
+  {
+    "page_id": "9508931471",
+    "title": "[Windows] 대기 모드 메모리 비우기",
+    "entities": [
+      {
+        "id": "proc_WindowsStandbyMemoryClear",
+        "name": "Windows 대기 모드 메모리 비우기",
+        "type": "Process",
+        "properties": {
+          "tool": "EmptyStandbyList.exe",
+          "path": "C:\\CustomExecutables\\EmptyStandbyList.exe",
+          "method": "작업 스케줄러에서 xml 파일 가져오기로 등록",
+          "access": "시작 메뉴 '작업' 입력 또는 Win+R → control schedtasks"
+        }
+      }
+    ],
+    "relations": []
+  },
+  {
+    "page_id": "9508932412",
+    "title": "レーザーマーキング機CWAVE2.exeマニュアル（日本語）",
+    "entities": [
+      {
+        "id": "proc_CWAVE2Setup_JP",
+        "name": "레이저 마킹기 CWAVE2 설정 (일본어)",
+        "type": "Process",
+        "properties": {
+          "language": "Japanese",
+          "lang_setup": "File → System Parameter → Language 선택 후 OK → 재부팅",
+          "text_setup": "아이콘 클릭 → TEXT 생성 → Font/TextSize 파라미터 설정",
+          "resize": "Object 외곽 8개 점 드래그 또는 Position/Size 지정. 재클릭 시 회전 기능",
+          "preview": "하단 Red(F1) 버튼으로 프리뷰"
+        }
+      }
+    ],
+    "relations": []
+  },
+  {
+    "page_id": "9508933305",
+    "title": "Zebra",
+    "entities": [
+      {
+        "id": "equip_ZebraLabelPrinter",
+        "name": "Zebra 라벨 프린터",
+        "type": "Equipment",
+        "properties": {
+          "manufacturer": "Zebra",
+          "description": "Zebra 라벨 프린터 개요"
+        }
+      }
+    ],
+    "relations": []
+  },
+  {
+    "page_id": "9508933389",
+    "title": "Zebra Label Printer Language & IP Setting(한국어)",
+    "entities": [
+      {
+        "id": "proc_ZebraLabelPrinterSetup",
+        "name": "Zebra 라벨 프린터 언어 및 IP 설정",
+        "type": "Process",
+        "properties": {
+          "language_setup": "SETUP·EXIT → ◀ 버튼으로 언어 화면 진입 → +/- 버튼으로 언어 선택 → SETUP·EXIT → ▶ 저장",
+          "ip_static": "SETUP·EXIT → ◀ → + 버튼으로 비밀번호(1234) 입력 → +/- 로 '영구' 설정 → ▶ 저장",
+          "ip_change": "SETUP·EXIT → ◀ → IP 주소 설정 화면 진입"
+        }
+      }
+    ],
+    "relations": []
+  },
+  {
+    "page_id": "9508933851",
+    "title": "Protocol 문자열 생성 시 주의사항",
+    "entities": [
+      {
+        "id": "issue_ProtocolStringNote",
+        "name": "Protocol 문자열 생성 주의사항 (제어 문자)",
+        "type": "Issue",
+        "properties": {
+          "symptom": "제어 문자 데이터 송신 시 수신 안 되는 경우",
+          "cause": "STX/ETX 등 제어 문자를 char 형으로 처리 시 인코딩 과정에서 의미 변질 가능",
+          "resolution": "byte 형 변수로 처리 (ex. byte Stx). ASCII 코드 8비트 인코딩 주의"
+        }
+      }
+    ],
+    "relations": [
+      {
+        "source": "issue_ProtocolStringNote",
+        "target": "issue_ProtocolStringNote",
+        "type": "RESOLVED_BY"
+      }
+    ]
+  },
+  {
+    "page_id": "9508933862",
+    "title": "PostgreSql",
+    "entities": [
+      {
+        "id": "tool_PostgreSQL",
+        "name": "PostgreSQL",
+        "type": "Tool",
+        "properties": {
+          "description": "PostgreSQL 데이터베이스 개요"
+        }
+      }
+    ],
+    "relations": []
+  },
+  {
+    "page_id": "9508933873",
+    "title": "PostgreSql 설치,백업,복원 manual",
+    "entities": [
+      {
+        "id": "proc_PostgreSQLInstallBackupRestore",
+        "name": "PostgreSQL 설치/백업/복원 매뉴얼",
+        "type": "Process",
+        "properties": {
+          "recommended_version": "postgresql-15.1-1-windows-x64 (16버전 복원 문제 있음)",
+          "port": "5432",
+          "default_password": "7111",
+          "pgadmin": "pgAdmin 설치 후 실행, 비밀번호 7111",
+          "backup": "16번 서버에서 진행"
+        }
+      }
+    ],
+    "relations": []
+  }
+]

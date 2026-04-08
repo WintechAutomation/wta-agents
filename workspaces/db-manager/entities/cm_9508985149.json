@@ -1,0 +1,16 @@
+{
+  "page_id": "9508985149",
+  "title": "Press_HMI_Data_systemdata.xml",
+  "entities": [
+    {
+      "id": "manual_PressHMISystemDataXML",
+      "name": "PRESS HMI systemdata.xml 설정",
+      "type": "Manual",
+      "properties": {
+        "elevator_config": "UseSubPlate 설정 — 서브플레이트 사용 여부. 미설정 시 충돌 가능",
+        "warning": "서브플레이트 있는데 설정 안하고 엘리베이터 층 안에 서브플레이트만 있으면 충돌 위험"
+      }
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,114 @@
+{
+  "page_id": "9508930974",
+  "title": "이슈",
+  "entities": [
+    {
+      "id": "issue_001",
+      "name": "KRWTAPRS000001-48",
+      "type": "Issue",
+      "properties": {
+        "status": "미처리",
+        "action": "개선방향 논의 필요"
+      }
+    },
+    {
+      "id": "issue_002",
+      "name": "CNZZDPVDU001-160",
+      "type": "Issue",
+      "properties": {
+        "status": "미처리",
+        "action": "사양서, 테스트진행에 필요한 샘플, 부속품 필히 확보 필요"
+      }
+    },
+    {
+      "id": "issue_003",
+      "name": "CNZZDPVDU001-158",
+      "type": "Issue",
+      "properties": {
+        "status": "미처리",
+        "context": "로딩/언로딩"
+      }
+    },
+    {
+      "id": "issue_004",
+      "name": "CNZZDPVDU001-159",
+      "type": "Issue",
+      "properties": {
+        "status": "미처리",
+        "context": "로딩/언로딩"
+      }
+    },
+    {
+      "id": "issue_005",
+      "name": "CNZZDPVDU001-155",
+      "type": "Issue",
+      "properties": {
+        "status": "미처리",
+        "action": "컨셉이슈, 시퀀스 및 센서 등 추가적용하여 보완 필요"
+      }
+    },
+    {
+      "id": "issue_006",
+      "name": "CNZZDPVDU001-168",
+      "type": "Issue",
+      "properties": {
+        "status": "미처리",
+        "context": "로딩/언로딩"
+      }
+    },
+    {
+      "id": "issue_007",
+      "name": "CNZZDPVDU001-172",
+      "type": "Issue",
+      "properties": {
+        "status": "미처리",
+        "action": "문제 가능성, 개선 필요"
+      }
+    },
+    {
+      "id": "manual_001",
+      "name": "이슈 매뉴얼",
+      "type": "Manual",
+      "properties": {
+        "title": "이슈"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "source": "manual_001",
+      "target": "issue_001",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "manual_001",
+      "target": "issue_002",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "manual_001",
+      "target": "issue_003",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "manual_001",
+      "target": "issue_004",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "manual_001",
+      "target": "issue_005",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "manual_001",
+      "target": "issue_006",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "manual_001",
+      "target": "issue_007",
+      "type": "INVOLVED_IN"
+    }
+  ]
+}

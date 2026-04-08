@@ -139,6 +139,38 @@ export default function OfficePage() {
 
   const nodes = useMemo(() => calcRadialLayout(CX, CY, RADIUS), [CX, CY])
 
+  // 노드 위치 맵 (id → {x, y})
+  const nodePos = useMemo(() => {
+    const map: Record<string, { x: number; y: number; dept: DeptGroup }> = {}
+    map['MAX'] = { x: CX, y: CY, dept: DEPT_GROUPS[0] }
+    for (const n of nodes) {
+      map[n.id] = { x: n.x, y: n.y, dept: n.dept }
+    }
+    return map
+  }, [nodes, CX, CY])
+
+  // 모든 에이전트 쌍 (메시 네트워크 기본선)
+  const allPairs = useMemo(() => {
+    const ids = Object.keys(nodePos)
+    const pairs: { a: string; b: string }[] = []
+    for (let i = 0; i < ids.length; i++) {
+      for (let j = i + 1; j < ids.length; j++) {
+        pairs.push({ a: ids[i], b: ids[j] })
+      }
+    }
+    return pairs
+  }, [nodePos])
+
+  // 활성 통신 쌍 (펄스 중인 연결)
+  const activePairSet = useMemo(() => {
+    const set = new Set<string>()
+    for (const lineKey of pulseLines) {
+      const [from, to] = lineKey.split('-')
+      set.add([from, to].sort().join('|'))
+    }
+    return set
+  }, [pulseLines])
+
   // 최근 메시지로 연결선 펄스 애니메이션
   useEffect(() => {
     if (messages.length === 0) return
@@ -172,14 +204,14 @@ export default function OfficePage() {
     : null
 
   return (
-    <div className="px-2 py-3 min-h-screen" style={{ background: '#0F172A' }}>
+    <div className="px-2 py-2 h-full flex flex-col overflow-hidden" style={{ background: '#0F172A' }}>
       {/* 헤더 */}
-      <div className="mb-1 px-1">
+      <div className="mb-1 px-1 flex-shrink-0">
         <h1 className="text-sm font-bold text-slate-100">Agent Control Center</h1>
       </div>
 
       {/* KPI 바 */}
-      <div className="flex flex-wrap gap-3 mb-3 px-1">
+      <div className="flex flex-wrap gap-3 mb-2 px-1 flex-shrink-0">
         <KpiCard label="ONLINE" value={onlineCount} color="#22c55e" />
         <KpiCard label="OFFLINE" value={offlineCount} color="#64748b" />
         <KpiCard label="TOOL CALLS" value={totalToolCalls} color="#3b82f6" />
@@ -187,10 +219,10 @@ export default function OfficePage() {
         <KpiCard label="MESSAGES" value={stats.total_messages} color="#f59e0b" />
       </div>
 
-      <div className="flex gap-3" style={{ minHeight: 'calc(100vh - 120px)' }}>
+      <div className="flex gap-3 flex-1 min-h-0">
         {/* 메인 관제 맵 */}
         <div
-          className="flex-1 rounded-xl border overflow-hidden relative"
+          className="flex-1 min-h-0 rounded-xl border overflow-hidden relative flex flex-col"
           style={{
             borderColor: 'rgba(51,65,85,0.5)',
             background: 'linear-gradient(180deg, #0F172A 0%, #1E293B 100%)',
@@ -211,8 +243,8 @@ export default function OfficePage() {
           <svg
             ref={svgRef}
             viewBox={`0 0 ${SVG_W} ${SVG_H}`}
-            className="w-full h-auto relative z-10"
-            style={{ minHeight: '500px' }}
+            className="w-full h-full relative z-10"
+            preserveAspectRatio="xMidYMid meet"
           >
             <defs>
               {/* 글로우 필터 */}
@@ -279,33 +311,34 @@ export default function OfficePage() {
                   fontWeight="600"
                   fill={dept.color}
                   opacity="0.5"
-                  fontFamily="ui-monospace, monospace"
+                  fontFamily="'맑은 고딕', 'Malgun Gothic', sans-serif"
                 >
                   {dept.label}
                 </text>
               )
             })}
 
-            {/* MAX → 에이전트 연결선 */}
-            {nodes.map((node) => {
-              const isActive =
-                pulseLines.has(`MAX-${node.id}`) ||
-                pulseLines.has(`${node.id}-MAX`) ||
-                pulseLines.has(`slack-bot-${node.id}`) ||
-                pulseLines.has(`${node.id}-slack-bot`)
-              const online = onlineSet.has(node.id)
+            {/* 네트워크 메시 연결선 (모든 쌍 기본 + 활성 글로우) */}
+            {allPairs.map(({ a, b }) => {
+              const posA = nodePos[a]
+              const posB = nodePos[b]
+              if (!posA || !posB) return null
+              const key = [a, b].sort().join('|')
+              const isActive = activePairSet.has(key)
+              const color = isActive ? (posA.dept.color || '#3b82f6') : 'rgba(71,85,105,1)'
               return (
                 <line
-                  key={`line-${node.id}`}
-                  x1={CX}
-                  y1={CY}
-                  x2={node.x}
-                  y2={node.y}
-                  stroke={isActive ? node.dept.color : online ? 'rgba(71,85,105,0.3)' : 'rgba(51,65,85,0.15)'}
-                  strokeWidth={isActive ? 2 : 1}
+                  key={`mesh-${a}-${b}`}
+                  x1={posA.x}
+                  y1={posA.y}
+                  x2={posB.x}
+                  y2={posB.y}
+                  stroke={color}
+                  strokeWidth={isActive ? 2 : 0.3}
+                  opacity={isActive ? 0.8 : 0.06}
                   filter={isActive ? 'url(#glow-line)' : undefined}
                   style={{
-                    transition: 'stroke 0.5s, stroke-width 0.3s',
+                    transition: 'stroke 0.5s, stroke-width 0.3s, opacity 0.5s',
                   }}
                 />
               )
@@ -343,7 +376,7 @@ export default function OfficePage() {
                 fontSize="10"
                 fontWeight="bold"
                 fill="#eab308"
-                fontFamily="ui-monospace, monospace"
+                fontFamily="'맑은 고딕', 'Malgun Gothic', sans-serif"
               >
                 MAX
               </text>
@@ -437,10 +470,10 @@ export default function OfficePage() {
                     y={node.y + 12}
                     textAnchor="middle"
                     dominantBaseline="middle"
-                    fontSize="7"
+                    fontSize="10"
                     fontWeight="600"
                     fill={online ? '#e2e8f0' : '#64748b'}
-                    fontFamily="ui-monospace, monospace"
+                    fontFamily="'맑은 고딕', 'Malgun Gothic', sans-serif"
                   >
                     {profile.name}
                   </text>
@@ -487,7 +520,7 @@ export default function OfficePage() {
 
         {/* 우측 고정 패널 */}
         <div
-          className="w-64 flex-shrink-0 flex flex-col gap-3 overflow-y-auto rounded-xl p-3"
+          className="w-64 flex-shrink-0 flex flex-col gap-3 overflow-y-auto min-h-0 rounded-xl p-3"
           style={{ background: 'rgba(15,23,42,0.9)', border: '1px solid rgba(51,65,85,0.5)' }}
         >
           {/* 선택된 에이전트 정보 */}
@@ -557,10 +590,10 @@ export default function OfficePage() {
 
           {/* 최근 메시지 피드 */}
           <div
-            className="rounded-xl border p-3 flex-1 min-h-0"
+            className="rounded-xl border p-3 flex-1 min-h-0 flex flex-col"
             style={{ borderColor: 'rgba(51,65,85,0.5)', background: 'rgba(30,41,59,0.6)' }}
           >
-            <div className="text-xs font-semibold text-slate-400 mb-2">
+            <div className="text-xs font-semibold text-slate-400 mb-2 flex-shrink-0">
               RECENT ACTIVITY
               {selectedAgent && (
                 <span className="ml-1 text-blue-400 font-normal">
@@ -568,7 +601,7 @@ export default function OfficePage() {
                 </span>
               )}
             </div>
-            <div className="space-y-1.5 overflow-y-auto max-h-[320px]">
+            <div className="space-y-1.5 overflow-y-auto flex-1 min-h-0">
               {recentMessages.length === 0 && (
                 <div className="text-xs text-slate-600 py-4 text-center">메시지 없음</div>
               )}

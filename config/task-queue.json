@@ -1715,6 +1715,54 @@
       "updated_at": "2026-04-08 23:08:28",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-crafter-91ebf5",
+      "agent": "crafter",
+      "task": "추가 피드백: 에이전트 오피스 페이지에서 세로 스크롤이 안 생기도록 전체 높이를 뷰포트에 맞춰줘.",
+      "message": "추가 피드백: 에이전트 오피스 페이지에서 세로 스크롤이 안 생기도록 전체 높이를 뷰포트에 맞춰줘.\n\n- 페이지 전체가 100vh 안에 들어오도록 (사이드바 높이 기준)\n- 관제 맵 + 우측 패널 + 상단 헤더/뱃지 모두 합쳐서 overflow 없이\n- 필요하면 관제 맵 SVG 높이를 calc(100vh - 헤더높이)로 조절\n- 에이전트 오피스 페이지만 적용\n\n빌드 후 보고.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 23:11:12",
+      "updated_at": "2026-04-08 23:11:12",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-dev-agent-774f77",
+      "agent": "dev-agent",
+      "task": "cs-wta.com 배포 진행해줘. 라벨 디자인 텍스트 너비/줄바꿈 기능 빌드 완료 확인됐으니 프로덕션 배포.",
+      "message": "cs-wta.com 배포 진행해줘. 라벨 디자인 텍스트 너비/줄바꿈 기능 빌드 완료 확인됐으니 프로덕션 배포.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 23:11:52",
+      "updated_at": "2026-04-08 23:11:52",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-crafter-68151c",
+      "agent": "crafter",
+      "task": "에이전트 오피스 추가 수정 3건:",
+      "message": "에이전트 오피스 추가 수정 3건:\n\n1. Recent Activity 섹션: 카드 높이를 최대한 사용하도록 flex-1로 확장. 내부 스크롤 유지.\n\n2. 연결선 구조 변경: 현재 MAX↔각 에이전트만 연결되어 있는데, 실제로 팀원끼리도 통신함. 실시간 메시지 로그 기반으로 실제 통신이 발생한 에이전트 간에 연결선을 동적으로 그려줘. MAX 중심 허브 구조가 아니라, 실제 통신 흐름 기반.\n\n3. 세로 스크롤 제거: 에이전트 오피스 전체가 100vh에 맞게 overflow:hidden\n\n빌드 후 보고.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 23:14:40",
+      "updated_at": "2026-04-08 23:14:40",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-crafter-d4552e",
+      "agent": "crafter",
+      "task": "에이전트 오피스 연결선 수정: 모든 에이전트 간에 희미한 기본 연결선을 항상 그려두고, 실제 통신이 발생하면 해당 선만 밝게 글로우되는 방식으로 변경.",
+      "message": "에이전트 오피스 연결선 수정: 모든 에이전트 간에 희미한 기본 연결선을 항상 그려두고, 실제 통신이 발생하면 해당 선만 밝게 글로우되는 방식으로 변경. \n\n- 기본: 모든 에이전트 쌍에 매우 희미한 선 (opacity 0.05~0.1 정도)\n- 활성 통신: 해당 선만 부서 색상 글로우 + opacity 높게\n\n네트워크 메시 느낌으로. 빌드 후 보고.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 23:17:32",
+      "updated_at": "2026-04-08 23:17:32",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }

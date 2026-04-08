@@ -1,0 +1,17 @@
+{
+  "page_id": "9508985130",
+  "title": "PRESS_HMI_DATA_DeviceInfo.xml",
+  "entities": [
+    {
+      "id": "manual_PressHMIDeviceInfoXML",
+      "name": "PRESS HMI DeviceInfo.xml 설정",
+      "type": "Manual",
+      "properties": {
+        "wmx_config": "EnginePath: C:\\Program Files\\SoftServo\\WMX2\\lib",
+        "param_path": "D:\\WintechAutomation\\Setup\\WMXServer\\Datas",
+        "io_type": "ETHERCAT"
+      }
+    }
+  ],
+  "relations": []
+}

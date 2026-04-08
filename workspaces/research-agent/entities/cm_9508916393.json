@@ -1,0 +1,124 @@
+{
+  "page_id": "9508916393",
+  "title": "툴 스테이션 센서 추가 작업 메뉴얼",
+  "entities": [
+    {
+      "id": "e1",
+      "name": "툴 스테이션",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e2",
+      "name": "센서",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e3",
+      "name": "볼트",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e4",
+      "name": "덕트 커버",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e5",
+      "name": "E-CON",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e6",
+      "name": "E-CON 단자대",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e7",
+      "name": "WMX",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e8",
+      "name": "툴 스테이션 센서 추가 작업",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e9",
+      "name": "툴 스테이션 센서 추가 작업 메뉴얼",
+      "type": "Manual",
+      "properties": {}
+    },
+    {
+      "id": "e10",
+      "name": "X021 번 디버링",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e11",
+      "name": "X022 번 디버링",
+      "type": "Equipment",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e7",
+      "target": "e8",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e8",
+      "target": "e9",
+      "type": "DOCUMENTS"
+    },
+    {
+      "source": "e9",
+      "target": "e8",
+      "type": "DOCUMENTS"
+    }
+  ]
+}

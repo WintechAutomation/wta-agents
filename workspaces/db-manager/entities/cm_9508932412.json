@@ -1,0 +1,19 @@
+{
+  "page_id": "9508932412",
+  "title": "レーザーマーキング機CWAVE2.exeマニュアル（日本語）",
+  "entities": [
+    {
+      "id": "proc_CWAVE2Setup_JP",
+      "name": "레이저 마킹기 CWAVE2 설정 (일본어)",
+      "type": "Process",
+      "properties": {
+        "language": "Japanese",
+        "lang_setup": "File → System Parameter → Language 선택 후 OK → 재부팅",
+        "text_setup": "아이콘 클릭 → TEXT 생성 → Font/TextSize 파라미터 설정",
+        "resize": "Object 외곽 8개 점 드래그 또는 Position/Size 지정. 재클릭 시 회전 기능",
+        "preview": "하단 Red(F1) 버튼으로 프리뷰"
+      }
+    }
+  ],
+  "relations": []
+}

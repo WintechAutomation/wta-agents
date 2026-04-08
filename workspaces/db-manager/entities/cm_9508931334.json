@@ -1,0 +1,15 @@
+{
+  "page_id": "9508931334",
+  "title": "Paint .Net",
+  "entities": [
+    {
+      "id": "tool_PaintNet",
+      "name": "Paint.NET",
+      "type": "Tool",
+      "properties": {
+        "description": "Paint.NET 이미지 편집 도구"
+      }
+    }
+  ],
+  "relations": []
+}
