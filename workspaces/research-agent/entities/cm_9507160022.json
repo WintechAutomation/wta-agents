@@ -1,0 +1,183 @@
+{
+  "page_id": "9507160022",
+  "title": "포장기 현장 셋업 절차",
+  "entities": [
+    {
+      "id": "eq_001",
+      "name": "포장기",
+      "type": "Equipment",
+      "properties": {
+        "ip_address": "192.168.5.120",
+        "location": "신공장"
+      }
+    },
+    {
+      "id": "comp_001",
+      "name": "하단 발판 패드",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_002",
+      "name": "반전 지그",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_003",
+      "name": "바코드 스캐너",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_004",
+      "name": "랜선",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "proc_001",
+      "name": "장비 레벨링",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_002",
+      "name": "장비 전원/공압 투입",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_003",
+      "name": "팔레트 공급/취출 테스트",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_004",
+      "name": "케이스 공급/취출 테스트",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_005",
+      "name": "커버 조립 테스트",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_006",
+      "name": "라벨 인쇄/라벨링 테스트",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_007",
+      "name": "마킹 테스트",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_008",
+      "name": "ERP 연동 설정 및 테스트",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "person_001",
+      "name": "업체",
+      "type": "Person",
+      "properties": {
+        "role": "설치 및 요청 담당"
+      }
+    },
+    {
+      "id": "manual_001",
+      "name": "포장기 현장 셋업 절차",
+      "type": "Manual",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "source": "manual_001",
+      "target": "eq_001",
+      "type": "DOCUMENTS"
+    },
+    {
+      "source": "eq_001",
+      "target": "proc_001",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "eq_001",
+      "target": "proc_002",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "eq_001",
+      "target": "proc_003",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "eq_001",
+      "target": "proc_004",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "eq_001",
+      "target": "proc_005",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "eq_001",
+      "target": "proc_006",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "eq_001",
+      "target": "proc_007",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "eq_001",
+      "target": "proc_008",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "eq_001",
+      "target": "comp_001",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eq_001",
+      "target": "comp_002",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eq_001",
+      "target": "comp_003",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eq_001",
+      "target": "comp_004",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "person_001",
+      "target": "proc_002",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "person_001",
+      "target": "proc_008",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "person_001",
+      "target": "eq_001",
+      "type": "MAINTAINS"
+    }
+  ]
+}

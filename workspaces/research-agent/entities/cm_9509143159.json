@@ -1,0 +1,195 @@
+{
+  "page_id": "9509143159",
+  "title": "그리퍼 중심 위치 및 동심원 설정",
+  "entities": [
+    {
+      "id": "eq_001",
+      "name": "H1X",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "eq_002",
+      "name": "H2X",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "eq_003",
+      "name": "R축",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "eq_004",
+      "name": "하부카메라",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "eq_005",
+      "name": "3Jaw 툴",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "comp_001",
+      "name": "팔레트 그리퍼",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_002",
+      "name": "트레이 그리퍼",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_003",
+      "name": "원형 제품",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_004",
+      "name": "R타입 제품",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "proc_001",
+      "name": "그리퍼 중심 위치 및 동심원 설정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_002",
+      "name": "팔레트, 트레이 그리퍼 측정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_003",
+      "name": "원점 복귀",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_004",
+      "name": "시스템 설정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_005",
+      "name": "그리퍼 촬상",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_006",
+      "name": "R Type 패턴 등록",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_007",
+      "name": "각 그리퍼 자동 측정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "issue_001",
+      "name": "동심도 틀어짐",
+      "type": "Issue",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "source": "eq_001",
+      "target": "comp_001",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eq_002",
+      "target": "comp_002",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eq_003",
+      "target": "comp_001",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eq_003",
+      "target": "comp_002",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eq_005",
+      "target": "comp_001",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eq_005",
+      "target": "comp_002",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "comp_001",
+      "target": "comp_003",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "comp_002",
+      "target": "comp_003",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "comp_001",
+      "target": "comp_004",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "comp_002",
+      "target": "comp_004",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "proc_001",
+      "target": "proc_002",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "proc_002",
+      "target": "proc_003",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "proc_002",
+      "target": "proc_004",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "proc_002",
+      "target": "proc_005",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "proc_002",
+      "target": "proc_006",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "proc_002",
+      "target": "proc_007",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "proc_007",
+      "target": "issue_001",
+      "type": "HAS_ISSUE"
+    }
+  ]
+}
