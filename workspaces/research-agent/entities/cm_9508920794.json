@@ -1,0 +1,277 @@
+{
+  "page_id": "9508920794",
+  "title": "원점 세팅 기준",
+  "entities": [
+    {
+      "id": "eq_001",
+      "name": "원점 세팅 장비",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "comp_001",
+      "name": "WMXServer.exe",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_002",
+      "name": "Motion Manager",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_003",
+      "name": "INDEX 축",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_004",
+      "name": "INDEX_ELV 축",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_005",
+      "name": "ROT_CLAMP",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_006",
+      "name": "CLAMP ZIG",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_007",
+      "name": "하부 스토퍼",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_008",
+      "name": "EV_CENTER 축",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_009",
+      "name": "GR1Z 축",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_010",
+      "name": "GR2Z 축",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_011",
+      "name": "TURN_X 축",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_012",
+      "name": "TURN_Y 축",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_013",
+      "name": "TURN 축",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_014",
+      "name": "ROT 축",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_015",
+      "name": "SPACER 축",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_016",
+      "name": "PALLET 축",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_017",
+      "name": "PAL_Z 축",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_018",
+      "name": "X 축",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_019",
+      "name": "CAMERA 축",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_020",
+      "name": "Z 축",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_021",
+      "name": "ROT_CLAMP 축",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_022",
+      "name": "R 축",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_023",
+      "name": "TURN_Z 축",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_024",
+      "name": "GRIPPER ZIG",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_025",
+      "name": "반전기 가이드",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_026",
+      "name": "스페이서 감지 실린더",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_027",
+      "name": "SPACER ZIG",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_028",
+      "name": "팔레트",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_029",
+      "name": "막대",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "proc_001",
+      "name": "원점 세팅",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_002",
+      "name": "INDEX 축 수동 Home Start",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_003",
+      "name": "INDEX_ELV 축 원점 잡기",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_004",
+      "name": "EV_CENTER 축 원점 설정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_005",
+      "name": "GR1Z/GR2Z 축 수동 Home Start",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_006",
+      "name": "TURN_X/Y 축 수동 Home Start",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_007",
+      "name": "TURN 축 수동 Home Start",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_008",
+      "name": "ROT 축 원점 설정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_009",
+      "name": "SPACER 축 원점 설정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_010",
+      "name": "PALLET 축 원점 설정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_011",
+      "name": "PAL_Z 축 원점 설정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_012",
+      "name": "X/CAMERA 축 원점 설정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_013",
+      "name": "Z 축 원점 설정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_014",
+      "name": "ROT_CLAMP 축 수동 Home Start",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "doc_001",
+      "name": "원점 세팅 기준",
+      "type": "Manual",
+      "properties": {}
+    }
+  ],
+  "relations": []
+}

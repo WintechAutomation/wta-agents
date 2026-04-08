@@ -217,20 +217,28 @@ export default function OfficePage() {
   useEffect(() => {
     if (messages.length === 0) return
     const latest = messages[messages.length - 1]
-    if (latest.id === lastMsgIdRef.current) return
+    if (latest.id <= lastMsgIdRef.current) return
     lastMsgIdRef.current = latest.id
     const from = latest.from
     const to = latest.to
-    const lineKey = `${from}|${to}`
-    setPulseLines((prev) => new Set(prev).add(lineKey))
+    // 양방향 키 모두 등록 (sort 매칭 보장)
+    const sortedKey = [from, to].sort().join('|')
+    console.log('[pulse] new message', latest.id, from, '→', to, 'key:', sortedKey)
+    console.log('[pulse] nodePos keys:', Object.keys(nodePos))
+    console.log('[pulse] allPairs sample key:', allPairs.length > 0 ? [allPairs[0].a, allPairs[0].b].sort().join('|') : 'none')
+    setPulseLines((prev) => {
+      const next = new Set(prev)
+      next.add(sortedKey)
+      return next
+    })
     setTimeout(() => {
       setPulseLines((prev) => {
         const next = new Set(prev)
-        next.delete(lineKey)
+        next.delete(sortedKey)
         return next
       })
     }, 5000)
-  }, [messages])
+  }, [messages, nodePos, allPairs])
 
   // 최근 메시지 피드 (10건, 선택 에이전트 필터링)
   const recentMessages = useMemo(() => {
@@ -384,22 +392,41 @@ export default function OfficePage() {
               if (!posA || !posB) return null
               const key = [a, b].sort().join('|')
               const isActive = activePairSet.has(key)
-              const color = isActive ? (posA.dept.color || '#3b82f6') : 'rgba(71,85,105,1)'
+              const color = isActive ? '#00ff88' : 'rgba(71,85,105,1)'
               return (
-                <line
-                  key={`mesh-${a}-${b}`}
-                  x1={posA.x}
-                  y1={posA.y}
-                  x2={posB.x}
-                  y2={posB.y}
-                  stroke={color}
-                  strokeWidth={isActive ? 2 : 0.5}
-                  opacity={isActive ? 0.9 : 0.15}
-                  filter={isActive ? 'url(#glow-line)' : undefined}
-                  style={{
-                    transition: 'stroke 0.5s, stroke-width 0.3s, opacity 0.5s',
-                  }}
-                />
+                <g key={`mesh-${a}-${b}`}>
+                  <line
+                    x1={posA.x}
+                    y1={posA.y}
+                    x2={posB.x}
+                    y2={posB.y}
+                    stroke={color}
+                    strokeWidth={isActive ? 3 : 0.5}
+                    opacity={isActive ? 1 : 0.15}
+                    filter={isActive ? 'url(#glow-line)' : undefined}
+                    style={{
+                      transition: 'stroke 0.3s, stroke-width 0.3s, opacity 0.3s',
+                    }}
+                  >
+                    {isActive && (
+                      <animate attributeName="opacity" values="1;0.4;1" dur="1s" repeatCount="indefinite" />
+                    )}
+                  </line>
+                  {isActive && (
+                    <line
+                      x1={posA.x}
+                      y1={posA.y}
+                      x2={posB.x}
+                      y2={posB.y}
+                      stroke={color}
+                      strokeWidth={6}
+                      opacity={0.3}
+                      filter="url(#glow-line)"
+                    >
+                      <animate attributeName="opacity" values="0.3;0.1;0.3" dur="1s" repeatCount="indefinite" />
+                    </line>
+                  )}
+                </g>
               )
             })}
 

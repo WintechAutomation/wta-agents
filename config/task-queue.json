@@ -1793,12 +1793,12 @@
       "agent": "admin-agent",
       "task": "Claude API 토큰 사용량 10분 주기 수집",
       "message": "Claude Code /usage 정보를 10분마다 조회하여 대시보드 API(POST /api/usage)로 전송. 전체 팀 공용 토큰 하나만 수집.",
-      "status": "in_progress",
+      "status": "done",
       "priority": "high",
       "created_at": "2026-04-08 23:32:06",
-      "updated_at": "2026-04-08 23:32:47",
+      "updated_at": "2026-04-08 23:40:06",
       "last_report_at": null,
-      "completed_at": null
+      "completed_at": "2026-04-08 23:40:06"
     },
     {
       "id": "tq-crafter-8ba437",
@@ -1821,6 +1821,30 @@
       "priority": "medium",
       "created_at": "2026-04-08 23:32:26",
       "updated_at": "2026-04-08 23:32:26",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-admin-agent-648141",
+      "agent": "admin-agent",
+      "task": "작업 수정 요청: collect-usage.py 개선",
+      "message": "작업 수정 요청: collect-usage.py 개선\n\n현재 일일 JSONL 파싱 방식 대신, 부서장이 원하는 데이터:\n1. **Current week (all models)** — 이번 주 전체 사용량. JSONL에서 이번주(월~일) 범위로 집계하면 됨.\n2. **세션 남은량 %** — Claude Code /usage에서 보여주는 잔여 퍼센트.\n\n세션 잔여율은 프로그래밍 방식으로 조회가 어려울 수 있으므로:\n- 방법1: Claude Code CLI를 subprocess로 실행해서 /usage 출력을 파싱\n- 방법2: ~/.claude/ 디렉토리에 usage 관련 캐시 파일이 있는지 확인\n- 방법3: 주간 한도를 설정값으로 두고 (현재 사용량/한도)로 계산\n\nPOST /api/usage에 보내는 데이터에 다음 필드 추가:\n- weekly_tokens: 이번 주 전체 토큰\n- weekly_cost: 이번 주 비용\n- session_remaining_pct: 남은 % (가능한 경우)\n- period: \"이번 주 날짜 범위\"\n\n확인 후 수정해서 보고해줘.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 23:45:12",
+      "updated_at": "2026-04-08 23:45:12",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-admin-agent-0d648a",
+      "agent": "admin-agent",
+      "task": "수정 방향 변경: JSONL 파싱으로 별도 계산하지 말고, Claude Code CLI의 /usage 명령어 실제 출력을 파싱해서 그대로 보여줘야 함.",
+      "message": "수정 방향 변경: JSONL 파싱으로 별도 계산하지 말고, Claude Code CLI의 /usage 명령어 실제 출력을 파싱해서 그대로 보여줘야 함.\n\n방법:\n1. `claude` CLI를 subprocess로 실행해서 /usage 출력 텍스트를 얻거나\n2. `~/.claude/` 아래에 usage 정보가 저장된 파일이 있는지 확인 (settings.json, statsig 등)\n3. Anthropic API에 usage 조회 엔드포인트가 있는지 확인\n\n부서장이 원하는 표시 항목:\n- Current week (all models) 사용량\n- 세션 남은량 %\n\n실제 조회값을 POST /api/usage로 전송. 별도 계산/추정 아님.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 23:46:16",
+      "updated_at": "2026-04-08 23:46:16",
       "last_report_at": null,
       "completed_at": null
     }
