@@ -78,6 +78,7 @@ def _load_agent_defs() -> dict:
     return {
         aid: {"name": a["name"], "emoji": a["emoji"], "role": a["role"]}
         for aid, a in raw.items()
+        if isinstance(a, dict) and "name" in a
     }
 
 AGENT_DEFS = _load_agent_defs()
@@ -1227,12 +1228,12 @@ _agents_raw = _load_agents_raw()
 
 AGENT_PORTS = {
     aid: info["port"] for aid, info in _agents_raw.items()
-    if info.get("port") and info.get("enabled", False)
+    if isinstance(info, dict) and info.get("port") and info.get("enabled", False)
 }
 # 외부 호스트 에이전트 (host 필드가 있으면 해당 IP 사용)
 AGENT_HOSTS = {
     aid: info.get("host", "localhost") for aid, info in _agents_raw.items()
-    if info.get("port") and info.get("enabled", False)
+    if isinstance(info, dict) and info.get("port") and info.get("enabled", False)
 }
 # 에이전트별 이전 온라인 상태 (변경 감지용)
 _prev_online: dict[str, bool] = {aid: False for aid in AGENT_PORTS}
