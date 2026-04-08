@@ -1,0 +1,113 @@
+{
+  "page_id": "9507155174",
+  "title": "2-1.  위험 표기 참고 사항",
+  "entities": [
+    {
+      "id": "manual_001",
+      "name": "위험 표기 참고 사항 설명서",
+      "type": "Manual",
+      "properties": {
+        "section": "2-1",
+        "title": "위험 표기 참고 사항"
+      }
+    },
+    {
+      "id": "process_001",
+      "name": "설치",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "process_002",
+      "name": "운전",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "process_003",
+      "name": "보수",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "process_004",
+      "name": "점검",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "issue_001",
+      "name": "사망",
+      "type": "Issue",
+      "properties": {
+        "severity": "위험"
+      }
+    },
+    {
+      "id": "issue_002",
+      "name": "중상",
+      "type": "Issue",
+      "properties": {
+        "severity": "위험"
+      }
+    },
+    {
+      "id": "issue_003",
+      "name": "중.경상",
+      "type": "Issue",
+      "properties": {
+        "severity": "주의"
+      }
+    },
+    {
+      "id": "issue_004",
+      "name": "물질적 손해",
+      "type": "Issue",
+      "properties": {
+        "severity": "주의"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "source": "manual_001",
+      "target": "process_001",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "manual_001",
+      "target": "process_002",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "manual_001",
+      "target": "process_003",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "manual_001",
+      "target": "process_004",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "manual_001",
+      "target": "issue_001",
+      "type": "HAS_ISSUE"
+    },
+    {
+      "source": "manual_001",
+      "target": "issue_002",
+      "type": "HAS_ISSUE"
+    },
+    {
+      "source": "manual_001",
+      "target": "issue_003",
+      "type": "HAS_ISSUE"
+    },
+    {
+      "source": "manual_001",
+      "target": "issue_004",
+      "type": "HAS_ISSUE"
+    }
+  ]
+}

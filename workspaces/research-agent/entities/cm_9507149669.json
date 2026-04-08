@@ -1,0 +1,100 @@
+{
+  "page_id": "9507149669",
+  "title": "-(한글 버전)-  2-1.  위험 표기 참고 사항",
+  "entities": [
+    {
+      "id": "manual_001",
+      "name": "위험 표기 참고 사항 매뉴얼",
+      "type": "Manual",
+      "properties": {
+        "version": "한글 버전",
+        "section": "2-1"
+      }
+    },
+    {
+      "id": "issue_001",
+      "name": "사망 또는 중상",
+      "type": "Issue",
+      "properties": {
+        "severity": "위험"
+      }
+    },
+    {
+      "id": "issue_002",
+      "name": "중.경상",
+      "type": "Issue",
+      "properties": {
+        "severity": "주의"
+      }
+    },
+    {
+      "id": "issue_003",
+      "name": "물질적인 손해",
+      "type": "Issue",
+      "properties": {
+        "severity": "주의"
+      }
+    },
+    {
+      "id": "process_001",
+      "name": "설치",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "process_002",
+      "name": "운전",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "process_003",
+      "name": "보수",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "process_004",
+      "name": "점검",
+      "type": "Process",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "source": "manual_001",
+      "target": "issue_001",
+      "type": "HAS_ISSUE"
+    },
+    {
+      "source": "manual_001",
+      "target": "issue_002",
+      "type": "HAS_ISSUE"
+    },
+    {
+      "source": "manual_001",
+      "target": "issue_003",
+      "type": "HAS_ISSUE"
+    },
+    {
+      "source": "manual_001",
+      "target": "process_001",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "manual_001",
+      "target": "process_002",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "manual_001",
+      "target": "process_003",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "manual_001",
+      "target": "process_004",
+      "type": "INVOLVED_IN"
+    }
+  ]
+}

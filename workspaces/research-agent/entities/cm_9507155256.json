@@ -1,0 +1,165 @@
+{
+  "page_id": "9507155256",
+  "title": "2-4.  비상정지 버튼",
+  "entities": [
+    {
+      "id": "eq_001",
+      "name": "설비",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "comp_001",
+      "name": "비상 정지 버튼",
+      "type": "Component",
+      "properties": {
+        "standard": "ISO 13850"
+      }
+    },
+    {
+      "id": "comp_002",
+      "name": "안전 도어",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_003",
+      "name": "작업 도어",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_004",
+      "name": "시그널 램프",
+      "type": "Component",
+      "properties": {
+        "function": "시각적 관리"
+      }
+    },
+    {
+      "id": "comp_005",
+      "name": "부저",
+      "type": "Component",
+      "properties": {
+        "function": "비상 정지 및 알람 발생"
+      }
+    },
+    {
+      "id": "proc_001",
+      "name": "비상 정지 작동",
+      "type": "Process",
+      "properties": {
+        "result": "구동 축 즉시 정지"
+      }
+    },
+    {
+      "id": "proc_002",
+      "name": "시운전 재개",
+      "type": "Process",
+      "properties": {
+        "action": "버튼 돌려 풀기"
+      }
+    },
+    {
+      "id": "proc_003",
+      "name": "안전 도어 열기",
+      "type": "Process",
+      "properties": {
+        "result": "설비 일시 정지"
+      }
+    },
+    {
+      "id": "proc_004",
+      "name": "생산 작업 연계",
+      "type": "Process",
+      "properties": {
+        "condition": "도어 닫힘 확인 및 시작 버튼 누름"
+      }
+    },
+    {
+      "id": "manual_001",
+      "name": "2-4. 비상정지 버튼 매뉴얼",
+      "type": "Manual",
+      "properties": {
+        "section": "2-4"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "source": "eq_001",
+      "target": "comp_001",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eq_001",
+      "target": "comp_002",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eq_001",
+      "target": "comp_003",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eq_001",
+      "target": "comp_004",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eq_001",
+      "target": "comp_005",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eq_001",
+      "target": "proc_001",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "eq_001",
+      "target": "proc_002",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "eq_001",
+      "target": "proc_003",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "eq_001",
+      "target": "proc_004",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "manual_001",
+      "target": "eq_001",
+      "type": "DOCUMENTS"
+    },
+    {
+      "source": "manual_001",
+      "target": "comp_001",
+      "type": "DOCUMENTS"
+    },
+    {
+      "source": "manual_001",
+      "target": "comp_002",
+      "type": "DOCUMENTS"
+    },
+    {
+      "source": "manual_001",
+      "target": "comp_003",
+      "type": "DOCUMENTS"
+    },
+    {
+      "source": "manual_001",
+      "target": "comp_004",
+      "type": "DOCUMENTS"
+    },
+    {
+      "source": "manual_001",
+      "target": "comp_005",
+      "type": "DOCUMENTS"
+    }
+  ]
+}
