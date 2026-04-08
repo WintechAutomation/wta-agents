@@ -911,6 +911,18 @@
       "updated_at": "2026-04-08 18:27:13",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-docs-agent-1deca5",
+      "agent": "docs-agent",
+      "task": "HTML 쪽에서 처리해주세요. 프로젝트명에 \"Cell\"이 포함된 품목은 프레스 장비유형 카운트에서 제외하는 로직 추가.",
+      "message": "HTML 쪽에서 처리해주세요. 프로젝트명에 \"Cell\"이 포함된 품목은 프레스 장비유형 카운트에서 제외하는 로직 추가. \n\ndb-manager 데이터 수정보다 표시 단계에서 필터링하는 게 빠르고 유연합니다. 적용 후 김근형님께 확인받아주세요.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 18:36:42",
+      "updated_at": "2026-04-08 18:36:42",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }
