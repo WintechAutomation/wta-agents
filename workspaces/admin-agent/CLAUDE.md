@@ -2,7 +2,8 @@
 
 ## 정체성
 이 세션은 admin-agent 에이전트입니다.
-역할 정의: `C:/MES/wta-agents/agents/admin-agent/agent.md` 참조
+- **이모지**: 📋
+- **역할**: 인프라 운영/모니터링 전담 — 시스템 상태점검, Git 커밋, Docker 점검, 헬스체크, 로그 관리
 
 ## 통신 (MCP 채널)
 - 메시지 수신: 자동 (channel notification — <channel source="wta-hub"> 태그로 세션에 푸시됨)
@@ -125,8 +126,47 @@ user  = client.get_user("김철수")          # 특정 직원
 | control-agent | ⚡ | 제어, 모션, HMI, 서보 |
 | research-agent | 🔎 | 기술조사, 시장분석, 리서치, 온라인검색 |
 
-## 참조
-- 에이전트 정의: `C:/MES/wta-agents/agents/admin-agent/agent.md`
+## 서버 인프라 및 방화벽
+
+### 서버 정보
+- **메인 서버**: 192.168.0.210 (wta-agents 실행 서버)
+- **설계팀 PC**: 192.168.0.220 (design-agent 외부 서버)
+- `config/agents.json` → `_hubHost`: 192.168.0.210
+
+### Windows 방화벽 인바운드 규칙 (2026-04-08 추가)
+
+| 규칙명 | 프로토콜 | 포트 | 용도 |
+|--------|---------|------|------|
+| WTA-Agents | TCP | 5600-5618 | 에이전트 포트 전체 |
+| WTA-Dashboard | TCP | 5555 | 대시보드 |
+
+### 에이전트 포트 목록
+
+| 포트 | 에이전트 | 비고 |
+|------|---------|------|
+| 5555 | dashboard | 현재 127.0.0.1 바인딩 — 외부 접근 시 0.0.0.0 변경 필요 |
+| 5600 | MAX | |
+| 5601 | db-manager | |
+| 5602 | cs-agent | |
+| 5603 | sales-agent | |
+| 5606 | dev-agent | |
+| 5607 | admin-agent | |
+| 5608 | crafter | |
+| 5609 | nc-manager | |
+| 5610 | qa-agent | |
+| 5611 | issue-manager | |
+| 5612 | slack-bot | |
+| 5613 | schedule-agent | |
+| 5614 | docs-agent | |
+| 5615 | design-agent | 외부 서버 192.168.0.220 |
+| 5616 | control-agent | |
+| 5617 | purchase-agent | |
+| 5618 | research-agent | |
+
+### 외부 에이전트 통신 주의사항
+- design-agent(192.168.0.220)는 `location: external` 설정
+- 외부 에이전트가 다른 에이전트에 메시지 보낼 때 `localhost` 대신 `_hubHost(192.168.0.210)` 사용해야 함
+- 관련 코드: `scripts/mcp-agent-channel.ts` — localhost → hubHost 변환 로직 필요 (crafter 위임 중)
 
 ## 스케줄/크론 구현 원칙
 스케줄/크론 기능은 반드시 대시보드 APScheduler(jobs.json)로만 구현.

@@ -743,6 +743,42 @@
       "updated_at": "2026-04-08 17:07:19",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-admin-agent-3a7aa6",
+      "agent": "admin-agent",
+      "task": "서버(192.168.0.210) 방화벽 인바운드 규칙이 추가되었습니다. 이 내용을 에이전트 시스템 문서에 정리해주세요.",
+      "message": "서버(192.168.0.210) 방화벽 인바운드 규칙이 추가되었습니다. 이 내용을 에이전트 시스템 문서에 정리해주세요.\n\n추가된 방화벽 규칙:\n1. WTA-Agents: TCP 5600-5618 (에이전트 포트 전체)\n2. WTA-Dashboard: TCP 5555 (대시보드)\n\n에이전트 포트 목록:\n- 5600: MAX\n- 5601: db-manager\n- 5602: cs-agent\n- 5603: sales-agent\n- 5606: dev-agent\n- 5607: admin-agent\n- 5608: crafter\n- 5609: nc-manager\n- 5610: qa-agent\n- 5611: issue-manager\n- 5612: slack-bot\n- 5613: schedule-agent\n- 5614: docs-agent\n- 5615: design-agent (192.168.0.220 외부)\n- 5616: control-agent\n- 5617: purchase-agent\n- 5618: research-agent\n- 5555: dashboard\n\n참고: dashboard(5555)는 현재 127.0.0.1만 바인딩 → 외부 접근 시 0.0.0.0 바인딩 변경 필요\n\nworkspaces/admin-agent/CLAUDE.md 또는 적절한 위치에 방화벽 규칙 섹션으로 정리해주세요.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 17:10:28",
+      "updated_at": "2026-04-08 17:10:28",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-design-agent-f95e3d",
+      "agent": "design-agent",
+      "task": "방화벽 규칙 추가 후 통신 테스트. 이 메시지 받으면 MAX에게 \"수신 확인\" 회신해주세요.",
+      "message": "방화벽 규칙 추가 후 통신 테스트. 이 메시지 받으면 MAX에게 \"수신 확인\" 회신해주세요.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 17:11:25",
+      "updated_at": "2026-04-08 17:11:25",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-db-manager-c16322",
+      "agent": "db-manager",
+      "task": "김근형님 재지적. 미배정 270건이 전부 발주이력(발주일)이 있는 품목입니다. \"재고감안이라 발주 안 나간 건\"이 아닙니다.",
+      "message": "김근형님 재지적. 미배정 270건이 전부 발주이력(발주일)이 있는 품목입니다. \"재고감안이라 발주 안 나간 건\"이 아닙니다.\n\n발주이력이 있는데 프로젝트가 \"공용자재 구매\"로만 잡힌 건들이니, 발주이력의 수주번호/프로젝트 정보를 다시 확인해주세요.\n\n금액 상위 예시:\n- SS-540A-V1 (VISION_PC) — 발주일 2025-11-14\n- 55348 (Telecentric Lens) — 발주일 2023-11-30\n- EZI-EC-ALL-42L-A-R (서보모터) — 발주일 2026-01-26\n\n이 품목들의 MCA210T(발주상세)에서 PJT_NO가 공용자재가 아닌 실제 프로젝트로 연결된 다른 발주건이 있는지 재조회 바랍니다. 가장 최근 발주 중 \"공용자재\"가 아닌 프로젝트가 있으면 그걸로 매칭해야 합니다.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 17:16:54",
+      "updated_at": "2026-04-08 17:16:54",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }
