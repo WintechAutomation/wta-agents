@@ -2075,6 +2075,42 @@
       "updated_at": "2026-04-09 00:38:09",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-db-manager-2c1604",
+      "agent": "db-manager",
+      "task": "임베딩 진행 현황 보고 요청. 현재 진행 중인 임베딩 작업 상태를 알려줘.",
+      "message": "임베딩 진행 현황 보고 요청. 현재 진행 중인 임베딩 작업 상태를 알려줘.\n\n- manual.documents / manual.wta_documents / csagent.vector_embeddings 각 테이블 현황\n- 진행 중인 임베딩 작업이 있으면 진행률\n- 최근 변경사항",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-09 01:33:37",
+      "updated_at": "2026-04-09 01:33:37",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-crafter-b1556d",
+      "agent": "crafter",
+      "task": "에이전트 컨트롤 센터(대시보드) UI 수정 요청.",
+      "message": "에이전트 컨트롤 센터(대시보드) UI 수정 요청.\n\n**요청 내용:**\n슬랙봇(slack-bot) 위치의 왼쪽 빈공간에 Slack 아이콘을 추가하고, 사용자들이 슬랙을 통해서 메시지를 보내고 받는다는 것이 시각적으로 표현되도록 개체를 추가해줘.\n\n**의도:**\n- 슬랙봇이 사용자(직원)↔AI 에이전트 사이의 슬랙 통신 게이트웨이라는 것을 시각적으로 표현\n- Slack 로고/아이콘 + 사용자 아이콘 + 화살표 등으로 메시지 흐름 표시\n- 기존 대시보드 디자인과 조화롭게\n\n대시보드 소스: `C:\\MES\\wta-agents\\dashboard\\` 확인해서 작업해줘.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-09 01:35:30",
+      "updated_at": "2026-04-09 01:35:30",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-crafter-089694",
+      "agent": "crafter",
+      "task": "에이전트 컨트롤 센터(대시보드) UI 추가 수정 요청.",
+      "message": "에이전트 컨트롤 센터(대시보드) UI 추가 수정 요청.\n\n**요청 내용:**\nDB 매니저(db-manager) 노드의 우측 하단 방향에 다음 개체를 추가:\n\n1. **MES 아이콘/노드** — db-manager 외곽 우측 하단에 배치, db-manager와 연결선\n2. **ERP 서버 아이콘/노드** — MES 노드 더 외곽에 배치, MES와 연결선\n\n**연결 흐름:**\ndb-manager ↔ MES ↔ ERP 서버\n\n**디자인:**\n- 방금 추가한 Slack/직원 개체와 동일한 스타일로 통일\n- MES: 데이터베이스 아이콘 또는 서버 아이콘 + \"MES\" 라벨\n- ERP: 서버 아이콘 + \"ERP\" 라벨\n- 연결선은 기존 스타일과 조화롭게 (점선 + 화살표)\n\nOfficePage.tsx에서 작업해줘.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-09 01:39:40",
+      "updated_at": "2026-04-09 01:39:40",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }

@@ -639,6 +639,121 @@ export default function OfficePage() {
                 </g>
               )
             })}
+
+            {/* ── Slack 게이트웨이 시각화 (slack-bot 왼쪽) ── */}
+            {(() => {
+              const sbPos = nodePos['slack-bot']
+              if (!sbPos) return null
+              // slack-bot 기준 외곽(왼쪽) 방향 계산
+              const dx = sbPos.x - CX
+              const dy = sbPos.y - CY
+              const dist = Math.sqrt(dx * dx + dy * dy) || 1
+              const dirX = dx / dist
+              const dirY = dy / dist
+              // Slack 아이콘 위치 (slack-bot에서 외곽 방향 65px)
+              const slackX = sbPos.x + dirX * 65
+              const slackY = sbPos.y + dirY * 65
+              // 사용자 그룹 위치 (Slack 아이콘에서 더 외곽 55px)
+              const usersX = slackX + dirX * 55
+              const usersY = slackY + dirY * 55
+              // 수직 방향 (사용자 아이콘 배치용)
+              const perpX = -dirY
+              const perpY = dirX
+
+              return (
+                <g opacity={0.9}>
+                  {/* slack-bot → Slack 아이콘 연결선 */}
+                  <line
+                    x1={sbPos.x + dirX * 24}
+                    y1={sbPos.y + dirY * 24}
+                    x2={slackX - dirX * 16}
+                    y2={slackY - dirY * 16}
+                    stroke="#E01E5A"
+                    strokeWidth={1.5}
+                    strokeDasharray="4 3"
+                    opacity={0.5}
+                  />
+                  {/* 양방향 화살표 마커 */}
+                  <polygon
+                    points={`${slackX - dirX * 18},${slackY - dirY * 18} ${slackX - dirX * 24 + perpX * 3},${slackY - dirY * 24 + perpY * 3} ${slackX - dirX * 24 - perpX * 3},${slackY - dirY * 24 - perpY * 3}`}
+                    fill="#E01E5A"
+                    opacity={0.6}
+                  />
+
+                  {/* Slack 아이콘 (# 마크 스타일) */}
+                  <g>
+                    <rect
+                      x={slackX - 14}
+                      y={slackY - 14}
+                      width={28}
+                      height={28}
+                      rx={6}
+                      fill="#1E293B"
+                      stroke="#E01E5A"
+                      strokeWidth={1.5}
+                    />
+                    {/* Slack 로고: 4색 바 */}
+                    <rect x={slackX - 6} y={slackY - 8} width={3} height={16} rx={1.5} fill="#E01E5A" />
+                    <rect x={slackX + 3} y={slackY - 8} width={3} height={16} rx={1.5} fill="#36C5F0" />
+                    <rect x={slackX - 8} y={slackY - 3} width={16} height={3} rx={1.5} fill="#2EB67D" />
+                    <rect x={slackX - 8} y={slackY + 3} width={16} height={3} rx={1.5} fill="#ECB22E" />
+                    <text
+                      x={slackX}
+                      y={slackY + 24}
+                      textAnchor="middle"
+                      fontSize="8"
+                      fill="#94a3b8"
+                      fontFamily="'맑은 고딕', 'Malgun Gothic', sans-serif"
+                    >
+                      Slack
+                    </text>
+                  </g>
+
+                  {/* Slack → 사용자 연결선 */}
+                  <line
+                    x1={slackX + dirX * 16}
+                    y1={slackY + dirY * 16}
+                    x2={usersX - dirX * 20}
+                    y2={usersY - dirY * 20}
+                    stroke="#36C5F0"
+                    strokeWidth={1}
+                    strokeDasharray="3 3"
+                    opacity={0.4}
+                  >
+                    <animate attributeName="strokeDashoffset" values="0;-12" dur="2s" repeatCount="indefinite" />
+                  </line>
+
+                  {/* 사용자(직원) 아이콘 그룹 */}
+                  {[-1, 0, 1].map((offset) => {
+                    const ux = usersX + perpX * offset * 18
+                    const uy = usersY + perpY * offset * 18
+                    return (
+                      <g key={`user-${offset}`} opacity={offset === 0 ? 0.8 : 0.5}>
+                        {/* 사용자 원 */}
+                        <circle cx={ux} cy={uy} r={10} fill="#1E293B" stroke="#64748b" strokeWidth={1} />
+                        {/* 사용자 아이콘 (머리) */}
+                        <circle cx={ux} cy={uy - 3} r={3} fill="#94a3b8" />
+                        {/* 사용자 아이콘 (몸통) */}
+                        <path
+                          d={`M${ux - 5},${uy + 7} Q${ux - 5},${uy + 2} ${ux},${uy + 2} Q${ux + 5},${uy + 2} ${ux + 5},${uy + 7}`}
+                          fill="#94a3b8"
+                        />
+                      </g>
+                    )
+                  })}
+                  <text
+                    x={usersX}
+                    y={usersY + 22}
+                    textAnchor="middle"
+                    fontSize="8"
+                    fill="#64748b"
+                    fontFamily="'맑은 고딕', 'Malgun Gothic', sans-serif"
+                  >
+                    직원
+                  </text>
+                </g>
+              )
+            })()}
           </svg>
         </div>
 

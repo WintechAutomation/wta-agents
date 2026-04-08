@@ -29,3 +29,11 @@
 {"ts": "2026-04-09 00:35:21", "direction": "inbound", "user": "boss", "text": "그럼 슬랙 봇에서는 슬랙통해서 파일 첨부 구현가능한지 확인해"}
 {"ts": "2026-04-09 00:35:45", "direction": "outbound", "user": "MAX", "text": "crafter에게 슬랙봇 파일 첨부 기능 현황 확인 지시했습니다. 보고 오면 전달드리겠습니다."}
 {"ts": "2026-04-09 00:36:36", "direction": "outbound", "user": "MAX", "text": "crafter 확인 결과, 슬랙봇 파일 기능은 양방향 모두 이미 구현되어 있습니다.\n\n✅ 파일 업로드 (슬랙으로 보내기)\n- files_upload_v2 구현됨, HTTP API(/send-file)로도 호출 가능\n\n✅ 파일 다운로드 (슬랙에서 저장)\n- file_shared 이벤트 시 자동 다운로드\n- slack_chatlog/{채널ID}_files/에 저장\n\n✅ 텔레그램→슬랙 파일 전달\n- 기존 함수 조합으로 즉시 가능\n\n추가 작업이 필요하시면 말씀해주세요."}
+{"ts": "2026-04-09 01:33:27", "direction": "inbound", "user": "boss", "text": "임베딩 진행현황"}
+{"ts": "2026-04-09 01:33:43", "direction": "outbound", "user": "MAX", "text": "db-manager에게 임베딩 현황 확인 지시했습니다. 보고 오면 전달드리겠습니다."}
+{"ts": "2026-04-09 01:35:01", "direction": "outbound", "user": "MAX", "text": "📊 임베딩 현황\n\nRAG 테이블 (모두 100% 완료)\n- manual.documents: 218,280건\n- manual.wta_documents: 66,647건\n- csagent.vector_embeddings: 3,318건\n- chat_ragchunk_bge: 2,653건\n\nGraphRAG 파이프라인 (진행 중)\n- 진행률: 314/383건 (82%)\n- 프로세스 2개 실행 중\n- 실패: 0건"}
+{"ts": "2026-04-09 01:35:16", "direction": "inbound", "user": "boss", "text": "에이전트 컨트롤 센터에 \n슬랙봇 위치 왼쪽 빈공간에 Slack 아이콘 넣고 사용자들이 슬랙을 통해서 메세지 보내고 받는다는 표현이 되도록 개체를 추가해봐"}
+{"ts": "2026-04-09 01:35:38", "direction": "outbound", "user": "MAX", "text": "crafter에게 대시보드 슬랙 아이콘/사용자 통신 표현 추가 지시했습니다. 완료되면 보고드리겠습니다."}
+{"ts": "2026-04-09 01:38:03", "direction": "outbound", "user": "MAX", "text": "✅ 대시보드 UI 수정 완료 (빌드 성공)\n\n추가된 요소:\n- Slack 4색 로고 아이콘 + \"Slack\" 라벨\n- 직원 아이콘 3명 (사람 실루엣)\n- slack-bot ↔ Slack: 분홍 점선 연결\n- Slack ↔ 직원: 하늘색 애니메이션 점선 (데이터 흐름)\n\n직원 → Slack → slack-bot → AI 에이전트 흐름이 시각적으로 표현됩니다. 대시보드에서 확인해보세요."}
+{"ts": "2026-04-09 01:39:28", "direction": "inbound", "user": "boss", "text": "DB 매니저 우측 하단에는 MES  , MES 는 ERP 서버가 연결되도록 표현해줘 ."}
+{"ts": "2026-04-09 01:39:46", "direction": "outbound", "user": "MAX", "text": "crafter에게 지시했습니다. db-manager 우측 하단에 MES ↔ ERP 서버 연결 개체 추가 중입니다."}
