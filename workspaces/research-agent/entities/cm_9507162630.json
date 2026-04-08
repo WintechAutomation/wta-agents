@@ -1,0 +1,130 @@
+{
+  "page_id": "9507162630",
+  "title": "　케이스 관리 - 원점설정",
+  "entities": [
+    {
+      "id": "e1",
+      "name": "케이스 관리",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e2",
+      "name": "원점설정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e3",
+      "name": "케이스 공급",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e4",
+      "name": "케이스 선택",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e5",
+      "name": "케이스 원점 설정 실행",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e6",
+      "name": "자동운전 실행",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e7",
+      "name": "중앙위치 설정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e8",
+      "name": "케이스 시작 Point 설정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e9",
+      "name": "케이스 종료 Point 설정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e10",
+      "name": "Feeder1",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e11",
+      "name": "Feeder2",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e12",
+      "name": "카메라",
+      "type": "Equipment",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e2",
+      "target": "e3",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e2",
+      "target": "e4",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e2",
+      "target": "e5",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e5",
+      "target": "e6",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e5",
+      "target": "e7",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e5",
+      "target": "e8",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e5",
+      "target": "e9",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e12",
+      "target": "e8",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e12",
+      "target": "e9",
+      "type": "USES_COMPONENT"
+    }
+  ]
+}

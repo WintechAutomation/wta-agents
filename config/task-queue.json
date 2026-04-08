@@ -2111,6 +2111,90 @@
       "updated_at": "2026-04-09 01:39:40",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-crafter-6eceff",
+      "agent": "crafter",
+      "task": "에이전트 컨트롤 센터(대시보드) UI 추가 수정 요청 (이전 MES/ERP 작업과 함께).",
+      "message": "에이전트 컨트롤 센터(대시보드) UI 추가 수정 요청 (이전 MES/ERP 작업과 함께).\n\n**요청 내용:**\nCS담당(cs-agent) 노드의 우측 공간에 **cs-wta.com** 웹사이트 개체 추가.\n\n- 웹사이트/글로브 아이콘 + \"cs-wta.com\" 라벨\n- cs-agent와 연결선 (점선 + 화살표)\n- 기존 Slack/직원, MES/ERP와 동일한 디자인 스타일\n\nOfficePage.tsx에서 작업해줘.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-09 01:40:39",
+      "updated_at": "2026-04-09 01:40:39",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-crafter-e696e9",
+      "agent": "crafter",
+      "task": "에이전트 컨트롤 센터 UI 수정 요청.",
+      "message": "에이전트 컨트롤 센터 UI 수정 요청.\n\n1. MES 라벨을 \"MES\" → \"mes-wta.com\"으로 변경\n2. cs-wta.com, mes-wta.com 텍스트 크기를 적당히 키워줘 (현재 안 보인다고 함). 눈에 잘 보이도록.\n\nOfficePage.tsx에서 작업해줘.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-09 01:42:55",
+      "updated_at": "2026-04-09 01:42:55",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-crafter-fdf454",
+      "agent": "crafter",
+      "task": "에이전트 컨트롤 센터 UI 추가 요청.",
+      "message": "에이전트 컨트롤 센터 UI 추가 요청.\n\nresearch-agent 노드의 왼쪽 공간에 **온라인/인터넷 공간**을 표현하는 개체 추가.\n\n- 글로브/인터넷 아이콘 + \"Online\" 또는 \"Web\" 라벨\n- research-agent와 연결선 (점선 + 화살표)\n- 기존 Slack/MES/cs-wta.com 개체와 동일한 디자인 스타일\n- research-agent가 온라인에서 정보를 검색/수집한다는 의미 표현\n\nOfficePage.tsx에서 작업해줘.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-09 01:44:23",
+      "updated_at": "2026-04-09 01:44:23",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-crafter-49dddc",
+      "agent": "crafter",
+      "task": "에이전트 컨트롤 센터 UI 추가 요청 (이전 research-agent 작업과 함께).",
+      "message": "에이전트 컨트롤 센터 UI 추가 요청 (이전 research-agent 작업과 함께).\n\ndocs-agent 노드의 왼쪽 공간에 **NAS** 저장소를 표현하는 개체 추가.\n\n- 스토리지/NAS 아이콘 + \"NAS\" 라벨\n- docs-agent와 연결선 (점선 + 화살표)\n- 기존 개체들과 동일한 디자인 스타일\n\nOfficePage.tsx에서 작업해줘.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-09 01:44:36",
+      "updated_at": "2026-04-09 01:44:36",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-crafter-10297d",
+      "agent": "crafter",
+      "task": "에이전트 컨트롤 센터 UI 추가 요청.",
+      "message": "에이전트 컨트롤 센터 UI 추가 요청.\n\nadmin-agent(관리팀) 노드의 외곽 방향에 **그룹웨어 (다우오피스)** 개체 추가.\n\n- 메일/그룹웨어 아이콘 + \"다우오피스\" 라벨\n- admin-agent와 연결선 (점선 + 화살표)\n- 기존 개체들과 동일한 디자인 스타일\n\nOfficePage.tsx에서 작업해줘.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-09 01:46:32",
+      "updated_at": "2026-04-09 01:46:32",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-admin-agent-f92b3d",
+      "agent": "admin-agent",
+      "task": "전체 팀원 상태점검 실시해줘. 각 에이전트 MCP 포트 ping으로 온라인/오프라인 확인하고 결과 보고해줘.",
+      "message": "전체 팀원 상태점검 실시해줘. 각 에이전트 MCP 포트 ping으로 온라인/오프라인 확인하고 결과 보고해줘.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-09 01:47:42",
+      "updated_at": "2026-04-09 01:47:42",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-admin-agent-63329e",
+      "agent": "admin-agent",
+      "task": "각 팀원에게 send_message로 직접 상태확인 메시지를 보내서 응답이 오는지 확인해줘. 포트 ping이 아니라 실제 메시지 통신 테스트.",
+      "message": "각 팀원에게 send_message로 직접 상태확인 메시지를 보내서 응답이 오는지 확인해줘. 포트 ping이 아니라 실제 메시지 통신 테스트.\n\n전체 팀원 목록: db-manager, cs-agent, sales-agent, dev-agent, crafter, nc-manager, qa-agent, issue-manager, slack-bot, schedule-agent, docs-agent, design-agent, control-agent, purchase-agent, research-agent\n\n각 팀원에게 \"상태점검 — 현재 상태 보고해주세요\"라고 메시지 보내고 응답 결과 취합해서 보고해줘.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-09 01:48:39",
+      "updated_at": "2026-04-09 01:48:39",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }

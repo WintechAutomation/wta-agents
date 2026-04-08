@@ -754,6 +754,390 @@ export default function OfficePage() {
                 </g>
               )
             })()}
+
+            {/* ── MES/ERP 시각화 (db-manager 외곽) ── */}
+            {(() => {
+              const dbPos = nodePos['db-manager']
+              if (!dbPos) return null
+              const dx = dbPos.x - CX
+              const dy = dbPos.y - CY
+              const dist = Math.sqrt(dx * dx + dy * dy) || 1
+              const dirX = dx / dist
+              const dirY = dy / dist
+              // MES 위치 (db-manager에서 외곽 방향 65px)
+              const mesX = dbPos.x + dirX * 65
+              const mesY = dbPos.y + dirY * 65
+              // ERP 위치 (MES에서 더 외곽 55px)
+              const erpX = mesX + dirX * 55
+              const erpY = mesY + dirY * 55
+              // 수직 방향
+              const perpX = -dirY
+              const perpY = dirX
+
+              return (
+                <g opacity={0.9}>
+                  {/* db-manager → MES 연결선 */}
+                  <line
+                    x1={dbPos.x + dirX * 24}
+                    y1={dbPos.y + dirY * 24}
+                    x2={mesX - dirX * 16}
+                    y2={mesY - dirY * 16}
+                    stroke="#3b82f6"
+                    strokeWidth={1.5}
+                    strokeDasharray="4 3"
+                    opacity={0.5}
+                  />
+                  <polygon
+                    points={`${mesX - dirX * 18},${mesY - dirY * 18} ${mesX - dirX * 24 + perpX * 3},${mesY - dirY * 24 + perpY * 3} ${mesX - dirX * 24 - perpX * 3},${mesY - dirY * 24 - perpY * 3}`}
+                    fill="#3b82f6"
+                    opacity={0.6}
+                  />
+
+                  {/* MES 아이콘 (DB 실린더) */}
+                  <g>
+                    <rect
+                      x={mesX - 14}
+                      y={mesY - 14}
+                      width={28}
+                      height={28}
+                      rx={6}
+                      fill="#1E293B"
+                      stroke="#3b82f6"
+                      strokeWidth={1.5}
+                    />
+                    {/* DB 실린더 아이콘 */}
+                    <ellipse cx={mesX} cy={mesY - 5} rx={7} ry={3} fill="none" stroke="#60a5fa" strokeWidth={1.2} />
+                    <line x1={mesX - 7} y1={mesY - 5} x2={mesX - 7} y2={mesY + 5} stroke="#60a5fa" strokeWidth={1.2} />
+                    <line x1={mesX + 7} y1={mesY - 5} x2={mesX + 7} y2={mesY + 5} stroke="#60a5fa" strokeWidth={1.2} />
+                    <ellipse cx={mesX} cy={mesY + 5} rx={7} ry={3} fill="none" stroke="#60a5fa" strokeWidth={1.2} />
+                    <text
+                      x={mesX}
+                      y={mesY + 24}
+                      textAnchor="middle"
+                      fontSize="10"
+                      fontWeight="bold"
+                      fill="#60a5fa"
+                      fontFamily="monospace"
+                    >
+                      mes-wta.com
+                    </text>
+                  </g>
+
+                  {/* MES → ERP 연결선 */}
+                  <line
+                    x1={mesX + dirX * 16}
+                    y1={mesY + dirY * 16}
+                    x2={erpX - dirX * 16}
+                    y2={erpY - dirY * 16}
+                    stroke="#f59e0b"
+                    strokeWidth={1}
+                    strokeDasharray="3 3"
+                    opacity={0.4}
+                  >
+                    <animate attributeName="strokeDashoffset" values="0;-12" dur="2s" repeatCount="indefinite" />
+                  </line>
+
+                  {/* ERP 아이콘 (서버) */}
+                  <g opacity={0.7}>
+                    <rect
+                      x={erpX - 14}
+                      y={erpY - 14}
+                      width={28}
+                      height={28}
+                      rx={6}
+                      fill="#1E293B"
+                      stroke="#f59e0b"
+                      strokeWidth={1.5}
+                    />
+                    {/* 서버 랙 아이콘 */}
+                    <rect x={erpX - 7} y={erpY - 8} width={14} height={5} rx={1} fill="none" stroke="#fbbf24" strokeWidth={1} />
+                    <rect x={erpX - 7} y={erpY - 1} width={14} height={5} rx={1} fill="none" stroke="#fbbf24" strokeWidth={1} />
+                    <rect x={erpX - 7} y={erpY + 6} width={14} height={5} rx={1} fill="none" stroke="#fbbf24" strokeWidth={1} />
+                    {/* LED 점 */}
+                    <circle cx={erpX + 4} cy={erpY - 5.5} r={1} fill="#22c55e" />
+                    <circle cx={erpX + 4} cy={erpY + 1.5} r={1} fill="#22c55e" />
+                    <circle cx={erpX + 4} cy={erpY + 8.5} r={1} fill="#f59e0b" />
+                    <text
+                      x={erpX}
+                      y={erpY + 24}
+                      textAnchor="middle"
+                      fontSize="8"
+                      fontWeight="bold"
+                      fill="#fbbf24"
+                      fontFamily="'맑은 고딕', 'Malgun Gothic', sans-serif"
+                    >
+                      ERP
+                    </text>
+                  </g>
+                </g>
+              )
+            })()}
+
+            {/* ── cs-wta.com 웹사이트 시각화 (cs-agent 외곽) ── */}
+            {(() => {
+              const csPos = nodePos['cs-agent']
+              if (!csPos) return null
+              const dx = csPos.x - CX
+              const dy = csPos.y - CY
+              const dist = Math.sqrt(dx * dx + dy * dy) || 1
+              const dirX = dx / dist
+              const dirY = dy / dist
+              // 웹사이트 아이콘 위치
+              const webX = csPos.x + dirX * 65
+              const webY = csPos.y + dirY * 65
+              const perpX = -dirY
+              const perpY = dirX
+
+              return (
+                <g opacity={0.9}>
+                  {/* cs-agent → 웹사이트 연결선 */}
+                  <line
+                    x1={csPos.x + dirX * 24}
+                    y1={csPos.y + dirY * 24}
+                    x2={webX - dirX * 16}
+                    y2={webY - dirY * 16}
+                    stroke="#f97316"
+                    strokeWidth={1.5}
+                    strokeDasharray="4 3"
+                    opacity={0.5}
+                  />
+                  <polygon
+                    points={`${webX - dirX * 18},${webY - dirY * 18} ${webX - dirX * 24 + perpX * 3},${webY - dirY * 24 + perpY * 3} ${webX - dirX * 24 - perpX * 3},${webY - dirY * 24 - perpY * 3}`}
+                    fill="#f97316"
+                    opacity={0.6}
+                  />
+
+                  {/* 글로브(웹) 아이콘 */}
+                  <g>
+                    <rect
+                      x={webX - 14}
+                      y={webY - 14}
+                      width={28}
+                      height={28}
+                      rx={6}
+                      fill="#1E293B"
+                      stroke="#f97316"
+                      strokeWidth={1.5}
+                    />
+                    {/* 지구본 아이콘 */}
+                    <circle cx={webX} cy={webY} r={8} fill="none" stroke="#fb923c" strokeWidth={1.2} />
+                    <ellipse cx={webX} cy={webY} rx={4} ry={8} fill="none" stroke="#fb923c" strokeWidth={0.8} />
+                    <line x1={webX - 8} y1={webY} x2={webX + 8} y2={webY} stroke="#fb923c" strokeWidth={0.8} />
+                    <line x1={webX - 7} y1={webY - 4} x2={webX + 7} y2={webY - 4} stroke="#fb923c" strokeWidth={0.6} />
+                    <line x1={webX - 7} y1={webY + 4} x2={webX + 7} y2={webY + 4} stroke="#fb923c" strokeWidth={0.6} />
+                    <text
+                      x={webX}
+                      y={webY + 24}
+                      textAnchor="middle"
+                      fontSize="10"
+                      fontWeight="bold"
+                      fill="#fb923c"
+                      fontFamily="monospace"
+                    >
+                      cs-wta.com
+                    </text>
+                  </g>
+                </g>
+              )
+            })()}
+
+            {/* ── Online/Web 시각화 (research-agent 외곽) ── */}
+            {(() => {
+              const raPos = nodePos['research-agent']
+              if (!raPos) return null
+              const dx = raPos.x - CX
+              const dy = raPos.y - CY
+              const dist = Math.sqrt(dx * dx + dy * dy) || 1
+              const dirX = dx / dist
+              const dirY = dy / dist
+              const netX = raPos.x + dirX * 65
+              const netY = raPos.y + dirY * 65
+              const perpX = -dirY
+              const perpY = dirX
+
+              return (
+                <g opacity={0.9}>
+                  <line
+                    x1={raPos.x + dirX * 24}
+                    y1={raPos.y + dirY * 24}
+                    x2={netX - dirX * 16}
+                    y2={netY - dirY * 16}
+                    stroke="#06b6d4"
+                    strokeWidth={1.5}
+                    strokeDasharray="4 3"
+                    opacity={0.5}
+                  />
+                  <polygon
+                    points={`${netX - dirX * 18},${netY - dirY * 18} ${netX - dirX * 24 + perpX * 3},${netY - dirY * 24 + perpY * 3} ${netX - dirX * 24 - perpX * 3},${netY - dirY * 24 - perpY * 3}`}
+                    fill="#06b6d4"
+                    opacity={0.6}
+                  />
+                  <g>
+                    <rect
+                      x={netX - 14}
+                      y={netY - 14}
+                      width={28}
+                      height={28}
+                      rx={6}
+                      fill="#1E293B"
+                      stroke="#06b6d4"
+                      strokeWidth={1.5}
+                    />
+                    {/* 지구본 + 검색 아이콘 */}
+                    <circle cx={netX - 2} cy={netY - 1} r={7} fill="none" stroke="#22d3ee" strokeWidth={1.2} />
+                    <ellipse cx={netX - 2} cy={netY - 1} rx={3.5} ry={7} fill="none" stroke="#22d3ee" strokeWidth={0.7} />
+                    <line x1={netX - 9} y1={netY - 1} x2={netX + 5} y2={netY - 1} stroke="#22d3ee" strokeWidth={0.7} />
+                    {/* 돋보기 */}
+                    <circle cx={netX + 4} cy={netY + 3} r={3} fill="none" stroke="#67e8f9" strokeWidth={1} />
+                    <line x1={netX + 6.2} y1={netY + 5.2} x2={netX + 9} y2={netY + 8} stroke="#67e8f9" strokeWidth={1.2} />
+                    <text
+                      x={netX}
+                      y={netY + 24}
+                      textAnchor="middle"
+                      fontSize="10"
+                      fontWeight="bold"
+                      fill="#22d3ee"
+                      fontFamily="monospace"
+                    >
+                      Online
+                    </text>
+                  </g>
+                </g>
+              )
+            })()}
+
+            {/* ── NAS 저장소 시각화 (docs-agent 외곽) ── */}
+            {(() => {
+              const daPos = nodePos['docs-agent']
+              if (!daPos) return null
+              const dx = daPos.x - CX
+              const dy = daPos.y - CY
+              const dist = Math.sqrt(dx * dx + dy * dy) || 1
+              const dirX = dx / dist
+              const dirY = dy / dist
+              const nasX = daPos.x + dirX * 65
+              const nasY = daPos.y + dirY * 65
+              const perpX = -dirY
+              const perpY = dirX
+
+              return (
+                <g opacity={0.9}>
+                  <line
+                    x1={daPos.x + dirX * 24}
+                    y1={daPos.y + dirY * 24}
+                    x2={nasX - dirX * 16}
+                    y2={nasY - dirY * 16}
+                    stroke="#a855f7"
+                    strokeWidth={1.5}
+                    strokeDasharray="4 3"
+                    opacity={0.5}
+                  />
+                  <polygon
+                    points={`${nasX - dirX * 18},${nasY - dirY * 18} ${nasX - dirX * 24 + perpX * 3},${nasY - dirY * 24 + perpY * 3} ${nasX - dirX * 24 - perpX * 3},${nasY - dirY * 24 - perpY * 3}`}
+                    fill="#a855f7"
+                    opacity={0.6}
+                  />
+                  <g>
+                    <rect
+                      x={nasX - 14}
+                      y={nasY - 14}
+                      width={28}
+                      height={28}
+                      rx={6}
+                      fill="#1E293B"
+                      stroke="#a855f7"
+                      strokeWidth={1.5}
+                    />
+                    {/* NAS 스토리지 아이콘 (HDD 슬롯 2개) */}
+                    <rect x={nasX - 8} y={nasY - 8} width={16} height={7} rx={1.5} fill="none" stroke="#c084fc" strokeWidth={1} />
+                    <rect x={nasX - 8} y={nasY + 1} width={16} height={7} rx={1.5} fill="none" stroke="#c084fc" strokeWidth={1} />
+                    {/* 슬롯 라인 */}
+                    <line x1={nasX - 5} y1={nasY - 4.5} x2={nasX + 3} y2={nasY - 4.5} stroke="#c084fc" strokeWidth={0.6} />
+                    <line x1={nasX - 5} y1={nasY + 4.5} x2={nasX + 3} y2={nasY + 4.5} stroke="#c084fc" strokeWidth={0.6} />
+                    {/* LED */}
+                    <circle cx={nasX + 5} cy={nasY - 4.5} r={1} fill="#22c55e" />
+                    <circle cx={nasX + 5} cy={nasY + 4.5} r={1} fill="#22c55e" />
+                    <text
+                      x={nasX}
+                      y={nasY + 24}
+                      textAnchor="middle"
+                      fontSize="10"
+                      fontWeight="bold"
+                      fill="#c084fc"
+                      fontFamily="monospace"
+                    >
+                      NAS
+                    </text>
+                  </g>
+                </g>
+              )
+            })()}
+
+            {/* ── 다우오피스 시각화 (admin-agent 외곽) ── */}
+            {(() => {
+              const aaPos = nodePos['admin-agent']
+              if (!aaPos) return null
+              const dx = aaPos.x - CX
+              const dy = aaPos.y - CY
+              const dist = Math.sqrt(dx * dx + dy * dy) || 1
+              const dirX = dx / dist
+              const dirY = dy / dist
+              const gwX = aaPos.x + dirX * 65
+              const gwY = aaPos.y + dirY * 65
+              const perpX = -dirY
+              const perpY = dirX
+
+              return (
+                <g opacity={0.9}>
+                  <line
+                    x1={aaPos.x + dirX * 24}
+                    y1={aaPos.y + dirY * 24}
+                    x2={gwX - dirX * 16}
+                    y2={gwY - dirY * 16}
+                    stroke="#a855f7"
+                    strokeWidth={1.5}
+                    strokeDasharray="4 3"
+                    opacity={0.5}
+                  />
+                  <polygon
+                    points={`${gwX - dirX * 18},${gwY - dirY * 18} ${gwX - dirX * 24 + perpX * 3},${gwY - dirY * 24 + perpY * 3} ${gwX - dirX * 24 - perpX * 3},${gwY - dirY * 24 - perpY * 3}`}
+                    fill="#a855f7"
+                    opacity={0.6}
+                  />
+                  <g>
+                    <rect
+                      x={gwX - 14}
+                      y={gwY - 14}
+                      width={28}
+                      height={28}
+                      rx={6}
+                      fill="#1E293B"
+                      stroke="#a855f7"
+                      strokeWidth={1.5}
+                    />
+                    {/* 메일 봉투 아이콘 */}
+                    <rect x={gwX - 8} y={gwY - 5} width={16} height={11} rx={1.5} fill="none" stroke="#c084fc" strokeWidth={1.2} />
+                    <polyline
+                      points={`${gwX - 8},${gwY - 5} ${gwX},${gwY + 2} ${gwX + 8},${gwY - 5}`}
+                      fill="none"
+                      stroke="#c084fc"
+                      strokeWidth={1}
+                    />
+                    <text
+                      x={gwX}
+                      y={gwY + 24}
+                      textAnchor="middle"
+                      fontSize="9"
+                      fontWeight="bold"
+                      fill="#c084fc"
+                      fontFamily="'맑은 고딕', 'Malgun Gothic', sans-serif"
+                    >
+                      다우오피스
+                    </text>
+                  </g>
+                </g>
+              )
+            })()}
           </svg>
         </div>
 
