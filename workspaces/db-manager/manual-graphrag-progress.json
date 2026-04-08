@@ -19,17 +19,24 @@
     "4_servo/180202_Ezi-SERVOII EtherCAT 4X_KOR.pdf",
     "4_servo/A5_긾___DXF긲_귽깑뫮뤖__rev3.pdf",
     "5_inverter/iMASTER U1 간단 매뉴얼_ADT-U1-01-K201902[04].pdf",
-    "6_plc/ZS-L_2010.pdf"
+    "6_plc/ZS-L_2010.pdf",
+    "6_plc/AJ65BT-D62 User's Manual.pdf",
+    "7_pneumatic/Back-UPS Pro_BR550GI_APC.pdf",
+    "8_etc/DTP3_SUI_ManualV1.1(KOR)_170509_no_app.pdf",
+    "8_etc/LPCIe-8124-C_Datasheet_en_1.pdf",
+    "8_etc/PTU2_e.pdf"
   ],
   "failed": [
     "4_servo/편면Panasonic Servo 20160127 (일산 이구스 다이덴).pdf",
     "4_servo/ELM1M-1500MA130F-H.pdf",
-    "6_plc/modbus_y_uss1_76.pdf"
+    "6_plc/modbus_y_uss1_76.pdf",
+    "7_pneumatic/Safect 종합 카다로그 K-ver.04.pdf",
+    "8_etc/Eurotherm_3500_Data Sheet_HA029045_10.pdf"
   ],
   "stats": {
     "done": 20,
-    "total_nodes": 180,
-    "total_rels": 170,
-    "avg_sec": 101.91271218061448
+    "total_nodes": 140,
+    "total_rels": 168,
+    "avg_sec": 104.75065454244614
   }
 }
