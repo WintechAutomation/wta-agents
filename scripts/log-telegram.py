@@ -16,6 +16,11 @@ import urllib.request
 import urllib.error
 from datetime import datetime, timezone, timedelta
 
+# Windows cp949 인코딩 에러 방지
+os.environ.setdefault("PYTHONIOENCODING", "utf-8")
+if hasattr(sys.stdin, "reconfigure"):
+    sys.stdin.reconfigure(encoding="utf-8", errors="replace")
+
 DASHBOARD_URL = os.environ.get("DASHBOARD_URL", "http://localhost:5555")
 HUB_URL = "http://localhost:5600"
 TELEGRAM_JSONL = os.path.join(
@@ -70,16 +75,16 @@ def log_to_dashboard_direct(direction: str, from_label: str, content: str) -> No
 
 
 def main():
-    tool_input_raw = os.environ.get("CLAUDE_TOOL_INPUT", "")
-    if not tool_input_raw:
-        sys.exit(0)
-
+    # PostToolUse 훅: stdin으로 JSON 수신 {"tool_name": ..., "tool_input": {...}, ...}
     try:
-        tool_input = json.loads(tool_input_raw)
-    except json.JSONDecodeError:
+        raw = sys.stdin.read()
+        if not raw.strip():
+            sys.exit(0)
+        data = json.loads(raw)
+    except Exception:
         sys.exit(0)
 
-    # reply 도구: text = MAX가 보낸 메시지
+    tool_input = data.get("tool_input", {})
     text = tool_input.get("text", "")
     if not text:
         sys.exit(0)

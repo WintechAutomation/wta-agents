@@ -1,0 +1,80 @@
+{
+  "page_id": "9507162141",
+  "title": "　운영 이력 - 저장",
+  "entities": [
+    {
+      "id": "proc_01",
+      "name": "운영 이력 - 저장",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "sub_01",
+      "name": "운영 이력 선택",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "sub_02",
+      "name": "기간 설정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "sub_03",
+      "name": "검색 타입 선택",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "sub_04",
+      "name": "검색 실행",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "sub_05",
+      "name": "저장",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "sub_06",
+      "name": "저장 결과 확인",
+      "type": "Process",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "source": "proc_01",
+      "target": "sub_01",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "proc_01",
+      "target": "sub_02",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "proc_01",
+      "target": "sub_03",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "proc_01",
+      "target": "sub_04",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "proc_01",
+      "target": "sub_05",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "proc_01",
+      "target": "sub_06",
+      "type": "HAS_SUBPROCESS"
+    }
+  ]
+}

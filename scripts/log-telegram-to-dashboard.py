@@ -9,6 +9,11 @@ import os
 import sys
 from datetime import datetime, timezone, timedelta
 
+# Windows cp949 인코딩 에러 방지
+os.environ.setdefault("PYTHONIOENCODING", "utf-8")
+if hasattr(sys.stdin, "reconfigure"):
+    sys.stdin.reconfigure(encoding="utf-8", errors="replace")
+
 import requests
 
 DASHBOARD_URL = "http://localhost:5555/api/send"
@@ -21,16 +26,16 @@ KST = timezone(timedelta(hours=9))
 
 def main():
     try:
-        payload = json.load(sys.stdin)
+        raw = sys.stdin.read()
+        payload = json.loads(raw)
     except Exception:
         return
 
-    # Notification hook payload: {"content": "...", "source": "..."}
-    content = payload.get("content", "")
-    source = payload.get("source", "")
+    # UserPromptSubmit: {"prompt": "..."} / Notification: {"content": "..."}
+    content = payload.get("prompt", "") or payload.get("content", "")
 
     # 텔레그램 메시지만 필터링
-    if "plugin:telegram:telegram" not in content and "plugin:telegram" not in source:
+    if "plugin:telegram:telegram" not in content:
         return
 
     # <channel source="plugin:telegram:telegram" ...> 태그에서 메시지 추출
