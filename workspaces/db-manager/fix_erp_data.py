@@ -31,22 +31,38 @@ print(f'erp_data.json: {len(erp_data["data"]):,}건')
 
 # ── 우선순위 기반 날짜/프로젝트명 결정 ────────────────────────────
 def pick_pjt(it):
-    """실발주 우선 → 비공용자재실발주 → 재고감안 → 계획 폴백
-    실발주(MCA210T) 데이터를 가장 신뢰. 재고감안은 공용자재 보조용.
+    """실발주 우선 → 비공용자재실발주 vs 계획(최신기준) → 재고감안 → 계획 폴백
+    - 1순위: frDate 이후 실발주
+    - 2순위: 비공용자재 실발주 vs 구매계획 중 날짜가 더 최신인 것
+    - 3순위: 재고감안 (MAD111T)
+    - 4순위: 구매계획 폴백
+    이유: plan_dt가 real_po_dt보다 최신이면 현재 재고의 용도가 계획 기준이 맞음
     """
     # 1순위: 실발주 (frDate 이후, 최신 기준)
     if it.get('has_po') and it.get('last_po_dt'):
         return it['last_po_dt'], it.get('last_pjt_name') or it.get('last_pjt_no')
-    # 2순위: 비공용자재 실발주 (frDate 제한 없이 전체 이력)
-    if it.get('real_po_dt') and it.get('real_pjt_name'):
-        return it['real_po_dt'], it['real_pjt_name']
+
+    # 2순위: 비공용자재 실발주 vs 구매계획 — 날짜 최신 기준
+    real_dt   = it.get('real_po_dt') or ''
+    real_pjt  = it.get('real_pjt_name') if it.get('real_po_dt') else None
+    plan_dt   = it.get('last_plan_dt') or ''
+    plan_pjt  = it.get('plan_pjt_name') if it.get('has_plan') else None
+
+    if real_pjt and plan_pjt:
+        # 둘 다 있으면 날짜 최신 우선
+        if plan_dt >= real_dt:
+            return plan_dt, plan_pjt
+        else:
+            return real_dt, real_pjt
+    elif real_pjt:
+        return real_dt, real_pjt
+    elif plan_pjt:
+        return plan_dt, plan_pjt
+
     # 3순위: 재고감안 (MAD111T — 공용자재 보조)
     if it.get('has_issue') and it.get('issue_pjt_name'):
-        dt = it.get('last_plan_dt') or ''
-        return dt, it['issue_pjt_name']
-    # 4순위: 구매계획
-    if it.get('has_plan') and it.get('plan_pjt_name'):
-        return it.get('last_plan_dt') or '', it['plan_pjt_name']
+        return plan_dt, it['issue_pjt_name']
+
     return '', None
 
 changed = 0
