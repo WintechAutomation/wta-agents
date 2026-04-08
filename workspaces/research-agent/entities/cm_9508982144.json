@@ -1,0 +1,124 @@
+{
+  "page_id": "9508982144",
+  "title": "샘플링 테스트",
+  "entities": [
+    {
+      "id": "eq_001",
+      "name": "Sampling Conveyor",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "eq_002",
+      "name": "Speed Control Unit",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "comp_001",
+      "name": "SystemData.xml",
+      "type": "Component",
+      "properties": {
+        "location": "HMI 폴더 - Data"
+      }
+    },
+    {
+      "id": "proc_001",
+      "name": "샘플링 테스트",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_002",
+      "name": "시간 측정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_003",
+      "name": "제품 샘플링 확인",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_004",
+      "name": "제품 버림 확인",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "comp_002",
+      "name": "ErrBoxConveyorTime",
+      "type": "Component",
+      "properties": {
+        "description": "버림판 시간 조절"
+      }
+    },
+    {
+      "id": "comp_003",
+      "name": "SamplingConveyorTime",
+      "type": "Component",
+      "properties": {
+        "description": "샘플링 시간 조절"
+      }
+    },
+    {
+      "id": "comp_004",
+      "name": "StopWatch",
+      "type": "Component",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "source": "eq_001",
+      "target": "eq_002",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eq_001",
+      "target": "comp_001",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "comp_001",
+      "target": "comp_002",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "comp_001",
+      "target": "comp_003",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "proc_001",
+      "target": "proc_002",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "proc_001",
+      "target": "proc_003",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "proc_001",
+      "target": "proc_004",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "proc_002",
+      "target": "comp_004",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "proc_003",
+      "target": "eq_001",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "proc_004",
+      "target": "eq_001",
+      "type": "INVOLVED_IN"
+    }
+  ]
+}
