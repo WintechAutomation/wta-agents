@@ -1163,6 +1163,30 @@
       "updated_at": "2026-04-08 21:09:14",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-db-manager-b7d45e",
+      "agent": "db-manager",
+      "task": "부서장 승인. CM GraphRAG 다음 단계 진행해주세요.",
+      "message": "부서장 승인. CM GraphRAG 다음 단계 진행해주세요.\n\n2단계: 이미지 주변 텍스트 추출 + LLM 비전 태깅\n3단계: 엔티티/관계 추출 → Neo4j(bolt://localhost:7688) 병합\n\n김근형님 추가 요청이 올 수 있으니 그건 우선 대응하고, GraphRAG는 병행 진행.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 21:16:16",
+      "updated_at": "2026-04-08 21:16:16",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-research-agent-8a7263",
+      "agent": "research-agent",
+      "task": "UM 스페이스 임베딩 작업 맡아주세요.",
+      "message": "UM 스페이스 임베딩 작업 맡아주세요.\n\n대상: workspaces/research-agent/um-extract-part2 (574건 HTML)\n참조 스크립트: workspaces/db-manager/cm-extract-embed.py (--embed-only 모드)\n\n작업:\n1. UM HTML에서 텍스트 추출\n2. Qwen3-Embedding(182.224.6.147:11434)으로 임베딩 (2000차원)\n3. pgvector manual.wta_documents에 저장 (source: Confluence_UM)\n\ndb-manager의 cm-extract-embed.py 구조를 참고해서 UM용으로 실행해주세요. 진행상황 중간 보고 바랍니다.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 21:17:32",
+      "updated_at": "2026-04-08 21:17:32",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }
