@@ -803,6 +803,54 @@
       "updated_at": "2026-04-08 17:48:48",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-db-manager-b3c0cd",
+      "agent": "db-manager",
+      "task": "김근형님 추가 요청. DTP7H-D 같은 범용부품이 CVD로만 잡히는 문제.",
+      "message": "김근형님 추가 요청. DTP7H-D 같은 범용부품이 CVD로만 잡히는 문제.\n\nERP BOM 데이터 기반으로 품목별 사용 장비유형 목록을 추출해주세요.\n- 예: DTP7H-D → [\"CVD\", \"프레스\", \"검사기\"]\n- erp_data.json에 equip_map: {품목코드: [장비유형1, 장비유형2, ...]} 형태로 추가\n- MES 백엔드 API 경유\n\ndocs-agent가 HTML에서 이 매핑을 우선 사용하고 없는 품목만 키워드 매칭 폴백으로 처리할 예정입니다.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 17:53:20",
+      "updated_at": "2026-04-08 17:53:20",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-docs-agent-9c7028",
+      "agent": "docs-agent",
+      "task": "부서장 피드백. 연구노트 docx 수정 필요:",
+      "message": "부서장 피드백. 연구노트 docx 수정 필요:\n\n1. \"본 연구노트는 Confluence 원문 2개 페이지 및 이미지 메타데이터(image-meta.json)를 기반으로 자동 생성됨\" 같은 자동생성 멘트 전부 삭제\n2. \"image-20250929-043636.png\" 같은 이미지 파일명 텍스트 삭제 — 실제 이미지 없이 첨부자료 설명만 있는 텍스트는 불필요\n\n5건 모두 적용해서 재생성해주세요.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 17:53:52",
+      "updated_at": "2026-04-08 17:53:52",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-docs-agent-10ceb1",
+      "agent": "docs-agent",
+      "task": "추가 수정사항. 아래 메타데이터 텍스트도 전부 삭제:",
+      "message": "추가 수정사항. 아래 메타데이터 텍스트도 전부 삭제:\n\n- \"페이지 ID: 9004482562\" 같은 Confluence 페이지 ID\n- \"원본 링크: https://iwta.atlassian.net/...\" 같은 Confluence URL\n\n자동생성 멘트, 이미지 파일명, 페이지 ID, 원본 링크 — Confluence 출처 관련 텍스트 전부 삭제해서 깔끔하게 만들어주세요. 5건 모두.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 17:54:44",
+      "updated_at": "2026-04-08 17:54:44",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-docs-agent-2bc100",
+      "agent": "docs-agent",
+      "task": "부서장 추가 지적. 문서 원문 내용을 요약/축소하지 마세요.",
+      "message": "부서장 추가 지적. 문서 원문 내용을 요약/축소하지 마세요.\n\nHTML 소스의 원문 텍스트를 그대로 전부 포함해야 합니다. 줄이거나 생략하지 말 것.\n\n예시로 지적된 부분:\n\"요구 사항: 측면 광학계에서 burr 측정 필요. 이슈: 측면 광학계의 조명 구성...\" 이런 내용이 중간에 잘려서 \"...\" 처리되거나 요약된 부분이 있는데, 원문 전체를 빠짐없이 넣어야 합니다.\n\nHTML 소스에 있는 텍스트는 한 글자도 빠짐없이 docx에 포함. 5건 모두 재생성.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 17:55:06",
+      "updated_at": "2026-04-08 17:55:06",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }
