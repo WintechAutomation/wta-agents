@@ -1,0 +1,155 @@
+{
+  "page_id": "9508981963",
+  "title": "진공센서&공압 , 진공파기 공압 확인 , 2jaw공압 확인 , Tool AirBlow 확인",
+  "entities": [
+    {
+      "id": "e1",
+      "name": "ATC 진공",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e2",
+      "name": "배큠 그리퍼",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e3",
+      "name": "레귤레이터",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e4",
+      "name": "진공센서",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e5",
+      "name": "2jaw 그리퍼",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e6",
+      "name": "Tool AirBlow",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e7",
+      "name": "공압 조절",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e8",
+      "name": "제품 흡착 TEST",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e9",
+      "name": "진공파기 공압 확인",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e10",
+      "name": "2jaw 공압 확인",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e11",
+      "name": "Tool AirBlow 확인",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e12",
+      "name": "제품 안떨어짐",
+      "type": "Issue",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e2",
+      "target": "e1",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e4",
+      "target": "e1",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e5",
+      "target": "e1",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e6",
+      "target": "e1",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "e2",
+      "target": "e7",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "e4",
+      "target": "e8",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "e5",
+      "target": "e10",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "e6",
+      "target": "e11",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "e9",
+      "target": "e12",
+      "type": "HAS_ISSUE"
+    }
+  ]
+}

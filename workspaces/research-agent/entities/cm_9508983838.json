@@ -1,0 +1,58 @@
+{
+  "page_id": "9508983838",
+  "title": "3. 시운전",
+  "entities": [
+    {
+      "id": "eq_001",
+      "name": "설비",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "comp_001",
+      "name": "기능 검사",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "comp_002",
+      "name": "인접 일반 조건 검사",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "per_001",
+      "name": "Wintech Automation",
+      "type": "Person",
+      "properties": {}
+    },
+    {
+      "id": "per_002",
+      "name": "숙련된 엔지니어",
+      "type": "Person",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "source": "eq_001",
+      "target": "per_001",
+      "type": "MAINTAINS"
+    },
+    {
+      "source": "eq_001",
+      "target": "comp_001",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "eq_001",
+      "target": "comp_002",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "per_002",
+      "target": "comp_002",
+      "type": "INVOLVED_IN"
+    }
+  ]
+}

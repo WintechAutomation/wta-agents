@@ -1,0 +1,63 @@
+{
+  "page_id": "9507149801",
+  "title": "-(한글 버전)-  3.  시운전",
+  "entities": [
+    {
+      "id": "eq_001",
+      "name": "설비",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "org_001",
+      "name": "Wintech Automation",
+      "type": "Customer",
+      "properties": {}
+    },
+    {
+      "id": "proc_001",
+      "name": "시운전",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_002",
+      "name": "기능 검사",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "person_001",
+      "name": "숙련된 엔지니어",
+      "type": "Person",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "source": "org_001",
+      "target": "eq_001",
+      "type": "MAINTAINS"
+    },
+    {
+      "source": "org_001",
+      "target": "proc_001",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "person_001",
+      "target": "proc_001",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "person_001",
+      "target": "proc_002",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "proc_001",
+      "target": "proc_002",
+      "type": "HAS_SUBPROCESS"
+    }
+  ]
+}
