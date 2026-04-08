@@ -97,6 +97,50 @@ def _log_chat(channel_id: str, channel_name: str, user_id: str, username: str, t
     except Exception:
         pass  # 챗로그 실패가 봇 동작을 방해하면 안 됨
 
+# ── 슬랙 파일 다운로드 (범용) ──
+UPLOAD_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "uploads", "slack")
+os.makedirs(UPLOAD_DIR, exist_ok=True)
+
+
+def _download_slack_files(files: list, channel_name: str, username: str) -> list[dict]:
+    """슬랙 파일을 uploads/slack/{채널명}/{날짜}/ 경로에 다운로드.
+    반환: [{name, filetype, size, local_path}, ...]"""
+    if not files:
+        return []
+    now = datetime.now(KST_TZ)
+    date_str = now.strftime("%Y-%m-%d")
+    dest_dir = os.path.join(UPLOAD_DIR, channel_name, date_str)
+    os.makedirs(dest_dir, exist_ok=True)
+
+    results = []
+    for fi in files:
+        fname = fi.get("name", "unknown")
+        ftype = fi.get("filetype", "")
+        fsize = fi.get("size", 0)
+        url = fi.get("url_private") or fi.get("url_private_download", "")
+        if not url:
+            log.warning(f"[파일다운] URL 없음: {fname}")
+            continue
+        try:
+            ts_prefix = now.strftime("%H%M%S")
+            safe_name = f"{ts_prefix}_{fname}"
+            dest = os.path.join(dest_dir, safe_name)
+            req = urllib.request.Request(url, headers={"Authorization": f"Bearer {BOT_TOKEN}"})
+            with urllib.request.urlopen(req, timeout=60) as resp:
+                with open(dest, "wb") as out:
+                    out.write(resp.read())
+            results.append({
+                "name": fname,
+                "filetype": ftype,
+                "size": fsize,
+                "local_path": dest,
+            })
+            log.info(f"[파일다운] 저장 완료: {fname} ({fsize}B) → {dest}")
+        except Exception as e:
+            log.error(f"[파일다운] 다운로드 실패: {fname} → {e}")
+    return results
+
+
 # ── 매뉴얼 미디어 마커 패턴 ──
 # cs-agent가 슬랙 답변에 포함하는 마커 형식:
 #   [매뉴얼 이미지: https://...]              → 슬랙 image 블록으로 변환
@@ -1671,6 +1715,58 @@ def handle_feedback_bad(ack, body, client):
     _handle_feedback_action(ack, body, client, "bad")
 
 
+# ── file_shared 이벤트 핸들러 (files.info API) ──
+_processed_file_ids: set[str] = set()  # 중복 방지 (message + file_shared 동시 수신)
+_processed_file_ids_lock = threading.Lock()
+
+@slack_app.event("file_shared")
+def handle_file_shared(event):
+    """file_shared 이벤트: files.info로 메타데이터 획득 후 서버에 다운로드.
+    message 이벤트(file_share subtype)와 중복 수신 시 한 번만 처리."""
+    file_id = event.get("file_id", "")
+    if not file_id:
+        return
+
+    with _processed_file_ids_lock:
+        if file_id in _processed_file_ids:
+            return  # message 핸들러에서 이미 처리됨
+        _processed_file_ids.add(file_id)
+        # 메모리 관리: 1000개 초과 시 절반 제거
+        if len(_processed_file_ids) > 1000:
+            to_remove = list(_processed_file_ids)[:500]
+            for fid in to_remove:
+                _processed_file_ids.discard(fid)
+
+    def _process():
+        try:
+            resp = slack_app.client.files_info(file=file_id)
+            fi = resp.get("file", {})
+            if not fi:
+                return
+
+            channel_ids = fi.get("channels", []) + fi.get("groups", []) + fi.get("ims", [])
+            channel_name = "direct"
+            if channel_ids:
+                ch_id = channel_ids[0]
+                channel_name = channel_id_to_name.get(ch_id, ch_id)
+
+            user_id = fi.get("user", "unknown")
+            try:
+                user_info = slack_app.client.users_info(user=user_id)
+                username = user_info["user"]["real_name"] or user_info["user"]["name"]
+            except Exception:
+                username = user_id
+
+            saved = _download_slack_files([fi], channel_name, username)
+            if saved:
+                log.info(f"[file_shared] {fi.get('name')} ({fi.get('size', 0)}B) "
+                         f"→ #{channel_name} by {username}")
+        except Exception as e:
+            log.error(f"[file_shared] 처리 실패 (file_id={file_id}): {e}")
+
+    threading.Thread(target=_process, daemon=True).start()
+
+
 # ── 슬랙 → 에이전트 (Socket Mode) ──
 @slack_app.event("message")
 def handle_slack_message(event, say):
@@ -1776,15 +1872,32 @@ def handle_slack_message(event, say):
     # ── 챗로그 기록 (모든 채널, 모든 메시지) ──
     _log_chat(channel, channel_name, user_id, username, text, files)
 
+    # ── 파일 다운로드 (범용 — uploads/slack/ 경로에 저장) ──
+    saved_files: list[dict] = []
+    if files:
+        # file_shared 이벤트와 중복 방지
+        with _processed_file_ids_lock:
+            for fi in files:
+                fid = fi.get("id", "")
+                if fid:
+                    _processed_file_ids.add(fid)
+        saved_files = _download_slack_files(files, channel_name, username)
+
     # 멘션 여부 조기 판정 (content 구성 및 필터에서 참조)
     bot_mentioned = BOT_USER_ID and f"<@{BOT_USER_ID}>" in text
+
+    # 파일 정보 문자열 (에이전트 전달용)
+    file_info_str = ""
+    if saved_files:
+        file_lines = [f"  - {sf['name']} ({sf['filetype']}, {sf['size']}B) → {sf['local_path']}" for sf in saved_files]
+        file_info_str = "\n[첨부파일]\n" + "\n".join(file_lines)
 
     # 프로젝트 채널 확인 (CHANNEL_ROUTING보다 우선)
     matched_project = _is_project_channel(channel)
     if matched_project:
         target_agent = "schedule-agent"
         proj_code = matched_project.get("project_code", "?")
-        content = f"[슬랙 #{channel_name}] [프로젝트:{proj_code}] {username}: {text}"
+        content = f"[슬랙 #{channel_name}] [프로젝트:{proj_code}] {username}: {text}{file_info_str}"
         log.info(f"[수신] #{channel_name} {username}: {text[:80]} → {target_agent} (프로젝트:{proj_code})")
     else:
         prefix_agent = next(
@@ -1796,9 +1909,9 @@ def handle_slack_message(event, say):
         ch_cfg = CHANNEL_CONFIG.get(channel_name, {})
         ctx_hint = ch_cfg.get("context_hint", "")
         if ctx_hint and not bot_mentioned:
-            content = f"[슬랙 #{channel_name}] {username}: {text}\n({ctx_hint})"
+            content = f"[슬랙 #{channel_name}] {username}: {text}{file_info_str}\n({ctx_hint})"
         else:
-            content = f"[슬랙 #{channel_name}] {username}: {text}"
+            content = f"[슬랙 #{channel_name}] {username}: {text}{file_info_str}"
         log.info(f"[수신] #{channel_name} {username}: {text[:80]} → {target_agent}")
     log_to_dashboard("slack-bot", target_agent, content, "chat")
 
