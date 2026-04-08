@@ -1,0 +1,131 @@
+{
+  "page_id": "9664233473",
+  "title": "2026년 4월 2일 업무보고",
+  "entities": [
+    {
+      "id": "eng_001",
+      "name": "박용",
+      "type": "Person",
+      "properties": {
+        "department": "품질/CS팀"
+      }
+    },
+    {
+      "id": "eng_002",
+      "name": "신루이 헨들러",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "eng_003",
+      "name": "상부 축",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "eng_004",
+      "name": "Y축",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "eng_005",
+      "name": "X축",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "eng_006",
+      "name": "메이쓰루이",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "eng_007",
+      "name": "12/13/14호기",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "eng_008",
+      "name": "상부 축 조립",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "eng_009",
+      "name": "Y축 / X축 조립",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "eng_010",
+      "name": "기구 조립",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "eng_011",
+      "name": "축 조립",
+      "type": "Process",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "source": "eng_001",
+      "target": "eng_008",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "eng_001",
+      "target": "eng_009",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "eng_002",
+      "target": "eng_008",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "eng_002",
+      "target": "eng_003",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eng_002",
+      "target": "eng_004",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eng_002",
+      "target": "eng_005",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eng_006",
+      "target": "eng_010",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "eng_007",
+      "target": "eng_010",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "eng_001",
+      "target": "eng_010",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "eng_001",
+      "target": "eng_011",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "eng_002",
+      "target": "eng_011",
+      "type": "HAS_SUBPROCESS"
+    }
+  ]
+}
