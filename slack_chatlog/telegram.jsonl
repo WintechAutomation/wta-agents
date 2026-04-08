@@ -120,3 +120,11 @@
 {"ts": "2026-04-09 08:06:51", "direction": "outbound", "user": "MAX", "text": "🔍 nc-manager 일일 점검 보고\n\n기한 초과 미조치 부적합 663건\n\nCritical 10건 (3일 초과):\n- MMC 검사기 F2 #1 관련, 198~241일 초과\n- 담당: 조광현(1건), 정정일(9건)\n- 스토퍼 길이, 코팅 누락, 볼스크류 피치 불일치 등 설계결함\n\nHigh 653건: PVD 로딩 #4, 포장기 #6 등\n\nnc-manager가 Jira 에스컬레이션 승인 요청합니다:\n1. Critical 10건만 Jira 이슈 생성\n2. 특정 프로젝트/담당자만\n3. 현황 보고만으로 마무리\n\n어떻게 할까요?"}
 {"ts": "2026-04-09 08:19:30", "direction": "inbound", "user": "boss", "text": "Mmc F2 장비 부적합은 모두 완료처리를 해줘 오늘날짜로."}
 {"ts": "2026-04-09 08:19:57", "direction": "outbound", "user": "MAX", "text": "nc-manager에게 MMC F2 #1 부적합 전체 완료 처리(오늘 날짜) 지시했습니다."}
+{"ts": "2026-04-09 08:22:16", "direction": "outbound", "user": "MAX", "text": "✅ MMC F2 #1 부적합 112건 전체 완료 처리됨.\n- Critical 10건 포함\n- 잔여 미처리: 0건\n- Jira 에스컬레이션 없이 마무리"}
+{"ts": "2026-04-09 08:23:29", "direction": "inbound", "user": "boss", "text": "젬마4 모델 다시 내렷는데 너가 다시 올려봐"}
+{"ts": "2026-04-09 08:23:57", "direction": "outbound", "user": "MAX", "text": "crafter에게 vLLM으로 gemma4 다시 올리도록 지시했습니다. SSH 접속을 다시 시도하고 있습니다.\n\n혹시 SSH 접속 정보(포트, 계정) 알려주실 수 있나요? 이전에 22번 포트는 타임아웃됐습니다."}
+{"ts": "2026-04-09 08:24:54", "direction": "outbound", "user": "MAX", "text": "SSH 접속이 안 되어서 원격으로 vLLM 실행이 불가합니다.\n\n방법:\n1. 서버에서 직접 실행: vllm serve google/gemma-4-31b-it --max-model-len 8192\n2. 또는 SSH 포트/계정 정보 공유\n\n서버에서 직접 실행해주시면 포트 8000으로 바로 테스트 진행하겠습니다."}
+{"ts": "2026-04-09 08:27:40", "direction": "inbound", "user": "boss", "text": "2222 포트고 dbxhvldk 가 비번"}
+{"ts": "2026-04-09 08:28:04", "direction": "outbound", "user": "MAX", "text": "확인했습니다. SSH 계정명(username)은 뭔가요? root?"}
+{"ts": "2026-04-09 08:28:44", "direction": "outbound", "user": "MAX", "text": "crafter에게 SSH 접속 + vLLM gemma4 실행 지시했습니다. 진행 결과 보고드리겠습니다."}
+{"ts": "2026-04-09 08:28:52", "direction": "inbound", "user": "boss", "text": "tiaworks 로해보ㅓ"}
