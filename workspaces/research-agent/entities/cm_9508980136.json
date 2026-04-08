@@ -1,0 +1,86 @@
+{
+  "page_id": "9508980136",
+  "title": "#(물류) 작업 중 엘리베이터 스위치 테스트",
+  "entities": [
+    {
+      "id": "eq_001",
+      "name": "엘리베이터",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "comp_001",
+      "name": "스위치",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_002",
+      "name": "취출 버튼",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_003",
+      "name": "공급 버튼",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_004",
+      "name": "E-stop",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "proc_001",
+      "name": "엘리베이터 스위치 테스트",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_002",
+      "name": "작업",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "issue_001",
+      "name": "위험 동작",
+      "type": "Issue",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "source": "eq_001",
+      "target": "comp_001",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eq_001",
+      "target": "comp_002",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eq_001",
+      "target": "comp_003",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eq_001",
+      "target": "comp_004",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "proc_001",
+      "target": "proc_002",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "proc_001",
+      "target": "issue_001",
+      "type": "HAS_ISSUE"
+    }
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "page_id": "9508979745",
+  "title": "#툴 위치 설정하기 및 툴 교체 테스트",
+  "entities": [
+    {
+      "id": "eq_001",
+      "name": "툴 스테이션",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "eq_002",
+      "name": "ATC1",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "eq_003",
+      "name": "ATC2",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "eq_004",
+      "name": "상부 로봇",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "comp_001",
+      "name": "툴",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_002",
+      "name": "핀",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_003",
+      "name": "X 축",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_004",
+      "name": "Y 축",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_005",
+      "name": "Z 축",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_006",
+      "name": "X2 축",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "proc_001",
+      "name": "툴 위치 설정하기",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_002",
+      "name": "툴 교체 테스트",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_003",
+      "name": "장, 탈착 반복 동작",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_004",
+      "name": "Z축 상/하 반복 동작",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_005",
+      "name": "X, Y축 미세 조정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_006",
+      "name": "자동 툴 교체 동작 테스트",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "issue_001",
+      "name": "툴 파손",
+      "type": "Issue",
+      "properties": {}
+    },
+    {
+      "id": "issue_002",
+      "name": "로봇 파손",
+      "type": "Issue",
+      "properties": {}
+    },
+    {
+      "id": "issue_003",
+      "name": "툴 처짐",
+      "type": "Issue",
+      "properties": {}
+    },
+    {
+      "id": "issue_004",
+      "name": "툴 들림 현상",
+      "type": "Issue",
+      "properties": {}
+    },
+    {
+      "id": "issue_005",
+      "name": "평행 오차",
+      "type": "Issue",
+      "properties": {}
+    },
+    {
+      "id": "issue_006",
+      "name": "핀 갈리는 소리",
+      "type": "Issue",
+      "properties": {}
+    },
+    {
+      "id": "issue_007",
+      "name": "위치 불일치",
+      "type": "Issue",
+      "properties": {}
+    },
+    {
+      "id": "person_001",
+      "name": "제작팀",
+      "type": "Person",
+      "properties": {}
+    },
+    {
+      "id": "manual_001",
+      "name": "툴 위치 설정하기 및 툴 교체 테스트",
+      "type": "Manual",
+      "properties": {}
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,180 @@
+{
+  "page_id": "9508979189",
+  "title": "#장비 스펙 확인",
+  "entities": [
+    {
+      "id": "eng_001",
+      "name": "프레스",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "eng_002",
+      "name": "33 호기",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "eng_003",
+      "name": "오스발드 프레스 14 대본",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "eng_004",
+      "name": "오케이 옌린공장",
+      "type": "Customer",
+      "properties": {}
+    },
+    {
+      "id": "eng_005",
+      "name": "설계팀",
+      "type": "Person",
+      "properties": {}
+    },
+    {
+      "id": "eng_006",
+      "name": "제작팀",
+      "type": "Person",
+      "properties": {}
+    },
+    {
+      "id": "eng_007",
+      "name": "플레이트 사이즈",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "eng_008",
+      "name": "SPM",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "eng_009",
+      "name": "툴",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "eng_010",
+      "name": "디버링",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "eng_011",
+      "name": "WMI 환경설정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "eng_012",
+      "name": "테스트 모델 생성",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "eng_013",
+      "name": "셋업",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "eng_014",
+      "name": "테스트",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "eng_015",
+      "name": "오스발드",
+      "type": "Customer",
+      "properties": {}
+    },
+    {
+      "id": "eng_016",
+      "name": "장비 스펙 확인",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "eng_017",
+      "name": "사양서",
+      "type": "Manual",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "source": "eng_001",
+      "target": "eng_017",
+      "type": "DOCUMENTS"
+    },
+    {
+      "source": "eng_002",
+      "target": "eng_015",
+      "type": "DOCUMENTS"
+    },
+    {
+      "source": "eng_003",
+      "target": "eng_004",
+      "type": "DOCUMENTS"
+    },
+    {
+      "source": "eng_002",
+      "target": "eng_013",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "eng_002",
+      "target": "eng_014",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "eng_007",
+      "target": "eng_011",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eng_007",
+      "target": "eng_012",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eng_008",
+      "target": "eng_013",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eng_008",
+      "target": "eng_014",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eng_009",
+      "target": "eng_001",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eng_010",
+      "target": "eng_001",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eng_005",
+      "target": "eng_016",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "eng_006",
+      "target": "eng_016",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "eng_001",
+      "target": "eng_016",
+      "type": "INVOLVED_IN"
+    }
+  ]
+}

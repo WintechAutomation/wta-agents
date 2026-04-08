@@ -1,0 +1,37 @@
+{
+  "page_id": "9508985492",
+  "title": "Press 축 틀어짐 각도 보정",
+  "entities": [
+    {
+      "id": "proc_PressAxisAngleCalib",
+      "name": "Press 축 틀어짐 각도 보정",
+      "type": "Process",
+      "properties": {
+        "tool": "Top Live (시스템 설정)",
+        "feeder_y_p1": "돌기 플레이트 첫번째 위치 X:318.3706 Y:0 FeederY:97.5617",
+        "feeder_y_p2": "마지막 위치 X:319.7706 Y:0 FeederY:377.3317",
+        "feeder_y_result": "SystemData.xml > FeederYAngle",
+        "y_axis_p1": "돌기 첫번째 위치 X:319.8206 Y:22.6782 FeederY:400",
+        "y_axis_p2": "Y축 마지막 위치 X:319.0206 Y:302.283 FeederY:400",
+        "y_axis_result": "SystemData.xml > YAngle",
+        "steps": "TP/WMX Motion으로 위치 이동 → 보정 엑셀 P1/P2 입력 → 각도 계산 → SystemData.xml에 입력"
+      }
+    },
+    {
+      "id": "comp_SystemDataXml",
+      "name": "SystemData.xml (Press 각도 설정)",
+      "type": "Component",
+      "properties": {
+        "path": "D:/WintechAutomation/WMI/Data/SystemData.xml",
+        "fields": "FeederYAngle, YAngle"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "source": "proc_PressAxisAngleCalib",
+      "target": "comp_SystemDataXml",
+      "type": "INVOLVES_COMPONENT"
+    }
+  ]
+}

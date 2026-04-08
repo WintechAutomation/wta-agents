@@ -1,0 +1,18 @@
+{
+  "page_id": "9508927572",
+  "title": "(국문, OKE)- 4-2-6-1. 입출력 - 반복 동작 테스트",
+  "entities": [
+    {
+      "id": "proc_IORepeatTestOKE",
+      "name": "입출력 반복 동작 테스트 (OKE 4-2-6-1)",
+      "type": "Process",
+      "properties": {
+        "section": "4-2-6-1",
+        "customer": "OKE",
+        "condition": "정지 중에만 실행 가능",
+        "steps": "입출력 선택 → 작성 → 프로그램 추가 → 프로그램 선택 → 시퀀스 설정 화면 이동 → 입출력 Drag&Drop 추가 → ON/OFF 설정 → 딜레이(Timer) 추가 → 반복 횟수 입력 → 시작/정지"
+      }
+    }
+  ],
+  "relations": []
+}

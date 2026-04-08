@@ -1,0 +1,67 @@
+{
+  "page_id": "9508979516",
+  "title": "#도어 센서 및 IO 확인",
+  "entities": [
+    {
+      "id": "proc_DoorSensorIOCheck",
+      "name": "도어 센서 및 IO 확인",
+      "type": "Process",
+      "properties": {
+        "purpose": "장비 가동 시 도어 상태 정확한 모니터링 보장",
+        "door_types": "일반 도어, 샘플링 취출 도어(옵션), 도킹 커버 도어(옵션)",
+        "sensor_count": "4~6개",
+        "steps": [
+          "장비 조립 센서 위치/수량 확인",
+          "Signal/Input.csv 파일에서 도어 센서 key 확인",
+          "Input.csv와 코드의 key 명칭 일치 여부 검사",
+          "HMI 시스템 설정 → Door 센서 모니터링 ON",
+          "원점복귀/운전 시작 시 정지 메시지 확인",
+          "입출력 → ETC에서 각 도어 신호 확인"
+        ]
+      }
+    },
+    {
+      "id": "comp_DoorSensorConfig",
+      "name": "도어 센서 설정 (Input.csv)",
+      "type": "Component",
+      "properties": {
+        "path": "D:/WintechAutomation/WMI/Data/Signal/Input.csv",
+        "note": "MAIN_DOOR_OPEN_5 등 Input.csv에 없는 key는 코드에 있어도 실행되지 않음"
+      }
+    },
+    {
+      "id": "issue_DoorSensorMismatch",
+      "name": "도어 센서 설정 불일치 이슈",
+      "type": "Issue",
+      "properties": {
+        "symptom": "센서 설정이 실제 조립 센서와 다를 경우 비정상 동작 우려",
+        "fix": "Input.csv/Output.csv key 확인 및 수정, 또는 WMXServer 파일 복사"
+      }
+    },
+    {
+      "id": "issue_ATCVacuumProblem",
+      "name": "ATC 진공 문제",
+      "type": "Issue",
+      "properties": {
+        "fix": "Input.csv/Output.csv 확인 후 메인 공압/진공 압력 확인"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "source": "proc_DoorSensorIOCheck",
+      "target": "comp_DoorSensorConfig",
+      "type": "INVOLVES_COMPONENT"
+    },
+    {
+      "source": "issue_DoorSensorMismatch",
+      "target": "proc_DoorSensorIOCheck",
+      "type": "RESOLVED_BY"
+    },
+    {
+      "source": "issue_ATCVacuumProblem",
+      "target": "proc_DoorSensorIOCheck",
+      "type": "RESOLVED_BY"
+    }
+  ]
+}

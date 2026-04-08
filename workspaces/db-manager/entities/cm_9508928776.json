@@ -1,0 +1,18 @@
+{
+  "page_id": "9508928776",
+  "title": "(국문, OKE)- 5-1-1. 팔레트 준비",
+  "entities": [
+    {
+      "id": "proc_PalletPrepOKE",
+      "name": "팔레트 준비 (OKE 5-1-1)",
+      "type": "Process",
+      "properties": {
+        "section": "5-1-1",
+        "customer": "OKE",
+        "steps": "팔레트 공급 위치로 이동 → 팔레트를 표시 위치에 공급",
+        "max_stack": "최대 15단"
+      }
+    }
+  ],
+  "relations": []
+}

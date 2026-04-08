@@ -1,0 +1,16 @@
+{
+  "page_id": "9508928330",
+  "title": "(국문, OKE)- 4-2-9-1. 케이스 관리 - 추가",
+  "entities": [
+    {
+      "id": "proc_CaseAddOKE",
+      "name": "케이스 추가 (OKE 4-2-9-1)",
+      "type": "Process",
+      "properties": {
+        "section": "4-2-9-1",
+        "customer": "OKE"
+      }
+    }
+  ],
+  "relations": []
+}

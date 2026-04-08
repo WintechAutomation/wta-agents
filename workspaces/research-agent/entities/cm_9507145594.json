@@ -1,0 +1,244 @@
+{
+  "page_id": "9507145594",
+  "title": "- 컨베이어 픽업 위치 보정",
+  "entities": [
+    {
+      "id": "e1",
+      "name": "컨베이어 픽업 위치 보정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e2",
+      "name": "WMXServer",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e3",
+      "name": "Motion Manager",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e4",
+      "name": "BUFFER_CONV 축",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e5",
+      "name": "그리퍼",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e6",
+      "name": "공압조절",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e7",
+      "name": "TP 화면",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e8",
+      "name": "Head1",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e9",
+      "name": "Head2",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e10",
+      "name": "지그",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e11",
+      "name": "캘리브레이션",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e12",
+      "name": "Head",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e13",
+      "name": "케이스",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e14",
+      "name": "Z 축",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e15",
+      "name": "비전 티칭",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e16",
+      "name": "TOP - 5 번 항목",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e17",
+      "name": "X2CAM",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e18",
+      "name": "X1CAM",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e19",
+      "name": "원상복구",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e20",
+      "name": "컨베이어",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e21",
+      "name": "캘리브레이션 지그",
+      "type": "Component",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e2",
+      "target": "e4",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e6",
+      "target": "e5",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e6",
+      "target": "e7",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e11",
+      "target": "e5",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e11",
+      "target": "e12",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e11",
+      "target": "e13",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e11",
+      "target": "e8",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e11",
+      "target": "e9",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e11",
+      "target": "e10",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e11",
+      "target": "e15",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e15",
+      "target": "e14",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e15",
+      "target": "e16",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e15",
+      "target": "e17",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e15",
+      "target": "e18",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e1",
+      "target": "e19",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e19",
+      "target": "e21",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e19",
+      "target": "e5",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e1",
+      "target": "e20",
+      "type": "USES_COMPONENT"
+    }
+  ]
+}

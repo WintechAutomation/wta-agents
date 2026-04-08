@@ -1,0 +1,69 @@
+{
+  "page_id": "9508980531",
+  "title": "#툴/플레이트 교체시간 확인",
+  "entities": [
+    {
+      "id": "e1",
+      "name": "플레이트 교체",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e2",
+      "name": "툴 교체",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e3",
+      "name": "플레이트",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e4",
+      "name": "툴",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e5",
+      "name": "장비",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e6",
+      "name": "ATC 교체창",
+      "type": "Component",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e2",
+      "target": "e4",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e2",
+      "target": "e6",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e5",
+      "target": "e1",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e5",
+      "target": "e2",
+      "type": "HAS_SUBPROCESS"
+    }
+  ]
+}

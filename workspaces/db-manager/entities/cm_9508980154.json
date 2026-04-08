@@ -1,0 +1,44 @@
+{
+  "page_id": "9508980154",
+  "title": "#기본 C타입 픽업/적재 테스트 (Vac툴, 2Jaw툴, 특수툴)",
+  "entities": [
+    {
+      "id": "proc_CTypePickupTest",
+      "name": "C타입 픽업/적재 테스트",
+      "type": "Process",
+      "properties": {
+        "description": "기본 적재 작업 가능 여부 테스트",
+        "prep": "C12 인서트 준비 + 모델 설정에서 카본 플레이트/인서트 형상 확인"
+      }
+    },
+    {
+      "id": "comp_CTypeToolConfig",
+      "name": "C타입 툴 설정",
+      "type": "Component",
+      "properties": {
+        "2jaw": "작업 그리퍼 → 2 jaw그립 반전 기능 → OFF (ON = MGT 테스트 전용)",
+        "vacuum": "작업 그리퍼 → Vacuum"
+      }
+    },
+    {
+      "id": "comp_C12Insert",
+      "name": "C12 인서트 (테스트 소재)",
+      "type": "Component",
+      "properties": {
+        "purpose": "C타입 픽업 테스트 소재"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "source": "proc_CTypePickupTest",
+      "target": "comp_CTypeToolConfig",
+      "type": "INVOLVES_COMPONENT"
+    },
+    {
+      "source": "proc_CTypePickupTest",
+      "target": "comp_C12Insert",
+      "type": "INVOLVES_COMPONENT"
+    }
+  ]
+}

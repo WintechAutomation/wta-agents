@@ -1,0 +1,16 @@
+{
+  "page_id": "9507152786",
+  "title": "-(한글 버전)- 5-2. 자동 작업 준비",
+  "entities": [
+    {
+      "id": "proc_AutoWorkPrepKO",
+      "name": "자동 작업 준비 (한글)",
+      "type": "Process",
+      "properties": {
+        "section": "5-2",
+        "language": "Korean"
+      }
+    }
+  ],
+  "relations": []
+}

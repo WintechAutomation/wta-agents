@@ -1,0 +1,16 @@
+{
+  "page_id": "9507159419",
+  "title": "5-5-5. 라벨링",
+  "entities": [
+    {
+      "id": "proc_Labeling_5_5_5",
+      "name": "라벨링 5-5-5",
+      "type": "Process",
+      "properties": {
+        "section": "5-5-5",
+        "steps": "적재설정 선택 → 제품 추가 → 케이스 공급 → 라벨링 실행 → 완료(케이스 배출 위치 적재)"
+      }
+    }
+  ],
+  "relations": []
+}
