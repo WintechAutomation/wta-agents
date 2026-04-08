@@ -647,6 +647,18 @@
       "updated_at": "2026-04-08 16:16:45",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-docs-agent-0f5b02",
+      "agent": "docs-agent",
+      "task": "db-manager가 CKR20-145-1065L 프로젝트 수정 완료했습니다.",
+      "message": "db-manager가 CKR20-145-1065L 프로젝트 수정 완료했습니다.\n\n- CKR20-145-1065L → \"메이써루이 프레스 #14 (Kob,10t)\" 정상 반영\n- erp_data.json 재반영 완료\n- 재고감안 품목도 생산계획 기준 프로젝트 매칭 적용됨\n\nHTML 재적용 진행해주세요. 완료 후 김근형님께 슬랙으로 알려주세요.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 16:23:30",
+      "updated_at": "2026-04-08 16:23:30",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }
