@@ -515,6 +515,30 @@
       "updated_at": "2026-04-08 13:32:24",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-admin-agent-ce3b9d",
+      "agent": "admin-agent",
+      "task": "부서장 요청: 광학기술센터 메일함 또는 INBOX에서 아래 메일을 찾아 전체 내용을 읽어주세요.",
+      "message": "부서장 요청: 광학기술센터 메일함 또는 INBOX에서 아래 메일을 찾아 전체 내용을 읽어주세요.\n\n제목: \"Re: 한국야금 팔레트내 제품 도트 검사 검토 요청\"\n보낸사람: 서제완 jwsuh@wta.kr\n보낸날짜: 2026-04-08 오후 1:38\n받는사람: 진형권, 정정일, 조윤명, 조한종, 김준형, 윤선웅, 김정민\n\n이 메일의 전체 본문 내용을 보고해주세요.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 13:45:36",
+      "updated_at": "2026-04-08 13:45:36",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-research-agent-f85b3d",
+      "agent": "research-agent",
+      "task": "부서장 요청: 아래 광학검사 장비 스펙을 기반으로 제미나이(Gemini) 이미지 생성용 프롬프트를 정리해주세요. 기계 컨셉 이미지를 만들 수 있도록 상세하게 작성해주세요.",
+      "message": "부서장 요청: 아래 광학검사 장비 스펙을 기반으로 제미나이(Gemini) 이미지 생성용 프롬프트를 정리해주세요. 기계 컨셉 이미지를 만들 수 있도록 상세하게 작성해주세요.\n\n장비 개요: 한국야금 팔레트 내 제품 도트 검사기\n- 팔레트(KP2, KP5) 위에 적재된 초경합금 인서트 제품의 방향(도트 위치)을 검사\n- 방향이 다른 제품을 detect → 모니터에 표시 → 작업자 수동 조정\n\n광학계 구성:\n- 카메라 4대 (Mako-G507B, 2464x2056 해상도)\n- 렌즈 4개 (EFL 35mm, F2.8)\n- WD(작업거리): 648.6mm\n- FOV: 153.9 x 128.5mm (각 카메라당)\n- Pixel Resolution: 62.48μm/pixel\n- DoF: 0.350mm\n- 대형 조명 1식 (팔레트 전체 커버)\n\n기구적 특징:\n- 4개 광학계 각각 광축 조정 기구 (pitch, yaw, roll, 높이 manual 조정 후 고정)\n- 제품 높이 차이에 따른 focus 조정 장치\n- frame grabber, PC, cable, SMPS 포함\n\n운용 방식:\n- 팔레트를 장비에 투입 → 4대 카메라로 동시 촬영 → 이미지 stitch → 방향 다른 제품 detect → 모니터 표시\n- CT: 1분 이내\n\n프롬프트는 영문으로, 산업용 검사장비 느낌의 3D 렌더링 스타일로 작성해주세요. MAX에게 보고.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 13:48:17",
+      "updated_at": "2026-04-08 13:48:17",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }

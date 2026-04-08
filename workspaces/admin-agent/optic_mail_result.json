@@ -1,0 +1,58 @@
+[
+  {
+    "folder": "광학기술센터",
+    "uid": "119",
+    "subject": "대구텍 광학계 이미지 테스트를 위한 \"실험실 광학계 테스트벤치\" 전장 업그레이드 요청",
+    "from": "서제완 <jwsuh@wta.kr>",
+    "date": "Fri, 27 Mar 2026 08:50:52 +0900 (KST)",
+    "body_preview": "지건승 팀장님,\n\n안녕하세요?\n\n\n지난번 말씀드린바와 같이 \"실험실 클린부스내 광학계 테스트벤치\" 의 \"전장부 업그레이드\"가 필요합니다.\n\n\n당초 이 테스트벤치는 OAS 프로그램을 이용해 정렬된 광학모듈의 특성치를 측정하는 기능에 포커싱 되어 있었으나\n\n\n고객사의 새로운 요구사항을 반영하는 새로운 광학계 및 조명을 검증하는 용도까지 활용을 하려고 합니다.\n\n\n이 테스트벤치를 이용해 당장 검증하려는 기능/성능은 아래와 같습니다.\n\n\n테스트를 위한 기구물의 준비는\n\n\n이런 실험을 하기 위해서는 HIM-F 장비의 Macro 광학계의 전장적인 기능이 모두 구현되어야 합니다.\n\n\n- 광학계 Z축 엔코더 트리거링 : 심도 합성을 위함\n\n\n- OPT사 조명 컨트롤러 전장 Interface : HW spec 기 제공\n\n\n- 기존 CL 인터페이스 외 추가 CXP-6 인터페이스 필요\n\n\n1. 대구텍향 얕고 넓은 깨짐 시료 이미지 테스트 - 간접돔 → 직접돔 UPDATE (4/24 기구물 입고 예상)\n\n\n- 대구텍 80% FOV Macro 광학계 검사 성능 (기존 조명) : https://iwta.atlassian.net/browse/BGFN-159\n\n\n- 대구텍 80% FOV Macro 광학계 직접돔 교체 후 검사 성능 : 조명을 개선하며 장기간 반복 테스트가 필요 - https://iwta.atlassian.net/browse/BGFN-302\n\n\n- 기존 Macro 광학계 직접돔 조명 업데이트시 성능 실험\n\n\n- 고해상도 (25MP) Macro 광학계에 대한 성능 실험 : https://iwta.atlassian.net/browse/BGFN-248\n\n\n2. 대구텍향 신규 TELECENTRIC BLU 및 JIG PLATE 시험 (기구물 3/20 출도, 4/3경 입고 예상)\n\n\n※ JIRA LINK https://iwta.atlassian.net/browse/BGFN-288\n\n\n- 기구물 구조\n\n\n\n\n\n\n\n3. OPT사 전류제어 조명 컨트롤러 시험\n\n\n- 전류제어 방식이며 광학계당 조명이 4ch → 8ch, 12ch 또는 그 이상으로 확장될 수 있음\n\n\n- SW 구현은 완료되었으나 테스트 환경이 없어 마무리 하지 못하는 상황\n\n\n많은 업무협조 부탁드리며, 미팅이 필요하면 알려주십시오.\n\n\n감사합니다.\n\n서제완 드림\n\n\n서 제완 / 센터장\n광학기술센터 / (주)윈텍오토메이션\n경기도 수원시 영통구 영통로200번길 71(영통동) 16690\nCell.010-7310-7669 Tel.031-202-7111 Fax.031-202-7154\nE-mail. jwsuh@wta.kr  Home. http://www.wta.kr\n[▶]YouTube (WTA official)\n"
+  },
+  {
+    "folder": "광학기술센터",
+    "uid": "118",
+    "subject": "한전 스프링검사 광학계 검토(안)",
+    "from": "서제완 <jwsuh@wta.kr>",
+    "date": "Tue, 24 Mar 2026 19:10:45 +0900 (KST)",
+    "body_preview": "최종렬 본부장님, 최종국 소장님,\n\n안녕하세요?\n\n\n내일 (3/25) 종일 서울 외근이 있어 첨부와 같이 한전 스프링검사 광학계 검토(안)을 간략히 공유드립니다.\n\n\n아래 링크에 더 많은 내용이 작성되어 있습니다. 참고하십시오.\n\n\nhttps://iwta.atlassian.net/browse/BGFN-295\n\n\n궁금하신 내용은 3/26 함께 의논하시면 될 것 같습니다.\n\n\n감사합니다.\n\n서제완 드림\n\n\n서 제완 / 센터장\n광학기술센터 / (주)윈텍오토메이션\n경기도 수원시 영통구 영통로200번길 71(영통동) 16690\nCell.010-7310-7669 Tel.031-202-7111 Fax.031-202-7154\nE-mail. jwsuh@wta.kr  Home. http://www.wta.kr\n[▶]YouTube (WTA official)\n"
+  },
+  {
+    "folder": "광학기술센터",
+    "uid": "114",
+    "subject": "HIM-F 사내/고객사 셋업 후 광학계 정렬 상태 점검 결과 공유",
+    "from": "서제완 <jwsuh@wta.kr>",
+    "date": "Tue, 10 Mar 2026 19:03:55 +0900 (KST)",
+    "body_preview": "정정일 수석님, 김준형 수석님, 조한종 수석님, 최종태 부장님,\n\n안녕하세요?\n\n최근 출하된 2대의 HIM-F2 (MMC, 한국 Kyocera) 와 1대의 HIM-F1 (Korloy) 에 대해\n\n\n출하 전 후 Dot target 과 Calibration Target 을 이용한 광학 특성치와 정렬 상태에 대한\n\n\n측정을 진행하여 분석한 결과를 아래와 같이 공유드립니다.\n\n\n\n\n다행스러운 점은 광학모듈 분리 후 고객사에서 재설치 하고 나서도 정렬 상태에 큰 차이가 없다는 점인데,\n\n\n광학계 별로 아래와 같은 공통적 취약점을 확인하였기에 개선 방안의 논의가 필요하겠습니다.\n\n\n1. Micro 광학계 X축 0.5 ~ 0.9도 동일 방향 틀어짐 : F2 2대 - Bottom Micro, F1 Top Micro (CTA F1 Top Micro 포함) 2대\n\n\n* 원인이 있을 것 같습니다.\n\n\n2. Side 광학계 측정 편차/타겟 Tilt 편차 큼 : 타겟 설치 정도의 재현성 부족, 기준면 가이드 역할 미흡\n\n\n3. 광학모듈 TTTM JIG 정렬 측면의 개선도 필요하다고 판단됩니다.\n\n\n참고하십시오.\n\n상세 내용 링크\n- [한국 교세라] 검사기 F2 (#20-1 수정)     https://iwta.atlassian.net/wiki/x/BICwKgI\n- [MMC] 검사기 F2 #1                 https://iwta.atlassian.net/wiki/x/A4DBKgI\n- [한국야금] 검사기 F1 #6             https://iwta.atlassian.net/wiki/x/BYDAKgI\n\n\n\n\n\n\n감사합니다.\n\n서제완 드림\n\n\n서 제완 / 센터장\n광학기술센터 / (주)윈텍오토메이션\n경기도 수원시 영통구 영통로200번길 71(영통동) 16690\nCell.010-7310-7669 Tel.031-202-7111 Fax.031-202-7154\nE-mail. jwsuh@wta.kr  Home. http://www.wta.kr\n[▶]YouTube (WTA official)\n"
+  },
+  {
+    "folder": "광학기술센터",
+    "uid": "110",
+    "subject": "Korloy향 CVD/PVD 혼입검사 광학계 설계안 공유",
+    "from": "서제완 <jwsuh@wta.kr>",
+    "date": "Fri, 13 Feb 2026 10:53:51 +0900 (KST)",
+    "body_preview": "수신: 수신처\n\n안녕하세요?\n\nKorloy向 CVD/PVD 혼입 검사 광학계 설계안 및 실험 결과를 공유합니다.\n\nJIRA LINK : https://iwta.atlassian.net/browse/BGFN-267\n\n\n\n\n\n\n\n\n\n■ Optical Layout : 2D drawing 첨부\n\n\n\n\n\n\n\n- 기타 상세 내용 JIRA LINK 참조\n\n\n감사합니다.\n\n서제완 드림\n\n\n서 제완 / 센터장\n광학기술센터 / (주)윈텍오토메이션\n경기도 수원시 영통구 영통로200번길 71(영통동) 16690\nCell.010-7310-7669 Tel.031-202-7111 Fax.031-202-7154\nE-mail. jwsuh@wta.kr  Home. http://www.wta.kr\n[▶]YouTube (WTA official)\n"
+  },
+  {
+    "folder": "광학기술센터",
+    "uid": "109",
+    "subject": "(테스트 기구 설계 의뢰) Re: Re: Re: 대구텍 검사기 Macro 광학계 개발 관련",
+    "from": "서제완 <jwsuh@wta.kr>",
+    "date": "Wed, 11 Feb 2026 17:18:11 +0900 (KST)",
+    "body_preview": "정정일 수석님, 정민웅 수석님,\n\n\n안녕하세요.\n\n\n테스트 방식을 점검 중에 지난번 메일 내용에 오류가 있음이 확인되었습니다.\n\n\"jig plate\" 만 이동하며 테스트 하는 방식\n\n→ \"jig plate + 하부 telecentric 조명\" 이 일체화 되어 이동하며 테스트 하는 방식\n\n(장비에서는 jig plate + 하부 telecentric 조명\" 이 고정, 카메라가 이동) 으로 수정되어야 합니다.\n\n상세한 내용은 별도 의논하시면 좋겠습니다.\n\n\n감사합니다.\n\n- - - - - - - - - -\n\n정정일 수석님, 정민웅 수석님,\n\n안녕하세요?\n\n\nVICO사에서 당사 요청에 맞게 LED 를 개조한 후 (3W → 5W) 데모 제품을 대여해 주기로 하였습니다.\n\n\n신규 Jig plate 와 고정형 T-BLU 구성에 대한 점검과 알고리즘의 대비를 위해 테스트를 진행할 예정입니다.\n\n\n아래와 같이 테스트 Jig 기구에 대한 설계를 의뢰합니다.\n\n\n\n\n감사합니다.\n\n서제완 드림\n\n\n서 제완 / 센터장\n광학기술센터 / (주)윈텍오토메이션\n경기도 수원시 영통구 영통로200번길 71(영통동) 16690\nCell.010-7310-7669 Tel.031-202-7111 Fax.031-202-7154\nE-mail. jwsuh@wta.kr  Home. http://www.wta.kr\n[▶]YouTube (WTA official)\n\n--- Original Message ---\nFrom : \"서제완\"<jwsuh@wta.kr>\nTo : \"정정일\"<cichung@wta.kr>, \"윤선웅/책임/광학기술센터\"<sy.yoon@wta.kr>, \"정민웅/수석/기구설계HAM팀\"<mwjung@wta.kr>, \"'지건승/책임/제어설계팀'\"<rjstmd5@wta.kr>, \"조한종/수석/생산관리팀\"<hjcho@wta.kr>, \"김준형/수석/Vision팀\"<jhkim@wta.kr>, \"진소미\"<jsm8632@wta.kr>, \"정희인/책임/Vision팀\"<hijeong@wta.kr>, \"'조윤명/수석/Software팀'\"<cym@wta.kr>, \"Hyongkwon jin(진형권)\"<jhkwon@wta.kr>, \"'박성수/부장/제작팀'\"<pss@wta.kr>, \"조광현/전임/기구설계HIM팀\"<khcho@wta.kr>\nCc : \"송일재\"<siljae@wta.kr>\nDate : 2026/01/29 목요일 오후 2:50:23\nSubject : Re: Re: 대구텍 검사기 Macro 광학계 개발 관련\n\n\n안녕하세요?\n\n\n\n\n정민웅 수석과 결정이 되었다고 생각했는데 확정이 필요하다면,\n\n\n검토하신 것과 같이 아래 VICO사 \"DTCL-150-3W-G-NC\" 로 반영하여 진행하시면 되겠습니다.\n\n\n\n\n\n감사합니다.\n\n서제완 드림\n\n\n서 제완 / 센터장\n광학기술센터 / (주)윈텍오토메이션\n경기도 수원시 영통구 영통로200번길 71(영통동) 16690\nCell.010-7310-7669 Tel.031-202-7111 Fax.031-202-7154\nE-mail. jwsuh@wta.kr  Home. http://www.wta.kr\n[▶]YouTube (WTA official)\n\n--- Original Message ---\nFrom : \"정정일\"<cichung@wta.kr>\nTo : \"서제완\"<jwsuh@wta.kr>, \"윤선웅/책임/광학기술센터\"<sy.yoon@wta.kr>, \"정민웅/수석/기구설계HAM팀\"<mwjung@wta.kr>, \"'지건승/책임/제어설계팀'\"<rjstmd5@wta.kr>, \"조한종/수석/생산관리팀\"<hjcho@wta.kr>, \"김준형/수석/Vision팀\"<jhkim@wta.kr>, \"진소미\"<jsm8632@wta.kr>, \"정희인/책임/Vision팀\"<hijeong@wta.kr>, \"'조윤명/수석/Software팀'\"<cym@wta.kr>, \"Hyongkwon jin(진형권)\"<jhkwon@wta.kr>, \"'박성수/부장/제작팀'\"<pss@wta.kr>, \"조광현/전임/기구설계HIM팀\"<khcho@wta.kr>\nCc : \"송일재\"<siljae@wta.kr>\n"
+  },
+  {
+    "folder": "Inbox",
+    "uid": "42998",
+    "subject": "Re: [회의 공지] 실험실 클린부스 광학계 테스트벤치 전장부 업그레이드",
+    "from": "정정일 <cichung@wta.kr>",
+    "date": "Tue, 31 Mar 2026 11:05:23 +0900 (KST)",
+    "body_preview": "금일 오후 면접 관계로  조광현 전임. 권동원 전임 대리 참석바랍니다.\n\n\n\n--- Original Message ---\nFrom : \"윤선웅\"<sy.yoon@wta.kr>\nTo : \"지건승/책임/제어설계팀\"<rjstmd5@wta.kr>, \"정정일/수석/기구설계HIM팀\"<cichung@wta.kr>, \"김준형/수석/Vision팀\"<jhkim@wta.kr>, \"진소미/수석/Vision팀\"<jsm8632@wta.kr>\nCc : \"서제완/센터장/광학기술센터\"<jwsuh@wta.kr>, \"김정민/연구원/광학기술센터\"<jmkim@wta.kr>, \"조한종/수석/생산관리팀\"<hjcho@wta.kr>\nDate : 2026/03/30 월요일 오후 6:36:29\nSubject : [회의 공지] 실험실 클린부스 광학계 테스트벤치 전장부 업그레이드\n\n\n\n안녕하세요?\n\n광학기술센터 윤선웅 입니다.\n\n\n지난번 공유드린 바와 같이, “실험실 클린부스 내 광학계 테스트벤치”의 전장부 업그레이드 관련하여 회의를 진행하고자 합니다.\n\n\n- 일시 : 2026-3-31 (화) 13:30\n\n- 장소 : A회의실\n\n- agenda\n. 테스트벤치 전장부 업그레이드 범위 검토 및 협의\n\n관련 담당자분들께서는 참석 부탁드리며, 부득이한 경우 사전 공유 부탁드립니다.\n\n\n\n\n감사합니다.\n\n윤선웅 드림\n\n\n\n\n--- Original Message ---\nFrom : \"서제완\"<jwsuh@wta.kr>\nTo : \"지건승/책임/제어설계팀\"<rjstmd5@wta.kr>, \"정정일/수석/기구설계HIM팀\"<cichung@wta.kr>, \"김준형/수석/Vision팀\"<jhkim@wta.kr>, \"진소미/수석/Vision팀\"<jsm8632@wta.kr>, \"정희인/책임/Vision팀\"<hijeong@wta.kr>, \"조한종/수석/생산관리팀\"<hjcho@wta.kr>, \"최종국/연구소장/기구설계팀\"<paulchoi@wta.kr>\nCc : \"윤선웅/책임/광학기술센터\"<sy.yoon@wta.kr>, \"김정민/연구원/광학기술센터\"<jmkim@wta.kr>\nDate : 2026/03/27 금요일 오전 8:50:52\nSubject : 대구텍 광학계 이미지 테스트를 위한 \"실험실 광학계 테스트벤치\" 전장 업그레이드 요청\n\n지건승 팀장님,\n\n안녕하세요?\n\n\n지난번 말씀드린바와 같이 \"실험실 클린부스내 광학계 테스트벤치\" 의 \"전장부 업그레이드\"가 필요합니다.\n\n\n당초 이 테스트벤치는 OAS 프로그램을 이용해 정렬된 광학모듈의 특성치를 측정하는 기능에 포커싱 되어 있었으나\n\n\n고객사의 새로운 요구사항을 반영하는 새로운 광학계 및 조명을 검증하는 용도까지 활용을 하려고 합니다.\n\n\n이 테스트벤치를 이용해 당장 검증하려는 기능/성능은 아래와 같습니다.\n\n\n테스트를 위한 기구물의 준비는\n\n\n이런 실험을 하기 위해서는 HIM-F 장비의 Macro 광학계의 전장적인 기능이 모두 구현되어야 합니다.\n\n\n- 광학계 Z축 엔코더 트리거링 : 심도 합성을 위함\n\n\n- OPT사 조명 컨트롤러 전장 Interface : HW spec 기 제공\n\n\n- 기존 CL 인터페이스 외 추가 CXP-6 인터페이스 필요\n\n\n1. 대구텍향 얕고 넓은 깨짐 시료 이미지 테스트 - 간접돔 → 직접돔 UPDATE (4/24 기구물 입고 예상)\n\n\n- 대구텍 80% FOV Macro 광학계 검사 성능 (기존 조명) : https://iwta.atlassian.net/browse/BGFN-159\n\n\n- 대구텍 80% FOV Macro 광학계 직접돔 교체 후 검사 성능 : 조명을 개선하며 장기간 반복 테스트가 필요 - https://iwta.atlassian.net/browse/BGFN-302\n\n\n- 기존 Macro 광학계 직접돔 조명 업데이트시 성능 실험\n\n\n- 고해상도 (25MP) Macro 광학계에 대한 성능 실험 : https://iwta.atlassian.net/browse/BGFN-248\n\n\n2. 대구텍향 신규 TELECENTRIC BLU 및 JIG PLATE 시험 (기구물 3/20 출도, 4/3경 입고 예상)\n\n\n※ JIR"
+  },
+  {
+    "folder": "INBOX",
+    "uid": "42998",
+    "subject": "Re: [회의 공지] 실험실 클린부스 광학계 테스트벤치 전장부 업그레이드",
+    "from": "정정일 <cichung@wta.kr>",
+    "date": "Tue, 31 Mar 2026 11:05:23 +0900 (KST)",
+    "body_preview": "금일 오후 면접 관계로  조광현 전임. 권동원 전임 대리 참석바랍니다.\n\n\n\n--- Original Message ---\nFrom : \"윤선웅\"<sy.yoon@wta.kr>\nTo : \"지건승/책임/제어설계팀\"<rjstmd5@wta.kr>, \"정정일/수석/기구설계HIM팀\"<cichung@wta.kr>, \"김준형/수석/Vision팀\"<jhkim@wta.kr>, \"진소미/수석/Vision팀\"<jsm8632@wta.kr>\nCc : \"서제완/센터장/광학기술센터\"<jwsuh@wta.kr>, \"김정민/연구원/광학기술센터\"<jmkim@wta.kr>, \"조한종/수석/생산관리팀\"<hjcho@wta.kr>\nDate : 2026/03/30 월요일 오후 6:36:29\nSubject : [회의 공지] 실험실 클린부스 광학계 테스트벤치 전장부 업그레이드\n\n\n\n안녕하세요?\n\n광학기술센터 윤선웅 입니다.\n\n\n지난번 공유드린 바와 같이, “실험실 클린부스 내 광학계 테스트벤치”의 전장부 업그레이드 관련하여 회의를 진행하고자 합니다.\n\n\n- 일시 : 2026-3-31 (화) 13:30\n\n- 장소 : A회의실\n\n- agenda\n. 테스트벤치 전장부 업그레이드 범위 검토 및 협의\n\n관련 담당자분들께서는 참석 부탁드리며, 부득이한 경우 사전 공유 부탁드립니다.\n\n\n\n\n감사합니다.\n\n윤선웅 드림\n\n\n\n\n--- Original Message ---\nFrom : \"서제완\"<jwsuh@wta.kr>\nTo : \"지건승/책임/제어설계팀\"<rjstmd5@wta.kr>, \"정정일/수석/기구설계HIM팀\"<cichung@wta.kr>, \"김준형/수석/Vision팀\"<jhkim@wta.kr>, \"진소미/수석/Vision팀\"<jsm8632@wta.kr>, \"정희인/책임/Vision팀\"<hijeong@wta.kr>, \"조한종/수석/생산관리팀\"<hjcho@wta.kr>, \"최종국/연구소장/기구설계팀\"<paulchoi@wta.kr>\nCc : \"윤선웅/책임/광학기술센터\"<sy.yoon@wta.kr>, \"김정민/연구원/광학기술센터\"<jmkim@wta.kr>\nDate : 2026/03/27 금요일 오전 8:50:52\nSubject : 대구텍 광학계 이미지 테스트를 위한 \"실험실 광학계 테스트벤치\" 전장 업그레이드 요청\n\n지건승 팀장님,\n\n안녕하세요?\n\n\n지난번 말씀드린바와 같이 \"실험실 클린부스내 광학계 테스트벤치\" 의 \"전장부 업그레이드\"가 필요합니다.\n\n\n당초 이 테스트벤치는 OAS 프로그램을 이용해 정렬된 광학모듈의 특성치를 측정하는 기능에 포커싱 되어 있었으나\n\n\n고객사의 새로운 요구사항을 반영하는 새로운 광학계 및 조명을 검증하는 용도까지 활용을 하려고 합니다.\n\n\n이 테스트벤치를 이용해 당장 검증하려는 기능/성능은 아래와 같습니다.\n\n\n테스트를 위한 기구물의 준비는\n\n\n이런 실험을 하기 위해서는 HIM-F 장비의 Macro 광학계의 전장적인 기능이 모두 구현되어야 합니다.\n\n\n- 광학계 Z축 엔코더 트리거링 : 심도 합성을 위함\n\n\n- OPT사 조명 컨트롤러 전장 Interface : HW spec 기 제공\n\n\n- 기존 CL 인터페이스 외 추가 CXP-6 인터페이스 필요\n\n\n1. 대구텍향 얕고 넓은 깨짐 시료 이미지 테스트 - 간접돔 → 직접돔 UPDATE (4/24 기구물 입고 예상)\n\n\n- 대구텍 80% FOV Macro 광학계 검사 성능 (기존 조명) : https://iwta.atlassian.net/browse/BGFN-159\n\n\n- 대구텍 80% FOV Macro 광학계 직접돔 교체 후 검사 성능 : 조명을 개선하며 장기간 반복 테스트가 필요 - https://iwta.atlassian.net/browse/BGFN-302\n\n\n- 기존 Macro 광학계 직접돔 조명 업데이트시 성능 실험\n\n\n- 고해상도 (25MP) Macro 광학계에 대한 성능 실험 : https://iwta.atlassian.net/browse/BGFN-248\n\n\n2. 대구텍향 신규 TELECENTRIC BLU 및 JIG PLATE 시험 (기구물 3/20 출도, 4/3경 입고 예상)\n\n\n※ JIR"
+  }
+]
