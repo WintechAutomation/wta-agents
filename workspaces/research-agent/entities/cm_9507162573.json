@@ -1,0 +1,47 @@
+{
+  "page_id": "9507162573",
+  "title": "　케이스 관리 - 삭제",
+  "entities": [
+    {
+      "id": "e1",
+      "name": "케이스 관리",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e2",
+      "name": "팔레트 관리",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e3",
+      "name": "삭제",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e4",
+      "name": "복원 불가능",
+      "type": "Issue",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e3",
+      "target": "e4",
+      "type": "HAS_ISSUE"
+    }
+  ]
+}

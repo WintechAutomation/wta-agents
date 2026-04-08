@@ -1,0 +1,181 @@
+{
+  "page_id": "9508931001",
+  "title": "사전체크 항목",
+  "entities": [
+    {
+      "id": "e1",
+      "name": "축 파라미터",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e2",
+      "name": "I/O 동작",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e3",
+      "name": "조립",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e4",
+      "name": "정밀조립",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e5",
+      "name": "교체품 작업",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e6",
+      "name": "설계",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e7",
+      "name": "프로그램 수정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e8",
+      "name": "리미트 센서 위치 확인",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e9",
+      "name": "기구동작 점검",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e10",
+      "name": "언로딩 사양 확인",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e11",
+      "name": "플라잉 검출 환경 구현",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e12",
+      "name": "그리퍼 고정나사 변경",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e13",
+      "name": "스토퍼 기구물 변경",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e14",
+      "name": "간섭 기구물 변경",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e15",
+      "name": "실린더 스토퍼 추가",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e16",
+      "name": "3-jaw 그리퍼 커버 장착",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e17",
+      "name": "제어팀",
+      "type": "Person",
+      "properties": {}
+    },
+    {
+      "id": "e18",
+      "name": "제작팀",
+      "type": "Person",
+      "properties": {}
+    },
+    {
+      "id": "e19",
+      "name": "품질팀",
+      "type": "Person",
+      "properties": {}
+    },
+    {
+      "id": "e20",
+      "name": "설계팀",
+      "type": "Person",
+      "properties": {}
+    },
+    {
+      "id": "e21",
+      "name": "SW팀",
+      "type": "Person",
+      "properties": {}
+    },
+    {
+      "id": "e22",
+      "name": "축 위치 변경",
+      "type": "Issue",
+      "properties": {}
+    },
+    {
+      "id": "e23",
+      "name": "사이즈 불일치",
+      "type": "Issue",
+      "properties": {}
+    },
+    {
+      "id": "e24",
+      "name": "프로그램 수정 필요",
+      "type": "Issue",
+      "properties": {}
+    },
+    {
+      "id": "e25",
+      "name": "간섭 가능성",
+      "type": "Issue",
+      "properties": {}
+    },
+    {
+      "id": "e26",
+      "name": "예외사항 대응 인터록",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e27",
+      "name": "보호 기구물",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e28",
+      "name": "하부 검출",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e29",
+      "name": "사전체크 항목",
+      "type": "Manual",
+      "properties": {}
+    }
+  ],
+  "relations": []
+}

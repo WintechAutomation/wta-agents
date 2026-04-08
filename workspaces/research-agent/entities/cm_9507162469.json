@@ -1,0 +1,102 @@
+{
+  "page_id": "9507162469",
+  "title": "　케이스 관리",
+  "entities": [
+    {
+      "id": "e1",
+      "name": "케이스 관리",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e2",
+      "name": "케이스 목록",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e3",
+      "name": "팔레트",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e4",
+      "name": "매거진",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e5",
+      "name": "커버",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e6",
+      "name": "PUSHER",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e7",
+      "name": "TRS",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e8",
+      "name": "Case_Top_Guide_Height.png",
+      "type": "Manual",
+      "properties": {}
+    },
+    {
+      "id": "e9",
+      "name": "CN_KYOCERA_PKG_Case Manager.png",
+      "type": "Manual",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "DOCUMENTS"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "DOCUMENTS"
+    }
+  ]
+}

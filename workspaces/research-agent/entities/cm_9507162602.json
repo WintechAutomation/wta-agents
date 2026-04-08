@@ -1,0 +1,47 @@
+{
+  "page_id": "9507162602",
+  "title": "　케이스 관리 - 복사",
+  "entities": [
+    {
+      "id": "proc_01",
+      "name": "케이스 관리 - 복사",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_02",
+      "name": "케이스 관리 선택",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_03",
+      "name": "케이스 선택",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_04",
+      "name": "복사",
+      "type": "Process",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "source": "proc_01",
+      "target": "proc_02",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "proc_01",
+      "target": "proc_03",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "proc_01",
+      "target": "proc_04",
+      "type": "HAS_SUBPROCESS"
+    }
+  ]
+}
