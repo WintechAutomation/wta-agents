@@ -1,0 +1,168 @@
+{
+  "page_id": "9508984312",
+  "title": "4-2-2. 파라메터 설정화면",
+  "entities": [
+    {
+      "id": "eq_001",
+      "name": "파라메터 설정화면",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "proc_001",
+      "name": "일반 이동 속도 설정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_002",
+      "name": "Tool 교체 (Auto Tool Change)",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_003",
+      "name": "프레스",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_004",
+      "name": "디버링 (Brush)",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_005",
+      "name": "디버링 (Air Blow)",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_006",
+      "name": "단중",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "comp_001",
+      "name": "툴 교체",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_002",
+      "name": "브러쉬",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_003",
+      "name": "에어블러우",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_004",
+      "name": "카본판",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_005",
+      "name": "그리퍼",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_006",
+      "name": "엘리베이터",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_007",
+      "name": "피더 플레이트",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "manual_001",
+      "name": "4-2-2. 파라메터 설정화면 매뉴얼",
+      "type": "Manual",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "source": "manual_001",
+      "target": "eq_001",
+      "type": "DOCUMENTS"
+    },
+    {
+      "source": "eq_001",
+      "target": "proc_001",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "eq_001",
+      "target": "proc_002",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "eq_001",
+      "target": "proc_003",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "eq_001",
+      "target": "proc_004",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "eq_001",
+      "target": "proc_005",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "eq_001",
+      "target": "proc_006",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "proc_002",
+      "target": "comp_001",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "proc_003",
+      "target": "comp_005",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "proc_004",
+      "target": "comp_002",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "proc_005",
+      "target": "comp_003",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "proc_001",
+      "target": "comp_004",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "proc_001",
+      "target": "comp_006",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "proc_001",
+      "target": "comp_007",
+      "type": "USES_COMPONENT"
+    }
+  ]
+}

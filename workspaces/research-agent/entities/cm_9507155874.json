@@ -1,0 +1,69 @@
+{
+  "page_id": "9507155874",
+  "title": "4-2-1-2.  적재설정 - 작업 수량 변경",
+  "entities": [
+    {
+      "id": "e1",
+      "name": "적재설정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e2",
+      "name": "메인화면",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e3",
+      "name": "수량 변경 버튼",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e4",
+      "name": "작업 수량",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e5",
+      "name": "팔레트",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e6",
+      "name": "작업 수량 변경",
+      "type": "Process",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "source": "e2",
+      "target": "e1",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "HAS_SUBPROCESS"
+    }
+  ]
+}

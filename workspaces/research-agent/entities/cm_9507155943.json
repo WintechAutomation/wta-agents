@@ -1,0 +1,80 @@
+{
+  "page_id": "9507155943",
+  "title": "4-2-1-3.  적재설정 - 공정별 부분 운전",
+  "entities": [
+    {
+      "id": "proc_001",
+      "name": "적재설정 - 공정별 부분 운전",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_002",
+      "name": "적재설정 선택",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_003",
+      "name": "작업할 공정 선택",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "comp_001",
+      "name": "제품",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_002",
+      "name": "팔레트",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_003",
+      "name": "케이스",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "manual_001",
+      "name": "4-2-1-3. 적재설정 - 공정별 부분 운전",
+      "type": "Manual",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "source": "manual_001",
+      "target": "proc_001",
+      "type": "DOCUMENTS"
+    },
+    {
+      "source": "proc_001",
+      "target": "proc_002",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "proc_001",
+      "target": "proc_003",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "proc_003",
+      "target": "comp_001",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "proc_003",
+      "target": "comp_002",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "proc_003",
+      "target": "comp_003",
+      "type": "USES_COMPONENT"
+    }
+  ]
+}
