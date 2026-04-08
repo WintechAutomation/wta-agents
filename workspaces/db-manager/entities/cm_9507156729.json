@@ -1,0 +1,24 @@
+{
+  "page_id": "9507156729",
+  "title": "4-2-7. 운영 이력",
+  "entities": [
+    {
+      "id": "comp_OperationHistory_4_2_7",
+      "name": "HMI 운영 이력 화면 (4-2-7, 기본)",
+      "type": "Component",
+      "properties": {
+        "section": "4-2-7",
+        "description": "장비의 가동 및 알람 이력 확인",
+        "access": "메인화면 우측 운영이력 선택",
+        "ui_1": "기간 설정",
+        "ui_2": "기록 타입 선택",
+        "ui_3": "검색/저장",
+        "ui_4": "검색 결과 리스트",
+        "ui_5": "검색 결과 그래프",
+        "ui_6": "빠른 이동",
+        "ui_7": "닫기"
+      }
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,23 @@
+{
+  "page_id": "9508929717",
+  "title": "(국문, OKE)- 5-4-5. 측면 카메라 스페이서 티칭",
+  "entities": [
+    {
+      "id": "proc_SideCaraSpacerTeachOKE",
+      "name": "측면 카메라 스페이서 티칭 (OKE 5-4-5)",
+      "type": "Process",
+      "properties": {
+        "section": "5-4-5",
+        "customer": "OKE",
+        "steps": [
+          "Line1 선택 → 스페이서 윗단 클릭",
+          "Line2 선택 → 스페이서 아랫단 클릭",
+          "측정 버튼 클릭 → 스페이서 높이 자동 설정 (50 이상 되어야 함)",
+          "검출 버튼 클릭 → 저장 버튼 활성화 후 저장"
+        ],
+        "note": "스페이서 높이 수치 50 이상 필수"
+      }
+    }
+  ],
+  "relations": []
+}

@@ -1463,6 +1463,30 @@
       "updated_at": "2026-04-08 22:27:38",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-crafter-750586",
+      "agent": "crafter",
+      "task": "대시보드 에이전트 오피스 페이지(OfficePage.tsx) 리디자인 요청.",
+      "message": "대시보드 에이전트 오피스 페이지(OfficePage.tsx) 리디자인 요청.\n\n현재: PixiJS 픽셀아트 캐릭터 + 3층 건물 → 너무 장난스러움\n목표: 관제센터(NOC) 스타일로 전면 교체. 제조업 회사에 어울리는 세련된 모니터링 느낌.\n\n디자인 스펙:\n1. 배경: 다크 네이비(#0F172A) 기반, 미세한 그리드 패턴\n2. 중앙: MAX를 허브 노드로, 나머지 에이전트가 방사형 배치\n3. 에이전트 노드: 원형, 이모지 + 이름 + 상태 LED(온라인=밝은 글로우/오프라인=흐림)\n4. 부서별 영역 구분 (배경 색조로):\n   - 품질(nc-manager, qa-agent, issue-manager): 초록 계열\n   - 개발(dev-agent, crafter, db-manager, design-agent): 파랑 계열  \n   - CS/영업(cs-agent, sales-agent): 주황 계열\n   - 관리(admin-agent, slack-bot, docs-agent, schedule-agent): 보라 계열\n   - 데이터(research-agent): 시안 계열\n   - 기구(purchase-agent, control-agent): 회색/틸 계열\n5. 연결선: MAX↔각 에이전트 사이 라인, 실시간 메시지 시 글로우 애니메이션\n6. 하단 또는 우측: 최근 메시지 로그 피드 (5~10건)\n7. PixiJS 제거 가능 — React + CSS/SVG + Canvas 중 적절한 기술 선택\n\n기존 기능 유지:\n- 에이전트 온/오프라인 상태 표시 (agentStore 연동)\n- 에이전트 클릭 시 상세 정보 표시\n- 실시간 상태 갱신\n\n참고: 현재 OfficePage.tsx 위치 dashboard/src/pages/OfficePage.tsx\n기존 agentStore, AGENT_PROFILES, agentsConfig 등은 그대로 활용.\n\n완료 후 빌드 확인(npm run build)까지 해서 보고해줘.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 22:34:54",
+      "updated_at": "2026-04-08 22:34:54",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-qa-agent-c29f91",
+      "agent": "qa-agent",
+      "task": "대시보드 에이전트 오피스 페이지 QA 확인 요청.",
+      "message": "대시보드 에이전트 오피스 페이지 QA 확인 요청. \nhttp://localhost:5555 접속 → 에이전트 오피스 페이지 열어서:\n1. 페이지 정상 로드 여부\n2. 에이전트 17명 모두 표시되는지\n3. 온라인/오프라인 상태 표시 정상인지\n4. 스크린샷 찍어서 보고해줘",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 22:37:51",
+      "updated_at": "2026-04-08 22:37:51",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }

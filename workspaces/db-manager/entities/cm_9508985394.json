@@ -1,0 +1,28 @@
+{
+  "page_id": "9508985394",
+  "title": "원형 돌기 판 얼라인 홀 검출 및 보정 기능(RoundPlateAlign)",
+  "entities": [
+    {
+      "id": "proc_RoundPlateAlign",
+      "name": "RoundPlateAlign 원형 판 얼라인 홀 검출/보정",
+      "type": "Process",
+      "properties": {
+        "purpose": "서브 플레이트 없이 원형 플레이트 공급 시 각도 틀어짐 자동 보정",
+        "config_file": "D:/WintechAutomation/WMI/SystemData.xml",
+        "config_field": "RoundPlateAlign = true",
+        "vision_file": "D:/WintechAutomation/WMI/MODEL/#Default/AngleAlignCamera.vpp (없으면 Top.vpp 복사 후 이름 변경)",
+        "steps": [
+          "SystemData.xml에서 RoundPlateAlign → true 설정",
+          "AngleAlignCamera.vpp 파일 확인 및 준비",
+          "시스템 설정 → 얼라인 홀 세팅 클릭 (플레이트 원점 및 크기 계산 후 중앙 이동)",
+          "방향버튼으로 카메라 중심을 플레이트 중앙에 맞춤",
+          "방향버튼으로 얼라인 홀 중심에 맞춤",
+          "홀 미검출 시 플레이트 수동 회전 (검정화면 시 밝기 조절)",
+          "얼라인 홀 티칭 → 등록 → 저장",
+          "생성된 AngleAlignCamera.vpp를 현재 모델 폴더로 복사"
+        ]
+      }
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,145 @@
+import json, sys
+sys.stdout.reconfigure(encoding='utf-8')
+
+batch25 = [
+  {
+    "page_id": "9507151286",
+    "title": "-(한글 버전)- 4-2-7-2. 운영 이력 - 저장",
+    "entities": [
+      {"id": "proc_OperationHistorySaveKO", "name": "운영 이력 저장 (한글 4-2-7-2)", "type": "Process", "properties": {
+        "section": "4-2-7-2", "language": "Korean",
+        "steps": [
+          "메인화면에서 운영 이력 선택",
+          "기간 설정",
+          "검색 타입 선택",
+          "검색 실행",
+          "저장 선택 → 파일 저장 경로 선택 후 저장",
+          "저장 결과 확인"
+        ]
+      }}
+    ],
+    "relations": []
+  },
+  {
+    "page_id": "9507156791",
+    "title": "4-2-7-2. 운영 이력 - 저장",
+    "entities": [
+      {"id": "proc_OperationHistorySave_4_2_7_2", "name": "운영 이력 저장 (4-2-7-2)", "type": "Process", "properties": {
+        "section": "4-2-7-2",
+        "steps": [
+          "메인화면에서 운영 이력 선택",
+          "기간 설정",
+          "검색 타입 선택",
+          "검색 실행",
+          "저장 → 파일 경로 선택 후 저장",
+          "저장 결과 확인"
+        ]
+      }}
+    ],
+    "relations": []
+  },
+  {
+    "page_id": "9507151334",
+    "title": "-(한글 버전)- 4-2-8. 캘리브레이션",
+    "entities": [
+      {"id": "comp_CalibrationScreenKO", "name": "HMI 캘리브레이션 화면 (한글 4-2-8)", "type": "Component", "properties": {
+        "section": "4-2-8", "language": "Korean",
+        "description": "카메라-그리퍼 위치 교정 및 카메라 점검 화면",
+        "trigger": "그리퍼 픽업 위치 이상 또는 케이스 적재 이상 시 교정 필요",
+        "access": "메인화면 우측 시스템 설정 선택",
+        "ui_1": "항목 선택 — 그리퍼/HEAD/CASE 중 교정 항목 선택",
+        "ui_2": "팔레트/케이스 캘리브레이션 — 제품 픽업 및 적재 교정",
+        "ui_3": "카메라 라이브 — Vision 카메라 라이브 화면 (카메라 점검)",
+        "ui_4": "캘리브레이션 실행 상태 — 실시간 상태 표시",
+        "ui_5": "빠른 이동"
+      }}
+    ],
+    "relations": []
+  },
+  {
+    "page_id": "9507156839",
+    "title": "4-2-8. 캘리브레이션",
+    "entities": [
+      {"id": "comp_CalibrationScreen_4_2_8", "name": "HMI 캘리브레이션 화면 (4-2-8)", "type": "Component", "properties": {
+        "section": "4-2-8",
+        "description": "카메라-그리퍼 위치 교정 및 카메라 점검",
+        "trigger": "그리퍼 픽업 위치 이상 또는 케이스 적재 이상 시",
+        "access": "메인화면 우측 시스템 설정 선택",
+        "ui_1": "항목 선택 (그리퍼/HEAD/CASE)",
+        "ui_2": "팔레트/케이스 캘리브레이션",
+        "ui_3": "카메라 라이브",
+        "ui_4": "캘리브레이션 실행 상태",
+        "ui_5": "빠른 이동"
+      }}
+    ],
+    "relations": []
+  },
+  {
+    "page_id": "9507151360",
+    "title": "-(한글 버전)- 4-2-8-1. 팔레트에서 카메라와 그리퍼간 위치 보정",
+    "entities": [
+      {"id": "proc_PalletCamGripperCalibKO", "name": "팔레트 카메라-그리퍼 위치 보정 (한글 4-2-8-1)", "type": "Process", "properties": {
+        "section": "4-2-8-1", "language": "Korean",
+        "purpose": "팔레트에서 제품 픽업을 위한 그리퍼-카메라 간 위치 교정",
+        "required_tools": "캘리브레이션용 지그 2개, 캘리브레이션용 플레이트",
+        "steps": [
+          "장비 원점 복귀",
+          "캘리브레이션 화면 진입 후 HEAD1 → HEAD2로 전환",
+          "조작 패널 START 버튼으로 TP 실행 (정지 상태에서만 표시) → Grip 버튼(X2G1, X2G2) 클릭",
+          "그리퍼 공압 확인 (0.1~0.2MPa)",
+          "캘리브레이션 지그를 그리퍼 2개 모두에 그립"
+        ]
+      }}
+    ],
+    "relations": []
+  },
+  {
+    "page_id": "9507156865",
+    "title": "4-2-8-1. 팔레트에서 카메라와 그리퍼간 위치 보정",
+    "entities": [
+      {"id": "proc_PalletCamGripperCalib_4_2_8_1", "name": "팔레트 카메라-그리퍼 위치 보정 (4-2-8-1)", "type": "Process", "properties": {
+        "section": "4-2-8-1",
+        "purpose": "팔레트 제품 픽업용 그리퍼-카메라 위치 교정",
+        "required_tools": "캘리브레이션용 지그 2개, 캘리브레이션용 플레이트",
+        "steps": [
+          "장비 원점 복귀",
+          "캘리브레이션 화면 진입 후 HEAD1 → HEAD2 전환",
+          "START 버튼 TP 실행 → Grip 버튼(X2G1, X2G2) 클릭",
+          "그리퍼 공압 확인 (0.1~0.2MPa)",
+          "캘리브레이션 지그를 그리퍼 2개 모두 그립"
+        ]
+      }}
+    ],
+    "relations": []
+  },
+  {
+    "page_id": "9507151521",
+    "title": "-(한글 버전)- 4-2-8-2. HEAD1, HEAD2간 위치 보정",
+    "entities": [
+      {"id": "proc_Head1Head2CalibKO", "name": "HEAD1-HEAD2 위치 보정 (한글 4-2-8-2)", "type": "Process", "properties": {
+        "section": "4-2-8-2", "language": "Korean",
+        "status": "현재 미사용 기능"
+      }}
+    ],
+    "relations": []
+  },
+  {
+    "page_id": "9507157026",
+    "title": "4-2-8-2. HEAD1, HEAD2간 위치 보정",
+    "entities": [
+      {"id": "proc_Head1Head2Calib_4_2_8_2", "name": "HEAD1-HEAD2 위치 보정 (4-2-8-2)", "type": "Process", "properties": {
+        "section": "4-2-8-2",
+        "status": "현재 미사용 기능"
+      }}
+    ],
+    "relations": []
+  }
+]
+
+prog_path = 'C:/MES/wta-agents/workspaces/db-manager'
+with open(f'{prog_path}/entities/batch25_combined.json', 'w', encoding='utf-8') as f:
+    json.dump(batch25, f, ensure_ascii=False, indent=2)
+for item in batch25:
+    with open(f'{prog_path}/entities/cm_{item["page_id"]}.json', 'w', encoding='utf-8') as f:
+        json.dump(item, f, ensure_ascii=False, indent=2)
+print(f'Saved {len(batch25)}')

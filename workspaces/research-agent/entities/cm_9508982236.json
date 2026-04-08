@@ -1,0 +1,80 @@
+{
+  "page_id": "9508982236",
+  "title": "툴 장착 유지 확인",
+  "entities": [
+    {
+      "id": "e1",
+      "name": "툴 장착 유지 확인",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e2",
+      "name": "툴 장착",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e3",
+      "name": "WMX RESTART 엔진",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e4",
+      "name": "WMX 재실행",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e5",
+      "name": "결과 확인",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e6",
+      "name": "툴 낙하",
+      "type": "Issue",
+      "properties": {}
+    },
+    {
+      "id": "e7",
+      "name": "제작팀",
+      "type": "Person",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e5",
+      "target": "e6",
+      "type": "HAS_ISSUE"
+    },
+    {
+      "source": "e6",
+      "target": "e7",
+      "type": "INVOLVED_IN"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "page_id": "9507149034",
+  "title": "H1とH2のカメラ間隔測定（日本語）",
+  "entities": [
+    {
+      "id": "proc_H1H2CamIntervalJP",
+      "name": "H1-H2 카메라 간격 측정 (일본어)",
+      "type": "Process",
+      "properties": {
+        "language": "Japanese",
+        "purpose": "Head1과 Head2의 카메라 간격 측정 (팔레트 픽업 캘리브레이션용)",
+        "precondition": "장비 원점복귀, Head1 1번 그리퍼에 지그 그립",
+        "steps": [
+          "HMI 정지 상태에서 Start 버튼 → X1G1 버튼 클릭",
+          "H1G1 그리퍼에 지그 그립",
+          "팔레트를 작업 위치에 수동 공급",
+          "메인화면 → 캘리브레이션 → Top-2번 선택",
+          "비전 티칭: 패턴1 우클릭 → 트래커를 제품 형상에 맞게 크기 조정 → 전원 버튼 클릭 후 등록-검출-저장"
+        ]
+      }
+    }
+  ],
+  "relations": []
+}

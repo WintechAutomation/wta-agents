@@ -1,0 +1,24 @@
+{
+  "page_id": "9507151286",
+  "title": "-(한글 버전)- 4-2-7-2. 운영 이력 - 저장",
+  "entities": [
+    {
+      "id": "proc_OperationHistorySaveKO",
+      "name": "운영 이력 저장 (한글 4-2-7-2)",
+      "type": "Process",
+      "properties": {
+        "section": "4-2-7-2",
+        "language": "Korean",
+        "steps": [
+          "메인화면에서 운영 이력 선택",
+          "기간 설정",
+          "검색 타입 선택",
+          "검색 실행",
+          "저장 선택 → 파일 저장 경로 선택 후 저장",
+          "저장 결과 확인"
+        ]
+      }
+    }
+  ],
+  "relations": []
+}

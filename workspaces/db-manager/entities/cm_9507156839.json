@@ -1,0 +1,23 @@
+{
+  "page_id": "9507156839",
+  "title": "4-2-8. 캘리브레이션",
+  "entities": [
+    {
+      "id": "comp_CalibrationScreen_4_2_8",
+      "name": "HMI 캘리브레이션 화면 (4-2-8)",
+      "type": "Component",
+      "properties": {
+        "section": "4-2-8",
+        "description": "카메라-그리퍼 위치 교정 및 카메라 점검",
+        "trigger": "그리퍼 픽업 위치 이상 또는 케이스 적재 이상 시",
+        "access": "메인화면 우측 시스템 설정 선택",
+        "ui_1": "항목 선택 (그리퍼/HEAD/CASE)",
+        "ui_2": "팔레트/케이스 캘리브레이션",
+        "ui_3": "카메라 라이브",
+        "ui_4": "캘리브레이션 실행 상태",
+        "ui_5": "빠른 이동"
+      }
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,19 @@
+{
+  "page_id": "9508934523",
+  "title": "WMX IO Check list 프로그램",
+  "entities": [
+    {
+      "id": "tool_WMXIOChecker",
+      "name": "WMX IO Check list 프로그램",
+      "type": "Tool",
+      "properties": {
+        "purpose": "장비 생산 과정 중 IO 체크 — 실린더 동작 시간 측정, Input/Output 동작 확인, 합격 판정, xlsx 저장",
+        "how_to_open": "WMX Server 실행 → Setup 탭 → IO Checker 버튼",
+        "tabs": "Cylinder(실린더 전/후진 소요시간 및 센서감지), Input(단독 센서 감지 상태), Output(센서 미포함 축/기구물 동작 여부)",
+        "save": "저장 버튼 → [Data-IO Checker] 파일 덮어쓰기; 검사자 이름 입력 시 Data 폴더에 IOChecker_{이름} 신규 생성",
+        "goal": "장비별 동작 균일화 및 실제 가동 부합 상태 문서화"
+      }
+    }
+  ],
+  "relations": []
+}
