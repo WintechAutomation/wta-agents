@@ -1139,6 +1139,30 @@
       "updated_at": "2026-04-08 20:57:00",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-db-manager-ed9ca7",
+      "agent": "db-manager",
+      "task": "김근형님 긴급 요청. GraphRAG는 백그라운드로 진행하고 이것 먼저 처리해주세요.",
+      "message": "김근형님 긴급 요청. GraphRAG는 백그라운드로 진행하고 이것 먼저 처리해주세요.\n\n복수 장비 프로젝트 발주 품목 리스트:\n1. 최근 2년(2024.04~) 내 복수 장비 프로젝트에 발주된 재고보유 품목 전체\n2. 각 품목별 발주이력 전체 (프로젝트명, 발주일, 수량, 장비유형)\n3. SIO-20P, 50-01-06-0 포함\n\nreports/김근형/multi_project_items.json 저장 후 바로 보고.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 21:00:42",
+      "updated_at": "2026-04-08 21:00:42",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-docs-agent-10a720",
+      "agent": "docs-agent",
+      "task": "복수 장비 프로젝트 발주 품목 리스트 도착. 2,097건.",
+      "message": "복수 장비 프로젝트 발주 품목 리스트 도착. 2,097건.\n\n파일: reports/김근형/multi_project_items.json\n\n- SIO-20P: 3개 장비 프로젝트 확인\n- 50-01-06-0: 5개 장비 프로젝트 확인\n- 품목별 발주이력 전체 포함\n\n김근형님께 바로 전달해주세요.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 21:09:14",
+      "updated_at": "2026-04-08 21:09:14",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }
