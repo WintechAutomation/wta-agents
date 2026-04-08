@@ -1,0 +1,157 @@
+{
+  "page_id": "9508916165",
+  "title": "집진기 추가 작업.",
+  "entities": [
+    {
+      "id": "e1",
+      "name": "집진기",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e2",
+      "name": "레이저 각인",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e3",
+      "name": "연기 발생",
+      "type": "Issue",
+      "properties": {}
+    },
+    {
+      "id": "e4",
+      "name": "집진기 추가 작업",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e5",
+      "name": "집진기 체결 케이블",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e6",
+      "name": "케이블 타이",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e7",
+      "name": "마운트 자재",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e8",
+      "name": "공구",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e9",
+      "name": "러그박스",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e10",
+      "name": "커넥터 체결",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e11",
+      "name": "케이블 포설 작업",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e12",
+      "name": "하부 배선",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e13",
+      "name": "AC 배선 작업",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e14",
+      "name": "총알 단자 체결",
+      "type": "Process",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "source": "e4",
+      "target": "e3",
+      "type": "HAS_ISSUE"
+    },
+    {
+      "source": "e4",
+      "target": "e1",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e4",
+      "target": "e5",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e4",
+      "target": "e6",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e4",
+      "target": "e7",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e4",
+      "target": "e8",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e4",
+      "target": "e9",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e4",
+      "target": "e10",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e4",
+      "target": "e11",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e4",
+      "target": "e12",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e4",
+      "target": "e13",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e4",
+      "target": "e14",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e2",
+      "target": "e3",
+      "type": "HAS_ISSUE"
+    }
+  ]
+}

@@ -1,0 +1,256 @@
+{
+  "page_id": "9509146655",
+  "title": "소모품 셋업 매뉴얼",
+  "entities": [
+    {
+      "id": "doc_001",
+      "name": "소모품 셋업 매뉴얼",
+      "type": "Manual",
+      "properties": {}
+    },
+    {
+      "id": "proc_001",
+      "name": "소모품 점검",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_002",
+      "name": "소모품 사진 추가",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_003",
+      "name": "소모품 추가",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_004",
+      "name": "장비 작업시 소모품 확인",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "db_001",
+      "name": "DB consumables",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "db_002",
+      "name": "DB consumables_instance",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "db_003",
+      "name": "DB consumables_instance_log",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "btn_001",
+      "name": "소모품 점검 리스트 추가 버튼",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "btn_002",
+      "name": "소모품 점검 리스트 제거 버튼",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "btn_003",
+      "name": "닫기 버튼",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "btn_004",
+      "name": "추가 버튼",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "btn_005",
+      "name": "언어번역 버튼",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "btn_006",
+      "name": "저장 버튼",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "btn_007",
+      "name": "불러오기 버튼",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "btn_008",
+      "name": "삭제 버튼",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "inst_001",
+      "name": "Instance Name",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "inst_002",
+      "name": "Maintenance Type",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "inst_003",
+      "name": "Last Inspection",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "inst_004",
+      "name": "Output Group",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "inst_005",
+      "name": "Key",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "path_001",
+      "name": "D:\\WintechAutomation\\ConsumablesManager\\img",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "team_001",
+      "name": "설계팀",
+      "type": "Person",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "source": "doc_001",
+      "target": "proc_001",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "doc_001",
+      "target": "proc_002",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "doc_001",
+      "target": "proc_003",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "doc_001",
+      "target": "proc_004",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "proc_001",
+      "target": "db_001",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "proc_001",
+      "target": "db_002",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "proc_001",
+      "target": "db_003",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "proc_001",
+      "target": "btn_001",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "proc_001",
+      "target": "btn_002",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "proc_001",
+      "target": "btn_003",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "proc_003",
+      "target": "btn_004",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "proc_003",
+      "target": "btn_005",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "proc_003",
+      "target": "btn_006",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "proc_003",
+      "target": "btn_007",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "proc_003",
+      "target": "btn_008",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "proc_001",
+      "target": "inst_001",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "proc_001",
+      "target": "inst_002",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "proc_001",
+      "target": "inst_003",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "proc_001",
+      "target": "inst_004",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "proc_001",
+      "target": "inst_005",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "proc_002",
+      "target": "path_001",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "doc_001",
+      "target": "team_001",
+      "type": "INVOLVED_IN"
+    }
+  ]
+}

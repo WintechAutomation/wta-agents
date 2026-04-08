@@ -1,0 +1,96 @@
+{
+  "page_id": "9508985259",
+  "title": "프레스 비전 티칭 각도 설정 매뉴얼",
+  "entities": [
+    {
+      "id": "e1",
+      "name": "프레스 비전 티칭 각도 설정 매뉴얼",
+      "type": "Manual",
+      "properties": {}
+    },
+    {
+      "id": "e2",
+      "name": "하부 카메라",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e3",
+      "name": "상부 카메라",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e4",
+      "name": "R축",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e5",
+      "name": "돌기 검출",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e6",
+      "name": "적재",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e7",
+      "name": "비전 티칭",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e8",
+      "name": "오검출",
+      "type": "Issue",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "e5",
+      "target": "e2",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e6",
+      "target": "e3",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e6",
+      "target": "e4",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e7",
+      "target": "e2",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e7",
+      "target": "e8",
+      "type": "HAS_ISSUE"
+    }
+  ]
+}
