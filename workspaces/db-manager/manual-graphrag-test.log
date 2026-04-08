@@ -49,3 +49,30 @@
 [manual-graphrag] 02:38:37 --- 중간저장: 10건 완료 ---
 [manual-graphrag] 02:38:37 [11/50] [3_hmi] SAIA PCD .pdf
 [manual-graphrag] 02:38:37   텍스트: 2109자, 이미지: 0개
+[manual-graphrag] 02:40:37 엔티티 추출 오류 [SAIA PCD .pdf]: HTTPConnectionPool(host='182.224.6.147', port=11434): Read timed out. (read timeout=120)
+[manual-graphrag] 02:40:37   엔티티: 0개, 관계: 0개
+[manual-graphrag] 02:40:37   소요: 120.0초
+[manual-graphrag] 02:40:37 [12/50] [3_hmi] TOP Designer 사용설명서 (051230).pdf
+[manual-graphrag] 02:40:38   텍스트: 181804자, 이미지: 0개
+[manual-graphrag] 02:41:20   엔티티: 0개, 관계: 0개
+[manual-graphrag] 02:41:20   소요: 42.3초
+[manual-graphrag] 02:41:20 [13/50] [4_servo] 表紙_お願いRev.1.pdf
+[manual-graphrag] 02:41:20   텍스트: 2281자, 이미지: 0개
+[manual-graphrag] 02:42:31   엔티티: 0개, 관계: 0개
+[manual-graphrag] 02:42:31   소요: 71.5초
+[manual-graphrag] 02:42:31 [14/50] [4_servo] A5_motor_with_gear_dxf_list_Rev1.pdf
+[manual-graphrag] 02:42:31   텍스트: 27766자, 이미지: 0개
+[manual-graphrag] 02:43:53   엔티티: 0개, 관계: 0개
+[manual-graphrag] 02:43:53   소요: 81.9초
+[manual-graphrag] 02:43:53 [15/50] [4_servo] 편면Panasonic Servo 20160127 (일산 이구스 다이덴).pdf
+[manual-graphrag] 02:43:53   텍스트/이미지 없음: 편면Panasonic Servo 20160127 (일산 이구스 다이덴).pdf
+[manual-graphrag] 02:43:53 [16/50] [4_servo] SMOTOR-UM002C-KO-P-200807.pdf
+[manual-graphrag] 02:43:53   텍스트: 118656자, 이미지: 0개
+[manual-graphrag] 02:44:49   엔티티: 0개, 관계: 0개
+[manual-graphrag] 02:44:49   소요: 56.3초
+[manual-graphrag] 02:44:49 [17/50] [4_servo] 180629_Catalog_General-Catalog_KOR_L.pdf
+[manual-graphrag] 02:44:55   텍스트: 571131자, 이미지: 4개
+[manual-graphrag] 02:45:53   엔티티: 0개, 관계: 0개
+[manual-graphrag] 02:45:53   소요: 63.3초
+[manual-graphrag] 02:45:53 [18/50] [4_servo] 180202_Ezi-SERVOII EtherCAT 4X_KOR.pdf
+[manual-graphrag] 02:45:57   텍스트: 15734자, 이미지: 3개
