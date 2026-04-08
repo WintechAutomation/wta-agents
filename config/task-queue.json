@@ -611,6 +611,42 @@
       "updated_at": "2026-04-08 16:08:27",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-docs-agent-46284d",
+      "agent": "docs-agent",
+      "task": "db-manager가 erp_data.json 프로젝트 필드 업데이트 완료했습니다.",
+      "message": "db-manager가 erp_data.json 프로젝트 필드 업데이트 완료했습니다.\n\n- 발주이력 기준 2,581건 업데이트 완료\n- 계획 기준 폴백 1,525건\n- 미매칭 0건\n- 파일: C:\\MES\\wta-agents\\reports\\김근형\\erp_data.json\n\nHTML 재적용 진행해주세요. 완료되면 보고 바랍니다.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 16:10:52",
+      "updated_at": "2026-04-08 16:10:52",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-db-manager-be7086",
+      "agent": "db-manager",
+      "task": "docs-agent 피드백 건. CKR20-145-1065L 품목의 프로젝트가 \"2023 공용자재 구매\" (2023-05-03)로 되어 있는데, 김근형님에 따르면 최근 프로젝트는 ",
+      "message": "docs-agent 피드백 건. CKR20-145-1065L 품목의 프로젝트가 \"2023 공용자재 구매\" (2023-05-03)로 되어 있는데, 김근형님에 따르면 최근 프로젝트는 \"메이써루이 프레스 #14 (Kob,10t)\"이어야 합니다.\n\n해당 품목의 전체 발주이력을 MES 백엔드 API로 재조회해서 가장 최근 발주 프로젝트로 수정해주세요. erp_data.json에 반영 후 보고 바랍니다.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 16:13:29",
+      "updated_at": "2026-04-08 16:13:29",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-db-manager-74b63b",
+      "agent": "db-manager",
+      "task": "추가 요청 건. 이전 CKR20-145-1065L 건에 대해 김근형님 설명이 왔습니다.",
+      "message": "추가 요청 건. 이전 CKR20-145-1065L 건에 대해 김근형님 설명이 왔습니다.\n\n해당 품목은 \"재고감안\" 품목으로 업체 발주이력이 없습니다. 하지만 장비에 실제 사용되었기에 프로젝트는 \"메이써루이 프레스 #14 (Kob,10t)\"로 표시되어야 합니다.\n\n조회 방식 변경:\n- 발주이력 우선 → 없으면 생산계획/BOM 기준으로 프로젝트명 매칭 (재고감안 포함)\n- CKR20-145-1065L 같은 재고감안 품목도 생산계획에서 사용 프로젝트를 조회해서 반영\n\nerp_data.json에 해당 로직으로 재반영 후 보고해주세요.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 16:16:45",
+      "updated_at": "2026-04-08 16:16:45",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }
