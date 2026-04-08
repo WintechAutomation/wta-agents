@@ -24,7 +24,7 @@ PAGES_FILE = 'C:/MES/wta-agents/workspaces/research-agent/um-pages-part2.json'
 PROGRESS_FILE = 'C:/MES/wta-agents/workspaces/research-agent/um-extract-part2-progress.json'
 
 EMBED_URL = os.environ.get('EMBED_URL', 'http://182.224.6.147:11434/api/embed')
-EMBED_MODEL = 'hf.co/Qwen/Qwen3-Embedding-8B-GGUF:Q4_K_M'
+EMBED_MODEL = 'qwen3-embedding:8b'
 EMBED_DIM = 2000
 EMBED_BATCH = 8
 EMBED_DELAY = 0.5

@@ -1,0 +1,166 @@
+[
+  {
+    "page_id": "9508931471",
+    "title": "[Windows] 대기 모드 메모리 비우기",
+    "entities": [
+      {"id": "tool_EmptyStandbyList", "name": "EmptyStandbyList.exe", "type": "Tool", "properties": {"path": "C:\\CustomExecutables\\EmptyStandbyList.exe", "purpose": "대기 모드 메모리 비우기"}},
+      {"id": "tool_TaskScheduler", "name": "Windows 작업 스케줄러", "type": "Tool", "properties": {"command": "control schedtasks"}},
+      {"id": "proc_ClearStandbyMemory", "name": "대기 모드 메모리 비우기", "type": "Process", "properties": {"trigger": "주기적 실행", "method": "작업 스케줄러 등록"}}
+    ],
+    "relations": [
+      {"source": "proc_ClearStandbyMemory", "target": "tool_EmptyStandbyList", "type": "USES_TOOL"},
+      {"source": "proc_ClearStandbyMemory", "target": "tool_TaskScheduler", "type": "USES_TOOL"}
+    ]
+  },
+  {
+    "page_id": "9508926277",
+    "title": "(국문, OKE)- 3-3. 설비 전원 켜기/끄기",
+    "entities": [
+      {"id": "equip_OKE_Machine", "name": "OKE 설비", "type": "Equipment", "properties": {"manufacturer": "Wintech Automation", "customer": "OKE"}},
+      {"id": "comp_MainSwitch", "name": "메인전원 스위치", "type": "Component", "properties": {}},
+      {"id": "comp_UPS", "name": "UPS (무정전전원장치)", "type": "Component", "properties": {"backup_time": "2분"}},
+      {"id": "comp_HMI", "name": "HMI", "type": "Component", "properties": {"auto_start": "설정 가능"}},
+      {"id": "comp_ControlPC", "name": "컨트롤 PC", "type": "Component", "properties": {}},
+      {"id": "proc_PowerOn", "name": "설비 전원 켜기", "type": "Process", "properties": {"wait_time": "약 2분"}},
+      {"id": "proc_PowerOff", "name": "설비 전원 끄기", "type": "Process", "properties": {"wait_time": "약 3분"}},
+      {"id": "person_WintechEngineer", "name": "Wintech Automation 엔지니어", "type": "Person", "properties": {"company": "Wintech Automation"}}
+    ],
+    "relations": [
+      {"source": "equip_OKE_Machine", "target": "comp_UPS", "type": "USES_COMPONENT"},
+      {"source": "equip_OKE_Machine", "target": "comp_HMI", "type": "USES_COMPONENT"},
+      {"source": "equip_OKE_Machine", "target": "comp_ControlPC", "type": "USES_COMPONENT"},
+      {"source": "proc_PowerOn", "target": "comp_MainSwitch", "type": "INVOLVES_COMPONENT"},
+      {"source": "proc_PowerOff", "target": "comp_UPS", "type": "INVOLVES_COMPONENT"}
+    ]
+  },
+  {
+    "page_id": "9508984844",
+    "title": "OKE 옌링 프레스 MAP",
+    "entities": [
+      {"id": "cust_OKE_Yenling", "name": "OKE 옌링", "type": "Customer", "properties": {"location": "신공장"}},
+      {"id": "equip_OST_Press", "name": "OST 프레스", "type": "Equipment", "properties": {"brand": "오스트왈더", "count": 16}},
+      {"id": "equip_DORST_Press", "name": "DORST 프레스", "type": "Equipment", "properties": {"brand": "도르스트", "numbers": "#41, #42"}},
+      {"id": "equip_Kobayashi_Press", "name": "고바야시 프레스", "type": "Equipment", "properties": {"brand": "Kobayashi", "numbers": "#40, #39"}},
+      {"id": "equip_Handler", "name": "핸들러", "type": "Equipment", "properties": {"symbol": "Ｈ"}},
+      {"id": "issue_PressureFault", "name": "압력 불량 신호 무시 이슈", "type": "Issue", "properties": {"affected": "#41, #42", "resolution": "중량만 확인하여 적재"}}
+    ],
+    "relations": [
+      {"source": "cust_OKE_Yenling", "target": "equip_OST_Press", "type": "OWNS"},
+      {"source": "cust_OKE_Yenling", "target": "equip_DORST_Press", "type": "OWNS"},
+      {"source": "cust_OKE_Yenling", "target": "equip_Kobayashi_Press", "type": "OWNS"},
+      {"source": "equip_DORST_Press", "target": "issue_PressureFault", "type": "HAS_ISSUE"}
+    ]
+  },
+  {
+    "page_id": "9508926729",
+    "title": "(국문, OKE)- 4-2-1. 적재설정",
+    "entities": [
+      {"id": "proc_LoadSetting", "name": "적재설정", "type": "Process", "properties": {"description": "작업할 제품 선택 및 수량 설정"}},
+      {"id": "comp_Pallet", "name": "팔레트", "type": "Component", "properties": {}},
+      {"id": "comp_Case", "name": "케이스", "type": "Component", "properties": {}},
+      {"id": "proc_CaseSupply", "name": "케이스 공급", "type": "Process", "properties": {}},
+      {"id": "proc_CaseTakeout", "name": "케이스 취출", "type": "Process", "properties": {}},
+      {"id": "proc_CoverAssembly", "name": "커버 조립", "type": "Process", "properties": {}},
+      {"id": "proc_InkjetMarking", "name": "잉크젯 마킹", "type": "Process", "properties": {}},
+      {"id": "proc_Labeling", "name": "라벨링", "type": "Process", "properties": {}}
+    ],
+    "relations": [
+      {"source": "proc_LoadSetting", "target": "comp_Pallet", "type": "INVOLVES_COMPONENT"},
+      {"source": "proc_LoadSetting", "target": "proc_CaseSupply", "type": "HAS_SUBPROCESS"},
+      {"source": "proc_LoadSetting", "target": "proc_CaseTakeout", "type": "HAS_SUBPROCESS"},
+      {"source": "proc_LoadSetting", "target": "proc_Labeling", "type": "HAS_SUBPROCESS"},
+      {"source": "proc_LoadSetting", "target": "proc_InkjetMarking", "type": "HAS_SUBPROCESS"}
+    ]
+  },
+  {
+    "page_id": "9507157066",
+    "title": "4-2-8-3. 케이스 원점 설정",
+    "entities": [
+      {"id": "proc_CaseOriginSetting", "name": "케이스 원점 설정", "type": "Process", "properties": {"reference": "4-2-9-5. 케이스 원점 설정"}},
+      {"id": "manual_CaseOrigin", "name": "케이스 원점 설정 매뉴얼", "type": "Manual", "properties": {"section": "4-2-9-5"}}
+    ],
+    "relations": [
+      {"source": "manual_CaseOrigin", "target": "proc_CaseOriginSetting", "type": "DOCUMENTS"}
+    ]
+  },
+  {
+    "page_id": "9508927776",
+    "title": "(국문, OKE)- 4-2-8. 캘리브레이션",
+    "entities": [
+      {"id": "proc_Calibration", "name": "캘리브레이션", "type": "Process", "properties": {"purpose": "카메라와 그리퍼의 위치 교정"}},
+      {"id": "comp_Camera", "name": "Vision 카메라", "type": "Component", "properties": {"function": "그리퍼 위치 교정"}},
+      {"id": "comp_Gripper", "name": "그리퍼", "type": "Component", "properties": {}},
+      {"id": "proc_PalletCalib", "name": "팔레트 캘리브레이션", "type": "Process", "properties": {}},
+      {"id": "proc_CaseCalib", "name": "케이스 캘리브레이션", "type": "Process", "properties": {}}
+    ],
+    "relations": [
+      {"source": "proc_Calibration", "target": "comp_Camera", "type": "INVOLVES_COMPONENT"},
+      {"source": "proc_Calibration", "target": "comp_Gripper", "type": "INVOLVES_COMPONENT"},
+      {"source": "proc_Calibration", "target": "proc_PalletCalib", "type": "HAS_SUBPROCESS"},
+      {"source": "proc_Calibration", "target": "proc_CaseCalib", "type": "HAS_SUBPROCESS"}
+    ]
+  },
+  {
+    "page_id": "9507151561",
+    "title": "-(한글 버전)- 4-2-8-3. 케이스 원점 설정",
+    "entities": [
+      {"id": "proc_CaseOriginSettingKO", "name": "케이스 원점 설정 (한글)", "type": "Process", "properties": {"reference": "4-2-9-5. 케이스 원점 설정", "language": "Korean"}}
+    ],
+    "relations": []
+  },
+  {
+    "page_id": "9508984805",
+    "title": "YG1 프레스 장비 리스트",
+    "entities": [
+      {"id": "cust_YG1", "name": "YG1", "type": "Customer", "properties": {}},
+      {"id": "equip_YG1_Press_ACS", "name": "YG1 고바야시 프레스 (ACS)", "type": "Equipment", "properties": {"models": "PI-01~PI-06", "controller": "ACS", "tonnage": "10T/20T"}},
+      {"id": "equip_YG1_Press_WMX", "name": "YG1 고바야시 프레스 (WMX)", "type": "Equipment", "properties": {"models": "PI-07~PI-13", "controller": "WMX SoftServo"}},
+      {"id": "equip_YG1_Daehwa_Press", "name": "대화 프레스", "type": "Equipment", "properties": {"git": "KRYG1PRS_Daehwa_Scara"}},
+      {"id": "tool_ACS_Controller", "name": "ACS 제어기", "type": "Tool", "properties": {}},
+      {"id": "tool_WMX_Controller", "name": "WMX SoftServo 제어기", "type": "Tool", "properties": {"dll": "PEEtherCATCLRLibrary.dll"}},
+      {"id": "issue_DLL_Mismatch", "name": "10호기/13호기 DLL 버전 불일치", "type": "Issue", "properties": {"dll_files": "PEEtherCATCLRLibrary.dll, WMXCLRExpertLibraryx64.dll"}},
+      {"id": "prod_CCMT09T304_3JAW", "name": "CCMT09T304_3JAW", "type": "Product", "properties": {"plate_size": "R:270x220mm", "qty": 208}}
+    ],
+    "relations": [
+      {"source": "cust_YG1", "target": "equip_YG1_Press_ACS", "type": "OWNS"},
+      {"source": "cust_YG1", "target": "equip_YG1_Press_WMX", "type": "OWNS"},
+      {"source": "equip_YG1_Press_ACS", "target": "tool_ACS_Controller", "type": "USES_TOOL"},
+      {"source": "equip_YG1_Press_WMX", "target": "tool_WMX_Controller", "type": "USES_TOOL"},
+      {"source": "equip_YG1_Press_WMX", "target": "issue_DLL_Mismatch", "type": "HAS_ISSUE"}
+    ]
+  },
+  {
+    "page_id": "9508917289",
+    "title": "Software Limit 세팅 방법",
+    "entities": [
+      {"id": "proc_SWLimitSetting", "name": "Software Limit 세팅", "type": "Process", "properties": {"unit": "pulse", "ip": "10.0.0.2"}},
+      {"id": "comp_SWLimitPlus", "name": "S/W Limit Plus Value", "type": "Component", "properties": {"param_no": 8, "unit": "pulse"}},
+      {"id": "comp_SWLimitMinus", "name": "S/W Limit Minus Value", "type": "Component", "properties": {"param_no": 9, "unit": "pulse"}},
+      {"id": "tool_ServoDriver", "name": "서보 드라이버 파라미터 툴", "type": "Tool", "properties": {"access": "IP 접속"}}
+    ],
+    "relations": [
+      {"source": "proc_SWLimitSetting", "target": "comp_SWLimitPlus", "type": "INVOLVES_COMPONENT"},
+      {"source": "proc_SWLimitSetting", "target": "comp_SWLimitMinus", "type": "INVOLVES_COMPONENT"},
+      {"source": "proc_SWLimitSetting", "target": "tool_ServoDriver", "type": "USES_TOOL"}
+    ]
+  },
+  {
+    "page_id": "9508926042",
+    "title": "(국문, OKE)- 1-2. 설비 사용 관련 지침",
+    "entities": [
+      {"id": "equip_OKE_Packing", "name": "OKE 포장/라벨/마킹 설비", "type": "Equipment", "properties": {"purpose": "고객 특유 부품 포장/라벨/마킹 공정 자동화"}},
+      {"id": "cust_OKE", "name": "OKE", "type": "Customer", "properties": {}},
+      {"id": "proc_Packing", "name": "포장 공정", "type": "Process", "properties": {}},
+      {"id": "proc_Labeling2", "name": "라벨 공정", "type": "Process", "properties": {}},
+      {"id": "proc_Marking", "name": "마킹 공정", "type": "Process", "properties": {}},
+      {"id": "comp_Gripper2", "name": "그리퍼 악세서리", "type": "Component", "properties": {"note": "고객 특유 부가 설비"}}
+    ],
+    "relations": [
+      {"source": "cust_OKE", "target": "equip_OKE_Packing", "type": "OWNS"},
+      {"source": "equip_OKE_Packing", "target": "proc_Packing", "type": "HAS_SUBPROCESS"},
+      {"source": "equip_OKE_Packing", "target": "proc_Labeling2", "type": "HAS_SUBPROCESS"},
+      {"source": "equip_OKE_Packing", "target": "proc_Marking", "type": "HAS_SUBPROCESS"},
+      {"source": "equip_OKE_Packing", "target": "comp_Gripper2", "type": "USES_COMPONENT"}
+    ]
+  }
+]
