@@ -2387,6 +2387,18 @@
       "updated_at": "2026-04-09 08:39:36",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-db-manager-66a654",
+      "agent": "db-manager",
+      "task": "김근형님 슬랙 #docs 요청 — ERP 리스트 누락 이슈 확인 요청.",
+      "message": "김근형님 슬랙 #docs 요청 — ERP 리스트 누락 이슈 확인 요청.\n\n문제: ERP 현재고현황 및 구매진행현황 리스트에서 품목 누락 지속 발생\n- 예시: ZT610-600DPI+REWIND — 최근 발주가 \"개조\" 프로젝트라서 누락되는 것으로 추정\n\n확인 사항:\n1. ERP 현재고/구매진행 리스트 생성 로직에서 개선/개조 프로젝트가 필터링되고 있는지\n2. 누락 원인 분석\n3. 기존 분석 데이터: reports/김근형/ (erp_data.json, multi_project_items.json 등) 참고\n\n분석 후 보고해줘.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-09 08:49:06",
+      "updated_at": "2026-04-09 08:49:06",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }
