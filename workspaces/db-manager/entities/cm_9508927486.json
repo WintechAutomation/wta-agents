@@ -1,0 +1,21 @@
+{
+  "page_id": "9508927486",
+  "title": "(국문, OKE)- 4-2-4. 환경설정",
+  "entities": [
+    {
+      "id": "manual_OKEConfig_KO",
+      "name": "OKE 환경설정 화면 (4-2-4, 국문)",
+      "type": "Manual",
+      "properties": {
+        "language": "Korean",
+        "sections": [
+          "기본 작업 설정: 기본 속도 및 동작 파라미터",
+          "케이스 파라미터 설정",
+          "팔레트 작업 설정",
+          "취출 파라미터 설정"
+        ]
+      }
+    }
+  ],
+  "relations": []
+}

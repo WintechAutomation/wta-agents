@@ -1,0 +1,18 @@
+{
+  "page_id": "9507148279",
+  "title": "自動作業 - DIJET包装機#1（日本語）",
+  "entities": [
+    {
+      "id": "proc_AutoWorkDIJET1_JP",
+      "name": "자동 작업 - DIJET 포장기 #1 (일본어)",
+      "type": "Process",
+      "properties": {
+        "language": "Japanese",
+        "start": "메인화면 운전 시작 버튼",
+        "stop_finish": "마무리 정지: 제품 공급 완료 후 정위치 정지",
+        "stop_immediate": "즉시 정지: 현재 위치에서 즉시 정지"
+      }
+    }
+  ],
+  "relations": []
+}

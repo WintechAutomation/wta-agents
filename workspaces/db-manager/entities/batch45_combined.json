@@ -1,0 +1,151 @@
+[
+  {
+    "page_id": "9508926243",
+    "title": "(국문, OKE)- 3. 시운전",
+    "entities": [
+      {
+        "id": "manual_OKECommissioning_KO",
+        "name": "OKE 시운전 (3장, 국문)",
+        "type": "Manual",
+        "properties": {
+          "language": "Korean",
+          "note": "시운전은 Wintech Automation 엔지니어만 실시. 기능 검사 및 일반 조건 숙련 엔지니어 검사"
+        }
+      }
+    ],
+    "relations": []
+  },
+  {
+    "page_id": "9508926254",
+    "title": "(국문, OKE)- 3-1. 설비의 운반 및 취급",
+    "entities": [
+      {
+        "id": "manual_OKETransport_KO",
+        "name": "OKE 설비 운반 및 취급 (3-1, 국문)",
+        "type": "Manual",
+        "properties": {
+          "language": "Korean",
+          "note": "운반은 Wintech Automation 조립기사/특수업체 담당. 임의 운반 시 제조사 협의 필수 (보증 소멸 방지)",
+          "equipment": "리프팅 장비 및 운반 장치 사용 필수"
+        }
+      }
+    ],
+    "relations": []
+  },
+  {
+    "page_id": "9508926266",
+    "title": "(국문, OKE)- 3-2. 조립 및 설치",
+    "entities": [
+      {
+        "id": "manual_OKEInstallation_KO",
+        "name": "OKE 조립 및 설치 (3-2, 국문)",
+        "type": "Manual",
+        "properties": {
+          "language": "Korean",
+          "assembly": "Wintech Automation 엔지니어 진행",
+          "pneumatic": "설비 명판 사양으로 설치",
+          "electrical": "전문 기사 진행, 전압 편차 ±5% 이내 권장, 컨트롤 패널 커버 항시 닫힘 유지"
+        }
+      }
+    ],
+    "relations": []
+  },
+  {
+    "page_id": "9508926277",
+    "title": "(국문, OKE)- 3-3. 설비 전원 켜기_끄기",
+    "entities": [
+      {
+        "id": "proc_OKEPowerOnOff_KO",
+        "name": "OKE 설비 전원 켜기/끄기 (3-3, 국문)",
+        "type": "Process",
+        "properties": {
+          "language": "Korean",
+          "power_on": [
+            "메인전원 스위치 ON",
+            "Power 램프 점등 확인 (약 2분 대기)",
+            "컨트롤 PC 부팅 완료 후 HMI 실행"
+          ],
+          "power_off": [
+            "비상 정지 버튼 누름",
+            "메인전원 스위치 OFF",
+            "잔류 전압 소멸까지 대기 (약 3분)"
+          ],
+          "ups_note": "메인 전원 차단 후 UPS에 의해 PC 동작 유지. 1분 내 HMI 정상 저장/종료 및 OS 종료 필요"
+        }
+      }
+    ],
+    "relations": []
+  },
+  {
+    "page_id": "9508926409",
+    "title": "(국문, OKE)- 4. 화면구조",
+    "entities": [
+      {
+        "id": "manual_OKEScreenStructure_KO",
+        "name": "OKE HMI 화면 구조 (4장, 국문)",
+        "type": "Manual",
+        "properties": {
+          "language": "Korean",
+          "description": "OKE HMI 화면 구조 개요"
+        }
+      }
+    ],
+    "relations": []
+  },
+  {
+    "page_id": "9508926420",
+    "title": "(국문, OKE)- 4-1. 메인화면 설명",
+    "entities": [
+      {
+        "id": "manual_OKEMainScreen_KO",
+        "name": "OKE HMI 메인화면 설명 (4-1, 국문)",
+        "type": "Manual",
+        "properties": {
+          "language": "Korean",
+          "status_lamp": "ENABLE/RUN/PAUSE/ERROR/E-STOP 상태 표시",
+          "production_info": "분당 생산량(실시간), LOT 수량(남은/전체), 라벨 수량",
+          "buttons": "원점복귀: 모든 축 ON 후 원점 복귀"
+        }
+      }
+    ],
+    "relations": []
+  },
+  {
+    "page_id": "9508926718",
+    "title": "(국문, OKE)- 4-2. 서브 화면 설명",
+    "entities": [
+      {
+        "id": "manual_OKESubScreen_KO",
+        "name": "OKE HMI 서브화면 설명 (4-2, 국문)",
+        "type": "Manual",
+        "properties": {
+          "language": "Korean",
+          "description": "OKE HMI 서브화면 구조 및 설명"
+        }
+      }
+    ],
+    "relations": []
+  },
+  {
+    "page_id": "9508926729",
+    "title": "(국문, OKE)- 4-2-1. 적재설정",
+    "entities": [
+      {
+        "id": "manual_OKELoadingSetup_KO",
+        "name": "OKE 적재설정 화면 (4-2-1, 국문)",
+        "type": "Manual",
+        "properties": {
+          "language": "Korean",
+          "features": [
+            "모델 목록: 작업할 모델 선택",
+            "작업중인 모델 라벨 데이터 표시",
+            "작업할 팔레트 목록: 작업 중/저장소 대기/저장소 없음/팔레트 제거/수량 설정",
+            "빠른 이동: 아이콘 버튼으로 상태 전환",
+            "수동 물류 동작"
+          ]
+        }
+      }
+    ],
+    "relations": []
+  }
+]

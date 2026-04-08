@@ -1,0 +1,17 @@
+{
+  "page_id": "9508926254",
+  "title": "(국문, OKE)- 3-1. 설비의 운반 및 취급",
+  "entities": [
+    {
+      "id": "manual_OKETransport_KO",
+      "name": "OKE 설비 운반 및 취급 (3-1, 국문)",
+      "type": "Manual",
+      "properties": {
+        "language": "Korean",
+        "note": "운반은 Wintech Automation 조립기사/특수업체 담당. 임의 운반 시 제조사 협의 필수 (보증 소멸 방지)",
+        "equipment": "리프팅 장비 및 운반 장치 사용 필수"
+      }
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,16 @@
+{
+  "page_id": "9508926100",
+  "title": "(국문, OKE)- 2. 안전 참고 사항",
+  "entities": [
+    {
+      "id": "manual_OKESafety_KO",
+      "name": "OKE 안전 참고 사항 (2장, 국문)",
+      "type": "Manual",
+      "properties": {
+        "language": "Korean",
+        "description": "OKE 장비 안전 참고 사항"
+      }
+    }
+  ],
+  "relations": []
+}

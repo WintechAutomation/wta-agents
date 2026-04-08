@@ -1,0 +1,15 @@
+{
+  "page_id": "9508917190",
+  "title": "PC 및 RTX 환경 설정 메뉴얼 (추가 사항)",
+  "entities": [
+    {
+      "id": "manual_PCRTXSetupAdditional",
+      "name": "PC 및 RTX 환경 설정 추가 사항",
+      "type": "Manual",
+      "properties": {
+        "description": "PC 및 RTX 환경 설정 매뉴얼 추가 사항"
+      }
+    }
+  ],
+  "relations": []
+}

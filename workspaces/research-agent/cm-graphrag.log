@@ -143,7 +143,5 @@
 [ra-graphrag] 22:59:31   Neo4j: 22노드, 0관계
 [ra-graphrag] 22:59:31 [15/439] 9508980329 — #저울 캘리브레이션
 [ra-graphrag] 22:59:45   임베딩 2청크
-icationClassification.PERFORMANCE: 'PERFORMANCE'>, raw_severity='INFORMATION', severity=<NotificationSeverity.INFORMATION: 'INFORMATION'>, diagnostic_record={'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/', '_classification': 'PERFORMANCE', '_severity': 'INFORMATION', '_position': {'column': 1, 'offset': 0, 'line': 1}}> for query: 'MATCH (a {_id: $src}), (b {_id: $tgt}) MERGE (a)-[r:DOCUMENTS]->(b)'
-[ra-graphrag] 22:55:57   Neo4j: 16노드, 15관계
-[ra-graphrag] 22:55:58 [13/439] 9508979622 — #기본 위치(작업 위치) 설정하기
-[ra-graphrag] 22:56:46   임베딩 3청크
+[ra-graphrag] 23:00:07 Received notification from DBMS server: <GqlStatusObject gql_status='03N42', status_description='If a part of a query contains multiple disconnected patterns, this will build a cartesian product between all those parts. This may produce a large amount of data and slow down query processing. While occasionally intended, it may often be possible to reformulate the query that avoids the use of this cross product, perhaps by adding a relationship between the different parts or by using OPTIONAL MATCH (identifier is: (b))', position=<SummaryInputPosition line=1, column=1, offset=0>, raw_classification='PERFORMANCE', classification=<NotificationClassification.PERFORMANCE: 'PERFORMANCE'>, raw_severity='INFORMATION', severity=<NotificationSeverity.INFORMATION: 'INFORMATION'>, diagnostic_record={'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/', '_classification': 'PERFORMANCE', '_severity': 'INFORMATION', '_position': {'column': 1, 'offset': 0, 'line': 1}}> for query: 'MATCH (a {_id: $src}), (b {_id: $tgt}) MERGE (a)-[r:INVOLVED_IN]->(b)'
+[ra

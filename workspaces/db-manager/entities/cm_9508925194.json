@@ -1,0 +1,18 @@
+{
+  "page_id": "9508925194",
+  "title": "TURNER_언로딩",
+  "entities": [
+    {
+      "id": "proc_TurnerUnloadingPositionSetup",
+      "name": "TURNER 언로딩 작업 위치 설정",
+      "type": "Process",
+      "properties": {
+        "passline": "X축 이동 간섭 방지 Z축 기본 위치 (모델/그리퍼별 다름)",
+        "turn_z_inversion": "TURN축 180도 회전 시 센터링 핀 서로 눌리지 않는 TURN_Z 위치 — 리미트 직전까지 올린 후 조금씩 하강 확인",
+        "gripper_x_z": "팔레트 그리퍼 반전 전/후 픽업 시 X/Z 위치 (툴별, 3jaw 기준 반전핀 1~2mm 돌출)",
+        "x_standby": "반전기 회전 시 그리퍼 간섭 방지 X축 대기 위치"
+      }
+    }
+  ],
+  "relations": []
+}

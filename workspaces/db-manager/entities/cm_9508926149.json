@@ -1,0 +1,16 @@
+{
+  "page_id": "9508926149",
+  "title": "(국문, OKE)- 2-2. 규정 준수 사용 및 책임 배제",
+  "entities": [
+    {
+      "id": "manual_OKECompliance_KO",
+      "name": "OKE 규정 준수 사용 및 책임 배제 (2-2, 국문)",
+      "type": "Manual",
+      "properties": {
+        "language": "Korean",
+        "note": "사용 설명서 규정 용도 외 사용 시 제조사 책임 없음. 독자적 변경/비협의 기술 변경 시 안전 영향 가능"
+      }
+    }
+  ],
+  "relations": []
+}

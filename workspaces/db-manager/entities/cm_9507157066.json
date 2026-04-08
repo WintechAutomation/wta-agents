@@ -1,0 +1,15 @@
+{
+  "page_id": "9507157066",
+  "title": "4-2-8-3. 케이스 원점 설정",
+  "entities": [
+    {
+      "id": "proc_CaseHomeSetup",
+      "name": "케이스 원점 설정 (4-2-8-3)",
+      "type": "Process",
+      "properties": {
+        "description": "케이스 원점 설정 참조 문서 (4-2-9-5 참고)"
+      }
+    }
+  ],
+  "relations": []
+}

@@ -103,7 +103,6 @@ export default function OfficePage() {
 
   const [selectedAgent, setSelectedAgent] = useState<string | null>(null)
   const [pulseLines, setPulseLines] = useState<Set<string>>(new Set())
-  const [showPanel, setShowPanel] = useState(false)
   const svgRef = useRef<SVGSVGElement>(null)
 
   const onlineSet = useMemo(
@@ -158,10 +157,13 @@ export default function OfficePage() {
     return () => clearTimeout(timer)
   }, [messages])
 
-  // 최근 메시지 피드 (10건)
+  // 최근 메시지 피드 (10건, 선택 에이전트 필터링)
   const recentMessages = useMemo(() => {
-    return messages.slice(-10).reverse()
-  }, [messages])
+    const filtered = selectedAgent
+      ? messages.filter((m) => m.from === selectedAgent || m.to === selectedAgent)
+      : messages
+    return filtered.slice(-10).reverse()
+  }, [messages, selectedAgent])
 
   const selectedProfile = selectedAgent
     ? (agentsConfig[selectedAgent as keyof typeof agentsConfig] as {
@@ -174,9 +176,6 @@ export default function OfficePage() {
       {/* 헤더 */}
       <div className="mb-1 px-1">
         <h1 className="text-sm font-bold text-slate-100">Agent Control Center</h1>
-        <p className="text-slate-500 text-xs mt-0">
-          WTA Multi-Agent System — {Object.keys(AGENT_PROFILES).length} agents
-        </p>
       </div>
 
       {/* KPI 바 */}
@@ -188,27 +187,13 @@ export default function OfficePage() {
         <KpiCard label="MESSAGES" value={stats.total_messages} color="#f59e0b" />
       </div>
 
-      <div className="relative" style={{ minHeight: 'calc(100vh - 160px)' }}>
-        {/* 패널 토글 버튼 */}
-        <button
-          onClick={() => setShowPanel(!showPanel)}
-          className="absolute top-2 right-2 z-30 px-2 py-1 rounded-lg text-xs font-mono border"
-          style={{
-            background: 'rgba(30,41,59,0.9)',
-            borderColor: 'rgba(71,85,105,0.5)',
-            color: '#94a3b8',
-          }}
-        >
-          {showPanel ? '✕ 닫기' : '☰ 패널'}
-        </button>
-
-        {/* 메인 관제 맵 (전체 너비) */}
+      <div className="flex gap-3" style={{ minHeight: 'calc(100vh - 120px)' }}>
+        {/* 메인 관제 맵 */}
         <div
-          className="w-full rounded-xl border overflow-hidden relative"
+          className="flex-1 rounded-xl border overflow-hidden relative"
           style={{
             borderColor: 'rgba(51,65,85,0.5)',
             background: 'linear-gradient(180deg, #0F172A 0%, #1E293B 100%)',
-            minHeight: 'calc(100vh - 160px)',
           }}
         >
           {/* 그리드 패턴 배경 */}
@@ -375,17 +360,26 @@ export default function OfficePage() {
                 )}
               </circle>
               {workingSet.has('MAX') && (
-                <text
-                  x={CX}
-                  y={CY + 28}
-                  textAnchor="middle"
-                  fontSize="7"
-                  fill="#60a5fa"
-                  fontFamily="ui-monospace, monospace"
-                  fontWeight="600"
+                <circle
+                  cx={CX}
+                  cy={CY}
+                  r={32}
+                  fill="none"
+                  stroke="#60a5fa"
+                  strokeWidth={2}
+                  strokeDasharray="20 60"
+                  strokeLinecap="round"
+                  opacity={0.8}
                 >
-                  작업 중
-                </text>
+                  <animateTransform
+                    attributeName="transform"
+                    type="rotate"
+                    from={`0 ${CX} ${CY}`}
+                    to={`360 ${CX} ${CY}`}
+                    dur="2s"
+                    repeatCount="indefinite"
+                  />
+                </circle>
               )}
             </g>
 
@@ -462,19 +456,28 @@ export default function OfficePage() {
                       <animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite" />
                     )}
                   </circle>
-                  {/* 작업중 표시 */}
+                  {/* 작업중 spinning arc */}
                   {workingSet.has(node.id) && (
-                    <text
-                      x={node.x}
-                      y={node.y + 24}
-                      textAnchor="middle"
-                      fontSize="6"
-                      fill="#60a5fa"
-                      fontFamily="ui-monospace, monospace"
-                      fontWeight="600"
+                    <circle
+                      cx={node.x}
+                      cy={node.y}
+                      r={28}
+                      fill="none"
+                      stroke="#60a5fa"
+                      strokeWidth={1.5}
+                      strokeDasharray="16 50"
+                      strokeLinecap="round"
+                      opacity={0.7}
                     >
-                      작업 중
-                    </text>
+                      <animateTransform
+                        attributeName="transform"
+                        type="rotate"
+                        from={`0 ${node.x} ${node.y}`}
+                        to={`360 ${node.x} ${node.y}`}
+                        dur="2s"
+                        repeatCount="indefinite"
+                      />
+                    </circle>
                   )}
                 </g>
               )
@@ -482,11 +485,10 @@ export default function OfficePage() {
           </svg>
         </div>
 
-        {/* 오버레이 패널 */}
-        {showPanel && (
+        {/* 우측 고정 패널 */}
         <div
-          className="absolute top-10 right-2 z-20 w-72 flex flex-col gap-3 max-h-[calc(100%-60px)] overflow-y-auto rounded-xl p-3"
-          style={{ background: 'rgba(15,23,42,0.95)', border: '1px solid rgba(51,65,85,0.6)', backdropFilter: 'blur(8px)' }}
+          className="w-64 flex-shrink-0 flex flex-col gap-3 overflow-y-auto rounded-xl p-3"
+          style={{ background: 'rgba(15,23,42,0.9)', border: '1px solid rgba(51,65,85,0.5)' }}
         >
           {/* 선택된 에이전트 정보 */}
           {selectedAgent && selectedProfile && (
@@ -558,7 +560,14 @@ export default function OfficePage() {
             className="rounded-xl border p-3 flex-1 min-h-0"
             style={{ borderColor: 'rgba(51,65,85,0.5)', background: 'rgba(30,41,59,0.6)' }}
           >
-            <div className="text-xs font-semibold text-slate-400 mb-2">RECENT ACTIVITY</div>
+            <div className="text-xs font-semibold text-slate-400 mb-2">
+              RECENT ACTIVITY
+              {selectedAgent && (
+                <span className="ml-1 text-blue-400 font-normal">
+                  ({AGENT_PROFILES[selectedAgent]?.name || selectedAgent})
+                </span>
+              )}
+            </div>
             <div className="space-y-1.5 overflow-y-auto max-h-[320px]">
               {recentMessages.length === 0 && (
                 <div className="text-xs text-slate-600 py-4 text-center">메시지 없음</div>
@@ -591,39 +600,6 @@ export default function OfficePage() {
             </div>
           </div>
         </div>
-        )}
-      </div>
-
-      {/* 하단 에이전트 상태 그리드 */}
-      <div className="mt-4 grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-2">
-        {Object.entries(AGENT_PROFILES).map(([id, p]) => {
-          const online = onlineSet.has(id)
-          const working = workingSet.has(id)
-          const color = AGENT_COLORS[id] || '#64748b'
-          return (
-            <div
-              key={id}
-              className="flex items-center gap-1.5 text-xs px-2 py-1.5 rounded-lg border cursor-pointer"
-              style={{
-                borderColor: working ? '#3b82f640' : online ? `${color}40` : 'rgba(51,65,85,0.3)',
-                background: working ? '#1e3a5f18' : online ? `${color}0a` : 'transparent',
-                color: online ? '#e2e8f0' : '#475569',
-              }}
-              onClick={() => { setSelectedAgent(selectedAgent === id ? null : id); setShowPanel(true) }}
-            >
-              <span
-                className="w-1.5 h-1.5 rounded-full flex-shrink-0"
-                style={{
-                  background: working ? '#60a5fa' : online ? '#22c55e' : '#475569',
-                  boxShadow: working ? '0 0 6px #60a5fa' : online ? '0 0 6px #22c55e' : 'none',
-                  animation: working ? 'pulse 1.5s infinite' : 'none',
-                }}
-              />
-              {p.emoji} {p.name}
-              {working && <span className="text-blue-400 text-[10px] ml-auto">작업중</span>}
-            </div>
-          )
-        })}
       </div>
     </div>
   )

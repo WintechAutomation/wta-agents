@@ -1,0 +1,15 @@
+{
+  "page_id": "9508924704",
+  "title": "WASHER",
+  "entities": [
+    {
+      "id": "comp_Washer",
+      "name": "WASHER (세척기)",
+      "type": "Component",
+      "properties": {
+        "description": "WASHER 세척기 작업 위치 설정"
+      }
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,18 @@
+{
+  "page_id": "9508924775",
+  "title": "ROT_언로딩",
+  "entities": [
+    {
+      "id": "proc_ROTUnloadingPositionSetup",
+      "name": "ROT 언로딩 작업 위치 설정",
+      "type": "Process",
+      "properties": {
+        "g1_pickup": "G1 그리퍼 막대 제품 픽업 위치 — G2는 스페이서 취출 위치, 회수통 진입 확인",
+        "g2_load": "G2 그리퍼 막대 제품 픽업 적재 위치 — G1은 반전기 핀과 동일 점 위치 필수",
+        "standby": "X축 간섭/충돌 방지 대기 ROT 위치 (약 20mm 간격)",
+        "gz_rise": "ROT 이동 전 간섭 방지 G1Z/G2Z 상승 위치"
+      }
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,22 @@
+{
+  "page_id": "9508926729",
+  "title": "(국문, OKE)- 4-2-1. 적재설정",
+  "entities": [
+    {
+      "id": "manual_OKELoadingSetup_KO",
+      "name": "OKE 적재설정 화면 (4-2-1, 국문)",
+      "type": "Manual",
+      "properties": {
+        "language": "Korean",
+        "features": [
+          "모델 목록: 작업할 모델 선택",
+          "작업중인 모델 라벨 데이터 표시",
+          "작업할 팔레트 목록: 작업 중/저장소 대기/저장소 없음/팔레트 제거/수량 설정",
+          "빠른 이동: 아이콘 버튼으로 상태 전환",
+          "수동 물류 동작"
+        ]
+      }
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,22 @@
+{
+  "page_id": "9507149202",
+  "title": "ケースの上でカメラとグリッパーの間の位置校正（日本語）",
+  "entities": [
+    {
+      "id": "proc_CaseCamGripCalib_JP",
+      "name": "케이스 카메라-그리퍼 간격 교정 (일본어)",
+      "type": "Process",
+      "properties": {
+        "language": "Japanese",
+        "purpose": "케이스 위에서 카메라와 그리퍼 간 거리 측정",
+        "precondition": "원점복귀 → 케이스 수동 공급 및 반전 (FD1, FD2) → 공압 0.1~0.2 MPa 조정",
+        "steps": [
+          "메인화면 → 캘리브레이션 → 그리퍼/헤드/케이스 선택",
+          "Top-4번 선택",
+          "그리퍼 높이 티칭"
+        ]
+      }
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,15 @@
+{
+  "page_id": "9508916382",
+  "title": "내몽골 PRS #1,2 디버링, 스테이션 센서 현장 작업",
+  "entities": [
+    {
+      "id": "proc_MongolPRSDeburring",
+      "name": "내몽골 PRS #1,2 디버링 스테이션 센서 현장 작업",
+      "type": "Process",
+      "properties": {
+        "description": "내몽골 PRS 1,2호기 디버링 스테이션 센서 현장 작업"
+      }
+    }
+  ],
+  "relations": []
+}

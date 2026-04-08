@@ -1,0 +1,18 @@
+{
+  "page_id": "9508926266",
+  "title": "(국문, OKE)- 3-2. 조립 및 설치",
+  "entities": [
+    {
+      "id": "manual_OKEInstallation_KO",
+      "name": "OKE 조립 및 설치 (3-2, 국문)",
+      "type": "Manual",
+      "properties": {
+        "language": "Korean",
+        "assembly": "Wintech Automation 엔지니어 진행",
+        "pneumatic": "설비 명판 사양으로 설치",
+        "electrical": "전문 기사 진행, 전압 편차 ±5% 이내 권장, 컨트롤 패널 커버 항시 닫힘 유지"
+      }
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,15 @@
+{
+  "page_id": "9507149440",
+  "title": "OKE 사용자 메뉴얼 (쥬쥬쫜스 버전에서 바뀐 부분)",
+  "entities": [
+    {
+      "id": "manual_OKEUserManualUpdate",
+      "name": "OKE 사용자 메뉴얼 (업데이트 변경사항)",
+      "type": "Manual",
+      "properties": {
+        "description": "이전 쥬쥬쫜스 버전 대비 OKE 버전 변경사항"
+      }
+    }
+  ],
+  "relations": []
+}

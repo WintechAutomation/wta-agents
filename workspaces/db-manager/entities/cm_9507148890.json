@@ -1,0 +1,22 @@
+{
+  "page_id": "9507148890",
+  "title": "パレット上でカメラとグリッパー間隔位置校正（日本語）",
+  "entities": [
+    {
+      "id": "proc_PalletCamGripCalib_JP",
+      "name": "팔레트 카메라-그리퍼 간격 교정 (일본어)",
+      "type": "Process",
+      "properties": {
+        "language": "Japanese",
+        "purpose": "팔레트 위에서 카메라와 그리퍼 간 거리 측정",
+        "precondition": "원점복귀 → 그리퍼 공압 조정(0.1~0.2 MPa) → Head1 그리퍼에 지그 그립",
+        "steps": [
+          "메인화면 → 캘리브레이션 → 그리퍼/헤드/케이스 선택",
+          "Top-1번 선택",
+          "그리퍼 높이 티칭"
+        ]
+      }
+    }
+  ],
+  "relations": []
+}

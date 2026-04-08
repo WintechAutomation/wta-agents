@@ -1,0 +1,26 @@
+{
+  "page_id": "9508917345",
+  "title": "TP 동작 확인 매뉴얼(Penmount 9036)",
+  "entities": [
+    {
+      "id": "proc_TPPenmount9036Setup",
+      "name": "TP 동작 확인 (Penmount 9036)",
+      "type": "Process",
+      "properties": {
+        "target": "중국 TP 동작 확인",
+        "touch_setup": [
+          "Setup 프로그램 설치",
+          "PenMount Monitor → 제어판 → 새로 전환",
+          "PenMount 9000 RS232 생성 확인",
+          "다중 모니터 → 터치 인식 지정"
+        ],
+        "button_led": [
+          "mbpoll 실행 → Display HEX",
+          "Slave DI:5, Address:1, Length:4, Scan Rate:100",
+          "COM PORT 19200 Baud, 8 Data bits, Even Parity, 1 Stop Bit"
+        ]
+      }
+    }
+  ],
+  "relations": []
+}

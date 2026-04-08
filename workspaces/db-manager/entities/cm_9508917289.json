@@ -1,0 +1,19 @@
+{
+  "page_id": "9508917289",
+  "title": "Software Limit 세팅 방법",
+  "entities": [
+    {
+      "id": "proc_SoftwareLimitSetup",
+      "name": "Software Limit 세팅 방법",
+      "type": "Process",
+      "properties": {
+        "steps": [
+          "접속 IP 선택 후 접속",
+          "파라미터 목록 → Software Limit Plus/Minus Value 입력 (단위: pulse)",
+          "하단 Rom에 저장 클릭 (적용)"
+        ]
+      }
+    }
+  ],
+  "relations": []
+}

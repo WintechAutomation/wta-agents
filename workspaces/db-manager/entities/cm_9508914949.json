@@ -1,0 +1,23 @@
+{
+  "page_id": "9508914949",
+  "title": "SSD 복제",
+  "entities": [
+    {
+      "id": "proc_SSDClone",
+      "name": "SSD 복제 (Acronis True Image)",
+      "type": "Process",
+      "properties": {
+        "target": "삼성 SSD 870 EVO 500GB 기준",
+        "steps": [
+          "신규 SSD → 컨버터 연결 후 PC USB 연결",
+          "Acronis True Image → 디스크 복제 → 자동(권장)",
+          "원본: 삼성 SSD, 대상: USB 연결 SSD",
+          "재시작 후 복제 진행",
+          "TS256GMSA230S로 부팅 확인, 내 PC에서 동일 용량 디스크 2쌍 확인",
+          "기존 SSD 제거 후 복제 SSD 체결"
+        ]
+      }
+    }
+  ],
+  "relations": []
+}

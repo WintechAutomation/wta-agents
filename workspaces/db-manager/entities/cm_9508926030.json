@@ -1,0 +1,19 @@
+{
+  "page_id": "9508926030",
+  "title": "(국문, OKE)- 1-1. 사용 설명서",
+  "entities": [
+    {
+      "id": "manual_OKEUserGuide_KO",
+      "name": "OKE 사용 설명서 (1-1, 국문)",
+      "type": "Manual",
+      "properties": {
+        "model": "HPL",
+        "dimensions": "3260(W) x 1870(D) x 2282(H) mm",
+        "power": "3상 / 220V / 40A / 60Hz",
+        "air_pressure": "0.5 MPa",
+        "language": "Korean"
+      }
+    }
+  ],
+  "relations": []
+}

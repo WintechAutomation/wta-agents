@@ -1,0 +1,16 @@
+{
+  "page_id": "9508926019",
+  "title": "(국문, OKE)- 1. 머릿말",
+  "entities": [
+    {
+      "id": "manual_OKEPreface_KO",
+      "name": "OKE 사용자 메뉴얼 머릿말 (국문)",
+      "type": "Manual",
+      "properties": {
+        "language": "Korean",
+        "description": "OKE 사용자 메뉴얼 1장 머릿말"
+      }
+    }
+  ],
+  "relations": []
+}

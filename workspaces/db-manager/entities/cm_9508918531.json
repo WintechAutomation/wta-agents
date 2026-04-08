@@ -1,0 +1,22 @@
+{
+  "page_id": "9508918531",
+  "title": "언로딩 PVD 앰프(FX-505-C2) 투광 파워 조절",
+  "entities": [
+    {
+      "id": "proc_UnloadingPVDAmpPowerAdj",
+      "name": "언로딩 PVD 앰프(FX-505-C2) 투광 파워 조절",
+      "type": "Process",
+      "properties": {
+        "equipment": "FX-505-C2 앰프",
+        "steps": [
+          "빨간색 커버 열기",
+          "MODE 키 → Pro 표시 → SET 진입",
+          "SET → Pro1 → SET → Pro1PctL 진입",
+          "+/- 조작으로 PctL L-P 설정 후 SET 저장",
+          "MODE로 원래 화면 복귀"
+        ]
+      }
+    }
+  ],
+  "relations": []
+}

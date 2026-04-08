@@ -1,0 +1,18 @@
+{
+  "page_id": "9508915824",
+  "title": "TP Enable switch manual",
+  "entities": [
+    {
+      "id": "manual_TPEnableSwitch",
+      "name": "TP Enable switch 사용설명서",
+      "type": "Manual",
+      "properties": {
+        "model": "HP3",
+        "dimensions": "1,595mm x 1,673mm x 2,400mm",
+        "power": "3상 / 220V / 20A / 60Hz",
+        "description": "HP3 모델 설비 사용/설정/조작/관리 설명서"
+      }
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,16 @@
+{
+  "page_id": "9508926008",
+  "title": "(국문, OKE)- 사용자 메뉴얼",
+  "entities": [
+    {
+      "id": "manual_OKEUserManual_KO",
+      "name": "OKE 사용자 메뉴얼 (국문)",
+      "type": "Manual",
+      "properties": {
+        "language": "Korean",
+        "description": "OKE 장비 사용자 메뉴얼 목차 (국문)"
+      }
+    }
+  ],
+  "relations": []
+}

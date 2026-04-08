@@ -1,0 +1,15 @@
+{
+  "page_id": "9508913250",
+  "title": "WMXMonitor",
+  "entities": [
+    {
+      "id": "tool_WMXMonitor",
+      "name": "WMXMonitor",
+      "type": "Tool",
+      "properties": {
+        "description": "WMXMonitor 모니터링 도구"
+      }
+    }
+  ],
+  "relations": []
+}

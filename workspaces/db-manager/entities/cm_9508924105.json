@@ -1,0 +1,18 @@
+{
+  "page_id": "9508924105",
+  "title": "PALLET",
+  "entities": [
+    {
+      "id": "proc_UnloadingPalletSetup",
+      "name": "UnLoading 팔레트 작업 위치 설정",
+      "type": "Process",
+      "properties": {
+        "pal_z_work": "실제 운전 중 작업 위치 — 일반적으로 원점(0)을 작업 높이로 설정",
+        "pallet_align": "공급 후 얼라인 위치 — 빈 팔레트 기준 첫 번째 줄과 X축 그리퍼 라인 일치",
+        "pallet_supply_pos": "PAL_Z 상승 전 팔레트 공급부 위치 — 클램프 가이드가 적재 가이드보다 바깥쪽 위치 필수",
+        "pallet_max_rise": "공급 시 PAL_Z 최대 상승 위치 — 공급 가이드보다 약간 높게, 클램프 가이드와 팔레트 간격 3mm 확인"
+      }
+    }
+  ],
+  "relations": []
+}

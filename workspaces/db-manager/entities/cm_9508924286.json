@@ -1,0 +1,26 @@
+{
+  "page_id": "9508924286",
+  "title": "ROT",
+  "entities": [
+    {
+      "id": "proc_ROTClampPositionSetup",
+      "name": "ROT_CLAMP 및 ROT 작업 위치 설정",
+      "type": "Process",
+      "properties": {
+        "rot_clamp_positions": [
+          "윗단 25mm 열림/아랫단 닫힘 위치",
+          "윗단 닫힘/아랫단 25mm 열림 위치",
+          "윗단 최대 열림/아랫단 닫힘 위치",
+          "윗단 닫힘/아랫단 최대 열림 위치",
+          "윗단+아랫단 모두 닫힘 위치",
+          "윗단+아랫단 모두 최대 열림 위치"
+        ],
+        "rot_work_positions": [
+          "G1 그리퍼 막대 적재 + G2 그리퍼 스페이서 픽업 위치",
+          "G1 그리퍼 제품 반전부 픽업 + G2 그리퍼 스페이서 막대 적재 위치"
+        ]
+      }
+    }
+  ],
+  "relations": []
+}

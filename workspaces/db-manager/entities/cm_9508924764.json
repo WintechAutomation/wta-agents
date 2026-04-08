@@ -1,0 +1,15 @@
+{
+  "page_id": "9508924764",
+  "title": "작업위치 - [UnLoading 전용]",
+  "entities": [
+    {
+      "id": "comp_UnloadingOnlyWorkPositions",
+      "name": "UnLoading 전용 작업 위치 파라미터",
+      "type": "Component",
+      "properties": {
+        "description": "UnLoading 전용 작업 위치 파라미터 설정"
+      }
+    }
+  ],
+  "relations": []
+}

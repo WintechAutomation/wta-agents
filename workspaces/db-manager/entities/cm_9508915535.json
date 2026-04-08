@@ -1,0 +1,18 @@
+{
+  "page_id": "9508915535",
+  "title": "Vision Flying 검출 세팅",
+  "entities": [
+    {
+      "id": "proc_VisionFlyingSetup",
+      "name": "Vision Flying 검출 세팅",
+      "type": "Process",
+      "properties": {
+        "target": "PVD 하부 비전유닛 기준",
+        "panasonic_drive": "PANATERM 실행 → X축 접속 → 매개변수 세팅 → 위치 컴페어값 1 기입",
+        "wmx_setup": "WMXServer → Setup → Axis Parameter → Panasonic Setup → 서보 CP 재설정",
+        "camera_setup": "카메라 연결 포트 확인 → TCP/IPv4 IP주소 수정 ('11' 위치 숫자로 포트 구분)"
+      }
+    }
+  ],
+  "relations": []
+}

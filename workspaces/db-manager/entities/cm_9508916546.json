@@ -1,0 +1,15 @@
+{
+  "page_id": "9508916546",
+  "title": "ODC 변경 메뉴얼",
+  "entities": [
+    {
+      "id": "manual_ODCChange",
+      "name": "ODC 변경 메뉴얼",
+      "type": "Manual",
+      "properties": {
+        "description": "ODC 변경 절차 매뉴얼"
+      }
+    }
+  ],
+  "relations": []
+}

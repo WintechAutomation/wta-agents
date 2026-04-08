@@ -1,0 +1,17 @@
+{
+  "page_id": "9508930314",
+  "title": "(국문, OKE)- 7-2. 보수 점검 요령",
+  "entities": [
+    {
+      "id": "manual_OKEInspectionTips_KO",
+      "name": "OKE 보수 점검 요령 (7-2, 국문)",
+      "type": "Manual",
+      "properties": {
+        "language": "Korean",
+        "regulator_filter": "Air 필터 불순물 발생 시 Drain Cock으로 제거. 필터 엘리먼트 2년 또는 압력강하 0.1MPa 전 교환",
+        "pneumatic_unit": "PISCO PAFR302-15A, PAF302D-15A"
+      }
+    }
+  ],
+  "relations": []
+}
