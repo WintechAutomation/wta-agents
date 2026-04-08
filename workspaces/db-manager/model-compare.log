@@ -94,4 +94,35 @@
 [compare] 05:28:26 
 [14/15] [4_servo] A5_motor_with_gear_dxf_list_Rev1.pdf
 [compare] 05:28:26   텍스트: 27731자
-[compare] 05:29:32   [a3b+think:False] 엔티티:0 관계:0
+[compare] 05:29:32   [a3b+think:False] 엔티티:0 관계:0 시간:65.9초 토큰:2000
+[compare] 05:29:32     샘플: []
+[compare] 05:30:12   [35b_dense] 엔티티:0 관계:0 시간:40.1초 토큰:2000
+[compare] 05:30:12     샘플: []
+[compare] 05:30:12 
+[15/15] [4_servo] SMOTOR-UM002C-KO-P-200807.pdf
+[compare] 05:30:12   텍스트: 2615자
+[compare] 05:30:56   [a3b+think:False] 엔티티:0 관계:0 시간:44.0초 토큰:2000
+[compare] 05:30:56     샘플: []
+[compare] 05:31:55   [35b_dense] 엔티티:0 관계:0 시간:59.1초 토큰:2000
+[compare] 05:31:55     샘플: []
+[compare] 05:31:55 
+
+=== 비교 결과 ===
+[compare] 05:31:55 
+[a3b+think:False]
+[compare] 05:31:55   평균 처리시간: 45.9초
+[compare] 05:31:55   평균 엔티티: 8.7개/파일
+[compare] 05:31:55   평균 관계: 9.1개/파일
+[compare] 05:31:55   성공률: 10/15 (66%)
+[compare] 05:31:55   평균 토큰: 1464
+[compare] 05:31:55 
+[35b_dense]
+[compare] 05:31:55   평균 처리시간: 61.3초
+[compare] 05:31:55   평균 엔티티: 0.0개/파일
+[compare] 05:31:55   평균 관계: 0.0개/파일
+[compare] 05:31:55   성공률: 0/15 (0%)
+[compare] 05:31:55   평균 토큰: 2000
+[compare] 05:31:55 
+결과 저장: model-compare-result.json
+pare] 05:31:55 
+결과 저장: model-compare-result.json

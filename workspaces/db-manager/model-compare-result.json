@@ -1,0 +1,38 @@
+{
+  "a3b+think:False": {
+    "avg_time": 45.89692425727844,
+    "avg_entities": 8.733333333333333,
+    "avg_relations": 9.133333333333333,
+    "success_rate": 0.6666666666666666,
+    "sample_entities": [
+      [
+        "RH-10AH/15AH 시리즈 로봇",
+        "CR2A-572 컨트롤러",
+        "MEMPTP 파라미터",
+        "H6 버전 소프트웨어",
+        "속도 향상 기능"
+      ],
+      [
+        "Mitsubishi Industrial Robot SD series",
+        "GOT Direct Connection",
+        "Teaching work",
+        "Maintenance work",
+        "Error occurrence"
+      ],
+      [
+        "Yaskawa Robot",
+        "Teaching Pendant (TP)",
+        "Teaching Mode",
+        "Ready On Servo",
+        "Servo Lamp Check"
+      ]
+    ]
+  },
+  "35b_dense": {
+    "avg_time": 61.31728231112162,
+    "avg_entities": 0.0,
+    "avg_relations": 0.0,
+    "success_rate": 0.0,
+    "sample_entities": []
+  }
+}
