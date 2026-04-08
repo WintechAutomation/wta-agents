@@ -2315,6 +2315,18 @@
       "updated_at": "2026-04-09 06:23:01",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-crafter-7202d3",
+      "agent": "crafter",
+      "task": "vLLM 설치 요청 (부서장 지시). Ollama 서버(182.224.6.147)에 vLLM을 설치해줘.",
+      "message": "vLLM 설치 요청 (부서장 지시). Ollama 서버(182.224.6.147)에 vLLM을 설치해줘.\n\n**확인 사항:**\n1. 서버 SSH 접속 가능 여부 확인 (182.224.6.147)\n2. GPU 종류/메모리 확인 (nvidia-smi)\n3. Python/CUDA 버전 확인\n4. vLLM 설치 (pip install vllm)\n5. 설치 후 간단한 모델 로드 테스트\n\nvLLM은 Ollama와 별도로 동작하는 추론 서버. 설치 후 OpenAI 호환 API로 사용 가능.\n\nSSH 접속이 안 되면 보고해줘. 부서장에게 접속 방법 확인 필요할 수 있음.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-09 07:39:05",
+      "updated_at": "2026-04-09 07:39:05",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }

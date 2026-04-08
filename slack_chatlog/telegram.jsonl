@@ -110,3 +110,6 @@
 {"ts": "2026-04-09 06:24:30", "direction": "inbound", "user": "boss", "text": "³아니 그게아니라 vllm,"}
 {"ts": "2026-04-09 06:24:46", "direction": "outbound", "user": "MAX", "text": "아, vLLM (추론 서버) 말씀이시군요.\n\nvLLM은 Ollama 대신 사용하는 고성능 LLM 추론 엔진입니다.\n- 연속 배칭(continuous batching)으로 처리량 대폭 향상\n- PagedAttention으로 메모리 효율 높음\n- Ollama보다 처리 속도 2~5배 빠를 수 있음\n\nvLLM으로 올릴 수 있는 모델:\n- Qwen3.5 계열 (HuggingFace에서 직접 로드)\n- Gemma4\n- Llama 등 대부분 오픈소스 모델\n\n서버에 vLLM이 설치되어 있는지, 아니면 새로 설치해야 하는지 확인할까요?"}
 {"ts": "2026-04-09 06:24:54", "direction": "outbound", "user": "MAX", "text": "참고로 gemma4:31b 테스트 결과 — 로드 실패 (500 에러).\ngemma4:e4b도 동일. Ollama 서버(182.224.6.147) 리소스 문제로 보입니다. 서버 재시작이나 로그 확인이 필요합니다.\n\n현재 정상 동작하는 건 qwen3.5:35b-a3b + think:false만 확인됐습니다.\n\nvLLM 설치하면 다른 모델도 시도 가능합니다. 진행 방향 알려주세요."}
+{"ts": "2026-04-09 07:38:50", "direction": "inbound", "user": "boss", "text": "설치해볼래"}
+{"ts": "2026-04-09 07:39:16", "direction": "outbound", "user": "MAX", "text": "crafter에게 vLLM 설치 지시했습니다. 182.224.6.147 서버 SSH 접속 확인부터 진행합니다.\n\n접속이 안 되면 별도 안내 드리겠습니다."}
+{"ts": "2026-04-09 07:39:51", "direction": "outbound", "user": "MAX", "text": "182.224.6.147 서버에 SSH 접속이 안 됩니다 (포트 22 타임아웃). Ollama API(11434)만 열려있는 상태.\n\nvLLM 설치하려면 서버에 직접 접속이 필요합니다.\n\n확인 부탁드립니다:\n1. SSH 포트가 22가 아닌 다른 포트인지?\n2. 방화벽에서 SSH 허용 필요한지?\n3. 또는 서버에 직접 접속해서 설치하실 수 있는지?"}
