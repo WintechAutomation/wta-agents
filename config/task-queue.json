@@ -539,6 +539,42 @@
       "updated_at": "2026-04-08 13:48:17",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-research-agent-b2efcb",
+      "agent": "research-agent",
+      "task": "부서장 요청: 아래 광학검사 장비 제작 비용을 검토해주세요. 부품별 시장가 조사 후 총 제작비용 산출.",
+      "message": "부서장 요청: 아래 광학검사 장비 제작 비용을 검토해주세요. 부품별 시장가 조사 후 총 제작비용 산출.\n\n주요 부품 리스트:\n1. 카메라: Allied Vision Mako-G507B (모노크롬) x 4대 — 메일상 900천원/대\n2. 렌즈: M3528-MPW3 F2.8 (EFL 35mm) x 4개 — 메일상 200천원/개\n3. 조명: LLBQ Series 사각 라인바 라이트 x 1식 — 메일상 5,000천원 (참고값)\n4. Frame Grabber 카드 x 1\n5. 산업용 PC x 1\n6. SMPS 전원공급장치\n7. 케이블류 (CXP-6 인터페이스 등)\n8. LED 조명 컨트롤러 (OPT사)\n9. 장비 프레임/외장: 스탠드얼론형 스틸 프레임 (500x500x1800mm), 다크그레이 도장\n10. 모니터: 24인치 산업용 x 1\n11. 카메라 마운트: 5축 조정 브래킷 x 4\n12. 팔레트 캐리어 프레임 + 얼라인먼트 핀\n13. 비전 소프트웨어 개발비 (이미지 스티칭, 왜곡보정, 도트 방향 검출)\n\n광학 공수: 실험/설계 80MH, 정렬 8MH\n\n부품비 + 인건비(설계/조립/SW개발) + 마진 포함한 예상 제작비용을 산출해주세요. MAX에게 보고.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 14:37:18",
+      "updated_at": "2026-04-08 14:37:18",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-docs-agent-060428",
+      "agent": "docs-agent",
+      "task": "부서장 요청: 한국야금향 팔레트 도트 검사 장비 제작 제안서를 작성해주세요. 영업팀에 전달할 문서입니다.",
+      "message": "부서장 요청: 한국야금향 팔레트 도트 검사 장비 제작 제안서를 작성해주세요. 영업팀에 전달할 문서입니다.\n\n제안서 포함 내용:\n1. 장비 개요: 팔레트 내 초경합금 인서트 도트 방향 자동 검사\n2. 고객 요구사항: 촬상 후 방향 다른 제품 detect → 모니터 표시, CT 1분 이내\n3. 장비 구성:\n   - 스탠드얼론 일체형 (500x500x1800mm)\n   - 카메라 4대 (Mako-G507B, 2x2 배치)\n   - 렌즈 4개 (M3528-MPW3, F2.8, EFL 35mm)\n   - 사각 라인바 조명 (LLBQ Series)\n   - 산업용 PC + Frame Grabber + 24인치 모니터\n4. 광학 SPEC:\n   - FOV: 153.9x128.5mm (카메라당), 전체 팔레트 커버\n   - Resolution: 62.48μm/pixel\n   - DoF: 0.350mm\n   - WD: 648.6mm\n5. 비전 SW 기능: 이미지 스티칭, 왜곡보정, 도트 방향 검출, 결과 표시\n6. 비용은 research-agent가 산출 중 — 나오면 별도 반영\n7. 납기 예상 (TBD)\n\nWTA 회사 양식에 맞게 전문적으로 작성. 완료 후 MAX에게 보고.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 14:37:45",
+      "updated_at": "2026-04-08 14:37:45",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-docs-agent-5a4488",
+      "agent": "docs-agent",
+      "task": "비용 산출 결과 나왔습니다. 제안서에 반영해주세요:",
+      "message": "비용 산출 결과 나왔습니다. 제안서에 반영해주세요:\n\n부품비: 18,200천원\n인건비: 30,440천원 (광학 설계/실험 80MH + 정렬 8MH + 기구 설계/조립 40MH + SW 개발 300MH)\n원가: 48,640천원\n마진 30%: 14,592천원\n총 견적: 약 63,200천원 (6,300만원)\n\n참고: CXP 인터페이스 적용 시 약 7,400만원으로 상승 가능 (인터페이스 확정 필요)",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 14:39:55",
+      "updated_at": "2026-04-08 14:39:55",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }
