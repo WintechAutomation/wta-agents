@@ -65,3 +65,7 @@ Uncaught ReferenceError:  → docs-agent
 [slack-bot] 16:35:32 Connected to a new endpoint...
 [slack-bot] 16:35:32 Stopped receiving messages from a connection (session id: 07f78d21-c111-47a9-aadc-bd19c5c1f1ba)
 [slack-bot] 16:35:32 Starting to receive messages from a new connection (session id: 408e478a-db7c-40f9-bf3b-1aee658af26f)
+[slack-bot] 16:52:26 [수신] #docs 김근형: 프로젝트 공용자재구매로 잡혀있는건 전부 창고에 재고로 두기 위함임 사용 프로젝트로 보기 어려움 수정해줘 → docs-agent
+[slack-bot] 16:52:27 직접 전송 완료 → docs-agent:5614
+[slack-bot] 16:54:22 [수신] #docs 김근형: 리스트 확인시 폰트 사이즈가 작아서 보기 어려움 적당히 키워주셈 → docs-agent
+[slack-bot] 16:54:23 직접 전송 완료 → docs-agent:5614

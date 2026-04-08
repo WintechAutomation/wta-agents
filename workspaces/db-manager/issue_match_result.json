@@ -1,0 +1,210 @@
+{
+  "summary": {
+    "matched": 70,
+    "still_unmatched": 270
+  },
+  "matched_sample": [
+    {
+      "item_cd": "03-11-025-7",
+      "old": "Press 상부 (24-1)",
+      "new": "메이써루이 프레스 #14 (Kob,10t)"
+    },
+    {
+      "item_cd": "G3-CC30-C4040",
+      "old": "공용자재(미배정)",
+      "new": "한국야금 검사기 F1 #6"
+    },
+    {
+      "item_cd": "LCP160-ST-430L-70-H",
+      "old": "공용자재(미배정)",
+      "new": "YG1 프레스 #20 (4.5t 프레임)"
+    },
+    {
+      "item_cd": "G3-CC30-C2450",
+      "old": "공용자재(미배정)",
+      "new": "한국야금 검사기 F1 #6"
+    },
+    {
+      "item_cd": "VPRO-PLUS-WB",
+      "old": "공용자재(미배정)",
+      "new": "한국야금 CVD #4"
+    },
+    {
+      "item_cd": "MVENC852V3",
+      "old": "공용자재(미배정)",
+      "new": "CTA CVD #1"
+    },
+    {
+      "item_cd": "GRABLINK-FULL",
+      "old": "공용자재(미배정)",
+      "new": "한국 교세라 검사기 F2 (#20-1수정)"
+    },
+    {
+      "item_cd": "DTP7H-D",
+      "old": "공용자재(미배정)",
+      "new": "한국야금 CVD #4"
+    },
+    {
+      "item_cd": "03-11-026-3",
+      "old": "Press 상부 (24-1)",
+      "new": "메이써루이 프레스 #13 (Kob,10t)"
+    },
+    {
+      "item_cd": "03-11-027-3",
+      "old": "Press 상부 (24-1)",
+      "new": "메이써루이 프레스 #14 (Kob,10t)"
+    },
+    {
+      "item_cd": "WCDRL150-S48W",
+      "old": "공용자재(미배정)",
+      "new": "한국야금 검사기 F1 #6"
+    },
+    {
+      "item_cd": "TIL-50-G-3W",
+      "old": "공용자재(미배정)",
+      "new": "한국 교세라 검사기 F2 (#20-1수정)"
+    },
+    {
+      "item_cd": "50-03-36-0",
+      "old": "공용자재(미배정)",
+      "new": "쫜스(창즈예) 2죠 툴뭉치  판매건"
+    },
+    {
+      "item_cd": "50-03-30-0",
+      "old": "공용자재(미배정)",
+      "new": "장비별 소모품 구매"
+    },
+    {
+      "item_cd": "50-02-23-0",
+      "old": "공용자재(미배정)",
+      "new": "화루이 프레스 #23"
+    },
+    {
+      "item_cd": "50-03-05-1",
+      "old": "공용자재(미배정)",
+      "new": "OKE PVD 2jaw gripper"
+    },
+    {
+      "item_cd": "04-10-006-10",
+      "old": "Press 상부 (24-1)",
+      "new": "메이써루이 프레스 #14 (Kob,10t)"
+    },
+    {
+      "item_cd": "04-13-97-1",
+      "old": "Press 상부 (24-1)",
+      "new": "메이써루이 프레스 #13 (Kob,10t)"
+    },
+    {
+      "item_cd": "WRRDRL130-S48W",
+      "old": "공용자재(미배정)",
+      "new": "한국야금 검사기 F1 #6"
+    },
+    {
+      "item_cd": "WRH100X45-12W",
+      "old": "공용자재(미배정)",
+      "new": "하이썽 호닝형상검사기 #1 (#23-4)"
+    }
+  ],
+  "unmatched_sample": [
+    {
+      "item_cd": "SS-540A-V1",
+      "pjt": "공용자재(미배정)",
+      "issue": ""
+    },
+    {
+      "item_cd": "55348",
+      "pjt": "공용자재(미배정)",
+      "issue": ""
+    },
+    {
+      "item_cd": "WBF130X86-S24W",
+      "pjt": "공용자재(미배정)",
+      "issue": ""
+    },
+    {
+      "item_cd": "EZI-EC-ALL-42L-A-R",
+      "pjt": "공용자재(미배정)",
+      "issue": ""
+    },
+    {
+      "item_cd": "MDDLN45BL",
+      "pjt": "공용자재(미배정)",
+      "issue": ""
+    },
+    {
+      "item_cd": "E2E-C04S12-WC-C1",
+      "pjt": "공용자재(미배정)",
+      "issue": ""
+    },
+    {
+      "item_cd": "110XI4300DPI+REWIND",
+      "pjt": "공용자재(미배정)",
+      "issue": ""
+    },
+    {
+      "item_cd": "NUVO-8108GC-XL",
+      "pjt": "공용자재(미배정)",
+      "issue": ""
+    },
+    {
+      "item_cd": "110XI4600DPI+REWIND",
+      "pjt": "공용자재(미배정)",
+      "issue": ""
+    },
+    {
+      "item_cd": "MDDLN45BE",
+      "pjt": "공용자재(미배정)",
+      "issue": ""
+    },
+    {
+      "item_cd": "MEDLN83BL",
+      "pjt": "공용자재(미배정)",
+      "issue": ""
+    },
+    {
+      "item_cd": "50-01-34-0",
+      "pjt": "공용자재(미배정)",
+      "issue": ""
+    },
+    {
+      "item_cd": "D-M9B",
+      "pjt": "공용자재(미배정)",
+      "issue": ""
+    },
+    {
+      "item_cd": "CKR20-145-1165L",
+      "pjt": "공용자재(미배정)",
+      "issue": ""
+    },
+    {
+      "item_cd": "EZI-EC-60M-A",
+      "pjt": "공용자재(미배정)",
+      "issue": ""
+    },
+    {
+      "item_cd": "EZS2-EC-42XL-A-BK",
+      "pjt": "공용자재(미배정)",
+      "issue": ""
+    },
+    {
+      "item_cd": "50-08-13-0",
+      "pjt": "공용자재(미배정)",
+      "issue": ""
+    },
+    {
+      "item_cd": "WRH80X51-S24W",
+      "pjt": "공용자재(미배정)",
+      "issue": ""
+    },
+    {
+      "item_cd": "FABR090-10-S2-P1",
+      "pjt": "공용자재(미배정)",
+      "issue": ""
+    },
+    {
+      "item_cd": "EZI-IO-EC-I8O8N-E",
+      "pjt": "공용자재(미배정)",
+      "issue": ""
+    }
+  ]
+}
