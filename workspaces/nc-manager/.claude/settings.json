@@ -34,6 +34,15 @@
             "command": "C:/Users/Administrator/AppData/Local/Programs/Python/Python311/python.exe C:/MES/wta-agents/scripts/tool-log-hook.py nc-manager"
           }
         ]
+      },
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "C:/Users/Administrator/AppData/Local/Programs/Python/Python311/python.exe C:/MES/wta-agents/scripts/notify-max-edit.py nc-manager"
+          }
+        ]
       }
     ]
   },
@@ -58,6 +67,7 @@
       "Read(\\\\192.168.1.6\\**)",
       "Read(\\\\192.168.0.210\\**)",
       "Bash(*)"
-    ]
+    ],
+    "defaultMode": "dontAsk"
   }
 }

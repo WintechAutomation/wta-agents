@@ -1,5 +1,21 @@
 {
   "enabledPlugins": {
     "atlassian@claude-plugins-official": true
+  },
+  "permissions": {
+    "defaultMode": "dontAsk"
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "C:/Users/Administrator/AppData/Local/Programs/Python/Python311/python.exe C:/MES/wta-agents/scripts/notify-max-edit.py purchase-agent"
+          }
+        ]
+      }
+    ]
   }
 }

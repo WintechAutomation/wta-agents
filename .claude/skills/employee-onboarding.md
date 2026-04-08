@@ -82,16 +82,51 @@ GET {jira_url}/rest/api/3/user?accountId={accountId}&expand=groups
 
 ---
 
-### 2단계 — NAS (시놀로지 192.168.1.6) ⚠️ 수동 처리
+### 2단계 — NAS (시놀로지 192.168.1.6) ✅ MES API 자동
 
-> **추후 자동화 예정** — 현재는 아래 절차 안내로 대체
+MES `/api/nas` 엔드포인트를 통해 자동 처리. MES JWT 토큰(Staff 권한) 필요.
+MES 로그인: `POST {MES_URL}/api/auth/login` → `access_token` 획득
 
-수동 처리 가이드:
-1. 브라우저에서 `http://192.168.1.6:5000` 접속 (관리자 계정)
-2. 제어판 → 사용자 및 그룹 → 사용자 → 생성
-3. 이름: `{이름}`, 이메일: `{이메일}`, 초기 비밀번호 설정
-4. 소속 그룹: 부서별 공유폴더 접근 그룹 지정
-5. 처리 후 부서장에게 확인 요청
+**2-1. 사용자 생성**
+```
+POST {MES_URL}/api/nas/users/create
+Authorization: Bearer {access_token}
+Content-Type: application/json
+
+{
+  "name": "{이메일 @ 앞부분, 예: bhlee}",
+  "password": "Cyberguard1!",
+  "description": "{이름}/{직책}/{부서}",
+  "email": "{이메일}"
+}
+```
+- 성공: 200 OK
+- 실패: 응답 코드 및 메시지 확인
+
+**2-2. 부서 그룹 할당**
+
+NAS 그룹은 부서별 공유폴더 접근 그룹과 연동됨. 기존 그룹 목록 확인 후 배정:
+```
+POST {MES_URL}/api/nas/users/groups
+Authorization: Bearer {access_token}
+
+{
+  "name": "{NAS 사용자 ID}",
+  "groups": ["{부서그룹명}"],
+  "action": "add"
+}
+```
+
+**2-3. 공유폴더 권한 확인**
+```
+GET {MES_URL}/api/nas/folders
+GET {MES_URL}/api/nas/permissions?folder={폴더명}&user_group_type=user
+```
+필요 시 `POST /api/nas/permissions/set`으로 폴더 권한 추가 설정.
+
+> 참고: 할당 용량(quota)은 MES API 미지원 — DSM 관리 콘솔에서 직접 설정 필요.
+> NAS 연결 테스트: `GET {MES_URL}/api/nas/test-connection`
+> MES_URL: `http://localhost:8100` (또는 `https://mes-wta.com`)
 
 ---
 
@@ -116,7 +151,7 @@ send_message(to="MAX", message="""
 이름: {이름} / 부서: {부서} / 입사일: {입사일}
 
 ✅ Atlassian: 계정 초대 + {부서그룹} + jira-software-users + confluence-users 추가
-⚠️ NAS: 수동 처리 필요
+✅ NAS: 계정 생성 + 그룹 할당 완료
 ⚠️ ERP: 수동 처리 필요
 """)
 ```
@@ -136,7 +171,9 @@ send_message(to="MAX", message="""
 - [ ] jira-software-users 추가 완료
 - [ ] confluence-users 추가 완료
 - [ ] 그룹 소속 최종 확인
-- [ ] NAS 수동 처리 안내 전달
+- [ ] NAS 계정 생성 완료 (POST /api/nas/users/create)
+- [ ] NAS 부서 그룹 할당 완료
+- [ ] NAS 공유폴더 권한 확인/설정
 - [ ] ERP 수동 처리 안내 전달
 - [ ] 부서장 텔레그램 보고 완료
 - [ ] 완료 메일 발송 완료
