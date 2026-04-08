@@ -52,5 +52,46 @@
 [compare] 05:19:14 
 [8/15] [2_sensor] br-laser-product-range-ko.pdf
 [compare] 05:19:15   텍스트: 1871자
-uct-range-ko.pdf
-[compare] 05:19:15   텍스트: 1871자
+[compare] 05:20:20   [a3b+think:False] 엔티티:0 관계:0 시간:65.7초 토큰:2000
+[compare] 05:20:20     샘플: []
+[compare] 05:21:09   [35b_dense] 엔티티:0 관계:0 시간:48.3초 토큰:2000
+[compare] 05:21:09     샘플: []
+[compare] 05:21:09 
+[9/15] [2_sensor] Unknown_AL-69545-AF_Manual_KO.pdf
+[compare] 05:21:09   텍스트: 8029자
+[compare] 05:21:49   [a3b+think:False] 엔티티:12 관계:12 시간:40.9초 토큰:1240
+[compare] 05:21:49     샘플: ['Unknown_AL-69545-AF_Manual_KO', 'Smart Graph', '파일 화면', '레이저 작동 화면', '템플리트 화면']
+[compare] 05:22:55   [35b_dense] 엔티티:0 관계:0 시간:65.2초 토큰:2000
+[compare] 05:22:55     샘플: []
+[compare] 05:22:55 
+[10/15] [2_sensor] AW00015119000 Pilot Users Manual.pdf
+[compare] 05:22:55   텍스트: 6898자
+[compare] 05:23:23   [a3b+think:False] 엔티티:8 관계:12 시간:27.8초 토큰:858
+[compare] 05:23:23     샘플: ['Basler pilot', 'GigE VISION CAMERAS', 'AW00015119000 Pilot Users Manual.pdf', 'shielded interface cable', 'housing']
+[compare] 05:24:01   [35b_dense] 엔티티:0 관계:0 시간:38.4초 토큰:2000
+[compare] 05:24:01     샘플: []
+[compare] 05:24:01 
+[11/15] [3_hmi] SAIA PCD .pdf
+[compare] 05:24:01   텍스트: 2074자
+[compare] 05:24:35   [a3b+think:False] 엔티티:15 관계:17 시간:33.7초 토큰:1335
+[compare] 05:24:35     샘플: ['SAIA PCD 시리즈', 'SAIA PCD PLC', 'RS-232C', 'RS-485', '통신 유닛']
+[compare] 05:25:42   [35b_dense] 엔티티:0 관계:0 시간:67.5초 토큰:2000
+[compare] 05:25:42     샘플: []
+[compare] 05:25:42 
+[12/15] [3_hmi] TOP Designer 사용설명서 (051230).pdf
+[compare] 05:25:42   텍스트: 6011자
+[compare] 05:26:31   [a3b+think:False] 엔티티:15 관계:14 시간:49.2초 토큰:1228
+[compare] 05:26:31     샘플: ['TOP Designer', '본체', 'TOP Designer 사용설명서 (051230).pdf', '소프트웨어 설치', '프로젝트 파일 작성']
+[compare] 05:27:16   [35b_dense] 엔티티:0 관계:0 시간:44.5초 토큰:2000
+[compare] 05:27:16     샘플: []
+[compare] 05:27:16 
+[13/15] [4_servo] 表紙_お願いRev.1.pdf
+[compare] 05:27:16   텍스트: 2255자
+[compare] 05:27:37   [a3b+think:False] 엔티티:12 관계:12 시간:21.5초 토큰:1009
+[compare] 05:27:37     샘플: ['히타치 AC servo amplifier', 'AD 시리즈 셋업 소프트웨어 프로그램', 'AD 시리즈 셋업 소프트웨어 프로그램 운전 기능', '히타치 AC servo amplifier AD 시리즈 셋업 소프트웨어 프로그램 운전 기능 취급 설명서', 'AD 시리즈 셋업 소프트웨어 AHF-P01/P02 취급 설명서']
+[compare] 05:28:26   [35b_dense] 엔티티:0 관계:0 시간:48.8초 토큰:2000
+[compare] 05:28:26     샘플: []
+[compare] 05:28:26 
+[14/15] [4_servo] A5_motor_with_gear_dxf_list_Rev1.pdf
+[compare] 05:28:26   텍스트: 27731자
+[compare] 05:29:32   [a3b+think:False] 엔티티:0 관계:0

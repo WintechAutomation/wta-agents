@@ -1,0 +1,58 @@
+{
+  "page_id": "9508918057",
+  "title": "CCTV 영상 다운로드",
+  "entities": [
+    {
+      "id": "e1",
+      "name": "CCTV",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e2",
+      "name": "영상 다운로드",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e3",
+      "name": "image-20240531-084922.png",
+      "type": "Manual",
+      "properties": {}
+    },
+    {
+      "id": "e4",
+      "name": "image-20240531-085020.png",
+      "type": "Manual",
+      "properties": {}
+    },
+    {
+      "id": "e5",
+      "name": "image-20240531-085316.png",
+      "type": "Manual",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "e3",
+      "target": "e2",
+      "type": "DOCUMENTS"
+    },
+    {
+      "source": "e4",
+      "target": "e2",
+      "type": "DOCUMENTS"
+    },
+    {
+      "source": "e5",
+      "target": "e2",
+      "type": "DOCUMENTS"
+    }
+  ]
+}
