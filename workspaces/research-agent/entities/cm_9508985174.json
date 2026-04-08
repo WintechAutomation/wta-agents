@@ -1,0 +1,69 @@
+{
+  "page_id": "9508985174",
+  "title": "엘리베이터 피더 취출 감속 시간 설정 매뉴얼",
+  "entities": [
+    {
+      "id": "e1",
+      "name": "엘리베이터 피더",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e2",
+      "name": "취출 감속 시간 설정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e3",
+      "name": "C1-02",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e4",
+      "name": "엘리베이터 피더 취출 감속 시간 설정 매뉴얼",
+      "type": "Manual",
+      "properties": {}
+    },
+    {
+      "id": "e5",
+      "name": "PAR",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e6",
+      "name": "DRV",
+      "type": "Component",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "source": "e4",
+      "target": "e2",
+      "type": "DOCUMENTS"
+    },
+    {
+      "source": "e2",
+      "target": "e1",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "e2",
+      "target": "e3",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e2",
+      "target": "e5",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e2",
+      "target": "e6",
+      "type": "USES_COMPONENT"
+    }
+  ]
+}

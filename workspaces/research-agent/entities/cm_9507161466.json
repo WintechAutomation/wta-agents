@@ -1,0 +1,58 @@
+{
+  "page_id": "9507161466",
+  "title": "　제품모델 관리 - 복사",
+  "entities": [
+    {
+      "id": "e1",
+      "name": "제품모델 관리 - 복사",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e2",
+      "name": "모델 관리 선택",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e3",
+      "name": "모델 선택",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e4",
+      "name": "복사",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e5",
+      "name": "메인화면",
+      "type": "Equipment",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e2",
+      "target": "e5",
+      "type": "INVOLVED_IN"
+    }
+  ]
+}

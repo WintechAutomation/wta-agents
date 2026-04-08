@@ -1,0 +1,142 @@
+{
+  "page_id": "9508934756",
+  "title": "라이브러리 코드 비교",
+  "entities": [
+    {
+      "id": "ent_1",
+      "name": "유료 라이브러리",
+      "type": "Equipment",
+      "properties": {
+        "vendor": "Unified Automation"
+      }
+    },
+    {
+      "id": "ent_2",
+      "name": "무료 라이브러리",
+      "type": "Equipment",
+      "properties": {
+        "vendor": "OPCFoundation"
+      }
+    },
+    {
+      "id": "ent_3",
+      "name": "보안 설정",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "ent_4",
+      "name": "연결 구성",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "ent_5",
+      "name": "인증서 관리",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "ent_6",
+      "name": "클라이언트 연결",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "ent_7",
+      "name": "자동 인증서 관리",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "ent_8",
+      "name": "보안 설정 수동 처리",
+      "type": "Issue",
+      "properties": {}
+    },
+    {
+      "id": "ent_9",
+      "name": "고급 보안 기능 제한",
+      "type": "Issue",
+      "properties": {}
+    },
+    {
+      "id": "ent_10",
+      "name": "라이브러리 코드 비교 문서",
+      "type": "Manual",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "source": "ent_1",
+      "target": "ent_3",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "ent_1",
+      "target": "ent_4",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "ent_1",
+      "target": "ent_5",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "ent_2",
+      "target": "ent_3",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "ent_2",
+      "target": "ent_4",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "ent_2",
+      "target": "ent_5",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "ent_2",
+      "target": "ent_8",
+      "type": "HAS_ISSUE"
+    },
+    {
+      "source": "ent_2",
+      "target": "ent_9",
+      "type": "HAS_ISSUE"
+    },
+    {
+      "source": "ent_1",
+      "target": "ent_6",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "ent_2",
+      "target": "ent_6",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "ent_1",
+      "target": "ent_7",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "ent_2",
+      "target": "ent_7",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "ent_10",
+      "target": "ent_1",
+      "type": "DOCUMENTS"
+    },
+    {
+      "source": "ent_10",
+      "target": "ent_2",
+      "type": "DOCUMENTS"
+    }
+  ]
+}
