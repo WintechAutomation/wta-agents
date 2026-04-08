@@ -12,3 +12,7 @@
 {"time":"2026-04-08T16:25:00.0796423+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"GET","path":"/wp-admin/install.php","latency":55703500,"ip":"2a06:98c0:3600::103","query":"step=1"}
 {"time":"2026-04-08T16:27:21.5056791+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"GET","path":"/wp-admin/install.php","latency":0,"ip":"2a06:98c0:3600::103","query":"step=1"}
 {"time":"2026-04-08T16:28:13.4911184+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"GET","path":"/health","latency":0,"ip":"::1"}
+{"time":"2026-04-08T16:31:34.652965+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"GET","path":"/wp-admin/setup-config.php","latency":527000,"ip":"2a06:98c0:3600::103"}
+{"time":"2026-04-08T16:32:36.8161662+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"GET","path":"/wp-admin/setup-config.php","latency":516700,"ip":"2a06:98c0:3600::103"}
+{"time":"2026-04-08T16:34:08.0261117+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"GET","path":"/wordpress/wp-admin/setup-config.php","latency":292400,"ip":"2a06:98c0:3600::103"}
+{"time":"2026-04-08T16:34:38.0968248+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"GET","path":"/wordpress/wp-admin/setup-config.php","latency":592800,"ip":"2a06:98c0:3600::103"}
