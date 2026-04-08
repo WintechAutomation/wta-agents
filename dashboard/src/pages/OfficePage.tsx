@@ -172,21 +172,23 @@ export default function OfficePage() {
   }, [pulseLines])
 
   // 최근 메시지로 연결선 펄스 애니메이션
+  const lastMsgIdRef = useRef(0)
   useEffect(() => {
     if (messages.length === 0) return
     const latest = messages[messages.length - 1]
+    if (latest.id === lastMsgIdRef.current) return
+    lastMsgIdRef.current = latest.id
     const from = latest.from
     const to = latest.to
     const lineKey = `${from}-${to}`
     setPulseLines((prev) => new Set(prev).add(lineKey))
-    const timer = setTimeout(() => {
+    setTimeout(() => {
       setPulseLines((prev) => {
         const next = new Set(prev)
         next.delete(lineKey)
         return next
       })
     }, 5000)
-    return () => clearTimeout(timer)
   }, [messages])
 
   // 최근 메시지 피드 (10건, 선택 에이전트 필터링)
@@ -334,8 +336,8 @@ export default function OfficePage() {
                   x2={posB.x}
                   y2={posB.y}
                   stroke={color}
-                  strokeWidth={isActive ? 2 : 0.3}
-                  opacity={isActive ? 0.8 : 0.06}
+                  strokeWidth={isActive ? 2 : 0.5}
+                  opacity={isActive ? 0.9 : 0.15}
                   filter={isActive ? 'url(#glow-line)' : undefined}
                   style={{
                     transition: 'stroke 0.5s, stroke-width 0.3s, opacity 0.5s',

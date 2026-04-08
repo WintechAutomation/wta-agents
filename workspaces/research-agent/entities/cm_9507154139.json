@@ -1,0 +1,130 @@
+{
+  "page_id": "9507154139",
+  "title": "조립 및 설치",
+  "entities": [
+    {
+      "id": "e1",
+      "name": "설비",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e2",
+      "name": "Wintech Automation",
+      "type": "Customer",
+      "properties": {}
+    },
+    {
+      "id": "e3",
+      "name": "엔지니어",
+      "type": "Person",
+      "properties": {}
+    },
+    {
+      "id": "e4",
+      "name": "전문 기사",
+      "type": "Person",
+      "properties": {}
+    },
+    {
+      "id": "e5",
+      "name": "조립 및 설치",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e6",
+      "name": "공압 설치",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e7",
+      "name": "전기 설치",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e8",
+      "name": "공압 연결",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e9",
+      "name": "전기 연결",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e10",
+      "name": "설비 명판",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e11",
+      "name": "공급 전원 케이블",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e12",
+      "name": "컨트롤 판넬 외부 커버",
+      "type": "Component",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "source": "e2",
+      "target": "e3",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "e3",
+      "target": "e5",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "e4",
+      "target": "e9",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "e5",
+      "target": "e6",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e5",
+      "target": "e7",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e6",
+      "target": "e8",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e7",
+      "target": "e9",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "USES_COMPONENT"
+    }
+  ]
+}
