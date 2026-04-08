@@ -83,3 +83,8 @@ Uncaught ReferenceError:  → docs-agent
 메인 서버(192.168.0.210) 방화벽에 아래 인바운드 규칙
 [slack-bot] 17:13:55 [수신] #docs 김근형: 발주이력 확인되는데 미배정 품목이 여전히 남아 있습니다 다시 한번 확인해주세요 이건 와중에 재고감안도 아닌데... → docs-agent
 [slack-bot] 17:13:55 직접 전송 완료 → docs-agent:5614
+[slack-bot] 17:20:44 [응답시간] docs-agent #docs: 6분 48초
+[slack-bot] 17:20:44 [슬랙 발신] #docs ← docs-agent: 김근형님, ERP 재고현황 데이터 업데이트 완료했습니다.
+
+공용자재 프로젝트 매칭 결과:
+\u2022 전체 4,106
