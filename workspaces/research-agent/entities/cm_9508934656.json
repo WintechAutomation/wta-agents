@@ -1,0 +1,165 @@
+{
+  "page_id": "9508934656",
+  "title": "1. OPC UA",
+  "entities": [
+    {
+      "id": "e1",
+      "name": "OPC UA",
+      "type": "Process",
+      "properties": {
+        "description": "Open Platform Communications Unified Architecture, 산업 자동화 통신 프로토콜"
+      }
+    },
+    {
+      "id": "e2",
+      "name": "PLC",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e3",
+      "name": "HMI",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e4",
+      "name": "Windows",
+      "type": "Equipment",
+      "properties": {
+        "note": "운영 체제"
+      }
+    },
+    {
+      "id": "e5",
+      "name": "Android",
+      "type": "Equipment",
+      "properties": {
+        "note": "운영 체제"
+      }
+    },
+    {
+      "id": "e6",
+      "name": "Linux",
+      "type": "Equipment",
+      "properties": {
+        "note": "운영 체제"
+      }
+    },
+    {
+      "id": "e7",
+      "name": "디지털 인증서",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e8",
+      "name": "TCP/IP",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e9",
+      "name": "구현 및 관리의 복잡성",
+      "type": "Issue",
+      "properties": {}
+    },
+    {
+      "id": "e10",
+      "name": "초기 설정 비용",
+      "type": "Issue",
+      "properties": {}
+    },
+    {
+      "id": "e11",
+      "name": "OPC DA",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e12",
+      "name": "OPC AE",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e13",
+      "name": "OPC HDA",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e14",
+      "name": "방화벽",
+      "type": "Component",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e1",
+      "target": "e3",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e1",
+      "target": "e4",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e1",
+      "target": "e5",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e1",
+      "target": "e7",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e1",
+      "target": "e8",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e1",
+      "target": "e9",
+      "type": "HAS_ISSUE"
+    },
+    {
+      "source": "e1",
+      "target": "e10",
+      "type": "HAS_ISSUE"
+    },
+    {
+      "source": "e1",
+      "target": "e11",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e1",
+      "target": "e12",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e1",
+      "target": "e13",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e1",
+      "target": "e14",
+      "type": "USES_COMPONENT"
+    }
+  ]
+}

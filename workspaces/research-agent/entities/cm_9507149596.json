@@ -1,0 +1,234 @@
+{
+  "page_id": "9507149596",
+  "title": "-(한글 버전)-  1-3.  설비 외형",
+  "entities": [
+    {
+      "id": "eq_001",
+      "name": "설비",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "comp_001",
+      "name": "시그널 램프",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_002",
+      "name": "케이스 취출 부 안전 도어",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_003",
+      "name": "터치 스크린",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_004",
+      "name": "조작 패널 (일시정지, 재시작, 비상정지)",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_005",
+      "name": "키보드, 마우스",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_006",
+      "name": "판넬 데이터 유닛",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_007",
+      "name": "작업 도어 (PC)",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_008",
+      "name": "작업 도어 (라벨 부착 부)",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_009",
+      "name": "케이스 커버 공급 부",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_010",
+      "name": "작업 도어 (팔레트 취출 부)",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_011",
+      "name": "작업 도어 (잉크젯 마킹기 케비넷, 터치 패널)",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_012",
+      "name": "작업 도어 (팔레트 공급 부)",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_013",
+      "name": "메인 전원",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_014",
+      "name": "케이스 공급 부",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_015",
+      "name": "판넬 도어",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_016",
+      "name": "메인 공압",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_017",
+      "name": "작업 도어 (라벨 교체 부)",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_018",
+      "name": "작업 도어",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_019",
+      "name": "조작 패널 (비상 정지)",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_020",
+      "name": "케이스 취출 부",
+      "type": "Component",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "source": "eq_001",
+      "target": "comp_001",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eq_001",
+      "target": "comp_002",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eq_001",
+      "target": "comp_003",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eq_001",
+      "target": "comp_004",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eq_001",
+      "target": "comp_005",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eq_001",
+      "target": "comp_006",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eq_001",
+      "target": "comp_007",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eq_001",
+      "target": "comp_008",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eq_001",
+      "target": "comp_009",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eq_001",
+      "target": "comp_010",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eq_001",
+      "target": "comp_011",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eq_001",
+      "target": "comp_012",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eq_001",
+      "target": "comp_013",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eq_001",
+      "target": "comp_014",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eq_001",
+      "target": "comp_015",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eq_001",
+      "target": "comp_016",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eq_001",
+      "target": "comp_017",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eq_001",
+      "target": "comp_018",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eq_001",
+      "target": "comp_019",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eq_001",
+      "target": "comp_020",
+      "type": "USES_COMPONENT"
+    }
+  ]
+}

@@ -76,3 +76,71 @@
 [manual-graphrag] 02:45:53   소요: 63.3초
 [manual-graphrag] 02:45:53 [18/50] [4_servo] 180202_Ezi-SERVOII EtherCAT 4X_KOR.pdf
 [manual-graphrag] 02:45:57   텍스트: 15734자, 이미지: 3개
+[manual-graphrag] 02:47:53   엔티티: 0개, 관계: 0개
+[manual-graphrag] 02:47:53   소요: 120.1초
+[manual-graphrag] 02:47:53 [19/50] [4_servo] A5_긾___DXF긲_귽깑뫮뤖__rev3.pdf
+[manual-graphrag] 02:47:53   텍스트: 125678자, 이미지: 0개
+[manual-graphrag] 02:48:20   엔티티: 0개, 관계: 0개
+[manual-graphrag] 02:48:20   소요: 27.4초
+[manual-graphrag] 02:48:20 [20/50] [4_servo] ELM1M-1500MA130F-H.pdf
+[manual-graphrag] 02:48:20 PDF 파싱 오류 ELM1M-1500MA130F-H.pdf: code=7: unknown header version (3498967040) in bmp image
+[manual-graphrag] 02:48:20   텍스트/이미지 없음: ELM1M-1500MA130F-H.pdf
+[manual-graphrag] 02:48:20 [21/50] [5_inverter] iMASTER U1 간단 매뉴얼_ADT-U1-01-K201902[04].pdf
+[manual-graphrag] 02:48:20   텍스트: 48175자, 이미지: 1개
+[manual-graphrag] 02:49:17   엔티티: 0개, 관계: 0개
+[manual-graphrag] 02:49:17   소요: 57.1초
+[manual-graphrag] 02:49:17 [22/50] [6_plc] modbus_y_uss1_76.pdf
+[manual-graphrag] 02:49:17 PDF 파싱 오류 modbus_y_uss1_76.pdf: code=7: unknown header version (3498967040) in bmp image
+[manual-graphrag] 02:49:17   텍스트/이미지 없음: modbus_y_uss1_76.pdf
+[manual-graphrag] 02:49:17 [23/50] [6_plc] ZS-L_2010.pdf
+[manual-graphrag] 02:49:18   텍스트: 8606자, 이미지: 2개
+[manual-graphrag] 02:50:24   엔티티: 0개, 관계: 0개
+[manual-graphrag] 02:50:24   소요: 67.1초
+[manual-graphrag] 02:50:24 --- 중간저장: 20건 완료 ---
+[manual-graphrag] 02:50:24 [24/50] [6_plc] AJ65BT-D62 User's Manual.pdf
+[manual-graphrag] 02:50:25   텍스트: 76399자, 이미지: 0개
+[manual-graphrag] 02:51:49   엔티티: 0개, 관계: 0개
+[manual-graphrag] 02:51:49   소요: 85.3초
+[manual-graphrag] 02:51:49 [25/50] [7_pneumatic] Back-UPS Pro_BR550GI_APC.pdf
+[manual-graphrag] 02:51:50   텍스트: 2616자, 이미지: 0개
+[manual-graphrag] 02:52:41   엔티티: 0개, 관계: 0개
+[manual-graphrag] 02:52:41   소요: 52.0초
+[manual-graphrag] 02:52:41 [26/50] [7_pneumatic] Safect 종합 카다로그 K-ver.04.pdf
+[manual-graphrag] 02:52:42 PDF 파싱 오류 Safect 종합 카다로그 K-ver.04.pdf: code=7: unknown header version (3498967040) in bmp image
+[manual-graphrag] 02:52:42   텍스트/이미지 없음: Safect 종합 카다로그 K-ver.04.pdf
+[manual-graphrag] 02:52:42 [27/50] [8_etc] DTP3_SUI_ManualV1.1(KOR)_170509_no_app.pdf
+[manual-graphrag] 02:52:42   텍스트: 8037자, 이미지: 0개
+[manual-graphrag] 02:54:42 엔티티 추출 오류 [DTP3_SUI_ManualV1.1(KOR)_170509_no_app.pdf]: HTTPConnectionPool(host='182.224.6.147', port=11434): Read timed out. (read timeout=120)
+[manual-graphrag] 02:54:42   엔티티: 0개, 관계: 0개
+[manual-graphrag] 02:54:42   소요: 120.1초
+[manual-graphrag] 02:54:42 [28/50] [8_etc] LPCIe-8124-C_Datasheet_en_1.pdf
+[manual-graphrag] 02:54:42   텍스트: 3482자, 이미지: 0개
+[manual-graphrag] 02:55:15   엔티티: 0개, 관계: 0개
+[manual-graphrag] 02:55:15   소요: 33.1초
+[manual-graphrag] 02:55:15 [29/50] [8_etc] PTU2_e.pdf
+[manual-graphrag] 02:55:15   텍스트: 22727자, 이미지: 0개
+[manual-graphrag] 02:55:49   엔티티: 0개, 관계: 0개
+[manual-graphrag] 02:55:49   소요: 34.5초
+[manual-graphrag] 02:55:49 [30/50] [8_etc] Eurotherm_3500_Data Sheet_HA029045_10.pdf
+[manual-graphrag] 02:55:49 PDF 파싱 오류 Eurotherm_3500_Data Sheet_HA029045_10.pdf: code=7: unknown header version (3498967040) in bmp image
+[manual-graphrag] 02:55:49   텍스트/이미지 없음: Eurotherm_3500_Data Sheet_HA029045_10.pdf
+[manual-graphrag] 02:55:49 [31/50] [8_etc] st_5211.pdf
+[manual-graphrag] 02:55:49   텍스트: 5158자, 이미지: 1개
+[manual-graphrag] 02:56:39   엔티티: 0개, 관계: 0개
+[manual-graphrag] 02:56:39   소요: 49.8초
+[manual-graphrag] 02:56:39 [32/50] [8_etc] Ysakawa_Serial_Encoder_Setup.pdf
+[manual-graphrag] 02:56:39   텍스트: 8966자, 이미지: 1개
+[manual-graphrag] 02:57:45   엔티티: 0개, 관계: 0개
+[manual-graphrag] 02:57:45   소요: 65.4초
+[manual-graphrag] 02:57:45 [33/50] [8_etc] 02_ARL-LA_ARL-FLA.pdf
+[manual-graphrag] 02:57:46   텍스트: 926자, 이미지: 1개
+[manual-graphrag] 02:57:47 테스트 대상: 50개 PDF
+[manual-graphrag] 02:57:47   [1_robot] RH-10.15AH%20Spec(CR2A-572)(bfp-a8150k)-J.pdf
+[manual-graphrag] 02:57:47   [1_robot] [bfp-a8849Z] SDSeries GOT직접접속 확장기능설명서-영문(KC).pdf
+[manual-graphrag] 02:57:47   [1_robot] 4.배선.PDF
+[manual-graphrag] 02:57:47   [1_robot] Yaskawa Teaching, Cube Setting Manual.pdf
+[manual-graphrag] 02:57:47   [1_robot] CR123478 기능과조작상세_bfp-a5945-s.pdf
+[manual-graphrag] 02:57:47   ...
+[manual-graphrag] 02:57:47 Neo4j 연결 완료
+[manual-graphrag] 02:57:47 [1/50] [1_robot] RH-10.15AH%20Spec(CR2A-572)(bfp-a8150k)-J.pdf
+[manual-graphrag] 02:57:48   텍스트: 110153자, 이미지: 0개
