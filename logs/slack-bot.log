@@ -26942,3 +26942,29 @@ CS
 2026-04-08 20:39:07,474 INFO [수신] #docs 김근형: cs-type-expansion:1  Failed to load resource: the server responded with a status → docs-agent
 2026-04-08 20:39:07,955 INFO 직접 전송 완료 → docs-agent:5614
 2026-04-08 20:39:25,319 INFO [응답시간] docs-agent #docs: 17초
+2026-04-08 20:39:25,319 INFO [슬랙 발신] #docs ← docs-agent: 죄송합니다. 경로 수정 완료했습니다.
+
+📋 CS성 품목 확장 리스트 (43건): https://agent.m
+2026-04-08 20:40:54,902 INFO [수신] #docs 김근형: 확장 리스트 전부 예정 없음 → docs-agent
+2026-04-08 20:40:55,339 INFO 직접 전송 완료 → docs-agent:5614
+2026-04-08 20:41:47,425 INFO [응답시간] docs-agent #docs: 52초
+2026-04-08 20:41:47,425 INFO [슬랙 발신] #docs ← docs-agent: CS 확장 43건 전부 사용예정 없음 반영 완료했습니다.
+
+현재 NO_USE 총 196건 (기존 153 + 
+2026-04-08 20:43:13,674 INFO [수신] #docs 김근형: SIO-20P 이거 재고감안으로 최근 이력 있음 왜 사용예정 안잡혀 있음? → docs-agent
+2026-04-08 20:43:14,136 INFO 직접 전송 완료 → docs-agent:5614
+2026-04-08 20:44:10,656 INFO [응답시간] docs-agent #docs: 56초
+2026-04-08 20:44:10,656 INFO [슬랙 발신] #docs ← docs-agent: SIO-20P 확인했습니다.
+
+원인: BOM 장비유형이 '핸들러'로 되어 있는데, 사용예정 계산에 쓰는 장비
+2026-04-08 20:46:04,882 INFO [수신] #docs 김근형: 아뇨 들어가는 장비가 여러개잖아요 내가 bom 유형 확인 하지 말라고 했지 발주를 확인해서 오라고요 → docs-agent
+2026-04-08 20:46:05,346 INFO 직접 전송 완료 → docs-agent:5614
+2026-04-08 20:46:22,010 INFO [수신] #docs 김근형: 저렇게 처리된것도 전부 다 들고와 → docs-agent
+2026-04-08 20:46:22,505 INFO 직접 전송 완료 → docs-agent:5614
+2026-04-08 20:48:22,603 INFO [응답시간] docs-agent #docs: 2분 0초
+2026-04-08 20:48:22,604 INFO [슬랙 발신] #docs ← docs-agent: 사용예정 미반영 품목 리스트 36건 정리했습니다.
+
+📋 확인 링크: https://agent.mes-wta.
+2026-04-08 20:49:22,851 INFO [수신] #docs 김근형: 대구텍 키엔스는 확인대는대로 전달 → docs-agent
+2026-04-08 20:49:23,321 INFO 직접 전송 완료 → docs-agent:5614
+2026-04-08 20:49:28,580 INFO [응답시간] docs-agent #docs: 5초
