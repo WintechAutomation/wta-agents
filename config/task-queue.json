@@ -1055,6 +1055,30 @@
       "updated_at": "2026-04-08 20:09:21",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-db-manager-bc5107",
+      "agent": "db-manager",
+      "task": "긴급. 김근형님 지시: \"다른 걸 건드리지 마라.\"",
+      "message": "긴급. 김근형님 지시: \"다른 걸 건드리지 마라.\"\n\nerp_data.json을 우선순위 재조정 이전 백업으로 복구해주세요. 그 후 아래 수정만 적용:\n\n1. Cell 프레스 44건의 r[9]에서 '프레스' 제거\n\n이것만. 다른 품목의 프로젝트명/발주일은 건드리지 말 것. CS 48건, 계획건 78건도 erp_data.json 수정 불필요 (HTML JS에서 처리).\n\n백업 파일명 확인 후 즉시 복구 바랍니다.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 20:10:09",
+      "updated_at": "2026-04-08 20:10:09",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-docs-agent-e924c4",
+      "agent": "docs-agent",
+      "task": "db-manager가 erp_data.json 복구 완료했습니다.",
+      "message": "db-manager가 erp_data.json 복구 완료했습니다.\n\n- 프로젝트명/발주일 1,070건 원본 복구\n- Cell 프레스 44건 r[9] '프레스' 제거 유지\n- 장비유형 배열, bom_qty는 그대로\n\nHTML 재적용 진행해주세요. CS 48건, 계획건 78건은 JS의 NO_USE 리스트로 처리.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 20:12:31",
+      "updated_at": "2026-04-08 20:12:31",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }
