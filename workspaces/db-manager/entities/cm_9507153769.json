@@ -1,0 +1,41 @@
+{
+  "page_id": "9507153769",
+  "title": "-(한글 버전)-  7-2. 보수 점검 요령",
+  "entities": [
+    {
+      "id": "proc_MaintenanceCheckKO",
+      "name": "보수 점검 요령 (한글 7-2)",
+      "type": "Process",
+      "properties": {
+        "section": "7-2",
+        "language": "Korean"
+      }
+    },
+    {
+      "id": "comp_MaintenanceSchedule",
+      "name": "보수 점검 항목 및 주기",
+      "type": "Component",
+      "properties": {
+        "regulator_filter": "Regulator 필터 청소 — 상시 / 필터 엘리먼트 교환 2년 또는 압력강하 0.1MPa 전",
+        "filter_model": "SMC AW30-03B-A, AFM30-03-A, AW40-04B-A, AFM40-04-A",
+        "reject_conveyor": "벨트 마모/편심 확인 — 정기 2회/년 / Misumi HTBN230S5M-100",
+        "insert_transfer_2jaw": "Gripper 그립 실패/동작 이상 — 상시 / Pisco CHM08BC03C",
+        "insert_transfer_belt": "벨트 마모/편심, Grease 주입 — 정기 1회/년 / NSK AS2 Grease",
+        "reversal_unit": "회전 구동 이상/소음 — 정기 1회/년 / Misumi HTBN320S5M-100",
+        "case_cover_stocker": "Cylinder 동작/끼임 — 상시 / SMC CDM2L20-150Z-M9BL",
+        "case_magazine": "벨트 마모/편심 — 정기 1회/년",
+        "case_index": "이상 시 LM Guide/Ball Screw Grease — 정기 1회/년",
+        "labeling_attacher": "회전 이상 — 정기 1회/년 / Misumi HTBN201S3M-100",
+        "unloading_conveyor": "구동 이상 — 정기 1회/년 / Misumi HTBN255S3M-100",
+        "robot_axes": "LM/Screw Grease 주입 — 정기 1회/년 / LPK 로봇, NSK AS2 Grease"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "source": "proc_MaintenanceCheckKO",
+      "target": "comp_MaintenanceSchedule",
+      "type": "DOCUMENTS"
+    }
+  ]
+}

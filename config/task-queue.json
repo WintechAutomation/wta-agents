@@ -1451,6 +1451,18 @@
       "updated_at": "2026-04-08 22:17:38",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-docs-agent-aed55f",
+      "agent": "docs-agent",
+      "task": "팀 헌장 업데이트 요청. charter/team-charter.md 파일을 읽고 아래 변경사항을 반영해줘.",
+      "message": "팀 헌장 업데이트 요청. charter/team-charter.md 파일을 읽고 아래 변경사항을 반영해줘.\n\n1. 팀원 수: \"MAX + 15명 = 16명\" → \"MAX + 16명 = 17명\"\n2. 팀원 명부에 research-agent 추가: 🔎, 기술조사/시장분석/리서치, Sonnet, 슬랙 담당 없음\n3. 협업 관계도에 추가: 기술조사/시장분석 → research-agent, 온라인 검색/자료 수집\n4. 채널 권한 매트릭스에 research-agent 추가: 슬랙 직접 응답 금지, 텔레그램 금지, 내부 데이터 서비스\n5. 2.2 DB 접근에 추가: \"ERP DB는 MES 백엔드 API를 통해서만 접근한다. 모든 에이전트의 ERP 직접 접속을 금지한다.\"\n6. 2.4 슬랙 응답 규칙 세분화:\n   - #pm: 부서장 메시지는 멘션 없어도 응답\n   - #docs: 모든 메시지에 응답\n   - #밥먹기: \"밥통.\"으로 시작하는 메시지에 응답\n7. 2.7 작업 프로세스에 추가:\n   - 작업 지시 시 작업큐(task-queue)에도 반드시 등록\n   - 작업 지시 후 15분 무응답 시 부서장에게 알림\n   - 웹 개발 완료 → qa-agent Playwright 1차 검증 → MAX 2차 확인 → 부서장 보고\n8. 일일 업무보고(섹션 7): HTML 종합보고서 작성 후 Cloudflare URL로 부서장 보고 추가\n9. 최종 업데이트 날짜: 2026-04-08\n\n수정 완료 후 보고해줘.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 22:27:38",
+      "updated_at": "2026-04-08 22:27:38",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }

@@ -1,0 +1,141 @@
+{
+  "page_id": "9508980272",
+  "title": "#저울센서 동작 확인",
+  "entities": [
+    {
+      "id": "e1",
+      "name": "저울",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e2",
+      "name": "단중 센서",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e3",
+      "name": "저울 A",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e4",
+      "name": "저울 B",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e5",
+      "name": "프레스",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e6",
+      "name": "저울센서 동작 확인",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e7",
+      "name": "전수측정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e8",
+      "name": "간헐 측정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e9",
+      "name": "Communication Error",
+      "type": "Issue",
+      "properties": {}
+    },
+    {
+      "id": "e10",
+      "name": "DeviceInfo.xml",
+      "type": "Manual",
+      "properties": {}
+    },
+    {
+      "id": "e11",
+      "name": "HMI",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e12",
+      "name": "WinCT",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e13",
+      "name": "오스터왈더",
+      "type": "Customer",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "source": "e1",
+      "target": "e2",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "e6",
+      "target": "e7",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e6",
+      "target": "e8",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "e3",
+      "target": "e6",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "e4",
+      "target": "e6",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "e5",
+      "target": "e6",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "e11",
+      "target": "e6",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "e12",
+      "target": "e6",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "e13",
+      "target": "e9",
+      "type": "HAS_ISSUE"
+    },
+    {
+      "source": "e10",
+      "target": "e9",
+      "type": "DOCUMENTS"
+    },
+    {
+      "source": "e1",
+      "target": "e6",
+      "type": "INVOLVED_IN"
+    }
+  ]
+}

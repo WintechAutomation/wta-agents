@@ -1,0 +1,131 @@
+{
+  "page_id": "9508980879",
+  "title": "#기능별 테스트하기",
+  "entities": [
+    {
+      "id": "eq_001",
+      "name": "측면 디버링 툴",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "eq_002",
+      "name": "하부 브러쉬 툴",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "eq_003",
+      "name": "에어 디버링 툴",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "eq_004",
+      "name": "저울 툴",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "comp_001",
+      "name": "측면 브러쉬",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_002",
+      "name": "하부 브러쉬",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_003",
+      "name": "저울센서",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "proc_001",
+      "name": "측면 디버링",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_002",
+      "name": "하부 브러쉬 디버링",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_003",
+      "name": "에어 디버링",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_004",
+      "name": "저울측정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "person_001",
+      "name": "이광열",
+      "type": "Person",
+      "properties": {}
+    },
+    {
+      "id": "manual_001",
+      "name": "저울센서 동작 확인 매뉴얼",
+      "type": "Manual",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "source": "eq_001",
+      "target": "comp_001",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eq_002",
+      "target": "comp_002",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eq_004",
+      "target": "comp_003",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eq_001",
+      "target": "proc_001",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "eq_002",
+      "target": "proc_002",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "eq_003",
+      "target": "proc_003",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "eq_004",
+      "target": "proc_004",
+      "type": "INVOLVED_IN"
+    },
+    {
+      "source": "proc_004",
+      "target": "manual_001",
+      "type": "DOCUMENTS"
+    },
+    {
+      "source": "person_001",
+      "target": "manual_001",
+      "type": "INVOLVED_IN"
+    }
+  ]
+}

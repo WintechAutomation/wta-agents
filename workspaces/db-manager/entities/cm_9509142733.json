@@ -1,0 +1,27 @@
+{
+  "page_id": "9509142733",
+  "title": "Pallet 작업 위치",
+  "entities": [
+    {
+      "id": "comp_PalletWorkPositions",
+      "name": "Pallet 작업 위치 파라미터",
+      "type": "Component",
+      "properties": {
+        "calib_pos": "WORKING_ORG - 20 (팔레트 상부 카메라 캘리브레이션 시)",
+        "extract_pallet": "PALLET축 취출부 가이드 진입 위치",
+        "extract_palz": "팔레트 공급 상태에서 4개 렛치 정상 복귀 높이",
+        "load_pallet": "PALLET축 공급부 가이드 진입 위치",
+        "load_palz": "팔레트가 들리는 PAL_Z 위치",
+        "clamp_pos": "LODING PALLET 위치의 -2 값 / 팔레트 클램핑 PAL_Z 위치",
+        "H1X_center": "H1X 그리퍼 3개 반전기 정중앙 위치",
+        "H1X_cam_avoid": "팔레트 상부 카메라 촬상 시 H1X 회피 위치",
+        "head_out_search": "HeadOutForSearch < MiddlePos.MiddlePositionH1 - 10",
+        "passline_3jaw": "H1 3jaw 그리퍼 passline",
+        "pickup_z_3jaw_vert": "H1 3jaw 수직 작업 팔레트 픽업 Z",
+        "pickup_z_3jaw_horiz": "H1 3jaw 수평 작업 팔레트 픽업 Z",
+        "passline_other": "H1 3jaw 아닌 그리퍼 passline"
+      }
+    }
+  ],
+  "relations": []
+}

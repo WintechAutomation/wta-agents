@@ -1,0 +1,21 @@
+{
+  "page_id": "9507149128",
+  "title": "ケース原点設定（日本語）",
+  "entities": [
+    {
+      "id": "proc_CaseOriginSetJP",
+      "name": "케이스 원점 설정 (일본어)",
+      "type": "Process",
+      "properties": {
+        "language": "Japanese",
+        "purpose": "케이스에 제품을 넣는 포켓 원점 설정",
+        "precondition": "장비 원점복귀, 케이스 수동 공급 (FD1, FD2)",
+        "method": "Head/케이스 선택 → Top-3번 → 비전 티칭",
+        "10pocket": "케이스 1,2번 포켓 원점 설정 (조명 조정 후 포켓 중심에 카메라 중심 맞춤, 4회)",
+        "2pocket": "동일 방법, 4회",
+        "restore": "설정 후 케이스 수동 취출 및 레일에서 제거"
+      }
+    }
+  ],
+  "relations": []
+}

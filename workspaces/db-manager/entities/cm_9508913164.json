@@ -1,0 +1,27 @@
+{
+  "page_id": "9508913164",
+  "title": "WMX 토크 모니터링 설정 방법",
+  "entities": [
+    {
+      "id": "proc_WMXTorqueMonitorSetup",
+      "name": "WMX 토크 모니터링 설정",
+      "type": "Process",
+      "properties": {
+        "steps": [
+          "WMXServer 실행 → Stop Communication으로 접속 끊기",
+          "Setup 탭 → EcConfigurator 실행",
+          "ENI Editor 탭 → 변경 축 선택 → Pdo Type=TxPdo",
+          "Transmit PDO mapping 2 체크 및 하위 파라미터 전체 체크",
+          "Save 저장",
+          "WMXServer 통신 재시작",
+          "EcConfigurator Main 탭 → Scan으로 축 목록 검색",
+          "변경 축 선택 → Mapping2로 변경되었는지 확인",
+          "WMX Monitoring으로 토크값 기록 가능"
+        ],
+        "batch_note": "저장 이름이 같은 축은 일괄 처리 (예: MBDHT2510BA1 3개 축 동시 적용)",
+        "caution": "설정 변경 후 I/O Input/Output 시작 번호가 달라질 수 있음"
+      }
+    }
+  ],
+  "relations": []
+}

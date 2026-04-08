@@ -1,0 +1,20 @@
+{
+  "page_id": "9508920384",
+  "title": "[PVD_언로딩] 작업 가능 조건",
+  "entities": [
+    {
+      "id": "comp_PVDUnloadingConditions",
+      "name": "PVD 언로딩 작업 가능 조건",
+      "type": "Component",
+      "properties": {
+        "gripper_condition": "G1 제품 그립 조건, PG 제품 그립 조건",
+        "inverter_condition": "반전기 작업 조건",
+        "spring_condition": "스프링 길이 조건",
+        "pattern_condition": "패턴 3가지 조건 모두 충족 시 정상 작업 가능",
+        "tolerance": "막대 외경과 스프링 내경 사이 공차 제한",
+        "jam_issue": "제품과 스프링 끼임 현상 주의"
+      }
+    }
+  ],
+  "relations": []
+}

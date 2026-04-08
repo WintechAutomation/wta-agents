@@ -1,0 +1,43 @@
+{
+  "page_id": "9508979222",
+  "title": "#HMI의 선정과 코드 빌드",
+  "entities": [
+    {
+      "id": "proc_HMISelectionAndBuild",
+      "name": "HMI 선정 및 코드 빌드",
+      "type": "Process",
+      "properties": {
+        "backup_first": "VNC Viewer로 WLauncher/WMI/WMXServer 날짜 폴더로 백업 (WMXServer는 제어팀 담당)",
+        "hmi_select_criteria": "장비 타입(컨베이어/엘리베이터), 연동 장비 인터페이스(고바야시/오스트발더/도르스트)",
+        "backup_path": "\\\\192.168.1.253\\Project\\1. Project - HMI\\01 Press",
+        "apply_path": "D:/WintechAutomation → 동일 폴더 덮어쓰기",
+        "code_conveyor": "CNOKEPRS0015 (2단 컨베이어 타입)",
+        "code_elevator": "CNHRYPRS1019 (엘리베이터 타입)",
+        "build_steps": [
+          "주의사항.txt에서 조건부 컴파일 기호값 확인",
+          "WMI 속성-빌드: 조건부 컴파일 기호 입력, 출력경로 입력 (\\\\10.0.0.150\\WintechAutomation\\WMI\\)",
+          "WMI 속성-디버그: 원격 연결 IP 입력 (전 장비 공통 10.0.0.150)",
+          "WMI/BaseLibrary 대상 프레임워크 .NET 4.6 확인",
+          "원격 디버거 실행 (D:/WintechAutomation/Setup/17. Remote Debugger/2019/x64)",
+          "참조 라이브러리 먼저 빌드 → WMI 빌드 및 F5 실행"
+        ],
+        "slave_ng_fix": "WLauncher Config.csv Param 개수를 WMXServer EcConfigurator에서 확인 후 변경"
+      }
+    },
+    {
+      "id": "comp_WLauncherConfigCSV",
+      "name": "WLauncher Config.csv",
+      "type": "Component",
+      "properties": {
+        "issue": "SLAVE NG 시 Param 개수 불일치 → WMXServer EcConfigurator 확인 후 수정"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "source": "proc_HMISelectionAndBuild",
+      "target": "comp_WLauncherConfigCSV",
+      "type": "INVOLVES_COMPONENT"
+    }
+  ]
+}
