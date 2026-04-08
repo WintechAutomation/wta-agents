@@ -323,6 +323,18 @@
       "updated_at": "2026-04-08 10:08:50",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-crafter-7e61e8",
+      "agent": "crafter",
+      "task": "긴급 수정 요청: mcp-agent-channel.ts design-agent 통신 버그.",
+      "message": "긴급 수정 요청: mcp-agent-channel.ts design-agent 통신 버그.\n\n원인: mcp-agent-channel.ts가 모든 에이전트 통신을 localhost:{port}로 하드코딩. config/agents.json의 host 필드를 무시함.\n\n수정 내용:\n- config/agents.json에서 각 에이전트의 host 필드를 로드\n- send_message 시 `http://localhost:${port}` 대신 `http://${host}:${port}` 사용\n- design-agent는 host가 192.168.0.220이므로 `http://192.168.0.220:5615`로 통신해야 함\n- host가 없거나 빈 값이면 기본값 localhost 유지\n\n수정 후 MCP 서버 재시작까지 해줘.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 10:10:51",
+      "updated_at": "2026-04-08 10:10:51",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }

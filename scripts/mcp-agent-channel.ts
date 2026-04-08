@@ -45,6 +45,13 @@ const AGENT_PORTS: Record<string, number> = Object.fromEntries(
     .map(([id, a]) => [id, (a as { port: number }).port])
 )
 
+// ── 에이전트 호스트 맵 — host 필드가 없으면 localhost ──
+const AGENT_HOSTS: Record<string, string> = Object.fromEntries(
+  Object.entries(agentsConfig)
+    .filter(([, a]) => (a as { port: number | null }).port !== null)
+    .map(([id, a]) => [id, (a as { host?: string }).host || 'localhost'])
+)
+
 // ── 설정 ──
 const AGENT_ID = process.argv[2]
 if (!AGENT_ID) {
@@ -680,11 +687,12 @@ async function sendMessage(to: string, message: string): Promise<string> {
     targets.map(async (target) => {
       const port = AGENT_PORTS[target]
       if (!port) return `알 수 없는 에이전트: ${target}`
+      const host = AGENT_HOSTS[target] || 'localhost'
 
       // 포트 온라인 여부 먼저 확인
       let isOnline = false
       try {
-        await fetch(`http://localhost:${port}/ping`, {
+        await fetch(`http://${host}:${port}/ping`, {
           signal: AbortSignal.timeout(1000),
         })
         isOnline = true
@@ -694,7 +702,7 @@ async function sendMessage(to: string, message: string): Promise<string> {
 
       if (isOnline) {
         try {
-          await fetch(`http://localhost:${port}/message`, {
+          await fetch(`http://${host}:${port}/message`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -732,13 +740,14 @@ async function sendMessage(to: string, message: string): Promise<string> {
 async function checkStatus(): Promise<string> {
   const results = await Promise.all(
     Object.entries(AGENT_PORTS).map(async ([id, port]) => {
+      const host = AGENT_HOSTS[id] || 'localhost'
       try {
-        await fetch(`http://localhost:${port}/ping`, {
+        await fetch(`http://${host}:${port}/ping`, {
           signal: AbortSignal.timeout(1000),
         })
-        return `[ON ] ${id} (포트 ${port})`
+        return `[ON ] ${id} (${host}:${port})`
       } catch {
-        return `[OFF] ${id} (포트 ${port})`
+        return `[OFF] ${id} (${host}:${port})`
       }
     }),
   )
