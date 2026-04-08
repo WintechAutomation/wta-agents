@@ -157,18 +157,6 @@
       "completed_at": null
     },
     {
-      "id": "tq-crafter-19d673",
-      "agent": "crafter",
-      "task": "부서장 피드백 - 긴급:",
-      "message": "부서장 피드백 - 긴급:\n\n시트 페이지에서 도면 그리기가 안 됩니다. 프로젝트 생성 후 시트를 열었는데 아무것도 안 나온다고 합니다.\n\n확인 사항:\n1. 프로젝트 탐색기에서 시트 클릭 시 JointJS 캔버스가 로드되는지\n2. 심볼 라이브러리 탭에서 심볼을 캔버스에 드래그앤드롭하는 기능이 동작하는지\n3. 캔버스 자체가 렌더링되고 있는지 (빈 화면인지, 캔버스는 있는데 심볼만 안 보이는 건지)\n4. 브라우저 콘솔 에러 확인\n\n즉시 확인하고 수정해줘.",
-      "status": "pending",
-      "priority": "medium",
-      "created_at": "2026-04-08 08:56:28",
-      "updated_at": "2026-04-08 08:56:28",
-      "last_report_at": null,
-      "completed_at": null
-    },
-    {
       "id": "tq-admin-agent-53f24f",
       "agent": "admin-agent",
       "task": "부서장 지시: 슬랙 구매팀 인원 초대",
@@ -177,6 +165,30 @@
       "priority": "medium",
       "created_at": "2026-04-08 08:57:27",
       "updated_at": "2026-04-08 08:57:27",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-admin-agent-19809e",
+      "agent": "admin-agent",
+      "task": "부서장 요청: 슬랙 미가입 인원 전체 리스트 정리해줘.",
+      "message": "부서장 요청: 슬랙 미가입 인원 전체 리스트 정리해줘.\n\n구매팀 3명 + 기구설계팀 8명 포함, 현재 슬랙 미가입 상태인 전체 인원을 이름/직급/이메일로 정리해서 보고해줘. 홍대한 이사는 제외.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 09:05:25",
+      "updated_at": "2026-04-08 09:05:25",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-crafter-15e765",
+      "agent": "crafter",
+      "task": "부서장 피드백 - 긴급:",
+      "message": "부서장 피드백 - 긴급:\n\n도면 그리기가 여전히 안 된다고 합니다. 수정했다고 했는데 외부에서 확인 시 여전히 동작 안 함.\n\n직접 Cloudflare 터널 URL로 접속해서 테스트해봐:\n1. 프로젝트 생성\n2. 시트 클릭\n3. 심볼 탭 전환\n4. 심볼 드래그앤드롭으로 캔버스에 배치\n\n실제 외부 브라우저에서 위 흐름이 되는지 확인하고, 안 되면 원인 파악해서 수정해줘. HMR이 제대로 반영 안 됐을 수 있으니 dev 서버 완전 재시작도 고려해.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 09:06:57",
+      "updated_at": "2026-04-08 09:06:57",
       "last_report_at": null,
       "completed_at": null
     }
