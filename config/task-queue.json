@@ -2243,6 +2243,30 @@
       "updated_at": "2026-04-09 02:06:39",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-db-manager-b0ca95",
+      "agent": "db-manager",
+      "task": "GraphRAG 야간 적재 계획 수정 (부서장 지시).",
+      "message": "GraphRAG 야간 적재 계획 수정 (부서장 지시).\n\n**변경 사항:** pgvector 텍스트가 아니라 원본 PDF를 처음부터 다시 파싱한다. 청킹도 재설계.\n\n**원본 데이터 위치:** `C:\\MES\\wta-agents\\data\\manuals`\n- 8개 카테고리: robot, sensor, hmi, servo, inverter, plc, pneumatic, etc\n- 총 2,105개 파일 (PDF 1,865개, doc 72개, xls 64개, ppt 36개, docx 35개, xlsx 20개, pptx 11개, hwp 2개)\n\n**수정된 요구사항:**\n1. 원본 PDF를 직접 파싱 (텍스트 + 이미지 추출)\n2. 청킹 전략 재설계 (기존 청킹 검토 후 개선안 제시)\n3. 이미지 분석: 로컬 비전 모델 사용 (minicpm-v, llava, qwen2.5-vl 등 Ollama 지원 모델 중 선정)\n4. 엔티티 추출: 로컬 LLM (qwen3.5:35b-a3b 또는 적합한 모델)\n5. Neo4j 적재\n6. 매일 23:00~06:00 스케줄 실행, progress 파일로 이어서 처리\n\n**보고 요청:**\n- 수정된 구현 계획\n- 비전 모델 추천 (이미지 분석용)\n- 청킹 전략 개선안\n- 1,865개 PDF 전체 처리 예상 소요 일수",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-09 02:23:59",
+      "updated_at": "2026-04-09 02:23:59",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-db-manager-1f8e1c",
+      "agent": "db-manager",
+      "task": "계획 수립은 나중에 하고, 우선 테스트로 50개만 먼저 진행해줘.",
+      "message": "계획 수립은 나중에 하고, 우선 테스트로 50개만 먼저 진행해줘.\n\ndata/manuals에서 PDF 50개를 골라서:\n1. 원본 PDF 파싱 (텍스트 + 이미지 추출)\n2. 로컬 LLM으로 엔티티 추출\n3. 이미지가 있으면 로컬 비전 모델로 분석\n4. Neo4j 적재\n\n50개 처리하면서 실제 소요 시간, 품질, 문제점 파악해서 보고해줘. 바로 시작.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-09 02:25:04",
+      "updated_at": "2026-04-09 02:25:04",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }

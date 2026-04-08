@@ -1,0 +1,217 @@
+{
+  "page_id": "9508931611",
+  "title": "윈도우10 외국어 설치 방법",
+  "entities": [
+    {
+      "id": "e1",
+      "name": "윈도우 10",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "e2",
+      "name": "시작 버튼",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e3",
+      "name": "언어 설정",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e4",
+      "name": "인터넷 연결",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e5",
+      "name": "언어 추가",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e6",
+      "name": "중국어 (간체, 중국)",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e7",
+      "name": "지역 - 국가 또는 지역",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e8",
+      "name": "중국",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e9",
+      "name": "날짜 및 시간",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e10",
+      "name": "표준 시간대",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e11",
+      "name": "중국 (베이징)",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e12",
+      "name": "재부팅",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e13",
+      "name": "시작 화면",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e14",
+      "name": "지역 탭",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e15",
+      "name": "추가 날짜, 시간 및 지역 설정",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e16",
+      "name": "관리자 옵션",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e17",
+      "name": "설정 복사",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e18",
+      "name": "시작 화면 및 시스템 계정",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "e19",
+      "name": "윈도우 10 외국어 설치 방법",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e20",
+      "name": "시작 버튼 - 언어 설정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e21",
+      "name": "인터넷 연결",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e22",
+      "name": "언어 추가 선택",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e23",
+      "name": "중국어 설치",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e24",
+      "name": "언어 - 중문 선택",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e25",
+      "name": "지역 변경",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e26",
+      "name": "시간대 변경",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e27",
+      "name": "재부팅",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e28",
+      "name": "시작 화면 창 변경",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e29",
+      "name": "시작 버튼 - 언어 설정 (2)",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e30",
+      "name": "지역 탭 - 추가 날짜, 시간 및 지역 설정",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e31",
+      "name": "국가 또는 지역 클릭",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e32",
+      "name": "관리자 옵션 - 설정 복사",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e33",
+      "name": "시작 화면 및 시스템 계정 체크",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "e34",
+      "name": "시작 화면 창이 한국어로 되어있음",
+      "type": "Issue",
+      "properties": {}
+    },
+    {
+      "id": "e35",
+      "name": "윈도우 10 외국어 설치 방법 매뉴얼",
+      "type": "Manual",
+      "properties": {}
+    }
+  ],
+  "relations": []
+}

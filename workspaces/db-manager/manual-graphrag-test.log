@@ -1,0 +1,18 @@
+[manual-graphrag] 02:27:19 테스트 대상: 50개 PDF
+[manual-graphrag] 02:27:19   [1_robot] RH-10.15AH%20Spec(CR2A-572)(bfp-a8150k)-J.pdf
+[manual-graphrag] 02:27:19   [1_robot] [bfp-a8849Z] SDSeries GOT직접접속 확장기능설명서-영문(KC).pdf
+[manual-graphrag] 02:27:19   [1_robot] 4.배선.PDF
+[manual-graphrag] 02:27:19   [1_robot] Yaskawa Teaching, Cube Setting Manual.pdf
+[manual-graphrag] 02:27:19   [1_robot] CR123478 기능과조작상세_bfp-a5945-s.pdf
+[manual-graphrag] 02:27:19   ...
+[manual-graphrag] 02:27:19 Neo4j 연결 완료
+[manual-graphrag] 02:27:19 [1/50] [1_robot] RH-10.15AH%20Spec(CR2A-572)(bfp-a8150k)-J.pdf
+[manual-graphrag] 02:27:19   텍스트: 110153자, 이미지: 0개
+[manual-graphrag] 02:28:20   엔티티: 0개, 관계: 0개
+[manual-graphrag] 02:28:20   소요: 60.9초
+[manual-graphrag] 02:28:20 [2/50] [1_robot] [bfp-a8849Z] SDSeries GOT직접접속 확장기능설명서-영문(KC).pdf
+[manual-graphrag] 02:28:20   텍스트: 78023자, 이미지: 0개
+[manual-graphrag] 02:29:11   엔티티: 0개, 관계: 0개
+[manual-graphrag] 02:29:11   소요: 51.5초
+[manual-graphrag] 02:29:11 [3/50] [1_robot] 4.배선.PDF
+[manual-graphrag] 02:29:11   텍스트: 1853자, 이미지: 0개
