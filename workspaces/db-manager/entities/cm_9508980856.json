@@ -1,0 +1,16 @@
+{
+  "page_id": "9508980856",
+  "title": "#QuickStop 적용 확인하기",
+  "entities": [
+    {"id": "proc_QuickStopCheck", "name": "QuickStop 설정 확인", "type": "Process", "properties": {"description": "WMXServer Axis Parameter에서 QuickStopDec 값 확인 및 설정", "target_value": 50000000}},
+    {"id": "tool_WMXServer", "name": "WMXServer", "type": "Tool", "properties": {"menu_path": "Setup → Axis Parameter", "tabs": "Connected Device, Setup, Area Limit, Info"}},
+    {"id": "comp_QuickStopDec", "name": "QuickStopDec 파라미터", "type": "Component", "properties": {"axes": "X, Y, X2, Y2", "expected_value": 50000000, "save_path": "\\WMXServer\\Datas\\WMXParameters.xml"}},
+    {"id": "proc_QuickStopUpdate", "name": "QuickStopDec 값 변경", "type": "Process", "properties": {"steps": "값 변경 → Save to File → 재확인", "backup": "WMXParameters.xml 백업 필요"}}
+  ],
+  "relations": [
+    {"source": "proc_QuickStopCheck", "target": "tool_WMXServer", "type": "USES_TOOL"},
+    {"source": "proc_QuickStopCheck", "target": "comp_QuickStopDec", "type": "INVOLVES_COMPONENT"},
+    {"source": "proc_QuickStopUpdate", "target": "comp_QuickStopDec", "type": "INVOLVES_COMPONENT"},
+    {"source": "proc_QuickStopUpdate", "target": "tool_WMXServer", "type": "USES_TOOL"}
+  ]
+}

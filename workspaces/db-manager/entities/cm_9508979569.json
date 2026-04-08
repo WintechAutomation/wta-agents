@@ -1,0 +1,20 @@
+{
+  "page_id": "9508979569",
+  "title": "#SystemData 설정",
+  "entities": [
+    {"id": "proc_SystemDataConfig", "name": "SystemData 설정", "type": "Process", "properties": {"description": "업체 요구사항/스펙에 맞춰 장비명, 모델, 인터페이스 등 설정", "required_checks": "장비명 설정, 사용 모델 설정"}},
+    {"id": "comp_SystemDataFile", "name": "SystemData XML 파일", "type": "Component", "properties": {"path": "D:\\WintechAutomation\\WMI\\Data\\SystemData", "type": "XML 문서", "backup": "SystemData.xml.Bak"}},
+    {"id": "comp_WMIDataFolder", "name": "WMI Data 폴더", "type": "Component", "properties": {"path": "D:\\WintechAutomation\\WMI\\Data", "contains": "Language, Limit, MODEL, Positions, Signal, ATC, CalibrationData, DeviceInfo, SystemData 등"}},
+    {"id": "comp_MachineName", "name": "장비명 설정", "type": "Component", "properties": {"format": "업체명 호기수 (예: OKE #35)", "display": "HMI 상단 중앙"}},
+    {"id": "comp_ModelSpec", "name": "사용 모델 설정", "type": "Component", "properties": {
+      "params": "Shape(Circle/Rectangle), Size(Width/Height), Offset(X/Y), Origin Checked, Center_Skip_Size",
+      "source": "사양서 기재 플레이트 규격"
+    }}
+  ],
+  "relations": [
+    {"source": "proc_SystemDataConfig", "target": "comp_SystemDataFile", "type": "INVOLVES_COMPONENT"},
+    {"source": "proc_SystemDataConfig", "target": "comp_MachineName", "type": "INVOLVES_COMPONENT"},
+    {"source": "proc_SystemDataConfig", "target": "comp_ModelSpec", "type": "INVOLVES_COMPONENT"},
+    {"source": "comp_SystemDataFile", "target": "comp_WMIDataFolder", "type": "INVOLVES_COMPONENT"}
+  ]
+}

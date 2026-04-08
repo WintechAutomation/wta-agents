@@ -1,0 +1,11 @@
+{
+  "page_id": "9508928003",
+  "title": "(국문, OKE)- 4-2-8-3. 케이스 원점 설정",
+  "entities": [
+    {"id": "proc_CaseOriginOKE", "name": "케이스 원점 설정 (OKE)", "type": "Process", "properties": {"reference": "4-2-9-5. 케이스 원점 설정", "customer": "OKE"}},
+    {"id": "manual_CaseOrigin429", "name": "케이스 원점 설정 4-2-9-5 매뉴얼", "type": "Manual", "properties": {"section": "4-2-9-5"}}
+  ],
+  "relations": [
+    {"source": "manual_CaseOrigin429", "target": "proc_CaseOriginOKE", "type": "DOCUMENTS"}
+  ]
+}

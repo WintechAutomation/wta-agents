@@ -1,0 +1,11 @@
+{
+  "page_id": "9508933567",
+  "title": "Zebra Label Printer Calibration (구형)",
+  "entities": [
+    {"id": "equip_ZebraLabelPrinter", "name": "Zebra 라벨 프린터 (구형)", "type": "Equipment", "properties": {"manufacturer": "Zebra", "type": "Label Printer"}},
+    {"id": "proc_ZebraCalibration", "name": "Zebra 라벨 프린터 캘리브레이션", "type": "Process", "properties": {"steps": "①준비화면 전환 → ②PAUSE 버튼 → ③CALIBRATION 버튼 → ④연속 출력 라벨 제거까지 반복"}}
+  ],
+  "relations": [
+    {"source": "proc_ZebraCalibration", "target": "equip_ZebraLabelPrinter", "type": "MAINTAINS"}
+  ]
+}

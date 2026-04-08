@@ -1,0 +1,547 @@
+[
+  {
+    "page_id": "9508926391",
+    "title": "(국문, OKE)- 3-5. 기본 조작",
+    "entities": [
+      {
+        "id": "comp_PowerLamp",
+        "name": "POWER 램프",
+        "type": "Component",
+        "properties": {
+          "function": "설비 전원 상태 표시",
+          "indicator": "녹색 LED 점등 = 전원 인가"
+        }
+      },
+      {
+        "id": "comp_StartBtn",
+        "name": "START 버튼",
+        "type": "Component",
+        "properties": {
+          "function": "일시정지 해제",
+          "method": "버튼 2회 조작 (LED 점멸 확인 후)"
+        }
+      },
+      {
+        "id": "comp_PauseBtn",
+        "name": "PAUSE 버튼",
+        "type": "Component",
+        "properties": {
+          "function": "자동 운전 중 일시정지",
+          "behavior": "누름과 동시에 즉시 정지"
+        }
+      },
+      {
+        "id": "comp_EStopBtn",
+        "name": "E-STOP 버튼",
+        "type": "Component",
+        "properties": {
+          "function": "비상 정지",
+          "action": "설비 구동전력 차단"
+        }
+      },
+      {
+        "id": "comp_ControlPanel",
+        "name": "조작 패널",
+        "type": "Component",
+        "properties": {
+          "location": "설비 전면",
+          "buttons": "POWER, START, PAUSE, E-STOP"
+        }
+      },
+      {
+        "id": "proc_PauseRelease",
+        "name": "일시정지 해제",
+        "type": "Process",
+        "properties": {
+          "steps": "START 버튼 누름 → LED 점멸 확인 → 한번 더 누름"
+        }
+      },
+      {
+        "id": "proc_EmergencyStop",
+        "name": "비상 정지",
+        "type": "Process",
+        "properties": {
+          "trigger": "E-STOP 버튼 누름",
+          "effect": "구동전력 차단"
+        }
+      }
+    ],
+    "relations": [
+      {
+        "source": "comp_ControlPanel",
+        "target": "comp_PowerLamp",
+        "type": "USES_COMPONENT"
+      },
+      {
+        "source": "comp_ControlPanel",
+        "target": "comp_StartBtn",
+        "type": "USES_COMPONENT"
+      },
+      {
+        "source": "comp_ControlPanel",
+        "target": "comp_PauseBtn",
+        "type": "USES_COMPONENT"
+      },
+      {
+        "source": "comp_ControlPanel",
+        "target": "comp_EStopBtn",
+        "type": "USES_COMPONENT"
+      },
+      {
+        "source": "proc_PauseRelease",
+        "target": "comp_StartBtn",
+        "type": "INVOLVES_COMPONENT"
+      },
+      {
+        "source": "proc_EmergencyStop",
+        "target": "comp_EStopBtn",
+        "type": "INVOLVES_COMPONENT"
+      }
+    ]
+  },
+  {
+    "page_id": "9508926914",
+    "title": "(국문, OKE)- 4-2-2. 모델 관리",
+    "entities": [
+      {
+        "id": "proc_ModelManagement",
+        "name": "모델 관리",
+        "type": "Process",
+        "properties": {
+          "description": "작업할 제품 추가, 수정, 삭제 및 설정",
+          "access": "메인화면 → 우측 모델 관리 버튼"
+        }
+      },
+      {
+        "id": "comp_ModelList",
+        "name": "모델 목록",
+        "type": "Component",
+        "properties": {
+          "ui_area": "[1]",
+          "function": "추가된 모델 리스트 표시"
+        }
+      },
+      {
+        "id": "comp_ModelActions",
+        "name": "모델 CRUD 버튼",
+        "type": "Component",
+        "properties": {
+          "ui_area": "[2]",
+          "actions": "추가, 삭제, 복사, 저장"
+        }
+      },
+      {
+        "id": "comp_QuickNav",
+        "name": "빠른 이동 버튼",
+        "type": "Component",
+        "properties": {
+          "ui_area": "[3]",
+          "function": "아이콘에 맞는 상태로 바로 이동"
+        }
+      },
+      {
+        "id": "comp_ModelParams",
+        "name": "모델 파라미터",
+        "type": "Component",
+        "properties": {
+          "ui_area": "[4]",
+          "params": "모델 이름, 외형, 케이스 타입, 잉크젯 사용, 잉크젯 마킹 문자, 제품 높이, 제품 길이, 팔레트, 대형 라벨 사용"
+        }
+      }
+    ],
+    "relations": [
+      {
+        "source": "proc_ModelManagement",
+        "target": "comp_ModelList",
+        "type": "INVOLVES_COMPONENT"
+      },
+      {
+        "source": "proc_ModelManagement",
+        "target": "comp_ModelActions",
+        "type": "INVOLVES_COMPONENT"
+      },
+      {
+        "source": "proc_ModelManagement",
+        "target": "comp_ModelParams",
+        "type": "INVOLVES_COMPONENT"
+      }
+    ]
+  },
+  {
+    "page_id": "9508928003",
+    "title": "(국문, OKE)- 4-2-8-3. 케이스 원점 설정",
+    "entities": [
+      {
+        "id": "proc_CaseOriginOKE",
+        "name": "케이스 원점 설정 (OKE)",
+        "type": "Process",
+        "properties": {
+          "reference": "4-2-9-5. 케이스 원점 설정",
+          "customer": "OKE"
+        }
+      },
+      {
+        "id": "manual_CaseOrigin429",
+        "name": "케이스 원점 설정 4-2-9-5 매뉴얼",
+        "type": "Manual",
+        "properties": {
+          "section": "4-2-9-5"
+        }
+      }
+    ],
+    "relations": [
+      {
+        "source": "manual_CaseOrigin429",
+        "target": "proc_CaseOriginOKE",
+        "type": "DOCUMENTS"
+      }
+    ]
+  },
+  {
+    "page_id": "9508927507",
+    "title": "(국문, OKE)- 4-2-5. 작업위치",
+    "entities": [
+      {
+        "id": "proc_WorkPosition",
+        "name": "작업위치 설정",
+        "type": "Process",
+        "properties": {
+          "description": "티칭 필요 위치 선택 및 Offset 정밀 조정",
+          "access": "메인화면 → 우측 작업위치"
+        }
+      },
+      {
+        "id": "proc_Teaching",
+        "name": "티칭",
+        "type": "Process",
+        "properties": {
+          "condition": "자동 운전 중에만 가능",
+          "method": "티칭 포인트 선택 후 즉시 적용"
+        }
+      },
+      {
+        "id": "proc_OffsetSetting",
+        "name": "Offset 설정",
+        "type": "Process",
+        "properties": {
+          "description": "위치 조정 후 즉시 반영",
+          "note": "Offset 설정 수치는 축 방향과 동일"
+        }
+      },
+      {
+        "id": "comp_TeachingPoint",
+        "name": "티칭 포인트",
+        "type": "Component",
+        "properties": {
+          "function": "클릭으로 선택/취소, 선택된 포인트만 티칭"
+        }
+      }
+    ],
+    "relations": [
+      {
+        "source": "proc_WorkPosition",
+        "target": "proc_Teaching",
+        "type": "HAS_SUBPROCESS"
+      },
+      {
+        "source": "proc_WorkPosition",
+        "target": "proc_OffsetSetting",
+        "type": "HAS_SUBPROCESS"
+      },
+      {
+        "source": "proc_Teaching",
+        "target": "comp_TeachingPoint",
+        "type": "INVOLVES_COMPONENT"
+      }
+    ]
+  },
+  {
+    "page_id": "9508931041",
+    "title": "Cognix 라이센스 인증 에러",
+    "entities": [
+      {
+        "id": "issue_CognixLicense",
+        "name": "Cognix 라이센스 인증 에러",
+        "type": "Issue",
+        "properties": {
+          "error_code": "0x00057718",
+          "error_msg": "CSecurity.Violation: A license for a particular feature is not present or cannot be found",
+          "cause": "라이센스 USB 미삽입 또는 Cognex Security Service 미실행"
+        }
+      },
+      {
+        "id": "tool_CognixLicenseUSB",
+        "name": "Cognix 라이센스 USB",
+        "type": "Tool",
+        "properties": {
+          "description": "초록색 패드가 있는 USB 동글"
+        }
+      },
+      {
+        "id": "tool_CognexVision",
+        "name": "Cognex Vision Pro",
+        "type": "Tool",
+        "properties": {
+          "library": "Cognex.VisionPro",
+          "service": "Cognex Security Service",
+          "dll": "CogTool.LoadTool"
+        }
+      },
+      {
+        "id": "proc_CognixLicenseCheck",
+        "name": "Cognix 라이센스 확인",
+        "type": "Process",
+        "properties": {
+          "steps": "HMI 실행 후 에러 확인 → 라이센스 USB 삽입 확인"
+        }
+      }
+    ],
+    "relations": [
+      {
+        "source": "issue_CognixLicense",
+        "target": "tool_CognixLicenseUSB",
+        "type": "RESOLVED_BY"
+      },
+      {
+        "source": "proc_CognixLicenseCheck",
+        "target": "tool_CognixLicenseUSB",
+        "type": "USES_TOOL"
+      },
+      {
+        "source": "proc_CognixLicenseCheck",
+        "target": "tool_CognexVision",
+        "type": "USES_TOOL"
+      }
+    ]
+  },
+  {
+    "page_id": "9508927176",
+    "title": "(국문, OKE)- 4-2-3. 팔레트 관리",
+    "entities": [
+      {
+        "id": "proc_PalletManagement",
+        "name": "팔레트 관리",
+        "type": "Process",
+        "properties": {
+          "description": "작업할 팔레트 추가, 수정, 삭제 및 설정",
+          "access": "메인화면 → 우측 팔레트 관리"
+        }
+      },
+      {
+        "id": "comp_PalletList",
+        "name": "팔레트 목록",
+        "type": "Component",
+        "properties": {
+          "ui_area": "[1]",
+          "function": "추가된 팔레트 리스트"
+        }
+      },
+      {
+        "id": "comp_PalletPreview",
+        "name": "팔레트 미리보기",
+        "type": "Component",
+        "properties": {
+          "ui_area": "[3]",
+          "function": "팔레트 설정 상태 미리보기"
+        }
+      },
+      {
+        "id": "comp_PalletParams",
+        "name": "팔레트 파라미터",
+        "type": "Component",
+        "properties": {
+          "ui_area": "[4]",
+          "params": "파일 이름, 적재 공간 가로 수량, 적재 공간 세로 수량, 적재 공간 가로 크기, 적재 공간 세로 크기"
+        }
+      }
+    ],
+    "relations": [
+      {
+        "source": "proc_PalletManagement",
+        "target": "comp_PalletList",
+        "type": "INVOLVES_COMPONENT"
+      },
+      {
+        "source": "proc_PalletManagement",
+        "target": "comp_PalletPreview",
+        "type": "INVOLVES_COMPONENT"
+      },
+      {
+        "source": "proc_PalletManagement",
+        "target": "comp_PalletParams",
+        "type": "INVOLVES_COMPONENT"
+      }
+    ]
+  },
+  {
+    "page_id": "9508979569",
+    "title": "#SystemData 설정",
+    "entities": [
+      {
+        "id": "proc_SystemDataConfig",
+        "name": "SystemData 설정",
+        "type": "Process",
+        "properties": {
+          "description": "업체 요구사항/스펙에 맞춰 장비명, 모델, 인터페이스 등 설정",
+          "required_checks": "장비명 설정, 사용 모델 설정"
+        }
+      },
+      {
+        "id": "comp_SystemDataFile",
+        "name": "SystemData XML 파일",
+        "type": "Component",
+        "properties": {
+          "path": "D:\\WintechAutomation\\WMI\\Data\\SystemData",
+          "type": "XML 문서",
+          "backup": "SystemData.xml.Bak"
+        }
+      },
+      {
+        "id": "comp_WMIDataFolder",
+        "name": "WMI Data 폴더",
+        "type": "Component",
+        "properties": {
+          "path": "D:\\WintechAutomation\\WMI\\Data",
+          "contains": "Language, Limit, MODEL, Positions, Signal, ATC, CalibrationData, DeviceInfo, SystemData 등"
+        }
+      },
+      {
+        "id": "comp_MachineName",
+        "name": "장비명 설정",
+        "type": "Component",
+        "properties": {
+          "format": "업체명 호기수 (예: OKE #35)",
+          "display": "HMI 상단 중앙"
+        }
+      },
+      {
+        "id": "comp_ModelSpec",
+        "name": "사용 모델 설정",
+        "type": "Component",
+        "properties": {
+          "params": "Shape(Circle/Rectangle), Size(Width/Height), Offset(X/Y), Origin Checked, Center_Skip_Size",
+          "source": "사양서 기재 플레이트 규격"
+        }
+      }
+    ],
+    "relations": [
+      {
+        "source": "proc_SystemDataConfig",
+        "target": "comp_SystemDataFile",
+        "type": "INVOLVES_COMPONENT"
+      },
+      {
+        "source": "proc_SystemDataConfig",
+        "target": "comp_MachineName",
+        "type": "INVOLVES_COMPONENT"
+      },
+      {
+        "source": "proc_SystemDataConfig",
+        "target": "comp_ModelSpec",
+        "type": "INVOLVES_COMPONENT"
+      },
+      {
+        "source": "comp_SystemDataFile",
+        "target": "comp_WMIDataFolder",
+        "type": "INVOLVES_COMPONENT"
+      }
+    ]
+  },
+  {
+    "page_id": "9508916630",
+    "title": "Dorst - Kunbus Gateway 초기 통신 연결 이슈",
+    "entities": [
+      {
+        "id": "issue_DORSTGatewayLiveBit",
+        "name": "Dorst-Kunbus Gateway LiveBit 통신 오류",
+        "type": "Issue",
+        "properties": {
+          "symptom": "초기 통신 연결 시 Live-Bit 오류 발생",
+          "cause": "Dorst 전원 인가 전 핸들러 전원 공급 시 Gateway 연결 실패"
+        }
+      },
+      {
+        "id": "equip_DORSTPress",
+        "name": "Dorst 프레스",
+        "type": "Equipment",
+        "properties": {
+          "protocol": "PROFIBUS",
+          "note": "Gateway에 전원 공급"
+        }
+      },
+      {
+        "id": "equip_WTAHandler",
+        "name": "WTA 핸들러",
+        "type": "Equipment",
+        "properties": {
+          "protocol": "PROFINET"
+        }
+      },
+      {
+        "id": "comp_KunbusGateway",
+        "name": "KUNBUS Gateway",
+        "type": "Component",
+        "properties": {
+          "function": "PROFIBUS ↔ PROFINET 변환",
+          "power_source": "Dorst 프레스"
+        }
+      },
+      {
+        "id": "proc_DORSTGatewayFix1",
+        "name": "조치방법 #1: 전원 순서 조정",
+        "type": "Process",
+        "properties": {
+          "steps": "① Dorst Press 전원 켜기 → ② WTA 핸들러 전원 켜기"
+        }
+      },
+      {
+        "id": "proc_DORSTGatewayFix2",
+        "name": "조치방법 #2: PC 재부팅",
+        "type": "Process",
+        "properties": {
+          "steps": "Dorst 전원 켜진 상태에서 WTA 장비 PC 재부팅"
+        }
+      },
+      {
+        "id": "proc_DORSTGatewayFix3",
+        "name": "조치방법 #3: WMX 통신 재시작",
+        "type": "Process",
+        "properties": {
+          "steps": "① WMI 종료 → ② WMXServer StopCommunication → ③ WMXServer StartCommunication"
+        }
+      }
+    ],
+    "relations": [
+      {
+        "source": "equip_DORSTPress",
+        "target": "issue_DORSTGatewayLiveBit",
+        "type": "HAS_ISSUE"
+      },
+      {
+        "source": "equip_WTAHandler",
+        "target": "comp_KunbusGateway",
+        "type": "USES_COMPONENT"
+      },
+      {
+        "source": "equip_DORSTPress",
+        "target": "comp_KunbusGateway",
+        "type": "USES_COMPONENT"
+      },
+      {
+        "source": "issue_DORSTGatewayLiveBit",
+        "target": "proc_DORSTGatewayFix1",
+        "type": "RESOLVED_BY"
+      },
+      {
+        "source": "issue_DORSTGatewayLiveBit",
+        "target": "proc_DORSTGatewayFix2",
+        "type": "RESOLVED_BY"
+      },
+      {
+        "source": "issue_DORSTGatewayLiveBit",
+        "target": "proc_DORSTGatewayFix3",
+        "type": "RESOLVED_BY"
+      }
+    ]
+  }
+]

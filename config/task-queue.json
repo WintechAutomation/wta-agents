@@ -1223,6 +1223,30 @@
       "updated_at": "2026-04-08 21:27:05",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-db-manager-b6c028",
+      "agent": "db-manager",
+      "task": "컴팩팅 대응 방식으로 진행해줘.",
+      "message": "컴팩팅 대응 방식으로 진행해줘.\n\n- 페이지별로: HTML 읽기 → 이미지 Read → 엔티티/관계 추출 → 즉시 파일+Neo4j 저장\n- 컨텍스트에 결과 쌓지 말고 매 페이지마다 디스크에 저장\n- progress.json에 처리 완료 페이지 기록 (컴팩팅 후에도 이어서 처리)\n- 5~10건 배치 단위로 진행\n\nresearch-agent에게도 동일 방식 공유해줘.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 21:30:07",
+      "updated_at": "2026-04-08 21:30:07",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-research-agent-11ba0b",
+      "agent": "research-agent",
+      "task": "컴팩팅 대응 방식:",
+      "message": "컴팩팅 대응 방식:\n\n- 페이지별로: HTML 읽기 → 이미지 Read → 엔티티/관계 추출 → 즉시 파일+Neo4j 저장\n- 컨텍스트에 결과 쌓지 말고 매 페이지마다 디스크에 저장\n- progress.json에 처리 완료 페이지 기록\n- db-manager와 분담 범위 확인 후 진행",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 21:30:26",
+      "updated_at": "2026-04-08 21:30:26",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }

@@ -1,0 +1,20 @@
+{
+  "page_id": "9508985551",
+  "title": "Osterwalder(오스터왈더) 시리얼 케이블 배선",
+  "entities": [
+    {"id": "equip_OsterwaldPress", "name": "Osterwalder 프레스", "type": "Equipment", "properties": {"manufacturer": "Osterwalder", "interface": "RS232 시리얼"}},
+    {"id": "comp_OsterwaldModule", "name": "Osterwalder 77-A01 통신 모듈", "type": "Component", "properties": {"interface": "RS232", "connector": "DB9 Male", "module": "77-A01"}},
+    {"id": "comp_RS232Cable", "name": "AND RS232 케이블", "type": "Component", "properties": {
+      "label": "AND [PC-PRESS]",
+      "function": "AND RS232 Cable",
+      "connector": "DSR, 2core 9Pin Female, DB9 HOOD",
+      "pin_map": "TXD(1)=Transmit, RXD(2)=Receive, RTS(3)=Request to Send, CTS(4)=Clear to Send, DTR(5)=Terminal Ready, DSR(6)=Data Set Ready, DCD(7)=Data Carrier, RI(8)=Ring, GND(9)=Ground"
+    }},
+    {"id": "comp_WTAPC", "name": "WTA PC (프레스 제어)", "type": "Component", "properties": {"connection": "RS232 → Osterwalder 77-A01"}}
+  ],
+  "relations": [
+    {"source": "comp_WTAPC", "target": "equip_OsterwaldPress", "type": "INVOLVES_COMPONENT"},
+    {"source": "comp_RS232Cable", "target": "comp_OsterwaldModule", "type": "INVOLVES_COMPONENT"},
+    {"source": "equip_OsterwaldPress", "target": "comp_OsterwaldModule", "type": "USES_COMPONENT"}
+  ]
+}

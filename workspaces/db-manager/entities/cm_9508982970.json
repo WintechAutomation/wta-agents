@@ -1,0 +1,17 @@
+{
+  "page_id": "9508982970",
+  "title": "TP 안될때 확인할 것",
+  "entities": [
+    {"id": "issue_TPNotWorking", "name": "티칭 팬던트(TP) 동작 불가", "type": "Issue", "properties": {"symptom": "COMPORT OPEN 시 에러 발생", "error": "frm_Tp_Load() 매개변수 오류, System.IO.Ports.InternalResources.WinIO"}},
+    {"id": "proc_TPTroubleshoot", "name": "TP 문제 해결 절차", "type": "Process", "properties": {"steps": "① COMPORT 확인 → ② SET-UP 테스트 프로그램 동작 확인 → ③ WMI-DATA-DEVICEINFO COMPORT 확인 → ④ 팬던트 펌웨어 체크"}},
+    {"id": "comp_TeachingPendant", "name": "티칭 팬던트 (TP)", "type": "Component", "properties": {"interface": "COMPORT (시리얼)"}},
+    {"id": "comp_PendantFirmware", "name": "팬던트 펌웨어", "type": "Component", "properties": {"note": "펌웨어 업데이트 필요 (미업데이트 시 COMPORT OPEN 오류 발생 가능"}},
+    {"id": "comp_DeviceInfoCOMPORT", "name": "DeviceInfo COMPORT 설정", "type": "Component", "properties": {"path": "WMI-DATA-DEVICEINFO", "function": "TP 시리얼 포트 설정"}}
+  ],
+  "relations": [
+    {"source": "issue_TPNotWorking", "target": "proc_TPTroubleshoot", "type": "RESOLVED_BY"},
+    {"source": "proc_TPTroubleshoot", "target": "comp_TeachingPendant", "type": "INVOLVES_COMPONENT"},
+    {"source": "proc_TPTroubleshoot", "target": "comp_PendantFirmware", "type": "INVOLVES_COMPONENT"},
+    {"source": "proc_TPTroubleshoot", "target": "comp_DeviceInfoCOMPORT", "type": "INVOLVES_COMPONENT"}
+  ]
+}

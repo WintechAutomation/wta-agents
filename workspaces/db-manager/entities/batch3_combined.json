@@ -1,0 +1,553 @@
+[
+  {
+    "page_id": "9508980856",
+    "title": "#QuickStop 적용 확인하기",
+    "entities": [
+      {
+        "id": "proc_QuickStopCheck",
+        "name": "QuickStop 설정 확인",
+        "type": "Process",
+        "properties": {
+          "description": "WMXServer Axis Parameter에서 QuickStopDec 값 확인 및 설정",
+          "target_value": 50000000
+        }
+      },
+      {
+        "id": "tool_WMXServer",
+        "name": "WMXServer",
+        "type": "Tool",
+        "properties": {
+          "menu_path": "Setup → Axis Parameter",
+          "tabs": "Connected Device, Setup, Area Limit, Info"
+        }
+      },
+      {
+        "id": "comp_QuickStopDec",
+        "name": "QuickStopDec 파라미터",
+        "type": "Component",
+        "properties": {
+          "axes": "X, Y, X2, Y2",
+          "expected_value": 50000000,
+          "save_path": "\\WMXServer\\Datas\\WMXParameters.xml"
+        }
+      },
+      {
+        "id": "proc_QuickStopUpdate",
+        "name": "QuickStopDec 값 변경",
+        "type": "Process",
+        "properties": {
+          "steps": "값 변경 → Save to File → 재확인",
+          "backup": "WMXParameters.xml 백업 필요"
+        }
+      }
+    ],
+    "relations": [
+      {
+        "source": "proc_QuickStopCheck",
+        "target": "tool_WMXServer",
+        "type": "USES_TOOL"
+      },
+      {
+        "source": "proc_QuickStopCheck",
+        "target": "comp_QuickStopDec",
+        "type": "INVOLVES_COMPONENT"
+      },
+      {
+        "source": "proc_QuickStopUpdate",
+        "target": "comp_QuickStopDec",
+        "type": "INVOLVES_COMPONENT"
+      },
+      {
+        "source": "proc_QuickStopUpdate",
+        "target": "tool_WMXServer",
+        "type": "USES_TOOL"
+      }
+    ]
+  },
+  {
+    "page_id": "9508933567",
+    "title": "Zebra Label Printer Calibration (구형)",
+    "entities": [
+      {
+        "id": "equip_ZebraLabelPrinter",
+        "name": "Zebra 라벨 프린터 (구형)",
+        "type": "Equipment",
+        "properties": {
+          "manufacturer": "Zebra",
+          "type": "Label Printer"
+        }
+      },
+      {
+        "id": "proc_ZebraCalibration",
+        "name": "Zebra 라벨 프린터 캘리브레이션",
+        "type": "Process",
+        "properties": {
+          "steps": "①준비화면 전환 → ②PAUSE 버튼 → ③CALIBRATION 버튼 → ④연속 출력 라벨 제거까지 반복"
+        }
+      }
+    ],
+    "relations": [
+      {
+        "source": "proc_ZebraCalibration",
+        "target": "equip_ZebraLabelPrinter",
+        "type": "MAINTAINS"
+      }
+    ]
+  },
+  {
+    "page_id": "9508985551",
+    "title": "Osterwalder(오스터왈더) 시리얼 케이블 배선",
+    "entities": [
+      {
+        "id": "equip_OsterwaldPress",
+        "name": "Osterwalder 프레스",
+        "type": "Equipment",
+        "properties": {
+          "manufacturer": "Osterwalder",
+          "interface": "RS232 시리얼"
+        }
+      },
+      {
+        "id": "comp_OsterwaldModule",
+        "name": "Osterwalder 77-A01 통신 모듈",
+        "type": "Component",
+        "properties": {
+          "interface": "RS232",
+          "connector": "DB9 Male",
+          "module": "77-A01"
+        }
+      },
+      {
+        "id": "comp_RS232Cable",
+        "name": "AND RS232 케이블",
+        "type": "Component",
+        "properties": {
+          "label": "AND [PC-PRESS]",
+          "function": "AND RS232 Cable",
+          "connector": "DSR, 2core 9Pin Female, DB9 HOOD",
+          "pin_map": "TXD(1)=Transmit, RXD(2)=Receive, RTS(3)=Request to Send, CTS(4)=Clear to Send, DTR(5)=Terminal Ready, DSR(6)=Data Set Ready, DCD(7)=Data Carrier, RI(8)=Ring, GND(9)=Ground"
+        }
+      },
+      {
+        "id": "comp_WTAPC",
+        "name": "WTA PC (프레스 제어)",
+        "type": "Component",
+        "properties": {
+          "connection": "RS232 → Osterwalder 77-A01"
+        }
+      }
+    ],
+    "relations": [
+      {
+        "source": "comp_WTAPC",
+        "target": "equip_OsterwaldPress",
+        "type": "INVOLVES_COMPONENT"
+      },
+      {
+        "source": "comp_RS232Cable",
+        "target": "comp_OsterwaldModule",
+        "type": "INVOLVES_COMPONENT"
+      },
+      {
+        "source": "equip_OsterwaldPress",
+        "target": "comp_OsterwaldModule",
+        "type": "USES_COMPONENT"
+      }
+    ]
+  },
+  {
+    "page_id": "9508931213",
+    "title": "ROT 축 레이저 보정 매뉴얼",
+    "entities": [
+      {
+        "id": "proc_ROTLaserCalib",
+        "name": "ROT 축 레이저 보정",
+        "type": "Process",
+        "properties": {
+          "condition": "cSystemSetting_ini.SystemInfo.USE_ROT_XY = true",
+          "method": "막대 지그 사용, 막대-그리퍼 만나는 곳을 원점 세팅"
+        }
+      },
+      {
+        "id": "comp_ROTAxis",
+        "name": "ROT 축",
+        "type": "Component",
+        "properties": {
+          "type": "회전축",
+          "calib_file": "CalibrationData (Rot_X, Rot_Y)"
+        }
+      },
+      {
+        "id": "comp_BarJig",
+        "name": "막대 지그",
+        "type": "Component",
+        "properties": {
+          "purpose": "ROT 축 레이저 보정용 기준 지그"
+        }
+      },
+      {
+        "id": "tool_LaserCalibTest",
+        "name": "레이저 보정 테스트 메뉴",
+        "type": "Tool",
+        "properties": {
+          "menu": "Test Menu → 레이저 보정 값 / 레이저 보정 테스트",
+          "options": "NotUseGrip, NotUseSpacerSensor, NotUsePolleSensor, DisableCam 등"
+        }
+      },
+      {
+        "id": "comp_CalibrationData",
+        "name": "CalibrationData 파일",
+        "type": "Component",
+        "properties": {
+          "fields": "Rot_X, Rot_Y = 레이저 검출값 (원점에서 0일 때)",
+          "path": "D:\\WintechAutomation\\WMI\\Data\\CalibrationData"
+        }
+      }
+    ],
+    "relations": [
+      {
+        "source": "proc_ROTLaserCalib",
+        "target": "comp_ROTAxis",
+        "type": "INVOLVES_COMPONENT"
+      },
+      {
+        "source": "proc_ROTLaserCalib",
+        "target": "comp_BarJig",
+        "type": "USES_TOOL"
+      },
+      {
+        "source": "proc_ROTLaserCalib",
+        "target": "tool_LaserCalibTest",
+        "type": "USES_TOOL"
+      },
+      {
+        "source": "proc_ROTLaserCalib",
+        "target": "comp_CalibrationData",
+        "type": "INVOLVES_COMPONENT"
+      }
+    ]
+  },
+  {
+    "page_id": "9508982970",
+    "title": "TP 안될때 확인할 것",
+    "entities": [
+      {
+        "id": "issue_TPNotWorking",
+        "name": "티칭 팬던트(TP) 동작 불가",
+        "type": "Issue",
+        "properties": {
+          "symptom": "COMPORT OPEN 시 에러 발생",
+          "error": "frm_Tp_Load() 매개변수 오류, System.IO.Ports.InternalResources.WinIO"
+        }
+      },
+      {
+        "id": "proc_TPTroubleshoot",
+        "name": "TP 문제 해결 절차",
+        "type": "Process",
+        "properties": {
+          "steps": "① COMPORT 확인 → ② SET-UP 테스트 프로그램 동작 확인 → ③ WMI-DATA-DEVICEINFO COMPORT 확인 → ④ 팬던트 펌웨어 체크"
+        }
+      },
+      {
+        "id": "comp_TeachingPendant",
+        "name": "티칭 팬던트 (TP)",
+        "type": "Component",
+        "properties": {
+          "interface": "COMPORT (시리얼)"
+        }
+      },
+      {
+        "id": "comp_PendantFirmware",
+        "name": "팬던트 펌웨어",
+        "type": "Component",
+        "properties": {
+          "note": "펌웨어 업데이트 필요 (미업데이트 시 COMPORT OPEN 오류 발생 가능"
+        }
+      },
+      {
+        "id": "comp_DeviceInfoCOMPORT",
+        "name": "DeviceInfo COMPORT 설정",
+        "type": "Component",
+        "properties": {
+          "path": "WMI-DATA-DEVICEINFO",
+          "function": "TP 시리얼 포트 설정"
+        }
+      }
+    ],
+    "relations": [
+      {
+        "source": "issue_TPNotWorking",
+        "target": "proc_TPTroubleshoot",
+        "type": "RESOLVED_BY"
+      },
+      {
+        "source": "proc_TPTroubleshoot",
+        "target": "comp_TeachingPendant",
+        "type": "INVOLVES_COMPONENT"
+      },
+      {
+        "source": "proc_TPTroubleshoot",
+        "target": "comp_PendantFirmware",
+        "type": "INVOLVES_COMPONENT"
+      },
+      {
+        "source": "proc_TPTroubleshoot",
+        "target": "comp_DeviceInfoCOMPORT",
+        "type": "INVOLVES_COMPONENT"
+      }
+    ]
+  },
+  {
+    "page_id": "9508926063",
+    "title": "(국문, OKE)- 1-3. 설비 외형",
+    "entities": [
+      {
+        "id": "equip_OKE_Machine_Body",
+        "name": "OKE 포장기 본체",
+        "type": "Equipment",
+        "properties": {
+          "customer": "OKE",
+          "description": "포장/라벨/마킹 자동화 설비 외형"
+        }
+      },
+      {
+        "id": "comp_SignalLamp",
+        "name": "시그널 램프",
+        "type": "Component",
+        "properties": {
+          "position": "전면 #1"
+        }
+      },
+      {
+        "id": "comp_SafetyCover",
+        "name": "케이스 취출부 안전 커버",
+        "type": "Component",
+        "properties": {
+          "position": "전면 #2"
+        }
+      },
+      {
+        "id": "comp_TouchScreen",
+        "name": "터치 스크린 (HMI)",
+        "type": "Component",
+        "properties": {
+          "position": "전면 #3"
+        }
+      },
+      {
+        "id": "comp_FrontControlPanel",
+        "name": "조작 패널 전면",
+        "type": "Component",
+        "properties": {
+          "position": "전면 #4",
+          "buttons": "일시정지, 재시작, 비상정지"
+        }
+      },
+      {
+        "id": "comp_KeyboardMouse",
+        "name": "키보드/마우스",
+        "type": "Component",
+        "properties": {
+          "position": "전면 #5"
+        }
+      },
+      {
+        "id": "comp_PanelDataUnit",
+        "name": "판넬 데이터 유닛",
+        "type": "Component",
+        "properties": {
+          "position": "전면 #6",
+          "ports": "USB, 유지보수용 LAN Port"
+        }
+      },
+      {
+        "id": "comp_PanelDoor",
+        "name": "판넬 도어 (DC전원부)",
+        "type": "Component",
+        "properties": {
+          "position": "전면 #7"
+        }
+      },
+      {
+        "id": "comp_CaseCoverSupply",
+        "name": "케이스 커버 공급부",
+        "type": "Component",
+        "properties": {
+          "position": "전면 #8"
+        }
+      },
+      {
+        "id": "comp_TeachPendantOKE",
+        "name": "티칭 팬던트",
+        "type": "Component",
+        "properties": {
+          "position": "전면 #9"
+        }
+      },
+      {
+        "id": "comp_WorkDoor",
+        "name": "작업 도어",
+        "type": "Component",
+        "properties": {
+          "position": "전면 #10 / 후면 #3 (팔레트 공급부)"
+        }
+      }
+    ],
+    "relations": [
+      {
+        "source": "equip_OKE_Machine_Body",
+        "target": "comp_SignalLamp",
+        "type": "USES_COMPONENT"
+      },
+      {
+        "source": "equip_OKE_Machine_Body",
+        "target": "comp_SafetyCover",
+        "type": "USES_COMPONENT"
+      },
+      {
+        "source": "equip_OKE_Machine_Body",
+        "target": "comp_TouchScreen",
+        "type": "USES_COMPONENT"
+      },
+      {
+        "source": "equip_OKE_Machine_Body",
+        "target": "comp_FrontControlPanel",
+        "type": "USES_COMPONENT"
+      },
+      {
+        "source": "equip_OKE_Machine_Body",
+        "target": "comp_PanelDataUnit",
+        "type": "USES_COMPONENT"
+      },
+      {
+        "source": "equip_OKE_Machine_Body",
+        "target": "comp_TeachPendantOKE",
+        "type": "USES_COMPONENT"
+      },
+      {
+        "source": "equip_OKE_Machine_Body",
+        "target": "comp_CaseCoverSupply",
+        "type": "USES_COMPONENT"
+      }
+    ]
+  },
+  {
+    "page_id": "9508931803",
+    "title": "WLauncher 세팅 관련",
+    "entities": [
+      {
+        "id": "tool_WLauncher",
+        "name": "WLauncher",
+        "type": "Tool",
+        "properties": {
+          "description": "장비 구성 자동 실행 런처",
+          "config_files": "config.xlsx 또는 config.csv (UseCSV 설정에 따라)"
+        }
+      },
+      {
+        "id": "comp_WLauncherConfig",
+        "name": "WLauncher 설정 파일",
+        "type": "Component",
+        "properties": {
+          "useCSV_0": "config.xlsx 읽음",
+          "useCSV_1": "config.csv 읽음",
+          "key_field": "장비 유형 키 (예: PRS_CV, PRS_EV)",
+          "device_keys": "PRS_EV, PRS_CV, SIN, STL, SGD, DGD_L, DGD_U, HON, WBM, WVR, CBN, CVD, PVD_L, PVD_U, PCT, REP"
+        }
+      },
+      {
+        "id": "comp_ConfigCSV",
+        "name": "config.csv",
+        "type": "Component",
+        "properties": {
+          "format": "CheckType, Param, Ignore, Desc",
+          "example": "RunProcess, WMXServer"
+        }
+      },
+      {
+        "id": "comp_CameraConfig",
+        "name": "카메라 설정 시트",
+        "type": "Component",
+        "properties": {
+          "columns": "카메라이름, 카메라IP, StartOffsetX, StartOffsetY, ROI_Width, ROI_Height, ExposureAuto, ExposureTime, UserSet"
+        }
+      }
+    ],
+    "relations": [
+      {
+        "source": "tool_WLauncher",
+        "target": "comp_WLauncherConfig",
+        "type": "USES_TOOL"
+      },
+      {
+        "source": "comp_WLauncherConfig",
+        "target": "comp_ConfigCSV",
+        "type": "INVOLVES_COMPONENT"
+      },
+      {
+        "source": "comp_WLauncherConfig",
+        "target": "comp_CameraConfig",
+        "type": "INVOLVES_COMPONENT"
+      }
+    ]
+  },
+  {
+    "page_id": "9508925506",
+    "title": "측면 카메라 FOV",
+    "entities": [
+      {
+        "id": "proc_SideCameraFOV",
+        "name": "측면 카메라 FOV 설정",
+        "type": "Process",
+        "properties": {
+          "menu": "시스템 설정 → 측면 카메라 FOV 측정",
+          "method": "막대 그림자 이용 측정",
+          "steps": "ReDraw 체크 → Point1/Point2 세팅 → RealSize 실측거리 입력 → FOV 값 확인 → 적용 → CalibrationData 저장 → HMI 재부팅"
+        }
+      },
+      {
+        "id": "comp_SideCamera",
+        "name": "측면 카메라",
+        "type": "Component",
+        "properties": {
+          "purpose": "FOV 측정 및 적용"
+        }
+      },
+      {
+        "id": "comp_FOVCalibData",
+        "name": "PoleSideCameraFovRate (CalibrationData)",
+        "type": "Component",
+        "properties": {
+          "file": "Calibrationdata.xml",
+          "field": "PoleSideCameraFovRate",
+          "verify": "HMI 재부팅 후 확인"
+        }
+      },
+      {
+        "id": "comp_FOVMeasureUI",
+        "name": "FOV 측정 화면",
+        "type": "Component",
+        "properties": {
+          "ui_elements": "ReDraw 체크박스, RealSize 입력창, Point1, Point2"
+        }
+      }
+    ],
+    "relations": [
+      {
+        "source": "proc_SideCameraFOV",
+        "target": "comp_SideCamera",
+        "type": "INVOLVES_COMPONENT"
+      },
+      {
+        "source": "proc_SideCameraFOV",
+        "target": "comp_FOVCalibData",
+        "type": "INVOLVES_COMPONENT"
+      },
+      {
+        "source": "proc_SideCameraFOV",
+        "target": "comp_FOVMeasureUI",
+        "type": "INVOLVES_COMPONENT"
+      }
+    ]
+  }
+]

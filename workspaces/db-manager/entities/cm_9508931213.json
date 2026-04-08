@@ -1,0 +1,17 @@
+{
+  "page_id": "9508931213",
+  "title": "ROT 축 레이저 보정 매뉴얼",
+  "entities": [
+    {"id": "proc_ROTLaserCalib", "name": "ROT 축 레이저 보정", "type": "Process", "properties": {"condition": "cSystemSetting_ini.SystemInfo.USE_ROT_XY = true", "method": "막대 지그 사용, 막대-그리퍼 만나는 곳을 원점 세팅"}},
+    {"id": "comp_ROTAxis", "name": "ROT 축", "type": "Component", "properties": {"type": "회전축", "calib_file": "CalibrationData (Rot_X, Rot_Y)"}},
+    {"id": "comp_BarJig", "name": "막대 지그", "type": "Component", "properties": {"purpose": "ROT 축 레이저 보정용 기준 지그"}},
+    {"id": "tool_LaserCalibTest", "name": "레이저 보정 테스트 메뉴", "type": "Tool", "properties": {"menu": "Test Menu → 레이저 보정 값 / 레이저 보정 테스트", "options": "NotUseGrip, NotUseSpacerSensor, NotUsePolleSensor, DisableCam 등"}},
+    {"id": "comp_CalibrationData", "name": "CalibrationData 파일", "type": "Component", "properties": {"fields": "Rot_X, Rot_Y = 레이저 검출값 (원점에서 0일 때)", "path": "D:\\WintechAutomation\\WMI\\Data\\CalibrationData"}}
+  ],
+  "relations": [
+    {"source": "proc_ROTLaserCalib", "target": "comp_ROTAxis", "type": "INVOLVES_COMPONENT"},
+    {"source": "proc_ROTLaserCalib", "target": "comp_BarJig", "type": "USES_TOOL"},
+    {"source": "proc_ROTLaserCalib", "target": "tool_LaserCalibTest", "type": "USES_TOOL"},
+    {"source": "proc_ROTLaserCalib", "target": "comp_CalibrationData", "type": "INVOLVES_COMPONENT"}
+  ]
+}

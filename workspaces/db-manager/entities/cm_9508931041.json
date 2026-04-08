@@ -1,0 +1,23 @@
+{
+  "page_id": "9508931041",
+  "title": "Cognix 라이센스 인증 에러",
+  "entities": [
+    {"id": "issue_CognixLicense", "name": "Cognix 라이센스 인증 에러", "type": "Issue", "properties": {
+      "error_code": "0x00057718",
+      "error_msg": "CSecurity.Violation: A license for a particular feature is not present or cannot be found",
+      "cause": "라이센스 USB 미삽입 또는 Cognex Security Service 미실행"
+    }},
+    {"id": "tool_CognixLicenseUSB", "name": "Cognix 라이센스 USB", "type": "Tool", "properties": {"description": "초록색 패드가 있는 USB 동글"}},
+    {"id": "tool_CognexVision", "name": "Cognex Vision Pro", "type": "Tool", "properties": {
+      "library": "Cognex.VisionPro",
+      "service": "Cognex Security Service",
+      "dll": "CogTool.LoadTool"
+    }},
+    {"id": "proc_CognixLicenseCheck", "name": "Cognix 라이센스 확인", "type": "Process", "properties": {"steps": "HMI 실행 후 에러 확인 → 라이센스 USB 삽입 확인"}}
+  ],
+  "relations": [
+    {"source": "issue_CognixLicense", "target": "tool_CognixLicenseUSB", "type": "RESOLVED_BY"},
+    {"source": "proc_CognixLicenseCheck", "target": "tool_CognixLicenseUSB", "type": "USES_TOOL"},
+    {"source": "proc_CognixLicenseCheck", "target": "tool_CognexVision", "type": "USES_TOOL"}
+  ]
+}

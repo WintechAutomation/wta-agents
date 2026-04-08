@@ -1,0 +1,15 @@
+{
+  "page_id": "9508927507",
+  "title": "(국문, OKE)- 4-2-5. 작업위치",
+  "entities": [
+    {"id": "proc_WorkPosition", "name": "작업위치 설정", "type": "Process", "properties": {"description": "티칭 필요 위치 선택 및 Offset 정밀 조정", "access": "메인화면 → 우측 작업위치"}},
+    {"id": "proc_Teaching", "name": "티칭", "type": "Process", "properties": {"condition": "자동 운전 중에만 가능", "method": "티칭 포인트 선택 후 즉시 적용"}},
+    {"id": "proc_OffsetSetting", "name": "Offset 설정", "type": "Process", "properties": {"description": "위치 조정 후 즉시 반영", "note": "Offset 설정 수치는 축 방향과 동일"}},
+    {"id": "comp_TeachingPoint", "name": "티칭 포인트", "type": "Component", "properties": {"function": "클릭으로 선택/취소, 선택된 포인트만 티칭"}}
+  ],
+  "relations": [
+    {"source": "proc_WorkPosition", "target": "proc_Teaching", "type": "HAS_SUBPROCESS"},
+    {"source": "proc_WorkPosition", "target": "proc_OffsetSetting", "type": "HAS_SUBPROCESS"},
+    {"source": "proc_Teaching", "target": "comp_TeachingPoint", "type": "INVOLVES_COMPONENT"}
+  ]
+}
