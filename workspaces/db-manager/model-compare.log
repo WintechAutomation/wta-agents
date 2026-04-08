@@ -1,0 +1,21 @@
+[compare] 05:05:07 비교 테스트 대상: 15개 PDF
+[compare] 05:05:07 모델: ['a3b+think:False', '35b_dense']
+[compare] 05:05:07 
+[1/15] [1_robot] RH-10.15AH%20Spec(CR2A-572)(bfp-a8150k)-J.pdf
+[compare] 05:05:07   텍스트: 4045자
+[compare] 05:05:49   [a3b+think:False] 엔티티:10 관계:9 시간:42.6초 토큰:974
+[compare] 05:05:49     샘플: ['RH-10AH/15AH 시리즈 로봇', 'CR2A-572 컨트롤러', 'MEMPTP 파라미터', 'H6 버전 소프트웨어', '속도 향상 기능']
+[compare] 05:07:10   [35b_dense] 엔티티:0 관계:0 시간:81.0초 토큰:2000
+[compare] 05:07:10     샘플: []
+[compare] 05:07:10 
+[2/15] [1_robot] [bfp-a8849Z] SDSeries GOT직접접속 확장기능설명서-영문(KC).pdf
+[compare] 05:07:10   텍스트: 6113자
+[compare] 05:07:44   [a3b+think:False] 엔티티:11 관계:12 시간:34.3초 토큰:911
+[compare] 05:07:44     샘플: ['Mitsubishi Industrial Robot SD series', 'GOT Direct Connection', 'Teaching work', 'Maintenance work', 'Error occurrence']
+[compare] 05:08:48   [35b_dense] 엔티티:0 관계:0 시간:63.9초 토큰:2000
+[compare] 05:08:48     샘플: []
+[compare] 05:08:48 
+[3/15] [1_robot] 4.배선.PDF
+[compare] 05:08:48   텍스트: 1775자
+ot] 4.배선.PDF
+[compare] 05:08:48   텍스트: 1775자

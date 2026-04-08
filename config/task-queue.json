@@ -2291,6 +2291,18 @@
       "updated_at": "2026-04-09 02:48:59",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-db-manager-1def2e",
+      "agent": "db-manager",
+      "task": "부서장 지시: qwen3.5:35b (dense, non-thinking 버전)로 GraphRAG 엔티티 추출 테스트해줘.",
+      "message": "부서장 지시: qwen3.5:35b (dense, non-thinking 버전)로 GraphRAG 엔티티 추출 테스트해줘.\n\n- 기존 50개 테스트와 동일 PDF에서 일부(10~20개)로 테스트\n- qwen3.5:35b-a3b(think:false) vs qwen3.5:35b 비교\n- 엔티티 추출 품질, 처리 속도 비교 보고\n- 모델이 로컬에 없으면 ollama pull qwen3.5:35b 먼저 실행\n\n바로 진행해줘.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-09 05:02:06",
+      "updated_at": "2026-04-09 05:02:06",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }
