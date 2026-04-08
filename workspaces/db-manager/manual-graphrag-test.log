@@ -16,3 +16,36 @@
 [manual-graphrag] 02:29:11   소요: 51.5초
 [manual-graphrag] 02:29:11 [3/50] [1_robot] 4.배선.PDF
 [manual-graphrag] 02:29:11   텍스트: 1853자, 이미지: 0개
+[manual-graphrag] 02:30:19   엔티티: 0개, 관계: 0개
+[manual-graphrag] 02:30:19   소요: 68.1초
+[manual-graphrag] 02:30:19 [4/50] [1_robot] Yaskawa Teaching, Cube Setting Manual.pdf
+[manual-graphrag] 02:30:20   텍스트: 7465자, 이미지: 0개
+[manual-graphrag] 02:31:08   엔티티: 0개, 관계: 0개
+[manual-graphrag] 02:31:08   소요: 48.4초
+[manual-graphrag] 02:31:08 [5/50] [1_robot] CR123478 기능과조작상세_bfp-a5945-s.pdf
+[manual-graphrag] 02:31:08   텍스트: 476831자, 이미지: 0개
+[manual-graphrag] 02:32:42   엔티티: 0개, 관계: 0개
+[manual-graphrag] 02:32:42   소요: 94.3초
+[manual-graphrag] 02:32:42 [6/50] [1_robot] bfp-a8885n_NewCR750-QCR751-Q 컨트롤러 설명서 컨트롤러 설정과 기본 조작 에서 보수까지
+[manual-graphrag] 02:32:43   텍스트: 107959자, 이미지: 0개
+[manual-graphrag] 02:33:26   엔티티: 0개, 관계: 0개
+[manual-graphrag] 02:33:26   소요: 43.4초
+[manual-graphrag] 02:33:26 [7/50] [2_sensor] EX-10 SERIES.pdf
+[manual-graphrag] 02:33:26   텍스트: 23035자, 이미지: 0개
+[manual-graphrag] 02:34:20   엔티티: 0개, 관계: 0개
+[manual-graphrag] 02:34:20   소요: 54.1초
+[manual-graphrag] 02:34:20 [8/50] [2_sensor] br-laser-product-range-ko.pdf
+[manual-graphrag] 02:34:20   텍스트: 8377자, 이미지: 3개
+[manual-graphrag] 02:36:33   엔티티: 0개, 관계: 0개
+[manual-graphrag] 02:36:33   소요: 133.7초
+[manual-graphrag] 02:36:33 [9/50] [2_sensor] Unknown_AL-69545-AF_Manual_KO.pdf
+[manual-graphrag] 02:36:34   텍스트: 86455자, 이미지: 0개
+[manual-graphrag] 02:37:52   엔티티: 0개, 관계: 0개
+[manual-graphrag] 02:37:52   소요: 78.3초
+[manual-graphrag] 02:37:52 [10/50] [2_sensor] AW00015119000 Pilot Users Manual.pdf
+[manual-graphrag] 02:37:52   텍스트: 626614자, 이미지: 0개
+[manual-graphrag] 02:38:37   엔티티: 0개, 관계: 0개
+[manual-graphrag] 02:38:37   소요: 45.6초
+[manual-graphrag] 02:38:37 --- 중간저장: 10건 완료 ---
+[manual-graphrag] 02:38:37 [11/50] [3_hmi] SAIA PCD .pdf
+[manual-graphrag] 02:38:37   텍스트: 2109자, 이미지: 0개
