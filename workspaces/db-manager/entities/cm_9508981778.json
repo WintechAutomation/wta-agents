@@ -1,0 +1,21 @@
+{
+  "page_id": "9508981778",
+  "title": "플레이트 기울임각 보정(Plate tilting Angle) 기능 설명",
+  "entities": [
+    {
+      "id": "proc_PlateTiltingAngle",
+      "name": "플레이트 기울임각 보정 (PlateTiltingAngle)",
+      "type": "Process",
+      "properties": {
+        "purpose": "AGV MGT 작업 취출 시 무너짐 방지 — 클램프 방향에 맞춰 MGT 배열",
+        "config_field": "PlateTiltingAngle (시스템 설정 파일 — CorrectAngle은 0이어야 함)",
+        "env_setting": "환경설정에서 보정값 추가 가능",
+        "final_angle": "최종 보정값 = PlateTiltingAngle + 환경설정 보정값",
+        "square_plate_limit": "사각판: +-15도까지만 보정 (충돌 우려)",
+        "round_plate": "원형판: 전 방향 보정 가능",
+        "note": "PlateTiltingAngle=0이면 환경설정에서 변수 자동 숨김"
+      }
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,17 @@
+{
+  "page_id": "9508929984",
+  "title": "(국문, OKE)- 5-5-3. 커버 조립",
+  "entities": [
+    {
+      "id": "proc_CoverAssemblyOKE",
+      "name": "커버 조립 (OKE 5-5-3)",
+      "type": "Process",
+      "properties": {
+        "section": "5-5-3",
+        "customer": "OKE",
+        "steps": "적재설정 → 제품 추가 → 커버 공급 → 케이스 공급 → 커버 조립 실행 → 완료(반전기 위치)"
+      }
+    }
+  ],
+  "relations": []
+}

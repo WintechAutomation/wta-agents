@@ -1,0 +1,145 @@
+{
+  "page_id": "9508981088",
+  "title": "#사내 인터페이스 확인하기",
+  "entities": [
+    {
+      "id": "eq_001",
+      "name": "인터페이스 확인 장치",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "eq_002",
+      "name": "프레스",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "eq_003",
+      "name": "오스터왈더 장비",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "eq_004",
+      "name": "고바야시 장비",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "eq_005",
+      "name": "도르스트 장비",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "comp_001",
+      "name": "저울 포트",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_002",
+      "name": "COM1",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_003",
+      "name": "WMXServer Setup - I/O Monitor (Seq)",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_004",
+      "name": "Osterwalder 카테고리",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_005",
+      "name": "지원 메뉴 - 입출력 - INTERFACE",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_006",
+      "name": "ComAnalyzer",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_007",
+      "name": "버튼/E-STOP",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "comp_008",
+      "name": "LED",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "proc_001",
+      "name": "인터페이스 연결",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_002",
+      "name": "인터페이스 해제",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_003",
+      "name": "인터페이스 확인",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_004",
+      "name": "저울값 확인",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_005",
+      "name": "입출력 점검",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "proc_006",
+      "name": "프레스기 도킹 확인",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "per_001",
+      "name": "설계 및 제어팀",
+      "type": "Person",
+      "properties": {}
+    },
+    {
+      "id": "man_001",
+      "name": "Osterwalder_Interface_Checker.jpg",
+      "type": "Manual",
+      "properties": {}
+    },
+    {
+      "id": "man_002",
+      "name": "Kobayashi_Interface_Checker.jpg",
+      "type": "Manual",
+      "properties": {}
+    },
+    {
+      "id": "man_003",
+      "name": "Dorst_Interface_Checker.jpg",
+      "type": "Manual",
+      "properties": {}
+    }
+  ],
+  "relations": []
+}

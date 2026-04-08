@@ -1,0 +1,16 @@
+{
+  "page_id": "9507159109",
+  "title": "5-5-1. 팔레트 공급 / 취출",
+  "entities": [
+    {
+      "id": "proc_PalletSupplyExtract_5_5_1",
+      "name": "팔레트 공급/취출 5-5-1",
+      "type": "Process",
+      "properties": {
+        "section": "5-5-1",
+        "steps": "적재설정 선택 → 제품 추가 → 팔레트 공급 → 공급 실행 → 공급 완료 → 취출 실행 → 취출 완료"
+      }
+    }
+  ],
+  "relations": []
+}

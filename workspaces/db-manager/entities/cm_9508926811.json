@@ -1,0 +1,18 @@
+{
+  "page_id": "9508926811",
+  "title": "(국문, OKE)- 4-2-1-2.  적재설정 - 작업 수량 변경",
+  "entities": [
+    {
+      "id": "proc_WorkQtyChangeOKE",
+      "name": "작업 수량 변경 (OKE 4-2-1-2)",
+      "type": "Process",
+      "properties": {
+        "section": "4-2-1-2",
+        "customer": "OKE",
+        "steps": "적재설정 선택 → 수량 변경할 팔레트의 수량 버튼 클릭 → 변경할 수량 선택 → 수량 입력",
+        "note": "작업 중인 팔레트만 작업 수량 변경 가능"
+      }
+    }
+  ],
+  "relations": []
+}

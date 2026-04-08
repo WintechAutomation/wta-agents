@@ -1,0 +1,18 @@
+{
+  "page_id": "9507153008",
+  "title": "-(한글 버전)-  5-4-1. 팔레트 제품 검출",
+  "entities": [
+    {
+      "id": "proc_PalletProductDetectKO",
+      "name": "팔레트 제품 검출 (한글 5-4-1)",
+      "type": "Process",
+      "properties": {
+        "section": "5-4-1",
+        "language": "Korean",
+        "head": "H2",
+        "steps": "조명 밝기 설정 → 패턴 생성(포인트 시계방향) → 원점 설정 → 원점 방향(X→NoseR) → 등록 → 검출 테스트 → 저장"
+      }
+    }
+  ],
+  "relations": []
+}

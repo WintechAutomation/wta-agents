@@ -1,0 +1,50 @@
+{
+  "page_id": "9508933090",
+  "title": "Videojet 1510",
+  "entities": [
+    {
+      "id": "equip_Videojet1510",
+      "name": "Videojet 1510 잉크젯 마킹기",
+      "type": "Equipment",
+      "properties": {
+        "manufacturer": "Videojet",
+        "model": "1510",
+        "comm": "TCP/IP"
+      }
+    },
+    {
+      "id": "proc_Videojet1510Setup",
+      "name": "Videojet 1510 설정",
+      "type": "Process",
+      "properties": {
+        "tcp_ip": "TCP/IP SETTING",
+        "reverse": "마킹 꺼꾸로 나올 때 → 메시지 변수 → 반전 켜기",
+        "upside_down": "마킹 뒤집힐 때 → 메시지 변수 → 역전 켜기",
+        "font_size": "코드에서 Font Num 제어 (00=7hi, 01=9hi, 02=12hi, 03=16hi, 05=34hi, 06=5hi)",
+        "position": "HORC(4)=가로위치, VERC(3)=세로위치; 마킹기 자체 설정 의미없음 — 프로그램이 제어",
+        "global_offset": "전체 x,y 위치 변경은 HMI 모델별 Offset 설정"
+      }
+    },
+    {
+      "id": "issue_VideojetGutterError",
+      "name": "Videojet 1510 거터 오류",
+      "type": "Issue",
+      "properties": {
+        "symptom": "거터 오류 발생",
+        "fix": "마킹기 노즐부 청소 (장갑 착용 → 빨간색 부분 비커에 뒤집어 넣기 → 액체 세척액 분사 → 헝겊으로 닦기 → 재조립)"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "source": "proc_Videojet1510Setup",
+      "target": "equip_Videojet1510",
+      "type": "MAINTAINS"
+    },
+    {
+      "source": "issue_VideojetGutterError",
+      "target": "proc_Videojet1510Setup",
+      "type": "RESOLVED_BY"
+    }
+  ]
+}

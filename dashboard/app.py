@@ -446,7 +446,8 @@ def api_upload():
 def api_download(filename):
     """업로드된 파일 다운로드"""
     safe = secure_filename(filename)
-    return send_from_directory(UPLOAD_DIR, safe, as_attachment=True)
+    is_html = safe.lower().endswith(".html")
+    return send_from_directory(UPLOAD_DIR, safe, as_attachment=not is_html)
 
 
 # ── HTML → PPTX 변환 ──

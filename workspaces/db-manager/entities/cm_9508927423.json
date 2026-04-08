@@ -1,0 +1,17 @@
+{
+  "page_id": "9508927423",
+  "title": "(국문, OKE)- 4-2-3-5. 팔레트 관리 - 원점 설정",
+  "entities": [
+    {
+      "id": "proc_PalletOriginSetOKE",
+      "name": "팔레트 원점 설정 (OKE 4-2-3-5)",
+      "type": "Process",
+      "properties": {
+        "section": "4-2-3-5",
+        "customer": "OKE",
+        "steps": "팔레트 관리 선택 → 원점 설정할 팔레트 선택 → 팔레트 원점 설정 실행 → 시작 Point(카메라 시작 중앙) 설정 → 종료 Point(카메라 종료 중앙) 설정"
+      }
+    }
+  ],
+  "relations": []
+}

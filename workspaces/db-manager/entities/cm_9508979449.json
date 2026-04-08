@@ -1,0 +1,24 @@
+{
+  "page_id": "9508979449",
+  "title": "#PC 연결 기기의 포트 확인",
+  "entities": [
+    {
+      "id": "proc_PCPortCheck",
+      "name": "PC 연결 기기 포트 확인",
+      "type": "Process",
+      "properties": {
+        "purpose": "PC 연결 기기의 배선과 파일 설정 일치 여부 확인",
+        "config_file": "D:/WintechAutomation/WMI/Data/DeviceInfo.xml",
+        "device_COM1": "TP (티칭 펜던트)",
+        "device_COM2": "SCALE (저울)",
+        "device_COM3": "HEIGHTGAUGE (높이 측정 센서)",
+        "steps": [
+          "DeviceInfo.xml에서 기기별 COM포트 번호 확인",
+          "제어 전장에서 각 COM 포트 배선 넘버링 확인",
+          "불일치 시 DeviceInfo.xml 수정"
+        ]
+      }
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,36 @@
+{
+  "page_id": "9508931542",
+  "title": "BlackOut 설정",
+  "entities": [
+    {
+      "id": "proc_BlackOutSetup",
+      "name": "BlackOut 설정 (UPS 전원 차단 시 HMI 종료)",
+      "type": "Process",
+      "properties": {
+        "method1": "압축 해제 후 BlackOutRegiter.bat 실행",
+        "method2_steps": [
+          "BlackOut.exe가 HMI에 있어야 함",
+          "작업 스케줄러 실행 → 폴더 추가",
+          "기본 작업 만들기: 이벤트 뷰어 작업",
+          "로그:응용프로그램, 원본:APC UPS Service, 이벤트ID:174",
+          "프로그램: hmi-blackOut 선택 후 완료"
+        ]
+      }
+    },
+    {
+      "id": "comp_BlackOutExe",
+      "name": "BlackOut.exe (HMI)",
+      "type": "Component",
+      "properties": {
+        "trigger": "APC UPS Service 이벤트 ID 174 (MainPower Shutdown)"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "source": "proc_BlackOutSetup",
+      "target": "comp_BlackOutExe",
+      "type": "INVOLVES_COMPONENT"
+    }
+  ]
+}

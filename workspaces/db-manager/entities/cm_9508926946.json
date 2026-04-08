@@ -1,0 +1,18 @@
+{
+  "page_id": "9508926946",
+  "title": "(국문, OKE)- 4-2-2-1.  제품모델 관리 - 추가",
+  "entities": [
+    {
+      "id": "proc_ModelAddOKE",
+      "name": "제품모델 추가 (OKE 4-2-2-1)",
+      "type": "Process",
+      "properties": {
+        "section": "4-2-2-1",
+        "customer": "OKE",
+        "steps": "모델 관리 선택 → 모델 추가 → 이름/파라미터 설정 → 저장",
+        "note": "모델 이름은 제공된 Sheet 내용과 일치해야 함"
+      }
+    }
+  ],
+  "relations": []
+}

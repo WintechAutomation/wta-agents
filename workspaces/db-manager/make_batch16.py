@@ -1,0 +1,143 @@
+import json, sys
+sys.stdout.reconfigure(encoding='utf-8')
+
+batch16 = [
+  {
+    "page_id": "9508929450",
+    "title": "(국문, OKE)- 5-4-1. 팔레트 제품 검출",
+    "entities": [
+      {"id": "proc_PalletProductDetectOKE", "name": "팔레트 제품 검출 (OKE 5-4-1)", "type": "Process", "properties": {
+        "section": "5-4-1", "customer": "OKE", "head": "H2",
+        "steps": "조명 밝기 설정 → 패턴 생성(포인트 시계방향) → 원점 설정 → 원점 방향 설정(X→NoseR) → 등록 → 검출 테스트 → 저장"
+      }}
+    ],
+    "relations": []
+  },
+  {
+    "page_id": "9508927118",
+    "title": "(국문, OKE)- 4-2-2-4. 제품모델 관리 - 복사",
+    "entities": [
+      {"id": "proc_ModelCopyOKE", "name": "제품모델 복사 (OKE 4-2-2-4)", "type": "Process", "properties": {
+        "section": "4-2-2-4", "customer": "OKE",
+        "steps": "모델 관리 선택 → 복사할 모델 선택 → 복사 실행"
+      }}
+    ],
+    "relations": []
+  },
+  {
+    "page_id": "9507153008",
+    "title": "-(한글 버전)-  5-4-1. 팔레트 제품 검출",
+    "entities": [
+      {"id": "proc_PalletProductDetectKO", "name": "팔레트 제품 검출 (한글 5-4-1)", "type": "Process", "properties": {
+        "section": "5-4-1", "language": "Korean", "head": "H2",
+        "steps": "조명 밝기 설정 → 패턴 생성(포인트 시계방향) → 원점 설정 → 원점 방향(X→NoseR) → 등록 → 검출 테스트 → 저장"
+      }}
+    ],
+    "relations": []
+  },
+  {
+    "page_id": "9508922677",
+    "title": "DB Data 설정 - [UnLoading]",
+    "entities": [
+      {"id": "proc_DBDataSetupUnloading", "name": "언로딩 DB Data 설정", "type": "Process", "properties": {
+        "tool": "pgAdmin",
+        "caution": "DB 저장 데이터는 중요 데이터 — 함부로 변경 금지",
+        "ui_guide": "빨강=삭제, 주황=저장, 노랑=KEY(변경불가), 초록=행번호, 파랑=데이터"
+      }},
+      {"id": "proc_CameraFOVCalibUnloading", "name": "언로딩 카메라 FOV 및 그리퍼 간격 캘리브레이션", "type": "Process", "properties": {
+        "cameras": "Pole_CAM, PoleSide_CAM, Top_CAM(Turn_CAM, Bot_CAM)",
+        "fov_formula": "1 pixel = 10 / X pixel (mm/px)",
+        "db_field": "cal_pixel_per_mm",
+        "top_cam_method": "스틸자 → 기준 10mm 구간 픽셀값 측정 → 계산",
+        "pole_cam_method": "POLE축 0위치 → 막대 두께 픽셀 측정",
+        "bot_cam_note": "조리개 끝까지 열고 노출값 0.1~0.2 사용"
+      }},
+      {"id": "proc_GripperCamOffsetCalib", "name": "카메라-그리퍼 위치 차이 캘리브레이션", "type": "Process", "properties": {
+        "top_pallet_cam": "팔레트에 제품 → PALLET/X축으로 홀 진입 위치 확인(X POS) → CAM/PALLET로 홀 중앙 확인(CAM POS) → 차이값 cal_x/cal_y 입력",
+        "turn_cam": "반전기 핀 상승 → X/TURN_Y로 핀 위치 확인 → TURN_CAM/TURN_Y로 카메라 핀 위치 확인 → 차이값 cal_x/cal_y 입력",
+        "example_top": "X64.5-CAM23.4=41.1, PAL718-PAL717=1 → cal_x=41.1, cal_y=1"
+      }}
+    ],
+    "relations": []
+  },
+  {
+    "page_id": "9508931542",
+    "title": "BlackOut 설정",
+    "entities": [
+      {"id": "proc_BlackOutSetup", "name": "BlackOut 설정 (UPS 전원 차단 시 HMI 종료)", "type": "Process", "properties": {
+        "method1": "압축 해제 후 BlackOutRegiter.bat 실행",
+        "method2_steps": [
+          "BlackOut.exe가 HMI에 있어야 함",
+          "작업 스케줄러 실행 → 폴더 추가",
+          "기본 작업 만들기: 이벤트 뷰어 작업",
+          "로그:응용프로그램, 원본:APC UPS Service, 이벤트ID:174",
+          "프로그램: hmi-blackOut 선택 후 완료"
+        ]
+      }},
+      {"id": "comp_BlackOutExe", "name": "BlackOut.exe (HMI)", "type": "Component", "properties": {
+        "trigger": "APC UPS Service 이벤트 ID 174 (MainPower Shutdown)"
+      }}
+    ],
+    "relations": [
+      {"source": "proc_BlackOutSetup", "target": "comp_BlackOutExe", "type": "INVOLVES_COMPONENT"}
+    ]
+  },
+  {
+    "page_id": "9507144074",
+    "title": "I/O 체크",
+    "entities": [
+      {"id": "proc_IOCheck", "name": "I/O 체크", "type": "Process", "properties": {
+        "magazine_lock": "프로그램상 검은 패드 닫힘=잠금; 배선 설계상 열림=ON → Output.csv MAGAZINE 잠금 항목 Revers=TRUE 세팅",
+        "temp_sensor": "DeviceInfo.xml에 TEMPSENSOR Com포트 번호 확인; MOXA 커넥터 2-wire RS-485(스위치 1,2번 ON) 확인",
+        "light_check": "조명 컨트롤러를 수동(LOC)으로 전환 후 채널별 조명 일치 확인 (CH1=X2_CAM, CH2=X1 그리퍼, CH3=COUNT_X)",
+        "light_fix": "채널 불일치 시 조명 컨트롤 후면 핀을 올바른 채널로 변경"
+      }},
+      {"id": "comp_SignalOutputCSV", "name": "Output.csv (Signal 폴더)", "type": "Component", "properties": {
+        "field": "MAGAZINE 잠금 Revers 플래그",
+        "path": "WMI/Data/Signal/Output.csv"
+      }},
+      {"id": "comp_DeviceInfoXml", "name": "DeviceInfo.xml", "type": "Component", "properties": {
+        "field": "TEMPSENSOR Com포트 번호"
+      }}
+    ],
+    "relations": [
+      {"source": "proc_IOCheck", "target": "comp_SignalOutputCSV", "type": "INVOLVES_COMPONENT"},
+      {"source": "proc_IOCheck", "target": "comp_DeviceInfoXml", "type": "INVOLVES_COMPONENT"}
+    ]
+  },
+  {
+    "page_id": "9508927423",
+    "title": "(국문, OKE)- 4-2-3-5. 팔레트 관리 - 원점 설정",
+    "entities": [
+      {"id": "proc_PalletOriginSetOKE", "name": "팔레트 원점 설정 (OKE 4-2-3-5)", "type": "Process", "properties": {
+        "section": "4-2-3-5", "customer": "OKE",
+        "steps": "팔레트 관리 선택 → 원점 설정할 팔레트 선택 → 팔레트 원점 설정 실행 → 시작 Point(카메라 시작 중앙) 설정 → 종료 Point(카메라 종료 중앙) 설정"
+      }}
+    ],
+    "relations": []
+  },
+  {
+    "page_id": "9507144748",
+    "title": "Small Label",
+    "entities": [
+      {"id": "proc_SmallLabelSetup", "name": "Small Label 위치 설정", "type": "Process", "properties": {
+        "printer": "B_LABEL (정면 기준 오른쪽 라벨 프린터)",
+        "label_x": "I/O output 라벨B 가이드 전진 후 LABEL_X를 라벨 흡착부 평행 위치로 조정",
+        "label_y": "출력된 라벨 끝과 흡착부 끝이 평행하게 맞는 위치",
+        "label_z": "출력된 라벨이 스테이지에 붙지 않도록 설정",
+        "label_t": "R축 원점 정확하면 0",
+        "attach_t": "소형 라벨은 흡착 후 180도 회전 부착 → ATTACH_T = -180",
+        "thick_case_offset": "두꺼운 너비 라벨 사용 시 중심 센터 차이 Offset 설정"
+      }}
+    ],
+    "relations": []
+  }
+]
+
+prog_path = 'C:/MES/wta-agents/workspaces/db-manager'
+with open(f'{prog_path}/entities/batch16_combined.json', 'w', encoding='utf-8') as f:
+    json.dump(batch16, f, ensure_ascii=False, indent=2)
+for item in batch16:
+    with open(f'{prog_path}/entities/cm_{item["page_id"]}.json', 'w', encoding='utf-8') as f:
+        json.dump(item, f, ensure_ascii=False, indent=2)
+print(f'Saved {len(batch16)}')

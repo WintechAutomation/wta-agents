@@ -1,0 +1,17 @@
+{
+  "page_id": "9507161951",
+  "title": "asd4-2-6-1. 입출력 - 반복 동작 테스트",
+  "entities": [
+    {
+      "id": "proc_IORepeatTest_asd",
+      "name": "입출력 반복 동작 테스트 (4-2-6-1)",
+      "type": "Process",
+      "properties": {
+        "section": "4-2-6-1",
+        "condition": "정지 중에만 실행 가능",
+        "steps": "입출력 선택 → 작성 → 프로그램 추가 → 프로그램 선택 → 시퀀스 설정 → 입출력 Drag&Drop → ON/OFF 설정 → 딜레이(Timer) 추가 → 반복 횟수 입력 → 시작/정지"
+      }
+    }
+  ],
+  "relations": []
+}

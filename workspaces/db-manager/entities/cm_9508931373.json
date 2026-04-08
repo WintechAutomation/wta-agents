@@ -1,0 +1,38 @@
+{
+  "page_id": "9508931373",
+  "title": "DAQMaster 사용법 (온도센서)",
+  "entities": [
+    {
+      "id": "tool_DAQMaster",
+      "name": "DAQMaster",
+      "type": "Tool",
+      "properties": {
+        "purpose": "온도센서 데이터 수집 및 모니터링",
+        "device": "TM4 (온도센서)"
+      }
+    },
+    {
+      "id": "proc_DAQMasterSetup",
+      "name": "DAQMaster 온도센서 설정",
+      "type": "Process",
+      "properties": {
+        "steps": [
+          "지원 디바이스 리스트에서 TM4 추가",
+          "통신방식 선택 및 통신 설정 후 연결",
+          "유닛 어드레스 스캔 → 유닛 선택",
+          "우클릭 → 모든 파라메터 읽기",
+          "I/O리스트에서 읽을 Value 우클릭 → DAQ 리스트 추가",
+          "런타임 화면에 Grid 패널 생성 → DAQ 리스트 드래그 추가",
+          "실행 버튼으로 Data 확인"
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "source": "proc_DAQMasterSetup",
+      "target": "tool_DAQMaster",
+      "type": "USES_TOOL"
+    }
+  ]
+}

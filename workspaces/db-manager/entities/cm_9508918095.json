@@ -1,0 +1,39 @@
+{
+  "page_id": "9508918095",
+  "title": "Crevis I/O 모듈 IP 변경 방법",
+  "entities": [
+    {
+      "id": "proc_CrevisIPChange",
+      "name": "Crevis I/O 모듈 IP 변경",
+      "type": "Process",
+      "properties": {
+        "target": "호닝형상검사기 기준",
+        "tool": "IOGuidePro",
+        "steps": [
+          "Online > Automatic Scan에서 모듈과 연결된 랜카드 선택 후 스캔",
+          "Tools > Protocol Messenger > Modbus > TCP IP 설정 및 Request 설정",
+          "Address(Hex):1050, Quantity(Dec):2Word",
+          "Function 03(Read Holding Registers)로 현재 IP 확인(16진수)",
+          "Function 16(Write Multiple Registers)로 신규 IP 입력(Hex Swap 필요)"
+        ],
+        "ip_example": "10.0.2.151 = Read:0A00_0297 Write:000A_9702"
+      }
+    },
+    {
+      "id": "comp_CrevisIOModule",
+      "name": "Crevis I/O 모듈",
+      "type": "Component",
+      "properties": {
+        "comm": "Modbus TCP",
+        "ip_register": "Address 0x1050"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "source": "proc_CrevisIPChange",
+      "target": "comp_CrevisIOModule",
+      "type": "MAINTAINS"
+    }
+  ]
+}

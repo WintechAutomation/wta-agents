@@ -1,0 +1,32 @@
+{
+  "page_id": "9508934297",
+  "title": "PVD 언로딩 스페이서 두께 티칭",
+  "entities": [
+    {
+      "id": "proc_SpacerThicknessTeaching",
+      "name": "PVD 언로딩 스페이서 두께 티칭",
+      "type": "Process",
+      "properties": {
+        "reason": "제품 형상에 따라 스페이서/제품 구별 불가 또는 FOV 오측정 시 티칭으로 해결",
+        "steps": "WLine1 버튼 체크 후 스페이서 시작 지점 선택 → WLine2 버튼 체크 후 스페이서 끝 지점 선택 → 측정 클릭",
+        "caution": "두께(pix) 값 클수록 오검출 확률 높아짐; 실제 픽셀보다 약간 작게 설정 권장",
+        "example_px": 127
+      }
+    },
+    {
+      "id": "comp_SpacerDetection",
+      "name": "스페이서 두께 픽셀 설정",
+      "type": "Component",
+      "properties": {
+        "note": "FOV 값에 따라 편차 있음; 실제보다 너무 작으면 검출 불가"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "source": "proc_SpacerThicknessTeaching",
+      "target": "comp_SpacerDetection",
+      "type": "INVOLVES_COMPONENT"
+    }
+  ]
+}

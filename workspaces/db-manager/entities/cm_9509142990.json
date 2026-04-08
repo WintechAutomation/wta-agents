@@ -1,0 +1,39 @@
+{
+  "page_id": "9509142990",
+  "title": "R축 원점 세팅",
+  "entities": [
+    {
+      "id": "proc_RAxisHomeSetting",
+      "name": "R축 원점 세팅",
+      "type": "Process",
+      "properties": {
+        "target": "H2R1~R3 축",
+        "steps": [
+          "H2X축 그리퍼를 2Jaw 툴로 변경 후 Axis Parameter 클릭",
+          "H2R1~R3 HomeShiftDistance를 모두 0으로 변경",
+          "Save to File → WMXParameters.xml로 저장",
+          "WMXServer 재부팅 후 Motion Manager에서 H2R1~3 Home Start",
+          "하부 카메라로 각 축을 평행하게 R축 세팅",
+          "돌아간 값만큼 HomeShiftDistance로 재설정 후 저장",
+          "WMXServer 재부팅 후 Home Start → 세 그리퍼 평행 원점 확인"
+        ]
+      }
+    },
+    {
+      "id": "comp_WMXParametersXml",
+      "name": "WMXParameters.xml",
+      "type": "Component",
+      "properties": {
+        "path": "WMXServer/Datas/WMXParameters.xml",
+        "field": "HomeShiftDistance (R축 원점 오프셋)"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "source": "proc_RAxisHomeSetting",
+      "target": "comp_WMXParametersXml",
+      "type": "INVOLVES_COMPONENT"
+    }
+  ]
+}

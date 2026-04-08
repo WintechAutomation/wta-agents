@@ -1,0 +1,25 @@
+{
+  "page_id": "9508929023",
+  "title": "(국문, OKE)- 5-1-5. 그리퍼 확인",
+  "entities": [
+    {
+      "id": "proc_GripperCheckOKE",
+      "name": "그리퍼 확인 및 교체 (OKE 5-1-5)",
+      "type": "Process",
+      "properties": {
+        "section": "5-1-5",
+        "customer": "OKE",
+        "steps": [
+          "그리퍼 확인 위치로 이동",
+          "도어 오픈",
+          "HEAD1(좌)/HEAD2(우) 하단 그리퍼 확인",
+          "공압 SHUT 차단",
+          "기존 툴 분리",
+          "핀에 맞게 신규 툴 장착",
+          "툴 체결 후 공압 OPEN"
+        ]
+      }
+    }
+  ],
+  "relations": []
+}

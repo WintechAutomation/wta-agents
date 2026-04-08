@@ -1,0 +1,35 @@
+{
+  "page_id": "9508916276",
+  "title": "하부 PC 도어 팬 추가 작업",
+  "entities": [
+    {
+      "id": "proc_PCFanInstall",
+      "name": "하부 PC 도어 팬 추가 작업",
+      "type": "Process",
+      "properties": {
+        "issue": "PC 열 과다 발생",
+        "solution": "팬 추가하여 열 방출",
+        "estimated_time_min": 30,
+        "materials": "팬이 달린 하부 도어 1개, 팬 전원 케이블 1개, 케이블 타이 및 마운트 자재, 공구/러그박스",
+        "steps": "케이블 포설(레이저 컨트롤러 쪽으로) → 덕트 타이로 고정 → 오른쪽 터미널 블럭 배선 → 넘버링 R/T 확인 후 Y형 러그로 배선",
+        "safety": "AC 배선 작업 전 장비 전원 차단 필수"
+      }
+    },
+    {
+      "id": "issue_PCOverheat",
+      "name": "PC 과열 이슈",
+      "type": "Issue",
+      "properties": {
+        "symptom": "하부 PC 열 과다 발생",
+        "fix": "도어 팬 추가 설치"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "source": "issue_PCOverheat",
+      "target": "proc_PCFanInstall",
+      "type": "RESOLVED_BY"
+    }
+  ]
+}
