@@ -113,3 +113,7 @@
 {"ts": "2026-04-09 07:38:50", "direction": "inbound", "user": "boss", "text": "설치해볼래"}
 {"ts": "2026-04-09 07:39:16", "direction": "outbound", "user": "MAX", "text": "crafter에게 vLLM 설치 지시했습니다. 182.224.6.147 서버 SSH 접속 확인부터 진행합니다.\n\n접속이 안 되면 별도 안내 드리겠습니다."}
 {"ts": "2026-04-09 07:39:51", "direction": "outbound", "user": "MAX", "text": "182.224.6.147 서버에 SSH 접속이 안 됩니다 (포트 22 타임아웃). Ollama API(11434)만 열려있는 상태.\n\nvLLM 설치하려면 서버에 직접 접속이 필요합니다.\n\n확인 부탁드립니다:\n1. SSH 포트가 22가 아닌 다른 포트인지?\n2. 방화벽에서 SSH 허용 필요한지?\n3. 또는 서버에 직접 접속해서 설치하실 수 있는지?"}
+{"ts": "2026-04-09 07:41:21", "direction": "inbound", "user": "boss", "text": "vLLM 0.17.0 설치 완료! ✅\n\nGemma 4 돌려보려면 이렇게 실행하면 돼요:\n\nvllm serve google/gemma-4-26B-A4B --max-model-len 8192\n\nOpenAI 호환 API로 localhost:8000에서 접근 가능해져요. 바로 Gemma 4 올려볼까요?"}
+{"ts": "2026-04-09 07:41:32", "direction": "outbound", "user": "MAX", "text": "직접 설치하셨군요! 바로 올려봐 주세요.\n\nvllm serve google/gemma-4-26B-A4B --max-model-len 8192\n\n올라오면 db-manager에게 vLLM(localhost:8000) 엔드포인트로 엔티티 추출 테스트 지시하겠습니다. OpenAI 호환 API라 연동 간단합니다."}
+{"ts": "2026-04-09 07:42:51", "direction": "inbound", "user": "boss", "text": "gemma-4-31b-it (가장 큰 모델, 31B Dense) vLLM으로 로딩 시작했어요. HuggingFace에서 모델 다운로드 + 로딩까지 시간이 좀 걸릴 수 있어요. 완료되면 알려드릴게요!"}
+{"ts": "2026-04-09 07:43:03", "direction": "outbound", "user": "MAX", "text": "👍 31B Dense 모델이면 품질 기대됩니다. 로딩 완료되면 알려주세요. 바로 테스트 진행하겠습니다."}
