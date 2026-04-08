@@ -6,6 +6,8 @@ stdin으로 hook payload(JSON)를 받아 텔레그램 메시지만 필터링 후
 """
 import json
 import os
+import re
+import shutil
 import sys
 from datetime import datetime, timezone, timedelta
 
@@ -17,10 +19,9 @@ if hasattr(sys.stdin, "reconfigure"):
 import requests
 
 DASHBOARD_URL = "http://localhost:5555/api/send"
-TELEGRAM_JSONL = os.path.join(
-    os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
-    "slack_chatlog", "telegram.jsonl",
-)
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+TELEGRAM_JSONL = os.path.join(BASE_DIR, "slack_chatlog", "telegram.jsonl")
+TELEGRAM_FILES = os.path.join(BASE_DIR, "slack_chatlog", "telegram_files")
 KST = timezone(timedelta(hours=9))
 
 
@@ -39,12 +40,10 @@ def main():
         return
 
     # <channel source="plugin:telegram:telegram" ...> 태그에서 메시지 추출
-    import re
     match = re.search(
         r'<channel\s+source="plugin:telegram:telegram"'
-        r'[^>]*user="([^"]*)"'
-        r'[^>]*>'
-        r'(.*?)'
+        r'(?P<attrs>[^>]*)>'
+        r'(?P<body>.*?)'
         r'</channel>',
         content,
         re.DOTALL,
@@ -52,19 +51,42 @@ def main():
     if not match:
         return
 
-    user = match.group(1)
-    message_text = match.group(2).strip()
+    attrs = match.group("attrs")
+    message_text = match.group("body").strip()
 
-    if not message_text:
+    # 모든 파일 경로 속성 추출 (image_path, file_path, document_path, video_path 등)
+    file_attrs = re.findall(r'(\w+_path)="([^"]*)"', attrs)
+
+    # 첨부 파일 복사
+    saved_files = []
+    if file_attrs:
+        os.makedirs(TELEGRAM_FILES, exist_ok=True)
+        ts_prefix = datetime.now(KST).strftime("%Y%m%d_%H%M%S")
+        for i, (attr_name, src_path) in enumerate(file_attrs):
+            if not os.path.exists(src_path):
+                continue
+            ext = os.path.splitext(src_path)[1] or ".bin"
+            suffix = f"_{i}" if i > 0 else ""
+            dest = os.path.join(TELEGRAM_FILES, f"{ts_prefix}{suffix}{ext}")
+            try:
+                shutil.copy2(src_path, dest)
+                saved_files.append({"type": attr_name.replace("_path", ""), "path": dest})
+            except Exception:
+                pass
+
+    if not message_text and not saved_files:
         return
 
     # JSONL 파일에 인바운드 로깅
-    _append_to_jsonl({
+    record = {
         "ts": datetime.now(KST).strftime("%Y-%m-%d %H:%M:%S"),
         "direction": "inbound",
         "user": "boss",
         "text": message_text,
-    })
+    }
+    if saved_files:
+        record["files"] = saved_files
+    _append_to_jsonl(record)
 
     # 대시보드에 로깅
     data = {

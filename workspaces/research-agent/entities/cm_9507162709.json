@@ -1,0 +1,179 @@
+{
+  "page_id": "9507162709",
+  "title": "　자동 작업 준비 - 도구 준비",
+  "entities": [
+    {
+      "id": "eq_001",
+      "name": "자동 작업 준비 - 도구 준비",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "eq_002",
+      "name": "팔레트 공급",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "eq_003",
+      "name": "팔레트 준비",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "eq_004",
+      "name": "케이스 공급",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "eq_005",
+      "name": "케이스 준비",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "eq_006",
+      "name": "커버 공급",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "eq_007",
+      "name": "라벨 공급",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "eq_008",
+      "name": "그리퍼 확인",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "eq_009",
+      "name": "Inkjet 마킹기 확인",
+      "type": "Process",
+      "properties": {}
+    },
+    {
+      "id": "eq_010",
+      "name": "팔레트",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "eq_011",
+      "name": "케이스",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "eq_012",
+      "name": "커버",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "eq_013",
+      "name": "라벨",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "eq_014",
+      "name": "그리퍼",
+      "type": "Component",
+      "properties": {}
+    },
+    {
+      "id": "eq_015",
+      "name": "Inkjet 마킹기",
+      "type": "Equipment",
+      "properties": {}
+    },
+    {
+      "id": "eq_016",
+      "name": "소모품",
+      "type": "Component",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "source": "eq_001",
+      "target": "eq_002",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "eq_001",
+      "target": "eq_004",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "eq_001",
+      "target": "eq_006",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "eq_001",
+      "target": "eq_007",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "eq_001",
+      "target": "eq_008",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "eq_001",
+      "target": "eq_009",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "eq_002",
+      "target": "eq_003",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "eq_004",
+      "target": "eq_005",
+      "type": "HAS_SUBPROCESS"
+    },
+    {
+      "source": "eq_002",
+      "target": "eq_010",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eq_004",
+      "target": "eq_011",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eq_006",
+      "target": "eq_012",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eq_007",
+      "target": "eq_013",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eq_008",
+      "target": "eq_014",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eq_009",
+      "target": "eq_015",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "eq_009",
+      "target": "eq_016",
+      "type": "USES_COMPONENT"
+    }
+  ]
+}

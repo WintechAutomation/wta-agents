@@ -86,16 +86,20 @@ def main():
 
     tool_input = data.get("tool_input", {})
     text = tool_input.get("text", "")
-    if not text:
+    files = tool_input.get("files", [])
+    if not text and not files:
         sys.exit(0)
 
     # JSONL 파일에 아웃바운드 로깅
-    _append_to_jsonl({
+    record = {
         "ts": datetime.now(KST).strftime("%Y-%m-%d %H:%M:%S"),
         "direction": "outbound",
         "user": "MAX",
         "text": text,
-    })
+    }
+    if files:
+        record["files"] = files
+    _append_to_jsonl(record)
 
     # 아웃바운드 (MAX → 부서장) 로깅
     log_to_hub("outbound", "boss", text)

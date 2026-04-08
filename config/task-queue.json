@@ -2051,6 +2051,30 @@
       "updated_at": "2026-04-09 00:16:31",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-crafter-ffc182",
+      "agent": "crafter",
+      "task": "슬랙봇(slack-bot)에서 슬랙 API를 통해 파일 첨부/업로드 기능이 현재 구현되어 있는지, 가능한지 확인 요청.",
+      "message": "슬랙봇(slack-bot)에서 슬랙 API를 통해 파일 첨부/업로드 기능이 현재 구현되어 있는지, 가능한지 확인 요청.\n\n확인 사항:\n1. 현재 slack-bot 코드에서 파일 업로드(files_upload_v2 등) 기능이 있는지\n2. 슬랙 Bot Token 권한(scopes)에 files:write가 포함되어 있는지\n3. 텔레그램에서 받은 이미지/파일을 슬랙 채널에 첨부해서 보낼 수 있는지\n4. 반대로 슬랙에서 공유된 파일을 다운로드/저장할 수 있는지\n\n코드 분석 후 현황과 가능 여부를 보고해줘.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-09 00:35:37",
+      "updated_at": "2026-04-09 00:35:37",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-docs-agent-da5d36",
+      "agent": "docs-agent",
+      "task": "부서장이 슬랙 #pm에서 업로드한 PPT 파일 분석 요청.",
+      "message": "부서장이 슬랙 #pm에서 업로드한 PPT 파일 분석 요청.\n\n파일 경로: C:\\MES\\wta-agents\\uploads\\slack\\pm\\2026-04-09\\003718_Template.pptx\n\n분석 내용:\n1. 슬라이드 구성 (총 페이지 수, 각 슬라이드 제목/내용 요약)\n2. 레이아웃/디자인 특징 (색상, 폰트, 슬라이드 크기 등)\n3. 이미지/차트 포함 여부\n4. 용도/목적 추정\n\n분석 결과를 간결하게 보고해줘.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-09 00:38:09",
+      "updated_at": "2026-04-09 00:38:09",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }
