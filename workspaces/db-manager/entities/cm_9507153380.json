@@ -1,0 +1,16 @@
+{
+  "page_id": "9507153380",
+  "title": "-(한글 버전)- 5-5-2. 케이스 공급",
+  "entities": [
+    {
+      "id": "proc_CaseSupplyKO",
+      "name": "케이스 공급 (한글)",
+      "type": "Process",
+      "properties": {
+        "section": "5-5-2",
+        "language": "Korean"
+      }
+    }
+  ],
+  "relations": []
+}

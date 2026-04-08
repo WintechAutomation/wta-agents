@@ -1,0 +1,32 @@
+{
+  "page_id": "9508913261",
+  "title": "WMXMonitor 설치",
+  "entities": [
+    {
+      "id": "tool_WMXMonitor",
+      "name": "WMXMonitor",
+      "type": "Tool",
+      "properties": {
+        "install": "빌드 또는 WMXMonitor/Files/WMXMonitor.zip 압축 해제",
+        "config_file": "Option.ini",
+        "config_path": "빌드폴더/Option.ini",
+        "settings": "Hide Console(콘솔 표시 여부), EnginePath"
+      }
+    },
+    {
+      "id": "proc_WMXMonitorInstall",
+      "name": "WMXMonitor 설치",
+      "type": "Process",
+      "properties": {
+        "steps": "빌드 또는 zip 해제 → Option.ini 복사 → Option.ini 수정"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "source": "proc_WMXMonitorInstall",
+      "target": "tool_WMXMonitor",
+      "type": "USES_TOOL"
+    }
+  ]
+}

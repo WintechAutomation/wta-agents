@@ -1,0 +1,45 @@
+{
+  "page_id": "9508920607",
+  "title": "[PVD 언로딩] 막대 - G1 그리퍼 제품픽업 실패 감지센서",
+  "entities": [
+    {
+      "id": "comp_G1GripperPickSensor",
+      "name": "G1 그리퍼 픽업 실패 감지 센서",
+      "type": "Component",
+      "properties": {
+        "function": "G1 그리퍼 제품 픽업 실패 시 ON → 알람 발생 + 일시정지",
+        "on_success": "센서 OFF → 정상 동작",
+        "position": "막대 끝부분 +2mm 이상에서 감지 설정"
+      }
+    },
+    {
+      "id": "proc_G1GripperSensorSetup",
+      "name": "G1 그리퍼 픽업 센서 위치 조절",
+      "type": "Process",
+      "properties": {
+        "steps": "막대 작업 위치에서 막대 끝 +2mm 이상에서 감지되게 센서/앰프 위치 조정"
+      }
+    },
+    {
+      "id": "issue_G1PickupFail",
+      "name": "G1 그리퍼 픽업 실패 알람",
+      "type": "Issue",
+      "properties": {
+        "trigger": "픽업 실패 시 센서 ON",
+        "result": "알람 발생 + 설비 일시정지"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "source": "proc_G1GripperSensorSetup",
+      "target": "comp_G1GripperPickSensor",
+      "type": "INVOLVES_COMPONENT"
+    },
+    {
+      "source": "issue_G1PickupFail",
+      "target": "proc_G1GripperSensorSetup",
+      "type": "RESOLVED_BY"
+    }
+  ]
+}

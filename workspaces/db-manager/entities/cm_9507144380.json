@@ -1,0 +1,44 @@
+{
+  "page_id": "9507144380",
+  "title": "Laser",
+  "entities": [
+    {
+      "id": "comp_CountXAxisCamera",
+      "name": "COUNT_X축 카메라",
+      "type": "Component",
+      "properties": {
+        "purpose": "각 피더 위치에 제품 확인 (전체 중심 위치)"
+      }
+    },
+    {
+      "id": "comp_FeederOrgCalib",
+      "name": "FD1Org / FD2Org 캘리브레이션",
+      "type": "Component",
+      "properties": {
+        "file": "Calibrationdata.xml",
+        "fields": "FD1Org, FD2Org",
+        "value": "케이스 칸 첫 칸의 X축 픽셀값"
+      }
+    },
+    {
+      "id": "proc_LaserFeederCalib",
+      "name": "레이저 피더 위치 캘리브레이션",
+      "type": "Process",
+      "properties": {
+        "steps": "COUNT_X축 카메라로 피더 중심 확인 → 이미지 저장 → X축 픽셀값 추출 → Calibrationdata.xml FD1/2Org에 입력"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "source": "proc_LaserFeederCalib",
+      "target": "comp_CountXAxisCamera",
+      "type": "INVOLVES_COMPONENT"
+    },
+    {
+      "source": "proc_LaserFeederCalib",
+      "target": "comp_FeederOrgCalib",
+      "type": "INVOLVES_COMPONENT"
+    }
+  ]
+}

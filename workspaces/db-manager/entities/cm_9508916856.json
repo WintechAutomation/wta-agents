@@ -1,0 +1,46 @@
+{
+  "page_id": "9508916856",
+  "title": "WMX - Rotary Motor Index Pulse Homing 기능",
+  "entities": [
+    {
+      "id": "proc_IndexPulseHoming",
+      "name": "Index Pulse Homing (WMX)",
+      "type": "Process",
+      "properties": {
+        "description": "서보/스텝모터 Index(Z상) 신호로 홈센서 없이 원점복귀",
+        "condition": "회전축 구조에서 감속기/풀리배율 없는 모터, 종단 1:1 구조",
+        "param": "Home Type = IndexPulse"
+      }
+    },
+    {
+      "id": "comp_WMXHomingParam",
+      "name": "WMX 홈 파라미터 (IndexPulse)",
+      "type": "Component",
+      "properties": {
+        "home_type": "IndexPulse",
+        "other_params": "Home Direction, Homing Vel., Home Shift Velocity/Accel/Decel/Distance, HS Logic, Multiple Index Pulse, Home Position",
+        "tool": "WMX2Console → Configure Parameters → Home"
+      }
+    },
+    {
+      "id": "comp_ENIConfig",
+      "name": "ENI 설정 (Panasonic Servo)",
+      "type": "Component",
+      "properties": {
+        "note": "파나소닉 서보는 기본적으로 ENI 수정 필요"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "source": "proc_IndexPulseHoming",
+      "target": "comp_WMXHomingParam",
+      "type": "INVOLVES_COMPONENT"
+    },
+    {
+      "source": "proc_IndexPulseHoming",
+      "target": "comp_ENIConfig",
+      "type": "INVOLVES_COMPONENT"
+    }
+  ]
+}

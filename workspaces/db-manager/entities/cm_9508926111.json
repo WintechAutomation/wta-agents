@@ -1,0 +1,16 @@
+{
+  "page_id": "9508926111",
+  "title": "(국문, OKE)- 2-1. 위험 표기 참고 사항",
+  "entities": [
+    {
+      "id": "comp_DangerLabels_OKE",
+      "name": "OKE 설비 위험 표기 라벨",
+      "type": "Component",
+      "properties": {
+        "customer": "OKE",
+        "section": "2-1"
+      }
+    }
+  ],
+  "relations": []
+}

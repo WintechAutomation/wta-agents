@@ -1,0 +1,16 @@
+{
+  "page_id": "9507158261",
+  "title": "5-1-3. 커버 준비",
+  "entities": [
+    {
+      "id": "proc_CoverPrep_5_1_3",
+      "name": "커버 준비 5-1-3",
+      "type": "Process",
+      "properties": {
+        "section": "5-1-3",
+        "steps": "커버 공급 위치 이동 → 도어 열고 커버 공급"
+      }
+    }
+  ],
+  "relations": []
+}

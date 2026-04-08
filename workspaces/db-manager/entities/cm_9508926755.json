@@ -1,0 +1,30 @@
+{
+  "page_id": "9508926755",
+  "title": "(국문, OKE)- 4-2-1-1. 적재설정 - 작업 팔레트 추가",
+  "entities": [
+    {
+      "id": "proc_PalletAddToWork",
+      "name": "작업 팔레트 추가",
+      "type": "Process",
+      "properties": {
+        "section": "4-2-1-1",
+        "steps": "메인→적재설정 선택 → 제품 선택(라벨 정보 확인) → 작업 추가(바코드 리더기 선택 가능) → 수량 입력"
+      }
+    },
+    {
+      "id": "comp_BarcodeReader",
+      "name": "바코드 리더기",
+      "type": "Component",
+      "properties": {
+        "purpose": "적재설정 시 작업 추가"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "source": "proc_PalletAddToWork",
+      "target": "comp_BarcodeReader",
+      "type": "USES_TOOL"
+    }
+  ]
+}

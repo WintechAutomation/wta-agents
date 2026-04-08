@@ -206,15 +206,26 @@ def extract_entities(text: str, title: str) -> dict:
                 'prompt': prompt,
                 'stream': False,
                 'think': False,
-                'options': {'num_predict': 800, 'temperature': 0.1},
+                'options': {'num_predict': 2000, 'temperature': 0.1},
             },
             timeout=90,
         )
         if r.status_code == 200:
             raw = r.json().get('response', '').strip()
+            # JSON 추출 (잘린 경우 entities 배열만이라도 파싱)
             match = re.search(r'\{.*\}', raw, re.DOTALL)
             if match:
-                return json.loads(match.group())
+                try:
+                    return json.loads(match.group())
+                except json.JSONDecodeError:
+                    # 잘린 JSON에서 entities 배열만 추출 시도
+                    ent_match = re.search(r'"entities"\s*:\s*(\[.*?\])', raw, re.DOTALL)
+                    if ent_match:
+                        try:
+                            entities = json.loads(ent_match.group(1))
+                            return {'entities': entities, 'relations': []}
+                        except Exception:
+                            pass
     except Exception as e:
         log.warning(f'엔티티 추출 오류 [{title[:30]}]: {e}')
     return {'entities': [], 'relations': []}

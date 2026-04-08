@@ -1,0 +1,17 @@
+{
+  "page_id": "9508928842",
+  "title": "(국문, OKE)- 5-1-2. 케이스 준비",
+  "entities": [
+    {
+      "id": "proc_CasePrepOKE",
+      "name": "케이스 준비 (OKE)",
+      "type": "Process",
+      "properties": {
+        "section": "5-1-2",
+        "customer": "OKE",
+        "steps": "케이스 공급 위치 이동 → 도어 열고 케이스 공급"
+      }
+    }
+  ],
+  "relations": []
+}

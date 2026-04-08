@@ -1,0 +1,16 @@
+{
+  "page_id": "9507157563",
+  "title": "4-2-9-4. 케이스 관리 - 복사",
+  "entities": [
+    {
+      "id": "proc_CaseCopy",
+      "name": "케이스 복사",
+      "type": "Process",
+      "properties": {
+        "section": "4-2-9-4",
+        "steps": "메인화면 → 케이스 관리 → 복사할 케이스 선택 → 복사 실행"
+      }
+    }
+  ],
+  "relations": []
+}

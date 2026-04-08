@@ -1,0 +1,17 @@
+{
+  "page_id": "9508929676",
+  "title": "(국문, OKE)- 5-4-4. 혼입 적재 티칭",
+  "entities": [
+    {
+      "id": "proc_MixedLoadTeachingOKE",
+      "name": "혼입 적재 티칭 (OKE)",
+      "type": "Process",
+      "properties": {
+        "section": "5-4-4",
+        "customer": "OKE",
+        "entry": "메인화면 → 시스템 설정 → User Option"
+      }
+    }
+  ],
+  "relations": []
+}

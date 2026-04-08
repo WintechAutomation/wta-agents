@@ -1,0 +1,17 @@
+{
+  "page_id": "9508927074",
+  "title": "(국문, OKE)- 4-2-2-3. 제품모델 관리 - 삭제",
+  "entities": [
+    {
+      "id": "proc_ModelDeleteOKE",
+      "name": "제품 모델 삭제 (OKE)",
+      "type": "Process",
+      "properties": {
+        "section": "4-2-2-3",
+        "customer": "OKE",
+        "warning": "삭제된 모델 복원 불가"
+      }
+    }
+  ],
+  "relations": []
+}

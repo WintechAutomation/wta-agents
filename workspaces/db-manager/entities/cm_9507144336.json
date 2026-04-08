@@ -1,0 +1,39 @@
+{
+  "page_id": "9507144336",
+  "title": "Inkjet",
+  "entities": [
+    {
+      "id": "comp_InkjetMarkOrg",
+      "name": "MARK_A_ORG (잉크젯 마킹 위치)",
+      "type": "Component",
+      "properties": {
+        "description": "마킹 시 Laser_Y축 위치 (SIDE_LASER_Y)"
+      }
+    },
+    {
+      "id": "comp_InkjetRetractPos",
+      "name": "MARK_B_ORG (X1 후퇴 위치)",
+      "type": "Component",
+      "properties": {
+        "description": "마킹 후 X1축 후퇴 위치"
+      }
+    },
+    {
+      "id": "comp_InkjetReadyHeight",
+      "name": "MARKING_READY_X1Z (마킹 기준 높이)",
+      "type": "Component",
+      "properties": {
+        "axes": "X1Z, X2Z"
+      }
+    },
+    {
+      "id": "comp_InkjetTriggerPos",
+      "name": "X1 마킹 트리거 위치",
+      "type": "Component",
+      "properties": {
+        "description": "마킹 검사 트리거 위치 (X1축)"
+      }
+    }
+  ],
+  "relations": []
+}

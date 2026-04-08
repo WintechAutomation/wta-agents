@@ -1,0 +1,30 @@
+{
+  "page_id": "9508933694",
+  "title": "Zebra Label Printer Calibration (신형프린터 ZT610)",
+  "entities": [
+    {
+      "id": "equip_ZebraZT610",
+      "name": "Zebra ZT610 라벨 프린터 (신형)",
+      "type": "Equipment",
+      "properties": {
+        "manufacturer": "Zebra",
+        "model": "ZT610"
+      }
+    },
+    {
+      "id": "proc_ZebraZT610Calib",
+      "name": "Zebra ZT610 캘리브레이션",
+      "type": "Process",
+      "properties": {
+        "steps": "홈→도구 → 미디어/리본 보정 → 리본 오른쪽 삽입+일시정지 → 센서보정 완료+리본 원위치+일시정지 → 라벨 계속 제거+일시정지 → 완료"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "source": "proc_ZebraZT610Calib",
+      "target": "equip_ZebraZT610",
+      "type": "MAINTAINS"
+    }
+  ]
+}

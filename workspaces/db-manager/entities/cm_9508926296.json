@@ -1,0 +1,85 @@
+{
+  "page_id": "9508926296",
+  "title": "(국문, OKE)- 3-4. 장비 구조 및 공정도",
+  "entities": [
+    {
+      "id": "comp_CaseUnloadConveyor",
+      "name": "Case Unloading Conveyor Unit (13)",
+      "type": "Component",
+      "properties": {
+        "unit_no": 13,
+        "function": "케이스 취출 컨베이어"
+      }
+    },
+    {
+      "id": "comp_VisionUnit_14_2",
+      "name": "Ink Marking Vision (14-2)",
+      "type": "Component",
+      "properties": {
+        "unit_no": "14-2",
+        "function": "잉크 마킹 비전 검사"
+      }
+    },
+    {
+      "id": "comp_VisionUnit_14_3",
+      "name": "Quantity Detection Vision (14-3)",
+      "type": "Component",
+      "properties": {
+        "unit_no": "14-3",
+        "function": "수량 검출 비전"
+      }
+    },
+    {
+      "id": "comp_InkMarkingUnit",
+      "name": "Ink Marking Unit (15-1)",
+      "type": "Component",
+      "properties": {
+        "unit_no": "15-1"
+      }
+    },
+    {
+      "id": "comp_LaserMarkingUnit",
+      "name": "Laser Marking Unit (15-2)",
+      "type": "Component",
+      "properties": {
+        "unit_no": "15-2"
+      }
+    },
+    {
+      "id": "equip_OKE_ProcessStruct",
+      "name": "OKE 설비 공정 구조도",
+      "type": "Equipment",
+      "properties": {
+        "customer": "OKE",
+        "section": "3-4"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "source": "equip_OKE_ProcessStruct",
+      "target": "comp_CaseUnloadConveyor",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "equip_OKE_ProcessStruct",
+      "target": "comp_VisionUnit_14_2",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "equip_OKE_ProcessStruct",
+      "target": "comp_VisionUnit_14_3",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "equip_OKE_ProcessStruct",
+      "target": "comp_InkMarkingUnit",
+      "type": "USES_COMPONENT"
+    },
+    {
+      "source": "equip_OKE_ProcessStruct",
+      "target": "comp_LaserMarkingUnit",
+      "type": "USES_COMPONENT"
+    }
+  ]
+}

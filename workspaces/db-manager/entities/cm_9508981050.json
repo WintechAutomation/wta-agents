@@ -1,0 +1,45 @@
+{
+  "page_id": "9508981050",
+  "title": "#티칭 UI 정리",
+  "entities": [
+    {
+      "id": "proc_TeachingUICheck",
+      "name": "티칭 UI 정리 점검",
+      "type": "Process",
+      "properties": {
+        "description": "티칭 화면 명칭/위치 올바름 확인 및 수정",
+        "file": "WintechAutomation\\WMI\\Data\\Language\frm_SelectTeachingUI.xml"
+      }
+    },
+    {
+      "id": "comp_TeachingUIXML",
+      "name": "frm_SelectTeachingUI.xml",
+      "type": "Component",
+      "properties": {
+        "path": "WintechAutomation\\WMI\\Data\\Language\frm_SelectTeachingUI.xml",
+        "edit": "Location 값 수정으로 UI 위치 조정"
+      }
+    },
+    {
+      "id": "comp_TeachingOffsetMap",
+      "name": "티칭 축-부위 매핑",
+      "type": "Component",
+      "properties": {
+        "XYZ_areas": "상펀치, 하펀치, 디버링(air blow), 저울 A/B",
+        "XYZR_areas": "프레스, 디버링(Brush), 카본 플레이트"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "source": "proc_TeachingUICheck",
+      "target": "comp_TeachingUIXML",
+      "type": "INVOLVES_COMPONENT"
+    },
+    {
+      "source": "proc_TeachingUICheck",
+      "target": "comp_TeachingOffsetMap",
+      "type": "INVOLVES_COMPONENT"
+    }
+  ]
+}

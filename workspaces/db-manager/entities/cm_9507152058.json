@@ -1,0 +1,16 @@
+{
+  "page_id": "9507152058",
+  "title": "-(한글 버전)- 4-2-9-4. 케이스 관리 - 복사",
+  "entities": [
+    {
+      "id": "proc_CaseCopyKO",
+      "name": "케이스 복사 (한글)",
+      "type": "Process",
+      "properties": {
+        "section": "4-2-9-4",
+        "language": "Korean"
+      }
+    }
+  ],
+  "relations": []
+}

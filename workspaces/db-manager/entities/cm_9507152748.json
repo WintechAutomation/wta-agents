@@ -1,0 +1,39 @@
+{
+  "page_id": "9507152748",
+  "title": "-(한글 버전)- 5-1-7. 그리퍼 종류",
+  "entities": [
+    {
+      "id": "comp_GripperByHole",
+      "name": "제품 홀 전용 그리퍼 (Ø3.5~Ø5.5)",
+      "type": "Component",
+      "properties": {
+        "spec": "Ø3.5~Ø5.5 전용"
+      }
+    },
+    {
+      "id": "comp_GripperMGT",
+      "name": "MGT 전용 그리퍼",
+      "type": "Component",
+      "properties": {
+        "type": "MGT"
+      }
+    },
+    {
+      "id": "comp_GripperHead1",
+      "name": "Head1 전용 그리퍼",
+      "type": "Component",
+      "properties": {
+        "type": "Head1"
+      }
+    },
+    {
+      "id": "comp_GripperHead2",
+      "name": "Head2 전용 그리퍼",
+      "type": "Component",
+      "properties": {
+        "type": "Head2"
+      }
+    }
+  ],
+  "relations": []
+}
