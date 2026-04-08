@@ -335,6 +335,42 @@
       "updated_at": "2026-04-08 10:10:51",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-admin-agent-e7ca4d",
+      "agent": "admin-agent",
+      "task": "부서장 요청: 메일함에서 인사 관련 메일 중 기구설계 이병혁 신규입사 관련 이메일 내용 확인해줘.",
+      "message": "부서장 요청: 메일함에서 인사 관련 메일 중 기구설계 이병혁 신규입사 관련 이메일 내용 확인해줘.\n\nIMAP으로 인사/채용/신규입사 관련 메일을 검색하고, 이병혁 관련 내용을 찾아서 보고해줘.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 10:23:17",
+      "updated_at": "2026-04-08 10:23:17",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-admin-agent-e34cf1",
+      "agent": "admin-agent",
+      "task": "부서장 승인: 이병혁 Jira/Confluence 온보딩 진행해줘.",
+      "message": "부서장 승인: 이병혁 Jira/Confluence 온보딩 진행해줘.\n\n신규입사자 정보:\n- 이름: 이병혁\n- 이메일: bhlee@wta.kr\n- 부서: 기구설계HIM\n- 입사일: 2026-04-08\n\nAtlassian 계정 생성 + 기구설계HIM 그룹 배정 진행.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 10:25:19",
+      "updated_at": "2026-04-08 10:25:19",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-admin-agent-ca1d4b",
+      "agent": "admin-agent",
+      "task": "부서장 지시: 온보딩 스킬에 NAS 계정 생성도 추가 예정.",
+      "message": "부서장 지시: 온보딩 스킬에 NAS 계정 생성도 추가 예정.\n\nMES 시스템설정 메뉴에 \"NAS 관리\" 기능이 이미 구현되어 있다고 함. 해당 기능 확인해서 NAS 계정 생성에 필요한 정보(API, 필드 등)를 파악해줘.\n\n확인 사항:\n1. MES 시스템설정 > NAS 관리 페이지의 기능 확인 (API 엔드포인트, 필드 구성)\n2. NAS 계정 생성 시 필요한 입력값 (ID, 비밀번호, 폴더 권한, 할당 용량 등)\n3. 온보딩 스킬에 NAS 단계 추가하려면 어떤 정보가 필요한지 정리\n\ndev-agent나 crafter에게 MES 코드 확인이 필요하면 요청해줘.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 10:27:46",
+      "updated_at": "2026-04-08 10:27:46",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }
