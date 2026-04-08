@@ -45,12 +45,18 @@ EQUIP_TYPES = {
 }
 
 def extract_equip_types(pjt_names):
-    """프로젝트명 목록에서 장비유형 추출"""
+    """프로젝트명 목록에서 장비유형 추출
+    주의: 'Cell' 포함 프로젝트는 프레스 유형에서 제외
+    """
     found = set()
     for pjt in pjt_names:
         if not pjt:
             continue
+        is_cell = 'Cell' in pjt or 'cell' in pjt or 'CELL' in pjt
         for etype, keywords in EQUIP_TYPES.items():
+            # Cell 프로젝트는 프레스 분류 제외
+            if etype == '프레스' and is_cell:
+                continue
             for kw in keywords:
                 if kw in pjt:
                     found.add(etype)

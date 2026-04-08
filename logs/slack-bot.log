@@ -26796,3 +26796,21 @@ https://agent.mes-wta.com/장비유형_확인필요_품목
 2026-04-08 19:36:25,786 INFO [수신] #docs 김근형: MCDHT3520BA1 이거 아크시스 프레스 뭐임? → docs-agent
 2026-04-08 19:36:26,255 INFO 직접 전송 완료 → docs-agent:5614
 2026-04-08 19:36:57,482 INFO [응답시간] docs-agent #docs: 31초
+2026-04-08 19:36:57,482 INFO [슬랙 발신] #docs ← docs-agent: MCDHT3520BA1 (Panasonic A5B ServoDriver) 상세:
+
+· 현재고: 44개 / 금
+2026-04-08 19:41:57,119 INFO [수신] #docs 김근형: 저거 아크시스 프레스에 등록된거 다시 확인해봐 내가 본 발주이력에는 없음 → docs-agent
+2026-04-08 19:41:57,683 INFO 직접 전송 완료 → docs-agent:5614
+2026-04-08 19:42:18,355 INFO [응답시간] docs-agent #docs: 20초
+2026-04-08 19:42:18,356 INFO [슬랙 발신] #docs ← docs-agent: MCDHT3520BA1 발주이력 확인 중입니다. db-manager에게 ERP 원본 데이터 조회 요청했습니다
+2026-04-08 19:43:36,639 INFO [수신] #docs 김근형: MADHT1505BA1 이건 최근 3년 이력보면 프로젝트번호가 전부 cs로 시작하는게 보임 이런경우 사용 예정 제외 제외하기전 나한테 리스트로  → docs-agent
+2026-04-08 19:43:37,059 INFO 직접 전송 완료 → docs-agent:5614
+2026-04-08 19:44:07,791 INFO [응답시간] docs-agent #docs: 30초
+2026-04-08 19:44:07,791 INFO [슬랙 발신] #docs ← docs-agent: 네, 알겠습니다.
+
+1. MCDHT3520BA1 발주이력 — ERP 원본 확인 중
+2. CS 전용 품목 리스
+2026-04-08 19:47:44,538 INFO [수신] #docs 김근형: EZI-EC-42M-A 이거 cell 프레스 사용이력 또 프레스 적용되어 있네;; → docs-agent
+2026-04-08 19:47:44,974 INFO 직접 전송 완료 → docs-agent:5614
+2026-04-08 19:48:48,954 INFO [응답시간] docs-agent #docs: 1분 3초
+2026-04-08 19:48:48,954 INFO [슬랙 발신] #docs ← docs-agent: 확인했습니다. EZI-EC-42M-A는 cell 프레스 발주이력 때문에 '프레스'가 장비유형에 포함되어 있습
