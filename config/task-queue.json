@@ -181,18 +181,6 @@
       "completed_at": null
     },
     {
-      "id": "tq-crafter-15e765",
-      "agent": "crafter",
-      "task": "부서장 피드백 - 긴급:",
-      "message": "부서장 피드백 - 긴급:\n\n도면 그리기가 여전히 안 된다고 합니다. 수정했다고 했는데 외부에서 확인 시 여전히 동작 안 함.\n\n직접 Cloudflare 터널 URL로 접속해서 테스트해봐:\n1. 프로젝트 생성\n2. 시트 클릭\n3. 심볼 탭 전환\n4. 심볼 드래그앤드롭으로 캔버스에 배치\n\n실제 외부 브라우저에서 위 흐름이 되는지 확인하고, 안 되면 원인 파악해서 수정해줘. HMR이 제대로 반영 안 됐을 수 있으니 dev 서버 완전 재시작도 고려해.",
-      "status": "pending",
-      "priority": "medium",
-      "created_at": "2026-04-08 09:06:57",
-      "updated_at": "2026-04-08 09:06:57",
-      "last_report_at": null,
-      "completed_at": null
-    },
-    {
       "id": "tq-db-manager-f6d47b",
       "agent": "db-manager",
       "task": "docs-agent 경유, 김근형님 긴급 지적건. 데이터 불일치 확인 필요.",
@@ -277,18 +265,6 @@
       "completed_at": null
     },
     {
-      "id": "tq-db-manager-0e1ed3",
-      "agent": "db-manager",
-      "task": "docs-agent 경유, 김근형님 요청.",
-      "message": "docs-agent 경유, 김근형님 요청.\n\n기존 erp_inventory_full_v3.json에 MDA100T(입고검수) 데이터 추가하여 v4 생성:\n\n추가 필드:\n- has_receipt: 2024-01-01 이후 입고검수 유무\n- last_receipt_dt: 최근 입고검수일 (ACPT_DT)\n- receipt_count: 입고검수 건수\n- total_receipt_qty: 총 입고수량 합계\n- total_bad_qty: 총 불량수량 합계\n- receipt_pjt_name: 최근 입고 프로젝트명\n- all_time_last_receipt_dt: 전체기간 최근 입고검수일\n\n출력: erp_inventory_full_v4.json → docs-agent에 전달해줘.",
-      "status": "pending",
-      "priority": "medium",
-      "created_at": "2026-04-08 09:51:40",
-      "updated_at": "2026-04-08 09:51:40",
-      "last_report_at": null,
-      "completed_at": null
-    },
-    {
       "id": "tq-crafter-3fbce7",
       "agent": "crafter",
       "task": "부서장 지시: wta-agents 깃허브 README.md 최신화해줘.",
@@ -297,6 +273,54 @@
       "priority": "medium",
       "created_at": "2026-04-08 09:55:21",
       "updated_at": "2026-04-08 09:55:21",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-admin-agent-2ff3d1",
+      "agent": "admin-agent",
+      "task": "부서장 요청: 영업참조 메일 최근 10개 리스트 확인해줘.",
+      "message": "부서장 요청: 영업참조 메일 최근 10개 리스트 확인해줘.\n\nIMAP(gw.wta.kr:143)으로 부서장 메일함에서 영업 관련 참조 메일 최근 10건의 제목/발신자/날짜를 조회하여 보고해줘.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 10:03:03",
+      "updated_at": "2026-04-08 10:03:03",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-design-agent-c444e9",
+      "agent": "design-agent",
+      "task": "현재 진행 중인 작업 현황 보고해줘. 부서장 확인 요청.",
+      "message": "현재 진행 중인 작업 현황 보고해줘. 부서장 확인 요청.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 10:05:49",
+      "updated_at": "2026-04-08 10:05:49",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-design-agent-61c439",
+      "agent": "design-agent",
+      "task": "부서장 확인 요청. 현재 진행 중인 작업 현황 즉시 보고해줘.",
+      "message": "부서장 확인 요청. 현재 진행 중인 작업 현황 즉시 보고해줘.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 10:06:46",
+      "updated_at": "2026-04-08 10:06:46",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-admin-agent-ec9f26",
+      "agent": "admin-agent",
+      "task": "긴급: 192.168.0.220 design-agent 통신 문제 원격 점검 요청.",
+      "message": "긴급: 192.168.0.220 design-agent 통신 문제 원격 점검 요청.\n\n현상: 양쪽이 서로 오프라인으로 인식. 포트 5615는 응답하지만 agent-channel 통신 안 됨.\n\n확인 사항:\n1. 192.168.0.220에 SSH 접속 가능한지\n2. design-agent 프로세스 상태\n3. agent-channel MCP 설정에서 메인 서버 IP가 정확한지\n4. 방화벽 문제 여부\n\n가능한 범위에서 원격 점검하고 보고해줘.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 10:08:50",
+      "updated_at": "2026-04-08 10:08:50",
       "last_report_at": null,
       "completed_at": null
     }

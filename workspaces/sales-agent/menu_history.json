@@ -23,5 +23,10 @@
     "date": "2026-04-07",
     "restaurant": "언양",
     "weekday": "화"
+  },
+  {
+    "date": "2026-04-08",
+    "restaurant": "대머리",
+    "weekday": "수"
   }
 ]
