@@ -286,46 +286,6 @@ export default function OverviewPage() {
         </div>
       </div>
 
-      {/* ════ 에이전트 모니터 ════ */}
-      <SectionTitle>🖥️ 에이전트 모니터</SectionTitle>
-
-      {/* 에이전트 상태 그리드 */}
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-        {Object.values(AGENT_PROFILES).map((profile) => {
-          const status  = agents.find((a) => a.agent_id === profile.id)
-          const online  = status?.online ?? false
-          const secAgo  = secondsSince(lastActivity[profile.id])
-          const working = secAgo < 30
-          return (
-            <div key={profile.id}
-              className={`flex items-center gap-3 p-3 rounded-xl border ${
-                online
-                  ? working ? 'bg-blue-950 border-blue-700' : 'bg-gray-800 border-gray-700'
-                  : 'bg-gray-900 border-gray-800 opacity-50'
-              }`}
-            >
-              <div className="relative flex-shrink-0">
-                <span className="text-xl">{profile.emoji}</span>
-                <span className={`absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 rounded-full border-2 border-gray-900 ${
-                  working ? 'bg-blue-400 animate-pulse' : online ? 'bg-green-400' : 'bg-gray-600'
-                }`} />
-              </div>
-              <div className="min-w-0 flex-1">
-                <div className="text-sm font-medium text-white truncate">{profile.name}</div>
-                <div className={`text-xs ${working ? 'text-blue-400' : online ? 'text-green-400' : 'text-gray-600'}`}>
-                  {working ? '작업 중' : online ? '대기' : '오프라인'}
-                </div>
-              </div>
-              {lastActivity[profile.id] && (
-                <div className="text-xs text-gray-600 flex-shrink-0">
-                  {toolStats.by_agent[profile.id] ?? 0}
-                </div>
-              )}
-            </div>
-          )
-        })}
-      </div>
-
       {/* 에이전트별/도구별 도구 호출 차트 */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div className="bg-gray-900 rounded-2xl border border-gray-800 p-4">

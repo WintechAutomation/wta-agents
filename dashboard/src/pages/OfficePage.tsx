@@ -99,9 +99,11 @@ export default function OfficePage() {
   const stats = useAgentStore((s) => s.stats)
   const messages = useAgentStore((s) => s.messages)
   const toolStats = useAgentStore((s) => s.toolStats)
+  const toolLogs = useAgentStore((s) => s.toolLogs)
 
   const [selectedAgent, setSelectedAgent] = useState<string | null>(null)
   const [pulseLines, setPulseLines] = useState<Set<string>>(new Set())
+  const [showPanel, setShowPanel] = useState(false)
   const svgRef = useRef<SVGSVGElement>(null)
 
   const onlineSet = useMemo(
@@ -111,6 +113,23 @@ export default function OfficePage() {
   const onlineCount = onlineSet.size
   const offlineCount = stats.total_agents - stats.online_count
   const totalToolCalls = Object.values(toolStats.by_agent).reduce((s, n) => s + n, 0)
+
+  // 작업중 판정: 마지막 도구 사용이 30초 이내
+  const workingSet = useMemo(() => {
+    const lastAct: Record<string, string> = {}
+    for (const log of toolLogs) {
+      if (!lastAct[log.agent_id] || log.timestamp > lastAct[log.agent_id]) {
+        lastAct[log.agent_id] = log.timestamp
+      }
+    }
+    const now = Date.now()
+    const set = new Set<string>()
+    for (const [id, ts] of Object.entries(lastAct)) {
+      const elapsed = (now - new Date(ts.replace(' ', 'T')).getTime()) / 1000
+      if (elapsed < 30) set.add(id)
+    }
+    return set
+  }, [toolLogs])
 
   // SVG 크기
   const SVG_W = 800
@@ -135,7 +154,7 @@ export default function OfficePage() {
         next.delete(lineKey)
         return next
       })
-    }, 2000)
+    }, 5000)
     return () => clearTimeout(timer)
   }, [messages])
 
@@ -151,9 +170,9 @@ export default function OfficePage() {
     : null
 
   return (
-    <div className="p-4 min-h-screen" style={{ background: '#0F172A' }}>
+    <div className="px-2 py-3 min-h-screen" style={{ background: '#0F172A' }}>
       {/* 헤더 */}
-      <div className="mb-4">
+      <div className="mb-3 px-1">
         <h1 className="text-lg font-bold text-slate-100">Agent Control Center</h1>
         <p className="text-slate-500 text-sm mt-0.5">
           WTA Multi-Agent System — {Object.keys(AGENT_PROFILES).length} agents
@@ -161,7 +180,7 @@ export default function OfficePage() {
       </div>
 
       {/* KPI 바 */}
-      <div className="flex flex-wrap gap-3 mb-4">
+      <div className="flex flex-wrap gap-3 mb-3 px-1">
         <KpiCard label="ONLINE" value={onlineCount} color="#22c55e" />
         <KpiCard label="OFFLINE" value={offlineCount} color="#64748b" />
         <KpiCard label="TOOL CALLS" value={totalToolCalls} color="#3b82f6" />
@@ -169,13 +188,27 @@ export default function OfficePage() {
         <KpiCard label="MESSAGES" value={stats.total_messages} color="#f59e0b" />
       </div>
 
-      <div className="flex gap-4 flex-col xl:flex-row">
-        {/* 메인 관제 맵 */}
+      <div className="relative" style={{ minHeight: 'calc(100vh - 160px)' }}>
+        {/* 패널 토글 버튼 */}
+        <button
+          onClick={() => setShowPanel(!showPanel)}
+          className="absolute top-2 right-2 z-30 px-2 py-1 rounded-lg text-xs font-mono border"
+          style={{
+            background: 'rgba(30,41,59,0.9)',
+            borderColor: 'rgba(71,85,105,0.5)',
+            color: '#94a3b8',
+          }}
+        >
+          {showPanel ? '✕ 닫기' : '☰ 패널'}
+        </button>
+
+        {/* 메인 관제 맵 (전체 너비) */}
         <div
-          className="flex-1 rounded-xl border overflow-hidden relative"
+          className="w-full rounded-xl border overflow-hidden relative"
           style={{
             borderColor: 'rgba(51,65,85,0.5)',
             background: 'linear-gradient(180deg, #0F172A 0%, #1E293B 100%)',
+            minHeight: 'calc(100vh - 160px)',
           }}
         >
           {/* 그리드 패턴 배경 */}
@@ -194,7 +227,7 @@ export default function OfficePage() {
             ref={svgRef}
             viewBox={`0 0 ${SVG_W} ${SVG_H}`}
             className="w-full h-auto relative z-10"
-            style={{ maxHeight: '70vh' }}
+            style={{ minHeight: '500px' }}
           >
             <defs>
               {/* 글로우 필터 */}
@@ -334,9 +367,26 @@ export default function OfficePage() {
                 cx={CX + 26}
                 cy={CY - 26}
                 r={5}
-                fill={onlineSet.has('MAX') ? '#22c55e' : '#475569'}
+                fill={workingSet.has('MAX') ? '#60a5fa' : onlineSet.has('MAX') ? '#22c55e' : '#475569'}
                 filter={onlineSet.has('MAX') ? 'url(#glow-green)' : undefined}
-              />
+              >
+                {workingSet.has('MAX') && (
+                  <animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite" />
+                )}
+              </circle>
+              {workingSet.has('MAX') && (
+                <text
+                  x={CX}
+                  y={CY + 28}
+                  textAnchor="middle"
+                  fontSize="7"
+                  fill="#60a5fa"
+                  fontFamily="ui-monospace, monospace"
+                  fontWeight="600"
+                >
+                  작업 중
+                </text>
+              )}
             </g>
 
             {/* 에이전트 노드 */}
@@ -405,17 +455,39 @@ export default function OfficePage() {
                     cx={node.x + 17}
                     cy={node.y - 17}
                     r={4}
-                    fill={online ? '#22c55e' : '#475569'}
+                    fill={workingSet.has(node.id) ? '#60a5fa' : online ? '#22c55e' : '#475569'}
                     filter={online ? 'url(#glow-green)' : undefined}
-                  />
+                  >
+                    {workingSet.has(node.id) && (
+                      <animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite" />
+                    )}
+                  </circle>
+                  {/* 작업중 표시 */}
+                  {workingSet.has(node.id) && (
+                    <text
+                      x={node.x}
+                      y={node.y + 24}
+                      textAnchor="middle"
+                      fontSize="6"
+                      fill="#60a5fa"
+                      fontFamily="ui-monospace, monospace"
+                      fontWeight="600"
+                    >
+                      작업 중
+                    </text>
+                  )}
                 </g>
               )
             })}
           </svg>
         </div>
 
-        {/* 우측 패널 */}
-        <div className="xl:w-80 flex flex-col gap-4">
+        {/* 오버레이 패널 */}
+        {showPanel && (
+        <div
+          className="absolute top-10 right-2 z-20 w-72 flex flex-col gap-3 max-h-[calc(100%-60px)] overflow-y-auto rounded-xl p-3"
+          style={{ background: 'rgba(15,23,42,0.95)', border: '1px solid rgba(51,65,85,0.6)', backdropFilter: 'blur(8px)' }}
+        >
           {/* 선택된 에이전트 정보 */}
           {selectedAgent && selectedProfile && (
             <div
@@ -519,32 +591,36 @@ export default function OfficePage() {
             </div>
           </div>
         </div>
+        )}
       </div>
 
       {/* 하단 에이전트 상태 그리드 */}
       <div className="mt-4 grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-2">
         {Object.entries(AGENT_PROFILES).map(([id, p]) => {
           const online = onlineSet.has(id)
+          const working = workingSet.has(id)
           const color = AGENT_COLORS[id] || '#64748b'
           return (
             <div
               key={id}
               className="flex items-center gap-1.5 text-xs px-2 py-1.5 rounded-lg border cursor-pointer"
               style={{
-                borderColor: online ? `${color}40` : 'rgba(51,65,85,0.3)',
-                background: online ? `${color}0a` : 'transparent',
+                borderColor: working ? '#3b82f640' : online ? `${color}40` : 'rgba(51,65,85,0.3)',
+                background: working ? '#1e3a5f18' : online ? `${color}0a` : 'transparent',
                 color: online ? '#e2e8f0' : '#475569',
               }}
-              onClick={() => setSelectedAgent(selectedAgent === id ? null : id)}
+              onClick={() => { setSelectedAgent(selectedAgent === id ? null : id); setShowPanel(true) }}
             >
               <span
                 className="w-1.5 h-1.5 rounded-full flex-shrink-0"
                 style={{
-                  background: online ? '#22c55e' : '#475569',
-                  boxShadow: online ? '0 0 6px #22c55e' : 'none',
+                  background: working ? '#60a5fa' : online ? '#22c55e' : '#475569',
+                  boxShadow: working ? '0 0 6px #60a5fa' : online ? '0 0 6px #22c55e' : 'none',
+                  animation: working ? 'pulse 1.5s infinite' : 'none',
                 }}
               />
               {p.emoji} {p.name}
+              {working && <span className="text-blue-400 text-[10px] ml-auto">작업중</span>}
             </div>
           )
         })}

@@ -1,0 +1,23 @@
+{
+  "page_id": "9509145780",
+  "title": "4. エラー措置マニュアル (미쯔비시 CVD 일본어)",
+  "entities": [
+    {
+      "id": "proc_ErrorHandleCVD1JP",
+      "name": "에러 조치 매뉴얼 미쯔비시 CVD (일본어)",
+      "type": "Process",
+      "properties": {
+        "language": "Japanese",
+        "steps": [
+          "장비 정지",
+          "원점복귀 실행",
+          "그리퍼가 제품 픽업 상태 시 제품 취출",
+          "화면 팔레트 적재 수량과 실제 수량 확인 및 일치시킴",
+          "화면 트레이 수량과 실제 적재 수량 확인 및 일치시킴",
+          "운전 재개"
+        ]
+      }
+    }
+  ],
+  "relations": []
+}

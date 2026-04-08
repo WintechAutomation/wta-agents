@@ -99,56 +99,56 @@
       "properties": {}
     },
     {
-      "id": "issue_001",
+      "id": "iss_001",
       "name": "툴 파손",
       "type": "Issue",
       "properties": {}
     },
     {
-      "id": "issue_002",
+      "id": "iss_002",
       "name": "로봇 파손",
       "type": "Issue",
       "properties": {}
     },
     {
-      "id": "issue_003",
+      "id": "iss_003",
       "name": "툴 처짐",
       "type": "Issue",
       "properties": {}
     },
     {
-      "id": "issue_004",
+      "id": "iss_004",
       "name": "툴 들림 현상",
       "type": "Issue",
       "properties": {}
     },
     {
-      "id": "issue_005",
+      "id": "iss_005",
       "name": "평행 오차",
       "type": "Issue",
       "properties": {}
     },
     {
-      "id": "issue_006",
+      "id": "iss_006",
       "name": "핀 갈리는 소리",
       "type": "Issue",
       "properties": {}
     },
     {
-      "id": "issue_007",
+      "id": "iss_007",
       "name": "위치 불일치",
       "type": "Issue",
       "properties": {}
     },
     {
-      "id": "person_001",
+      "id": "per_001",
       "name": "제작팀",
       "type": "Person",
       "properties": {}
     },
     {
-      "id": "manual_001",
-      "name": "툴 위치 설정하기 및 툴 교체 테스트",
+      "id": "man_001",
+      "name": "툴 위치 설정 및 교체 매뉴얼",
       "type": "Manual",
       "properties": {}
     }

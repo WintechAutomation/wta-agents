@@ -1,5 +1,7 @@
 """
-추출된 엔티티/관계 JSON → Neo4j(Phase4_CM) 적재
+추출된 엔티티/관계 JSON → Neo4j 적재
+라벨: 엔티티 타입 라벨만 사용 (Phase4_CM 제거)
+출처: 노드 속성 source='CM'으로 구분
 사용: python neo4j-load-entities.py <entities_json_file>
 """
 import sys, json, re
@@ -43,10 +45,10 @@ def load_batch(pages: list):
                 props = {k: v for k, v in (ent.get('properties') or {}).items()
                          if v is not None and v != ''}
                 props.update({'_id': safe_id, '_page_id': page_id, '_space': 'CM',
-                              '_title': title[:100]})
+                              '_title': title[:100], 'source': 'CM'})
                 try:
                     s.run(
-                        f"MERGE (n:Phase4_CM:{etype} {{_id: $_id}}) "
+                        f"MERGE (n:{etype} {{_id: $_id}}) "
                         f"SET n += $props, n.name = $name",
                         _id=safe_id, props=props, name=ent.get('name', orig_id)
                     )
@@ -61,7 +63,7 @@ def load_batch(pages: list):
                     continue
                 try:
                     s.run(
-                        f"MATCH (a:Phase4_CM {{_id: $src}}), (b:Phase4_CM {{_id: $tgt}}) "
+                        f"MATCH (a {{_id: $src}}), (b {{_id: $tgt}}) "
                         f"MERGE (a)-[r:{rtype}]->(b)",
                         src=src, tgt=tgt
                     )

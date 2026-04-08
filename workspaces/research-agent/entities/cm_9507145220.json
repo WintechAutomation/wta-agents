@@ -155,12 +155,12 @@
       "type": "HAS_SUBPROCESS"
     },
     {
-      "source": "proc_001",
+      "source": "proc_009",
       "target": "comp_003",
       "type": "USES_COMPONENT"
     },
     {
-      "source": "proc_001",
+      "source": "proc_010",
       "target": "comp_004",
       "type": "USES_COMPONENT"
     }

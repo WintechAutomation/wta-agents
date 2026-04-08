@@ -1,0 +1,21 @@
+{
+  "page_id": "9507152334",
+  "title": "-(한글 버전)- 5-1-1. 팔레트 준비",
+  "entities": [
+    {
+      "id": "proc_PalletPrepKO",
+      "name": "팔레트 준비 (한글 5-1-1)",
+      "type": "Process",
+      "properties": {
+        "section": "5-1-1",
+        "language": "Korean",
+        "steps": [
+          "팔레트 공급 위치로 이동",
+          "팔레트를 표시 위치에 공급 (최대 15단)"
+        ],
+        "max_stack": "15단"
+      }
+    }
+  ],
+  "relations": []
+}

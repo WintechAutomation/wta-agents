@@ -1,0 +1,24 @@
+{
+  "page_id": "9507152660",
+  "title": "-(한글 버전)- 5-1-6. 잉크젯 마킹기 준비",
+  "entities": [
+    {
+      "id": "proc_InkjetMarkingPrepKO",
+      "name": "잉크젯 마킹기 준비 (한글 5-1-6)",
+      "type": "Process",
+      "properties": {
+        "section": "5-1-6",
+        "language": "Korean",
+        "steps": [
+          "마킹기 위치로 이동",
+          "도어 오픈",
+          "마킹기 전원 버튼 ON",
+          "재생 버튼으로 분사 시퀀스 시작",
+          "Make-Up/Ink Cartridge 교체 필요 시 도어 오픈 후 교체"
+        ],
+        "power_off": "전원 버튼 5초 눌러 OFF"
+      }
+    }
+  ],
+  "relations": []
+}

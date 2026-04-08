@@ -1,0 +1,195 @@
+[
+  {
+    "page_id": "9507151580",
+    "title": "-(한글 버전)- 4-2-8-4. 케이스에서의 카메라와 그리퍼간 위치 보정",
+    "entities": [
+      {
+        "id": "proc_CaseCamGripperCalibKO",
+        "name": "케이스 카메라-그리퍼 위치 보정 (한글 4-2-8-4)",
+        "type": "Process",
+        "properties": {
+          "section": "4-2-8-4",
+          "language": "Korean",
+          "purpose": "케이스에서 카메라-그리퍼 위치 교정",
+          "required_tools": "캘리브레이션용 지그 2개, 캘리브레이션용 플레이트",
+          "steps": [
+            "장비 원점 복귀",
+            "케이스 공급 (바닥면이 보이도록 뒤집어 삽입)",
+            "HMI 캘리브레이션 버튼 클릭",
+            "HEAD를 HEAD1으로 설정",
+            "START 버튼으로 TP 실행 (정지 상태에서만 표시)"
+          ]
+        }
+      }
+    ],
+    "relations": []
+  },
+  {
+    "page_id": "9507157085",
+    "title": "4-2-8-4. 케이스에서의 카메라와 그리퍼간 위치 보정",
+    "entities": [
+      {
+        "id": "proc_CaseCamGripperCalib_4_2_8_4",
+        "name": "케이스 카메라-그리퍼 위치 보정 (4-2-8-4)",
+        "type": "Process",
+        "properties": {
+          "section": "4-2-8-4",
+          "purpose": "케이스에서 카메라-그리퍼 위치 교정",
+          "required_tools": "캘리브레이션용 지그 2개, 캘리브레이션용 플레이트",
+          "steps": [
+            "장비 원점 복귀",
+            "케이스 공급 (바닥면이 보이도록 뒤집어 삽입)",
+            "HMI 캘리브레이션 버튼 클릭",
+            "HEAD를 HEAD1으로 설정",
+            "START 버튼으로 TP 실행"
+          ]
+        }
+      }
+    ],
+    "relations": []
+  },
+  {
+    "page_id": "9507151733",
+    "title": "-(한글 버전)- 4-2-8-5. 캘리브레이션 비전 티칭 방법",
+    "entities": [
+      {
+        "id": "proc_CalibVisionTeachKO",
+        "name": "캘리브레이션 비전 티칭 (한글 4-2-8-5)",
+        "type": "Process",
+        "properties": {
+          "section": "4-2-8-5",
+          "language": "Korean",
+          "steps": [
+            "조명 조정 후 패턴 클릭 → 패턴1 전환",
+            "[R] (Round) 클릭",
+            "생성된 하늘색 원을 드래그하여 지그보다 조금 크게 조정",
+            "원점 클릭 → X,Y축('ㄴ' 모양)이 원 가운데 있는지 확인",
+            "등록 버튼 누른 후 이미지 생성 확인",
+            "검출 버튼 → Score 점수 표시 확인",
+            "저장"
+          ]
+        }
+      }
+    ],
+    "relations": []
+  },
+  {
+    "page_id": "9507157238",
+    "title": "4-2-8-5. 캘리브레이션 비전 티칭 방법",
+    "entities": [
+      {
+        "id": "proc_CalibVisionTeach_4_2_8_5",
+        "name": "캘리브레이션 비전 티칭 (4-2-8-5)",
+        "type": "Process",
+        "properties": {
+          "section": "4-2-8-5",
+          "steps": [
+            "조명 조정 → [패턴] 클릭 → 패턴1 전환",
+            "[R] (Round) 클릭",
+            "하늘색 원 드래그하여 지그보다 조금 크게 조정",
+            "원점 클릭 → X,Y축('ㄴ' 모양) 원 가운데 확인",
+            "등록 버튼 → 이미지 생성 확인",
+            "검출 버튼 → Score 표시 확인",
+            "저장"
+          ]
+        }
+      }
+    ],
+    "relations": []
+  },
+  {
+    "page_id": "9507151851",
+    "title": "-(한글 버전)- 4-2-9. 케이스 관리",
+    "entities": [
+      {
+        "id": "comp_CaseManagementScreenKO",
+        "name": "HMI 케이스 관리 화면 (한글 4-2-9)",
+        "type": "Component",
+        "properties": {
+          "section": "4-2-9",
+          "language": "Korean",
+          "description": "작업할 케이스 추가/수정/삭제/설정 화면",
+          "access": "메인화면 우측 케이스 관리 선택",
+          "ui_1": "케이스 목록 — 추가된 케이스 리스트",
+          "ui_2": "추가/삭제/복사/저장 버튼",
+          "param_1": "파일 이름 — 팔레트 이름 지정",
+          "param_2": "케이스 가로 길이",
+          "param_3": "케이스 세로 길이",
+          "param_4": "케이스 두께 (바닥면~윗면)",
+          "param_5": "적재 공간 가로"
+        }
+      }
+    ],
+    "relations": []
+  },
+  {
+    "page_id": "9507161177",
+    "title": "4-2-9. 케이스 관리",
+    "entities": [
+      {
+        "id": "comp_CaseManagementScreen_4_2_9b",
+        "name": "HMI 케이스 관리 화면 (4-2-9, 추가버전)",
+        "type": "Component",
+        "properties": {
+          "section": "4-2-9",
+          "description": "케이스 추가/수정/삭제/설정",
+          "access": "메인화면 우측 케이스 관리 선택",
+          "ui_1": "케이스 목록",
+          "ui_2": "추가/삭제/복사/저장",
+          "param_1": "파일 이름",
+          "param_2": "케이스 가로 길이",
+          "param_3": "케이스 세로 길이",
+          "param_4": "케이스 두께",
+          "param_5": "적재 공간 가로"
+        }
+      }
+    ],
+    "relations": []
+  },
+  {
+    "page_id": "9507157356",
+    "title": "4-2-9. 케이스 관리",
+    "entities": [
+      {
+        "id": "comp_CaseManagementScreen_4_2_9",
+        "name": "HMI 케이스 관리 화면 (4-2-9)",
+        "type": "Component",
+        "properties": {
+          "section": "4-2-9",
+          "description": "케이스 추가/수정/삭제/설정",
+          "access": "메인화면 우측 케이스 관리 선택",
+          "ui_1": "케이스 목록",
+          "ui_2": "추가/삭제/복사/저장",
+          "param_1": "파일 이름",
+          "param_2": "케이스 가로 길이",
+          "param_3": "케이스 세로 길이",
+          "param_4": "케이스 두께",
+          "param_5": "적재 공간 가로"
+        }
+      }
+    ],
+    "relations": []
+  },
+  {
+    "page_id": "9507151888",
+    "title": "-(한글 버전)- 4-2-9-1. 케이스 관리 - 추가",
+    "entities": [
+      {
+        "id": "proc_CaseAddKO",
+        "name": "케이스 관리 - 추가 (한글 4-2-9-1)",
+        "type": "Process",
+        "properties": {
+          "section": "4-2-9-1",
+          "language": "Korean",
+          "steps": [
+            "메인화면에서 케이스 관리 선택",
+            "케이스 추가",
+            "이름 및 파라미터 설정 (케이스 원점 설정은 4-2-9-5 참고)",
+            "저장"
+          ]
+        }
+      }
+    ],
+    "relations": []
+  }
+]

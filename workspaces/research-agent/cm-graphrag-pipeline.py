@@ -249,14 +249,15 @@ def load_to_neo4j(driver, page_id: str, title: str, extracted: dict):
             orig_id = ent.get('id', '')
             if not orig_id:
                 continue
-            safe_id = f"cm4_{page_id}_{re.sub(r'[^a-zA-Z0-9_]', '_', orig_id)}"
+            safe_id = f"cm_{page_id}_{re.sub(r'[^a-zA-Z0-9_]', '_', orig_id)}"
             id_map[orig_id] = safe_id
             props = {k: v for k, v in (ent.get('properties') or {}).items()
                      if v is not None and v != ''}
-            props.update({'_id': safe_id, '_page_id': page_id, '_space': 'CM', '_title': title})
+            props.update({'_id': safe_id, '_page_id': page_id, '_title': title,
+                          'source': 'CM'})
             try:
                 s.run(
-                    f"MERGE (n:Phase4_CM:{ent_type} {{_id: $_id}}) "
+                    f"MERGE (n:{ent_type} {{_id: $_id}}) "
                     f"SET n += $props, n.name = $name",
                     _id=safe_id, props=props, name=ent.get('name', orig_id)
                 )
@@ -272,7 +273,7 @@ def load_to_neo4j(driver, page_id: str, title: str, extracted: dict):
                 continue
             try:
                 s.run(
-                    f"MATCH (a:Phase4_CM {{_id: $src}}), (b:Phase4_CM {{_id: $tgt}}) "
+                    f"MATCH (a {{_id: $src}}), (b {{_id: $tgt}}) "
                     f"MERGE (a)-[r:{rtype}]->(b)",
                     src=src, tgt=tgt
                 )

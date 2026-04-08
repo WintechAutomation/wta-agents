@@ -1,0 +1,20 @@
+{
+  "page_id": "9507153913",
+  "title": "-(한글 버전)- 7-3. 보수 부품",
+  "entities": [
+    {
+      "id": "comp_SpareParts_KO",
+      "name": "보수 부품 목록 (한글 7-3)",
+      "type": "Component",
+      "properties": {
+        "section": "7-3",
+        "language": "Korean",
+        "reject_conveyor_belt": "HTBN230S5M-100 (Misumi)",
+        "reject_belt2": "TT12BK-60W-2070L (우양피엘텍)",
+        "insert_transfer_belt": "RPP8-L3300-W30(OPEN) x2 (우양피엘텍)",
+        "gripper_cylinder": "CHM08BC03C x12 (Pisco)"
+      }
+    }
+  ],
+  "relations": []
+}

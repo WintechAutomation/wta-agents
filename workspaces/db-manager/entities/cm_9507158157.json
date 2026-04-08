@@ -1,0 +1,20 @@
+{
+  "page_id": "9507158157",
+  "title": "5-1-1. 팔레트 준비",
+  "entities": [
+    {
+      "id": "proc_PalletPrep_5_1_1",
+      "name": "팔레트 준비 (5-1-1)",
+      "type": "Process",
+      "properties": {
+        "section": "5-1-1",
+        "steps": [
+          "팔레트 공급 위치로 이동",
+          "팔레트를 표시 위치에 공급 (최대 15단)"
+        ],
+        "max_stack": "15단"
+      }
+    }
+  ],
+  "relations": []
+}

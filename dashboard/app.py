@@ -78,7 +78,7 @@ def _load_agent_defs() -> dict:
     return {
         aid: {"name": a["name"], "emoji": a["emoji"], "role": a["role"]}
         for aid, a in raw.items()
-        if isinstance(a, dict) and "name" in a
+        if isinstance(a, dict) and "name" in a and a.get("enabled", True)
     }
 
 AGENT_DEFS = _load_agent_defs()

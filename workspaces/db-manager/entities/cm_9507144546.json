@@ -1,0 +1,20 @@
+{
+  "page_id": "9507144546",
+  "title": "CaseAssy",
+  "entities": [
+    {
+      "id": "comp_CaseAssyPositions",
+      "name": "케이스 조립 작업 위치 파라미터",
+      "type": "Component",
+      "properties": {
+        "FD1RailCasePickUP": "바퀴가 케이스 센터랑 맞는 위치",
+        "FD2RailCasePickUPEND_CASE_TRS": "바퀴가 케이스 센터랑 맞는 위치",
+        "RailCasePickupZ": "그립 축 부분이 바닥면과 닿을 정도의 높이",
+        "END_CASE_TRS": "커버 조립부 바닥 옆면과 클립이 반듯하게 만나는 위치 (케이스 크기 무관)",
+        "AssemblyPutdownZ": "클램프로 잡은 케이스가 커버 조립부 바닥에 완전 밀착되는 높이",
+        "stage_height": "케이스 커버 나오는 높이로 스테이지 조절"
+      }
+    }
+  ],
+  "relations": []
+}

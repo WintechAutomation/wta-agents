@@ -1,0 +1,20 @@
+{
+  "page_id": "9507153758",
+  "title": "-(한글 버전)- 7-1. 보수점검",
+  "entities": [
+    {
+      "id": "proc_MaintenanceCheckKO2",
+      "name": "보수점검 (한글 7-1)",
+      "type": "Process",
+      "properties": {
+        "section": "7-1",
+        "language": "Korean",
+        "description": "부품 및 자재의 장기 트러블 방지를 위한 보수점검 및 소모품 교환 설명",
+        "check_types": "상시 점검 / 월별 정기 / 년별 정기",
+        "check_body": "외관(상처/파손/변형 없을 것) — 상시",
+        "check_noise": "기계적 이상 소음 없을 것 — 상시"
+      }
+    }
+  ],
+  "relations": []
+}

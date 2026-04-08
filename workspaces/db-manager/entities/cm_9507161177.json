@@ -1,0 +1,24 @@
+{
+  "page_id": "9507161177",
+  "title": "4-2-9. 케이스 관리",
+  "entities": [
+    {
+      "id": "comp_CaseManagementScreen_4_2_9b",
+      "name": "HMI 케이스 관리 화면 (4-2-9, 추가버전)",
+      "type": "Component",
+      "properties": {
+        "section": "4-2-9",
+        "description": "케이스 추가/수정/삭제/설정",
+        "access": "메인화면 우측 케이스 관리 선택",
+        "ui_1": "케이스 목록",
+        "ui_2": "추가/삭제/복사/저장",
+        "param_1": "파일 이름",
+        "param_2": "케이스 가로 길이",
+        "param_3": "케이스 세로 길이",
+        "param_4": "케이스 두께",
+        "param_5": "적재 공간 가로"
+      }
+    }
+  ],
+  "relations": []
+}

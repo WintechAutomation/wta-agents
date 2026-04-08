@@ -1,0 +1,18 @@
+{
+  "page_id": "9507159591",
+  "title": "7-2. 보수 점검 요령",
+  "entities": [
+    {
+      "id": "proc_MaintenanceTips_7_2",
+      "name": "보수 점검 요령 (7-2)",
+      "type": "Process",
+      "properties": {
+        "section": "7-2",
+        "regulator_filter": "Air 필터 불순물 발생 시 Drain Cock 눌러 제거 또는 탈착 후 제거",
+        "filter_replace": "필터 엘리먼트 교환 주기: 사용 후 2년 또는 압력 강하 발생 시",
+        "note": "보수 부품은 7-3 보수부품 참조"
+      }
+    }
+  ],
+  "relations": []
+}

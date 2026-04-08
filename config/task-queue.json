@@ -1487,6 +1487,102 @@
       "updated_at": "2026-04-08 22:37:51",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-db-manager-0d753a",
+      "agent": "db-manager",
+      "task": "Neo4j 라벨 정리 요청 (부서장 지적).",
+      "message": "Neo4j 라벨 정리 요청 (부서장 지적).\n\n현재 문제: Phase2, Phase3, PhaseOllama, Phase4_CM 같은 파이프라인 단계 라벨이 실제 데이터에 노출됨. 이건 내부 처리 단계일 뿐 의미 있는 카테고리가 아님.\n\n수정 방향:\n1. 기존 Phase2/Phase3/PhaseOllama/Phase4_CM 라벨 제거 → 엔티티 타입 라벨만 남기기 (Equipment, Component, Process, Issue, Person, Product 등)\n2. 출처 구분이 필요하면 노드 속성(property)으로 source: \"CM\", source: \"UM\" 등으로 처리\n3. 현재 진행 중인 CM 작업도 Phase4_CM 라벨 대신 엔티티 타입 라벨 + source 속성 방식으로 변경\n\n우선순위:\n- 지금 진행 중인 CM 추출 작업의 라벨 방식부터 수정\n- 기존 데이터는 나중에 일괄 마이그레이션\n\n진행 중인 배치 작업에 바로 반영해줘.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 22:40:49",
+      "updated_at": "2026-04-08 22:40:49",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-research-agent-0945ad",
+      "agent": "research-agent",
+      "task": "Neo4j 라벨 방식 변경 요청 (부서장 지적).",
+      "message": "Neo4j 라벨 방식 변경 요청 (부서장 지적).\n\n현재 Phase4_CM 라벨을 사용 중인데, 이건 파이프라인 단계 라벨이라 실제 데이터에 노출되면 안 됨.\n\n변경: Phase4_CM 라벨 대신 → 엔티티 타입 라벨(Equipment, Component, Process 등) + 노드 속성에 source: \"CM\" 추가\n\n지금 진행 중인 CM 추출 작업부터 바로 반영해줘.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 22:40:58",
+      "updated_at": "2026-04-08 22:40:58",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-admin-agent-9abb96",
+      "agent": "admin-agent",
+      "task": "config/agents.json에서 manufacturing-agent 항목 제거해줘. 이미 삭제된 에이전트인데 config에 남아있어서 대시보드에 17/18로 표시됨. 17/1",
+      "message": "config/agents.json에서 manufacturing-agent 항목 제거해줘. 이미 삭제된 에이전트인데 config에 남아있어서 대시보드에 17/18로 표시됨. 17/17이 맞음.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 22:41:05",
+      "updated_at": "2026-04-08 22:41:05",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-crafter-48f4b7",
+      "agent": "crafter",
+      "task": "에이전트 오피스 페이지 레이아웃 수정 요청.",
+      "message": "에이전트 오피스 페이지 레이아웃 수정 요청.\n\n현재: 양쪽 여백이 있고 전체 페이지를 사용하지 않는 구조\n변경: 전체 화면(full-width)을 사용하는 레이아웃으로 변경\n\n- max-width 제한 제거\n- 좌우 여백 최소화 (padding만 약간)\n- 관제센터답게 화면 전체를 채우는 느낌\n\n빌드 확인 후 보고해줘.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 22:41:40",
+      "updated_at": "2026-04-08 22:41:40",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-db-manager-ef5be7",
+      "agent": "db-manager",
+      "task": "긴급: research-agent가 Neo4j에서 Phase4_CM 라벨 노드를 일괄 삭제했는데, 네가 적재한 210건 분량도 함께 삭제됨.",
+      "message": "긴급: research-agent가 Neo4j에서 Phase4_CM 라벨 노드를 일괄 삭제했는데, 네가 적재한 210건 분량도 함께 삭제됨.\n\n엔티티 JSON 파일(workspaces/db-manager/entities/cm_*.json)은 남아있으니, 새 라벨 방식(타입 라벨 + source='CM')으로 기존 완료분을 Neo4j에 재적재해줘. 엔티티 추출은 다시 안 해도 되고, Neo4j 로드만 다시 하면 됨.\n\n재적재 후 나머지 미완료 건도 계속 진행해줘.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 22:42:29",
+      "updated_at": "2026-04-08 22:42:29",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-crafter-69620a",
+      "agent": "crafter",
+      "task": "에이전트 오피스 추가 수정: 실시간 통신 애니메이션 지속 시간을 현재 2초에서 5초로 늘려줘. 부서장 피드백.",
+      "message": "에이전트 오피스 추가 수정: 실시간 통신 애니메이션 지속 시간을 현재 2초에서 5초로 늘려줘. 부서장 피드백.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 22:42:39",
+      "updated_at": "2026-04-08 22:42:39",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-crafter-b2e01b",
+      "agent": "crafter",
+      "task": "대시보드 수정 2건 요청 (부서장 지시):",
+      "message": "대시보드 수정 2건 요청 (부서장 지시):\n\n1. 시스템 개요 페이지(OverviewPage.tsx): 에이전트별 작업중 상태 표시 부분 삭제\n2. 에이전트 오피스 페이지(OfficePage.tsx): 각 에이전트 노드에 현재 작업중 상태를 표시하도록 추가\n\n기존 agentStore에서 작업 상태 데이터를 가져오는 로직은 그대로 활용하되, 표시 위치만 시스템개요→에이전트오피스로 이동.\n\n빌드 확인 후 보고해줘.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 22:44:43",
+      "updated_at": "2026-04-08 22:44:43",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-crafter-19fb66",
+      "agent": "crafter",
+      "task": "부서장이 여전히 전체 페이지를 쓰지 않는다고 지적. 스크린샷 보니 관제 맵이 좌측에 몰리고 우측 패널(상세정보/부서범례/메시지로그)이 공간을 많이 차지함.",
+      "message": "부서장이 여전히 전체 페이지를 쓰지 않는다고 지적. 스크린샷 보니 관제 맵이 좌측에 몰리고 우측 패널(상세정보/부서범례/메시지로그)이 공간을 많이 차지함.\n\n수정 방향:\n1. 우측 패널을 하단으로 이동하거나, 관제 맵 위에 오버레이로 변경\n2. 관제 맵(SVG)이 가용 너비 전체를 사용하도록 확장\n3. 또는 우측 패널을 접을 수 있는 토글 방식으로 변경 (기본은 접힌 상태)\n4. 핵심: 관제센터 맵이 화면 전체를 꽉 채우는 느낌\n\n빌드 확인 후 보고.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 22:46:06",
+      "updated_at": "2026-04-08 22:46:06",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }

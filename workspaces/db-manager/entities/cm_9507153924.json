@@ -1,0 +1,17 @@
+{
+  "page_id": "9507153924",
+  "title": "한국야금 포장 5호기 사용자 메뉴얼",
+  "entities": [
+    {
+      "id": "manual_KoriaMetalPkg5",
+      "name": "한국야금 포장 5호기 사용자 메뉴얼",
+      "type": "Manual",
+      "properties": {
+        "customer": "한국야금",
+        "equipment": "포장 5호기",
+        "description": "한국야금 포장 5호기 사용자 메뉴얼 목차 페이지"
+      }
+    }
+  ],
+  "relations": []
+}

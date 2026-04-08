@@ -1,0 +1,16 @@
+{
+  "page_id": "9507158715",
+  "title": "5-4. 티칭 작업",
+  "entities": [
+    {
+      "id": "proc_TeachingWork_5_4",
+      "name": "티칭 작업 (5-4)",
+      "type": "Process",
+      "properties": {
+        "section": "5-4",
+        "description": "제품에 따라 Vision 검출 설정 및 위치 조정 설정 진행"
+      }
+    }
+  ],
+  "relations": []
+}

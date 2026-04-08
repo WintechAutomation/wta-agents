@@ -1,0 +1,20 @@
+{
+  "page_id": "9508981510",
+  "title": "AGV 물류 설정",
+  "entities": [
+    {
+      "id": "proc_AGVLogisticsSetup",
+      "name": "AGV 물류 설정",
+      "type": "Process",
+      "properties": {
+        "config_file": "WMI/Data/Systemdata.xml",
+        "ELEVATOR_ORG_L": "원점 0 위치 (언로딩 위치)",
+        "AGV_ELEVATOR_ORG_ULO": "0",
+        "agv_sinter_extract": "피더 밀었을 때 엘리베이터가 취출 제일 아래층 바닥에 닿는 위치",
+        "clamp_note": "클램프 유닛이 축이 아니므로 피더 진입 간 간섭 없도록 세팅 필요",
+        "caution": "피더 진입 시 판 긁지 않게 세팅; 취출 간 던지는 부분 있으면 0 처리"
+      }
+    }
+  ],
+  "relations": []
+}

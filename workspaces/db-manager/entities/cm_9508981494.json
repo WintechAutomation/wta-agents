@@ -1,0 +1,15 @@
+{
+  "page_id": "9508981494",
+  "title": "AGV",
+  "entities": [
+    {
+      "id": "equip_AGV_Overview",
+      "name": "AGV (자동 운반 장치) 개요",
+      "type": "Equipment",
+      "properties": {
+        "description": "AGV 장비 개요 페이지"
+      }
+    }
+  ],
+  "relations": []
+}
