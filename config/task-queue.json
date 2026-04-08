@@ -263,6 +263,42 @@
       "updated_at": "2026-04-08 09:47:58",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-crafter-736f39",
+      "agent": "crafter",
+      "task": "부서장 승인: wELEC Phase 2 진행.",
+      "message": "부서장 승인: wELEC Phase 2 진행.\n\nPhase 2: EPLAN 데이터 임포트 (PLAN.md 기준 4주)\n\n주요 목표:\n- EPLAN 프로젝트 파일(.edb) 파싱 또는 XML/CSV 내보내기 임포트\n- EPLAN 심볼 매핑 → wELEC IEC 심볼\n- 기존 도면 데이터(배선, 부품번호, 크로스레퍼런스) 변환\n- 프로젝트 단위 일괄 임포트\n\nPLAN.md의 Phase 2 상세 내용 참고해서 진행해줘. 진행 상황 수시 보고 부탁.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 09:50:33",
+      "updated_at": "2026-04-08 09:50:33",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-db-manager-0e1ed3",
+      "agent": "db-manager",
+      "task": "docs-agent 경유, 김근형님 요청.",
+      "message": "docs-agent 경유, 김근형님 요청.\n\n기존 erp_inventory_full_v3.json에 MDA100T(입고검수) 데이터 추가하여 v4 생성:\n\n추가 필드:\n- has_receipt: 2024-01-01 이후 입고검수 유무\n- last_receipt_dt: 최근 입고검수일 (ACPT_DT)\n- receipt_count: 입고검수 건수\n- total_receipt_qty: 총 입고수량 합계\n- total_bad_qty: 총 불량수량 합계\n- receipt_pjt_name: 최근 입고 프로젝트명\n- all_time_last_receipt_dt: 전체기간 최근 입고검수일\n\n출력: erp_inventory_full_v4.json → docs-agent에 전달해줘.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 09:51:40",
+      "updated_at": "2026-04-08 09:51:40",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-crafter-3fbce7",
+      "agent": "crafter",
+      "task": "부서장 지시: wta-agents 깃허브 README.md 최신화해줘.",
+      "message": "부서장 지시: wta-agents 깃허브 README.md 최신화해줘.\n\n현재 프로젝트 상태를 반영하여 업데이트:\n- 에이전트 16명 전원 소개 (MAX, crafter, dev-agent, db-manager, cs-agent, sales-agent, admin-agent, nc-manager, qa-agent, issue-manager, docs-agent, slack-bot, schedule-agent, control-agent, design-agent, research-agent)\n- 각 에이전트 역할/이모지\n- 시스템 구성 (Claude Code 기반, 텔레그램/슬랙 통신, MCP, Jira/Confluence 연동)\n- 기술 스택\n- 대시보드 (agent.mes-wta.com)\n- 프로젝트 구조 간략\n\nC:/MES/wta-agents/README.md 파일 업데이트해줘.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-08 09:55:21",
+      "updated_at": "2026-04-08 09:55:21",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }
