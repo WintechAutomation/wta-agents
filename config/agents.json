@@ -504,7 +504,7 @@
     "model": null,
     "rank": "사원",
     "port": 5620,
-    "host": "182.224.6.147",
+    "host": "localhost",
     "room": "dev",
     "color": "#a855f7",
     "barColor": "#a855f7",

@@ -74,32 +74,34 @@ def send_via_relay(target: str, message: str) -> str:
 
 class AgentHandler(BaseHTTPRequestHandler):
     """HTTP handler for agent-channel P2P protocol."""
+    protocol_version = "HTTP/1.1"
 
     def log_message(self, format, *args):
         # suppress default access log
         pass
 
+    def _json_response(self, status: int, data: dict):
+        body = json.dumps(data).encode("utf-8")
+        self.send_response(status)
+        self.send_header("Content-Type", "application/json")
+        self.send_header("Content-Length", str(len(body)))
+        self.end_headers()
+        self.wfile.write(body)
+
     def do_GET(self):
         if self.path == "/ping":
-            self.send_response(200)
-            self.send_header("Content-Type", "application/json")
-            self.end_headers()
-            self.wfile.write(json.dumps({
+            self._json_response(200, {
                 "agent": AGENT_ID,
                 "status": "online",
                 "ts": now_kst(),
-            }).encode())
+            })
             return
 
         if self.path == "/inbox":
-            # Drain inbox (for polling)
             with inbox_lock:
                 msgs = list(inbox)
                 inbox.clear()
-            self.send_response(200)
-            self.send_header("Content-Type", "application/json")
-            self.end_headers()
-            self.wfile.write(json.dumps({"messages": msgs}).encode())
+            self._json_response(200, {"messages": msgs})
             return
 
         self.send_response(404)
@@ -128,37 +130,26 @@ class AgentHandler(BaseHTTPRequestHandler):
                     "ts": data.get("ts", now_kst()),
                 })
 
-            self.send_response(200)
-            self.send_header("Content-Type", "application/json")
-            self.end_headers()
-            self.wfile.write(json.dumps({"ok": True}).encode())
+            self._json_response(200, {"ok": True})
             return
 
         if self.path == "/send":
-            # Send message to another agent via relay
             length = int(self.headers.get("Content-Length", 0))
             body = self.rfile.read(length)
             try:
                 data = json.loads(body)
             except json.JSONDecodeError:
-                self.send_response(400)
-                self.end_headers()
-                self.wfile.write(b'{"error":"invalid json"}')
+                self._json_response(400, {"error": "invalid json"})
                 return
 
             target = data.get("to", "")
             message = data.get("message", "")
             if not target or not message:
-                self.send_response(400)
-                self.end_headers()
-                self.wfile.write(b'{"error":"to and message required"}')
+                self._json_response(400, {"error": "to and message required"})
                 return
 
             result = send_via_relay(target, message)
-            self.send_response(200)
-            self.send_header("Content-Type", "application/json")
-            self.end_headers()
-            self.wfile.write(json.dumps({"ok": True, "result": result}).encode())
+            self._json_response(200, {"ok": True, "result": result})
             return
 
         self.send_response(404)
