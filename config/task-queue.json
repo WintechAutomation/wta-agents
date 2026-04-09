@@ -3143,6 +3143,54 @@
       "updated_at": "2026-04-10 07:55:59",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-crafter-0aa837",
+      "agent": "crafter",
+      "task": "gemma-4-31b-it 로딩 완료됐어? 부서장이 확인 중이야. 현재 상태 즉시 보고해줘.",
+      "message": "gemma-4-31b-it 로딩 완료됐어? 부서장이 확인 중이야. 현재 상태 즉시 보고해줘.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-10 08:13:08",
+      "updated_at": "2026-04-10 08:13:08",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-crafter-398cbb",
+      "agent": "crafter",
+      "task": "부서장 추가 지시: 외부 LLM 서버(182.224.6.147)에 agent-channel 통신 구성해줘.",
+      "message": "부서장 추가 지시: 외부 LLM 서버(182.224.6.147)에 agent-channel 통신 구성해줘.\n\n**상황:**\n- 외부 서버에 Claude Code가 이미 설치/사용 중\n- SSH 접속 가능 (182.224.6.147:2222, 키 인증)\n- agent-channel MCP 허브 연결만 구성하면 됨\n\n**필요 작업:**\n1. 메인 서버의 agent-channel 허브가 외부 IP 수신 가능한지 확인 (현재 localhost만이면 바인딩 변경)\n2. 외부 서버의 Claude Code에 agent-channel MCP 서버 설정 추가\n3. 새 에이전트 ID 등록 (예: llm-agent)\n4. 통신 테스트\n\ngemma-4-31b 로딩 완료 후 이것도 진행해줘.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-10 08:17:25",
+      "updated_at": "2026-04-10 08:17:25",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-crafter-fb2b2f",
+      "agent": "crafter",
+      "task": "추가 제약사항: 회사 방화벽으로 외부→내부 포트 오픈 불가.",
+      "message": "추가 제약사항: 회사 방화벽으로 외부→내부 포트 오픈 불가.\n\n즉, 외부 LLM 서버(182.224.6.147)에서 회사 내부 서버로 직접 접속 안 됨.\n반대로 회사→외부는 SSH(2222) 등 가능.\n\n대안 검토해줘:\n1. SSH 리버스 터널: 회사에서 외부 서버로 SSH 접속 시 리버스 포워딩 (-R) 으로 agent-channel 허브 포트를 외부 서버 localhost에 매핑\n2. Cloudflare Tunnel 활용 (이미 agent.mes-wta.com 운영 중)\n3. 기타 방안\n\n가장 안정적이고 간단한 방법으로 진행해줘.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-10 08:18:21",
+      "updated_at": "2026-04-10 08:18:21",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-crafter-756ba1",
+      "agent": "crafter",
+      "task": "부서장 결정: Cloudflare Tunnel 방식으로 진행해.",
+      "message": "부서장 결정: Cloudflare Tunnel 방식으로 진행해.\n\n회사 내부 agent-channel 허브를 Cloudflare Tunnel로 노출하고, 외부 LLM 서버에서 해당 Cloudflare URL로 접속하는 구조.\n기존 agent.mes-wta.com 도메인 활용 가능하면 서브 경로나 서브도메인으로 구성해줘.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-10 08:19:21",
+      "updated_at": "2026-04-10 08:19:21",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }
