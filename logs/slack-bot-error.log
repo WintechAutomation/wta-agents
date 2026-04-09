@@ -523,3 +523,7 @@ Failed to load resource: the server responded  → docs-agent
 [slack-bot] 20:20:34 직접 전송 완료 → docs-agent:5614
 [slack-bot] 20:28:12 [수신] #docs 조한종: MCA210T_발주현황_1년.json 이파일로 ERP_현재고_구매진행_전체.html 페이지에 데이터 매핑해줘 → docs-agent
 [slack-bot] 20:28:13 직접 전송 완료 → docs-agent:5614
+[slack-bot] 20:36:28 [응답시간] docs-agent #docs: 8분 15초
+[slack-bot] 20:36:28 [슬랙 발신] #docs ← docs-agent: MCA210T 발주이력 매핑 완료했습니다.
+
+\u2022 MCA210T_발주현황_1년.json (29,855건) → 
