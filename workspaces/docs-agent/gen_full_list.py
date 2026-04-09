@@ -177,7 +177,7 @@ for i, row in enumerate(data):
 multi_equip_items = set()
 for row in data:
     equip = row[9]
-    if isinstance(equip, list) and len(equip) >= 3:
+    if isinstance(equip, list) and len(equip) >= 2:
         multi_equip_items.add(row[1])
 print(f'다수 장비 범용 품목 (JS 필터링 제외): {len(multi_equip_items)}건')
 
