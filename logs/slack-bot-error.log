@@ -519,3 +519,7 @@ Failed to load resource: the server responded  → docs-agent
 서버가 `reports/김근형/파일명.html` 1단계까지만 서
 [slack-bot] 20:18:11 [수신] #docs 김근형: 아 메뉴얼 파일 아님 저거 현재고 리스트임.. → docs-agent
 [slack-bot] 20:18:11 직접 전송 완료 → docs-agent:5614
+[slack-bot] 20:20:34 [수신] #docs 김근형: MCA210T_1month.csv 파일로  ERP_현재고_구매진행_전체.html 페이지에 데이터 매핑해줘 → docs-agent
+[slack-bot] 20:20:34 직접 전송 완료 → docs-agent:5614
+[slack-bot] 20:28:12 [수신] #docs 조한종: MCA210T_발주현황_1년.json 이파일로 ERP_현재고_구매진행_전체.html 페이지에 데이터 매핑해줘 → docs-agent
+[slack-bot] 20:28:13 직접 전송 완료 → docs-agent:5614

@@ -28239,3 +28239,7 @@ Failed to load resource: the server responded  → docs-agent
 서버가 `reports/김근형/파일명.html` 1단계까지만 서
 2026-04-09 20:18:11,022 INFO [수신] #docs 김근형: 아 메뉴얼 파일 아님 저거 현재고 리스트임.. → docs-agent
 2026-04-09 20:18:11,717 INFO 직접 전송 완료 → docs-agent:5614
+2026-04-09 20:20:34,011 INFO [수신] #docs 김근형: MCA210T_1month.csv 파일로  ERP_현재고_구매진행_전체.html 페이지에 데이터 매핑해줘 → docs-agent
+2026-04-09 20:20:34,418 INFO 직접 전송 완료 → docs-agent:5614
+2026-04-09 20:28:12,676 INFO [수신] #docs 조한종: MCA210T_발주현황_1년.json 이파일로 ERP_현재고_구매진행_전체.html 페이지에 데이터 매핑해줘 → docs-agent
+2026-04-09 20:28:13,110 INFO 직접 전송 완료 → docs-agent:5614
