@@ -21774,3 +21774,14 @@
 {"agent_id": "cs-agent", "tool_name": "mcp__agent-channel__wait_for_channel", "timestamp": "2026-04-09 15:25:51"}
 {"agent_id": "cs-agent", "tool_name": "mcp__agent-channel__wait_for_channel", "timestamp": "2026-04-09 15:27:56"}
 {"agent_id": "crafter", "tool_name": "mcp__agent-channel__wait_for_channel", "timestamp": "2026-04-09 15:29:41"}
+{"agent_id": "cs-agent", "tool_name": "mcp__agent-channel__wait_for_channel", "timestamp": "2026-04-09 15:30:00"}
+{"agent_id": "cs-agent", "tool_name": "mcp__agent-channel__wait_for_channel", "timestamp": "2026-04-09 15:32:06"}
+{"agent_id": "control-agent", "tool_name": "mcp__agent-channel__send_message", "timestamp": "2026-04-09 15:32:58"}
+{"agent_id": "cs-agent", "tool_name": "mcp__agent-channel__wait_for_channel", "timestamp": "2026-04-09 15:33:56"}
+{"agent_id": "cs-agent", "tool_name": "mcp__agent-channel__send_message", "timestamp": "2026-04-09 15:34:07"}
+{"agent_id": "cs-agent", "tool_name": "mcp__agent-channel__send_message", "timestamp": "2026-04-09 15:34:14"}
+{"agent_id": "cs-agent", "tool_name": "mcp__agent-channel__wait_for_channel", "timestamp": "2026-04-09 15:34:21"}
+{"agent_id": "crafter", "tool_name": "mcp__agent-channel__wait_for_channel", "timestamp": "2026-04-09 15:34:48"}
+{"agent_id": "cs-agent", "tool_name": "mcp__agent-channel__wait_for_channel", "timestamp": "2026-04-09 15:36:27"}
+{"agent_id": "cs-agent", "tool_name": "mcp__agent-channel__wait_for_channel", "timestamp": "2026-04-09 15:38:31"}
+{"agent_id": "crafter", "tool_name": "mcp__agent-channel__wait_for_channel", "timestamp": "2026-04-09 15:39:54"}
