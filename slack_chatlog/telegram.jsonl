@@ -139,3 +139,7 @@
 {"ts": "2026-04-09 10:08:48", "direction": "outbound", "user": "MAX", "text": "원인: cs-wta.com 웹챗 → slack-bot → cs-agent 경로에서 cs-sessions.jsonl 기록 로직이 없었음. 4/5 이후 데이터 누락.\n\n수정: slack-bot에 웹챗 세션 기록 함수 추가 완료.\n\n반영하려면 slack-bot 재시작이 필요합니다. 재시작할까요?"}
 {"ts": "2026-04-09 10:08:59", "direction": "inbound", "user": "boss", "text": "재시작해"}
 {"ts": "2026-04-09 10:09:21", "direction": "outbound", "user": "MAX", "text": "admin-agent에게 slack-bot 재시작 지시했습니다."}
+{"ts": "2026-04-09 10:10:39", "direction": "inbound", "user": "boss", "text": "슬랙봇은 conEmu 로 키지말고 별도 터미널로 켜"}
+{"ts": "2026-04-09 10:11:05", "direction": "outbound", "user": "MAX", "text": "ConEmu 아닌 별도 터미널로 실행하도록 재지시했습니다."}
+{"ts": "2026-04-09 10:11:16", "direction": "outbound", "user": "MAX", "text": "✅ slack-bot 재시작 완료. 별도 터미널 백그라운드 프로세스로 실행 중 (1개, 중복 없음). cs-wta.com 웹챗 세션이 이제 대시보드에 기록됩니다."}
+{"ts": "2026-04-09 10:19:42", "direction": "inbound", "user": "boss", "text": "야 cs-agent 한테 지금 cs 질문 답변하는 파이프라인이 뭔지 보고하라고해"}
