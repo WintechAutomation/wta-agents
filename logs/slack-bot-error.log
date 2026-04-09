@@ -46,3 +46,57 @@
 [slack-bot] 11:19:47 [api/chat/stream] webchat-req 전송 → cs-agent: 5108206d
 [slack-bot] 11:19:53 [webchat-raw] 5108206d chunk(10b, pipes=0): '조회 중입니다...'
 [slack-bot] 11:19:53 [webchat-push] webchat-chunk 5108206d (10b) OK
+[slack-bot] 11:20:22 [수신] #제어-지건승2 지건승: <@U0AP5B0F71C> 안녕 F랑 E를 대충 너가 생각하는방식이 어떤지 이미지로 좀 보여 줄 수 있나 ? → control-agent
+[slack-bot] 11:20:22 직접 전송 완료 → control-agent:5616
+[slack-bot] 11:20:25 [webchat-raw] 5108206d chunk(418b, pipes=15): '## 미쓰비시 CRnQ/CRnD \u2014 H1043 에러\n\n| 항목 | 내용 |\n|------|------|\n| **에러 코드** | H1043 |\n| **에러명** | 3번 축 엔코더 초기 통신 이상 |\n| **영문명** | Encoder init communication error |\n\n**원인**: 서보 앰프 3번 축과 엔코더 간 초기 통신에 실패한 경우 발생합니다.\n\n**해결 방법**:\n1. 전원을 OFF → 재투입\n2. 재발하는 경우 미쓰비시 전기 구입처에 문의\n\n**참고**: H104n 계열은 축별 에러 코드입니다.\n- H1041 = 1번 축, H1042 = 2번 축, **H1043 = 3번 축**\n- H1044~H1048 = 4~8번 축\n\n**출처**: BFP-A8588-B (CRnQ/CRnD 컨트롤'
+[slack-bot] 11:20:25 [webchat-push] webchat-chunk 5108206d (418b) OK
+[slack-bot] 11:20:36 [webchat-push] webchat-done 5108206d (0b) OK
+[slack-bot] 11:20:36 [api/chat/stream] 완료: 5108206d
+[slack-bot] 11:21:09 [응답시간] control-agent #제어-지건승2: 46초
+[slack-bot] 11:21:09 [슬랙 발신] #제어-지건승2 ← control-agent: 안녕하세요 지건승님! F랑 E가 어떤 맥락의 F, E를 말씀하시는 건지 좀 더 설명해주실 수 있을까요? (예
+[slack-bot] 11:21:54 [api/chat/stream] init: 2de2c606 - 매뉴얼 도
+[slack-bot] 11:21:54 직접 전송 완료 → cs-agent:5602
+[slack-bot] 11:21:54 [api/chat/stream] webchat-req 전송 → cs-agent: 2de2c606
+[slack-bot] 11:22:02 [webchat-raw] 2de2c606 chunk(31b, pipes=0): '매뉴얼 페이지를 준비 중입니다. 잠시만 기다려주세요...'
+[slack-bot] 11:22:02 [webchat-push] webchat-chunk 2de2c606 (31b) OK
+[slack-bot] 11:22:39 [webchat-raw] 2de2c606 chunk(221b, pipes=0): 'BFP-A8588-B 매뉴얼 H1043 관련 페이지입니다.\n\n**다운로드 링크 (PDF)**:\nhttps://agent.mes-wta.com/api/files/a84162952512485b808ed5bb24e087b2.pdf\n\n- 문서: BFP-A8588-B (CRnQ/CRnD 컨트롤러 트러블슈팅 매뉴얼, 한국어)\n- 내용: 19~21페이지 \u2014 H104n 계열 엔코더 초기 통신 이상 에러 설명'
+[slack-bot] 11:22:39 [webchat-push] webchat-chunk 2de2c606 (221b) OK
+[slack-bot] 11:22:48 [webchat-push] webchat-done 2de2c606 (0b) OK
+[slack-bot] 11:22:48 [api/chat/stream] 완료: 2de2c606
+[slack-bot] 11:23:54 [수신] #제어-지건승2 지건승: <@U0AP5B0F71C> control-agent: 네, DB 구조 확인해봤습니다. 기존 A/B/C 외에 추가 방안입니다:
+
+**D안: 기존  → control-agent
+[slack-bot] 11:23:54 직접 전송 완료 → control-agent:5616
+[slack-bot] 11:24:18 [응답시간] control-agent #제어-지건승2: 23초
+[slack-bot] 11:24:18 [슬랙 발신] #제어-지건승2 ← control-agent: 아, 맥락 이해했습니다! E안과 F안 구조 비교해드릴게요.
+
+*E안 \u2014 order 대역 구분* (프론트에서 
+[slack-bot] 11:25:30 [api/chat/stream] init: 75b4b751 - 매뉴얼도
+[slack-bot] 11:25:30 직접 전송 완료 → cs-agent:5602
+[slack-bot] 11:25:30 [api/chat/stream] webchat-req 전송 → cs-agent: 75b4b751
+[slack-bot] 11:25:37 [webchat-raw] 75b4b751 chunk(39b, pipes=0): '해당 매뉴얼 페이지를 PDF로 준비 중입니다. 잠시만 기다려주세요...'
+[slack-bot] 11:25:37 [webchat-push] webchat-chunk 75b4b751 (39b) OK
+[slack-bot] 11:25:49 [webchat-raw] 75b4b751 chunk(221b, pipes=0): 'BFP-A8588-B 매뉴얼 H1043 관련 페이지입니다.\n\n**다운로드 링크 (PDF)**:\nhttps://agent.mes-wta.com/api/files/a84162952512485b808ed5bb24e087b2.pdf\n\n- 문서: BFP-A8588-B (CRnQ/CRnD 컨트롤러 트러블슈팅 매뉴얼, 한국어)\n- 내용: 19~21페이지 \u2014 H104n 계열 엔코더 초기 통신 이상 에러 설명'
+[slack-bot] 11:25:49 [webchat-push] webchat-chunk 75b4b751 (221b) OK
+[slack-bot] 11:25:53 [api/chat/stream] init: 12aba471 - 땡큐
+[slack-bot] 11:25:53 직접 전송 완료 → cs-agent:5602
+[slack-bot] 11:25:53 [api/chat/stream] webchat-req 전송 → cs-agent: 12aba471
+[slack-bot] 11:25:57 [webchat-push] webchat-done 75b4b751 (0b) OK
+[slack-bot] 11:25:57 [api/chat/stream] 완료: 75b4b751
+[slack-bot] 11:26:07 [webchat-raw] 12aba471 chunk(43b, pipes=0): '도움이 되셨다니 다행입니다. 추가 문의사항이 있으시면 언제든지 질문해 주세요.'
+[slack-bot] 11:26:07 [webchat-push] webchat-chunk 12aba471 (43b) OK
+[slack-bot] 11:26:18 [webchat-push] webchat-done 12aba471 (0b) OK
+[slack-bot] 11:26:18 [api/chat/stream] 완료: 12aba471
+[slack-bot] 11:26:51 [api/chat/stream] init: 366bf3cd - 2026년 1~3월달간에 포장기 cs 이력조회
+[slack-bot] 11:26:51 직접 전송 완료 → cs-agent:5602
+[slack-bot] 11:26:51 [api/chat/stream] webchat-req 전송 → cs-agent: 366bf3cd
+[slack-bot] 11:26:55 [webchat-raw] 366bf3cd chunk(33b, pipes=0): '포장기 CS 이력을 조회 중입니다. 잠시만 기다려주세요...'
+[slack-bot] 11:26:55 [webchat-push] webchat-chunk 366bf3cd (33b) OK
+[slack-bot] 11:28:34 [수신] #제어-지건승2 지건승: <@U0AP5B0F71C> 근데 F를 하기위해서는 MAX한테 허락받아서 수정 해야하는거아닌가 ? → control-agent
+[slack-bot] 11:28:34 직접 전송 완료 → control-agent:5616
+[slack-bot] 11:28:51 [응답시간] control-agent #제어-지건승2: 16초
+[slack-bot] 11:28:51 [슬랙 발신] #제어-지건승2 ← control-agent: 맞습니다! F안은 MES 데이터 변경(기존 "제어제작" 메인작업 → 5개로 분할, 서브태스크 재배치)이 포함
+[slack-bot] 11:29:51 [webchat-raw] 366bf3cd chunk(718b, pipes=40): "## 포장기 CS 이력 (2026년 1~3월, 총 6건)\n\n| 날짜 | 장비명 | 에러/증상 | 조치내용 |\n|------|--------|-----------|----------|\n| 2026-01-08 | Kyocera 포장기 1호 | 봉인 라벨 QR코드 업데이트 및 글꼴 크기 변경 요청 | 프로그램 변경 |\n| 2026-01-11 | Kyocera 포장기 1호기 | 봉인 라벨 'Made In China' 글자 크기 규정 미준수 (Windows 시스템 문제) | 폰트 업데이트 변경 |\n| 2026-01-11 | Kyocera 포장기 1호기 | 봉인 라벨 인쇄 시 기존 프로그램 사용 시 라벨 부착 오류 발생 가능 | ①가동 시작 전 라벨 확인 메시지 추가 ②마지막 봉인 라벨 인쇄 방지로 혼입 차단 |\n| "
+[slack-bot] 11:29:51 [webchat-push] webchat-chunk 366bf3cd (718b) OK
+[slack-bot] 11:29:59 [webchat-push] webchat-done 366bf3cd (0b) OK
+[slack-bot] 11:29:59 [api/chat/stream] 완료: 366bf3cd
