@@ -286,13 +286,14 @@ AGENTS_JSON_PATH = os.path.join(CONFIG_DIR, "agents.json")
 AGENT_PORTS: dict[str, int] = {}
 CHANNEL_ROUTING: dict[str, str] = {}          # 채널명 → 에이전트ID (정확 매칭)
 CHANNEL_PREFIX_ROUTING: dict[str, str] = {}   # prefix → 에이전트ID (startswith 매칭)
+CHANNEL_PREFIX_CONFIG: dict[str, dict] = {}  # prefix → base config (mention_required 등)
 CHANNEL_CONFIG: dict[str, dict] = {}          # 채널명 → {mention_required, auto_response, ack_message, context_hint}
 DEFAULT_AGENT = "sales-agent"
 _routing_lock = threading.Lock()
 
 def _load_agents_routing():
     """agents.json에서 포트·슬랙 라우팅 설정 로드 (재시작 없이 리로드 가능)"""
-    global AGENT_PORTS, CHANNEL_ROUTING, CHANNEL_PREFIX_ROUTING, CHANNEL_CONFIG, DEFAULT_AGENT
+    global AGENT_PORTS, CHANNEL_ROUTING, CHANNEL_PREFIX_ROUTING, CHANNEL_PREFIX_CONFIG, CHANNEL_CONFIG, DEFAULT_AGENT
     try:
         with open(AGENTS_JSON_PATH, "r", encoding="utf-8") as f:
             agents = json.load(f)
@@ -303,6 +304,7 @@ def _load_agents_routing():
     ports: dict[str, int] = {}
     ch_routing: dict[str, str] = {}
     prefix_routing: dict[str, str] = {}
+    prefix_config: dict[str, dict] = {}
     ch_config: dict[str, dict] = {}
 
     default_cfg = agents.get("_default", {})
@@ -334,14 +336,21 @@ def _load_agents_routing():
                 "context_hint": ov.get("context_hint", base_hint),
             }
 
-        # prefix 라우팅
+        # prefix 라우팅 (prefix 채널은 전용 채널이므로 mention_required=False)
         for prefix in cfg.get("slack_prefix", []):
             prefix_routing[prefix] = agent_id
+            prefix_config[prefix] = {
+                "mention_required": False,
+                "auto_response": base_auto,
+                "ack_message": base_ack,
+                "context_hint": base_hint,
+            }
 
     with _routing_lock:
         AGENT_PORTS = ports
         CHANNEL_ROUTING = ch_routing
         CHANNEL_PREFIX_ROUTING = prefix_routing
+        CHANNEL_PREFIX_CONFIG = prefix_config
         CHANNEL_CONFIG = ch_config
 
     log.info(f"[라우팅] agents.json 로드 완료: {len(ports)}개 포트, {len(ch_routing)}개 채널, {len(prefix_routing)}개 prefix")
@@ -2113,7 +2122,15 @@ def handle_slack_message(event, say):
     # @멘션 전용: CHANNEL_CONFIG의 mention_required 설정 기반
     # 부적합 채널은 위에서 이미 처리됨 (자체 흐름)
     ch_mention_cfg = CHANNEL_CONFIG.get(channel_name, {})
-    mention_required = ch_mention_cfg.get("mention_required", True)
+    if ch_mention_cfg:
+        mention_required = ch_mention_cfg.get("mention_required", True)
+    else:
+        # prefix 매칭 채널: 해당 prefix의 base config에서 mention_required 참조
+        prefix_cfg = next(
+            (cfg for prefix, cfg in CHANNEL_PREFIX_CONFIG.items() if channel_name.startswith(prefix)),
+            None
+        )
+        mention_required = prefix_cfg.get("mention_required", True) if prefix_cfg else True
     if not bot_mentioned and mention_required:
         log.info(f"[챗로그] #{channel_name} {username}: {text[:80]} (멘션 없음 — 로깅만)")
         return
