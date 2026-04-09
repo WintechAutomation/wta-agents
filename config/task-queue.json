@@ -3143,6 +3143,18 @@
       "updated_at": "2026-04-09 22:01:28",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-crafter-376b75",
+      "agent": "crafter",
+      "task": "부서장 지시: 외부 LLM 서버(182.224.6.147:2222)에 SSH 접속해서 vLLM 설치/실행을 다시 시도해줘.",
+      "message": "부서장 지시: 외부 LLM 서버(182.224.6.147:2222)에 SSH 접속해서 vLLM 설치/실행을 다시 시도해줘.\n\n**서버 정보:**\n- SSH: 182.224.6.147:2222 (SSH 키 인증 설정됨, ~/.ssh/id_rsa)\n- GPU: NVIDIA GB10, CUDA 13.0, aarch64, 119GB RAM\n- PyTorch 2.10.0+cu128 설치 완료\n- Ollama 이미 운영 중 (11434 포트, 16개 모델)\n\n**이전 시도 이슈:**\n- vLLM 0.19.0에서 gemma4 아키텍처 미지원 (transformers 5.x 필요, vLLM은 <5 요구)\n- 다른 모델(예: Qwen, Llama 등)로 시도하거나, vLLM 최신 버전에서 해결됐는지 확인\n\nSSH 접속 후 vLLM 설치 및 실행 가능한 모델로 서빙해봐. 진행 상황 보고해줘.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-09 22:49:44",
+      "updated_at": "2026-04-09 22:49:44",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }
