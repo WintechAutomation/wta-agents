@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """MCA210T 발주이력을 ERP_현재고_구매진행_전체.html에 매핑
 품목 클릭 시 발주이력 상세 팝업 표시
+10년치 + 1년치 데이터 병합
 """
 import sys, io, json, re
 from collections import defaultdict
@@ -9,9 +10,20 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
 base = r'C:\MES\wta-agents\reports\김근형'
 
-# MCA210T 데이터 로드
-with open(f'{base}/MCA210T_발주현황_1년.json', 'r', encoding='utf-8') as f:
-    mca = json.load(f)
+# MCA210T 10년치 + 1년치 데이터 병합 (중복 제거)
+all_items = []
+seen = set()
+for fname in ['MCA210T_발주현황_10년.json', 'MCA210T_발주현황_1년.json']:
+    with open(f'{base}/{fname}', 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    for r in data['items']:
+        key = (r['po_no'], r['po_seq'], r['item_cd'])
+        if key not in seen:
+            seen.add(key)
+            all_items.append(r)
+    print(f'{fname}: {len(data["items"])}건 로드')
+print(f'병합 후 총: {len(all_items)}건 (중복 제거)')
+mca = {'items': all_items}
 
 # 품목코드별 그룹화 (최신 발주순)
 po_groups = defaultdict(list)
@@ -90,7 +102,7 @@ const PO_DATA = ''' + po_data_js + ''';
 function showPO(itemCd, itemNm) {
   const pos = PO_DATA[itemCd];
   if (!pos || pos.length === 0) {
-    alert('발주이력 없음 (최근 1년)');
+    alert('발주이력 없음 (최근 10년)');
     return;
   }
   document.getElementById('poTitle').textContent = itemCd + ' / ' + itemNm + ' — 발주이력 (' + pos.length + '건)';
