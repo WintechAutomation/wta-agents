@@ -1753,30 +1753,6 @@
       "completed_at": null
     },
     {
-      "id": "tq-crafter-55bb49",
-      "agent": "crafter",
-      "task": "에이전트 컨트롤 센터에 토큰 사용량 표시 UI 추가",
-      "message": "OfficePage에 전체 Claude API 토큰 사용량 표시. admin-agent가 10분마다 POST /api/usage로 전송하면 실시간 반영. API endpoint + 프론트엔드 UI 구현.",
-      "status": "done",
-      "priority": "high",
-      "created_at": "2026-04-08 23:32:04",
-      "updated_at": "2026-04-08 23:35:50",
-      "last_report_at": null,
-      "completed_at": "2026-04-08 23:35:50"
-    },
-    {
-      "id": "tq-admin-agent-ffeb54",
-      "agent": "admin-agent",
-      "task": "Claude API 토큰 사용량 10분 주기 수집",
-      "message": "Claude Code /usage 정보를 10분마다 조회하여 대시보드 API(POST /api/usage)로 전송. 전체 팀 공용 토큰 하나만 수집.",
-      "status": "done",
-      "priority": "high",
-      "created_at": "2026-04-08 23:32:06",
-      "updated_at": "2026-04-08 23:40:06",
-      "last_report_at": null,
-      "completed_at": "2026-04-08 23:40:06"
-    },
-    {
       "id": "tq-crafter-8ba437",
       "agent": "crafter",
       "task": "작업 지시: 에이전트 컨트롤 센터(OfficePage)에 토큰 사용량 표시 기능 추가",
