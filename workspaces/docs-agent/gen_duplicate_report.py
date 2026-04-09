@@ -61,7 +61,6 @@ print(f'제외 품목 수: {len(exclude_cds)}건 (CS성+Cell Press+Plan Only)')
 # --- 장비유형 키워드 매핑 (규칙 1-1) ---
 equip_keywords = {
     '프레스': ['프레스', 'Press', 'press'],
-    '핸들러': ['핸들러', 'Handler', 'handler'],
     '소결': ['소결', 'Sintering', 'sintering'],
     'CVD': ['CVD', 'cvd'],
     'PVD': ['PVD', 'pvd', 'UL', 'LUL'],
@@ -116,15 +115,18 @@ for item in items:
     if '마스크' in registered:
         registered.discard('마스크')
         registered.add('마스크자동기')
+    if '핸들러' in registered:
+        registered.discard('핸들러')  # 핸들러 폐지 - 제거만
     if '연삭핸들러' in registered:
         registered.discard('연삭핸들러')
         registered.add('연삭')
-        registered.add('핸들러')
+    # 핸들러만 단독이면 제외
+    if len(registered) == 0:
+        continue
 
     detected = set()
     for proj in item.get('all_projects', []):
         detected.update(detect_equip(proj))
-    detected = check_press_handler(item, detected)
 
     missing = detected - registered
     if missing:
@@ -153,10 +155,13 @@ for item in items:
     if '마스크' in registered:
         registered.discard('마스크')
         registered.add('마스크자동기')
+    if '핸들러' in registered:
+        registered.discard('핸들러')
     if '연삭핸들러' in registered:
         registered.discard('연삭핸들러')
         registered.add('연삭')
-        registered.add('핸들러')
+    if len(registered) == 0:
+        continue
 
     imp_equips = set()
     for p in imp_projs:
@@ -173,27 +178,7 @@ for item in items:
             'projects': imp_projs[:3],
         })
 
-# Category 3: 프레스-핸들러 미통합 (규칙 1-4)
-cat3 = []
-for item in items:
-    if item['item_cd'] in exclude_cds:
-        continue
-    registered = set(item['equip_types'])
-    if '연삭핸들러' in registered:
-        registered.discard('연삭핸들러')
-        registered.add('연삭')
-        registered.add('핸들러')
-    if '프레스' in registered and '핸들러' not in registered:
-        nm = item.get('item_nm', '')
-        if any(kw in nm for kw in handler_part_kw):
-            cat3.append({
-                'cd': item['item_cd'],
-                'nm': item['item_nm'],
-                'qty': item['stock_qty'],
-                'amt': item['stock_amt'],
-                'registered': sorted(registered),
-                'reason': '품명에 핸들러 부품 키워드 포함',
-            })
+cat3 = []  # 핸들러 폐지로 카테고리3 비활성
 
 cat1.sort(key=lambda x: x['amt'], reverse=True)
 cat2.sort(key=lambda x: x['amt'], reverse=True)

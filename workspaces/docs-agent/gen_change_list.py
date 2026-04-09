@@ -39,7 +39,7 @@ for src in [cs_data, cs_only, cell_press, plan_only]:
 
 # --- 장비유형 키워드 (규칙 1-1) ---
 equip_keywords = {
-    '프레스': ['프레스', 'Press', 'press', '핸들러', 'Handler', 'handler'],
+    '프레스': ['프레스', 'Press', 'press'],
     '소결': ['소결', 'Sintering', 'sintering'],
     'CVD': ['CVD', 'cvd'],
     'PVD': ['PVD', 'pvd', 'UL', 'LUL'],
@@ -68,13 +68,14 @@ def detect_equip(proj_name):
     return detected
 
 def normalize_equip_types(raw):
-    """현재 등록된 장비유형을 정규화 (핸들러→프레스 통합)"""
+    """현재 등록된 장비유형을 정규화 (핸들러 제거)"""
     if isinstance(raw, str):
         result = set()
         if '연삭' in raw:
             result.add('연삭')
-        if '핸들러' in raw or '프레스' in raw:
+        if '프레스' in raw:
             result.add('프레스')
+        # 핸들러는 무시 (장비유형 폐지)
         if not result:
             result.add(raw)
         return result
@@ -83,26 +84,34 @@ def normalize_equip_types(raw):
         if t == '마스크':
             result.add('마스크자동기')
         elif t == '핸들러':
-            result.add('프레스')  # 핸들러→프레스 통합
+            pass  # 핸들러 제거 (폐지)
         elif t == '연삭핸들러' or '연삭핸들러' in t:
             result.add('연삭')
         else:
             result.add(t)
     return result
 
+def is_handler_only(raw):
+    """핸들러만 단독 등록된 품목인지 확인"""
+    if isinstance(raw, list):
+        return raw == ['핸들러']
+    if isinstance(raw, str):
+        return raw.strip() == '핸들러'
+    return False
+
 def get_raw_changes(raw):
     """핸들러 관련 변경사항 감지"""
     changes = []
     if isinstance(raw, str):
         if '핸들러' in raw:
-            changes.append(('핸들러통합', f'"{raw}" 내 핸들러 → 프레스로 통합'))
+            changes.append(('핸들러제거', f'"{raw}" → 핸들러 제거'))
         return changes
     if isinstance(raw, list):
         if '핸들러' in raw:
             if raw == ['핸들러']:
-                changes.append(('핸들러통합', '핸들러 단독 → 프레스로 변경'))
+                changes.append(('핸들러제외', '핸들러 단독 → 제외 처리'))
             else:
-                changes.append(('핸들러통합', '핸들러 제거 (프레스에 통합)'))
+                changes.append(('핸들러제거', '핸들러 제거'))
     return changes
 
 # --- 분석 ---
@@ -117,6 +126,10 @@ for row in erp_data:
     raw_equip = row[9]
 
     if item_cd in exclude_cds:
+        continue
+
+    # 핸들러만 단독 등록 → 제외 대상 (별도 집계)
+    if is_handler_only(raw_equip):
         continue
 
     # 현재 등록된 장비유형 정규화
@@ -204,9 +217,10 @@ for row in erp_data:
     })
 
 # 변경유형별 분류
-type_order = ['핸들러통합', '형식수정', '명칭변경', '분리', '신규할당', '장비추가']
+type_order = ['핸들러제거', '형식수정', '명칭변경', '분리', '신규할당', '장비추가']
 type_labels = {
-    '핸들러통합': '핸들러→프레스 통합',
+    '핸들러제거': '핸들러 제거',
+    '핸들러제외': '핸들러 단독 제외',
     '형식수정': '형식 수정 (문자열→리스트)',
     '명칭변경': '명칭 변경',
     '분리': '장비유형 분리',
@@ -214,7 +228,8 @@ type_labels = {
     '장비추가': '장비유형 추가',
 }
 type_colors = {
-    '핸들러통합': '#6f42c1',
+    '핸들러제거': '#6f42c1',
+    '핸들러제외': '#6f42c1',
     '형식수정': '#6c757d',
     '명칭변경': '#17a2b8',
     '분리': '#fd7e14',
@@ -227,6 +242,9 @@ type_counts = {}
 for c in changes:
     for t in c['types']:
         type_counts[t] = type_counts.get(t, 0) + 1
+
+# 핸들러 단독 제외 건수
+handler_only_count = sum(1 for r in erp_data if is_handler_only(r[9]) and r[1] not in exclude_cds)
 
 changes.sort(key=lambda x: x['amt'], reverse=True)
 
@@ -295,7 +313,7 @@ lines.append('</div>')
 
 # Exclude info
 lines.append('<div class="exclude-info">')
-lines.append(f'  분석 대상: 전체 {len(erp_data)}건 - 제외 {len(exclude_cds)}건 (CS성/Cell Press/Plan Only) = {len(erp_data) - len(exclude_cds)}건')
+lines.append(f'  분석 대상: 전체 {len(erp_data)}건 - 제외 {len(exclude_cds)}건 (CS성/Cell Press/Plan Only) - 핸들러 단독 제외 {handler_only_count}건 = {len(erp_data) - len(exclude_cds) - handler_only_count}건')
 lines.append('</div>')
 
 # Summary cards
