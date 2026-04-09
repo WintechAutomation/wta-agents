@@ -364,6 +364,50 @@ _BOOT_TIME = time.time()
 # ── CS 세션 JSONL 로깅 ──
 _CS_SESSIONS_FILE = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "reports", "cs-sessions.jsonl")
 
+# CS 세션 추적: (channel_name, username) → {session_id, last_ts, query}
+# 같은 채널+사용자의 10분 이내 연속 대화는 동일 session_id
+_cs_session_tracker: dict[tuple[str, str], dict] = {}
+_cs_session_lock = threading.Lock()
+_CS_SESSION_TIMEOUT = 600  # 10분
+
+
+def _is_cs_channel(channel_name: str) -> bool:
+    """CS 관련 채널 여부 판별 (#cs, cs-* prefix)."""
+    return channel_name == "cs" or channel_name.startswith("cs-")
+
+
+def _get_or_create_cs_session(channel_name: str, username: str) -> str:
+    """동일 채널+사용자의 10분 이내 대화는 같은 session_id 반환."""
+    key = (channel_name, username)
+    now = time.time()
+    with _cs_session_lock:
+        sess = _cs_session_tracker.get(key)
+        if sess and (now - sess["last_ts"]) < _CS_SESSION_TIMEOUT:
+            sess["last_ts"] = now
+            return sess["session_id"]
+        # 새 세션 생성
+        ts_str = datetime.now(KST_TZ).strftime("%Y%m%d-%H%M%S")
+        session_id = f"slack-{channel_name}-{username}-{ts_str}"
+        _cs_session_tracker[key] = {"session_id": session_id, "last_ts": now, "query": ""}
+        return session_id
+
+
+def _cs_session_set_query(channel_name: str, username: str, query: str):
+    """현재 세션의 질문 텍스트 설정."""
+    key = (channel_name, username)
+    with _cs_session_lock:
+        sess = _cs_session_tracker.get(key)
+        if sess:
+            sess["query"] = query
+
+
+def _cs_session_get_query(channel_name: str, username: str) -> str:
+    """현재 세션의 마지막 질문 텍스트 반환."""
+    key = (channel_name, username)
+    with _cs_session_lock:
+        sess = _cs_session_tracker.get(key)
+        return sess["query"] if sess else ""
+
 
 def _log_cs_session(session_id: str, query: str, answer: str, channel: str = "webchat",
                     user: str = "unknown", question_source: str = "web", status: str = "responded"):
@@ -377,7 +421,7 @@ def _log_cs_session(session_id: str, query: str, answer: str, channel: str = "we
         "question_source": question_source,
         "language": "ko",
         "query": query,
-        "response_summary": answer or "",
+        "response_summary": answer[:200] if answer else "",
         "full_response": answer or "",
         "status": status,
     }
@@ -1212,6 +1256,24 @@ def _slack_pipe_handle(content: str, sender: str) -> None:
         log.info(
             f"[slack-pipe] done {req_id} total={len(sess['accum'])}b duration={duration}s"
         )
+        # V2 파이프라인 CS 세션 기록
+        if sess.get("target_agent") == "cs-agent":
+            pipe_ch_id = sess.get("channel_id", "")
+            pipe_ch_name = channel_id_to_name.get(pipe_ch_id, pipe_ch_id)
+            pipe_user = sess.get("username", "unknown")
+            if _is_cs_channel(pipe_ch_name):
+                pipe_query = _cs_session_get_query(pipe_ch_name, pipe_user)
+                pipe_sid = _get_or_create_cs_session(pipe_ch_name, pipe_user)
+                _log_cs_session(
+                    session_id=pipe_sid,
+                    query=pipe_query,
+                    answer=sess["accum"],
+                    channel=pipe_ch_name,
+                    user=pipe_user,
+                    question_source="slack",
+                    status="responded",
+                )
+                log.info(f"[CS세션] V2 답변 기록: {pipe_sid} #{pipe_ch_name} ({len(sess['accum'])}자)")
     elif marker == "slack-error":
         sess["accum"] = f"⚠️ 오류: {text}"
         sess["done"] = True
@@ -2171,6 +2233,12 @@ def handle_slack_message(event, say):
             except Exception as e:
                 log.warning(f"Ack 메시지 발송 실패: {e}")
 
+    # CS 채널 질문 기록 (슬���봇 중심 로깅)
+    if _is_cs_channel(channel_name) and target_agent == "cs-agent":
+        sid = _get_or_create_cs_session(channel_name, username)
+        _cs_session_set_query(channel_name, username, text)
+        log.info(f"[CS세션] 질문 기록: {sid} #{channel_name} {username}: {text[:60]}")
+
     # 에이전트 포트로 직접 전송
     send_to_agent(target_agent, content, from_id="slack-bot")
 
@@ -2674,6 +2742,22 @@ class AgentMessageHandler(BaseHTTPRequestHandler):
                             }
                     log.info(f"[슬랙 발신] #{ch_name} ← {sender}: {clean_content[:60]}")
                     log_to_dashboard(sender, f"slack:#{ch_name}", clean_content, "chat")
+
+                    # CS 채널 답변 기록 (슬랙봇 중심 로깅)
+                    if sender == "cs-agent" and _is_cs_channel(ch_name):
+                        cs_user = ack_info.get("user", "unknown") if ack_info else "unknown"
+                        cs_query = _cs_session_get_query(ch_name, cs_user)
+                        cs_sid = _get_or_create_cs_session(ch_name, cs_user)
+                        _log_cs_session(
+                            session_id=cs_sid,
+                            query=cs_query or (ack_info.get("question_preview", "") if ack_info else ""),
+                            answer=actual_content,
+                            channel=ch_name,
+                            user=cs_user,
+                            question_source="slack",
+                            status="responded",
+                        )
+                        log.info(f"[CS세션] 답변 기록: {cs_sid} #{ch_name} ({len(actual_content)}자)")
 
                     # 부적합 세션 종료: nc-manager 응답에 [세션종료] 포함 시
                     if ch_name == "부적합" and "[세션종료]" in actual_content:

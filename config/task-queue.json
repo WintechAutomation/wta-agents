@@ -2735,6 +2735,30 @@
       "updated_at": "2026-04-09 13:08:03",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-crafter-ec84ab",
+      "agent": "crafter",
+      "task": "부서장 지시: CS 세션 로깅을 슬랙봇 프로세스에서 처리하도록 변경",
+      "message": "부서장 지시: CS 세션 로깅을 슬랙봇 프로세스에서 처리하도록 변경\n\n**현재 문제:**\n- cs-agent가 답변 후 cs_session_logger.log_session()을 호출하는 구조 → 에이전트 재량에 따라 누락 발생\n- 슬랙봇이 모든 CS 메시지의 입구(수신)+출구(응답 발신)이므로 여기서 로깅하는 게 확실\n\n**수정 방향:**\n- slack-bot.py에서 CS 관련 채널(#cs, #cs-* prefix, 웹챗)로 들어온 메시지를 cs-agent에게 전달할 때 질문 기록\n- cs-agent로부터 응답을 받아 슬랙에 발신할 때 답변 기록\n- cs-sessions.jsonl에 {session_id, channel, query, response, ts} 형태로 append\n- 세션 그룹핑: 같은 채널+사용자의 연속 대화는 동일 session_id로 묶기 (10분 이내)\n- 웹챗(webchat-req/webchat-done)도 동일하게 슬랙봇에서 로깅\n\n이렇게 하면 cs-agent가 로깅을 잊어도 누락이 없습니다. 수정 후 슬랙봇 재시작까지 해주세요.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-09 13:12:03",
+      "updated_at": "2026-04-09 13:12:03",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-crafter-badb3f",
+      "agent": "crafter",
+      "task": "부서장 긴급 지시:",
+      "message": "부서장 긴급 지시:\n\n대시보드 CS 질의응답 세션에 표시되는 메시지가 함축/요약되어 나오고 있습니다.\n\n수정 요구사항:\n1. 질문(query): 사용자 원문 전체 표시 (요약/축약 금지)\n2. 답변(response): cs-agent 응답 원문 전체 표시 (요약/축약 금지)\n3. 첨부파일: PDF, 이미지 등 첨부 정보도 모두 표시 (파일명, URL 등)\n\ncs-sessions.jsonl에 기록할 때도, 대시보드에서 표시할 때도 원문 전체가 나와야 합니다. 잘리거나 요약되는 부분이 있으면 모두 제거해주세요.\n\n슬랙봇에서 로깅할 때 answer[:200] 같은 길이 제한이 있다면 전부 제거하세요.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-09 13:19:57",
+      "updated_at": "2026-04-09 13:19:57",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }
