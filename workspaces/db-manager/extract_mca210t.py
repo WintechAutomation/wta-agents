@@ -4,9 +4,9 @@ import json
 import csv
 import os
 
-FROM_DT = "2025-04-09"
+FROM_DT = "2026-03-09"
 TO_DT   = "2026-04-09"
-OUTPUT  = r"C:\MES\wta-agents\reports\김근형\MCA210T_1year.csv"
+OUTPUT  = r"C:\MES\wta-agents\reports\김근형\MCA210T_1month.csv"
 API_BASE = "http://localhost:8100"
 PAGE_SIZE = 500
 

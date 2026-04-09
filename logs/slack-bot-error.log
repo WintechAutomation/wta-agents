@@ -489,3 +489,15 @@ MDDL
 [slack-bot] 19:57:06 [슬랙 발신] #docs ← docs-agent: 네, db-manager에게 MCA210T 1년치 전체 필드 CSV 생성 요청했습니다. 완료되면 바로 공유드
 [slack-bot] 19:59:36 [수신] #docs 김근형: 업무공간 김근형 폴더에 erp_data 백업파일 12345 이거 뭐 떄문에 생긴거임? → docs-agent
 [slack-bot] 19:59:36 직접 전송 완료 → docs-agent:5614
+[slack-bot] 20:01:22 [응답시간] docs-agent #docs: 1분 45초
+[slack-bot] 20:01:22 [슬랙 발신] #docs ← docs-agent: 김근형님, erp_data_bak_*, bak2~bak5 파일들은 이전 세션에서 장비유형 분류 작업 중 데이
+[slack-bot] 20:02:45 [수신] #docs 김근형: ㅇㅋ → docs-agent
+[slack-bot] 20:02:46 직접 전송 완료 → docs-agent:5614
+[slack-bot] 20:03:23 [수신] #docs 김근형: 메뉴얼 제작관련 파일은 김근형 폴더안에 메뉴얼 이라는 폴더 만들어서 거기에 전부 넣어줘 → docs-agent
+[slack-bot] 20:03:23 직접 전송 완료 → docs-agent:5614
+[slack-bot] 20:04:15 [수신] #docs 김근형: 내가 수정 요청한 사용자메뉴얼만 해당함 → docs-agent
+[slack-bot] 20:04:16 직접 전송 완료 → docs-agent:5614
+[slack-bot] 20:07:34 [응답시간] docs-agent #docs: 3분 18초
+[slack-bot] 20:07:34 [슬랙 발신] #docs ← docs-agent: 김근형님, 백업 파일(erp_data_bak 1~5) 삭제 완료했습니다.
+
+매뉴얼 파일 관련 \u2014 현재 김근형

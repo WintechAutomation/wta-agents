@@ -4992,21 +4992,29 @@ def api_search_vector_answer():
 # ── reports 정적 HTML 서빙 (Cloudflare 터널 경유) ──
 @app.route("/<path:page_name>")
 def serve_report_page(page_name: str):
-    """reports 폴더의 HTML 파일 서빙. /pagename → reports/*/{pagename}.html"""
+    """reports 폴더의 HTML 파일 서빙. 2단계 이상 하위 폴더 경로 지원."""
     # 보안: 경로 순회 방지
-    if ".." in page_name or "/" in page_name:
+    if ".." in page_name:
         return "Not Found", 404
     reports_dir = os.path.join(os.path.dirname(BASE_DIR), "reports")
-    # 직접 매치: reports/{pagename}.html
-    direct = os.path.join(reports_dir, f"{page_name}.html")
-    if os.path.isfile(direct):
-        return send_from_directory(reports_dir, f"{page_name}.html")
-    # 하위 폴더 탐색: reports/*/{pagename}.html
-    if os.path.isdir(reports_dir):
-        for sub in os.listdir(reports_dir):
-            candidate = os.path.join(reports_dir, sub, f"{page_name}.html")
-            if os.path.isfile(candidate):
-                return send_from_directory(os.path.join(reports_dir, sub), f"{page_name}.html")
+    # 보안: realpath로 reports_dir 벗어나는 경로 차단
+    candidate = os.path.realpath(os.path.join(reports_dir, page_name))
+    reports_real = os.path.realpath(reports_dir)
+    if not candidate.startswith(reports_real + os.sep) and candidate != reports_real:
+        return "Not Found", 404
+    # 직접 매치: reports/{page_name} (경로 포함)
+    if os.path.isfile(candidate):
+        rel_dir = os.path.dirname(page_name)
+        filename = os.path.basename(page_name)
+        serve_dir = os.path.join(reports_dir, rel_dir) if rel_dir else reports_dir
+        return send_from_directory(serve_dir, filename)
+    # .html 확장자 자동 추가
+    candidate_html = os.path.realpath(os.path.join(reports_dir, f"{page_name}.html"))
+    if os.path.isfile(candidate_html):
+        rel_dir = os.path.dirname(page_name)
+        filename = os.path.basename(page_name) + ".html"
+        serve_dir = os.path.join(reports_dir, rel_dir) if rel_dir else reports_dir
+        return send_from_directory(serve_dir, filename)
     return "Not Found", 404
 
 
