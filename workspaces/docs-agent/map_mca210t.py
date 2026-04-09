@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 """MCA210T 발주이력을 ERP_현재고_구매진행_전체.html에 매핑
-품목 클릭 시 발주이력 상세 팝업 표시 (PO 데이터는 별도 JSON, fetch 방식)
+PO 데이터는 별도 JSON 파일, 클릭 시 fetch 로딩
 10년치 + 1년치 데이터 병합
 """
-import sys, io, json, re
+import sys, io, json, re, os
 from collections import defaultdict
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
@@ -41,13 +41,12 @@ for r in all_items:
         'rmk': r['rmk'] or '',
     })
 
-# 발주일 내림차순 정렬
 for cd in po_groups:
     po_groups[cd].sort(key=lambda x: x['po_dt'], reverse=True)
 
 print(f'MCA210T: {len(all_items)}건 → {len(po_groups)}개 품목')
 
-# erp_data의 품목코드만 필터링 (HTML에 있는 것만)
+# erp_data의 품목코드만 필터링
 with open(f'{base}/erp_data.json', 'r', encoding='utf-8') as f:
     erp = json.load(f)
 erp_cds = {r[1] for r in erp['data']}
@@ -59,35 +58,25 @@ print(f'erp_data 매칭: {len(po_filtered)}개 품목')
 po_json_path = f'{base}/po_data.json'
 with open(po_json_path, 'w', encoding='utf-8') as f:
     json.dump(po_filtered, f, ensure_ascii=False)
-po_json_size = len(json.dumps(po_filtered, ensure_ascii=False))
-print(f'po_data.json 저장: {po_json_size/1024/1024:.1f} MB')
+print(f'po_data.json 저장: {os.path.getsize(po_json_path)/1024/1024:.1f} MB')
 
 # HTML 로드
 with open(f'{base}/ERP_현재고_구매진행_전체.html', 'r', encoding='utf-8') as f:
     html = f.read()
 
-# 이전 실행의 PO 관련 코드 제거 (중복 방지)
-import re
-# 이전 모달 HTML 제거
+# --- 이전 실행 잔재 제거 ---
 html = re.sub(r'<!-- MCA210T 발주이력 모달 -->.*?</div>\s*</div>\s*</div>', '', html, flags=re.DOTALL)
-# 이전 PO 스크립트 제거 (const PO_DATA 또는 let PO_DATA)
 html = re.sub(r'<script>\s*(?:const|let) PO_DATA[\s\S]*?</script>', '', html)
-# tr onclick 정리 — 이전 실행에서 오염된 TR 시작 태그 원복
-tr_start = html.find("h += '<tr")
-if tr_start >= 0:
-    tr_end_marker = ">' +\n"
-    tr_end = html.find(tr_end_marker, tr_start)
-    if tr_end >= 0:
-        html = html[:tr_start] + "h += '<tr>' +\n" + html[tr_end + len(tr_end_marker):]
+html = re.sub(r'<script>\s*document\.getElementById\(\'tbody\'\)\.addEventListener[\s\S]*?</script>', '', html)
 
-# 모달 HTML
+# --- 모달 HTML ---
 modal_html = '''
 <!-- MCA210T 발주이력 모달 -->
 <div id="poModal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:9999;overflow:auto;">
   <div style="background:#fff;margin:40px auto;padding:20px;border-radius:12px;max-width:900px;max-height:80vh;overflow:auto;box-shadow:0 8px 32px rgba(0,0,0,0.3);">
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
       <h3 id="poTitle" style="margin:0;font-size:15px;color:#1a237e;"></h3>
-      <button onclick="document.getElementById(\'poModal\').style.display=\'none\'" style="background:none;border:none;font-size:20px;cursor:pointer;color:#666;">&times;</button>
+      <button onclick="document.getElementById('poModal').style.display='none'" style="background:none;border:none;font-size:20px;cursor:pointer;color:#666;">&times;</button>
     </div>
     <div id="poLoading" style="display:none;text-align:center;padding:40px;color:#666;">발주이력 로딩 중...</div>
     <table id="poTable" style="width:100%;border-collapse:collapse;font-size:11px;">
@@ -113,7 +102,7 @@ modal_html = '''
 </div>
 '''
 
-# JS 코드 — fetch 방식으로 PO 데이터 로딩
+# --- JS: fetch + 이벤트 위임 (renderRows JS 수정 안 함) ---
 modal_js = '''
 <script>
 let PO_DATA = null;
@@ -141,7 +130,7 @@ async function showPO(itemCd, itemNm) {
   document.getElementById('poLoading').style.display = 'block';
   document.getElementById('poTable').style.display = 'none';
   document.getElementById('poSummary').textContent = '';
-  document.getElementById('poTitle').textContent = itemCd + ' / ' + itemNm + ' — 발주이력 로딩 중...';
+  document.getElementById('poTitle').textContent = itemCd + ' / ' + itemNm + ' — 로딩 중...';
   document.getElementById('poModal').style.display = 'block';
 
   const data = await loadPOData();
@@ -151,7 +140,7 @@ async function showPO(itemCd, itemNm) {
   document.getElementById('poTable').style.display = 'table';
 
   if (!pos || pos.length === 0) {
-    document.getElementById('poTitle').textContent = itemCd + ' / ' + itemNm + ' — 발주이력 없음 (최근 10년)';
+    document.getElementById('poTitle').textContent = itemCd + ' / ' + itemNm + ' — 발주이력 없음';
     document.getElementById('poBody').innerHTML = '<tr><td colspan="11" style="padding:20px;text-align:center;color:#999;">발주이력이 없습니다.</td></tr>';
     return;
   }
@@ -181,19 +170,11 @@ async function showPO(itemCd, itemNm) {
   document.getElementById('poSummary').textContent = '합계: ' + totalQty.toLocaleString() + '개, ' + totalAmt.toLocaleString() + '원';
 }
 
-// 모달 외부 클릭 시 닫기
 document.getElementById('poModal').addEventListener('click', function(e) {
   if (e.target === this) this.style.display = 'none';
 });
-</script>
-'''
 
-# HTML에 모달 삽입 (</body> 앞)
-html = html.replace('</body>', modal_html + modal_js + '</body>')
-
-# 행 클릭 이벤트: JS에 renderRows 후 이벤트 위임 방식으로 추가 (TR 직접 수정 안 함)
-click_js = '''
-<script>
+// 행 클릭 이벤트 위임 (renderRows JS 수정 없이)
 document.getElementById('tbody').addEventListener('click', function(e) {
   const tr = e.target.closest('tr');
   if (!tr) return;
@@ -201,18 +182,15 @@ document.getElementById('tbody').addEventListener('click', function(e) {
   if (cells.length < 2) return;
   const codeEl = cells[1].querySelector('.code');
   const nmEl = cells[1].querySelector('.item-nm');
-  if (codeEl && nmEl) showPO(codeEl.textContent, nmEl.textContent.replace(/[()]/g,''));
+  if (codeEl && nmEl) showPO(codeEl.textContent, nmEl.textContent.replace(/[()]/g,'').trim());
 });
 </script>
 '''
-html = html.replace('</body>', click_js + '</body>')
 
-# 품목명 스타일: CSS만 수정 (JS 안 건드림)
-# .item-nm 기존 스타일 → 괄호 + 짙은 회색 + 폰트 축소
-css_patch = '''
-  .item-nm::before { content: "("; }
-  .item-nm::after { content: ")"; }
-'''
+# --- HTML 수정: 모달 + JS 삽입, CSS 패치 (JS renderRows 안 건드림) ---
+html = html.replace('</body>', modal_html + modal_js + '</body>')
+
+# CSS: 품목명 괄호 + 짙은 회색 + 폰트 축소 + 커서
 html = html.replace(
     '.item-nm {',
     '.item-nm::before { content: "("; }\n  .item-nm::after { content: ")"; }\n  .item-nm {'
@@ -221,14 +199,18 @@ html = html.replace(
     'color:#333;font-size:8.5pt;',
     'color:#777;font-size:7.5pt;'
 )
+# TR 커서 포인터 (CSS로)
+if '#tbody tr {' in html:
+    html = html.replace('#tbody tr {', '#tbody tr { cursor: pointer;')
+elif 'cursor: pointer' not in html:
+    html = html.replace('</style>', '  #tbody tr { cursor: pointer; }\n</style>')
 
 # 저장
 with open(f'{base}/ERP_현재고_구매진행_전체.html', 'w', encoding='utf-8') as f:
     f.write(html)
 
-import os
 html_size = os.path.getsize(f'{base}/ERP_현재고_구매진행_전체.html')
 po_size = os.path.getsize(po_json_path)
-print(f'HTML: {html_size/1024/1024:.1f} MB (PO 데이터 분리)')
-print(f'po_data.json: {po_size/1024/1024:.1f} MB (클릭 시 fetch 로딩)')
+print(f'HTML: {html_size/1024:.0f} KB (PO 데이터 분리)')
+print(f'po_data.json: {po_size/1024/1024:.1f} MB')
 print(f'매핑 품목: {len(po_filtered)}개, 총 PO: {sum(len(v) for v in po_filtered.values())}건')
