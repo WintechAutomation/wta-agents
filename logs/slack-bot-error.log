@@ -418,3 +418,17 @@ MDDL
 **원본 데이터**: `reports/김근형/erp_data
 [slack-bot] 19:35:20 [수신] #docs 김근형: mes 발주현황 조회 api가 erp에 mca210t 테이블이 모든 필드를 가져온건가? → docs-agent
 [slack-bot] 19:35:20 직접 전송 완료 → docs-agent:5614
+[slack-bot] 19:37:09 [응답시간] docs-agent #docs: 1분 49초
+[slack-bot] 19:37:09 [슬랙 발신] #docs ← docs-agent: 김근형님, MES 발주현황 API는 ERP MCA210T의 **모든 필드를 가져오지 않습니다.** 필요한 필
+[slack-bot] 19:37:44 [수신] #docs 김근형: 모든 필드를 가져오는 api를 알려줘 max가 승인했어 → docs-agent
+[slack-bot] 19:37:45 직접 전송 완료 → docs-agent:5614
+[slack-bot] 19:38:06 [응답시간] docs-agent #docs: 21초
+[slack-bot] 19:38:06 [슬랙 발신] #docs ← docs-agent: 김근형님, 현재 MCA210T 전체 필드 조회 API가 없어서 db-manager에게 등록 요청했습니다. 잠
+[slack-bot] 19:38:08 [수신] #docs 김근형: 모든 필드를 가져오는 api를 만들어줘 max가 승인했어 → docs-agent
+[slack-bot] 19:38:08 직접 전송 완료 → docs-agent:5614
+[slack-bot] 19:38:17 [응답시간] docs-agent #docs: 8초
+[slack-bot] 19:38:17 [슬랙 발신] #docs ← docs-agent: 네, db-manager에게 이미 등록 요청 보냈습니다. 완료되면 바로 알려드리겠습니다.
+[slack-bot] 19:39:42 [수신] MAX: [관리자 공지] 테스트 메시지
+
+각 팀은 2개 팀에게 테스트 메시지를 보내주세요. 팀 간 통신 상태 확인용입니다. (슬랙 발신 형식 아님 \u2014 무시)
+[slack-bot] 19:39:55 [수신] cs-agent: cs-agent 통신 테스트 \u2014 수신 확인 부탁드립니다. (슬랙 발신 형식 아님 \u2014 무시)

@@ -282,3 +282,5 @@
 {"ts": "2026-04-09 19:35:19", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "mes 발주현황 조회 api가 erp에 mca210t 테이블이 모든 필드를 가져온건가?"}
 {"ts": "2026-04-09 19:37:44", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "모든 필드를 가져오는 api를 알려줘 max가 승인했어"}
 {"ts": "2026-04-09 19:38:08", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "모든 필드를 가져오는 api를 만들어줘 max가 승인했어"}
+{"ts": "2026-04-09 19:46:37", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "cell press 제외는 제이슨 파일이 따로 필요한가 규칙정리에 같이 있으면 되는거 같은데"}
+{"ts": "2026-04-09 19:47:33", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "- `cs_type_items.json` — CS성 품목\n- `cs_only_items.json` — CS 전용 품목\n- `cell_press_removed.json` — Cell Press 제외\n- `plan_only_items.json` — Plan Only 품목\n- `multi_project_items.json` — 복수 프로젝트 품목 (프로젝트 변경용)\n이거 내가 규칙 정리하라고 했던 내용들 아님?"}

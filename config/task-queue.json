@@ -2903,6 +2903,18 @@
       "updated_at": "2026-04-09 19:29:54",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-dev-agent-679bd5",
+      "agent": "dev-agent",
+      "task": "MES 백엔드에 ERP MCA210T (발주진행현황) 테이블 조회 API를 추가해줘.",
+      "message": "MES 백엔드에 ERP MCA210T (발주진행현황) 테이블 조회 API를 추가해줘.\n\n**요구사항:**\n1. ERP SQL Server (192.168.1.201:1433, 읽기전용)의 MCA210T 테이블 전체 필드 조회 API\n2. 엔드포인트: GET /api/erp/mca210t (또는 적절한 RESTful 경로)\n3. MCA210T 테이블의 모든 필드 정보를 반환\n4. 기존 MES 백엔드의 ERP 연결 패턴을 따를 것 (mirae. 스키마)\n5. 페이징/필터 지원 권장\n6. ERP는 READ-ONLY — SELECT만 허용\n\n**참고:**\n- db-manager가 ERP 직접 접속이 차단되어 MES 백엔드 API가 필요한 상황\n- 이 API를 통해 db-manager 등 다른 에이전트들이 발주진행현황 데이터를 조회할 수 있게 됨\n\n부서장 승인 완료된 건이니 바로 진행해줘.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-09 19:49:36",
+      "updated_at": "2026-04-09 19:49:36",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }

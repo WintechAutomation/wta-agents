@@ -10,33 +10,78 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
 base = r'C:\MES\wta-agents\reports\김근형'
 
-# --- 제외 품목 수집 (규칙 2-1~2-3: 사용예정에서 제외, 리스트 유지) ---
-with open(f'{base}/cs_type_items.json', 'r', encoding='utf-8') as f:
-    cs_type = json.load(f)
-with open(f'{base}/cs_only_items.json', 'r', encoding='utf-8') as f:
-    cs_only = json.load(f)
-with open(f'{base}/cell_press_removed.json', 'r', encoding='utf-8') as f:
-    cell_press = json.load(f)
-with open(f'{base}/plan_only_items.json', 'r', encoding='utf-8') as f:
-    plan_only = json.load(f)
+# --- 제외 품목 (규칙 2-1~2-3: 사용예정에서 제외, 리스트 유지) ---
+# JSON 파일 의존성 제거 — 품목코드 직접 정의
 
-exclude_cds = set()
-for src in [cs_type, cs_only, cell_press, plan_only]:
-    items_list = src.get('items', src) if isinstance(src, dict) else src
-    for it in items_list:
-        exclude_cds.add(it.get('item_cd', '') if isinstance(it, dict) else '')
+# 규칙 2-1: CS성 품목 (49+48+3건)
+CS_TYPE = {
+    'LCP070-RT-400L-20-H', 'CRBH8016A', '50-02-56-0', 'MSMF012L1T1', '67-03-39-0',
+    '07-40-92-1', 'HTBN300S5M-100', 'RBC110', 'PTV100C4-4E2R-DC24SR', '67-03-41-0',
+    'A-VP-16-80', '54-06-47-2', 'Film0.8', 'LWLG9C1R80B', 'ZP2-TB20MBN-H5',
+    'HAR_PVD_CIRCLE', 'SLNHRN8-40-8', '67-03-37-0', '60-99-25-0', '626ZZ',
+    '67-99-01-0', '6806ZZ', 'PCSS-8-30-A-RCE', '50-05-39-0', 'PK543AW-T10',
+    '67-03-36-0', '605ZZ', '07-70-15-0', 'LCP12-100Q', '67-03-38-0',
+    '51-03-10-0', 'PTV-100-5B4', 'LHFRWMF13', '60-99-06-1', '67-03-53-1',
+    '07-01-006-0', '67-99-06-0', 'AJ-N2', 'IG32-MM20W-E(24V)', '50-05-42-0',
+    '67-99-08-0', '60-99-08-1', 'SY3140-5LZ', 'AFB80X80C', 'MLG12-C2-R130',
+    'P1083320-012', '6803ZZ', 'LHFS8',
+}
+CS_ONLY = {
+    'R1T-LC', '92-00-58-1', 'CRD514-K', 'MHKL2-20D', 'MXH10-50Z',
+    'PHRC070-R-500-20-H-S', 'CKR20-145EndBlock', 'LP070-RT-200L-10B-L',
+    'HTPA22S3M100-A-P8', '67-00-28-0', 'SLCG5-10', 'ZPT08UN-A5',
+    'ZT610-P1083320-056', 'SLCG5-15', 'LMH10', '110XI4-RB-P1006072',
+    '92-02-16-2', '50-05-57-0', 'E-ELGH15-450-B2', '50-03-14-5',
+    'CDJP2B6-10D-B', '67-03-51-1', 'MXH10-20Z', 'MGJ10-10', '23-00-19-3',
+    'LWLG9B-C2-R105', 'Film0.65', '07-22-004-1', 'PPY-20',
+    'PTV100C4-4E2C-DC24SR', 'CDQ2B16-20DZ', 'ZPT08BN-A5', '50-05-56-0',
+    '67-00-111-0', '01-107-37-1', '07-22-003-1', '101-03-39-1',
+    '110XI4-RB-P1006073', '110XI4-MB-P1006066', '50-05-47-0', '50-01-53-0',
+    'MR85ZZ', 'FGS15049-150', 'Film45', '67-03-32-2', 'Film8-5u',
+    'ZP3-T02US-A3', 'LCO40CD-W12',
+}
+CS_ADDITIONAL = {'MADHT1505BA1', 'RLHW-70-37', 'MBDHT2510BA1'}
 
-# 규칙 2-1 추가 CS성 제외
-additional_cs_exclude = {'MADHT1505BA1', 'RLHW-70-37'}
-exclude_cds.update(additional_cs_exclude)
+# 규칙 2-2: Cell Press 제외 (44건)
+CELL_PRESS = {
+    'AUT8-25', 'EX-13B', 'TIL-50-G-3W', 'WLHM6', 'C-PLSBWRK10-30',
+    'NKOSC5-10-16', 'PSFGW10-52-M4-N4-LKC', '22-19-33-1', 'AJKTNF4-20',
+    'BYH6065', 'HSP0320-2BN37R24LINK', '22-19-33-0', 'C-HBGA20-27', 'BSW12',
+    'EZI-SPEED60H30CR100P', 'E-LBHM6UU', 'Q4BCX05D04B', 'SIO-26P', 'PSFG6-94',
+    '22-52-16-0', 'FWZJM-D15-V8-P5-H10', 'GDS-65-ASS-EUS-75', 'SPWF4',
+    'CSH-SUS-M3-75', 'BYGSR660', '07-70-26-0', 'PSFG6-50',
+    'FWZJM-D12-V8-P5-H7', 'EX-22A', '6804ZZ', 'BSPO5-20', 'AFTC7',
+    'E-MSMD61N-2M', 'KG-GR-30C', 'CLPH-SS-050R', 'CAMERA_IO-5M', 'CX-491',
+    'RTLC40-S-105MM', '22-19-20-0', 'ZAPP-2S(연결형)', 'GDS-65-BSS-EUS-75',
+    'C-MLG12-82', 'KES6-25',
+    'EZI-EC-42M-A',  # 단, EXCLUDE_WHITELIST에서 복원됨
+}
 
-# 3년 경과 제외 (2026-04-09 김근형님 확인)
-expired_exclude = {'MDDLN45BL', 'E2E-C04S12-WC-C1', '110XI4300DPI+REWIND', 'NUVO-8108GC-XL'}
-exclude_cds.update(expired_exclude)
+# 규칙 2-3: Plan Only (78건)
+PLAN_ONLY = {
+    'RLDW-164-123-1C', 'WBF130X86-S24W', 'JPNGA3-P4-B2-R2', 'EzT2-EC-42M',
+    'UR20-FBC-MOD-TCP-V2', 'ZL112-SP01', 'KH-RS-14N', 'PPY-8', 'BYGAO26-250',
+    '21-26-97-3', 'UR20-FBC-MOD-TCP-ECO', '98-06-13-0', 'FT-A11', '97-08-01-0',
+    'RS013019010', '98-13-01-0', 'WRH80X51-S24W', '97-08-03-0', 'BLDCMOTOR',
+    'MDDLN45BE', 'EZM-60L-A-D', 'CSD5-10BX1', '67-99-04-0', '97-08-02-0',
+    '99-14-54-2', 'MXS6-20', '97-32-09-2', '21-26-26-4', 'TSD-V50',
+    'TC-N-PT-100', '97-08-06-0', '96-03-11-0', 'STBK평40-7575', 'KTM-3M-30S-D2',
+    'EZM2-42XL-A', 'PHRC120-L-600-40-H-S', 'BLDC_DRIVER_CABL', '99-14-54-0',
+    'MYR-3D', 'SPACER-6-5-7', 'SA-1H20S', 'DCBK3030', '98-14-54-0',
+    'ZS-20-5A', '07-00-15-0', '97-08-04-0', '50-03-50-0', '99-50-01-0',
+    'KW-885S', 'PPY-6', 'DS-2CD2455FWD-I', 'K14613055', '67-99-07-0',
+    '67-03-54-1', '67-03-48-2', '51-06-21-1', '97-08-05-0', '99-14-54-1',
+    '67-99-05-0', 'BLDC_WIRE_KB2419', 'D-M9B', '13-00-15-0', '51-06-20-1',
+    '50-02-28-0', '98-10-01-0', 'JOT-4-6', '67-99-09-0', 'S6I06GD',
+    '97-05-01-0', '67-99-10-0', '07-20-003-4', 'SMR-06V-B', 'RBC17',
+    'K14613340', 'EZI-IO-EC-I8O8N-E', '50-03-41-0', '50-05-44-0', '51-06-12-3',
+}
 
-# Z축건 등 CS성 프로젝트 제외 (2026-04-09 김근형님 확인)
-cs_project_exclude = {'MBDHT2510BA1'}  # 최근이력 CS, 프로젝트 "Z축건"
-exclude_cds.update(cs_project_exclude)
+# 3년 경과 제외 (2026-04-09)
+EXPIRED = {'MDDLN45BL', 'E2E-C04S12-WC-C1', '110XI4300DPI+REWIND', 'NUVO-8108GC-XL'}
+
+# 전체 제외 Set 통합
+exclude_cds = CS_TYPE | CS_ONLY | CS_ADDITIONAL | CELL_PRESS | PLAN_ONLY | EXPIRED
 
 # --- multi_project 로드 (프로젝트 변경용) ---
 with open(f'{base}/multi_project_items.json', 'r', encoding='utf-8') as f:
