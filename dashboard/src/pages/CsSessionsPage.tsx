@@ -273,7 +273,7 @@ function DetailPanel({ session, onClose }: { session: SessionDetail; onClose: ()
   )
 }
 
-// ── 파이프라인 순서도 ──
+// ── 파이프라인 순서도 (4단계, 2026-04-09 업데이트) ──
 function PipelineModal({ onClose }: { onClose: () => void }) {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60" onClick={onClose}>
@@ -284,76 +284,129 @@ function PipelineModal({ onClose }: { onClose: () => void }) {
         {/* 헤더 */}
         <div className="flex items-center justify-between px-5 py-4 border-b border-gray-800">
           <h2 className="text-lg font-bold text-white">CS 질의응답 파이프라인</h2>
-          <button onClick={onClose} className="text-gray-500 hover:text-gray-300 text-xl leading-none">&times;</button>
+          <div className="flex items-center gap-3">
+            <span className="text-[10px] text-gray-600">cs_pipeline.py</span>
+            <button onClick={onClose} className="text-gray-500 hover:text-gray-300 text-xl leading-none">&times;</button>
+          </div>
         </div>
 
         {/* 순서도 */}
         <div className="flex-1 overflow-auto px-6 py-5">
           <div className="flex flex-col items-center gap-0">
-            {/* 1. 슬랙 수신 */}
-            <FlowBox color="purple" icon="💬" title="슬랙 CS 채널" sub="질문 수신" />
+            {/* 진입 */}
+            <div className="w-full max-w-md flex gap-2 justify-center mb-1">
+              <FlowBox color="purple" icon="💬" title="슬랙 CS 채널" sub="질문 수신" small />
+              <FlowBox color="green" icon="🌐" title="웹챗" sub="cs-wta.com" small />
+              <FlowBox color="blue" icon="📱" title="텔레그램" sub="직접 질문" small />
+            </div>
             <FlowArrow />
 
-            {/* 2. slack-bot → cs-agent */}
-            <FlowBox color="blue" icon="🤖" title="slack-bot.py" sub="cs-agent에게 메시지 전달 (MCP)" />
+            <FlowBox color="blue" icon="🤖" title="cs_pipeline.py" sub="단일 진입점 — 세션 그룹핑 (message_history 기반)" />
             <FlowArrow />
 
-            {/* 3. cs-agent 접수 */}
-            <FlowBox color="cyan" icon="🧠" title="cs-agent 질문 접수" sub="질문 분석 + 이미지 유무 확인" />
-            <FlowArrow />
-
-            {/* 4. 세션 캐시 — 분기점 */}
-            <FlowDiamond title="세션 JSONL 유사도 검색" sub="이전 베스트 답변 매칭" />
+            {/* Stage 1: 세션 이력 검색 */}
+            <div className="w-full max-w-lg relative">
+              <div className="absolute -left-1 top-3 text-[10px] font-bold text-cyan-500 bg-cyan-950/60 border border-cyan-800/40 rounded px-1.5 py-0.5">1</div>
+              <FlowDiamond title="세션 이력 검색" sub="cs-sessions.jsonl에서 동일 질의 우선 조회" />
+            </div>
             <div className="flex items-start w-full max-w-md">
-              {/* 히트 (좌측) */}
               <div className="flex-1 flex flex-col items-center">
                 <div className="text-xs text-green-400 font-semibold mb-1">매칭</div>
                 <FlowArrow short />
-                <FlowBox color="green" icon="⚡" title="즉답 반환" sub="빠른 경로" small />
+                <FlowBox color="green" icon="⚡" title="즉답 반환" sub="캐시 히트 — 빠른 경로" small />
                 <FlowArrow short />
-                <div className="text-xs text-gray-600 mb-1">&#8595; 5단계로</div>
+                <div className="text-xs text-gray-600 mb-1">&#8595; 답변 전송</div>
               </div>
-
-              {/* 미스 (우측) */}
               <div className="flex-1 flex flex-col items-center">
                 <div className="text-xs text-yellow-400 font-semibold mb-1">미매칭</div>
                 <FlowArrow short />
-                <div className="text-xs text-gray-500 mb-1">&#8595; RAG 검색</div>
+                <div className="text-xs text-gray-500 mb-1">&#8595; Self RAG</div>
               </div>
             </div>
 
-            {/* 5. RAG 검색 3개 병렬 */}
-            <div className="w-full max-w-lg border border-blue-800/40 rounded-xl bg-blue-950/20 p-3 my-1">
-              <div className="text-xs text-blue-400 font-semibold text-center mb-2">RAG 벡터 검색 (3개 테이블 병렬)</div>
-              <div className="grid grid-cols-3 gap-2">
-                <DbBox name="CS 이력" table="csagent.vector_embeddings" count="3,318건" color="orange" />
-                <DbBox name="부품매뉴얼" table="manual.documents" count="8,400+파일" color="green" />
-                <DbBox name="WTA매뉴얼" table="manual.wta_documents" count="624파일" color="purple" />
+            {/* Stage 2: Self RAG */}
+            <div className="w-full max-w-lg relative">
+              <div className="absolute -left-1 top-3 text-[10px] font-bold text-blue-500 bg-blue-950/60 border border-blue-800/40 rounded px-1.5 py-0.5">2</div>
+              <div className="w-full border border-blue-800/40 rounded-xl bg-blue-950/20 p-3 my-1">
+                <div className="text-xs text-blue-400 font-semibold text-center mb-1">Self RAG — pgvector 코사인 유사도 (임계값 0.60)</div>
+                <div className="grid grid-cols-3 gap-2 mb-2">
+                  <DbBox name="부품매뉴얼" table="manual.documents" count="265,635건" color="green" />
+                  <DbBox name="WTA매뉴얼" table="manual.wta_documents" count="120,084건" color="purple" />
+                  <DbBox name="CS 이력" table="csagent.vector_embeddings" count="3,318건" color="orange" />
+                </div>
+                <div className="text-[10px] text-gray-600 text-center">Qwen3-Embedding-8B (2000차원) | 3개 테이블 병렬 검색</div>
+              </div>
+            </div>
+
+            {/* 분기: 결과 충분/부족 */}
+            <div className="flex items-start w-full max-w-md">
+              <div className="flex-1 flex flex-col items-center">
+                <div className="text-xs text-green-400 font-semibold mb-1">결과 충분</div>
+                <FlowArrow short />
+                <div className="text-xs text-gray-500 mb-1">&#8595; 답변 생성</div>
+              </div>
+              <div className="flex-1 flex flex-col items-center">
+                <div className="text-xs text-orange-400 font-semibold mb-1">결과 부족</div>
+                <FlowArrow short />
+                <div className="text-xs text-gray-500 mb-1">&#8595; db-manager 폴백</div>
+              </div>
+            </div>
+
+            {/* Stage 3: db-manager 폴백 */}
+            <div className="w-full max-w-lg relative">
+              <div className="absolute -left-1 top-3 text-[10px] font-bold text-orange-500 bg-orange-950/60 border border-orange-800/40 rounded px-1.5 py-0.5">3</div>
+              <div className="w-full border border-orange-800/40 rounded-xl bg-orange-950/20 p-3 my-1">
+                <div className="flex items-center justify-center gap-2 mb-1">
+                  <span>📊</span>
+                  <span className="text-sm font-semibold text-white">db-manager 폴백</span>
+                </div>
+                <div className="text-xs text-gray-400 text-center">파일 기반 추가 검색</div>
+                <div className="text-[10px] text-orange-400/70 text-center mt-1">"추가 검색 중..." 안내 → 사용자 대기</div>
               </div>
             </div>
             <FlowArrow />
 
-            {/* 6. 통합 랭킹 */}
-            <FlowBox color="indigo" icon="📊" title="통합 랭킹" sub="유사도 기준 상위 K개 선별" />
-            <FlowArrow />
-
-            {/* 7. 답변 생성 */}
+            {/* 답변 생성 */}
             <div className="w-full max-w-md border border-purple-800/40 rounded-xl bg-purple-950/20 p-3 my-1">
               <div className="flex items-center justify-center gap-2 mb-1">
                 <span>✨</span>
                 <span className="text-sm font-semibold text-white">답변 생성</span>
               </div>
-              <div className="text-xs text-gray-400 text-center">Claude 모델 (sonnet/opus)</div>
-              <div className="text-xs text-gray-600 text-center mt-1">이미지 첨부 시 → 멀티모달 분석 포함</div>
+              <div className="text-xs text-gray-400 text-center">Claude 모델 (sonnet/opus) — 이미지 첨부 시 멀티모달 분석</div>
+              <div className="text-xs text-gray-600 text-center mt-1">통합 랭킹: 유사도 기준 상위 K개 선별 후 프롬프트 구성</div>
             </div>
             <FlowArrow />
 
-            {/* 8. 슬랙 답변 */}
-            <FlowBox color="purple" icon="📤" title="슬랙 채널 답변 전송" sub="cs-agent → slack-bot → 슬랙 채널" />
+            {/* Stage 4: PDF 첨부 + 최적 답변 */}
+            <div className="w-full max-w-lg relative">
+              <div className="absolute -left-1 top-3 text-[10px] font-bold text-green-500 bg-green-950/60 border border-green-800/40 rounded px-1.5 py-0.5">4</div>
+              <div className="w-full border border-green-800/40 rounded-xl bg-green-950/20 p-3 my-1">
+                <div className="flex items-center justify-center gap-2 mb-1">
+                  <span>📎</span>
+                  <span className="text-sm font-semibold text-white">최적 답변 + PDF 첨부</span>
+                </div>
+                <div className="grid grid-cols-2 gap-2 mt-2">
+                  <div className="bg-gray-900/60 border border-gray-800 rounded-lg px-2 py-2 text-center">
+                    <div className="text-xs font-semibold text-green-400">PDF 추출</div>
+                    <div className="text-[10px] text-gray-500 mt-0.5">해당 페이지 ±1 추출</div>
+                    <div className="text-[10px] text-gray-600 mt-0.5">캐시 재활용</div>
+                  </div>
+                  <div className="bg-gray-900/60 border border-gray-800 rounded-lg px-2 py-2 text-center">
+                    <div className="text-xs font-semibold text-blue-400">Cloudflare 전달</div>
+                    <div className="text-[10px] text-gray-500 mt-0.5">agent.mes-wta.com URL</div>
+                    <div className="text-[10px] text-gray-600 mt-0.5">"준비 중" → 링크 전송</div>
+                  </div>
+                </div>
+              </div>
+            </div>
             <FlowArrow />
 
-            {/* 9. 로깅 */}
-            <FlowBox color="gray" icon="📝" title="세션 JSONL 로깅" sub="질문 + 답변 + RAG소스 + 도구 + 시간" />
+            {/* 응답 전송 */}
+            <FlowBox color="purple" icon="📤" title="채널 답변 전송" sub="슬랙 / 웹챗 / 텔레그램 — 텍스트 + PDF 링크" />
+            <FlowArrow />
+
+            {/* 로깅 */}
+            <FlowBox color="gray" icon="📝" title="세션 JSONL 로깅" sub="질문 + 전문답변 + RAG소스 + 도구 + 응답시간 + session_id" />
           </div>
         </div>
       </div>

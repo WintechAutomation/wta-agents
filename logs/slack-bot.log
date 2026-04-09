@@ -27334,3 +27334,13 @@ https
 2026-04-09 11:05:27,312 INFO [수신] #docs 김근형: 이건 그럼 뭐지? RLHW-70-37 → docs-agent
 2026-04-09 11:05:27,728 INFO 직접 전송 완료 → docs-agent:5614
 2026-04-09 11:07:38,475 INFO [응답시간] docs-agent #docs: 2분 10초
+2026-04-09 11:07:38,476 INFO [슬랙 발신] #docs ← docs-agent: RLHW-70-37 (Flat Ring light)입니다.
+
+- 마지막 프로젝트: "주주쫜스 포장기 #1 카
+2026-04-09 11:11:23,749 INFO [수신] #밥먹기 조한종: 금촌샤브 → sales-agent
+2026-04-09 11:11:23,790 INFO 직접 전송 완료 → sales-agent:5603
+2026-04-09 11:18:03,455 INFO [라우팅] agents.json 로드 완료: 17개 포트, 14개 채널, 3개 prefix
+2026-04-09 11:19:47,162 INFO [api/chat/stream] init: 5108206d - 미쓰비시 H1043 에러에 대해서 설명해줘
+2026-04-09 11:19:47,168 INFO 직접 전송 완료 → cs-agent:5602
+2026-04-09 11:19:47,168 INFO [api/chat/stream] webchat-req 전송 → cs-agent: 5108206d
+2026-04-09 11:19:53,972 INFO [webchat-raw] 5108206d chunk(10b, pipes=0): '조회 중입니다...'

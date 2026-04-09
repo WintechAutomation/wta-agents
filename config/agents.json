@@ -99,7 +99,9 @@
     "auto_response": true,
     "ack_message": true,
     "context_hint": "",
-    "slack_prefix": [],
+    "slack_prefix": [
+      "cs-"
+    ],
     "slack_overrides": {}
   },
   "sales-agent": {
