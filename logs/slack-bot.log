@@ -27269,3 +27269,21 @@ https://agent.mes-wta.com/ERP_장비유형_변경필요_품목리스트
 2026-04-09 10:38:45,933 INFO 직접 전송 완료 → cs-agent:5602
 2026-04-09 10:38:45,934 INFO [api/chat/stream] webchat-req 전송 → cs-agent: bd68a833
 2026-04-09 10:39:00,781 INFO [webchat-raw] bd68a833 chunk(27b, pipes=0): 'Pr4.39 상세 설명 페이지 찾는 중입니다...'
+2026-04-09 10:39:00,794 INFO [webchat-push] webchat-chunk bd68a833 (27b) OK
+2026-04-09 10:41:05,144 INFO [webchat-raw] bd68a833 chunk(422b, pipes=0): '확인했습니다. 78페이지는 파라미터 인덱스 표였고, Pr4.39의 **상세 기능 설명 + 타이밍 다이어그램**은 별도 매뉴얼에 있습니다.\n\n**Pr4.39 상세 설명 페이지 (PDF 다운로드)**:\nhttps://agent.mes-wta.com/api/files/e15166b710ee468797f7e15c01de366a.pdf\n\n- 문서: SX-DSV03383 (MINAS-A6B 파라미터/통신 상세 매뉴얼, 한국어)\n- 내용: **264페이지** — Servo-ON/OFF 시 브레이크 해제 속도 상세 타이밍 다이어그램 (Pr4.38/Pr4.39 동작 설명)\n\n추가로 필요한 페이지가 있으면 말씀해주세요.\n- 245페이지: 파라미터 목록 및 기능 설명\n- 263페이지: Servo-ON/OFF 기본 타이밍\n- 2'
+2026-04-09 10:41:05,155 INFO [webchat-push] webchat-chunk bd68a833 (422b) OK
+2026-04-09 10:41:08,941 INFO [수신] #docs 김근형: 너가만든 리스트에서  top100 가져오는거임 따른거 만들어 오는게 아니라 → docs-agent
+2026-04-09 10:41:09,339 INFO 직접 전송 완료 → docs-agent:5614
+2026-04-09 10:41:15,348 INFO [webchat-push] webchat-done bd68a833 (0b) OK
+2026-04-09 10:41:15,349 INFO [api/chat/stream] 완료: bd68a833
+2026-04-09 10:42:59,205 INFO [api/chat/stream] init: fe3ae5cf - 미쓰비시 H1043 에러에 대해서 설명해줘
+2026-04-09 10:42:59,233 INFO 직접 전송 완료 → cs-agent:5602
+2026-04-09 10:42:59,233 INFO [api/chat/stream] webchat-req 전송 → cs-agent: fe3ae5cf
+2026-04-09 10:43:15,036 INFO [webchat-raw] fe3ae5cf chunk(24b, pipes=0): '미쓰비시 H1043 에러 조회 중입니다...'
+2026-04-09 10:43:15,052 INFO [webchat-push] webchat-chunk fe3ae5cf (24b) OK
+2026-04-09 10:46:56,063 INFO [라우팅] agents.json 로드 완료: 17개 포트, 14개 채널, 2개 prefix
+2026-04-09 10:46:56,763 INFO 봇 User ID: U0AP5B0F71C
+2026-04-09 10:46:56,951 INFO WTA 슬랙 봇 프로세스 시작 — PID 31496 — 2026-04-09 10:46:56 KST
+2026-04-09 10:46:56,951 INFO WTA 슬랙 봇 시작 (P2P 직접 통신)...
+2026-04-09 10:46:57,315 INFO 채널 캐시 갱신: 43개
+2026-04-09 10:46:57,316 INFO Socket Mode 연결 시작... (시도 #1)

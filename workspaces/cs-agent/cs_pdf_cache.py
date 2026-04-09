@@ -27,20 +27,20 @@ def _file_hash(pdf_path: str) -> str:
     return hashlib.md5(pdf_path.encode()).hexdigest()[:8]
 
 
-def _cache_path(pdf_path: str, page: int) -> str:
-    """캐시 파일 경로: cs-cache/{hash}_{page}.pdf"""
+def _cache_path(pdf_path: str, start: int, end: int) -> str:
+    """캐시 파일 경로: cs-cache/{파일명}_{hash}_p{start}-{end}.pdf"""
     h = _file_hash(pdf_path)
     base = os.path.splitext(os.path.basename(pdf_path))[0]
-    return os.path.join(CACHE_DIR, f"{base}_{h}_p{page}.pdf")
+    return os.path.join(CACHE_DIR, f"{base}_{h}_p{start}-{end}.pdf")
 
 
-def _cache_meta_path(pdf_path: str, page: int) -> str:
+def _cache_meta_path(pdf_path: str, start: int, end: int) -> str:
     """캐시 메타 파일 경로 (업로드 URL 저장): .json"""
-    return _cache_path(pdf_path, page).replace(".pdf", ".json")
+    return _cache_path(pdf_path, start, end).replace(".pdf", ".json")
 
 
-def _load_cache_meta(pdf_path: str, page: int) -> dict | None:
-    meta_path = _cache_meta_path(pdf_path, page)
+def _load_cache_meta(pdf_path: str, start: int, end: int) -> dict | None:
+    meta_path = _cache_meta_path(pdf_path, start, end)
     if os.path.exists(meta_path):
         try:
             with open(meta_path, encoding="utf-8") as f:
@@ -50,18 +50,21 @@ def _load_cache_meta(pdf_path: str, page: int) -> dict | None:
     return None
 
 
-def _save_cache_meta(pdf_path: str, page: int, meta: dict) -> None:
-    meta_path = _cache_meta_path(pdf_path, page)
+def _save_cache_meta(pdf_path: str, start: int, end: int, meta: dict) -> None:
+    meta_path = _cache_meta_path(pdf_path, start, end)
     with open(meta_path, "w", encoding="utf-8") as f:
         json.dump(meta, f, ensure_ascii=False)
 
 
-def _extract_page(pdf_path: str, page: int) -> str:
-    """PDF에서 지정 페이지(1-indexed) 추출 → 캐시 파일 저장 후 경로 반환"""
-    out_path = _cache_path(pdf_path, page)
+def _extract_pages(pdf_path: str, start: int, end: int) -> str:
+    """PDF에서 start~end 페이지(1-indexed) 추출 → 캐시 파일 저장 후 경로 반환"""
+    out_path = _cache_path(pdf_path, start, end)
     doc = fitz.open(pdf_path)
+    total = doc.page_count
+    from_page = max(0, start - 1)
+    to_page = min(total - 1, end - 1)
     new_doc = fitz.open()
-    new_doc.insert_pdf(doc, from_page=page - 1, to_page=page - 1)
+    new_doc.insert_pdf(doc, from_page=from_page, to_page=to_page)
     new_doc.save(out_path)
     new_doc.close()
     doc.close()
@@ -82,24 +85,34 @@ def _upload_file(file_path: str) -> str:
     return f"{CLOUDFLARE_BASE}/api/files/{stored_name}"
 
 
-def get_or_extract_pdf_page(pdf_path: str, page: int) -> dict:
+def get_or_extract_pdf_page(pdf_path: str, page: int, context: int = 1) -> dict:
     """
+    page 기준 앞뒤 context 페이지 포함하여 추출 (기본: 앞뒤 1페이지).
     캐시에 있으면 기존 URL 반환, 없으면 추출 + 업로드 후 캐시 저장.
 
-    반환: {"url": str, "cached": bool, "local_path": str}
+    반환: {"url": str, "cached": bool, "local_path": str, "pages": str}
+    예: page=264, context=1 → 263~265페이지 추출
     """
-    meta = _load_cache_meta(pdf_path, page)
+    start = max(1, page - context)
+    end = page + context  # _extract_pages에서 총 페이지 초과 처리
+
+    meta = _load_cache_meta(pdf_path, start, end)
     if meta and meta.get("url"):
-        return {"url": meta["url"], "cached": True, "local_path": meta.get("local_path", "")}
+        return {
+            "url": meta["url"],
+            "cached": True,
+            "local_path": meta.get("local_path", ""),
+            "pages": f"{start}-{end}",
+        }
 
     # 새 추출
-    local_path = _extract_page(pdf_path, page)
+    local_path = _extract_pages(pdf_path, start, end)
     url = _upload_file(local_path)
 
-    meta = {"url": url, "local_path": local_path, "pdf_path": pdf_path, "page": page}
-    _save_cache_meta(pdf_path, page, meta)
+    meta = {"url": url, "local_path": local_path, "pdf_path": pdf_path, "start": start, "end": end}
+    _save_cache_meta(pdf_path, start, end, meta)
 
-    return {"url": url, "cached": False, "local_path": local_path}
+    return {"url": url, "cached": False, "local_path": local_path, "pages": f"{start}-{end}"}
 
 
 def lookup_session_attachment(keyword: str) -> dict | None:

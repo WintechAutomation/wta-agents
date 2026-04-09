@@ -1955,10 +1955,17 @@ def api_cs_sessions_detail(session_id):
     for msg in session_msgs:
         ts = msg.get("timestamp", "")
         md_content = _find_md_content(ts)
+        # JSONL 전문 → 요약 폴백 체인
+        jsonl_answer = msg.get("full_response", "") or msg.get("response_summary", "") or msg.get("answer_preview", "") or msg.get("answer", "")
+        # MD 원문이 있고 JSONL 답변이 잘려있으면 MD 원문 사용
+        if md_content and len(jsonl_answer) < len(md_content):
+            display_answer = md_content
+        else:
+            display_answer = jsonl_answer
         messages.append({
             "timestamp": ts,
             "question": msg.get("query", msg.get("question", "")),
-            "answer": msg.get("full_response", "") or msg.get("response_summary", "") or msg.get("answer_preview", "") or msg.get("answer", ""),
+            "answer": display_answer,
             "status": msg.get("status", ""),
             "image_paths": msg.get("image_paths", []),
             "rag_sources": msg.get("rag_sources", []),

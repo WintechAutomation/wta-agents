@@ -404,7 +404,7 @@ def _log_session(question: str, search_result: dict, claude_result: dict | None,
         "search_time": search_result.get("search_time_sec", 0),
     }
     if claude_result:
-        entry["answer_preview"] = claude_result["answer"][:200]
+        entry["answer_preview"] = claude_result["answer"]
         entry["full_response"] = claude_result["answer"]
         entry["model"] = claude_result["model"]
         entry["input_tokens"] = claude_result["input_tokens"]

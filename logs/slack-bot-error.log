@@ -366,3 +366,40 @@ https://agent.mes-wta.com/ERP_장비유형_변경필요_품목리스트
 [slack-bot] 10:37:20 [슬랙 발신] #docs ← docs-agent: 김근형님, 확인했습니다. ERP 화면에서는 MCDHT3520BA1이 장비유형 미분류("-")인데, erp_d
 [slack-bot] 10:38:19 [수신] #docs 김근형: 그냥 지금 ERP 현재고현황 및 구매진행현황 top 100 따로 파일 만들어서줘.. → docs-agent
 [slack-bot] 10:38:20 직접 전송 완료 → docs-agent:5614
+[slack-bot] 10:38:24 [라우팅] agents.json 로드 완료: 17개 포트, 14개 채널, 2개 prefix
+[slack-bot] 10:38:25 봇 User ID: U0AP5B0F71C
+[slack-bot] 10:38:25 WTA 슬랙 봇 프로세스 시작 \u2014 PID 11560 \u2014 2026-04-09 10:38:25 KST
+[slack-bot] 10:38:25 WTA 슬랙 봇 시작 (P2P 직접 통신)...
+[slack-bot] 10:38:26 채널 캐시 갱신: 43개
+[slack-bot] 10:38:26 Socket Mode 연결 시작... (시도 #1)
+[slack-bot] 10:38:26 P2P HTTP 서버 시작 (포트 5612)
+[slack-bot] 10:38:26 A new session has been established (session id: 73631fdc-9c38-4d12-8964-f375813164b8)
+[slack-bot] 10:38:26 Bolt app is running!
+[slack-bot] 10:38:26 Starting to receive messages from a new connection (session id: 73631fdc-9c38-4d12-8964-f375813164b8)
+[slack-bot] 10:38:45 [api/chat/stream] init: bd68a833 - 지금 보는 페이지는 파라메터 리스트 인덱스자나, 
+내가 묻는건 그 파라메터에 대한 설명 페이지를 말하는거지 
+[slack-bot] 10:38:45 직접 전송 완료 → cs-agent:5602
+[slack-bot] 10:38:45 [api/chat/stream] webchat-req 전송 → cs-agent: bd68a833
+[slack-bot] 10:39:00 [webchat-raw] bd68a833 chunk(27b, pipes=0): 'Pr4.39 상세 설명 페이지 찾는 중입니다...'
+[slack-bot] 10:39:00 [webchat-push] webchat-chunk bd68a833 (27b) OK
+[slack-bot] 10:41:05 [webchat-raw] bd68a833 chunk(422b, pipes=0): '확인했습니다. 78페이지는 파라미터 인덱스 표였고, Pr4.39의 **상세 기능 설명 + 타이밍 다이어그램**은 별도 매뉴얼에 있습니다.\n\n**Pr4.39 상세 설명 페이지 (PDF 다운로드)**:\nhttps://agent.mes-wta.com/api/files/e15166b710ee468797f7e15c01de366a.pdf\n\n- 문서: SX-DSV03383 (MINAS-A6B 파라미터/통신 상세 매뉴얼, 한국어)\n- 내용: **264페이지** \u2014 Servo-ON/OFF 시 브레이크 해제 속도 상세 타이밍 다이어그램 (Pr4.38/Pr4.39 동작 설명)\n\n추가로 필요한 페이지가 있으면 말씀해주세요.\n- 245페이지: 파라미터 목록 및 기능 설명\n- 263페이지: Servo-ON/OFF 기본 타이밍\n- 2'
+[slack-bot] 10:41:05 [webchat-push] webchat-chunk bd68a833 (422b) OK
+[slack-bot] 10:41:08 [수신] #docs 김근형: 너가만든 리스트에서  top100 가져오는거임 따른거 만들어 오는게 아니라 → docs-agent
+[slack-bot] 10:41:09 직접 전송 완료 → docs-agent:5614
+[slack-bot] 10:41:15 [webchat-push] webchat-done bd68a833 (0b) OK
+[slack-bot] 10:41:15 [api/chat/stream] 완료: bd68a833
+[slack-bot] 10:42:59 [api/chat/stream] init: fe3ae5cf - 미쓰비시 H1043 에러에 대해서 설명해줘
+[slack-bot] 10:42:59 직접 전송 완료 → cs-agent:5602
+[slack-bot] 10:42:59 [api/chat/stream] webchat-req 전송 → cs-agent: fe3ae5cf
+[slack-bot] 10:43:15 [webchat-raw] fe3ae5cf chunk(24b, pipes=0): '미쓰비시 H1043 에러 조회 중입니다...'
+[slack-bot] 10:43:15 [webchat-push] webchat-chunk fe3ae5cf (24b) OK
+[slack-bot] 10:46:56 [라우팅] agents.json 로드 완료: 17개 포트, 14개 채널, 2개 prefix
+[slack-bot] 10:46:56 봇 User ID: U0AP5B0F71C
+[slack-bot] 10:46:56 WTA 슬랙 봇 프로세스 시작 \u2014 PID 31496 \u2014 2026-04-09 10:46:56 KST
+[slack-bot] 10:46:56 WTA 슬랙 봇 시작 (P2P 직접 통신)...
+[slack-bot] 10:46:57 채널 캐시 갱신: 43개
+[slack-bot] 10:46:57 Socket Mode 연결 시작... (시도 #1)
+[slack-bot] 10:46:57 P2P HTTP 서버 시작 (포트 5612)
+[slack-bot] 10:46:58 A new session has been established (session id: ea7118fc-1a35-4d29-826d-b810d9dc8cfa)
+[slack-bot] 10:46:58 Bolt app is running!
+[slack-bot] 10:46:58 Starting to receive messages from a new connection (session id: ea7118fc-1a35-4d29-826d-b810d9dc8cfa)

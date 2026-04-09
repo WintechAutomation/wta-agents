@@ -368,7 +368,7 @@ def _log_cs_session(session_id: str, query: str, answer: str, channel: str = "we
         "question_source": question_source,
         "language": "ko",
         "query": query,
-        "response_summary": answer[:200] if answer else "",
+        "response_summary": answer or "",
         "full_response": answer or "",
         "status": status,
     }
