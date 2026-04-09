@@ -152,3 +152,193 @@ MSMF042L1T2: 2024-05-31
 
 **PVD 장비 TOP 10 에러 유형 
 [slack-bot] 14:48:13 [CS세션] 답변 기록: slack-cs-중국-조한종-20260409-144353 #cs-중국 (244자, 첨부:0건)
+[slack-bot] 15:32:27 [수신] #제어-지건승2 지건승: <@U0AP5B0F71C> 메이써루이 프로젝트 코드 조회 에서 임의로 만들어봐 전장배선을 → control-agent
+[slack-bot] 15:32:27 직접 전송 완료 → control-agent:5616
+[slack-bot] 15:32:58 [응답시간] control-agent #제어-지건승2: 30초
+[slack-bot] 15:32:58 [슬랙 발신] #제어-지건승2 ← control-agent: 메이써루이 임의 코드: `MXR12` (Mei-Xue-Rui 12호기)
+
+*전장배선 항목 API 예시*
+``
+[slack-bot] 15:33:55 [api/chat/stream] init: 7120fa96 - kk
+[slack-bot] 15:33:55 직접 전송 완료 → cs-agent:5602
+[slack-bot] 15:33:55 [api/chat/stream] webchat-req 전송 → cs-agent: 7120fa96
+[slack-bot] 15:34:07 [webchat-raw] 7120fa96 chunk(26b, pipes=0): '추가로 궁금하신 사항이 있으시면 말씀해 주세요.'
+[slack-bot] 15:34:07 [webchat-push] webchat-chunk 7120fa96 (26b) OK
+[slack-bot] 15:34:14 [webchat-push] webchat-done 7120fa96 (0b) OK
+[slack-bot] 15:34:14 [api/chat/stream] 완료: 7120fa96
+[slack-bot] 15:49:35 [수신] #docs 김근형: 너가 보내준거 맨 위에 금액 합계 계산해봐 → docs-agent
+[slack-bot] 15:49:35 직접 전송 완료 → docs-agent:5614
+[slack-bot] 15:49:59 [응답시간] docs-agent #docs: 23초
+[slack-bot] 15:49:59 [슬랙 발신] #docs ← docs-agent: 금액 합계입니다:
+
+**규칙 적용 후 (3,815건):**
+- 재고금액: 23억 9,949만
+- 예정금액: 
+[slack-bot] 15:50:29 [파일다운] 저장 완료: image.png (15591B) → C:\MES\wta-agents\uploads\slack\docs\2026-04-09\155029_image.png
+[slack-bot] 15:50:29 [수신] #docs 김근형: 나랑 다른거 보는건가? → docs-agent
+[slack-bot] 15:50:30 MES 서비스 계정 로그인 성공
+[slack-bot] 15:50:30 [파일→MES] 프로젝트 조회 실패: 'list' object has no attribute 'get'
+[slack-bot] 15:50:30 직접 전송 완료 → docs-agent:5614
+[slack-bot] 15:51:03 [수신] #docs 김근형: 제외가 리스트 제외가 아니였는데.. 프로젝트 제외야.. 건수가 왜 달라졌나했다 → docs-agent
+[slack-bot] 15:51:03 직접 전송 완료 → docs-agent:5614
+[slack-bot] 15:53:09 [응답시간] docs-agent #docs: 2분 6초
+[slack-bot] 15:53:09 [슬랙 발신] #docs ← docs-agent: 수정했습니다. 죄송합니다, "제외"를 리스트에서 빼는 것으로 잘못 이해했습니다.
+
+**수정 내용:**
+- 전
+[slack-bot] 16:00:36 [수신] #docs 김근형: 오케이 이제 맞는다 → docs-agent
+[slack-bot] 16:00:36 직접 전송 완료 → docs-agent:5614
+[slack-bot] 16:00:41 [응답시간] docs-agent #docs: 4초
+[slack-bot] 16:00:41 [슬랙 발신] #docs ← docs-agent: 확인 감사합니다. 추가 수정 필요하시면 말씀해주세요.
+[slack-bot] 16:28:23 [수신] #docs 김근형: 자 다시 돌아가서 ZT610-600DPI+REWIND 이거 포장기에 들어가는 품목인데 최근발주가 개조건이라 프로젝트가 -로 되어 있음 프로젝트  → docs-agent
+[slack-bot] 16:28:23 직접 전송 완료 → docs-agent:5614
+[slack-bot] 16:29:48 [응답시간] docs-agent #docs: 1분 24초
+[slack-bot] 16:29:48 [슬랙 발신] #docs ← docs-agent: 확인했습니다. ZT610-600DPI+REWIND 포함해서 같은 상황인 품목이 TOP 200 내에 14건 있
+[slack-bot] 16:36:32 [수신] #docs 김근형: 오케이 좋아요 수정하고서 TOP 200까지 리스트 부탁해요 → docs-agent
+[slack-bot] 16:36:33 직접 전송 완료 → docs-agent:5614
+[slack-bot] 16:36:38 [수신] #docs 김근형: ㅇㅍ260400030 → docs-agent
+[slack-bot] 16:36:39 직접 전송 완료 → docs-agent:5614
+[slack-bot] 16:36:52 [api/chat/stream] init: f6a825b9 - 프래스 핸들러 픽업대기 위치에서 수동으로 그리퍼를 그립하면 그리퍼 동작없음... 원점위치에서는 동작함, 원인
+[slack-bot] 16:36:52 직접 전송 완료 → cs-agent:5602
+[slack-bot] 16:36:52 [api/chat/stream] webchat-req 전송 → cs-agent: f6a825b9
+[slack-bot] 16:37:02 [webchat-raw] f6a825b9 chunk(10b, pipes=0): '조회 중입니다...'
+[slack-bot] 16:37:02 [webchat-push] webchat-chunk f6a825b9 (10b) OK
+[slack-bot] 16:38:01 [webchat-raw] f6a825b9 chunk(750b, pipes=0): '## 프레스 핸들러 그리퍼 위치별 동작 불가 원인 분석\n\n**증상**: 픽업대기 위치에서 수동 그리퍼 그립 → 동작없음 / 원점 위치에서는 정상 동작\n\n---\n\n### 주요 원인 (가능성 높은 순)\n\n**1. 위치 인터락 (Position Interlock) \u2014 가장 유력**\n- 프레스 핸들러는 특정 위치(프레스 작업 구역 인접)에서 그리퍼 수동 동작을 **소프트웨어적으로 차단**합니다\n- 안전 인터락 조건: 픽업대기 위치가 프레스 스트로크 범위 내에 있을 경우 그리퍼 ON 신호 차단\n- **원점에서는 동작되는 이유**: 원점은 인터락 허용 구역이므로 수동 동작 가능\n\n**확인 방법**:\n- HMI → 수동 메뉴 → 인터락 상태 확인\n- 그리퍼 수동 동작 조건(Condition)에 위치 신호(위치 범위) 포'
+[slack-bot] 16:38:01 [webchat-push] webchat-chunk f6a825b9 (750b) OK
+[slack-bot] 16:39:45 [webchat-push] webchat-done f6a825b9 (0b) OK
+[slack-bot] 16:39:45 [api/chat/stream] 완료: f6a825b9
+[slack-bot] 16:40:24 [api/chat/stream] init: f4b69830 - 알람은 뜨지 않음.... 어느 위치든지 장비 정지상태이면 수동으로 그리퍼를 동작시킬수 이씀
+[slack-bot] 16:40:24 직접 전송 완료 → cs-agent:5602
+[slack-bot] 16:40:24 [api/chat/stream] webchat-req 전송 → cs-agent: f4b69830
+[slack-bot] 16:41:15 [webchat-raw] f4b69830 chunk(802b, pipes=20): '추가 정보 감사합니다. 원인 범위가 많이 좁혀졌습니다.\n\n**핵심 단서 정리**:\n- \u2705 알람 없음\n- \u2705 장비 정지 상태이면 어느 위치든 수동 그리퍼 동작 가능\n- \u274c 픽업대기 위치에서만 동작 안됨\n\n---\n\n## 수정된 원인 분석\n\n이 조건을 종합하면 **픽업대기 위치에서 그리퍼 수동 동작이 차단되는 조건**이 특별히 존재한다는 의미입니다.\n\n### 가장 유력한 원인: 그리퍼 동작 허용 조건에 외부 신호 포함\n\n픽업대기 위치에서 그리퍼를 동작시키려면 다음 신호들이 AND 조건으로 걸려있을 수 있습니다:\n\n| 조건 신호 | 설명 | 문제 가능성 |\n|-----------|------|-------------|\n| **프레스 상사점 확인** | 프레스가 상사점(열린 상태)에 있어야 그리퍼 동작 허용 | \u2b50 '
+[slack-bot] 16:41:15 [webchat-push] webchat-chunk f4b69830 (802b) OK
+[slack-bot] 16:41:20 [webchat-push] webchat-done f4b69830 (0b) OK
+[slack-bot] 16:41:20 [api/chat/stream] 완료: f4b69830
+[slack-bot] 16:49:41 [응답시간] docs-agent #docs: 13분 2초
+[slack-bot] 16:49:41 [슬랙 발신] #docs ← docs-agent: 김근형님, 전체 리스트 + TOP 200 생성 완료했습니다.
+
+**규칙 적용 결과 (전체 4,106건 유지)
+[slack-bot] 16:54:08 [수신] #docs 김근형: 아쉬운게 누락이 있네요.. 55348 해당 품목은 호닝형상 장비 품목인데 호닝검사기로 들어가서 지정 오류가 난거 같아요 그리고 23년 12월이긴 → docs-agent
+[slack-bot] 16:54:08 직접 전송 완료 → docs-agent:5614
+[slack-bot] 16:55:33 [수신] #docs 김근형: MSMF042L1T2 해당품목도 여러장비 들어가는데 미지정 누락이네요 → docs-agent
+[slack-bot] 16:55:33 직접 전송 완료 → docs-agent:5614
+[slack-bot] 16:56:08 [api/chat/stream] init: e1aa07bb - 그리퍼 동작시 그립/언그립 에러관로에 계속 에어가 있음
+[slack-bot] 16:56:08 직접 전송 완료 → cs-agent:5602
+[slack-bot] 16:56:08 [api/chat/stream] webchat-req 전송 → cs-agent: e1aa07bb
+[slack-bot] 16:56:36 [webchat-raw] e1aa07bb chunk(869b, pipes=15): '매우 중요한 단서입니다! 원인이 명확해졌습니다.\n\n## 원인 분석 \u2014 에러관로 에어 상시 공급\n\n**그립/언그립 에러관로에 에어가 계속 있음** → 그리퍼가 **에러 상태로 인식**되어 동작 차단\n\n---\n\n### 구조 설명\n\n프레스 핸들러 그리퍼 공압 회로:\n\n| 관로 | 역할 |\n|------|------|\n| 그립 관로 | 그리퍼 닫힘 (제품 파지) |\n| 언그립 관로 | 그리퍼 열림 (제품 해제) |\n| **에러 관로** | 그립/언그립이 동시 or 미완료 시 에러 감지 포트 |\n\n→ **에러 관로에 에어가 있다는 것** = 그립/언그립 중 하나의 관로 에어가 **에러 포트로 역류 또는 누설**되고 있음\n\n---\n\n### 직접 원인 후보\n\n**1. 솔레노이드 밸브 내부 누설 (가장 유력)**\n- 그립'
+[slack-bot] 16:56:36 [webchat-push] webchat-chunk e1aa07bb (869b) OK
+[slack-bot] 16:56:43 [webchat-push] webchat-done e1aa07bb (0b) OK
+[slack-bot] 16:56:43 [api/chat/stream] 완료: e1aa07bb
+[slack-bot] 16:59:02 [응답시간] docs-agent #docs: 3분 29초
+[slack-bot] 16:59:02 [슬랙 발신] #docs ← docs-agent: 김근형님, 두 품목 수정 완료했습니다.
+
+**수정 내역:**
+1. **55348** \u2014 장비유형 [검사기, 
+[slack-bot] 17:13:41 [수신] #docs 김근형: 혹시 현재까지 진행된거 규칙 업데이트 가능? → docs-agent
+[slack-bot] 17:13:42 직접 전송 완료 → docs-agent:5614
+[slack-bot] 17:14:59 [응답시간] docs-agent #docs: 1분 17초
+[slack-bot] 17:14:59 [슬랙 발신] #docs ← docs-agent: 김근형님, 규칙서 업데이트 완료했습니다.
+
+**추가된 규칙:**
+- 2-6. 제외 키워드 프로젝트 자동 변경
+[slack-bot] 17:15:43 [수신] #docs 김근형: 2-6은 200건만 적용인가? 전체 적용은 안돼? → docs-agent
+[slack-bot] 17:15:44 직접 전송 완료 → docs-agent:5614
+[slack-bot] 17:16:03 [수신] #제어-지건승2 지건승: <@U0AP5B0F71C> 아니지 CM-HP3C-001 어때 ? → control-agent
+[slack-bot] 17:16:03 직접 전송 완료 → control-agent:5616
+[slack-bot] 17:16:27 [응답시간] control-agent #제어-지건승2: 23초
+[slack-bot] 17:16:27 [슬랙 발신] #제어-지건승2 ← control-agent: 좋습니다! 메이써루이 프로젝트 코드 = `HP3C`
+
+전장배선 항목 정리:
+```
+CM-HP3C-001  상
+[slack-bot] 17:16:44 [응답시간] docs-agent #docs: 1분 0초
+[slack-bot] 17:16:44 [슬랙 발신] #docs ← docs-agent: 김근형님, 전체 4,106건 모두 검사했습니다. 200건은 실제 변경 성공 건수입니다.
+
+**제외 키워드 프
+[slack-bot] 17:16:52 [수신] #제어-지건승2 지건승: @note 내용 삭제
+27건 추가해보자 고고 → control-agent
+[slack-bot] 17:16:52 직접 전송 완료 → control-agent:5616
+[slack-bot] 17:17:06 [수신] #제어-지건승2 지건승: <@U0AP5B0F71C> note 내용삭제
+27건 진행해보자 → control-agent
+[slack-bot] 17:17:06 직접 전송 완료 → control-agent:5616
+[slack-bot] 17:17:20 [수신] #제어-지건승2 지건승: <@U0AP5B0F71C> 진행내역은 당연히 알려줄거지 ? → control-agent
+[slack-bot] 17:17:20 직접 전송 완료 → control-agent:5616
+[slack-bot] 17:17:33 [수신] #docs 김근형: 아하 아냐아냐 200건이 TOP 200 에 대한 200이라는줄 알고 얘기했던거야 쏘리 → docs-agent
+[slack-bot] 17:17:33 직접 전송 완료 → docs-agent:5614
+[slack-bot] 17:17:40 [응답시간] docs-agent #docs: 6초
+[slack-bot] 17:17:40 [슬랙 발신] #docs ← docs-agent: 아 ㅎㅎ 아닙니다! TOP 200은 재고금액 상위 200건 리스트이고, 프로젝트 변경 235건은 전체 4,1
+[slack-bot] 17:18:13 [수신] #docs 김근형: 그럼 지금 전체 리스트가 규칙내용 확인해서 업데이트 되있는거? → docs-agent
+[slack-bot] 17:18:13 직접 전송 완료 → docs-agent:5614
+[slack-bot] 17:18:25 [응답시간] docs-agent #docs: 11초
+[slack-bot] 17:18:25 [슬랙 발신] #docs ← docs-agent: 네 맞습니다! 현재 전체 리스트(4,106건)에 아래 규칙이 모두 적용되어 있습니다.
+
+**적용된 규칙:**
+[slack-bot] 17:20:06 [수신] #docs 김근형: EZI-EC-42M-A 이건은 놓치신건가요? 확인 데이터에 오류인가요? 50-01-03-0 이품목도.. → docs-agent
+[slack-bot] 17:20:07 직접 전송 완료 → docs-agent:5614
+[slack-bot] 17:21:11 [응답시간] control-agent #제어-지건승2: 3분 50초
+[slack-bot] 17:21:11 [슬랙 발신] #제어-지건승2 ← control-agent: 진행 중입니다.
+
+API 경로 확인 완료: `POST /api/production/project-detail
+[slack-bot] 17:22:45 [응답시간] docs-agent #docs: 2분 38초
+[slack-bot] 17:22:45 [슬랙 발신] #docs ← docs-agent: 김근형님, 확인했습니다.
+
+**EZI-EC-42M-A** \u2014 `cell_press_removed.json`에
+[slack-bot] 17:23:06 [슬랙 발신] #제어-지건승2 ← control-agent: DB 조회 결과 나왔습니다.
+
+*메이써루이 프레스 #12~14*
+- project_id: 93 / 프로젝트코
+[slack-bot] 17:25:02 [슬랙 발신] #제어-지건승2 ← control-agent: 완료됐습니다! \u2705
+
+*메이써루이 프레스 #12~14 전장배선 서브태스크 추가*
+- 위치: 전장배선 (task
+[slack-bot] 17:25:39 [수신] #docs 김근형: 장비지정이 되서 이상 없다고 볼 수는 있으나 리스트상에 표시가 둘다 검사기 1대만 표시되서 예정 수량이 검사기 수량만 차감되는 문제 발생함. 내 → docs-agent
+[slack-bot] 17:25:39 직접 전송 완료 → docs-agent:5614
+[slack-bot] 17:30:06 [응답시간] docs-agent #docs: 4분 27초
+[slack-bot] 17:30:06 [슬랙 발신] #docs ← docs-agent: 김근형님, 원인 파악하고 수정 완료했습니다.
+
+**원인:** JS `recalcAll()`에 프로젝트명 기반
+[slack-bot] 17:44:55 [수신] #docs 김근형: 전체 파일 한번에 업데이트 해주고 있다면 TOP200은 따로 수정 안해줘도 돼 ㅎㅎ → docs-agent
+[slack-bot] 17:44:55 직접 전송 완료 → docs-agent:5614
+[slack-bot] 17:45:02 [응답시간] docs-agent #docs: 7초
+[slack-bot] 17:45:02 [슬랙 발신] #docs ← docs-agent: 네 ㅎㅎ 전체 파일에서 TOP 200을 잘라서 만드는 거라 한번에 같이 업데이트 됩니다! 따로 수정 필요 없
+[slack-bot] 17:47:13 [수신] #docs 김근형: 50-01-07-0 해당 품목도 위에 내용과 같은 품목인데 50-01-03-0 이 품목만 진행한거라면 아쉬운데요.. 전체 리스트 확인해서 같이  → docs-agent
+[slack-bot] 17:47:14 직접 전송 완료 → docs-agent:5614
+[slack-bot] 17:47:49 [수신] #docs 김근형: 50-01-07-0 해당 품목도 위에 내용과 같은 내용의 품목인데 50-01-03-0 이 품목만 진행한거라면 아쉬운데요.. 전체 리스트 확인해서 → docs-agent
+[slack-bot] 17:47:49 직접 전송 완료 → docs-agent:5614
+[slack-bot] 17:48:17 [수신] #docs 조한종: 현장비워도 괜찮으면 올라와서 같이 얘기하면서 정리하는게 ? → docs-agent
+[slack-bot] 17:48:18 직접 전송 완료 → docs-agent:5614
+[slack-bot] 17:48:30 [수신] #docs 김근형: 네 알겠습니다 올라가겠습니다 → docs-agent
+[slack-bot] 17:48:30 직접 전송 완료 → docs-agent:5614
+[slack-bot] 17:48:59 [응답시간] docs-agent #docs: 29초
+[slack-bot] 17:48:59 [슬랙 발신] #docs ← docs-agent: 김근형님, 죄송합니다. 50-01-07-0은 장비유형이 [CVD, PVD] 2개라서 이전 기준(3개+)에 빠
+[slack-bot] 17:52:33 [수신] #docs 김근형: 음.. 방금 확인한것만 봐도 소결,마스크자동기,검사기,pvd 인데 더 많을 것 같은데? 왜 2개로 확인이 된건지? → docs-agent
+[slack-bot] 17:52:33 직접 전송 완료 → docs-agent:5614
+[slack-bot] 17:53:43 [응답시간] docs-agent #docs: 1분 10초
+[slack-bot] 17:53:43 [슬랙 발신] #docs ← docs-agent: 김근형님, 확인했습니다. 원본 데이터 자체의 장비유형 분류 누락입니다.
+
+같은 종류 부품인데 장비유형이 다릅
+[slack-bot] 17:54:55 [수신] #docs 김근형: 나한테 알려달라고 하지말고 erp 발주데이터 확인좀.. → docs-agent
+[slack-bot] 17:54:55 직접 전송 완료 → docs-agent:5614
+[slack-bot] 17:55:17 [응답시간] docs-agent #docs: 21초
+[slack-bot] 17:55:17 [슬랙 발신] #docs ← docs-agent: 죄송합니다. ERP 발주 데이터 확인 요청했습니다. 50-01-07-0 및 동일 류 부품(50-01-XX, 
+[slack-bot] 18:03:56 [슬랙 발신] #docs ← docs-agent: 김근형님, ERP 발주이력 확인 완료했습니다.
+
+**50-01-07-0 발주이력 (15건):**
+대부분 "공
+[slack-bot] 18:16:32 [수신] #제어-지건승2 지건승: <@U0AP5B0F71C> 일단 다시지워줘 잘못들어갔네 이건 EV전용이야 일단지워줘 → control-agent
+[slack-bot] 18:16:33 직접 전송 완료 → control-agent:5616
+[slack-bot] 18:17:16 [응답시간] control-agent #제어-지건승2: 42초
+[slack-bot] 18:17:16 [슬랙 발신] #제어-지건승2 ← control-agent: 삭제 완료했습니다.
+
+총 29건 삭제 (29/29 성공)
+- 제가 추가한 27건 + 기존에 있던 2건(id=
+[slack-bot] 18:32:14 [수신] #docs 김근형: 아뇨 다른 태이블 적용해서 검색해야된다고 알려주지 않았었나요? → docs-agent
+[slack-bot] 18:32:15 직접 전송 완료 → docs-agent:5614
+[slack-bot] 18:32:39 [응답시간] docs-agent #docs: 24초
+[slack-bot] 18:32:39 [슬랙 발신] #docs ← docs-agent: 죄송합니다, 발주이력만 봤네요. BOM(자재명세서) 테이블에서 장비별 부품 등록 데이터를 조회 요청했습니다.
+[slack-bot] 18:33:07 [수신] #docs 김근형: 자재명세서 핑요없음 구매요청 봐바 → docs-agent
+[slack-bot] 18:33:08 직접 전송 완료 → docs-agent:5614
+[slack-bot] 18:39:08 [응답시간] docs-agent #docs: 6분 0초
+[slack-bot] 18:39:08 [슬랙 발신] #docs ← docs-agent: 김근형님, 구매요청(PR) 테이블도 확인했는데 발주이력과 동일한 프로젝트만 나옵니다. "공용자재 구매"로 묶
+[slack-bot] 18:40:54 [수신] #docs 김근형: 재고감안 품목 확인했던 테이블 뭐임 나도 뭔지 까먹었지 너가 검색했던것도 모름? → docs-agent
+[slack-bot] 18:40:54 직접 전송 완료 → docs-agent:5614
