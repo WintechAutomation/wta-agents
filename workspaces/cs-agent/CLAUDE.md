@@ -111,18 +111,41 @@ slack-bot을 중계자로 하는 웹챗 파이프라인으로 변경되었습니
 webchat-req:{request_id}:{query}
 ```
 
-### 처리 흐름
-1. `webchat-req:{id}:{query}` 메시지 수신 (from: slack-bot)
-2. query를 RAG 검색 + CS 이력 조회하여 답변 생성
-3. **응답을 반드시 slack-bot에게 마커로 회신**:
-   - 전체 답변을 1회 청크로 전송 (또는 여러 청크로 분할 전송 가능):
-     ```
-     send_message(to="slack-bot", message="webchat-chunk:{id}:{답변 텍스트}")
-     ```
-   - 답변 완료 후 반드시 종료 마커 전송:
-     ```
-     send_message(to="slack-bot", message="webchat-done:{id}")
-     ```
+### 처리 흐름 (자동 파이프라인 필수 — 2026-04-09)
+
+**모든 CS 질문은 반드시 cs_pipeline.py를 통해 처리한다. 수동 판단/직접 AI 지식 답변 금지.**
+
+```bash
+# 1단계: 파이프라인 자동 실행 (이전세션 + self RAG 통합)
+python C:/MES/wta-agents/workspaces/cs-agent/cs_pipeline.py "{query}"
+```
+
+결과 JSON 필드:
+- `session_hit`: 이전 세션 이력 (있으면 즉시 URL 재사용)
+- `rag_results`: pgvector 검색 결과 (score 포함)
+- `needs_dbmanager`: True면 db-manager 폴백 필요
+- `pdf_info`: PDF 자동 추출 결과 (가능한 경우)
+
+**분기 처리:**
+
+```
+session_hit 있음 → 이전 답변 + 기존 PDF URL 바로 제공 (pipeline 종료)
+
+needs_dbmanager = False (RAG score >= 0.60) →
+  RAG 결과로 답변 생성
+  pdf_info 있으면 PDF URL 첨부
+
+needs_dbmanager = True (RAG score < 0.60) →
+  keep-alive chunk 전송: "webchat-chunk:{id}:관련 자료를 검색 중입니다..."
+  send_message(to="db-manager", message="CS 질문: {query}\n매뉴얼 검색 + source_file + page_number 포함 회신 요청")
+  db-manager 응답 수신 후 → 답변 생성 + PDF 추출 (get_or_extract_pdf_page)
+```
+
+**응답 전송:**
+```
+send_message(to="slack-bot", message="webchat-chunk:{id}:{답변 텍스트}")
+send_message(to="slack-bot", message="webchat-done:{id}")
+```
 
 ### 주의사항
 - **반드시 `to="slack-bot"` 로 회신** (과거 `web-chat:{id}` 방식은 폐기)
@@ -207,6 +230,33 @@ else:
 ```
 
 캐시 경로: `workspaces/cs-agent/reports/cs-cache/{파일명}_{hash}_p{페이지}.pdf`
+
+### 최종 CS 검색 파이프라인 (필수 순서)
+
+**1단계: 이전 세션 검색 (최우선)**
+```python
+from cs_pdf_cache import lookup_session_attachment
+prev = lookup_session_attachment(query_keyword)
+if prev:
+    # 이전 답변 + PDF 링크 바로 제공 (RAG 검색 불필요)
+```
+
+**2단계: 자체 RAG(pgvector) 검색**
+```python
+from cs_rag_search import search_with_pipeline
+pipeline = search_with_pipeline(query)
+# pipeline["rag_results"]: 검색 결과
+# pipeline["needs_dbmanager"]: True면 db-manager 폴백 필요
+```
+
+**3단계: 폴백 (RAG 결과 부족 시)**
+- `needs_dbmanager=True` → db-manager에 추가 검색 요청
+- 사용자에게 keep-alive: "추가 자료를 검색 중입니다..."
+- db-manager 결과 수신 후 합산
+
+**4단계: 최적 답변 + PDF 첨부**
+- 결과 기반 텍스트 답변 생성
+- source_file + page 정보 있으면 get_or_extract_pdf_page() → Cloudflare URL 첨부
 
 ### PDF 페이지 요청 처리 흐름
 1. db-manager에 RAG 검색 요청 (source_file + page_number 필수 요청)

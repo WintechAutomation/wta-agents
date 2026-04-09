@@ -27287,3 +27287,13 @@ https://agent.mes-wta.com/ERP_장비유형_변경필요_품목리스트
 2026-04-09 10:46:56,951 INFO WTA 슬랙 봇 시작 (P2P 직접 통신)...
 2026-04-09 10:46:57,315 INFO 채널 캐시 갱신: 43개
 2026-04-09 10:46:57,316 INFO Socket Mode 연결 시작... (시도 #1)
+2026-04-09 10:46:57,394 INFO P2P HTTP 서버 시작 (포트 5612)
+2026-04-09 10:50:32,811 INFO [슬랙 발신] #docs ← docs-agent: 김근형님, ERP 현재고현황 및 구매진행현황 리스트에서 재고금액 기준 TOP 100 입니다.
+
+https:/
+2026-04-09 10:52:17,649 INFO [수신] #docs 김근형: <https://agent.mes-wta.com/erp_%EC%9E%AC%EA%B3%A0%ED%98%84%ED%99%A9_%EB%B0%9C%EC → docs-agent
+2026-04-09 10:52:18,057 INFO 직접 전송 완료 → docs-agent:5614
+2026-04-09 10:55:59,453 INFO [webchat-raw] fe3ae5cf chunk(297b, pipes=0): '## 미쓰비시 CRnQ/CRnD — H1043 에러\n\n**에러명**: 3번 축 엔코더 초기 통신 이상 (Encoder init communication error)\n\n**원인**: 서보 앰프 3번 축과 엔코더 간 초기 통신 실패\n\n**해결방법**:\n1. 전원을 OFF → 재투입\n2. 재발 시 미쓰비시 전기 구입처에 문의\n\n**참고**: H104n 계열은 축별 에러 (H1041=1축, H1042=2축, H1043=3축, ... H1048=8축)\n\n**출처**: BFP-A8588-B (CRnQ/CRnD 컨트롤러 트러블슈팅 매뉴얼)'
+2026-04-09 10:55:59,470 ERROR [webchat-push] webchat-chunk fe3ae5cf 예외: HTTP Error 404: Not Found
+2026-04-09 10:56:03,781 ERROR [webchat-push] webchat-done fe3ae5cf 예외: HTTP Error 404: Not Found
+2026-04-09 10:59:24,938 INFO [응답시간] docs-agent #docs: 7분 6초
