@@ -385,3 +385,24 @@ API 경로 확인 완료: `POST /api/production/project-detail
 - #68, 장비=
 [slack-bot] 19:09:21 [수신] #docs 김근형: 오케이 z축건 키워드 반영하고 수정좀여 → docs-agent
 [slack-bot] 19:09:21 직접 전송 완료 → docs-agent:5614
+[slack-bot] 19:14:28 [응답시간] docs-agent #docs: 5분 6초
+[slack-bot] 19:14:28 [슬랙 발신] #docs ← docs-agent: 김근형님, Z축건 키워드 반영 완료했습니다.
+
+**MBDHT2510BA1 처리 결과:**
+- 프로젝트: "주
+[slack-bot] 19:15:24 [수신] #docs 김근형: erp_현재고_TOP20:1  Failed to load resource: the server responded with a status of  → docs-agent
+[slack-bot] 19:15:25 직접 전송 완료 → docs-agent:5614
+[slack-bot] 19:16:12 [응답시간] docs-agent #docs: 46초
+[slack-bot] 19:16:12 [슬랙 발신] #docs ← docs-agent: 김근형님, TOP 20 링크 수정 완료했습니다.
+
+버튼 링크(`erp_현재고_TOP20`)와 실제 파일명 불
+[slack-bot] 19:16:43 [수신] #docs 김근형: erp_현재고_TOP20:1  Failed to load resource: the server responded with a status of  → docs-agent
+[slack-bot] 19:16:43 직접 전송 완료 → docs-agent:5614
+[slack-bot] 19:18:14 [응답시간] docs-agent #docs: 1분 30초
+[slack-bot] 19:18:14 [슬랙 발신] #docs ← docs-agent: 김근형님, TOP 20 링크 수정 완료했습니다. 다시 확인 부탁드립니다.
+
+https://agent.mes-
+[slack-bot] 19:19:03 [수신] #docs 김근형: 들어가지긴 하는데 top20 에서 전체 리스트로 오는 버튼이 없고 top 20 버튼만 있음 → docs-agent
+[slack-bot] 19:19:04 직접 전송 완료 → docs-agent:5614
+[slack-bot] 19:19:37 [수신] #docs 김근형: MDDLN55BL 찾았다 대구텍 키엔스 → docs-agent
+[slack-bot] 19:19:38 직접 전송 완료 → docs-agent:5614

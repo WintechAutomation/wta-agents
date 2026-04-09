@@ -210,14 +210,15 @@ new_html = new_html.replace(
     'if (types.length > 1 && r[8] && !MULTI_EQUIP.has(r[1])) {'
 )
 
-# 네비게이션 버튼 정의
+# 네비게이션 버튼 정의 (regex로 기존 버튼 교체)
 btn_style = "background:#fff;color:#1a237e;border:none;padding:6px 14px;border-radius:20px;font-size:9pt;cursor:pointer;font-weight:700;font-family:'Malgun Gothic',sans-serif;margin-left:4px;"
-orig_btn = """<button onclick="location.href='erp_현재고_TOP20'" style="background:#fff;color:#1a237e;border:none;padding:6px 14px;border-radius:20px;font-size:9pt;cursor:pointer;font-weight:700;font-family:'Malgun Gothic',sans-serif;">TOP 20 &rarr;</button>"""
 nav_full = f'<button onclick="location.href=\'erp_현재고_TOP20\'" style="{btn_style}">TOP 20 &rarr;</button><button onclick="location.href=\'ERP_현재고_구매진행_TOP200\'" style="{btn_style}">TOP 200 &rarr;</button>'
 nav_top200 = f'<button onclick="location.href=\'ERP_현재고_구매진행_전체\'" style="{btn_style}">&larr; 전체</button><button onclick="location.href=\'erp_현재고_TOP20\'" style="{btn_style}">TOP 20 &rarr;</button>'
 nav_top20 = f'<button onclick="location.href=\'ERP_현재고_구매진행_전체\'" style="{btn_style}">&larr; 전체</button><button onclick="location.href=\'ERP_현재고_구매진행_TOP200\'" style="{btn_style}">&larr; TOP 200</button>'
 
-new_html = new_html.replace(orig_btn, nav_full)
+# 기존 네비 버튼 영역 (</div> 바로 앞 버튼들) regex 교체
+nav_pattern = re.compile(r'(<button onclick="location\.href=\'[^\']*\'"[^>]*>(?:TOP \d+|&[lr]arr; (?:전체|TOP \d+))[^<]*</button>)+')
+new_html = nav_pattern.sub(nav_full, new_html)
 
 outpath = f'{base}/ERP_현재고_구매진행_전체.html'
 with open(outpath, 'w', encoding='utf-8') as f:
@@ -237,6 +238,8 @@ top200_html = top200_html.replace(
     '<h1>ERP 현재고현황 및 구매진행현황 TOP 200</h1>'
 )
 
+top200_html = nav_pattern.sub(nav_top200, top200_html)
+
 outpath200 = f'{base}/ERP_현재고_구매진행_TOP200.html'
 with open(outpath200, 'w', encoding='utf-8') as f:
     f.write(top200_html)
@@ -255,6 +258,8 @@ top20_html = top20_html.replace(
     '<h1>ERP 현재고현황 및 구매진행현황</h1>',
     '<h1>ERP 현재고현황 및 구매진행현황 TOP 20</h1>'
 )
+
+top20_html = nav_pattern.sub(nav_top20, top20_html)
 
 outpath20 = f'{base}/ERP_현재고_구매진행_TOP20.html'
 with open(outpath20, 'w', encoding='utf-8') as f:

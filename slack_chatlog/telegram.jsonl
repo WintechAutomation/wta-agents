@@ -269,3 +269,9 @@
 {"ts": "2026-04-09 18:47:53", "direction": "inbound", "user": "boss", "text": "csagent 웹페이지에 보면 \n정식 cs 팀인원들은 cs 관련 작업을 올릴때 이플랫폼에 올리게 되는데, 그렇지않은 약간 지원인력(sw 개발자, 비전팀개발자 )등은 이 cs 계정이 ㅣ없는 인원이 있을거라 공개용 cs 등록 페이지가 좀 필요해. \n계정없이도 등록하는게 가능한.  \n\n가능해 ?"}
 {"ts": "2026-04-09 18:48:16", "direction": "outbound", "user": "MAX", "text": "cs-agent에게 확인 요청했습니다.\n\n공개용 CS 등록 페이지:\n- 로그인/계정 없이 누구나 CS 이슈 등록 가능\n- 등록자명, 소속, 장비/모델, 증상, 첨부파일 입력\n- SW 개발자, 비전팀 등 지원인력 대상\n\n구현 방안 검토 후 보고받겠습니다."}
 {"ts": "2026-04-09 18:48:51", "direction": "outbound", "user": "MAX", "text": "구현 가능합니다.\n\n방안:\n- /public/cs-register 페이지 (로그인 불필요)\n- 입력: 등록자명, 소속/팀, 장비모델, 증상/내용, 첨부파일\n- 제출 → 기존 cs_history 테이블에 저장, 접수번호 표시\n- rate-limit으로 스팸 방지\n\n예상 공수: 반나절 (dev-agent 담당)\n\n진행할까요?"}
+{"ts": "2026-04-09 19:22:24", "direction": "inbound", "user": "boss", "text": "https://cs-wta.com/cs/new \n\n이페이지필드를 그대로 살려서 \n새 페이지로 만들어줘 기존거랑 겹치면 안되니까. ."}
+{"ts": "2026-04-09 19:22:49", "direction": "outbound", "user": "MAX", "text": "cs-agent에게 구현 지시했습니다.\n/cs/new 페이지 필드를 그대로 살려서 별도 공개 경로로 새 페이지 생성합니다. 기존 페이지와 충돌 없이 진행합니다."}
+{"ts": "2026-04-09 19:23:30", "direction": "inbound", "user": "boss", "text": "ERP 에 MGA500 이 무슨테이블이냐?"}
+{"ts": "2026-04-09 19:23:45", "direction": "inbound", "user": "boss", "text": "음 cs agent 한테 하지말고 dev 한테 하지"}
+{"ts": "2026-04-09 19:24:14", "direction": "outbound", "user": "MAX", "text": "dev-agent에게 이관했습니다. 공개 CS 등록 페이지 구현 + 빌드 + 배포까지 진행합니다."}
+{"ts": "2026-04-09 19:24:29", "direction": "outbound", "user": "MAX", "text": "📊 MGA500T 조회 결과:\n\n- mirae.MGA500T — 입고 관련 테이블로 추정\n- MGA100T(입고 확정)의 상세/이력 테이블 계열\n- 현재 ERP DB 직접 접속 차단 상태라 컬럼 구조 확인 불가\n\n정확한 구조 확인하려면:\n1. ERP 담당자/미래ERP 관리자에게 문의\n2. 또는 방화벽 허용 후 직접 조회"}

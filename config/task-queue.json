@@ -2867,6 +2867,42 @@
       "updated_at": "2026-04-09 18:48:08",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-cs-agent-b137ab",
+      "agent": "cs-agent",
+      "task": "부서장 승인 — 공개 CS 등록 페이지 구현 진행:",
+      "message": "부서장 승인 — 공개 CS 등록 페이지 구현 진행:\n\n기준 페이지: https://cs-wta.com/cs/new (기존 CS 등록 페이지)\n- 이 페이지의 필드 구성을 그대로 살려서 공개용 새 페이지로 만들기\n- 기존 /cs/new 페이지와 겹치면 안 됨 (별도 경로)\n- 경로: /public/cs-register (또는 적절한 경로)\n- 로그인 불필요\n- 필드는 기존 /cs/new와 동일하게 유지\n\n먼저 /cs/new 페이지의 현재 필드 구성을 확인하고, 동일한 필드로 공개 페이지를 구현해주세요. 백엔드 + 프론트엔드 모두 진행.\n\n기존 페이지 코드와 충돌 없이 별도 컴포넌트/API로 구현해야 합니다.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-09 19:22:38",
+      "updated_at": "2026-04-09 19:22:38",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-dev-agent-a1c3af",
+      "agent": "dev-agent",
+      "task": "cs-wta.com 공개 CS 등록 페이지 구현 요청:",
+      "message": "cs-wta.com 공개 CS 등록 페이지 구현 요청:\n\n기준 페이지: https://cs-wta.com/cs/new (기존 CS 등록 페이지)\n- 이 페이지의 필드 구성을 그대로 살려서 공개용 새 페이지로 만들기\n- 기존 /cs/new 페이지와 겹치면 안 됨 (별도 경로)\n- 경로: /public/cs-register (또는 적절한 경로)\n- 로그인 불필요, 계정 없는 지원인력(SW개발자, 비전팀 등)이 사용\n- 필드는 기존 /cs/new와 동일하게 유지\n- 제출 → 기존 cs_history 테이블에 저장, 접수번호 표시\n\n백엔드:\n- POST /api/v1/public/cs-submit (인증 없음, rate-limit 권장)\n- 기존 cs_history 테이블에 insert (status='접수', cs_receiver='공개등록')\n\n프론트엔드:\n- App.tsx에 인증 불필요 경로로 추가\n- 기존 /cs/new 컴포넌트와 충돌 없이 별도 컴포넌트로 구현\n\n코드 위치: C:\\MES\\csagent\\\n구현 완료 후 빌드 + 배포까지 진행해주세요.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-09 19:23:58",
+      "updated_at": "2026-04-09 19:23:58",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-dev-agent-59eebb",
+      "agent": "dev-agent",
+      "task": "공개 CS 등록 페이지 작업 취소해주세요. cs-agent가 이미 구현+배포 완료했습니다. 중복 작업 불필요합니다.",
+      "message": "공개 CS 등록 페이지 작업 취소해주세요. cs-agent가 이미 구현+배포 완료했습니다. 중복 작업 불필요합니다.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-09 19:29:54",
+      "updated_at": "2026-04-09 19:29:54",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }
