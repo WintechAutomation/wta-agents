@@ -92,3 +92,21 @@ MSMF042L1T2 이거 발주건 있어요 → docs-agent
 [slack-bot] 14:29:43 [슬랙 발신] #docs ← docs-agent: 죄송합니다, 제가 "구매조건부"를 CS성으로 잘못 분류했습니다.
 
 MSMF042L1T2: 2024-05-31
+[slack-bot] 14:31:24 [수신] #docs 김근형: 오케이 저 7건 TOP100 말고 전체 리스트에 적용해서 가져와 → docs-agent
+[slack-bot] 14:31:24 직접 전송 완료 → docs-agent:5614
+[slack-bot] 14:32:48 [응답시간] docs-agent #docs: 1분 24초
+[slack-bot] 14:32:48 [슬랙 발신] #docs ← docs-agent: 전체 리스트 규칙 적용 완료 (4,106건 → 3,815건, 291건 제외):
+
+**제외 처리 (4건 추가)
+[slack-bot] 14:38:08 [수신] #docs 김근형: MSMF042L1T2 사용예정 뭐가 바뀐거임? → docs-agent
+[slack-bot] 14:38:08 직접 전송 완료 → docs-agent:5614
+[slack-bot] 14:38:26 [응답시간] docs-agent #docs: 18초
+[slack-bot] 14:38:26 [슬랙 발신] #docs ← docs-agent: 솔직히 말씀드리면, MSMF042L1T2는 핸들러 제거만 적용했고 다른 변경은 하지 않았습니다.
+
+현재 상태
+[slack-bot] 14:39:08 [수신] #docs 김근형: 사용예정 장비가 7대나 있는데 왜 빈칸이냐고 ;; → docs-agent
+[slack-bot] 14:39:08 직접 전송 완료 → docs-agent:5614
+[slack-bot] 14:39:34 [수신] #docs 김근형: **사용예정 유지 (3건):**
+- #36 MSMF042L1T2 \u2014 장비 7개(핸들러 제거) \u2713
+- #17 ZT610-600DPI+REWIND  → docs-agent
+[slack-bot] 14:39:35 직접 전송 완료 → docs-agent:5614

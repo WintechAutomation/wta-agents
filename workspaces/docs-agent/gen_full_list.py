@@ -45,6 +45,48 @@ exclude_cds.update(expired_exclude)
 # --- 규칙 2-5: 프로젝트 예외 미배정 (장비유형 원본 유지) ---
 exception_items = {'SS-540A-V1', '55348'}
 
+# --- 사용예정 적용 품목 (3년내 발주이력 기반 수량/금액 계산) ---
+with open(f'{base}/multi_project_items.json', 'r', encoding='utf-8') as f:
+    multi = json.load(f)
+multi_dict = {it['item_cd']: it for it in multi['items']}
+
+from datetime import datetime
+cutoff_3y = datetime(2023, 4, 9)
+cs_kw_strict = ['CS', 'cs', 'C/S', '충돌', '수리', '보수', '교체', '고장', '파손', '무상', 'AS', '긴급', '요청건']
+
+def calc_expected(item_cd):
+    """3년내 비CS 발주 수량 합산 → 예정수량/금액 계산"""
+    mi = multi_dict.get(item_cd)
+    if not mi:
+        return None
+    total_qty = 0
+    for po in mi.get('po_history', []):
+        po_dt = po.get('po_dt', '')
+        pjt = po.get('pjt_name', '')
+        qty = po.get('po_qty', 0) or 0
+        try:
+            dt = datetime.strptime(po_dt[:10], '%Y-%m-%d')
+            within = dt >= cutoff_3y
+        except:
+            within = False
+        is_cs = any(kw in pjt for kw in cs_kw_strict)
+        if within and not is_cs:
+            total_qty += qty
+    if total_qty == 0:
+        return None
+    # 예정수량은 재고수량 초과 불가
+    stock_qty = mi['stock_qty']
+    stock_amt = mi['stock_amt']
+    use_qty = min(total_qty, stock_qty)
+    unit_price = stock_amt // stock_qty if stock_qty > 0 else 0
+    est_amt = unit_price * use_qty
+    remain_qty = stock_qty - use_qty
+    remain_amt = stock_amt - est_amt
+    return {'qty': use_qty, 'amt': est_amt, 'remain_qty': remain_qty, 'remain_amt': remain_amt}
+
+# 사용예정 적용 대상 (3년내 장비발주 있으나 프로젝트 미적용)
+apply_expected = {'MSMF042L1T2', 'ZT610-600DPI+REWIND', 'EZI-EC-ALL-42L-A-R'}
+
 # --- 원본 HTML 로드 ---
 src_html = f'{base}/erp_재고현황_발주내역.html'
 with open(src_html, 'r', encoding='utf-8') as f:
@@ -95,6 +137,15 @@ for row in data:
 
     # 규칙 2-5: 장비유형 원본 유지 (자동 할당만 제외)
 
+    # 사용예정 수량/금액 적용
+    if item_cd in apply_expected:
+        result = calc_expected(item_cd)
+        if result:
+            row[10] = result['qty']
+            row[11] = result['amt']
+            row[12] = result['remain_qty']
+            row[13] = result['remain_amt']
+
     filtered.append(row)
 
 print(f'제외: {excluded_count}건, 핸들러 제거: {handler_removed}건')
@@ -144,7 +195,7 @@ check_apply = ['MSMF042L1T2', 'ZT610-600DPI+REWIND', 'EZI-EC-ALL-42L-A-R']
 for cd in check_apply:
     for r in filtered:
         if r[1] == cd:
-            print(f'유지 #{r[0]} {cd}: equip={r[9]}, proj={r[8][:45]}')
+            print(f'적용 #{r[0]} {cd}: 장비={r[9]}, 예정수량={r[10]}, 예정금액={r[11]:,}, 남는재고={r[12]}, 남는금액={r[13]:,}')
 
 # 예외 미배정 확인
 for cd in ['SS-540A-V1', '55348']:
