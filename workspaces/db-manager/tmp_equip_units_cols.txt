@@ -1,0 +1,12 @@
+column_name | data_type
+-------------------------------------------
+id | integer
+serial_number | character varying
+model_id | integer
+customer_name | character varying
+install_date | date
+warranty_expires | date
+location | character varying
+created_at | timestamp with time zone
+
+�� 8��

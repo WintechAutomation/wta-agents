@@ -2651,6 +2651,18 @@
       "updated_at": "2026-04-09 11:17:26",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-cs-agent-e1b04f",
+      "agent": "cs-agent",
+      "task": "부서장 추가 지시:",
+      "message": "부서장 추가 지시:\n\n세션 이력 검색(1단계)에서 session_hit가 있을 때, 사용자에게 답변 전에 \"유사한 CS 이력이 있어 바로 답변드리겠습니다\" 같은 안내 멘트를 먼저 보내주세요.\n\n예시: \"이전에 유사한 질의응답 이력이 있어 바로 답변드리겠습니다.\"\n\n이렇게 하면 사용자가 이전 이력 기반 답변임을 인지할 수 있습니다. CLAUDE.md에도 반영해주세요.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-09 11:24:56",
+      "updated_at": "2026-04-09 11:24:56",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }

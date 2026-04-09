@@ -129,7 +129,10 @@ python C:/MES/wta-agents/workspaces/cs-agent/cs_pipeline.py "{query}"
 **분기 처리:**
 
 ```
-session_hit 있음 → 이전 답변 + 기존 PDF URL 바로 제공 (pipeline 종료)
+session_hit 있음 →
+  1) 안내 chunk 먼저 전송: "webchat-chunk:{id}:이전에 유사한 질의응답 이력이 있어 바로 답변드리겠습니다."
+  2) 이전 답변 + 기존 PDF URL chunk 전송
+  3) webchat-done (pipeline 종료, RAG 검색 불필요)
 
 needs_dbmanager = False (RAG score >= 0.60) →
   RAG 결과로 답변 생성

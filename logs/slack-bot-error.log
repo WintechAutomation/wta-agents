@@ -38,3 +38,11 @@
 [slack-bot] 11:07:38 [슬랙 발신] #docs ← docs-agent: RLHW-70-37 (Flat Ring light)입니다.
 
 - 마지막 프로젝트: "주주쫜스 포장기 #1 카
+[slack-bot] 11:11:23 [수신] #밥먹기 조한종: 금촌샤브 → sales-agent
+[slack-bot] 11:11:23 직접 전송 완료 → sales-agent:5603
+[slack-bot] 11:18:03 [라우팅] agents.json 로드 완료: 17개 포트, 14개 채널, 3개 prefix
+[slack-bot] 11:19:47 [api/chat/stream] init: 5108206d - 미쓰비시 H1043 에러에 대해서 설명해줘
+[slack-bot] 11:19:47 직접 전송 완료 → cs-agent:5602
+[slack-bot] 11:19:47 [api/chat/stream] webchat-req 전송 → cs-agent: 5108206d
+[slack-bot] 11:19:53 [webchat-raw] 5108206d chunk(10b, pipes=0): '조회 중입니다...'
+[slack-bot] 11:19:53 [webchat-push] webchat-chunk 5108206d (10b) OK
