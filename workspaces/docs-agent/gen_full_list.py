@@ -47,6 +47,7 @@ cutoff_3y = datetime(2023, 3, 1)  # 3년+1개월 여유 (경계선 품목 누락
 # 장비유형 수정
 EQUIP_OVERRIDE = {
     '55348': ['호닝형상'],  # 호닝형상 전용 품목, 검사기 분류 오류 수정
+    '50-01-07-0': ['PVD', '검사기', '포장기', '프레스'],  # 김근형님 직접 지정 (CVD 제외)
 }
 # 프로젝트 수동 지정 (multi_project에 없거나 cutoff 경계선)
 PROJ_OVERRIDE = {
@@ -78,17 +79,21 @@ def find_alt_project(item_cd):
             pass
     return None
 
-# --- 원본 HTML 로드 ---
-src_html = f'{base}/erp_재고현황_발주내역.html'
+# --- 원본 데이터 + HTML 템플릿 로드 ---
+# erp_data.json에서 원본 데이터 로드
+with open(f'{base}/erp_data.json', 'r', encoding='utf-8') as f:
+    erp_raw = json.load(f)
+data = erp_raw['data']
+
+# HTML 템플릿 (기존 생성 파일에서 JS/레이아웃 재사용)
+src_html = f'{base}/ERP_현재고_구매진행_전체.html'
 with open(src_html, 'r', encoding='utf-8') as f:
     html = f.read()
 
 m = re.search(r'const data = (\[\[.+?\]\]);', html, re.DOTALL)
 if not m:
-    print("ERROR: data array not found")
+    print("ERROR: data array not found in template HTML")
     sys.exit(1)
-
-data = json.loads(m.group(1))
 print(f'전체 데이터: {len(data)}건')
 
 # --- 규칙 적용 (리스트에서 제거하지 않음, 장비유형만 수정) ---
