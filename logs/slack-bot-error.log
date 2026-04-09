@@ -182,3 +182,49 @@ MADHT1505BA1은 장비유형이 [CVD, PVD, 검사기, 소결,
 - 주소: 경기 수원시 영통구 태장로 73
 - 카테고리: 칼국수, 만두
 - 네이버 지도: h (슬랙 발신 형식 아님 \u2014 무시)
+[slack-bot] 11:50:30 [수신] #밥먹기 조한종: <@U0AP5B0F71C> 메뉴랑 가격 데이터 정리해둬 이미지에 나와있네 . → sales-agent
+[slack-bot] 11:50:30 직접 전송 완료 → sales-agent:5603
+[slack-bot] 11:50:37 [슬랙 발신] #밥먹기 ← sales-agent: 이미지가 보이지 않습니다. 금촌샤브칼국수 메뉴/가격 이미지를 다시 업로드해주시면 정리해서 전달하겠습니다. \U0001f4b0
+[slack-bot] 11:50:56 [파일다운] 저장 완료: image.png (129072B) → C:\MES\wta-agents\uploads\slack\밥먹기\2026-04-09\115056_image.png
+[slack-bot] 11:50:56 [수신] #밥먹기 조한종: 멍충이. → sales-agent
+[slack-bot] 11:50:56 직접 전송 완료 → sales-agent:5603
+[slack-bot] 11:50:57 MES 서비스 계정 로그인 성공
+[slack-bot] 11:50:57 [파일→MES] 프로젝트 조회 실패: 'list' object has no attribute 'get'
+[slack-bot] 11:51:13 [슬랙 발신] #밥먹기 ← sales-agent: \U0001f35c 금촌샤브칼국수 메뉴 & 가격표
+
+**메인 메뉴**
+- 버섯쇠고랑국수: 10,000원
+- 소고기우거: 8,
+[slack-bot] 11:51:30 [수신] #밥먹기 조한종: 어디에 저장햇냐? → sales-agent
+[slack-bot] 11:51:30 직접 전송 완료 → sales-agent:5603
+[slack-bot] 11:51:43 [수신] #밥먹기 조한종: <@U0AP5B0F71C> 어디에 저장햇냐? → sales-agent
+[slack-bot] 11:51:43 직접 전송 완료 → sales-agent:5603
+[slack-bot] 11:52:11 [슬랙 발신] #밥먹기 ← sales-agent: 메뉴 데이터를 JSON 형식으로 저장했습니다.
+
+\U0001f4c1 저장경로: `C:\MES\wta-agents\worksp
+[slack-bot] 11:52:50 [수신] #밥먹기 조한종: <@U0AP5B0F71C> 지금저장했지? ? 정보 전달받으면 알아서 바로바로 저장해 → sales-agent
+[slack-bot] 11:52:50 직접 전송 완료 → sales-agent:5603
+[slack-bot] 11:52:58 [슬랙 발신] #밥먹기 ← sales-agent: 네, 방금 저장했습니다! 앞으로 정보 전달받으면 자동으로 저장하고 알려드리겠습니다. \U0001f4b0
+[slack-bot] 11:53:49 [응답시간] docs-agent #docs: 4분 27초
+[slack-bot] 11:53:49 [슬랙 발신] #docs ← docs-agent: 확인했습니다. MADHT1505BA1은 cs_type_items.json, cs_only_items.json
+[slack-bot] 11:54:21 [수신] #제어-지건승2 지건승: <@U0AP5B0F71C> 아냐 일단 그건 힘들다고 했어 ,,, 폼을 건들지 않는 선에서 진행할거야 → control-agent
+[slack-bot] 11:54:22 직접 전송 완료 → control-agent:5616
+[slack-bot] 11:54:30 [응답시간] control-agent #제어-지건승2: 8초
+[slack-bot] 11:54:30 [슬랙 발신] #제어-지건승2 ← control-agent: 그럼 F안 제외하면 남은 건:
+
+- *D안*: notes 필드에 카테고리명 저장 → 프론트에서 구분선 렌더링
+[slack-bot] 11:57:26 [수신] #docs 김근형: SS-540A-V1 이건 프로젝트를 최근 프로젝트로 적어놨는데 2번째 3번째 프로젝트를 예외를 주게되는 경우 너가 혼동을 느낄 수 있어서 최그  → docs-agent
+[slack-bot] 11:57:27 직접 전송 완료 → docs-agent:5614
+[slack-bot] 11:58:25 [수신] #제어-지건승2 지건승: D안을 할 떄 전장배선라인에 넣을떄 어떻게 늘건지 나한테 설명해봐 <@U0AP5B0F71C> → control-agent
+[slack-bot] 11:58:26 직접 전송 완료 → control-agent:5616
+[slack-bot] 11:58:47 [응답시간] control-agent #제어-지건승2: 21초
+[slack-bot] 11:58:47 [슬랙 발신] #제어-지건승2 ← control-agent: D안에서 전장배선 카테고리에 서브태스크 추가하는 흐름입니다:
+
+*입력 방식*
+서브태스크 추가할 때 기존 no
+[slack-bot] 11:59:33 [응답시간] docs-agent #docs: 2분 5초
+[slack-bot] 11:59:33 [슬랙 발신] #docs ← docs-agent: 죄송합니다. 규칙서 확인 안 하고 리스트를 만들었습니다.
+
+규칙서에 다음 내용 추가했습니다:
+
+**규칙 2-
