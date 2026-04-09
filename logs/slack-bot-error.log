@@ -42,3 +42,20 @@
 [slack-bot] 14:05:59 직접 전송 완료 → docs-agent:5614
 [slack-bot] 14:06:22 [수신] #docs 김근형: 둘다 프로젝트 안잡혀있고 사용 예정이 없는데? → docs-agent
 [slack-bot] 14:06:22 직접 전송 완료 → docs-agent:5614
+[slack-bot] 14:12:18 [슬랙 발신] #cs-중국 ← cs-agent: 조한종님, 추가 조회 결과입니다.
+
+DB 및 CS 이력에 팔레트 상하축 모터 정격 출력이 별도 기록되어 있지
+[slack-bot] 14:12:18 [CS세션] 답변 기록: slack-cs-중국-조한종-20260409-135756 #cs-중국 (406자, 첨부:0건)
+[slack-bot] 14:16:50 [응답시간] docs-agent #docs: 10분 28초
+[slack-bot] 14:16:50 [슬랙 발신] #docs ← docs-agent: 확인했습니다. 죄송합니다, 데이터상으로는 프로젝트가 잡혀있지만 실제로 사용 예정이 없다는 말씀이시죠.
+
+**
+[slack-bot] 14:17:24 [피드백] good ← U0A7S89M5S7 (cs-agent)
+[slack-bot] 14:17:24 [CS세션] confirmed 종료: slack-cs-중국-조한종-20260409-135756 (도움됨 피드백)
+[slack-bot] 14:18:00 [수신] #docs 김근형: MSMF042L1T2 실제 투입 장비가 많으나 하나도 적용이 안되서 사용예정이 안잡혀 있음
+ZT610-600DPI+REWIND 포장기 진행건이나 → docs-agent
+[slack-bot] 14:18:01 직접 전송 완료 → docs-agent:5614
+[slack-bot] 14:18:46 [응답시간] docs-agent #docs: 45초
+[slack-bot] 14:18:46 [슬랙 발신] #docs ← docs-agent: 확인했습니다. 프로젝트 적용이 안 된 상태인 거군요.
+
+TOP 100 중 프로젝트 미적용/비프로젝트성 품목 
