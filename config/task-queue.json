@@ -2663,6 +2663,54 @@
       "updated_at": "2026-04-09 11:24:56",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-crafter-906551",
+      "agent": "crafter",
+      "task": "외부 LLM 서버 세팅 작업 이관합니다.",
+      "message": "외부 LLM 서버 세팅 작업 이관합니다.\n\n**서버 정보:**\n- 호스트: 182.224.6.147, SSH 포트: 2222\n- 계정: tiaworks, 비밀번호: dbxhvldk (SSH 키도 등록 완료)\n- GPU: NVIDIA GB10, CUDA 13.0, 메모리 119GB\n- OS: aarch64 Ubuntu\n\n**현재 상태:**\n- PyTorch 2.10.0+cu128 설치 완료 (CUDA 동작 확인)\n- vLLM 0.19.0 설치 완료\n- transformers 4.57.6 설치\n- Ollama 가동 중: qwen3.5:27b, qwen3.5:35b 모델 있음\n\n**문제점:**\n- google/gemma-4-31b-it → transformers 4.57.6에서 gemma4 아키텍처 미지원 (5.x 필요하지만 vLLM이 <5 요구)\n- vLLM + gemma4 조합이 현재 호환 안 됨\n\n**목표:**\n- vLLM으로 사용 가능한 LLM 모델을 서빙하기 (OpenAI 호환 API)\n- gemma4가 안 되면 Qwen2.5-32B-Instruct 등 대안 모델로 진행\n- 또는 vLLM 대신 다른 서빙 방법 검토\n\n진행하고 결과 보고해주세요.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-09 11:44:22",
+      "updated_at": "2026-04-09 11:44:22",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-sales-agent-b254d5",
+      "agent": "sales-agent",
+      "task": "부서장 요청: 아래 네이버 지도 링크의 업체 정보를 확인해서 슬랙 #밥먹기 채널에 전달해주세요.",
+      "message": "부서장 요청: 아래 네이버 지도 링크의 업체 정보를 확인해서 슬랙 #밥먹기 채널에 전달해주세요.\n\n링크: https://naver.me/5PVMxeGk (리다이렉트 → https://map.naver.com/p/entry/place/18277255)\n\n\"오늘 가려고하는 금촌샤브칼국수 업체 정보\"라고 안내해주세요.\n업체명, 주소, 전화번호, 영업시간, 주요 메뉴 등을 확인해서 전달 바랍니다.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-09 11:44:43",
+      "updated_at": "2026-04-09 11:44:43",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-sales-agent-5eb47f",
+      "agent": "sales-agent",
+      "task": "업체명은 \"금촌샤브칼국수\" (카테고리: 칼국수, 만두)입니다. 웹 검색으로는 상세 정보가 안 나오니, 네이버 place ID 18277255 기준으로 아래 정보를 슬랙 #밥먹기에 ",
+      "message": "업체명은 \"금촌샤브칼국수\" (카테고리: 칼국수, 만두)입니다. 웹 검색으로는 상세 정보가 안 나오니, 네이버 place ID 18277255 기준으로 아래 정보를 슬랙 #밥먹기에 전달해주세요:\n\n- 업체명: 금촌샤브칼국수\n- 카테고리: 칼국수, 만두\n- 네이버 지도 링크: https://naver.me/5PVMxeGk\n- \"오늘 점심 후보 - 부서장님이 공유해주신 금촌샤브칼국수 업체 정보입니다\" 라고 안내\n\n상세 주소/전화번호는 네이버 지도 링크에서 직접 확인 가능하다고 안내해주세요.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-09 11:48:15",
+      "updated_at": "2026-04-09 11:48:15",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-sales-agent-dfb224",
+      "agent": "sales-agent",
+      "task": "주소 확인됐습니다. 슬랙 #밥먹기에 아래 내용으로 전달해주세요:",
+      "message": "주소 확인됐습니다. 슬랙 #밥먹기에 아래 내용으로 전달해주세요:\n\n🍜 오늘 점심 후보 - 금촌샤브칼국수\n- 주소: 경기 수원시 영통구 태장로 73\n- 카테고리: 칼국수, 만두\n- 네이버 지도: https://naver.me/5PVMxeGk\n\n부서장님이 공유해주신 업체입니다.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-09 11:48:52",
+      "updated_at": "2026-04-09 11:48:52",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }

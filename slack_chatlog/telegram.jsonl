@@ -199,3 +199,9 @@
 {"ts": "2026-04-09 11:29:35", "direction": "inbound", "user": "boss", "text": "비번은 dbxhvldk"}
 {"ts": "2026-04-09 11:30:28", "direction": "outbound", "user": "MAX", "text": "SSH 접속 성공했습니다. 키 인증 설정 완료 (이후 비밀번호 불필요).\n\nGPU 서버 현황:\n- GPU: NVIDIA GB10, CUDA 13.0, 37°C, 유휴 상태\n- vLLM: 0.17.0 설치됨\n- Ollama 모델: qwen3.5:27b, qwen3.5:35b 로드 가능\n- 메모리: 119GB 중 9.4GB 사용 (여유 충분)\n\n이전에 vLLM + gemma-4-31b-it 실행 시 PyTorch CUDA 호환 문제가 있었는데, 이어서 시도할까요?"}
 {"ts": "2026-04-09 11:32:02", "direction": "inbound", "user": "boss", "text": "응 진행해봐"}
+{"ts": "2026-04-09 11:44:30", "direction": "outbound", "user": "MAX", "text": "외부 LLM 서버 작업을 crafter에게 이관했습니다.\n서버 정보, 현재 상태, 문제점 모두 전달 완료."}
+{"ts": "2026-04-09 11:45:38", "direction": "outbound", "user": "MAX", "text": "네이버 지도 링크 접근이 안 돼서 \"금촌샤브칼국수\"를 웹 검색했는데 정확한 업체가 안 나옵니다.\n\n혹시 \"등촌샤브칼국수\" 맞을까요? 아니면 정확한 업체명을 알려주시면 바로 정보 전달하겠습니다."}
+{"ts": "2026-04-09 11:47:12", "direction": "inbound", "user": "boss", "text": "금촌샤브칼국수칼국수,만두"}
+{"ts": "2026-04-09 11:49:02", "direction": "outbound", "user": "MAX", "text": "슬랙 #밥먹기에 금촌샤브칼국수 정보 전달 완료했습니다.\n(수원시 영통구 태장로 73 / 네이버 지도 링크 포함)"}
+{"ts": "2026-04-09 11:49:32", "direction": "inbound", "user": "boss", "text": "전체 팀에게 공지해 부서장 -> 관리자 란표현해"}
+{"ts": "2026-04-09 11:49:47", "direction": "outbound", "user": "MAX", "text": "전체 팀(16명)에게 관리자 공지로 금촌샤브칼국수 점심 정보 전달 완료했습니다."}

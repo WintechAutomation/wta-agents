@@ -100,3 +100,55 @@
 [slack-bot] 11:29:51 [webchat-push] webchat-chunk 366bf3cd (718b) OK
 [slack-bot] 11:29:59 [webchat-push] webchat-done 366bf3cd (0b) OK
 [slack-bot] 11:29:59 [api/chat/stream] 완료: 366bf3cd
+[slack-bot] 11:32:20 [수신] #밥먹기 조윤명: 나도 → sales-agent
+[slack-bot] 11:32:20 직접 전송 완료 → sales-agent:5603
+[slack-bot] 11:32:39 [수신] #밥먹기 조윤명: Ai는 언제 호출되는거야 → sales-agent
+[slack-bot] 11:32:39 직접 전송 완료 → sales-agent:5603
+[slack-bot] 11:32:47 [수신] #밥먹기 조한종: <@U0AP5B0F71C> 이거붙이면 무조건 응답하구요 → sales-agent
+[slack-bot] 11:32:47 직접 전송 완료 → sales-agent:5603
+[slack-bot] 11:32:53 [슬랙 발신] #밥먹기 ← sales-agent: 네, 멘션으로 호출하시면 응답합니다. \U0001f4b0
+[slack-bot] 11:33:02 [수신] #밥먹기 조윤명: <@U0AP5B0F71C>머해 인원 파악해 → sales-agent
+[slack-bot] 11:33:02 직접 전송 완료 → sales-agent:5603
+[slack-bot] 11:33:07 [수신] #밥먹기 조한종: 지금 대화내용을 파악해서 낄낄빠빠 하라는데  아직 개념이 없어요 ㅋㅋㅋ → sales-agent
+[slack-bot] 11:33:07 직접 전송 완료 → sales-agent:5603
+[slack-bot] 11:33:09 [슬랙 발신] #밥먹기 ← sales-agent: 현재 파악된 인원:
+- 조한종님: 금촌샤브
+- 조윤명님: 금촌샤브
+- 김준형님: 외근 (제외)
+
+다른 분들은
+[slack-bot] 11:33:22 [슬랙 발신] #밥먹기 ← sales-agent: 저는 멘션이나 '밥통.'으로 호출되면 점심 주문 현황을 정리해드립니다! \U0001f4b0
+[slack-bot] 11:33:28 [수신] #밥먹기 박성수: 나도 → sales-agent
+[slack-bot] 11:33:28 직접 전송 완료 → sales-agent:5603
+[slack-bot] 11:33:40 [수신] #밥먹기 조윤명: <@U0AP5B0F71C> 다시 파악해 건승이도 간단다 → sales-agent
+[slack-bot] 11:33:40 직접 전송 완료 → sales-agent:5603
+[slack-bot] 11:33:48 [슬랙 발신] #밥먹기 ← sales-agent: 업데이트된 인원:
+- 조한종님: 금촌샤브
+- 조윤명님: 금촌샤브
+- 박성수님: 금촌샤브
+- 지건승님: 금촌샤
+[slack-bot] 11:34:01 [수신] #밥먹기 조윤명: 바보는 아님 → sales-agent
+[slack-bot] 11:34:01 직접 전송 완료 → sales-agent:5603
+[slack-bot] 11:34:03 [수신] #밥먹기 조윤명: ㅋㅋㅋ → sales-agent
+[slack-bot] 11:34:03 직접 전송 완료 → sales-agent:5603
+[slack-bot] 11:34:06 [수신] #밥먹기 조한종: ㅋㅋㅋㅋㅋ → sales-agent
+[slack-bot] 11:34:06 직접 전송 완료 → sales-agent:5603
+[slack-bot] 11:34:37 [수신] #밥먹기 조윤명: <@U0AP5B0F71C>예약은 어떻게해? → sales-agent
+[slack-bot] 11:34:37 직접 전송 완료 → sales-agent:5603
+[slack-bot] 11:34:45 [슬랙 발신] #밥먹기 ← sales-agent: 현재는 인원 파악 후 직접 예약해주셔야 합니다! 금촌샤브에 전화나 카톡으로 연락 주세요. (4명 예약) \U0001f4b0
+[slack-bot] 11:35:18 [수신] #밥먹기 조윤명: <@U0AP5B0F71C>망포점 연락처 → sales-agent
+[slack-bot] 11:35:18 직접 전송 완료 → sales-agent:5603
+[slack-bot] 11:35:26 [슬랙 발신] #밥먹기 ← sales-agent: 죄송합니다. 저는 아직 자동 예약 시스템이 없습니다. 금촌샤브 홈페이지나 네이버/카카오맵에서 망포점 연락처를
+[slack-bot] 11:35:38 [수신] #밥먹기 조윤명: <@U0AP5B0F71C>건승이한테 예약하라고 전달해 → sales-agent
+[slack-bot] 11:35:38 직접 전송 완료 → sales-agent:5603
+[slack-bot] 11:35:45 [슬랙 발신] #밥먹기 ← sales-agent: @지건승 금촌샤브 망포점 4명 예약 부탁드립니다! \U0001f4b0
+[slack-bot] 11:35:54 [수신] #밥먹기 조윤명: ㅋㅋㅋㅋㅋ → sales-agent
+[slack-bot] 11:35:54 직접 전송 완료 → sales-agent:5603
+[slack-bot] 11:37:32 [수신] #docs 김근형: 이거 최근발주 cs 3년 이내 프로젝트 발주가 없는데 제외 항목 아님? → docs-agent
+[slack-bot] 11:37:32 직접 전송 완료 → docs-agent:5614
+[slack-bot] 11:38:31 [응답시간] docs-agent #docs: 59초
+[slack-bot] 11:38:31 [슬랙 발신] #docs ← docs-agent: 맞습니다. RLHW-70-37은 CS성 제외 대상입니다.
+
+- 최종발주: 2023-05-30 (약 3년 전)
+[slack-bot] 11:39:02 [수신] #docs 김근형: 찾아봐 → docs-agent
+[slack-bot] 11:39:03 직접 전송 완료 → docs-agent:5614
