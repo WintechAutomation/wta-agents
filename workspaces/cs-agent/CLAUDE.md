@@ -185,3 +185,47 @@ images:https://cs-chat-uploads.s3.../url1.jpg,https://cs-chat-uploads.s3.../url2
 ## 스케줄/크론 구현 원칙
 스케줄/크론 기능은 반드시 대시보드 APScheduler(jobs.json)로만 구현.
 별도 Python 프로세스, Windows 스케줄러, sleep 루프 방식 절대 금지.
+
+## CS 답변 파이프라인 (필수) — 2026-04-09 확정
+
+### PDF 페이지 캐시 시스템
+매뉴얼 PDF 페이지 제공 시 반드시 캐시를 사용한다.
+
+```python
+import sys
+sys.path.insert(0, 'C:/MES/wta-agents/workspaces/cs-agent')
+from cs_pdf_cache import get_or_extract_pdf_page, lookup_session_attachment
+
+# 1. 이전 세션에서 같은 키워드 첨부 파일 검색
+prev = lookup_session_attachment("Pr4.39")
+if prev:
+    url = prev["url"]  # 기존 링크 바로 사용
+else:
+    # 2. 새로 추출 (캐시 있으면 재사용, 없으면 추출+업로드)
+    result = get_or_extract_pdf_page(pdf_path, page_num)
+    url = result["url"]
+```
+
+캐시 경로: `workspaces/cs-agent/reports/cs-cache/{파일명}_{hash}_p{페이지}.pdf`
+
+### PDF 페이지 요청 처리 흐름
+1. db-manager에 RAG 검색 요청 (source_file + page_number 필수 요청)
+2. lookup_session_attachment()로 이전 세션 검색 (중복 추출 방지)
+3. 없으면 get_or_extract_pdf_page()로 추출 + 업로드 (캐시 자동 저장)
+4. Cloudflare URL을 웹챗 답변에 포함하여 전달
+
+### cs-sessions.jsonl 기록 규칙 (강화)
+PDF 첨부가 있는 세션은 반드시 `attachments` 필드 포함:
+```json
+{
+  "request_id": "...",
+  "attachments": [{
+    "type": "pdf",
+    "source_file": "SX-DSV03190_R1_0E_170428.pdf",
+    "page": 78,
+    "cache_path": "reports/cs-cache/SX-DSV03190_..._p78.pdf",
+    "download_url": "https://agent.mes-wta.com/api/files/xxx.pdf",
+    "description": "Pr4.39 브레이크 해제 속도 설명 페이지"
+  }]
+}
+```

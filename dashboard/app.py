@@ -1881,7 +1881,7 @@ def api_cs_sessions_list():
     search = request.args.get("search", "").lower()
     source = request.args.get("source", "")
     if search:
-        all_messages = [s for s in all_messages if search in s.get("query", s.get("question", "")).lower() or search in s.get("response_summary", s.get("answer", "")).lower()]
+        all_messages = [s for s in all_messages if search in s.get("query", s.get("question", "")).lower() or search in (s.get("full_response", "") or s.get("response_summary", "") or s.get("answer_preview", "") or s.get("answer", "")).lower()]
     if source:
         all_messages = [s for s in all_messages if s.get("question_source", "") == source]
 
@@ -1958,7 +1958,7 @@ def api_cs_sessions_detail(session_id):
         messages.append({
             "timestamp": ts,
             "question": msg.get("query", msg.get("question", "")),
-            "answer": msg.get("response_summary", msg.get("answer", "")),
+            "answer": msg.get("full_response", "") or msg.get("response_summary", "") or msg.get("answer_preview", "") or msg.get("answer", ""),
             "status": msg.get("status", ""),
             "image_paths": msg.get("image_paths", []),
             "rag_sources": msg.get("rag_sources", []),

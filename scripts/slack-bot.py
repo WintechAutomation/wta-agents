@@ -369,6 +369,7 @@ def _log_cs_session(session_id: str, query: str, answer: str, channel: str = "we
         "language": "ko",
         "query": query,
         "response_summary": answer[:200] if answer else "",
+        "full_response": answer or "",
         "status": status,
     }
     try:
@@ -1078,7 +1079,7 @@ def _webchat_push_to_hub(content: str, sender: str) -> None:
         _log_cs_session(
             session_id=f"webchat-stream-{req_id}",
             query=actual_query,
-            answer=actual_answer[:500] if actual_answer else "(no content)",
+            answer=actual_answer if actual_answer else "(no content)",
             channel="webchat",
             user="unknown",
             question_source="web",
@@ -1305,7 +1306,7 @@ def _webchat_worker(ticket_id: str, payload: dict):
         _log_cs_session(
             session_id=ticket_id,
             query=payload.get("query", ""),
-            answer=result.get("answer", result.get("text", ""))[:200] if result.get("success") else "",
+            answer=result.get("answer", result.get("text", "")) if result.get("success") else "",
             channel="webchat",
             user="unknown",
             question_source="web",

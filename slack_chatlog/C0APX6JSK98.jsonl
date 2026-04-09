@@ -209,3 +209,6 @@
 {"ts": "2026-04-09 10:15:00", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "<@U0AP5B0F71C> 너한테 말한거 아니자나 docs . 대화내용을 어느정도는 보고 니가 대답해야하는것인지 파악하고 대답해"}
 {"ts": "2026-04-09 10:18:30", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "<@U0AP5B0F71C> 어제 보던 포멧에서 많이 변경되고잇는거같은데 괜찮음?"}
 {"ts": "2026-04-09 10:27:40", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "<@U0AP5B0F71C> 변경 리스트 erp 데이터 수정할거 아니고 ERP 현재고현황 및 구매진행현황 리스트 수정용 진행임 해당 리스트에 현재 적용 내용올리고 변경 후 어떻게 수정되는지를 올리셈"}
+{"ts": "2026-04-09 10:31:40", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "MCDHT3520BA1 이거 현재 적용 저거 맞아?"}
+{"ts": "2026-04-09 10:33:06", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "이렇게 나와야하는거 아님?", "files": [{"name": "image.png", "type": "png", "saved_path": "C:\\MES\\wta-agents\\slack_chatlog\\C0APX6JSK98_files\\20260409_103306_image.png"}]}
+{"ts": "2026-04-09 10:38:19", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "그냥 지금 ERP 현재고현황 및 구매진행현황 top 100 따로 파일 만들어서줘.."}

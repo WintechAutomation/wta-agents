@@ -405,6 +405,7 @@ def _log_session(question: str, search_result: dict, claude_result: dict | None,
     }
     if claude_result:
         entry["answer_preview"] = claude_result["answer"][:200]
+        entry["full_response"] = claude_result["answer"]
         entry["model"] = claude_result["model"]
         entry["input_tokens"] = claude_result["input_tokens"]
         entry["output_tokens"] = claude_result["output_tokens"]

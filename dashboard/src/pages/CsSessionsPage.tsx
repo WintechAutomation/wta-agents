@@ -173,7 +173,7 @@ function MessageBubble({ msg, index }: { msg: SessionMessage; index: number }) {
       <div className="flex justify-end">
         <div className="max-w-[85%]">
           <div className="text-[10px] text-gray-600 text-right mb-0.5">사용자</div>
-          <div className="bg-blue-950/40 border border-blue-900/30 rounded-lg rounded-tr-sm p-3 text-sm text-gray-200 whitespace-pre-wrap">
+          <div className="bg-blue-950/40 border border-blue-900/30 rounded-lg rounded-tr-sm p-3 text-sm text-gray-200 whitespace-pre-wrap max-h-[400px] overflow-y-auto">
             {msg.question}
           </div>
         </div>
@@ -201,7 +201,7 @@ function MessageBubble({ msg, index }: { msg: SessionMessage; index: number }) {
             {msg.response_time_ms != null && <span className="text-gray-700">{formatMs(msg.response_time_ms)}</span>}
             {msg.status && <StatusBadge status={msg.status} />}
           </div>
-          <div className="bg-green-950/20 border border-green-900/30 rounded-lg rounded-tl-sm p-3 text-sm text-gray-200 whitespace-pre-wrap">
+          <div className="bg-green-950/20 border border-green-900/30 rounded-lg rounded-tl-sm p-3 text-sm text-gray-200 whitespace-pre-wrap max-h-[600px] overflow-y-auto">
             {msg.answer}
           </div>
           {/* RAG/도구 요약 */}
