@@ -72,10 +72,13 @@ import re
 html = re.sub(r'<!-- MCA210T 발주이력 모달 -->.*?</div>\s*</div>\s*</div>', '', html, flags=re.DOTALL)
 # 이전 PO 스크립트 제거 (const PO_DATA 또는 let PO_DATA)
 html = re.sub(r'<script>\s*(?:const|let) PO_DATA[\s\S]*?</script>', '', html)
-# 이전 onclick 제거
-html = html.replace(' style="cursor:pointer" onclick="showPO(', '')  # 부분 제거가 아닌 정규식으로
-# tr onclick 정리 — 기존 onclick이 있는 tr을 원래대로 복원
-html = re.sub(r'h \+= \'<tr style=\\"cursor:pointer\\" onclick=\\"showPO\(.*?\)\\"', "h += '<tr", html)
+# tr onclick 정리 — 중복된 onclick 포함 tr을 원래대로 복원
+# 패턴: h += '<tr style="cursor:pointer" onclick="showPO(...)"|...반복...>'
+html = re.sub(
+    r"""h \+= '<tr(?:\s+style=\\"cursor:pointer\\"\s+onclick=\\"showPO\([^)]*\)\\")+""",
+    "h += '<tr",
+    html
+)
 
 # 모달 HTML
 modal_html = '''
@@ -192,6 +195,15 @@ html = html.replace('</body>', modal_html + modal_js + '</body>')
 old_tr = "h += '<tr"
 new_tr = "h += '<tr style=\"cursor:pointer\" onclick=\"showPO(\\''+r[1]+'\\',\\''+r[2].replace(/'/g,\"\")+'\\')\""
 html = html.replace(old_tr, new_tr, 1)  # 첫 번째만
+
+# 품목명 스타일 변경: 괄호 처리 + 짙은 회색 + 폰트 축소
+old_nm = ">\\'+" + "r[2]+" + "\\'</span>"
+new_nm = ">\\'('+r[2]+')" + "\\'</span>"
+html = html.replace(old_nm, new_nm)
+html = html.replace(
+    'color:#333;font-size:8.5pt;',
+    'color:#777;font-size:7.5pt;'
+)
 
 # 저장
 with open(f'{base}/ERP_현재고_구매진행_전체.html', 'w', encoding='utf-8') as f:
