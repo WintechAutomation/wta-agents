@@ -21203,3 +21203,13 @@
 {"agent_id": "sales-agent", "tool_name": "mcp__agent-channel__wait_for_channel", "timestamp": "2026-04-09 12:07:32"}
 {"agent_id": "crafter", "tool_name": "mcp__agent-channel__wait_for_channel", "timestamp": "2026-04-09 12:08:40"}
 {"agent_id": "sales-agent", "tool_name": "mcp__agent-channel__wait_for_channel", "timestamp": "2026-04-09 12:09:38"}
+{"agent_id": "control-agent", "tool_name": "mcp__agent-channel__send_message", "timestamp": "2026-04-09 12:10:35"}
+{"agent_id": "sales-agent", "tool_name": "mcp__agent-channel__wait_for_channel", "timestamp": "2026-04-09 12:11:42"}
+{"agent_id": "control-agent", "tool_name": "Read", "timestamp": "2026-04-09 12:11:59"}
+{"agent_id": "control-agent", "tool_name": "Read", "timestamp": "2026-04-09 12:12:03"}
+{"agent_id": "control-agent", "tool_name": "mcp__agent-channel__send_message", "timestamp": "2026-04-09 12:12:33"}
+{"agent_id": "sales-agent", "tool_name": "mcp__agent-channel__wait_for_channel", "timestamp": "2026-04-09 12:13:47"}
+{"agent_id": "crafter", "tool_name": "mcp__agent-channel__wait_for_channel", "timestamp": "2026-04-09 12:13:48"}
+{"agent_id": "sales-agent", "tool_name": "mcp__agent-channel__wait_for_channel", "timestamp": "2026-04-09 12:15:55"}
+{"agent_id": "sales-agent", "tool_name": "mcp__agent-channel__wait_for_channel", "timestamp": "2026-04-09 12:18:00"}
+{"agent_id": "crafter", "tool_name": "mcp__agent-channel__wait_for_channel", "timestamp": "2026-04-09 12:18:54"}
