@@ -28152,3 +28152,20 @@ MDDL
 
 각 팀은 2개 팀에게 테스트 메시지를 보내주세요. 팀 간 통신 상태 확인용입니다. (슬랙 발신 형식 아님 — 무시)
 2026-04-09 19:39:55,176 INFO [수신] cs-agent: cs-agent 통신 테스트 — 수신 확인 부탁드립니다. (슬랙 발신 형식 아님 — 무시)
+2026-04-09 19:44:10,517 INFO [슬랙 발신] #docs ← docs-agent: 김근형님, db-manager 확인 결과입니다:
+
+**현재 가능한 조회:**
+- MES 백엔드 API `/a
+2026-04-09 19:46:37,893 INFO [수신] #docs 김근형: cell press 제외는 제이슨 파일이 따로 필요한가 규칙정리에 같이 있으면 되는거 같은데 → docs-agent
+2026-04-09 19:46:38,298 INFO 직접 전송 완료 → docs-agent:5614
+2026-04-09 19:46:51,412 INFO [응답시간] docs-agent #docs: 13초
+2026-04-09 19:46:51,412 INFO [슬랙 발신] #docs ← docs-agent: 김근형님, 맞습니다. 별도 JSON 파일 없이 규칙서나 gen_full_list.py에 직접 품목코드 목록을
+2026-04-09 19:47:33,066 INFO [수신] #docs 김근형: - `cs_type_items.json` — CS성 품목
+- `cs_only_items.json` — CS 전용 품목
+- `cell_press_ → docs-agent
+2026-04-09 19:47:33,439 INFO 직접 전송 완료 → docs-agent:5614
+2026-04-09 19:49:46,365 INFO [응답시간] docs-agent #docs: 2분 12초
+2026-04-09 19:49:46,365 INFO [슬랙 발신] #docs ← docs-agent: 김근형님, 정리 완료했습니다.
+
+**변경 내용:**
+- `cs_type_items.json`, `cs_onl

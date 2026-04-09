@@ -1,0 +1,34 @@
+{"time":"2026-04-09T19:56:26.7580453+09:00","level":"INFO","msg":"설정 로드 완료","port":8100,"env":"production"}
+{"time":"2026-04-09T19:56:26.8788037+09:00","level":"INFO","msg":"PostgreSQL 연결 성공"}
+{"time":"2026-04-09T19:56:26.887183+09:00","level":"INFO","msg":"ERP SQL Server 연결 성공"}
+{"time":"2026-04-09T19:56:26.8893109+09:00","level":"INFO","msg":"ERP 관리 기능 활성화"}
+{"time":"2026-04-09T19:56:26.8893109+09:00","level":"INFO","msg":"NAS 관리 기능 활성화","host":"192.168.1.6","port":"5001"}
+{"time":"2026-04-09T19:56:26.8893109+09:00","level":"INFO","msg":"SPA 정적 파일 서빙 활성화","dist":"..\\frontend\\dist"}
+{"time":"2026-04-09T19:56:26.8898301+09:00","level":"INFO","msg":"서버 시작","addr":":8100"}
+{"time":"2026-04-09T19:56:40.1148067+09:00","level":"WARN","msg":"HTTP 요청","status":401,"method":"GET","path":"/api/erp/purchase/mca210t","latency":0,"ip":"::1","query":"item_cd=50-01-07-0"}
+{"time":"2026-04-09T19:57:36.9496495+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"POST","path":"/api/auth/login","latency":341130000,"ip":"::1"}
+{"time":"2026-04-09T19:57:44.7975326+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"POST","path":"/api/auth/login","latency":299231100,"ip":"::1"}
+{"time":"2026-04-09T19:57:55.0269644+09:00","level":"WARN","msg":"HTTP 요청","status":401,"method":"GET","path":"/api/erp/purchase/mca210t","latency":0,"ip":"::1","query":"limit=1"}
+{"time":"2026-04-09T19:57:57.0485715+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"POST","path":"/api/auth/login","latency":344508200,"ip":"::1"}
+{"time":"2026-04-09T19:57:58.649389+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"GET","path":"/api/erp/purchase/mca210t","latency":1598799400,"ip":"::1","user_id":102,"username":"max","query":"limit=500&page=1"}
+{"time":"2026-04-09T19:58:13.2976285+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"GET","path":"/health","latency":10900,"ip":"::1"}
+{"time":"2026-04-09T19:58:23.5848229+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"POST","path":"/api/auth/login","latency":304101900,"ip":"::1"}
+{"time":"2026-04-09T19:58:23.5893536+09:00","level":"WARN","msg":"HTTP 요청","status":401,"method":"GET","path":"/api/erp/purchase/mca210t","latency":0,"ip":"::1","query":"limit=1"}
+{"time":"2026-04-09T19:58:37.3846906+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"POST","path":"/api/auth/login","latency":297895700,"ip":"::1"}
+{"time":"2026-04-09T19:58:37.3875187+09:00","level":"WARN","msg":"HTTP 요청","status":401,"method":"GET","path":"/api/erp/purchase/mca210t","latency":0,"ip":"::1","query":"limit=1"}
+{"time":"2026-04-09T19:58:38.4667455+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"POST","path":"/api/auth/login","latency":272682600,"ip":"::1"}
+{"time":"2026-04-09T19:58:39.7928547+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"GET","path":"/api/erp/purchase/mca210t","latency":1319138900,"ip":"::1","user_id":102,"username":"max","query":"limit=500&page=1"}
+{"time":"2026-04-09T19:58:41.9960946+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"GET","path":"/api/erp/purchase/mca210t","latency":2194323900,"ip":"::1","user_id":102,"username":"max","query":"limit=500&page=2"}
+{"time":"2026-04-09T19:58:44.8156028+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"GET","path":"/api/erp/purchase/mca210t","latency":2804386400,"ip":"::1","user_id":102,"username":"max","query":"limit=500&page=3"}
+{"time":"2026-04-09T19:58:47.8940464+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"POST","path":"/api/auth/login","latency":296128700,"ip":"::1"}
+{"time":"2026-04-09T19:58:48.9306813+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"GET","path":"/api/erp/purchase/mca210t","latency":4099721100,"ip":"::1","user_id":102,"username":"max","query":"limit=500&page=4"}
+{"time":"2026-04-09T19:58:53.1961111+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"GET","path":"/api/erp/purchase/mca210t","latency":4260134400,"ip":"::1","user_id":102,"username":"max","query":"limit=500&page=5"}
+{"time":"2026-04-09T19:58:58.483518+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"GET","path":"/api/erp/purchase/mca210t","latency":5282395500,"ip":"::1","user_id":102,"username":"max","query":"limit=500&page=6"}
+{"time":"2026-04-09T19:59:02.07867+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"POST","path":"/api/auth/login","latency":285187900,"ip":"::1"}
+{"time":"2026-04-09T19:59:02.5329844+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"GET","path":"/api/erp/purchase/mca210t","latency":451822900,"ip":"::1","user_id":102,"username":"max","query":"limit=2"}
+{"time":"2026-04-09T19:59:04.2346589+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"GET","path":"/api/erp/purchase/mca210t","latency":5743010600,"ip":"::1","user_id":102,"username":"max","query":"limit=500&page=7"}
+{"time":"2026-04-09T19:59:10.6661353+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"POST","path":"/api/auth/login","latency":306885100,"ip":"::1"}
+{"time":"2026-04-09T19:59:10.8591168+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"GET","path":"/api/erp/purchase/mca210t","latency":6619307400,"ip":"::1","user_id":102,"username":"max","query":"limit=500&page=8"}
+{"time":"2026-04-09T19:59:11.1148627+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"GET","path":"/api/erp/purchase/mca210t","latency":445690200,"ip":"::1","user_id":102,"username":"max","query":"limit=2"}
+{"time":"2026-04-09T19:59:17.9507978+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"GET","path":"/api/erp/purchase/mca210t","latency":7076323200,"ip":"::1","user_id":102,"username":"max","query":"limit=500&page=9"}
+exit status 0xffffffff

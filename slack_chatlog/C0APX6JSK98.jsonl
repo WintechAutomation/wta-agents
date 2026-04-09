@@ -284,3 +284,11 @@
 {"ts": "2026-04-09 19:38:08", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "모든 필드를 가져오는 api를 만들어줘 max가 승인했어"}
 {"ts": "2026-04-09 19:46:37", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "cell press 제외는 제이슨 파일이 따로 필요한가 규칙정리에 같이 있으면 되는거 같은데"}
 {"ts": "2026-04-09 19:47:33", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "- `cs_type_items.json` — CS성 품목\n- `cs_only_items.json` — CS 전용 품목\n- `cell_press_removed.json` — Cell Press 제외\n- `plan_only_items.json` — Plan Only 품목\n- `multi_project_items.json` — 복수 프로젝트 품목 (프로젝트 변경용)\n이거 내가 규칙 정리하라고 했던 내용들 아님?"}
+{"ts": "2026-04-09 19:50:25", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "제외 225건은 뭐가 제외된거?"}
+{"ts": "2026-04-09 19:51:52", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "지금까지 작업한파일들 백업좀 해줘"}
+{"ts": "2026-04-09 19:52:54", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "top 200은 제외"}
+{"ts": "2026-04-09 19:54:39", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "야 전체에서 200 가는건 왜 만들어 200제외하는걸로 백업파일 다시만들어"}
+{"ts": "2026-04-09 19:54:48", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "지금 만들어져 있던건 알아서 지우고"}
+{"ts": "2026-04-09 19:56:09", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "top20은 왜 2개냐;;"}
+{"ts": "2026-04-09 19:56:47", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "발주현황조회 (MCA210T) 의 1년치 데이터를 조회해서 csv 파일로 만들어봐 모든 필드가 다 나와야해."}
+{"ts": "2026-04-09 19:59:36", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "업무공간 김근형 폴더에 erp_data 백업파일 12345 이거 뭐 떄문에 생긴거임?"}
