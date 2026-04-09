@@ -2819,6 +2819,18 @@
       "updated_at": "2026-04-09 13:45:53",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-crafter-e4007a",
+      "agent": "crafter",
+      "task": "긴급 버그 수정: CS 세션 JSONL 파일에 질문(query)이 비어있는 문제",
+      "message": "긴급 버그 수정: CS 세션 JSONL 파일에 질문(query)이 비어있는 문제\n\n현재 상태:\n- slack-cs-중국-unknown-20260409-135125.jsonl → query가 \"\" (빈 문자열), user가 \"unknown\"\n- 답변(full_response)만 있고 질문 내용이 없음\n\n원인 추정:\n- 슬랙봇에서 cs-agent에 질문 전달 시 query를 기록하는 시점과, 응답 수신 시 기록하는 시점이 분리되어 있는데, query 기록이 누락됨\n- user 정보도 \"unknown\"으로 들어감 — 슬랙 메시지의 username을 제대로 전달하지 않는 문제\n\n수정 필요:\n1. 질문(query): 슬랙 메시지 원문이 반드시 기록되어야 함\n2. user: 슬랙 사용자명이 정확히 기록되어야 함\n3. 피드백으로 세션 완성 후 새 세션 생성 시에도 질문 원문 + 사용자 정보 누락되지 않도록\n\n확인 후 수정하고 슬랙봇 재시작해주세요.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-09 13:54:13",
+      "updated_at": "2026-04-09 13:54:13",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }

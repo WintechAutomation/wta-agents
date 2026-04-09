@@ -371,6 +371,8 @@ os.makedirs(_CS_SESSIONS_DIR, exist_ok=True)
 _cs_session_tracker: dict[tuple[str, str], dict] = {}
 _cs_session_lock = threading.Lock()
 _CS_SESSION_TIMEOUT = 600  # 10분
+# CS 채널별 마지막 질문자 추적 (응답 수신 시 ack_info 없어도 user/query 복구)
+_cs_channel_last_user: dict[str, str] = {}  # channel_name → username
 
 
 def _is_cs_channel(channel_name: str) -> bool:
@@ -2284,6 +2286,8 @@ def handle_slack_message(event, say):
     if _is_cs_channel(channel_name) and target_agent == "cs-agent":
         sid = _get_or_create_cs_session(channel_name, username)
         _cs_session_set_query(channel_name, username, text)
+        with _cs_session_lock:
+            _cs_channel_last_user[channel_name] = username
         log.info(f"[CS세션] 질문 기록: {sid} #{channel_name} {username}: {text[:60]}")
 
     # 에이전트 포트로 직접 전송
@@ -2790,7 +2794,7 @@ class AgentMessageHandler(BaseHTTPRequestHandler):
                         }
                         # CS 채널: 세션 정보 추가
                         if sender == "cs-agent" and _is_cs_channel(ch_name):
-                            cs_user_fb = ack_info.get("user", "unknown") if ack_info else "unknown"
+                            cs_user_fb = (ack_info.get("user") if ack_info else None) or _cs_channel_last_user.get(ch_name) or "unknown"
                             fb_entry["cs_session_id"] = _get_or_create_cs_session(ch_name, cs_user_fb)
                             fb_entry["cs_user"] = cs_user_fb
                             fb_entry["cs_channel"] = ch_name
@@ -2801,7 +2805,8 @@ class AgentMessageHandler(BaseHTTPRequestHandler):
 
                     # CS 채널 답변 기록 (슬랙봇 중심 로깅)
                     if sender == "cs-agent" and _is_cs_channel(ch_name):
-                        cs_user = ack_info.get("user", "unknown") if ack_info else "unknown"
+                        # user 복구: ack_info → 채널별 마지막 질문자 → "unknown"
+                        cs_user = (ack_info.get("user") if ack_info else None) or _cs_channel_last_user.get(ch_name) or "unknown"
                         cs_query = _cs_session_get_query(ch_name, cs_user)
                         cs_sid = _get_or_create_cs_session(ch_name, cs_user)
                         # 첨부파일 정보 수집

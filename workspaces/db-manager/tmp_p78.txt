@@ -1,0 +1,221 @@
+No.SX-DSV03190
+Cat
+e
+Pr.
+Parameter
+Default
+value
+Cat
+e
+Pr.
+Parameter
+Default
+value
+Cat
+e
+Pr.
+Parameter
+Default
+value
+Cat
+e
+Pr.
+Parameter
+Default
+value
+Cat
+e
+Pr.
+Parameter
+Default
+value
+4
+0
+SI1 input selection
+3289650
+4
+31
+Positioning complete (In-position)
+range
+8400
+1
+SI2 input selection
+8487297
+32
+Positioning complete (In-position)
+output setup
+0
+2
+SI3 input selection
+8553090
+33
+INP hold time
+0
+3
+SI4 input selection
+2236962
+34
+Zero-speed
+50
+4
+SI5 input selection
+2105376
+35
+Speed coincidence range
+50
+5
+SI6 input selection
+2171169
+36
+At-speed (Speed arrival)
+1000
+6
+SI7 input selection
+3158064
+37 Mechanical brake action at stalling
+setup
+0
+7
+SI8 input selection
+3223857
+38
+Mechanical brake action at
+running setup
+0
+8
+No available
+-
+39
+Brake release speed setup
+30
+9
+No available
+-
+40
+Selection of alarm output 1
+0
+10
+SO1 output selection
+197379
+41
+Selection of alarm output 2
+0
+11
+SO2 output selection
+1052688
+42
+2nd Positioning complete (In-
+position) range
+8400
+12
+SO3 output selection
+65793
+43
+No available
+-
+13
+No available
+-
+44
+Position comparison output pulse
+width setting
+0
+14
+No available
+-
+45
+Position comparison output
+polarity selection
+0
+15
+No available
+-
+46
+No available
+-
+16
+Type of analog monitor 1
+0
+47
+Pulse output selection
+0
+17
+Analog monitor 1 output gain
+0
+48
+Position comparison value 1
+0
+18
+Type of analog monitor 2
+4
+49
+Position comparison value 2
+0
+19
+Analog monitor 2 output gain
+0
+50
+Position comparison value 3
+0
+20
+No available
+-
+51
+Position comparison value 4
+0
+21
+Analog monitor output setup
+0
+52
+Position comparison value 5
+0
+22
+Manufacturer use
+0
+53
+Position comparison value 6
+0
+23
+Manufacturer use
+0
+54
+Position comparison value 7
+0
+24
+Manufacturer use
+0
+55
+Position comparison value 8
+0
+25
+No available
+-
+56
+Position comparison output delay
+compensation amount
+0
+26
+No available
+-
+57
+Position comparison output
+assignment setting
+0
+27
+No available
+-
+28
+No available
+-
+29
+No available
+-
+30
+No available
+-
+*1 When checking directly value of parameter-file with a text data etc., it does not show the decimal point. 　Ex) Pr6.24 Disturbance observer filter ･･･ Value of Panaterm ： 0.53 / Value of parameter-file ： 53
+*2 The maximum torque limit value (Pr.0.13,Pr.5.22,Pr.5.25,Pr.5.26) varies by the applicable motor.
+PARAMETER
+MODEL
+MINAS-A6BE series
+　5/10
