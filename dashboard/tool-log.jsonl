@@ -22088,3 +22088,5 @@
 {"agent_id": "control-agent", "tool_name": "Bash", "timestamp": "2026-04-09 18:17:03"}
 {"agent_id": "control-agent", "tool_name": "mcp__agent-channel__send_message", "timestamp": "2026-04-09 18:17:16"}
 {"agent_id": "crafter", "tool_name": "mcp__agent-channel__wait_for_channel", "timestamp": "2026-04-09 18:17:53"}
+{"agent_id": "crafter", "tool_name": "mcp__agent-channel__wait_for_channel", "timestamp": "2026-04-09 18:22:59"}
+{"agent_id": "crafter", "tool_name": "mcp__agent-channel__wait_for_channel", "timestamp": "2026-04-09 18:28:04"}
