@@ -110,3 +110,45 @@ MSMF042L1T2: 2024-05-31
 - #36 MSMF042L1T2 \u2014 장비 7개(핸들러 제거) \u2713
 - #17 ZT610-600DPI+REWIND  → docs-agent
 [slack-bot] 14:39:35 직접 전송 완료 → docs-agent:5614
+[slack-bot] 14:40:21 [수신] #docs 김근형: 사용 예정에 장비 작성하고 수량 계산해서 넣고 금액 넣어야지... → docs-agent
+[slack-bot] 14:40:21 직접 전송 완료 → docs-agent:5614
+[slack-bot] 14:41:02 [api/chat/stream] init: 29338877 - 프레스 x2축 과부하문제 발생이력 조회
+[slack-bot] 14:41:02 직접 전송 완료 → cs-agent:5602
+[slack-bot] 14:41:02 [api/chat/stream] webchat-req 전송 → cs-agent: 29338877
+[slack-bot] 14:41:09 [webchat-raw] 29338877 chunk(10b, pipes=0): '조회 중입니다...'
+[slack-bot] 14:41:09 [webchat-push] webchat-chunk 29338877 (10b) OK
+[slack-bot] 14:41:28 [webchat-raw] 29338877 chunk(29b, pipes=0): '프레스 X2축 과부하 이력을 추가 조회 중입니다...'
+[slack-bot] 14:41:28 [webchat-push] webchat-chunk 29338877 (29b) OK
+[slack-bot] 14:42:45 [webchat-raw] 29338877 chunk(611b, pipes=28): '## 프레스 X2축 과부하 발생 이력\n\n**조회 기간**: 2024-01-01 ~ 현재 | 출처: CS 이력 DB\n\n---\n\n### 직접 관련 이력 (1건)\n\n| 항목 | 내용 |\n|------|------|\n| **날짜** | 2024-03-25 |\n| **장비** | MMC 프레스 #3호기 |\n| **증상** | X2축 서보앰프 과부하 보호 알람 |\n| **발생 패턴** | 펀치클리닝 후 핸드 교환 시마다 발생 |\n| **원인** | X2축 위치가 -1mm 밀려 기계적 간섭 → 과부하 발생 |\n| **조치** | X2축 Disable → Z축 상승하강 반복 → 실제 위치 224mm 확인 → 툴 교체 위치 225mm → 224mm 수정 |\n| **결과** | 수정 후 과부하 알람 미발생, 정상 동작 확인 '
+[slack-bot] 14:42:45 [webchat-push] webchat-chunk 29338877 (611b) OK
+[slack-bot] 14:42:50 [webchat-push] webchat-done 29338877 (0b) OK
+[slack-bot] 14:42:50 [api/chat/stream] 완료: 29338877
+[slack-bot] 14:43:20 [응답시간] docs-agent #docs: 2분 58초
+[slack-bot] 14:43:20 [슬랙 발신] #docs ← docs-agent: 죄송합니다, 사용예정 수량/금액 계산해서 적용했습니다.
+
+**3건 사용예정 적용 결과 (3년내 발주이력 기반
+[slack-bot] 14:43:53 [수신] #cs-중국 조한종: PVD TOP 10 에러 유형별 대응/개선 방안 슬라이드 만들어 → cs-agent
+[slack-bot] 14:43:53 [CS세션] 질문 기록: slack-cs-중국-조한종-20260409-144353 #cs-중국 조한종: PVD TOP 10 에러 유형별 대응/개선 방안 슬라이드 만들어
+[slack-bot] 14:43:53 직접 전송 완료 → cs-agent:5602
+[slack-bot] 14:43:56 [수신] #docs 김근형: 지금 총액 합산이 안맞음 확인해봐 → docs-agent
+[slack-bot] 14:43:56 직접 전송 완료 → docs-agent:5614
+[slack-bot] 14:44:05 [응답시간] cs-agent #cs-중국: 12초
+[slack-bot] 14:44:05 [슬랙 발신] #cs-중국 ← cs-agent: 조한종님, PVD 에러 이력 데이터를 먼저 조회한 후 슬라이드를 제작하겠습니다. 잠시 기다려 주세요.
+[slack-bot] 14:44:05 [CS세션] 답변 기록: slack-cs-중국-조한종-20260409-144353 #cs-중국 (56자, 첨부:0건)
+[slack-bot] 14:44:29 [api/chat/stream] init: 25d53857 - 과부하 알람코드 확인
+[slack-bot] 14:44:29 직접 전송 완료 → cs-agent:5602
+[slack-bot] 14:44:29 [api/chat/stream] webchat-req 전송 → cs-agent: 25d53857
+[slack-bot] 14:44:39 [webchat-raw] 25d53857 chunk(10b, pipes=0): '조회 중입니다...'
+[slack-bot] 14:44:39 [webchat-push] webchat-chunk 25d53857 (10b) OK
+[slack-bot] 14:45:11 [응답시간] docs-agent #docs: 1분 15초
+[slack-bot] 14:45:11 [슬랙 발신] #docs ← docs-agent: 수정 완료했습니다. ZT610-600DPI+REWIND 예정수량이 재고(3개)를 초과(13개)해서 합산이 안
+[slack-bot] 14:45:15 [webchat-raw] 25d53857 chunk(507b, pipes=20): '## 과부하 알람코드 정보\n\n이전 이력 기준 **MMC 프레스 #3호기 X2축 서보앰프 과부하 알람**에 해당하는 코드입니다.\n\n### 서보드라이브 공통 과부하 알람코드\n\n| 알람번호 | 약어 | 설명 |\n|---------|------|------|\n| **03** | OVER LOAD | 과부하 알람 |\n| 01 | OVER CURNT | 서보 과전류 알람 |\n| 00 | EMER STOP | 비상 정지 알람 |\n\n### Panasonic MINAS-A6B 기준 (EtherCAT)\n- 에러코드 오브젝트: **603Fh** (Error code)\n- 표시 형식: `FF**h` → ** 부분이 알람 메인 번호\n- 과부하 관련: `FF03h` (OVER LOAD) 또는 `FF0Ch` (과부하 트립)\n\n---\n'
+[slack-bot] 14:45:15 [webchat-push] webchat-chunk 25d53857 (507b) OK
+[slack-bot] 14:45:20 [webchat-push] webchat-done 25d53857 (0b) OK
+[slack-bot] 14:45:20 [api/chat/stream] 완료: 25d53857
+[slack-bot] 14:46:24 [슬랙 발신] #cs-중국 ← cs-agent: 조한종님, PVD CS 이력 142건 분석 완료했습니다. docs-agent에게 슬라이드 제작을 요청했으며,
+[slack-bot] 14:46:24 [CS세션] 답변 기록: slack-cs-중국-조한종-20260409-144353 #cs-중국 (79자, 첨부:0건)
+[slack-bot] 14:48:13 [슬랙 발신] #cs-중국 ← cs-agent: 조한종님, PVD TOP 10 에러 유형 슬라이드 완성되었습니다.
+
+**PVD 장비 TOP 10 에러 유형 
+[slack-bot] 14:48:13 [CS세션] 답변 기록: slack-cs-중국-조한종-20260409-144353 #cs-중국 (244자, 첨부:0건)
