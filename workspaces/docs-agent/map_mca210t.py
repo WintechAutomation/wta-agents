@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """MCA210T 발주이력을 ERP_현재고_구매진행_전체.html에 매핑
-품목 클릭 시 발주이력 상세 팝업 표시
+품목 클릭 시 발주이력 상세 팝업 표시 (PO 데이터는 별도 JSON, fetch 방식)
 10년치 + 1년치 데이터 병합
 """
 import sys, io, json, re
@@ -23,11 +23,10 @@ for fname in ['MCA210T_발주현황_10년.json', 'MCA210T_발주현황_1년.json
             all_items.append(r)
     print(f'{fname}: {len(data["items"])}건 로드')
 print(f'병합 후 총: {len(all_items)}건 (중복 제거)')
-mca = {'items': all_items}
 
 # 품목코드별 그룹화 (최신 발주순)
 po_groups = defaultdict(list)
-for r in mca['items']:
+for r in all_items:
     po_groups[r['item_cd']].append({
         'po_no': r['po_no'],
         'po_dt': r['po_dt'],
@@ -46,7 +45,7 @@ for r in mca['items']:
 for cd in po_groups:
     po_groups[cd].sort(key=lambda x: x['po_dt'], reverse=True)
 
-print(f'MCA210T: {len(mca["items"])}건 → {len(po_groups)}개 품목')
+print(f'MCA210T: {len(all_items)}건 → {len(po_groups)}개 품목')
 
 # erp_data의 품목코드만 필터링 (HTML에 있는 것만)
 with open(f'{base}/erp_data.json', 'r', encoding='utf-8') as f:
@@ -56,22 +55,38 @@ erp_cds = {r[1] for r in erp['data']}
 po_filtered = {cd: pos for cd, pos in po_groups.items() if cd in erp_cds}
 print(f'erp_data 매칭: {len(po_filtered)}개 품목')
 
+# PO 데이터를 별도 JSON 파일로 저장
+po_json_path = f'{base}/po_data.json'
+with open(po_json_path, 'w', encoding='utf-8') as f:
+    json.dump(po_filtered, f, ensure_ascii=False)
+po_json_size = len(json.dumps(po_filtered, ensure_ascii=False))
+print(f'po_data.json 저장: {po_json_size/1024/1024:.1f} MB')
+
 # HTML 로드
 with open(f'{base}/ERP_현재고_구매진행_전체.html', 'r', encoding='utf-8') as f:
     html = f.read()
 
-# PO_DATA JS 객체 생성
-po_data_js = json.dumps(po_filtered, ensure_ascii=False)
+# 이전 실행의 PO 관련 코드 제거 (중복 방지)
+import re
+# 이전 모달 HTML 제거
+html = re.sub(r'<!-- MCA210T 발주이력 모달 -->.*?</div>\s*</div>\s*</div>', '', html, flags=re.DOTALL)
+# 이전 PO 스크립트 제거 (const PO_DATA 또는 let PO_DATA)
+html = re.sub(r'<script>\s*(?:const|let) PO_DATA[\s\S]*?</script>', '', html)
+# 이전 onclick 제거
+html = html.replace(' style="cursor:pointer" onclick="showPO(', '')  # 부분 제거가 아닌 정규식으로
+# tr onclick 정리 — 기존 onclick이 있는 tr을 원래대로 복원
+html = re.sub(r'h \+= \'<tr style=\\"cursor:pointer\\" onclick=\\"showPO\(.*?\)\\"', "h += '<tr", html)
 
-# 모달 HTML + JS 코드
+# 모달 HTML
 modal_html = '''
 <!-- MCA210T 발주이력 모달 -->
 <div id="poModal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:9999;overflow:auto;">
   <div style="background:#fff;margin:40px auto;padding:20px;border-radius:12px;max-width:900px;max-height:80vh;overflow:auto;box-shadow:0 8px 32px rgba(0,0,0,0.3);">
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
       <h3 id="poTitle" style="margin:0;font-size:15px;color:#1a237e;"></h3>
-      <button onclick="document.getElementById('poModal').style.display='none'" style="background:none;border:none;font-size:20px;cursor:pointer;color:#666;">&times;</button>
+      <button onclick="document.getElementById(\'poModal\').style.display=\'none\'" style="background:none;border:none;font-size:20px;cursor:pointer;color:#666;">&times;</button>
     </div>
+    <div id="poLoading" style="display:none;text-align:center;padding:40px;color:#666;">발주이력 로딩 중...</div>
     <table id="poTable" style="width:100%;border-collapse:collapse;font-size:11px;">
       <thead>
         <tr style="background:#e8eaf6;">
@@ -95,14 +110,46 @@ modal_html = '''
 </div>
 '''
 
+# JS 코드 — fetch 방식으로 PO 데이터 로딩
 modal_js = '''
 <script>
-const PO_DATA = ''' + po_data_js + ''';
+let PO_DATA = null;
+let poDataLoading = false;
 
-function showPO(itemCd, itemNm) {
-  const pos = PO_DATA[itemCd];
+async function loadPOData() {
+  if (PO_DATA) return PO_DATA;
+  if (poDataLoading) {
+    while (poDataLoading) await new Promise(r => setTimeout(r, 100));
+    return PO_DATA;
+  }
+  poDataLoading = true;
+  try {
+    const resp = await fetch('po_data.json');
+    PO_DATA = await resp.json();
+  } catch(e) {
+    alert('발주이력 데이터 로딩 실패: ' + e.message);
+    PO_DATA = {};
+  }
+  poDataLoading = false;
+  return PO_DATA;
+}
+
+async function showPO(itemCd, itemNm) {
+  document.getElementById('poLoading').style.display = 'block';
+  document.getElementById('poTable').style.display = 'none';
+  document.getElementById('poSummary').textContent = '';
+  document.getElementById('poTitle').textContent = itemCd + ' / ' + itemNm + ' — 발주이력 로딩 중...';
+  document.getElementById('poModal').style.display = 'block';
+
+  const data = await loadPOData();
+  const pos = data[itemCd];
+
+  document.getElementById('poLoading').style.display = 'none';
+  document.getElementById('poTable').style.display = 'table';
+
   if (!pos || pos.length === 0) {
-    alert('발주이력 없음 (최근 10년)');
+    document.getElementById('poTitle').textContent = itemCd + ' / ' + itemNm + ' — 발주이력 없음 (최근 10년)';
+    document.getElementById('poBody').innerHTML = '<tr><td colspan="11" style="padding:20px;text-align:center;color:#999;">발주이력이 없습니다.</td></tr>';
     return;
   }
   document.getElementById('poTitle').textContent = itemCd + ' / ' + itemNm + ' — 발주이력 (' + pos.length + '건)';
@@ -129,7 +176,6 @@ function showPO(itemCd, itemNm) {
   }
   document.getElementById('poBody').innerHTML = h;
   document.getElementById('poSummary').textContent = '합계: ' + totalQty.toLocaleString() + '개, ' + totalAmt.toLocaleString() + '원';
-  document.getElementById('poModal').style.display = 'block';
 }
 
 // 모달 외부 클릭 시 닫기
@@ -142,13 +188,7 @@ document.getElementById('poModal').addEventListener('click', function(e) {
 # HTML에 모달 삽입 (</body> 앞)
 html = html.replace('</body>', modal_html + modal_js + '</body>')
 
-# 품목코드 셀에 클릭 이벤트 추가 — renderRows 함수 수정
-# 기존: r[1] 품목코드 표시 부분 찾기
-old_render = "r[1]+'</strong>"
-new_render = "r[1]+'</strong>"
-
-# 더 정확한 패치: 행 클릭 시 PO 조회
-# 기존 tr 태그에 onclick 추가
+# 행 클릭 시 PO 조회
 old_tr = "h += '<tr"
 new_tr = "h += '<tr style=\"cursor:pointer\" onclick=\"showPO(\\''+r[1]+'\\',\\''+r[2].replace(/'/g,\"\")+'\\')\""
 html = html.replace(old_tr, new_tr, 1)  # 첫 번째만
@@ -156,5 +196,10 @@ html = html.replace(old_tr, new_tr, 1)  # 첫 번째만
 # 저장
 with open(f'{base}/ERP_현재고_구매진행_전체.html', 'w', encoding='utf-8') as f:
     f.write(html)
-print(f'HTML 매핑 완료: 전체 리스트에 MCA210T 발주이력 팝업 추가')
+
+import os
+html_size = os.path.getsize(f'{base}/ERP_현재고_구매진행_전체.html')
+po_size = os.path.getsize(po_json_path)
+print(f'HTML: {html_size/1024/1024:.1f} MB (PO 데이터 분리)')
+print(f'po_data.json: {po_size/1024/1024:.1f} MB (클릭 시 fetch 로딩)')
 print(f'매핑 품목: {len(po_filtered)}개, 총 PO: {sum(len(v) for v in po_filtered.values())}건')
