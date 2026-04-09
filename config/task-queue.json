@@ -2387,6 +2387,30 @@
       "updated_at": "2026-04-09 08:49:06",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-crafter-22bb1f",
+      "agent": "crafter",
+      "task": "부서장 지적: 대시보드 CS 세션 페이지에 cs-wta.com 웹사이트의 AI 채팅 질의응답이 표시되지 않고 있음.",
+      "message": "부서장 지적: 대시보드 CS 세션 페이지에 cs-wta.com 웹사이트의 AI 채팅 질의응답이 표시되지 않고 있음.\n\n확인 사항:\n1. 대시보드 CS 세션 페이지가 어디서 데이터를 가져오는지 (reports/cs-sessions.jsonl? 또는 다른 소스?)\n2. cs-wta.com 웹 AI 채팅 대화가 cs-sessions.jsonl에 기록되고 있는지\n3. 대시보드 프론트엔드에서 해당 데이터를 렌더링하는 로직 확인\n4. 누락 원인 파악 후 수정\n\n바로 확인해줘.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-09 10:03:56",
+      "updated_at": "2026-04-09 10:03:56",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-admin-agent-c3f572",
+      "agent": "admin-agent",
+      "task": "slack-bot 재시작 요청. 기존 프로세스 전체 종료 후 1개만 실행해줘. 중복 주의.",
+      "message": "slack-bot 재시작 요청. 기존 프로세스 전체 종료 후 1개만 실행해줘. 중복 주의.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-09 10:09:10",
+      "updated_at": "2026-04-09 10:09:10",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }

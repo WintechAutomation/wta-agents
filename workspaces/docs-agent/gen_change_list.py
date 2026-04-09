@@ -68,15 +68,16 @@ def detect_equip(proj_name):
     return detected
 
 def normalize_equip_types(raw):
-    """현재 등록된 장비유형을 정규화 (핸들러 제거)"""
+    """현재 등록된 장비유형을 정규화 (핸들러 제거, 연삭핸들러 유지)"""
     if isinstance(raw, str):
         result = set()
-        if '연삭' in raw:
+        if '연삭핸들러' in raw:
+            result.add('연삭핸들러')  # 연삭핸들러는 독립 장비유형 유지
+        elif '연삭' in raw:
             result.add('연삭')
-        if '프레스' in raw:
+        if '프레스' in raw and '연삭핸들러' not in raw:
             result.add('프레스')
-        # 핸들러는 무시 (장비유형 폐지)
-        if not result:
+        if not result and raw.strip():
             result.add(raw)
         return result
     result = set()
@@ -86,7 +87,7 @@ def normalize_equip_types(raw):
         elif t == '핸들러':
             pass  # 핸들러 제거 (폐지)
         elif t == '연삭핸들러' or '연삭핸들러' in t:
-            result.add('연삭')
+            result.add('연삭핸들러')  # 연삭핸들러는 유지
         else:
             result.add(t)
     return result
@@ -103,11 +104,13 @@ def get_raw_changes(raw):
     """핸들러 관련 변경사항 감지"""
     changes = []
     if isinstance(raw, str):
-        if '핸들러' in raw:
+        if '연삭핸들러' in raw:
+            changes.append(('형식수정', f'문자열 "{raw}" → 리스트 ["연삭핸들러"]'))
+        elif '핸들러' in raw:
             changes.append(('핸들러제거', f'"{raw}" → 핸들러 제거'))
         return changes
     if isinstance(raw, list):
-        if '핸들러' in raw:
+        if '핸들러' in raw and '연삭핸들러' not in raw:
             if raw == ['핸들러']:
                 changes.append(('핸들러제외', '핸들러 단독 → 제외 처리'))
             else:
@@ -158,8 +161,7 @@ for row in erp_data:
                 change_types.append('명칭변경')
                 details.append('마스크 → 마스크자동기')
             elif t == '연삭핸들러' or '연삭핸들러' in t:
-                change_types.append('분리')
-                details.append('연삭핸들러 → [연삭] (핸들러 폐지)')
+                pass  # 연삭핸들러는 유지 (변경 아님)
 
     # 2. 핸들러 → 프레스 통합 (규칙 1-4)
     raw_handler_changes = get_raw_changes(raw_equip)

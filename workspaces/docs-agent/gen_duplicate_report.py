@@ -117,9 +117,7 @@ for item in items:
         registered.add('마스크자동기')
     if '핸들러' in registered:
         registered.discard('핸들러')  # 핸들러 폐지 - 제거만
-    if '연삭핸들러' in registered:
-        registered.discard('연삭핸들러')
-        registered.add('연삭')
+    # 연삭핸들러는 독립 장비유형으로 유지
     # 핸들러만 단독이면 제외
     if len(registered) == 0:
         continue
@@ -157,9 +155,7 @@ for item in items:
         registered.add('마스크자동기')
     if '핸들러' in registered:
         registered.discard('핸들러')
-    if '연삭핸들러' in registered:
-        registered.discard('연삭핸들러')
-        registered.add('연삭')
+    # 연삭핸들러는 유지
     if len(registered) == 0:
         continue
 

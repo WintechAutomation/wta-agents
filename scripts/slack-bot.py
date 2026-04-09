@@ -352,6 +352,31 @@ _load_agents_routing()
 MY_PORT = 5612
 _BOOT_TIME = time.time()
 
+# ── CS 세션 JSONL 로깅 ──
+_CS_SESSIONS_FILE = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "reports", "cs-sessions.jsonl")
+
+
+def _log_cs_session(session_id: str, query: str, answer: str, channel: str = "webchat",
+                    user: str = "unknown", question_source: str = "web", status: str = "responded"):
+    """CS 세션을 reports/cs-sessions.jsonl에 기록."""
+    now = datetime.now(KST_TZ)
+    entry = {
+        "session_id": session_id,
+        "timestamp": now.isoformat(),
+        "channel": channel,
+        "user": user,
+        "question_source": question_source,
+        "language": "ko",
+        "query": query,
+        "response_summary": answer[:200] if answer else "",
+        "status": status,
+    }
+    try:
+        with open(_CS_SESSIONS_FILE, "a", encoding="utf-8") as f:
+            f.write(json.dumps(entry, ensure_ascii=False) + "\n")
+    except Exception as e:
+        log.warning(f"CS 세션 로깅 실패: {e}")
+
 # ── 프로젝트 슬랙 채널 캐시 (TTL 5분) ──
 _project_channel_cache: dict[str, dict | None] = {}  # channel_id → project dict or None
 _project_channel_ts: dict[str, float] = {}            # channel_id → timestamp
@@ -1041,6 +1066,16 @@ def _webchat_push_to_hub(content: str, sender: str) -> None:
         payload = {"request_id": req_id, "type": "chunk", "data": text}
     elif marker == "webchat-done":
         payload = {"request_id": req_id, "type": "done", "data": text}
+        # 스트리밍 완료 시 CS 세션 기록
+        _log_cs_session(
+            session_id=f"webchat-stream-{req_id}",
+            query="(streaming)",
+            answer=text[:200] if text else "(stream completed)",
+            channel="webchat",
+            user="unknown",
+            question_source="web",
+            status="responded",
+        )
     elif marker == "webchat-error":
         payload = {"request_id": req_id, "type": "error", "data": text}
     else:
@@ -1257,6 +1292,16 @@ def _webchat_worker(ticket_id: str, payload: dict):
             if ticket_id in _webchat_tickets:
                 _webchat_tickets[ticket_id]["status"] = "done"
                 _webchat_tickets[ticket_id]["result"] = result
+        # CS 세션 JSONL 기록
+        _log_cs_session(
+            session_id=ticket_id,
+            query=payload.get("query", ""),
+            answer=result.get("answer", result.get("text", ""))[:200] if result.get("success") else "",
+            channel="webchat",
+            user="unknown",
+            question_source="web",
+            status="responded" if result.get("success") else "error",
+        )
         log.info(f"[webchat] 완료: {ticket_id}")
     except Exception as e:
         log.error(f"[webchat] worker 에러 ({ticket_id}): {e}")

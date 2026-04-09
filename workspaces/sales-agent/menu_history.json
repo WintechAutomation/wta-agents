@@ -28,5 +28,10 @@
     "date": "2026-04-08",
     "restaurant": "대머리",
     "weekday": "수"
+  },
+  {
+    "date": "2026-04-09",
+    "restaurant": "지리산",
+    "weekday": "목"
   }
 ]
