@@ -410,8 +410,9 @@ def _cs_session_get_query(channel_name: str, username: str) -> str:
 
 
 def _log_cs_session(session_id: str, query: str, answer: str, channel: str = "webchat",
-                    user: str = "unknown", question_source: str = "web", status: str = "responded"):
-    """CS 세션을 reports/cs-sessions.jsonl에 기록."""
+                    user: str = "unknown", question_source: str = "web", status: str = "responded",
+                    attachments: list[dict] | None = None):
+    """CS 세션을 reports/cs-sessions.jsonl에 기록. 원문 전체 저장."""
     now = datetime.now(KST_TZ)
     entry = {
         "session_id": session_id,
@@ -421,10 +422,11 @@ def _log_cs_session(session_id: str, query: str, answer: str, channel: str = "we
         "question_source": question_source,
         "language": "ko",
         "query": query,
-        "response_summary": answer[:200] if answer else "",
         "full_response": answer or "",
         "status": status,
     }
+    if attachments:
+        entry["attachments"] = attachments
     try:
         with open(_CS_SESSIONS_FILE, "a", encoding="utf-8") as f:
             f.write(json.dumps(entry, ensure_ascii=False) + "\n")
@@ -2748,6 +2750,14 @@ class AgentMessageHandler(BaseHTTPRequestHandler):
                         cs_user = ack_info.get("user", "unknown") if ack_info else "unknown"
                         cs_query = _cs_session_get_query(ch_name, cs_user)
                         cs_sid = _get_or_create_cs_session(ch_name, cs_user)
+                        # 첨부파일 정보 수집
+                        cs_attachments = []
+                        for img_url in media_images:
+                            cs_attachments.append({"type": "image", "url": img_url.strip()})
+                        for ref in media_refs:
+                            cs_attachments.append({"type": "reference", "url": ref.strip()})
+                        for exc in media_excerpts:
+                            cs_attachments.append({"type": "pdf", "url": exc.strip()})
                         _log_cs_session(
                             session_id=cs_sid,
                             query=cs_query or (ack_info.get("question_preview", "") if ack_info else ""),
@@ -2756,8 +2766,9 @@ class AgentMessageHandler(BaseHTTPRequestHandler):
                             user=cs_user,
                             question_source="slack",
                             status="responded",
+                            attachments=cs_attachments or None,
                         )
-                        log.info(f"[CS세션] 답변 기록: {cs_sid} #{ch_name} ({len(actual_content)}자)")
+                        log.info(f"[CS세션] 답변 기록: {cs_sid} #{ch_name} ({len(actual_content)}자, 첨부:{len(cs_attachments)}건)")
 
                     # 부적합 세션 종료: nc-manager 응답에 [세션종료] 포함 시
                     if ch_name == "부적합" and "[세션종료]" in actual_content:

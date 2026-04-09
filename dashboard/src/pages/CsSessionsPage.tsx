@@ -14,12 +14,18 @@ interface SessionSummary {
   last_status: string
 }
 
+interface Attachment {
+  type: string
+  url: string
+}
+
 interface SessionMessage {
   timestamp: string
   question: string
   answer: string
   status: string
   image_paths: string[]
+  attachments: Attachment[]
   rag_sources: { table: string; score: number; content?: string }[]
   tools_used: string[]
   model: string
@@ -204,6 +210,18 @@ function MessageBubble({ msg, index }: { msg: SessionMessage; index: number }) {
           <div className="bg-green-950/20 border border-green-900/30 rounded-lg rounded-tl-sm p-3 text-sm text-gray-200 whitespace-pre-wrap max-h-[600px] overflow-y-auto">
             {msg.answer}
           </div>
+          {/* 첨부파일 */}
+          {msg.attachments && msg.attachments.length > 0 && (
+            <div className="flex flex-col gap-1 mt-1.5">
+              {msg.attachments.map((att, i) => (
+                <a key={i} href={att.url} target="_blank" rel="noopener noreferrer"
+                   className="text-xs text-blue-400 hover:text-blue-300 flex items-center gap-1 truncate">
+                  <span>{att.type === 'pdf' ? '📎' : att.type === 'image' ? '🖼️' : '🔗'}</span>
+                  <span className="underline">{att.url.split('/').pop() || att.url}</span>
+                </a>
+              ))}
+            </div>
+          )}
           {/* RAG/도구 요약 */}
           {((msg.rag_sources && msg.rag_sources.length > 0) || (msg.tools_used && msg.tools_used.length > 0)) && (
             <div className="flex gap-2 mt-1 flex-wrap">

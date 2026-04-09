@@ -1968,6 +1968,7 @@ def api_cs_sessions_detail(session_id):
             "answer": display_answer,
             "status": msg.get("status", ""),
             "image_paths": msg.get("image_paths", []),
+            "attachments": msg.get("attachments", []),
             "rag_sources": msg.get("rag_sources", []),
             "tools_used": msg.get("tools_used", []),
             "model": msg.get("model", ""),
