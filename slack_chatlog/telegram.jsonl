@@ -133,3 +133,4 @@
 {"ts": "2026-04-09 08:36:06", "direction": "outbound", "user": "MAX", "text": "🌧️ 오늘(4/9) 날씨\n\n📍 용인: 9~11°C, 흐림→오후 비 (10.8mm), 우산 필수\n📍 서천: 0~8°C, 오전 맑음→오후 보통비→저녁 강한 비, 강풍 주의\n\n두 지역 모두 오후부터 비. 서천은 폭우 주의입니다."}
 {"ts": "2026-04-09 08:39:25", "direction": "inbound", "user": "boss", "text": "포트포워딩 다시햇음 2222 로 ssh"}
 {"ts": "2026-04-09 08:42:20", "direction": "outbound", "user": "MAX", "text": "SSH 접속 성공했지만 vLLM 실행 실패.\n\n원인: PyTorch가 CPU 전용으로 설치되어 GPU 인식 불가\n- GPU: NVIDIA GB10 (ARM aarch64)\n- CUDA 13 + PyTorch CPU 버전 충돌\n\n서버에 conda나 별도 가상환경이 있나요? 이전에 vLLM 올릴 때 어떤 환경에서 실행하셨는지 알려주시면 같은 환경으로 시도하겠습니다.\n\n아니면 CUDA용 PyTorch 재설치부터 진행할까요?\npip install torch --index-url https://download.pytorch.org/whl/cu130"}
+{"ts": "2026-04-09 09:50:33", "direction": "inbound", "user": "boss", "text": "그럽시다"}
