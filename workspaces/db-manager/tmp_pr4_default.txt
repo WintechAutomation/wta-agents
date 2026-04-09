@@ -1,0 +1,1951 @@
+=== 페이지 3 ===
+No. SX-DSV03190 
+R1.0                               Motor Business Unit, Panasonic Corporation 
+ 
+ 
+  Contents   
+ 
+1．Scope .................................................................................. 1 
+2．Model number ........................................................................... 2 
+3．Product Line-up .......................................................................... 3 
+3-1 Standard type .......................................................................... 3 
+4．Specifications ............................................................................ 4 
+5．Appearance and Names .................................................................... 5 
+6．Dimensions ............................................................................ 11 
+7．Configuration of connectors and terminal blocks ............................................... 23 
+7-1 Power connectors  XA  ,  XB  ,  XC  ,  XD  and terminal blocks ......................... 23 
+7-2 USB connector  X1 ................................................................... 27 
+7-3 EtherCAT connectors  X2A   X2B ..................................................... 28 
+7-4 I/O connector   X4 ................................................................... 29 
+7-5 Encoder connector  X6 ................................................................ 30 
+7-6 Monitor connector  X7 ................................................................ 30 
+7-7 Interface Circuit ....................................................................... 31 
+8．Wiring and system configuration ............................................................ 32 
+8-1 Used cables and maximum cable lengths ................................................... 32 
+8-2 Cable Side Connector .................................................................. 32 
+8-3 Precautions for wiring .................................................................. 33 
+8-4 Dynamic brake ........................................
+
+=== 페이지 8 ===
+No. SX-DSV03190 - 4- 
+R1.0                               Motor Business Unit, Panasonic Corporation 
+ 
+ 
+4．Specifications 
+ 
+Basic specifications 
+ 
+Item 
+Description 
+Input 
+power 
+supply 
+100 V 
+Main circuit power 
+Single phase 100-120 V (+10 %/-15 %) 50/60 Hz 
+Control circuit power 
+Single phase 100-120 V (+10 %/-15 %) 50/60 Hz 
+200 V 
+Main circuit power 
+A-D 
+Single/3-phase 200-240 V (+10 %/-15 %) 50/60 Hz 
+E-F 
+3-phase 200-240 V (+10 %/-15 %) 50/60 Hz 
+Control circuit 
+power 
+A-D 
+Single phase 200-240 V (+10 %/-15 %) 50/60 Hz 
+E-F 
+Single phase 200-240 V (+10 %/-15 %) 50/60 Hz 
+Operation  
+conditions 
+Temperature 
+Operation temperature: 0-55 degrees C (no freezing) 
+Storage temperature: -20-65 degrees C 
+ (Max.temperature guarantee : 80 degrees C for 72 hours without dew condensation *note) 
+Humidity 
+Operation and storage humidity: 20-85 %RH or less (no dew condensation permitted *note) 
+Elevation 
+1000 m or less above sea level 
+Vibration 
+5.88 m/s2 or less, 10-60 Hz 
+Insulation voltage 
+Resistant to 1500 V AC between primary power supply and ground for a minute 
+Control method 
+IGBT PWM method, sinusoidal drive 
+Encoder feedback 
+23Bit(resolution:8388608) 7cores-serial absolute encoder 
+Control  
+signal 
+Input 
+8 x multi-function input ports 
+Function of each multi-function input is assignable by parameter. 
+Output 
+3 x multi-function output ports 
+Function of each multi-function output is assignable by parameter. 
+Analog signal 
+Output 
+2 x output ports for analog monitor 
+Pulse signal 
+Output 
+2 x output ports 
+Line driver output for encoder pulses (A/B signal) 
+Communication 
+EtherCAT 
+Interface for motion control. 
+USB 
+USB interface to connect to computers for parameter setting or status monitoring. 
+Front panel 
+① 
+2-digit rotary switch ②2-digit 7-segment LED, 4 x LED for status indication ③Monitor connector 
+Regeneration 
+Size A, B: External regen resistor only Size C - F: Built-in regen resistor (External regen is also available) 
+Dynamic brake 
+Size
+
+=== 페이지 37 ===
+No. SX-DSV03190 - 33- 
+R1.0                               Motor Business Unit, Panasonic Corporation 
+ 
+ 
+8-3 Precautions for wiring 
+ 
+8-3-1 Wiring to power connector and terminal block 
+ 
+ 100/ 200 V sizes A - B  
+L1
+L2
+L3
+L
+ON
+MC1
+OFF
+ALM
+Coli surge suppression units
+L1C
+L2C
+P
+MC
+U
+V
+W
+motor
+ALM+
+ALM-
+ALM
+Main power
+supply
+Control power
+supply
+Motor
+connection
+MCCB
+37
+36
+Built-in thermostat of an external
+regenerative resistor (light yellow)
+B
+Red
+White
+Green or
+Green/Yellow
+Insulated
+DC12 to 24 V
+(±5 %)
++
+-
+Noise filter
+N
+External
+regenerative
+resistor
+XA
+XB
+X4
+*When you use single phase,
+connect the main power
+between L1 and L3 terminals.
+Power supply
+(3-phase)
+Black
+※Do not connect
+the short cable
+ 
+ 
+ 
+■Connection of regenerative resistor 
+Size 
+Shorting 
+cable 
+(Accessories) 
+Internal 
+regenerative 
+resistor 
+Connection of the connector XB 
+In case of using the external 
+regenerative resistor 
+In case of not using the external 
+regenerative resistor 
+A 
+B 
+Not attached 
+Not 
+installed 
+Between P and B: 
+Connect the external 
+regenerative resistor. 
+Between P and B: 
+ Keep open 
+ 
+- The circuit connected to terminal X1 – X7 are secondary circuits. 
+Insulation is needed against the primary side power supply (power supply of the motor brake).  
+Please do not connect them with the same power supply. 
+
+
+=== 페이지 38 ===
+No. SX-DSV03190 - 34- 
+R1.0                               Motor Business Unit, Panasonic Corporation 
+ 
+ 
+ 100/ 200 V sizes C - D  
+L1
+L2
+L3
+L
+ON
+MC1
+OFF
+ALM
+L1C
+L2C
+P
+MC
+U
+V
+W
+motor
+ALM+
+ALM-
+ALM
+MCCB
+37
+36
+B
+Red
+White
+Black
++
+-
+N
+XA
+XC
+X4
+XB
+RB
+P
+Short cable
+Power supply
+(3-phase)
+*When you use single phase,
+connect the main power
+between L1 and L3 terminals.
+Noise filter
+Built-in thermostat of an external
+regenerative resistor (light yellow)
+Coli surge suppression units
+Main power
+supply
+Control power
+supply
+External
+regenerative
+resistor
+Motor
+connection
+Green or
+Green/Yellow
+Insulated
+DC12 to 24 V
+(±5 %)
+※In case of using the external regenerative resistor,
+disconnect the short cable.
+ 
+ 
+■Connection of regenerative resistor 
+Size 
+Shorting 
+cable 
+(Accessories) 
+Internal 
+regenerative 
+resistor 
+Connection of the connector XB 
+In case of using the external 
+regenerative resistor 
+In case of not using the external 
+regenerative resistor 
+C 
+D 
+Supplied 
+Installed 
+Between RB and B: 
+Disconnect the short cable 
+Between P and B: 
+Connect the external 
+regenerative resistor 
+Between RB and B: 
+ Connect the shorting cable 
+ 
+- The circuit connected to terminal X1 – X7 are secondary circuits. 
+Insulation is needed against the primary side power supply (power supply of the motor brake).  
+Please do not connect them with the same power supply. 
+ 
+ 
+
+
+=== 페이지 39 ===
+No. SX-DSV03190 - 35- 
+R1.0                               Motor Business Unit, Panasonic Corporation 
+ 
+ 
+ 200 V size E  
+L1
+L2
+L3
+L
+ON
+MC1
+OFF
+ALM
+L1C
+L2C
+P
+MC
+U
+V
+W
+motor
+ALM+
+ALM-
+ALM
+MCCB
+37
+36
+Red
+White
+Black
++
+-
+RB
+XA
+XC
+X4
+XB
+N
+B
+Noise filter
+Power supply
+(3-phase)
+Built-in thermostat of an external
+regenerative resistor (light yellow)
+Coli surge suppression units
+Main power
+supply
+Control power
+supply
+Short cable
+External
+regenerative
+resistor
+Motor
+connection
+Green or
+Green/Yellow
+Insulated
+DC12 to 24 V
+(±5 %)
+※In case of using the external regenerative resistor,
+disconnect the short cable.
+ 
+ 
+■Connection of regenerative resistor 
+Size 
+Shorting 
+cable 
+(Accessories) 
+Internal 
+regenerative 
+resistor 
+Connection of the connector XC 
+In case of using the external 
+regenerative resistor 
+In case of not using the external 
+regenerative resistor 
+E 
+Supplied 
+Installed 
+Between RB and B: 
+Disconnect the short cable 
+Between P and B: 
+Connect the external 
+regenerative resistor 
+Between RB and B: 
+ Connect the shorting cable 
+ 
+- The circuit connected to terminal X1 – X7 are secondary circuits. 
+Insulation is needed against the primary side power supply (power supply of the motor brake).  
+Please do not connect them with the same power supply. 
+ 
+ 
+
+
+=== 페이지 40 ===
+No. SX-DSV03190 - 36- 
+R1.0                               Motor Business Unit, Panasonic Corporation 
+ 
+ 
+ 200 V size F  
+L1
+L2
+L3
+L
+ON
+MC1
+OFF
+ALM
+L1C
+L2C
+P
+MC
+U
+V
+W
+Motor
+ALM+
+ALM-
+ALM
+MCCB
+37
+36
++
+-
+RB
+X4
+N
+B
+Short bar
+Noise filter
+Power supply
+(3-phase)
+Built-in thermostat of an external
+regenerative resistor (light yellow)
+Coli surge suppression units
+Main power
+supply
+Control power
+supply
+Motor
+connection
+External
+regenerative
+resistor
+Red
+White
+Black
+Green or
+Green/Yellow
+Insulated
+DC12 to 24 V
+(±5 %)
+※In case of using the external regenerative resistor,
+disconnect the short cable.
+ 
+ 
+■Connection of regenerative resistor 
+Size 
+Short bar 
+(Accessories) 
+Internal 
+regenerative 
+resistor 
+Connection of the connector XC 
+In case of using the external 
+regenerative resistor 
+In case of not using the external 
+regenerative resistor 
+F 
+Supplied 
+Installed 
+Between RB and B: 
+Disconnect the short bar 
+Between P and B: 
+Connect the external 
+regenerative resistor 
+Between RB and B: 
+ Connect the short bar 
+ 
+- The ability of the built-in dynamic brake resistor allows up to three continuous braking from the rated speed with the 
+maximal allowable inertia. Exceeding this condition can cause an unrecoverable damage on the brake resister and a 
+malfunction of the dynamic brake. 
+- The circuits connected to terminal X1 – X7 are secondary circuits. Insulation is needed against the primary side power 
+supply (power supply of the motor brake). Please do not connect them with the same power supply. 
+
+
+=== 페이지 41 ===
+No. SX-DSV03190 - 37- 
+R1.0                               Motor Business Unit, Panasonic Corporation 
+ 
+ 
+ 
+[1] When the servo driver uses single phase power supply for sizes A - D, connect the servo driver to the 
+terminals L1, L3 of main power supply input.  Do not connect anything to the terminal L2. 
+[2] Surely insert the connector into place until it clicks. 
+[3] Make sure to use an insulation coated crimp terminal when connecting to each terminal on the terminal 
+block. 
+[4] Terminal block cover is fixed with screws.  When wiring to the terminal block, unscrew these screws to 
+uncover the cover.  Tighten the cover fixing screw with the torque of 0.19-0.21 Nm. 
+[5] Apply the power supply of the voltage indicated on the nameplate. 
+[6] Do not reverse-connect the power input terminals (L1, L2, and L3) and the motor output terminals (U, V, 
+and W). 
+[7] Do not connect the motor output terminals (U, V, and W) to ground or short out them. 
+[8] Because high voltage is applied to the power connectors  XA ,  XB ,  XC  and the terminal block, 
+never touch them on any account.  It may cause electric shock. 
+[9] Suitable for use on a circuit capable of delivering not more than 5000 rms symmetrical amperes, below the 
+maximum input voltage of the product. 
+[10] An AC servomotor, unlike an induction motor, cannot change the rotation direction by exchanging three 
+phases. 
+Make sure to coincide the motor output terminals (U, V, and W) of the servo driver with the colors  
+(pin number for cannon plugs) of the motor output cables. 
+[11] Surely connect the ground terminals of the motor and the servo driver and earth the ground terminal as well 
+as that of the noise filter. In addition, earth the equipment unit. To earth them, use the earth (ground 
+resistance: 100 ohm or less) for grounding.   
+Please tight the earth screws by appropriate torque and use correct size earth cable decided in the 
+specifications. 
+In order to avoid the impact of electrolytic corrosion, do not immed
+
+=== 페이지 44 ===
+No. SX-DSV03190 - 40- 
+R1.0                               Motor Business Unit, Panasonic Corporation 
+ 
+ 
+8-3-2 Wiring to connector  X4  
+[1] Customer is responsible for the control signal power supply at 12-24 VDC for external control connected 
+between COM+ and COM-.Insulation is needed against the primary side power supply (power supply of the 
+motor brake).  
+Please do not connect them with the same power supply. 
+[2] Place the servo driver and its peripheral device as nearly as possible (up to 3 m) so as to shorten the wiring. 
+[3] Wire the wiring as far away as possible (30 cm or more) from the power lines (L1, L2, L3, L1C, L2C, U, V, 
+W,  
+   ).  Do not put them in the same duct or bind them together. 
+ 
+Digital input  
+ 
+Servo driver
+DC 12～24 V
+I-COM
+SI1
+SI2
+SI3
+SI5
+SI6
+SI7
+SI4
+5
+7
+6
+9
+8
+11
+12
+10
+4.7k
+4.7k
+4.7k
+4.7k
+4.7k
+4.7k
+4.7k
+X4
+SI8
+13
+4.7k
+1k
+1k
+1k
+1k
+1k
+1k
+1k
+1k
+ 
+ 
+The functions of the pins SI1-SI8 are assigned by parameters. For the factory default setting, refer to Appendix 
+“I/O connector (X4) factory default setting”. 
+ 
+ 
+ 
+
+
+=== 페이지 55 ===
+No. SX-DSV03190 - 51- 
+R1.0                               Motor Business Unit, Panasonic Corporation 
+ 
+ 
+ 
+8-4 Dynamic brake 
+ 
+Servo driver(size A-F)  has built-in dynamic brake function to stop motor in an emergency. 
+Dynamic brake can be operated in the following cases 
+1. The main power off 
+2. The servo off 
+3. Protection action 
+4. Connector X4 driving ban importation (POT, NOT) action 
+On the above 1-4 cases, valid or invalid of dynamic brake can be determined by the parameters.  
+However, when the control power off, dynamic brake of size A-F keep valid condition. 
+ 
+Dynamic brake is what is intended for use in a short time as only emergency 
+1. Do not start / stop the motor by the servo signal (SRV-ON) . Built-in dynamic brake circuit may be damaged. 
+2. Do not drive the motor with external torque. Motor generates electricity by external torque. 
+Dynamic brake circuit will be damaged and it is possible that short-circuit current cause smoke or combustion. 
+3. Allow approx. 10 minutes pause when the dynamic brake is activated during high-speed running. 
+Resistor is damaged and the dynamic brake might not work when using it under more critical operating 
+condition. 
+ 
+8-5 Mounting direction and spacing 
+ 
+-To perform effective cooling, allow sufficient ambient space.  
+-Provide a fan so as to make uniform the temperature in the control panel. 
+-Each of Sizes D to F is equipped with a cooling fan on the bottom. 
+-Adhere to environmental conditions for the environment in the control panel. 
+-Servo driver is fixed to the grounded conductive frame 
+-In case the portion to receive servo driver coated, peeling off the coating before installing servo driver 
+homebuilt brackets with conductive plating provides effective anti-noise measures. 
+-Case of make mounting bracket, please conductive plating process the surface of the bracket. 
+- Please measure the ambient temperature at 50 mm distance from the side or bottom of amplfier. 
+If it is impossible, measure the ambi
+
+=== 페이지 62 ===
+No. SX-DSV03190 - 58- 
+R1.0                               Motor Business Unit, Panasonic Corporation 
+ 
+ 
+ 
+ 
+10．Safety precautions 
+ 
+■Danger and damage caused when the safety precautions are ignored are described in the following categories and signs: 
+ 
+ 
+ 
+Description of this sign indicates “urgent danger that may cause death or serious injury. ” 
+ 
+ 
+ 
+Description of this sign indicates “danger that may cause injury or property damage. ” 
+ 
+■Rules to keep are categorized and described with the following graphics. 
+This graphic indicates “Prohibited” acts that are not permitted. 
+ 
+This graphic indicates “Mandatory” acts that must be performed forcibly. 
+ 
+ 
+ 
+ 
+ 
+ 
+(1) 
+Be sure not to store or use the equipment under conditions subjected to vibrations (5. 88 m/s2 or heavier) 
+or an impact shock, foreign matters such as dust, metal particles oil mist, liquids such as water, oil and  
+polishing liquid, near flammable objects, in an atmosphere of corrosive gas (such as H2S, SO2, NO2, Cl2) or  
+in an atmosphere of flammable gas. 
+(2) 
+Do not place any flammable objects near a motor, a driver, or a regenerative resistor. 
+(3) 
+Do not driver the motor with external torque. Motor generates electricity by external torque. 
+Dynamic brake circuit will be damaged and it is possible that short-circuit current cause smoke  
+or combustion. 
+(4) 
+Do not damage or strain the cable, or do not apply excessive stress.  Do not place a heavy item on the 
+cable or do not pinch the cable. 
+(5) 
+Do not use the equipment with the cable soaked in oil or water. 
+(6) 
+Do not install the equipment near a heating object such as a heater or a large wire-wound resistor.  
+(Install a thermal shield, etc. to avoid the influences of heating object.) 
+(7) 
+Do not connect the motor directly with a commercial power. 
+(8) 
+Do not use the equipment under conditions subject to strong vibrations or an impact shock.Please attach 
+the anti-vibration equipment to servo driver mounting surface if you insta
+
+=== 페이지 64 ===
+No. SX-DSV03190 - 60- 
+R1.0                               Motor Business Unit, Panasonic Corporation 
+ 
+ 
+ 
+ 
+ 
+ 
+(35) The built-in brake of the motor is used for holding only.  Do not use the brake to stop (braking) for 
+securing safety of the equipment. 
+(36) Do not fall or topple over the equipment when carrying or installing. 
+(37) Do not climb the motor or do not place a heavy item on the motor. 
+(38) Do not block radiation slits of the driver and do not put a foreign matter into the driver. 
+(39) Do not use the equipment under direct sunlight.  When storing the equipment, avoid direct sunlight and  
+store under conditions of operating temperatures and humidity. 
+(40) Be sure not to disassemble or modify the equipment. Disassembling and repair is allowed only for the 
+manufacturer or sales agency authorized by the manufacturer.  
+(41) Do not start / stop the motor by the servo signal (SRV-ON). Built-in dynamic brake circuit may be  
+damaged. 
+ 
+(42) Use a motor and a driver in combination specified by the manufacturer.  A customer shall be 
+responsible for verifying performances and safety of combination with other driver. 
+(43) A failure of a motor or a combined driver may cause burning of motor, or emission of smoke and  
+dust. Take this into consideration when the application of the machine is clean room related. 
+(44) Install the equipment adequately in consideration of output and main unit weight. 
+(45) Keep the ambient conditions of an installed motor within a range of allowable ambient temperatures and 
+of allowable humidity. 
+(46) Install the equipment by specified procedures and in specified orientation. 
+(47) Install the devices by keeping specified distances between a driver and inside control panel or other 
+devices. 
+(48) If a motor has an eyebolt, use the eyebolt to carry the motor only.  Do not use the eyebolt to carry 
+equipment. 
+(49) Connect a relay breaking upon emergency stop in series with a brake control relay. 
+(50) For a test run, hold d
+
+=== 페이지 69 ===
+No. SX-DSV03190 - 65- 
+R1.0                               Motor Business Unit, Panasonic Corporation 
+ 
+ 
+ 
+ Specification for each model  
+ 
+Model number 
+MADLN01BE 
+MADLN11BE 
+MADLN05BE 
+MADLN15BE 
+Power supply input 
+Single phase 
+100 V 
+Single phase 
+100 V 
+Single phase/ 
+3 phase 200 V 
+Single phase/ 
+3 phase 200 V 
+Maximum  
+instantaneous output current 
+6 A 
+8 A 
+6 A 
+8 A 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Rotary encoder 
+Resolution: 
+8388608 P/r 
+Resolution: 
+8388608 P/r 
+Resolution: 
+8388608 P/r 
+Resolution: 
+8388608 P/r 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Regenerative  
+discharge resistor 
+Externally 
+connected 
+Externally 
+connected 
+Externally 
+connected 
+Externally 
+connected 
+Auto gain tuning function 
+Provided 
+Provided 
+Provided 
+Provided 
+Dynamic brake function 
+Provided 
+Provided 
+Provided 
+Provided 
+ 
+ 
+ 
+ 
+ 
+Absolute system 
+Available 
+Available 
+Available 
+Available 
+ 
+ 
+ 
+ 
+ 
+Ambient temperature  
+main power supply cable 
+0 - 55 ℃ 
+0 - 55 ℃ 
+0 - 55 ℃ 
+0 - 55 ℃ 
+ 
+ 
+ 
+ 
+ 
+Control power cable 
+HVSF 0.75 mm2 
+HVSF 0.75 mm2 
+HVSF 0.75 mm2 
+HVSF 0.75 mm2 
+ 
+AWG18 
+AWG18 
+AWG18 
+AWG18 
+Main power supply cable 
+HVSF 0.75 - 2.0 mm2 
+HVSF 0.75 - 2.0 mm2 
+HVSF 0.75 - 2.0 mm2 
+HVSF 0.75 - 2.0 mm2 
+ 
+AWG14 - 18 
+AWG14 - 18 
+AWG14 - 18 
+AWG14 - 18 
+Ground cable 
+HVSF 2.0 mm2 
+HVSF 2.0 mm2 
+HVSF 2.0 mm2 
+HVSF 2.0 mm2 
+ 
+AWG14 
+AWG14 
+AWG14 
+AWG14 
+Motor cable 
+HVSF 0.75 - 2.0 mm2 
+HVSF 0.75 - 2.0 mm2 
+HVSF 0.75 - 2.0 mm2 
+HVSF 0.75 - 2.0 mm2 
+ 
+AWG14 - 18 
+AWG14 - 18 
+AWG14 - 18 
+AWG14 - 18 
+ 
+ 
+ 
+ 
+ 
+Inrush current 
+(Main power supply) (*1) 
+Max．7 A 
+Max．7 A 
+Max．14 A 
+Max．14 A 
+Inrush current 
+(Control power supply) (*1) 
+Max．7 A 
+Max．7 A 
+Max．14 A 
+Max．14 A 
+ 
+ 
+ 
+ 
+ 
+Weight 
+Approx 0.8 kg 
+Approx 0.8 kg 
+Approx 0.8 kg 
+Approx 0.8 kg 
+Dimensions 
+Size A 
+Size A 
+Size A 
+Size A 
+(*1)  Current values were calculated on the basis of the power supply input described above,  
+assuming a voltage of 200 V. 
+ 
+
+
+=== 페이지 70 ===
+No. SX-DSV03190 - 66- 
+R1.0                               Motor Business Unit, Panasonic Corporation 
+ 
+ 
+ 
+Model number 
+MBDLN21BE 
+MBDLN25BE 
+MCDLN31BE 
+MCDLN35BE 
+Power supply input 
+Single phase 
+100 V 
+Single phase/  
+3 phase 200 V 
+Single phase 
+100 V 
+Single phase/  
+3 phase 200 V 
+Maximum  
+instantaneous output current 
+12 A 
+12 A 
+22 A 
+22 A 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Rotary encoder 
+Resolution: 
+8388608 P/r 
+Resolution: 
+8388608 P/r 
+Resolution: 
+8388608 P/r 
+Resolution: 
+8388608 P/r 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Regenerative  
+discharge resistor 
+Externally 
+connected 
+Externally 
+connected 
+Built-in 
+Built-in 
+Auto gain tuning function 
+Provided 
+Provided 
+Provided 
+Provided 
+Dynamic brake function 
+Provided 
+Provided 
+Provided 
+Provided 
+ 
+ 
+ 
+ 
+ 
+Absolute system 
+Available 
+Available 
+Available 
+Available 
+ 
+ 
+ 
+ 
+ 
+Ambient temperature  
+main power supply cable 
+0 - 55 ℃ 
+0 - 55 ℃ 
+0 - 55 ℃ 
+0 - 55 ℃ 
+ 
+ 
+ 
+ 
+ 
+Control power cable 
+HVSF 0.75 mm2 
+HVSF 0.75 mm2 
+HVSF 0.75 mm2 
+HVSF 0.75 mm2 
+ 
+AWG18 
+AWG18 
+AWG18 
+AWG18 
+Main power supply cable 
+HVSF 0.75 - 2.0 mm2 
+HVSF 0.75 - 2.0 mm2 
+HVSF 0.75 - 2.0 mm2 
+HVSF 0.75 - 2.0 mm2 
+ 
+AWG14 - 18 
+AWG14 - 18 
+AWG14 - 18 
+AWG14 – 18 
+Ground cable 
+HVSF 2.0 mm2 
+HVSF 2.0 mm2 
+HVSF 2.0 mm2 
+HVSF 2.0 mm2 
+ 
+AWG14 
+AWG14 
+AWG14 
+AWG14 
+Motor cable 
+HVSF 0.75 - 2.0 mm2 
+HVSF 0.75 - 2.0 mm2 
+HVSF 0.75 - 2.0 mm2 
+HVSF 0.75 - 2.0 mm2 
+ 
+AWG14 - 18 
+AWG14 - 18 
+AWG14 - 18 
+AWG14 – 18 
+ 
+ 
+ 
+ 
+ 
+Inrush current 
+(Main power supply) (*1) 
+Max．7 A 
+Max．14 A 
+Max．15 A 
+Max．29 A 
+Inrush current 
+(Control power supply) (*1) 
+Max．7 A 
+Max．14 A 
+Max．7 A 
+Max．14 A 
+ 
+ 
+ 
+ 
+ 
+Weight 
+Approx 1.0 kg 
+Approx 1.0 kg 
+Approx 1.6 kg 
+Approx 1.6 kg 
+Dimensions 
+Size B 
+Size B 
+Size C 
+Size C 
+(*1)  Current values were calculated on the basis of the power supply input described above,  
+assuming a voltage of 200 V. 
+ 
+ 
+ 
+
+
+=== 페이지 71 ===
+No. SX-DSV03190 - 67- 
+R1.0                               Motor Business Unit, Panasonic Corporation 
+ 
+ 
+ 
+Model number 
+MDDLN45BE 
+MDDLN55BE 
+MEDLN83BE 
+MEDLN93BE 
+Power supply input 
+Single phase/  
+3 phase 200 V 
+Single phase/  
+3 phase 200 V 
+3 phase 200V 
+3 phase 200V 
+Maximum  
+instantaneous output current 
+24 A 
+40 A 
+60 A 
+80A 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Rotary encoder 
+Resolution: 
+8388608 P/r 
+Resolution: 
+8388608 P/r 
+Resolution: 
+8388608 P/r 
+Resolution: 
+8388608 P/r 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Regenerative  
+discharge resistor 
+Built-in 
+Built-in 
+Built-in 
+Built-in 
+Auto gain tuning function 
+Provided 
+Provided 
+Provided 
+Provided 
+Dynamic brake function 
+Provided 
+Provided 
+Provided 
+Provided 
+ 
+ 
+ 
+ 
+ 
+Absolute system 
+Available 
+Available 
+Available 
+Not available 
+ 
+ 
+ 
+ 
+ 
+Ambient temperature  
+i
+l
+bl
+0 - 55 ℃ 
+0 - 55 ℃ 
+0 - 55 ℃ 
+0 - 55 ℃ 
+ 
+ 
+ 
+ 
+ 
+Control power cable 
+HVSF 0.75 mm2 
+HVSF 0.75 mm2 
+HVSF 0.75 mm2 
+HVSF 0.75 mm2 
+ 
+AWG18 
+AWG18 
+AWG18 
+AWG18 
+Main power supply cable 
+HVSF 2.0 mm2 
+HVSF 2.0 mm2 
+HVSF 2.0 mm2 
+HVSF 2.0 mm2 
+ 
+AWG14 
+AWG14 
+AWG14 
+AWG14 
+Ground cable 
+HVSF 2.0 mm2 
+HVSF 2.0 mm2 
+HVSF 2.0 mm2 
+HVSF 2.0 mm2 
+ 
+AWG14 
+AWG14 
+AWG14 
+AWG14 
+Motor cable 
+HVSF 2.0mm2 
+HVSF 2.0 mm2 
+HVSF 2.0 mm2 
+HVSF 3.5 mm2 
+ 
+AWG14 
+AWG14 
+AWG14 
+AWG12 
+ 
+ 
+ 
+ 
+ 
+Inrush current 
+(Main power supply) (*1) 
+Max．29 A 
+Max．29 A 
+Max．29 A 
+Max．29 A 
+Inrush current 
+(Control power supply) (*1) 
+Max．14 A 
+Max．14 A 
+Max．14 A 
+Max．14 A 
+ 
+ 
+ 
+ 
+ 
+Weight 
+Approx 2.1 kg 
+Approx 2.1 kg 
+Approx 2.5 kg 
+Approx 2.5 kg 
+Dimensions 
+Size D 
+Size D 
+Size E 
+Size E 
+(*1)  Current values were calculated on the basis of the power supply input described above,  
+assuming a voltage of 200 V. 
+ 
+
+
+=== 페이지 72 ===
+No. SX-DSV03190 - 68- 
+R1.0                               Motor Business Unit, Panasonic Corporation 
+ 
+ 
+ 
+Model number 
+MFDLNA3BE 
+MFDLNB3BE 
+Power supply input 
+3 phase 200 V 
+3 phase 200 V 
+Maximum  
+i
+100 A 
+120 A 
+ 
+ 
+ 
+ 
+ 
+ 
+Rotary encoder 
+Resolution: 
+8388608 P/r 
+Resolution: 
+8388608 P/r 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Regenerative  
+discharge resistor 
+Built-in 
+Built-in 
+Auto gain tuning function 
+Provided 
+Provided 
+Dynamic brake function 
+Provided 
+Provided 
+ 
+ 
+ 
+Absolute system 
+Available 
+Available 
+ 
+ 
+ 
+Ambient temperature  
+main power supply cable 
+0 - 55 ℃ 
+0 - 55 ℃ 
+ 
+ 
+ 
+Control power cable 
+HVSF 0.75 mm2 
+HVSF 0.75 mm2 
+ 
+AWG18 
+AWG18 
+Main power supply cable 
+HVSF 3.5 mm2 
+ HVSF 3.5 mm2 
+ 
+AWG12 
+AWG12 
+Ground cable 
+HVSF 3.5 mm2 
+ HVSF 3.5 mm2 
+ 
+AWG12 
+AWG12 
+Motor cable 
+HVSF 3.5 mm2 
+ HVSF 3.5 mm2 
+ 
+AWG12 
+AWG12 
+ 
+ 
+ 
+Inrush current 
+(Main power supply) (*1) 
+Max．22 A 
+Max．22 A 
+Inrush current 
+(Control power supply) (*1) 
+Max．14 A 
+Max．14 A 
+ 
+ 
+ 
+Weight 
+Approx 4.8 kg 
+Approx 4.8 kg 
+Dimensions 
+Size F 
+Size F 
+(*1)  Current values were calculated on the basis of the power supply input described above,  
+assuming a voltage of 200 V. 
+ 
+ 
+ 
+
+
+=== 페이지 73 ===
+No. SX-DSV03190 - 69- 
+R1.0                               Motor Business Unit, Panasonic Corporation 
+ 
+ 
+ I/O connector (X4) default setting  
+ 
+Ｘ4connector 
+Default function 
+Name 
+Pin No. 
+Signal name 
+Symbol 
+Logic 
+SI1 
+5 
+Multi-function input 5 
+SI-MON5 
+Normally-Open 
+SI2 
+7 
+Positive overtravel 
+POT 
+Normally-Closed 
+SI3 
+8 
+Negative overtravel 
+NOT 
+Normally-Closed 
+SI4 
+9 
+Home position 
+HOME 
+Normally-Open 
+SI5 
+10 
+External latch input 1 
+EXT1 
+Normally-Open 
+SI6 
+11 
+External latch input 2 
+EXT2 
+Normally-Open 
+SI7 
+12 
+Multi-function input 3 
+SI-MON3 
+Normally-Open 
+SI8 
+13 
+Multi-function input 4 
+SI-MON4 
+Normally-Open 
+SO1 
+1,2 
+External brake release 
+BRK-OFF 
+Normally-Open 
+SO2 
+25,26 
+External output 1 
+EX-OUT1 
+Normally-Open 
+SO3 
+3,4 
+Alarm output 
+ALM 
+Normally-Closed 
+ 
+ 
+ 
+
+
+=== 페이지 78 ===
+No.SX-DSV03190
+Cat
+e
+Pr.
+Parameter
+Default
+value
+Cat
+e
+Pr.
+Parameter
+Default
+value
+Cat
+e
+Pr.
+Parameter
+Default
+value
+Cat
+e
+Pr.
+Parameter
+Default
+value
+Cat
+e
+Pr.
+Parameter
+Default
+value
+4
+0
+SI1 input selection
+3289650
+4
+31
+Positioning complete (In-position)
+range
+8400
+1
+SI2 input selection
+8487297
+32
+Positioning complete (In-position)
+output setup
+0
+2
+SI3 input selection
+8553090
+33
+INP hold time
+0
+3
+SI4 input selection
+2236962
+34
+Zero-speed
+50
+4
+SI5 input selection
+2105376
+35
+Speed coincidence range
+50
+5
+SI6 input selection
+2171169
+36
+At-speed (Speed arrival)
+1000
+6
+SI7 input selection
+3158064
+37 Mechanical brake action at stalling
+setup
+0
+7
+SI8 input selection
+3223857
+38
+Mechanical brake action at
+running setup
+0
+8
+No available
+-
+39
+Brake release speed setup
+30
+9
+No available
+-
+40
+Selection of alarm output 1
+0
+10
+SO1 output selection
+197379
+41
+Selection of alarm output 2
+0
+11
+SO2 output selection
+1052688
+42
+2nd Positioning complete (In-
+position) range
+8400
+12
+SO3 output selection
+65793
+43
+No available
+-
+13
+No available
+-
+44
+Position comparison output pulse
+width setting
+0
+14
+No available
+-
+45
+Position comparison output
+polarity selection
+0
+15
+No available
+-
+46
+No available
+-
+16
+Type of analog monitor 1
+0
+47
+Pulse output selection
+0
+17
+Analog monitor 1 output gain
+0
+48
+Position comparison value 1
+0
+18
+Type of analog monitor 2
+4
+49
+Position comparison value 2
+0
+19
+Analog monitor 2 output gain
+0
+50
+Position comparison value 3
+0
+20
+No available
+-
+51
+Position comparison value 4
+0
+21
+Analog monitor output setup
+0
+52
+Position comparison value 5
+0
+22
+Manufacturer use
+0
+53
+Position comparison value 6
+0
+23
+Manufacturer use
+0
+54
+Position comparison value 7
+0
+24
+Manufacturer use
+0
+55
+Position comparison value 8
+0
+25
+No available
+-
+56
+Position comparison output delay
+compensation amount
+0
+26
+No available
+-
+57
+Position comparison output
+assignment setting
+0
+27
+No available
+-
+28
+No available
+-
+29
+No available
+-
+30
+No available
+-
+*1 When checking directly value of parameter-file w
+
+=== 페이지 80 ===
+No.SX-DSV03190
+Cat
+e
+Pr.
+Parameter
+Default
+value
+Cat
+e
+Pr.
+Parameter
+Default
+value
+Cat
+e
+Pr.
+Parameter
+Default
+value
+Cat
+e
+Pr.
+Parameter
+Default
+value
+Cat
+e
+Pr.
+Parameter
+Default
+value
+6
+0
+No available
+-
+6
+31
+Real time auto tuning estimation
+speed
+1
+6
+62
+1st resonance attenuation ratio
+0
+6
+93
+No available
+-
+1
+No available
+-
+32
+Real time auto tuning custom
+setup
+0
+63
+*1
+1st anti-resonance frequency
+0.0
+94
+No available
+-
+2
+Velocity deviation excess setup
+0
+33
+No available
+-
+64
+1st anti-resonance attenuation ratio
+0
+95
+Overload warning detection level
+0
+3
+No available
+-
+34
+*1
+Hybrid vibration suppression
+gain(no supported)
+0.0
+65
+*1
+1st response frequency
+0.0
+96
+Overload warning release level
+0
+4
+No available
+-
+35
+*1
+Hybrid vibration suppression
+filter(no supported)
+0.10
+66
+*1
+2nd resonance frequency
+0.0
+97
+Function expansion setup 3
+0
+5
+*1
+Position 3rd gain valid time
+0.0
+36
+Dynamic brake operation input
+setup
+0
+67 2nd resonance attenuation ratio
+0
+98
+Function expansion setup 4
+0
+6
+Position 3rd gain scale factor
+100
+37
+*1
+Oscillation detecting level
+0.0
+68
+*1
+2nd anti-resonance frequency
+0.0
+7
+Torque command additional value
+0
+38
+Warning mask setup
+4
+69
+2nd anti-resonance attenuation
+ratio
+0
+8
+Positive direction torque
+compensation value
+0
+39
+Warning mask setup2
+0
+70
+*1
+2nd response frequency
+0.0
+9
+Negative direction torque
+compensation value
+0
+40
+No available
+-
+71
+3rd damping depth
+0
+10
+Function expansion setup
+528
+41
+1st damping depth
+0
+72
+4th damping depth
+0
+11
+Current response setup
+100
+42
+*1
+Two-stage torque filter time
+constant
+0.0
+73
+*1
+Load estimation filter
+0.0
+12
+No available
+-
+43 Two-stage torque filter attenuation
+term
+1000
+74
+*1
+Torque compensation frequency 1
+0.0
+13
+No available
+-
+44
+No available
+-
+75
+*1
+Torque compensation frequency 2
+0.0
+14
+Emergency stop time at alarm
+200
+45
+No available
+-
+76
+Load estimation count
+0
+15
+2nd over-speed level setup
+0
+46
+No available
+-
+77
+No available
+-
+16
+No available
+-
+47
+Function expansion settings 2
+1
+78
+No available
+
+

@@ -1821,14 +1821,20 @@ def api_task_queue_delete(task_id):
 
 
 # ── CS 세션 API ──
-CS_SESSIONS_FILE = os.path.join(os.path.dirname(BASE_DIR), "reports", "cs-sessions.jsonl")
+CS_SESSIONS_DIR = os.path.join(os.path.dirname(BASE_DIR), "cs_sessions")
 
 
 def _load_cs_sessions() -> list[dict]:
+    """cs_sessions/ 폴더의 개별 JSONL 파일에서 전체 메시지 로드."""
     sessions = []
-    if os.path.exists(CS_SESSIONS_FILE):
+    if not os.path.isdir(CS_SESSIONS_DIR):
+        return sessions
+    for fname in os.listdir(CS_SESSIONS_DIR):
+        if not fname.endswith(".jsonl"):
+            continue
+        fpath = os.path.join(CS_SESSIONS_DIR, fname)
         try:
-            with open(CS_SESSIONS_FILE, "r", encoding="utf-8") as f:
+            with open(fpath, "r", encoding="utf-8") as f:
                 for line in f:
                     line = line.strip()
                     if line:

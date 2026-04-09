@@ -1067,6 +1067,38 @@ def _write_feedback(rating: str, info: dict, ch_id: str, user_id: str):
     except Exception as e:
         log.warning(f"피드백 기록 실패: {e}")
 
+    # CS 세션 피드백 기록 + 세션 완성 처리
+    cs_sid = info.get("cs_session_id")
+    if cs_sid:
+        feedback_entry = {
+            "type": "feedback",
+            "value": "positive" if rating == "good" else "negative",
+            "ts": datetime.now(KST_TZ).isoformat(),
+            "user": user_id,
+            "session_id": cs_sid,
+        }
+        # 세션별 JSONL에 피드백 기록
+        try:
+            safe_name = re.sub(r'[<>:"/\\|?*]', '-', cs_sid)
+            safe_name = re.sub(r'-+', '-', safe_name).strip('-') or "unknown"
+            session_file = os.path.join(_CS_SESSIONS_DIR, f"{safe_name}.jsonl")
+            with open(session_file, "a", encoding="utf-8") as f:
+                f.write(json.dumps(feedback_entry, ensure_ascii=False) + "\n")
+        except Exception as e:
+            log.warning(f"CS 세션 피드백 기록 실패: {e}")
+
+        # "도움됨" → 세션 강제 종료 (다음 질문은 새 세션으로)
+        if rating == "good":
+            cs_ch = info.get("cs_channel", "")
+            cs_user = info.get("cs_user", "")
+            if cs_ch and cs_user:
+                key = (cs_ch, cs_user)
+                with _cs_session_lock:
+                    _cs_session_tracker.pop(key, None)
+                log.info(f"[CS세션] confirmed 종료: {cs_sid} (도움됨 피드백)")
+        else:
+            log.info(f"[CS세션] 세션 유지: {cs_sid} (부족함 피드백 — 추가 질문 가능)")
+
 
 def create_nc_from_slack(text: str, username: str, channel_name: str) -> dict | None:
     """
@@ -2717,16 +2749,18 @@ class AgentMessageHandler(BaseHTTPRequestHandler):
                             "text": {"type": "mrkdwn", "text": "\n".join(ref_lines)},
                         })
 
-                    # 피드백 버튼 비활성화 (2026-04-02 부서장 요청)
-                    # feedback_blocks.append({
-                    #     "type": "actions",
-                    #     "elements": [
-                    #         {"type": "button", "text": {"type": "plain_text", "text": "👍 도움됨"},
-                    #          "action_id": "feedback_good", "value": "good"},
-                    #         {"type": "button", "text": {"type": "plain_text", "text": "👎 아쉬움"},
-                    #          "action_id": "feedback_bad", "value": "bad"},
-                    #     ],
-                    # })
+                    # CS 채널에서만 피드백 버튼 활성화 (2026-04-09 부서장 지시)
+                    if sender == "cs-agent" and _is_cs_channel(ch_name):
+                        feedback_blocks.append({
+                            "type": "actions",
+                            "elements": [
+                                {"type": "button", "text": {"type": "plain_text", "text": "✅ 도움됨"},
+                                 "action_id": "feedback_good", "value": "good",
+                                 "style": "primary"},
+                                {"type": "button", "text": {"type": "plain_text", "text": "❌ 부족함"},
+                                 "action_id": "feedback_bad", "value": "bad"},
+                            ],
+                        })
                     # Ack 대기 중이면 update, 아니면 새 메시지
                     with _pending_ack_lock:
                         ack_info = _pending_ack.pop(ch_id, None)
@@ -2748,13 +2782,20 @@ class AgentMessageHandler(BaseHTTPRequestHandler):
                         msg_ts = resp.get("ts", "")
                     # 피드백 대기 등록
                     if msg_ts:
+                        fb_entry = {
+                            "agent": sender,
+                            "channel": ch_name,
+                            "question_preview": ack_info.get("question_preview", "") if ack_info else "",
+                            "answer_preview": actual_content[:200],
+                        }
+                        # CS 채널: 세션 정보 추가
+                        if sender == "cs-agent" and _is_cs_channel(ch_name):
+                            cs_user_fb = ack_info.get("user", "unknown") if ack_info else "unknown"
+                            fb_entry["cs_session_id"] = _get_or_create_cs_session(ch_name, cs_user_fb)
+                            fb_entry["cs_user"] = cs_user_fb
+                            fb_entry["cs_channel"] = ch_name
                         with _pending_feedback_lock:
-                            _pending_feedback[f"{ch_id}:{msg_ts}"] = {
-                                "agent": sender,
-                                "channel": ch_name,
-                                "question_preview": ack_info.get("question_preview", "") if ack_info else "",
-                                "answer_preview": actual_content[:200],
-                            }
+                            _pending_feedback[f"{ch_id}:{msg_ts}"] = fb_entry
                     log.info(f"[슬랙 발신] #{ch_name} ← {sender}: {clean_content[:60]}")
                     log_to_dashboard(sender, f"slack:#{ch_name}", clean_content, "chat")
 
