@@ -1,0 +1,6 @@
+id | task_name | task_code | task_type | status | parent_task_id | task_item_code | task_item_name
+----------------------------------------------------------------------------------------------------------------------
+4834 | 제어설계 | T4555 | task | in_progress | None | None | None
+4835 | 제어구매요청 | T4556 | task | completed | None | None | None
+
+총 2건

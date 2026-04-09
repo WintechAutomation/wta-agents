@@ -1,0 +1,43 @@
+column_name | data_type
+-------------------------------------------
+id | bigint
+task_name | character varying
+task_type | character varying
+task_code | character varying
+planned_start_date | date
+planned_end_date | date
+actual_start_date | date
+actual_end_date | date
+estimated_hours | numeric
+actual_hours | numeric
+progress_percent | double precision
+priority | character varying
+status | character varying
+resource_requirements | jsonb
+estimated_cost | numeric
+actual_cost | numeric
+description | text
+deliverables | text
+risks | text
+notes | text
+order | integer
+created_at | timestamp with time zone
+updated_at | timestamp with time zone
+assigned_to_id | integer
+created_by_id | integer
+parent_task_id | bigint
+project_id | bigint
+actual_end_datetime | timestamp with time zone
+actual_start_datetime | timestamp with time zone
+jira_issue_key | character varying
+jira_issue_url | character varying
+planned_end_datetime | timestamp with time zone
+planned_start_datetime | timestamp with time zone
+task_item_code | character varying
+task_item_name | character varying
+updated_by_id | integer
+category | character varying
+selected_task | character varying
+special_notes | text
+
+총 39건

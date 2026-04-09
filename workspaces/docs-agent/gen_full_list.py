@@ -52,6 +52,10 @@ EQUIP_OVERRIDE = {
 PROJ_OVERRIDE = {
     'MSMF042L1T2': '아크시스 프레스 #2 (Kob,NSX2-25A)',  # 2023-04-05 발주, cutoff 경계선
 }
+# 제외 목록에서 빼야 할 품목 (범용 부품이 잘못 제외된 경우)
+EXCLUDE_WHITELIST = {
+    'EZI-EC-42M-A',  # Cell Press 제외에 잘못 포함, 실제 CVD/PVD/검사기/소결/포장기 범용
+}
 
 def find_alt_project(item_cd):
     """JS 제외 키워드에 안 걸리는 3년내 최신 프로젝트 찾기"""
@@ -113,8 +117,11 @@ for row in data:
         proj = row[8]
         proj_overridden += 1
 
+    # 제외 화이트리스트 (잘못 제외된 범용 품목 복원)
+    if item_cd in EXCLUDE_WHITELIST:
+        pass  # 제외 건너뜀, 장비유형 유지
     # 제외 품목 → 장비유형 빈배열 (JS가 사용예정 0 처리)
-    if item_cd in exclude_cds:
+    elif item_cd in exclude_cds:
         row[9] = []
         exclude_applied += 1
         continue
@@ -166,12 +173,32 @@ data.sort(key=lambda x: x[4] if x[4] else 0, reverse=True)
 for i, row in enumerate(data):
     row[0] = i + 1
 
+# --- 다수 장비 범용 품목 수집 (JS 프로젝트 필터링 건너뛸 품목) ---
+multi_equip_items = set()
+for row in data:
+    equip = row[9]
+    if isinstance(equip, list) and len(equip) >= 3:
+        multi_equip_items.add(row[1])
+print(f'다수 장비 범용 품목 (JS 필터링 제외): {len(multi_equip_items)}건')
+
 # --- 전체 리스트 HTML ---
 data_str = json.dumps(data, ensure_ascii=False)
 new_html = html.replace(m.group(0), f'const data = {data_str};')
 new_html = new_html.replace(
     '<title>ERP 현재고현황 및 구매진행현황</title>',
     '<title>ERP 현재고현황 및 구매진행현황 (규칙 적용)</title>'
+)
+
+# JS 패치: 다수 장비 범용 품목은 프로젝트 기반 필터링 건너뜀
+multi_equip_js = json.dumps(sorted(multi_equip_items), ensure_ascii=False)
+js_patch_old = '// 프로젝트명에서 장비유형 추출 → BOM 유형과 교차 (실제 사용처만 반영)'
+js_patch_new = f'const MULTI_EQUIP = new Set({multi_equip_js});\n    // 프로젝트명에서 장비유형 추출 → BOM 유형과 교차 (다수 장비 범용 품목 제외)'
+new_html = new_html.replace(js_patch_old, js_patch_new)
+
+# 프로젝트 필터링 조건에 MULTI_EQUIP 체크 추가
+new_html = new_html.replace(
+    'if (types.length > 1 && r[8]) {',
+    'if (types.length > 1 && r[8] && !MULTI_EQUIP.has(r[1])) {'
 )
 
 outpath = f'{base}/ERP_현재고_구매진행_전체.html'

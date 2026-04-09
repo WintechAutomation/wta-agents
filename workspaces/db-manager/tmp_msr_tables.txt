@@ -1,0 +1,10 @@
+table_name
+------------------------------
+api_projectdetailedschedule
+api_projectschedule
+api_projectsubtask
+apscheduler_jobs
+erp_sync_schedules
+project_schedule_change_history
+
+총 6건

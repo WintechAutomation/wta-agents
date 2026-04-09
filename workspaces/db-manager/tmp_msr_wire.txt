@@ -1,0 +1,5 @@
+id | task_name | task_code | task_type | status | parent_task_id
+------------------------------------------------------------------------------------
+4841 | 공압배관 | T4562 | task | not_started | None
+
+총 1건
