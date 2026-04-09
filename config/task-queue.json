@@ -3119,6 +3119,18 @@
       "updated_at": "2026-04-09 22:49:44",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-crafter-a1a1ea",
+      "agent": "crafter",
+      "task": "부서장 지시: vLLM 서버(182.224.6.147:8000)에서 모델을 gemma4 26b로 변경 가능한지 확인하고 시도해줘.",
+      "message": "부서장 지시: vLLM 서버(182.224.6.147:8000)에서 모델을 gemma4 26b로 변경 가능한지 확인하고 시도해줘.\n\n이전에 vLLM 0.19.0에서 gemma4 아키텍처 미지원(transformers 5.x 필요) 이슈가 있었는데, 현재 설치된 버전에서 해결됐는지 확인.\n안 되면 어떤 조건이 필요한지 보고해줘.\n\n현재 상태: Qwen2.5-Coder-32B가 vLLM으로 서빙 중 (포트 8000, nohup PID 1660638).",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-10 07:37:22",
+      "updated_at": "2026-04-10 07:37:22",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }
