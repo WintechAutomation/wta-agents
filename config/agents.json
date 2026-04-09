@@ -495,5 +495,31 @@
     "auto_response": true,
     "ack_message": true,
     "context_hint": ""
+  },
+  "llm-agent": {
+    "id": "llm-agent",
+    "name": "LLM서버",
+    "emoji": "🧠",
+    "role": "외부 LLM 추론 서버 (vLLM, Ollama)",
+    "model": null,
+    "rank": "사원",
+    "port": 5620,
+    "host": "182.224.6.147",
+    "room": "dev",
+    "color": "#a855f7",
+    "barColor": "#a855f7",
+    "shirtColor": [
+      168,
+      85,
+      247
+    ],
+    "category": "인프라",
+    "location": "external",
+    "enabled": true,
+    "slack_channels": [],
+    "mention_required": true,
+    "auto_response": false,
+    "ack_message": false,
+    "context_hint": ""
   }
 }

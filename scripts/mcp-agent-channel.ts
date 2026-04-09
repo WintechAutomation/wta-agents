@@ -69,10 +69,13 @@ if (!MY_PORT) {
 
 const IS_MAX = AGENT_ID === 'MAX'
 
-// ── 외부 에이전트 localhost → hubHost 변환 ──
-// 자신이 외부(host 필드 있음)이면 다른 에이전트의 localhost를 메인서버 IP로 치환
+// ── 외부 에이전트 통신 설정 ──
+// 자신이 외부(host 필드 있음)이면 Cloudflare Tunnel relay 경유로 내부 에이전트에게 전송
 const MY_HOST = AGENT_HOSTS[AGENT_ID] || 'localhost'
 const IS_EXTERNAL = MY_HOST !== 'localhost'
+const RELAY_BASE_URL = 'https://agent.mes-wta.com/api/agent-relay'
+const RELAY_TOKEN = process.env.AGENT_RELAY_TOKEN || 'wta-relay-2026'
+
 if (IS_EXTERNAL) {
   for (const [id, host] of Object.entries(AGENT_HOSTS)) {
     if (host === 'localhost') {
@@ -81,7 +84,7 @@ if (IS_EXTERNAL) {
   }
 }
 
-const DASHBOARD_URL = IS_EXTERNAL ? `http://${HUB_HOST}:5555` : 'http://localhost:5555'
+const DASHBOARD_URL = IS_EXTERNAL ? 'https://agent.mes-wta.com' : 'http://localhost:5555'
 const EMBED_URL = 'http://182.224.6.147:11434/api/embed'
 
 const log = (msg: string) =>
@@ -704,37 +707,51 @@ async function sendMessage(to: string, message: string): Promise<string> {
       if (!port) return `알 수 없는 에이전트: ${target}`
       const host = AGENT_HOSTS[target] || 'localhost'
 
-      // 포트 온라인 여부 먼저 확인
+      // 외부 에이전트 → 내부 에이전트: Cloudflare relay 경유
+      const useRelay = IS_EXTERNAL && host === HUB_HOST
+      const pingUrl = useRelay
+        ? `${RELAY_BASE_URL}/${target}`  // relay는 ping 대신 직접 전송 시도
+        : `http://${host}:${port}/ping`
+      const messageUrl = useRelay
+        ? `${RELAY_BASE_URL}/${target}`
+        : `http://${host}:${port}/message`
+      const relayHeaders: Record<string, string> = useRelay
+        ? { 'Content-Type': 'application/json', 'X-Relay-Token': RELAY_TOKEN }
+        : { 'Content-Type': 'application/json' }
+
+      // 포트 온라인 여부 먼저 확인 (relay 경유 시 ping 스킵, 직접 전송)
       let isOnline = false
-      try {
-        await fetch(`http://${host}:${port}/ping`, {
-          signal: AbortSignal.timeout(1000),
-        })
-        isOnline = true
-      } catch {
-        isOnline = false
+      if (useRelay) {
+        isOnline = true  // relay는 대시보드가 내부 포트로 전달하므로 ping 불필요
+      } else {
+        try {
+          await fetch(pingUrl, { signal: AbortSignal.timeout(1000) })
+          isOnline = true
+        } catch {
+          isOnline = false
+        }
       }
 
       if (isOnline) {
         try {
-          await fetch(`http://${host}:${port}/message`, {
+          await fetch(messageUrl, {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            headers: relayHeaders,
             body: JSON.stringify({
               from: AGENT_ID,
               to: target,
               content: message,
               ts: new Date().toISOString(),
             }),
-            signal: AbortSignal.timeout(3000),
+            signal: AbortSignal.timeout(useRelay ? 30000 : 3000),
           })
-          log(`전송: → ${target}: ${message.slice(0, 80)}`)
-          return `전송 완료 → ${target} (온라인)`
+          log(`전송: → ${target}: ${message.slice(0, 80)}${useRelay ? ' (relay)' : ''}`)
+          return `전송 완료 → ${target} (온라인${useRelay ? ', relay 경유' : ''})`
         } catch {
-          // ping은 됐지만 message 전송 실패 → 큐 저장
+          // 전송 실패 → 큐 저장
           const ts = new Date().toISOString()
           await saveToQueue(target, AGENT_ID, message, ts)
-          log(`전송 실패 → ${target}, 큐 저장`)
+          log(`전송 실패 → ${target}, 큐 저장${useRelay ? ' (relay 실패)' : ''}`)
           return `전송 완료 → ${target} (오프라인 - 큐에 저장됨, 온라인 시 자동 전달)`
         }
       } else {

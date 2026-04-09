@@ -869,6 +869,50 @@ def api_recv(agent_id):
     return {"messages": msgs}
 
 
+# ── 외부 에이전트 릴레이 프록시 (Cloudflare Tunnel 경유) ──
+AGENT_RELAY_TOKEN = os.environ.get("AGENT_RELAY_TOKEN", "wta-relay-2026")
+
+@app.route("/api/agent-relay/<agent_id>", methods=["POST"])
+def api_agent_relay(agent_id):
+    """외부 에이전트 → 내부 에이전트 메시지 릴레이.
+    Cloudflare Tunnel(agent.mes-wta.com) 경유로 외부 에이전트가
+    내부 에이전트에게 메시지를 보낼 때 사용하는 프록시 엔드포인트.
+    """
+    # 인증 토큰 검증
+    auth = request.headers.get("X-Relay-Token", "")
+    if auth != AGENT_RELAY_TOKEN:
+        return jsonify({"error": "unauthorized"}), 401
+
+    # 대상 에이전트 포트 확인
+    port = AGENT_PORTS.get(agent_id)
+    if not port:
+        return jsonify({"error": f"unknown agent: {agent_id}"}), 404
+
+    host = AGENT_HOSTS.get(agent_id, "localhost")
+    # 외부 에이전트로의 릴레이는 불필요 (직접 통신 가능)
+    if host != "localhost":
+        return jsonify({"error": f"agent {agent_id} is external, direct connect"}), 400
+
+    # 요청 본문을 그대로 내부 에이전트 포트로 전달
+    try:
+        body = request.get_data()
+        relay_url = f"http://localhost:{port}/message"
+        req = urllib.request.Request(
+            relay_url,
+            data=body,
+            headers={"Content-Type": "application/json"},
+            method="POST",
+        )
+        resp = urllib.request.urlopen(req, timeout=30)
+        result = resp.read().decode("utf-8")
+        return jsonify(json.loads(result)) if result.strip() else jsonify({"ok": True})
+    except urllib.error.HTTPError as e:
+        err_body = e.read().decode("utf-8", errors="replace")
+        return jsonify({"error": f"relay failed: {e.code}", "detail": err_body}), e.code
+    except Exception as e:
+        return jsonify({"error": f"relay failed: {str(e)}"}), 502
+
+
 @app.route("/api/response-times")
 def api_response_times():
     """응답시간 통계 (최근 N건 + 에이전트별 평균)"""
