@@ -115,6 +115,61 @@ def get_or_extract_pdf_page(pdf_path: str, page: int, context: int = 1) -> dict:
     return {"url": url, "cached": False, "local_path": local_path, "pages": f"{start}-{end}"}
 
 
+def _load_all_sessions() -> list[dict]:
+    """cs-sessions.jsonl에서 모든 세션 로드."""
+    sessions = []
+    if not os.path.exists(SESSIONS_PATH):
+        return sessions
+    with open(SESSIONS_PATH, encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                sessions.append(json.loads(line))
+            except json.JSONDecodeError:
+                continue
+    return sessions
+
+
+def lookup_session(query: str) -> dict | None:
+    """
+    cs-sessions.jsonl에서 query 키워드가 포함된 최근 세션을 텍스트 매칭으로 검색.
+    full_response(답변 원문) + attachments 포함하여 반환.
+
+    반환:
+    {
+        "query": str,           # 원래 질문
+        "response": str,        # 답변 원문
+        "attachments": list,    # 첨부파일 목록 (없으면 [])
+        "request_id": str,
+        "session_id": str,
+    } or None
+    """
+    keyword_lower = query.lower()
+    sessions = _load_all_sessions()
+    matches = []
+
+    for session in sessions:
+        stored_query = session.get("query", "").lower()
+        # 키워드 매칭: 질문에 검색어가 포함되거나, 검색어에 질문이 포함
+        if keyword_lower in stored_query or stored_query in keyword_lower:
+            if session.get("response") or session.get("attachments"):
+                matches.append(session)
+
+    if not matches:
+        return None
+
+    latest = matches[-1]
+    return {
+        "query": latest.get("query", ""),
+        "response": latest.get("response", ""),
+        "attachments": latest.get("attachments", []),
+        "request_id": latest.get("request_id", ""),
+        "session_id": latest.get("session_id", ""),
+    }
+
+
 def lookup_session_attachment(keyword: str) -> dict | None:
     """
     cs-sessions.jsonl에서 keyword가 포함된 최근 세션 중
@@ -122,31 +177,19 @@ def lookup_session_attachment(keyword: str) -> dict | None:
 
     반환: {"url": str, "description": str, "request_id": str} or None
     """
-    if not os.path.exists(SESSIONS_PATH):
-        return None
-
+    sessions = _load_all_sessions()
     keyword_lower = keyword.lower()
     matches = []
 
-    with open(SESSIONS_PATH, encoding="utf-8") as f:
-        for line in f:
-            line = line.strip()
-            if not line:
-                continue
-            try:
-                session = json.loads(line)
-            except json.JSONDecodeError:
-                continue
-
-            query = session.get("query", "").lower()
-            attachments = session.get("attachments")
-            if keyword_lower in query and attachments:
-                matches.append(session)
+    for session in sessions:
+        query = session.get("query", "").lower()
+        attachments = session.get("attachments")
+        if keyword_lower in query and attachments:
+            matches.append(session)
 
     if not matches:
         return None
 
-    # 가장 최근 항목
     latest = matches[-1]
     att = latest["attachments"][0]
     return {

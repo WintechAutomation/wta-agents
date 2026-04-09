@@ -151,10 +151,10 @@ def search_with_pipeline(query: str, top_k: int = 5) -> dict:
         "merged_context": str,        # 합산 컨텍스트
     }
     """
-    from cs_pdf_cache import lookup_session_attachment
+    from cs_pdf_cache import lookup_session
 
-    # 1단계: 이전 세션 검색
-    session_hit = lookup_session_attachment(query)
+    # 1단계: 이전 세션 텍스트 매칭 검색 (임베딩 불필요)
+    session_hit = lookup_session(query)
 
     # 2단계: 자체 RAG
     rag_results = search_rag(query, top_k=top_k)

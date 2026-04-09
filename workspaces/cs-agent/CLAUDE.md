@@ -242,13 +242,17 @@ else:
 
 ### 최종 CS 검색 파이프라인 (필수 순서)
 
-**1단계: 이전 세션 검색 (최우선)**
+**1단계: 이전 세션 텍스트 매칭 검색 (최우선, 2026-04-09 변경)**
 ```python
-from cs_pdf_cache import lookup_session_attachment
-prev = lookup_session_attachment(query_keyword)
+from cs_pdf_cache import lookup_session
+prev = lookup_session(query)
 if prev:
-    # 이전 답변 + PDF 링크 바로 제공 (RAG 검색 불필요)
+    # prev["response"]: 이전 답변 원문
+    # prev["attachments"]: 첨부파일 목록
+    # → RAG 임베딩 검색 불필요, 즉시 재사용
 ```
+- 임베딩/유사도 검색 아님 — 키워드 텍스트 매칭 (빠름)
+- cs-sessions.jsonl의 query 필드에서 검색어 포함 여부로 판단
 
 **2단계: 자체 RAG(pgvector) 검색**
 ```python

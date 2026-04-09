@@ -2771,6 +2771,42 @@
       "updated_at": "2026-04-09 13:23:30",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-crafter-dbc2ea",
+      "agent": "crafter",
+      "task": "부서장 지시:",
+      "message": "부서장 지시:\n\n1. C:\\MES\\wta-agents\\cs_sessions\\ 폴더 생성\n2. 지금까지의 CS 대화 이력 전체를 이 폴더에 세션별 JSONL 파일로 저장\n   - 파일명: 세션ID.jsonl (예: slack-cs-중국-조한종-20260409.jsonl)\n   - 각 파일에 해당 세션의 대화 원문 전체 (질문+답변+첨부 모두)\n3. 기존 reports/cs-sessions.jsonl에 있는 56건 데이터를 세션별로 분리해서 이 폴더에 저장\n4. 이후 슬랙봇에서 CS 세션 로깅할 때도 이 폴더에 세션별 JSONL로 기록하도록 변경\n   - 같은 session_id면 같은 파일에 append\n   - 대화 원문 전체 (요약/축약 없이)\n\n핵심: 세션 1건 = 1개 JSONL 파일, 대화 내용 원문 전체 저장",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-09 13:32:33",
+      "updated_at": "2026-04-09 13:32:33",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-cs-agent-c026ed",
+      "agent": "cs-agent",
+      "task": "부서장 지시 — 파이프라인 1단계 세션 이력 검색 방식 변경:",
+      "message": "부서장 지시 — 파이프라인 1단계 세션 이력 검색 방식 변경:\n\n기존 데이터와 동일한 질문이면 임베딩 검색 필요 없습니다. 단순히 cs_sessions/ 폴더의 JSONL 파일들에서 동일/유사 질문을 텍스트 매칭으로 찾고, 해당 세션의 답변 원문을 그대로 재사용하면 됩니다.\n\n흐름:\n1. 새 질문 수신\n2. cs_sessions/*.jsonl 파일들에서 query 필드를 검색 (키워드/문자열 매칭)\n3. 매칭되면 → 해당 세션의 답변(full_response) + 첨부파일을 그대로 사용자에게 전달\n4. 매칭 안 되면 → 기존 파이프라인 2단계(RAG) 진행\n\n임베딩 유사도 검색이 아닌, 텍스트 기반 매칭으로 충분합니다. CLAUDE.md에도 반영해주세요.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-09 13:33:40",
+      "updated_at": "2026-04-09 13:33:40",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-crafter-5129d5",
+      "agent": "crafter",
+      "task": "부서장 지시:",
+      "message": "부서장 지시:\n\n대시보드 CS 질의응답 세션 페이지의 데이터 소스를 변경해주세요.\n\n변경 전: reports/cs-sessions.jsonl (통합 파일)\n변경 후: cs_sessions/ 폴더의 개별 JSONL 파일들만 조회\n\n- cs_sessions/*.jsonl 파일들을 읽어서 세션 목록 표시\n- 1 파일 = 1 세션\n- reports/cs-sessions.jsonl은 더 이상 참조하지 않음\n- 원문 전체 표시 (기존 수정사항 유지)",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-09 13:39:38",
+      "updated_at": "2026-04-09 13:39:38",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }

@@ -114,9 +114,8 @@ for row in data:
     if isinstance(equip, str) and '연삭핸들러' in equip:
         row[9] = ['연삭핸들러']
 
-    # 규칙 2-5: 프로젝트 예외 미배정
-    if item_cd in exception_items:
-        row[9] = []  # 장비유형 미배정
+    # 규칙 2-5: 프로젝트 예외 미배정 — 장비유형은 원본 유지, 자동 할당만 제외
+    # (장비유형을 덮어쓰지 않음)
 
     filtered.append(row)
 

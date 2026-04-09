@@ -363,6 +363,8 @@ _BOOT_TIME = time.time()
 
 # ── CS 세션 JSONL 로깅 ──
 _CS_SESSIONS_FILE = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "reports", "cs-sessions.jsonl")
+_CS_SESSIONS_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "cs_sessions")
+os.makedirs(_CS_SESSIONS_DIR, exist_ok=True)
 
 # CS 세션 추적: (channel_name, username) → {session_id, last_ts, query}
 # 같은 채널+사용자의 10분 이내 연속 대화는 동일 session_id
@@ -412,7 +414,7 @@ def _cs_session_get_query(channel_name: str, username: str) -> str:
 def _log_cs_session(session_id: str, query: str, answer: str, channel: str = "webchat",
                     user: str = "unknown", question_source: str = "web", status: str = "responded",
                     attachments: list[dict] | None = None):
-    """CS 세션을 reports/cs-sessions.jsonl에 기록. 원문 전체 저장."""
+    """CS 세션을 reports/cs-sessions.jsonl + cs_sessions/{session_id}.jsonl에 기록. 원문 전체 저장."""
     now = datetime.now(KST_TZ)
     entry = {
         "session_id": session_id,
@@ -427,11 +429,22 @@ def _log_cs_session(session_id: str, query: str, answer: str, channel: str = "we
     }
     if attachments:
         entry["attachments"] = attachments
+    json_line = json.dumps(entry, ensure_ascii=False) + "\n"
+    # 1) 기존 통합 JSONL (하위 호환)
     try:
         with open(_CS_SESSIONS_FILE, "a", encoding="utf-8") as f:
-            f.write(json.dumps(entry, ensure_ascii=False) + "\n")
+            f.write(json_line)
     except Exception as e:
-        log.warning(f"CS 세션 로깅 실패: {e}")
+        log.warning(f"CS 세션 로깅 실패 (통합): {e}")
+    # 2) 세션별 개별 JSONL (cs_sessions/{session_id}.jsonl)
+    try:
+        safe_name = re.sub(r'[<>:"/\\|?*]', '-', session_id)
+        safe_name = re.sub(r'-+', '-', safe_name).strip('-') or "unknown"
+        session_file = os.path.join(_CS_SESSIONS_DIR, f"{safe_name}.jsonl")
+        with open(session_file, "a", encoding="utf-8") as f:
+            f.write(json_line)
+    except Exception as e:
+        log.warning(f"CS 세션 로깅 실패 (개별): {e}")
 
 # ── 프로젝트 슬랙 채널 캐시 (TTL 5분) ──
 _project_channel_cache: dict[str, dict | None] = {}  # channel_id → project dict or None

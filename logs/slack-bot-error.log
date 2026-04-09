@@ -1,10 +1,10 @@
-[slack-bot] 13:26:00 [라우팅] agents.json 로드 완료: 17개 포트, 14개 채널, 3개 prefix
-[slack-bot] 13:26:00 봇 User ID: U0AP5B0F71C
-[slack-bot] 13:26:01 WTA 슬랙 봇 프로세스 시작 \u2014 PID 29856 \u2014 2026-04-09 13:26:01 KST
-[slack-bot] 13:26:01 WTA 슬랙 봇 시작 (P2P 직접 통신)...
-[slack-bot] 13:26:01 채널 캐시 갱신: 44개
-[slack-bot] 13:26:01 Socket Mode 연결 시작... (시도 #1)
-[slack-bot] 13:26:01 P2P HTTP 서버 시작 (포트 5612)
-[slack-bot] 13:26:02 A new session has been established (session id: 4aa5f041-0d80-4fc1-880d-ee32d4767be9)
-[slack-bot] 13:26:02 Bolt app is running!
-[slack-bot] 13:26:02 Starting to receive messages from a new connection (session id: 4aa5f041-0d80-4fc1-880d-ee32d4767be9)
+[slack-bot] 13:34:30 [라우팅] agents.json 로드 완료: 17개 포트, 14개 채널, 3개 prefix
+[slack-bot] 13:34:31 봇 User ID: U0AP5B0F71C
+[slack-bot] 13:34:31 WTA 슬랙 봇 프로세스 시작 \u2014 PID 90648 \u2014 2026-04-09 13:34:31 KST
+[slack-bot] 13:34:31 WTA 슬랙 봇 시작 (P2P 직접 통신)...
+[slack-bot] 13:34:31 채널 캐시 갱신: 44개
+[slack-bot] 13:34:31 Socket Mode 연결 시작... (시도 #1)
+[slack-bot] 13:34:31 P2P HTTP 서버 시작 (포트 5612)
+[slack-bot] 13:34:32 A new session has been established (session id: d52bc2d5-63cf-46b7-a644-83609aef6b5e)
+[slack-bot] 13:34:32 Bolt app is running!
+[slack-bot] 13:34:32 Starting to receive messages from a new connection (session id: d52bc2d5-63cf-46b7-a644-83609aef6b5e)
