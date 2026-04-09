@@ -303,3 +303,29 @@ session_id = log_session(
 - `message_history` 없음(첫 질문) → 신규 session_id = `webchat-{request_id}`
 - `message_history` 있음(연속 대화) → 첫 번째 user 메시지로 기존 세션 검색 → 동일 session_id 사용
 - 대시보드에서 같은 session_id끼리 1건의 대화로 표시됨
+
+**모든 CS 대응 경로에서 로깅 필수 (2026-04-09 부서장 지시)**
+
+웹챗뿐 아니라 슬랙, 텔레그램 등 모든 경로의 CS 응답을 반드시 기록한다.
+
+| 경로 | channel 값 | request_id |
+|------|-----------|------------|
+| 웹챗 (webchat-req) | `web-chat` | webchat request_id |
+| 슬랙 #cs | `slack-cs` | 슬랙 message_id (ts) |
+| 슬랙 #cs-중국 | `slack-cs-중국` | 슬랙 message_id |
+| 슬랙 기타 채널 | `slack-{채널명}` | 슬랙 message_id |
+| 텔레그램 | `telegram` | 메시지 id |
+
+슬랙 CS 응답 후 로깅 예시:
+```python
+from cs_session_logger import log_session
+log_session(
+    request_id="slack_ts_1775707551449",
+    query="첨부된 이미지 분석 요청",
+    response="이미지 분석 결과: ...",
+    message_history=[],
+    status="completed",
+    rag_source="vision",
+    channel="slack-cs-중국",
+)
+```

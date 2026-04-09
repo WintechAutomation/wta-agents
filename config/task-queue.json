@@ -2723,6 +2723,18 @@
       "updated_at": "2026-04-09 12:56:54",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-cs-agent-944584",
+      "agent": "cs-agent",
+      "task": "부서장 지적사항:",
+      "message": "부서장 지적사항:\n\n슬랙 채널(#cs, #cs-중국 등)로 들어오는 CS 질의응답이 cs-sessions.jsonl에 기록되지 않고 있습니다.\n\n현재 웹챗 경로만 세션 로깅이 되고, 슬랙 경로는 누락된 상태입니다.\n\n수정 요청:\n- 슬랙 채널을 통해 들어오는 CS 질의응답도 cs-sessions.jsonl에 동일하게 기록\n- 소스: \"webchat\" 대신 \"slack\" + 채널명 기록\n- 질문(사용자 메시지) + 응답(cs-agent 답변) 모두 기록\n- 파이프라인 4단계 결과(세션 히트, RAG 결과, PDF 첨부 등)도 동일하게 로깅\n\n모든 CS 대응 경로(웹챗, 슬랙, 텔레그램)에서 세션 로깅이 되어야 합니다. 수정 후 보고 바랍니다.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-09 13:08:03",
+      "updated_at": "2026-04-09 13:08:03",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }
