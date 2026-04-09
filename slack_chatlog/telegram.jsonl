@@ -275,3 +275,5 @@
 {"ts": "2026-04-09 19:23:45", "direction": "inbound", "user": "boss", "text": "음 cs agent 한테 하지말고 dev 한테 하지"}
 {"ts": "2026-04-09 19:24:14", "direction": "outbound", "user": "MAX", "text": "dev-agent에게 이관했습니다. 공개 CS 등록 페이지 구현 + 빌드 + 배포까지 진행합니다."}
 {"ts": "2026-04-09 19:24:29", "direction": "outbound", "user": "MAX", "text": "📊 MGA500T 조회 결과:\n\n- mirae.MGA500T — 입고 관련 테이블로 추정\n- MGA100T(입고 확정)의 상세/이력 테이블 계열\n- 현재 ERP DB 직접 접속 차단 상태라 컬럼 구조 확인 불가\n\n정확한 구조 확인하려면:\n1. ERP 담당자/미래ERP 관리자에게 문의\n2. 또는 방화벽 허용 후 직접 조회"}
+{"ts": "2026-04-09 19:30:09", "direction": "outbound", "user": "MAX", "text": "공개 CS 등록 페이지 구현 + 배포 완료\n\nURL: https://cs-wta.com/public/cs-register\n\n- 로그인 불필요\n- /cs/new와 동일한 필드 구성\n- 등록 시 자동으로 \"CS 접수\" / \"공개등록\"으로 기록\n- 테스트 접수 정상 확인 (id=5651)"}
+{"ts": "2026-04-09 19:39:14", "direction": "inbound", "user": "boss", "text": "전팀한테 메세지보내고 그 팀은 2팀한테 테스트메세지보내"}

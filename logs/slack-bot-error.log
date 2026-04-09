@@ -406,3 +406,15 @@ https://agent.mes-
 [slack-bot] 19:19:04 직접 전송 완료 → docs-agent:5614
 [slack-bot] 19:19:37 [수신] #docs 김근형: MDDLN55BL 찾았다 대구텍 키엔스 → docs-agent
 [slack-bot] 19:19:38 직접 전송 완료 → docs-agent:5614
+[slack-bot] 19:23:32 [응답시간] docs-agent #docs: 3분 54초
+[slack-bot] 19:23:32 [슬랙 발신] #docs ← docs-agent: 김근형님, 네비게이션 버튼 수정 완료했습니다. 전체↔TOP200↔TOP20 상호 이동 가능합니다.
+
+MDDL
+[slack-bot] 19:26:21 [수신] #docs 김근형: 지금 확인하고 있는 테이블이 어떤거임? → docs-agent
+[slack-bot] 19:26:22 직접 전송 완료 → docs-agent:5614
+[slack-bot] 19:26:33 [응답시간] docs-agent #docs: 10초
+[slack-bot] 19:26:33 [슬랙 발신] #docs ← docs-agent: 김근형님, 현재 사용 중인 데이터 소스입니다:
+
+**원본 데이터**: `reports/김근형/erp_data
+[slack-bot] 19:35:20 [수신] #docs 김근형: mes 발주현황 조회 api가 erp에 mca210t 테이블이 모든 필드를 가져온건가? → docs-agent
+[slack-bot] 19:35:20 직접 전송 완료 → docs-agent:5614
