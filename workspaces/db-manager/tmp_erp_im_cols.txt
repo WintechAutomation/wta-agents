@@ -1,0 +1,40 @@
+column_name | data_type
+-------------------------------------------
+item_cd | character varying
+item_nm | character varying
+spec | character varying
+use_yn | character varying
+item_accnt | character varying
+item_kind | character varying
+maker | character varying
+inv_unit | character varying
+base_price | numeric
+item_lvl1 | character varying
+item_lvl2 | character varying
+item_lvl3 | character varying
+supply_type | character varying
+safe_qty | numeric
+min_po_qty | numeric
+last_synced_at | timestamp with time zone
+created_at | timestamp with time zone
+sale_code | character varying
+model | character varying
+model_nm | character varying
+start_dt | character varying
+remark | character varying
+base_item_cd | character varying
+dom_forign | character varying
+out_meth | character varying
+po_lt | integer
+cust_cd | character varying
+wc_cd | character varying
+wh_type | character varying
+wh_cd | character varying
+qc_kind | character varying
+item_gubun | character varying
+con_len | integer
+location_no | character varying
+item_kind2 | character varying
+auto_po | character varying
+
+총 36건
