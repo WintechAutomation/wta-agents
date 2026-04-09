@@ -291,3 +291,4 @@
 {"ts": "2026-04-09 22:07:47", "direction": "outbound", "user": "MAX", "text": "👑 죄송합니다. URL 수정했습니다.\n\n일일 업무보고 종합 (2026-04-09):\nhttps://agent.mes-wta.com/api/files/22e23359-df15-4c4b-9491-db36ebd6b86e/summary.html"}
 {"ts": "2026-04-09 22:49:26", "direction": "inbound", "user": "boss", "text": "Ssh 로 외부 llm vllm으로  켜볼가"}
 {"ts": "2026-04-09 22:49:51", "direction": "outbound", "user": "MAX", "text": "👑 crafter에게 지시했습니다.\n\n182.224.6.147 서버에 SSH 접속 후 vLLM 설치/실행 재시도합니다.\n이전에 gemma4 호환 문제가 있었는데, 다른 모델이나 최신 vLLM으로 시도해볼게요.\n\n진행 상황 오면 보고드리겠습니다."}
+{"ts": "2026-04-09 22:57:39", "direction": "inbound", "user": "boss", "text": "ㅇㅋ"}
