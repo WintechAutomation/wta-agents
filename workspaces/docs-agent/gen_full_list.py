@@ -34,6 +34,10 @@ exclude_cds.update(additional_cs_exclude)
 expired_exclude = {'MDDLN45BL', 'E2E-C04S12-WC-C1', '110XI4300DPI+REWIND', 'NUVO-8108GC-XL'}
 exclude_cds.update(expired_exclude)
 
+# Z축건 등 CS성 프로젝트 제외 (2026-04-09 김근형님 확인)
+cs_project_exclude = {'MBDHT2510BA1'}  # 최근이력 CS, 프로젝트 "Z축건"
+exclude_cds.update(cs_project_exclude)
+
 # --- multi_project 로드 (프로젝트 변경용) ---
 with open(f'{base}/multi_project_items.json', 'r', encoding='utf-8') as f:
     multi = json.load(f)
@@ -206,6 +210,15 @@ new_html = new_html.replace(
     'if (types.length > 1 && r[8] && !MULTI_EQUIP.has(r[1])) {'
 )
 
+# 네비게이션 버튼 정의
+btn_style = "background:#fff;color:#1a237e;border:none;padding:6px 14px;border-radius:20px;font-size:9pt;cursor:pointer;font-weight:700;font-family:'Malgun Gothic',sans-serif;margin-left:4px;"
+orig_btn = """<button onclick="location.href='erp_현재고_TOP20'" style="background:#fff;color:#1a237e;border:none;padding:6px 14px;border-radius:20px;font-size:9pt;cursor:pointer;font-weight:700;font-family:'Malgun Gothic',sans-serif;">TOP 20 &rarr;</button>"""
+nav_full = f'<button onclick="location.href=\'erp_현재고_TOP20\'" style="{btn_style}">TOP 20 &rarr;</button><button onclick="location.href=\'ERP_현재고_구매진행_TOP200\'" style="{btn_style}">TOP 200 &rarr;</button>'
+nav_top200 = f'<button onclick="location.href=\'ERP_현재고_구매진행_전체\'" style="{btn_style}">&larr; 전체</button><button onclick="location.href=\'erp_현재고_TOP20\'" style="{btn_style}">TOP 20 &rarr;</button>'
+nav_top20 = f'<button onclick="location.href=\'ERP_현재고_구매진행_전체\'" style="{btn_style}">&larr; 전체</button><button onclick="location.href=\'ERP_현재고_구매진행_TOP200\'" style="{btn_style}">&larr; TOP 200</button>'
+
+new_html = new_html.replace(orig_btn, nav_full)
+
 outpath = f'{base}/ERP_현재고_구매진행_전체.html'
 with open(outpath, 'w', encoding='utf-8') as f:
     f.write(new_html)
@@ -229,6 +242,28 @@ with open(outpath200, 'w', encoding='utf-8') as f:
     f.write(top200_html)
 print(f'TOP 200 HTML 생성: {outpath200}')
 print(f'TOP 200 재고금액: {top200[0][4]:,} ~ {top200[199][4]:,}')
+
+# --- TOP 20 리스트 HTML ---
+top20 = data[:20]
+top20_str = json.dumps(top20, ensure_ascii=False)
+top20_html = html.replace(m.group(0), f'const data = {top20_str};')
+top20_html = top20_html.replace(
+    '<title>ERP 현재고현황 및 구매진행현황</title>',
+    '<title>ERP 현재고현황 및 구매진행현황 TOP 20 (규칙 적용)</title>'
+)
+top20_html = top20_html.replace(
+    '<h1>ERP 현재고현황 및 구매진행현황</h1>',
+    '<h1>ERP 현재고현황 및 구매진행현황 TOP 20</h1>'
+)
+
+outpath20 = f'{base}/ERP_현재고_구매진행_TOP20.html'
+with open(outpath20, 'w', encoding='utf-8') as f:
+    f.write(top20_html)
+# 버튼 링크 호환용 별칭 파일
+with open(f'{base}/erp_현재고_TOP20.html', 'w', encoding='utf-8') as f:
+    f.write(top20_html)
+print(f'TOP 20 HTML 생성: {outpath20}')
+print(f'TOP 20 재고금액: {top20[0][4]:,} ~ {top20[19][4]:,}')
 
 # --- 적용 확인 ---
 print('\n--- 규칙 적용 확인 ---')

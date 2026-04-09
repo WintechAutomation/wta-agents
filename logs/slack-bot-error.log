@@ -370,3 +370,18 @@ API 경로 확인 완료: `POST /api/production/project-detail
 [slack-bot] 18:58:40 [슬랙 발신] #docs ← docs-agent: 네 알겠습니다. MGA500T 테이블 조회 결과 나오면 바로 JSON 파일 만들겠습니다.
 [slack-bot] 18:59:06 [슬랙 발신] #docs ← docs-agent: 김근형님, MGA500T 테이블은 현재 MES 백엔드 API에 엔드포인트가 없어서 바로 조회가 안 됩니다.
 
+[slack-bot] 19:03:48 [수신] #docs 김근형: 50-01-07-0 이거 CVD(0)/PVD(4)/검사기(6)/포장기(6)/프레스(12) 그냥 이렇게 정리해줘.. → docs-agent
+[slack-bot] 19:03:48 직접 전송 완료 → docs-agent:5614
+[slack-bot] 19:04:21 [수신] #docs 김근형: 아 근데 업무 공간 김근형 폴더에 있던 top 20 클릭하면 이동하던 페이지 파일을 삭제했다 다시 복구좀 → docs-agent
+[slack-bot] 19:04:22 직접 전송 완료 → docs-agent:5614
+[slack-bot] 19:04:47 [수신] #docs 김근형: top20 달라진 내용도 있을텐데 수정해서 복구해주면 땡큐 → docs-agent
+[slack-bot] 19:04:47 직접 전송 완료 → docs-agent:5614
+[slack-bot] 19:07:13 [수신] #docs 김근형: MBDHT2510BA1 이거 최근이력 cs건인데 최근 프로젝트 발주건도 없고 왜 정리 안되어 있음 바로 정리하려고 하지 말고 이유를 설명해 → docs-agent
+[slack-bot] 19:07:13 직접 전송 완료 → docs-agent:5614
+[slack-bot] 19:08:08 [응답시간] docs-agent #docs: 54초
+[slack-bot] 19:08:08 [슬랙 발신] #docs ← docs-agent: 김근형님, MBDHT2510BA1 정리 안 된 이유를 설명드립니다.
+
+**현재 상태:**
+- #68, 장비=
+[slack-bot] 19:09:21 [수신] #docs 김근형: 오케이 z축건 키워드 반영하고 수정좀여 → docs-agent
+[slack-bot] 19:09:21 직접 전송 완료 → docs-agent:5614
