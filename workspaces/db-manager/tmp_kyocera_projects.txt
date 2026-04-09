@@ -1,0 +1,5 @@
+[오류] column p.project_name does not exist
+LINE 1: SELECT p.id, p.project_code, p.project_name, p.customer_name
+                                     ^
+HINT:  Perhaps you meant to reference the column "p.project_code" or the column "p.project_type".
+

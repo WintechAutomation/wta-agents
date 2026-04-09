@@ -8,3 +8,14 @@
 [slack-bot] 13:57:11 A new session has been established (session id: fab6e1ed-99d9-47be-acb1-418fb7899a86)
 [slack-bot] 13:57:11 Bolt app is running!
 [slack-bot] 13:57:11 Starting to receive messages from a new connection (session id: fab6e1ed-99d9-47be-acb1-418fb7899a86)
+[slack-bot] 13:57:15 [슬랙 발신] #제어-지건승2 ← control-agent: 아 이제 명확하네요! 필드 구조에 맞춰 정리하면:
+
+```
+순번  작업코드        작업명        
+[slack-bot] 13:57:18 [피드백] good ← U0A7S89M5S7 (?)
+[slack-bot] 13:57:56 [수신] #cs-중국 조한종: 포장기 팔레트물류 상하축 모터는 몇w → cs-agent
+[slack-bot] 13:57:56 [CS세션] 질문 기록: slack-cs-중국-조한종-20260409-135756 #cs-중국 조한종: 포장기 팔레트물류 상하축 모터는 몇w
+[slack-bot] 13:57:56 직접 전송 완료 → cs-agent:5602
+[slack-bot] 13:58:20 [응답시간] cs-agent #cs-중국: 23초
+[slack-bot] 13:58:20 [슬랙 발신] #cs-중국 ← cs-agent: 포장기 팔레트 상하축 모터 사양을 확인 중입니다...
+[slack-bot] 13:58:20 [CS세션] 답변 기록: slack-cs-중국-조한종-20260409-135756 #cs-중국 (29자, 첨부:0건)

@@ -1,0 +1,5 @@
+[오류] column em.name does not exist
+LINE 2:     em.name AS model_name, em.model_code,
+            ^
+HINT:  Perhaps you meant to reference the column "p.name".
+

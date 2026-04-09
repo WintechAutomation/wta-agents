@@ -1,0 +1,6 @@
+project_code | name | electrical_spec | motion_controller | mechanism_version
+-------------------------------------------------------------------------------------------------
+KRKKOHPL0006 | 한국야금 포장기 #6 (#25-3) | AC220v / 3P / 60Hz / 7.5kw / 40A | WMX2 64 Axis | None
+KRWTAHPL2205 | YG1 포장기 #4 (#22-5) | AC220v / 3P / 60Hz / 7.5kw / 40A | WMX2 64 Axis | None
+
+총 2건

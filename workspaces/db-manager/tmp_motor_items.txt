@@ -1,0 +1,5 @@
+[오류] column "item_code" does not exist
+LINE 1: SELECT item_code, item_name, specification, category 
+               ^
+HINT:  Perhaps you meant to reference the column "erp_item_master.item_cd".
+
