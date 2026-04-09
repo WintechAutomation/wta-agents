@@ -152,3 +152,33 @@
 - 최종발주: 2023-05-30 (약 3년 전)
 [slack-bot] 11:39:02 [수신] #docs 김근형: 찾아봐 → docs-agent
 [slack-bot] 11:39:03 직접 전송 완료 → docs-agent:5614
+[slack-bot] 11:43:05 [응답시간] docs-agent #docs: 4분 2초
+[slack-bot] 11:43:05 [슬랙 발신] #docs ← docs-agent: 김근형님, 현재 CS성 제외 목록에 빠져있는 후보를 찾았습니다.
+
+**기존 CS성 제외: 96건**
+**추가
+[slack-bot] 11:45:08 [수신] #docs 김근형: MADHT1505BA1 이런거는 그래서 프로젝트 이미 제외 시켜놓은거 아님? → docs-agent
+[slack-bot] 11:45:09 직접 전송 완료 → docs-agent:5614
+[slack-bot] 11:45:30 [응답시간] docs-agent #docs: 21초
+[slack-bot] 11:45:30 [슬랙 발신] #docs ← docs-agent: 맞습니다, 제가 잘못 넣었습니다. 
+
+MADHT1505BA1은 장비유형이 [CVD, PVD, 검사기, 소결,
+[slack-bot] 11:46:30 [수신] #docs 김근형: 아니 그렇게 정리가 아니라 최근 이력 cs 3년 이내 프로젝트 발주가 없으니깐 제외가 맞는데 왜 빠져있는 후보에 들어가 있냐고 → docs-agent
+[slack-bot] 11:46:30 직접 전송 완료 → docs-agent:5614
+[slack-bot] 11:48:04 [응답시간] docs-agent #docs: 1분 33초
+[slack-bot] 11:48:04 [슬랙 발신] #docs ← docs-agent: 죄송합니다. RLHW-70-37은 CS성 제외가 맞는데 cs_type_items.json에 포함이 안 되어있
+[slack-bot] 11:48:17 [슬랙 발신] #밥먹기 ← sales-agent: 오늘 점심 후보 - 부서장님이 공유해주신 금촌샤브칼국수 업체 정보입니다 \U0001f35c
+
+**업체명:** 금촌샤브칼국수
+
+[slack-bot] 11:48:54 [슬랙 발신] #밥먹기 ← sales-agent: \U0001f35c 오늘 점심 후보 - 금촌샤브칼국수
+- 주소: 경기 수원시 영통구 태장로 73
+- 카테고리: 칼국수, 만두
+[slack-bot] 11:49:21 [수신] #docs 김근형: MADHT1505BA1 이거 물어본거임.. 이미 적용 시켜서 제외를 시켜놨는데 왜 누락 리스트에 껴서 줬냐고 → docs-agent
+[slack-bot] 11:49:21 직접 전송 완료 → docs-agent:5614
+[slack-bot] 11:49:39 [수신] MAX: [관리자 공지] 오늘 점심 후보
+
+\U0001f35c 금촌샤브칼국수
+- 주소: 경기 수원시 영통구 태장로 73
+- 카테고리: 칼국수, 만두
+- 네이버 지도: h (슬랙 발신 형식 아님 \u2014 무시)
