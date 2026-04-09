@@ -292,3 +292,4 @@
 {"ts": "2026-04-09 22:49:26", "direction": "inbound", "user": "boss", "text": "Ssh 로 외부 llm vllm으로  켜볼가"}
 {"ts": "2026-04-09 22:49:51", "direction": "outbound", "user": "MAX", "text": "👑 crafter에게 지시했습니다.\n\n182.224.6.147 서버에 SSH 접속 후 vLLM 설치/실행 재시도합니다.\n이전에 gemma4 호환 문제가 있었는데, 다른 모델이나 최신 vLLM으로 시도해볼게요.\n\n진행 상황 오면 보고드리겠습니다."}
 {"ts": "2026-04-09 22:57:39", "direction": "inbound", "user": "boss", "text": "ㅇㅋ"}
+{"ts": "2026-04-09 23:36:26", "direction": "outbound", "user": "MAX", "text": "👑 vLLM 서버 기동 성공!\n\n🔧 crafter 완료 보고:\n- 모델: Qwen2.5-Coder-32B-Instruct (BF16, 61GB)\n- 엔드포인트: http://182.224.6.147:8000/v1/chat/completions\n- OpenAI 호환 API, 최대 컨텍스트 8,192 토큰\n- API 테스트 정상 응답 확인\n\n해결 이슈: python3.12-dev 미설치로 Triton 커널 컴파일 실패 → 설치 후 해결\n\nOllama(11434)와 vLLM(8000) 동시 운영 가능 (현재 GPU 메모리 경합 없음).\nnohup 백그라운드 실행 중."}
