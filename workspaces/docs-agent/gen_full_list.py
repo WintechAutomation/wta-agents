@@ -41,7 +41,17 @@ multi_dict = {it['item_cd']: it for it in multi['items']}
 
 # JS EXCLUDE_PJT 키워드 (recalcAll에서 사용예정 제외하는 키워드)
 JS_EXCLUDE_PJT = ['개발', '판매', '무상', '교체', '개조', '부품', '수리', '소모품', '소모성']
-cutoff_3y = datetime(2023, 4, 9)
+cutoff_3y = datetime(2023, 3, 1)  # 3년+1개월 여유 (경계선 품목 누락 방지)
+
+# --- 수동 오버라이드 (김근형님 확인) ---
+# 장비유형 수정
+EQUIP_OVERRIDE = {
+    '55348': ['호닝형상'],  # 호닝형상 전용 품목, 검사기 분류 오류 수정
+}
+# 프로젝트 수동 지정 (multi_project에 없거나 cutoff 경계선)
+PROJ_OVERRIDE = {
+    'MSMF042L1T2': '아크시스 프레스 #2 (Kob,NSX2-25A)',  # 2023-04-05 발주, cutoff 경계선
+}
 
 def find_alt_project(item_cd):
     """JS 제외 키워드에 안 걸리는 3년내 최신 프로젝트 찾기"""
@@ -83,10 +93,25 @@ handler_excluded = 0
 exclude_applied = 0
 proj_changed = 0
 
+equip_overridden = 0
+proj_overridden = 0
+
 for row in data:
     item_cd = row[1]
     equip = row[9]
     proj = row[8] if row[8] else ''
+
+    # 수동 장비유형 오버라이드 (제외보다 먼저)
+    if item_cd in EQUIP_OVERRIDE:
+        row[9] = EQUIP_OVERRIDE[item_cd]
+        equip = row[9]
+        equip_overridden += 1
+
+    # 수동 프로젝트 오버라이드
+    if item_cd in PROJ_OVERRIDE:
+        row[8] = PROJ_OVERRIDE[item_cd]
+        proj = row[8]
+        proj_overridden += 1
 
     # 제외 품목 → 장비유형 빈배열 (JS가 사용예정 0 처리)
     if item_cd in exclude_cds:
@@ -130,7 +155,8 @@ for row in data:
     # 규칙 2-5: 프로젝트 예외 미배정 — 장비유형 원본 유지
 
 print(f'제외(사용예정 비움): {exclude_applied}건, 핸들러 단독: {handler_excluded}건, 핸들러 제거: {handler_removed}건')
-print(f'프로젝트 변경: {proj_changed}건')
+print(f'장비유형 오버라이드: {equip_overridden}건, 프로젝트 오버라이드: {proj_overridden}건')
+print(f'프로젝트 변경(자동): {proj_changed}건')
 print(f'전체 건수 유지: {len(data)}건')
 
 # 재고금액 내림차순 정렬
@@ -182,11 +208,11 @@ for cd in proj_check:
         if r[1] == cd:
             print(f'프로젝트변경 #{r[0]} {cd}: proj={r[8][:45]}, 장비={r[9]}')
 
-# 사용예정 유지 품목
-for cd in ['MSMF042L1T2', 'EZI-EC-ALL-42L-A-R']:
+# 오버라이드 확인
+for cd in ['MSMF042L1T2', 'EZI-EC-ALL-42L-A-R', '55348']:
     for r in data:
         if r[1] == cd:
-            print(f'유지 #{r[0]} {cd}: 장비={r[9]}')
+            print(f'확인 #{r[0]} {cd}: proj={r[8][:45]}, 장비={r[9]}')
 
 # 예외 미배정
 for cd in ['SS-540A-V1', '55348']:
