@@ -27542,3 +27542,6 @@ subtasks 테이블
 직접하지는말고 → control-agent
 2026-04-09 12:11:52,480 INFO 직접 전송 완료 → control-agent:5616
 2026-04-09 12:12:32,789 INFO [응답시간] control-agent #제어-지건승2: 40초
+2026-04-09 12:12:32,789 INFO [슬랙 발신] #제어-지건승2 ← control-agent: 대구텍 때는 MES `append_subtask` API로 서브태스크 7건 추가했습니다.
+
+*당시 방식 (대
