@@ -15,17 +15,29 @@ token = r.json()['data']['access']
 headers = {'Authorization': f'Bearer {token}'}
 print('토큰 발급 성공')
 
-# 페이징으로 전체 데이터 수집
+# 페이징으로 전체 데이터 수집 (재시도 포함)
+import time
 all_items = []
 page = 1
-limit = 500
+limit = 200
+max_retries = 3
 while True:
-    r = requests.get(
-        f'http://localhost:8100/api/erp/purchase/mca210t?limit={limit}&page={page}',
-        headers=headers
-    )
-    resp = r.json()
-    items = resp.get('data', {}).get('items', [])
+    for attempt in range(max_retries):
+        try:
+            r = requests.get(
+                f'http://localhost:8100/api/erp/purchase/mca210t?limit={limit}&page={page}',
+                headers=headers, timeout=30
+            )
+            resp = r.json()
+            items = resp.get('data', {}).get('items', [])
+            break
+        except Exception as e:
+            if attempt < max_retries - 1:
+                print(f'  페이지 {page} 재시도 {attempt+1}...')
+                time.sleep(2)
+            else:
+                print(f'  페이지 {page} 실패: {e}')
+                items = []
     if not items:
         break
     all_items.extend(items)
@@ -33,6 +45,7 @@ while True:
     if len(items) < limit:
         break
     page += 1
+    time.sleep(0.3)
 
 print(f'\n총 수집: {len(all_items)}건')
 

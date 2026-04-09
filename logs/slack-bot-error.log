@@ -449,3 +449,43 @@ MDDL
 
 **변경 내용:**
 - `cs_type_items.json`, `cs_onl
+[slack-bot] 19:50:25 [수신] #docs 김근형: 제외 225건은 뭐가 제외된거? → docs-agent
+[slack-bot] 19:50:26 직접 전송 완료 → docs-agent:5614
+[slack-bot] 19:51:52 [수신] #docs 김근형: 지금까지 작업한파일들 백업좀 해줘 → docs-agent
+[slack-bot] 19:51:52 직접 전송 완료 → docs-agent:5614
+[slack-bot] 19:52:03 [응답시간] docs-agent #docs: 10초
+[slack-bot] 19:52:03 [슬랙 발신] #docs ← docs-agent: 김근형님, 제외 225건 내역입니다:
+
+**카테고리별:**
+- CS_TYPE: 48건 (CS성 확장 품목)
+
+[slack-bot] 19:52:35 [슬랙 발신] #docs ← docs-agent: 김근형님, 백업 완료했습니다.
+
+**백업 위치**: `reports/김근형/backup_20260409/`
+
+[slack-bot] 19:52:54 [수신] #docs 김근형: top 200은 제외 → docs-agent
+[slack-bot] 19:52:54 직접 전송 완료 → docs-agent:5614
+[slack-bot] 19:53:05 [응답시간] docs-agent #docs: 11초
+[slack-bot] 19:53:05 [슬랙 발신] #docs ← docs-agent: 네, TOP 200 생성을 제외하겠습니다. 앞으로 전체 리스트 + TOP 20만 생성합니다.
+[slack-bot] 19:54:39 [수신] #docs 김근형: 야 전체에서 200 가는건 왜 만들어 200제외하는걸로 백업파일 다시만들어 → docs-agent
+[slack-bot] 19:54:39 직접 전송 완료 → docs-agent:5614
+[slack-bot] 19:54:48 [수신] #docs 김근형: 지금 만들어져 있던건 알아서 지우고 → docs-agent
+[slack-bot] 19:54:49 직접 전송 완료 → docs-agent:5614
+[slack-bot] 19:55:21 [응답시간] docs-agent #docs: 32초
+[slack-bot] 19:55:21 [슬랙 발신] #docs ← docs-agent: 김근형님, 처리 완료했습니다.
+
+- TOP 200 HTML 파일 삭제 (reports + uploads)
+-
+[slack-bot] 19:56:09 [수신] #docs 김근형: top20은 왜 2개냐;; → docs-agent
+[slack-bot] 19:56:10 직접 전송 완료 → docs-agent:5614
+[slack-bot] 19:56:40 [응답시간] docs-agent #docs: 29초
+[slack-bot] 19:56:40 [슬랙 발신] #docs ← docs-agent: 죄송합니다. 정리했습니다.
+
+- TOP 20: `erp_현재고_TOP20.html` 1개만 유지
+- 중복 파
+[slack-bot] 19:56:47 [수신] #docs 조한종: 발주현황조회 (MCA210T) 의 1년치 데이터를 조회해서 csv 파일로 만들어봐 모든 필드가 다 나와야해. → docs-agent
+[slack-bot] 19:56:48 직접 전송 완료 → docs-agent:5614
+[slack-bot] 19:57:06 [응답시간] docs-agent #docs: 17초
+[slack-bot] 19:57:06 [슬랙 발신] #docs ← docs-agent: 네, db-manager에게 MCA210T 1년치 전체 필드 CSV 생성 요청했습니다. 완료되면 바로 공유드
+[slack-bot] 19:59:36 [수신] #docs 김근형: 업무공간 김근형 폴더에 erp_data 백업파일 12345 이거 뭐 떄문에 생긴거임? → docs-agent
+[slack-bot] 19:59:36 직접 전송 완료 → docs-agent:5614

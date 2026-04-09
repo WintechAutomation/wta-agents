@@ -34,42 +34,41 @@ def get_token():
 
 # ── 2. 페이징 조회 (날짜 DESC — 오래된 날짜 나오면 중단) ──
 def fetch_all(token):
+    """날짜 필터 API로 1년치 전체 페이징 조회"""
     headers = {"Authorization": f"Bearer {token}"}
     rows = []
     page = 1
     total_pages = None
-    stopped_early = False
 
     while True:
-        url = f"{API_BASE}/api/erp/purchase/mca210t?limit={PAGE_SIZE}&page={page}"
+        url = (
+            f"{API_BASE}/api/erp/purchase/mca210t"
+            f"?fr_dt={FROM_DT}&to_dt={TO_DT}&limit={PAGE_SIZE}&page={page}"
+        )
         req = urllib.request.Request(url, headers=headers)
-        r = urllib.request.urlopen(req, timeout=30)
+        try:
+            r = urllib.request.urlopen(req, timeout=60)
+        except Exception as e:
+            print(f"  page {page} 오류 ({e}), 재시도...")
+            import time; time.sleep(2)
+            r = urllib.request.urlopen(req, timeout=60)
+
         d = json.loads(r.read().decode("utf-8"))
         payload = d.get("data", d)
         items = payload.get("items", [])
         total = payload.get("total", 0)
 
-        if total_pages is None and total:
-            total_pages = (total + PAGE_SIZE - 1) // PAGE_SIZE
-            print(f"전체 {total:,}건 / 예상 {total_pages}페이지")
+        if total_pages is None:
+            total_pages = max(1, (total + PAGE_SIZE - 1) // PAGE_SIZE)
+            print(f"1년치 총 {total:,}건 / {total_pages}페이지")
 
         if not items:
             break
 
-        added = 0
-        for item in items:
-            po_dt = item.get("po_dt") or ""
-            if po_dt and po_dt < FROM_DT:
-                # 기준일 이전 데이터 — 이후 페이지는 모두 더 오래됨
-                stopped_early = True
-                break
-            if po_dt <= TO_DT:
-                rows.append(item)
-                added += 1
+        rows.extend(items)
+        print(f"  page {page}/{total_pages}: {len(items)}건 추가 (누적 {len(rows):,}건)")
 
-        print(f"  page {page}: {added}건 추가 (누적 {len(rows):,}건)")
-
-        if stopped_early or page == total_pages:
+        if page >= total_pages:
             break
         page += 1
 
