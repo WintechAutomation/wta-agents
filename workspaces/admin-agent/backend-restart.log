@@ -173,3 +173,15 @@ exit status 0xffffffff
 {"time":"2026-04-09T20:10:08.087549+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"GET","path":"/api/erp/purchase/mca210t","latency":16778228900,"ip":"::1","user_id":102,"username":"max","query":"fr_dt=2025-04-09&to_dt=2026-04-09&limit=500&page=20"}
 {"time":"2026-04-09T20:10:08.1073554+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"GET","path":"/api/erp/purchase/mca210t","latency":8152950000,"ip":"::1","user_id":102,"username":"max","query":"limit=200&page=23"}
 exit status 1
+{"time":"2026-04-09T20:24:14.2580073+09:00","level":"INFO","msg":"설정 로드 완료","port":8100,"env":"production"}
+{"time":"2026-04-09T20:24:14.3350858+09:00","level":"INFO","msg":"PostgreSQL 연결 성공"}
+{"time":"2026-04-09T20:24:14.3502992+09:00","level":"INFO","msg":"ERP SQL Server 연결 성공"}
+{"time":"2026-04-09T20:24:14.3508973+09:00","level":"INFO","msg":"ERP 관리 기능 활성화"}
+{"time":"2026-04-09T20:24:14.3508973+09:00","level":"INFO","msg":"NAS 관리 기능 활성화","host":"192.168.1.6","port":"5001"}
+{"time":"2026-04-09T20:24:14.3508973+09:00","level":"INFO","msg":"SPA 정적 파일 서빙 활성화","dist":"..\\frontend\\dist"}
+{"time":"2026-04-09T20:24:14.3514107+09:00","level":"INFO","msg":"서버 시작","addr":":8100"}
+{"time":"2026-04-09T20:24:24.1730064+09:00","level":"WARN","msg":"HTTP 요청","status":401,"method":"GET","path":"/api/erp/purchase/mca210t/export","latency":0,"ip":"::1"}
+{"time":"2026-04-09T20:24:25.9526024+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"GET","path":"/api/erp/purchase/mca210t","latency":11184173300,"ip":"::1","user_id":102,"username":"max","query":"limit=100&page=60"}
+{"time":"2026-04-09T20:24:36.4830511+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"GET","path":"/api/erp/purchase/mca210t","latency":10027576500,"ip":"::1","user_id":102,"username":"max","query":"limit=100&page=61"}
+{"time":"2026-04-09T20:24:37.9493898+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"GET","path":"/api/erp/purchase/mca210t","latency":23171393400,"ip":"127.0.0.1","user_id":102,"username":"max","query":"limit=200&page=74"}
+exit status 0xffffffff
