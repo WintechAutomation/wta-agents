@@ -143,13 +143,13 @@ for row in erp_data:
     new_equip = set(current)
     details = []
 
-    # 원본 equip_types (정규화 전)
+    # 원본 equip_types (정규화 전) — 현재 적용 상태 그대로 보존
     if isinstance(raw_equip, list):
-        orig_set = set(raw_equip)
+        orig_list = list(raw_equip)
     elif isinstance(raw_equip, str) and raw_equip.strip():
-        orig_set = {raw_equip}
+        orig_list = [raw_equip]
     else:
-        orig_set = set()
+        orig_list = []
 
     # 1. 형식/명칭 수정
     if isinstance(raw_equip, str) and raw_equip.strip():
@@ -212,6 +212,7 @@ for row in erp_data:
         'nm': item_nm,
         'qty': stock_qty,
         'amt': stock_amt,
+        'orig': orig_list if orig_list else ['(미분류)'],
         'current': sorted(current) if current else ['(미분류)'],
         'new': sorted(new_equip),
         'types': change_types,
@@ -341,16 +342,17 @@ lines.append('</div>')
 
 # Table
 lines.append('<table class="main-table">')
-lines.append('<thead><tr><th>#</th><th>품목코드</th><th>품명</th><th class="qty">재고</th><th class="amt">재고금액</th><th>변경유형</th><th>현재</th><th></th><th>변경후</th><th>상세</th></tr></thead>')
+lines.append('<thead><tr><th>#</th><th>품목코드</th><th>품명</th><th class="qty">재고</th><th class="amt">재고금액</th><th>변경유형</th><th>현재 적용</th><th></th><th>변경 후</th><th>변경 상세</th></tr></thead>')
 lines.append('<tbody>')
 
 for i, item in enumerate(changes):
-    cur_tags = ''.join(f'<span class="tag tag-current">{e}</span>' for e in item['current'])
-    # 변경후: 추가된 것은 빨간 태그
+    # 현재 적용: 원본 그대로 표시
+    orig_tags = ''.join(f'<span class="tag tag-current">{e}</span>' for e in item['orig'])
+    # 변경후: 추가된 것은 빨간, 유지된 것은 녹색, 삭제된 것은 표시 안함
     new_tags = []
-    cur_set = set(item['current'])
+    orig_set = set(item['orig'])
     for e in item['new']:
-        if e in cur_set and e != '(미분류)':
+        if e in orig_set:
             new_tags.append(f'<span class="tag tag-new">{e}</span>')
         else:
             new_tags.append(f'<span class="tag tag-added">{e}</span>')
@@ -360,7 +362,7 @@ for i, item in enumerate(changes):
     detail_str = '<br>'.join(f'<span class="detail">{d[:60]}</span>' for d in item['details'][:3])
     amt = f'{item["amt"]:,}' if item['amt'] else '-'
     types_data = ','.join(item['types'])
-    lines.append(f'<tr data-types="{types_data}"><td>{i+1}</td><td>{item["cd"]}</td><td>{item["nm"][:30]}</td><td class="qty">{item["qty"]}</td><td class="amt">{amt}</td><td>{type_tags}</td><td>{cur_tags}</td><td class="arrow">→</td><td>{new_tags_str}</td><td>{detail_str}</td></tr>')
+    lines.append(f'<tr data-types="{types_data}"><td>{i+1}</td><td>{item["cd"]}</td><td>{item["nm"][:30]}</td><td class="qty">{item["qty"]}</td><td class="amt">{amt}</td><td>{type_tags}</td><td>{orig_tags}</td><td class="arrow">→</td><td>{new_tags_str}</td><td>{detail_str}</td></tr>')
 
 lines.append('</tbody></table></div>')
 

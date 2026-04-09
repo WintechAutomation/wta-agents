@@ -27202,3 +27202,30 @@ MCDHT35 → docs-agent
 2026-04-09 10:18:41,195 INFO [webchat-push] webchat-done 6ca3e1a9 (0b) OK
 2026-04-09 10:18:41,195 INFO [api/chat/stream] 완료: 6ca3e1a9
 2026-04-09 10:18:51,885 INFO [응답시간] docs-agent #docs: 20초
+2026-04-09 10:18:51,886 INFO [슬랙 발신] #docs ← docs-agent: 부서장님, erp_data.json 자체는 아직 수정 적용하지 않았습니다.
+
+현재까지 한 것은:
+• 장비유형
+2026-04-09 10:24:12,165 INFO [라우팅] agents.json 로드 완료: 17개 포트, 14개 채널, 2개 prefix
+2026-04-09 10:24:12,884 INFO 봇 User ID: U0AP5B0F71C
+2026-04-09 10:24:13,083 INFO WTA 슬랙 봇 프로세스 시작 — PID 86228 — 2026-04-09 10:24:13 KST
+2026-04-09 10:24:13,084 INFO WTA 슬랙 봇 시작 (P2P 직접 통신)...
+2026-04-09 10:24:13,454 INFO 채널 캐시 갱신: 43개
+2026-04-09 10:24:13,454 INFO Socket Mode 연결 시작... (시도 #1)
+2026-04-09 10:24:13,505 INFO P2P HTTP 서버 시작 (포트 5612)
+2026-04-09 10:27:40,362 INFO [수신] #docs 김근형: <@U0AP5B0F71C> 변경 리스트 erp 데이터 수정할거 아니고 ERP 현재고현황 및 구매진행현황 리스트 수정용 진행임 해당 리스트에 현재 → docs-agent
+2026-04-09 10:27:40,759 INFO 직접 전송 완료 → docs-agent:5614
+2026-04-09 10:28:14,848 INFO [응답시간] docs-agent #docs: 34초
+2026-04-09 10:28:14,848 INFO [슬랙 발신] #docs ← docs-agent: 네 알겠습니다. 변경 리스트에 각 품목별로 현재 적용 장비유형 → 변경 후 장비유형을 명확하게 표시해서 올리
+2026-04-09 10:28:18,559 INFO [api/chat/stream] init: 81617d07 - 파나소닉 A6B 서보드라이브에서 4.39  브레이크 해제 속도 설정 파라메터 에 대한설명
+내부자료에서 관련된
+2026-04-09 10:28:18,578 INFO 직접 전송 완료 → cs-agent:5602
+2026-04-09 10:28:18,578 INFO [api/chat/stream] webchat-req 전송 → cs-agent: 81617d07
+2026-04-09 10:28:33,085 INFO [webchat-raw] 81617d07 chunk(10b, pipes=0): '조회 중입니다...'
+2026-04-09 10:28:33,086 INFO [webchat-push] webchat-chunk 81617d07 (10b) OK
+2026-04-09 10:28:47,976 INFO [webchat-raw] 81617d07 chunk(605b, pipes=18): '## 파나소닉 MINAS-A6B — Pr4.39 브레이크 해제 속도\n\n| 항목 | 내용 |\n|------|------|\n| **파라미터명** | 브레이크 해제 속도 (Brake Release Speed) |\n| **설정 범위** | 30 ~ 3000 r/min |\n| **기본값** | 30 r/min |\n| **단위** | r/min (회전속도) |\n\n**기능**: 서보 OFF 시 모터 회전속도가 Pr4.39 이하로 내려가면 브레이크 체결. 서보 ON 시 해당 속도 미만이 될 때까지 대기 후 Servo-ON 완료.\n\n**출처**: Panasonic SX-DSV03190 (MINAS-A6BE Parameter Manual)\n\n---\n\n**PDF 링크 관련 안내**\n\nWTA 내부에 해당 매뉴얼 파일이 있으나, '
+2026-04-09 10:28:47,979 INFO [webchat-push] webchat-chunk 81617d07 (605b) OK
+2026-04-09 10:28:55,205 INFO [webchat-push] webchat-done 81617d07 (0b) OK
+2026-04-09 10:28:55,206 INFO [api/chat/stream] 완료: 81617d07
+2026-04-09 10:29:07,588 INFO [api/chat/stream] init: c6051fca - 야 너한테 pdf 파일이 있자나 계속 어디서 받으라는거야
+2026-04-09 10:29:07,593 INFO 직접 전송 완료 → cs-agent:5602

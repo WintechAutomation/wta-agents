@@ -243,3 +243,72 @@
 2026-04-09 00:03:03,222 WARNING ì±„ë„ ID ì—†ìŒ: #êµ¬ë§¤
 2026-04-09 00:04:18,178 WARNING ì±„ë„ ID ì—†ìŒ: #êµ¬ë§¤
 2026-04-09 00:37:20,199 WARNING [íŒŒì¼â†’MES] í”„ë¡œì íŠ¸ ì¡°íšŒ ì‹¤íŒ¨: 'list' object has no attribute 'get'
+[slack-bot] 10:10:43 [¶ó¿ìÆÃ] agents.json ·Îµå ¿Ï·á: 17°³ Æ÷Æ®, 14°³ Ã¤³Î, 2°³ prefix
+[slack-bot] 10:10:44 º¿ User ID: U0AP5B0F71C
+[slack-bot] 10:10:44 WTA ½½·¢ º¿ ÇÁ·Î¼¼½º ½ÃÀÛ \u2014 PID 44768 \u2014 2026-04-09 10:10:44 KST
+[slack-bot] 10:10:44 WTA ½½·¢ º¿ ½ÃÀÛ (P2P Á÷Á¢ Åë½Å)...
+[slack-bot] 10:10:45 Ã¤³Î Ä³½Ã °»½Å: 43°³
+[slack-bot] 10:10:45 Socket Mode ¿¬°á ½ÃÀÛ... (½Ãµµ #1)
+[slack-bot] 10:10:45 P2P HTTP ¼­¹ö ½ÃÀÛ (Æ÷Æ® 5612)
+[slack-bot] 10:10:45 A new session has been established (session id: 2b97821f-e7e2-41dd-9b40-6928f56289ca)
+[slack-bot] 10:10:45 Bolt app is running!
+[slack-bot] 10:10:45 Starting to receive messages from a new connection (session id: 2b97821f-e7e2-41dd-9b40-6928f56289ca)
+[slack-bot] 10:11:06 [webchat-raw] cdb4a7bb chunk(558b, pipes=32): '## ÆÄ½ºÅØ(Fastech) Ezi-SERVOII \u2014 E-004 ¿¡·¯ (°úºÎÇÏ ÀÌ»ó)\n\n**¿¡·¯ ÄÚµå**: E-004 (0xFF04)\n\n**¹ß»ı ¿øÀÎ**: ¸ğÅÍÀÇ **ÃÖ´ë ÅäÅ©¸¦ ÃÊ°úÇÏ´Â ºÎÇÏ°¡ 5ÃÊ ÀÌ»ó** Áö¼ÓµÈ °æ¿ì\n\n---\n\n### ¿øÀÎº° ÇØ°á¹æ¹ı\n\n| # | ¿øÀÎ | Á¶Ä¡ »çÇ× |\n|---|------|---------|\n| 1 | Áö·É À§Ä¡°¡ ±â±¸¹° ¹üÀ§ ÃÊ°ú | »óÀ§ Á¦¾î±âÀÇ À§Ä¡°ª È®ÀÎ ¹× Á¶Á¤ |\n| 2 | ±â±¸¹° º¯Çü (³ª»ç Ç®¸², ÀÌ¹°Áú À¯ÀÔ, ±¸Á¶ º¯Çü) | Á¶¸³ »óÅÂ Á¡°Ë ¹× Á¶Ä¡ |\n| 3 | H/W Limit ¼¾¼­ ¹Ìµ¿ÀÛ (±â±¸¹° ³¡´Ü¿¡ ´êÀ½) | ¼¾¼­ ¹× ¹è¼± Á¡°Ë |\n| 4 | ¸ğÅÍ ÅäÅ© < ºÎÇÏ ÅäÅ© | µ¿ÀÛ ¼Óµµ ³·Ãß°Å³ª Å« ÅäÅ© ¸ğÅÍ ±³Ã¼ |\n| 5 | ¸ğÅÍ °íÀå (º£¾î¸µ'
+[slack-bot] 10:11:06 [webchat-push] webchat-chunk cdb4a7bb (558b) OK
+[slack-bot] 10:11:11 [webchat-push] webchat-done cdb4a7bb (0b) OK
+[slack-bot] 10:11:32 [¼ö½Å] #docs ±è±ÙÇü: Àú ¸®½ºÆ®´ë·Î Á¤¸® ÁøÇàÇÒ°Çµ¥ ±×·³ ÇÁ·ÎÁ§Æ® ¶Ç ºÙ´Â°Å ¾Æ³Ä? ¡æ docs-agent
+[slack-bot] 10:11:32 Á÷Á¢ Àü¼Û ¿Ï·á ¡æ docs-agent:5614
+[slack-bot] 10:11:46 [ÀÀ´ä½Ã°£] docs-agent #docs: 13ÃÊ
+[slack-bot] 10:11:46 [½½·¢ ¹ß½Å] #docs ¡ç docs-agent: ¾Æ´Õ´Ï´Ù. º¯°æ ¸®½ºÆ®ÀÇ º¯°æ»çÇ×Àº µÎ °¡Áö»ÓÀÔ´Ï´Ù:
+
+1. **ÇÚµé·¯ Á¦°Å** \u2014 ±âÁ¸ µî·ÏµÈ ÀåºñÀ¯Çü¿¡¼­
+[slack-bot] 10:12:35 [¼ö½Å] #docs ±è±ÙÇü: ¾Æ´Ï ÇÁ·ÎÁ§Æ® ¼öÁ¤ÇÏ·Á°í ÁøÇàÇÏ´Â°Çµ¥ ±×°É ¾È°Çµå¸®¸é ¾î¶»°Ô ÇÏ³ª? ¡æ docs-agent
+[slack-bot] 10:12:35 Á÷Á¢ Àü¼Û ¿Ï·á ¡æ docs-agent:5614
+[slack-bot] 10:13:32 [ÀÀ´ä½Ã°£] docs-agent #docs: 56ÃÊ
+[slack-bot] 10:13:32 [½½·¢ ¹ß½Å] #docs ¡ç docs-agent: ÁË¼ÛÇÕ´Ï´Ù, Á¦°¡ Àß¸ø ÀÌÇØÇß½À´Ï´Ù.
+
+º¯°æ ¸®½ºÆ®´ë·Î erp_data.jsonÀÇ ÀåºñÀ¯Çü(ÇÁ·ÎÁ§Æ® ºĞ·ù)À»
+[slack-bot] 10:14:00 [¼ö½Å] #docs Á¶ÇÑÁ¾: <@U0APTPTUKJR> ÀÌ°Å´Â ¹«½¼ÀÛ¾÷À» ¿äÃ»ÇÏ´Â°Å¾ß? ¡æ docs-agent
+[slack-bot] 10:14:00 Á÷Á¢ Àü¼Û ¿Ï·á ¡æ docs-agent:5614
+[slack-bot] 10:14:21 [ÀÀ´ä½Ã°£] docs-agent #docs: 21ÃÊ
+[slack-bot] 10:14:21 [½½·¢ ¹ß½Å] #docs ¡ç docs-agent: ºÎ¼­Àå´Ô, ±è±ÙÇü´ÔÀÌ ÁøÇà ÁßÀÎ ÀÛ¾÷ ¿ä¾àÀÔ´Ï´Ù.
+
+**ERP ÇöÀç°íÇöÈ² ¹× ±¸¸ÅÁøÇàÇöÈ² ¸®½ºÆ® \u2014 ÀåºñÀ¯Çü
+[slack-bot] 10:14:48 [¼ö½Å] #docs ±è±ÙÇü: <@U0A7S89M5S7> Áö±İ ÇÁ·ÎÁ§Æ®¿¡ ÇÚµé·¯ µî·ÏµÈ°Å Áßº¹ ´©¶ôµÈ°Å ÇÁ·ÎÁ§Æ® ¾ÈÀâÇôÀÖ´Â°Å ¼öÁ¤ÁßÀÔ´Ï´Ù. ¡æ docs-agent
+[slack-bot] 10:14:49 Á÷Á¢ Àü¼Û ¿Ï·á ¡æ docs-agent:5614
+[slack-bot] 10:15:00 [¼ö½Å] #docs Á¶ÇÑÁ¾: <@U0AP5B0F71C> ³ÊÇÑÅ× ¸»ÇÑ°Å ¾Æ´ÏÀÚ³ª docs . ´ëÈ­³»¿ëÀ» ¾î´ÀÁ¤µµ´Â º¸°í ´Ï°¡ ´ë´äÇØ¾ßÇÏ´Â°ÍÀÎÁö ÆÄ¾ÇÇÏ°í ´ë´äÇØ ¡æ docs-agent
+[slack-bot] 10:15:00 Á÷Á¢ Àü¼Û ¿Ï·á ¡æ docs-agent:5614
+[slack-bot] 10:16:03 [api/chat/stream] init: 0cc7c94e - ÆÄ³ª¼Ò´Ğ A6B ¼­º¸µå¶óÀÌºê¿¡¼­ 4.39  ºê·¹ÀÌÅ© ÇØÁ¦ ¼Óµµ ¼³Á¤ ÆÄ¶ó¸ŞÅÍ ¿¡ ´ëÇÑ¼³¸í
+[slack-bot] 10:16:03 Á÷Á¢ Àü¼Û ¿Ï·á ¡æ cs-agent:5602
+[slack-bot] 10:16:03 [api/chat/stream] webchat-req Àü¼Û ¡æ cs-agent: 0cc7c94e
+[slack-bot] 10:16:06 [ÀÀ´ä½Ã°£] docs-agent #docs: 1ºĞ 6ÃÊ
+[slack-bot] 10:16:06 [½½·¢ ¹ß½Å] #docs ¡ç docs-agent: ÁË¼ÛÇÕ´Ï´Ù. ´ëÈ­ ¸Æ¶ô ÆÄ¾ÇÇÏ°Ú½À´Ï´Ù.
+[slack-bot] 10:16:17 [webchat-raw] 0cc7c94e chunk(582b, pipes=18): '## ÆÄ³ª¼Ò´Ğ MINAS-A6B \u2014 Pr4.39 ºê·¹ÀÌÅ© ÇØÁ¦ ¼Óµµ\n\n| Ç×¸ñ | ³»¿ë |\n|------|------|\n| **ÆÄ¶ó¹ÌÅÍ¸í** | ºê·¹ÀÌÅ© ÇØÁ¦ ¼Óµµ (Brake Release Speed) |\n| **¼³Á¤ ¹üÀ§** | 30 ~ 3000 r/min |\n| **±âº»°ª** | 30 r/min |\n| **´ÜÀ§** | r/min (È¸Àü¼Óµµ) |\n\n### ±â´É ¼³¸í\n- **¼­º¸ OFF ½Ã**: ¸ğÅÍ È¸Àü¼Óµµ°¡ Pr4.39 °ª ÀÌÇÏ·Î ³»·Á°¡¸é ºê·¹ÀÌÅ©¸¦ **Ã¼°á**ÇÕ´Ï´Ù.\n- **¼­º¸ ON ½Ã**: ºê·¹ÀÌÅ© ÇØÁ¦ ÈÄ È¸Àü¼Óµµ°¡ Pr4.39 °ª ¹Ì¸¸ÀÌ µÉ ¶§±îÁö ´ë±â ÈÄ Servo-ON ¿Ï·á\n  - ¿¹: Pr4.39 = 30r/min ¡æ ¸ğÅÍ°¡ 30r/min ÀÌÇÏ°¡ µÇ¾î¾ß Servo-ON ¿Ï·á\n\n### Á¶Á¤'
+[slack-bot] 10:16:17 [webchat-push] webchat-chunk 0cc7c94e (582b) OK
+[slack-bot] 10:16:23 [webchat-push] webchat-done 0cc7c94e (0b) OK
+[slack-bot] 10:16:23 [api/chat/stream] ¿Ï·á: 0cc7c94e
+[slack-bot] 10:16:51 [api/chat/stream] init: d479e86e - ¸Å´º¾ó¿¡¼­ ÀÌºÎºĞ Ã£¾Æ¼­ pdf ·Î ¹ßÃéÇØ¼­ º¸³»Áà
+[slack-bot] 10:16:51 Á÷Á¢ Àü¼Û ¿Ï·á ¡æ cs-agent:5602
+[slack-bot] 10:16:51 [api/chat/stream] webchat-req Àü¼Û ¡æ cs-agent: d479e86e
+[slack-bot] 10:17:08 [webchat-raw] d479e86e chunk(10b, pipes=0): 'È®ÀÎ ÁßÀÔ´Ï´Ù...'
+[slack-bot] 10:17:08 [webchat-push] webchat-chunk d479e86e (10b) OK
+[slack-bot] 10:17:17 [webchat-raw] d479e86e chunk(364b, pipes=0): 'ÁË¼ÛÇÕ´Ï´Ù. ÇöÀç À¥Ã¤ÆÃÀ» ÅëÇÑ **PDF ÆÄÀÏ Á÷Á¢ Àü¼ÛÀº Áö¿øÇÏÁö ¾Ê½À´Ï´Ù.**\n\nÆÄ³ª¼Ò´Ğ MINAS-A6B Pr4.39 °ü·Ã ¸Å´º¾ó ¿øº»ÀÌ ÇÊ¿äÇÏ½Å °æ¿ì:\n\n**¹æ¹ı 1: ÆÄ³ª¼Ò´Ğ °ø½Ä ¹®¼­ ´Ù¿î·Îµå**\n- ¹®¼­¸í: `SX-DSV03190` (MINAS-A6BE Parameter Manual)\n- ÆÄ³ª¼Ò´Ğ FA »çÀÌÆ®¿¡¼­ Á÷Á¢ ´Ù¿î·Îµå °¡´É\n\n**¹æ¹ı 2: WTA ±â¼úÁö¿øÆÀ ¿äÃ»**\n- ÀÌ¸ŞÀÏ ¶Ç´Â ÀüÈ­·Î ¹®¼­ ¿äÃ»\n- ´ã´çÀÚ°¡ PDF ÆÄÀÏÀ» Á÷Á¢ Àü´ŞÇØµå¸³´Ï´Ù\n\n**ÇöÀç Á¦°ø °¡´ÉÇÑ Á¤º¸:**\n- ÅØ½ºÆ® ±â¹İ ÆÄ¶ó¹ÌÅÍ ¼³¸í (ÀÌÀü ´äº¯ Âü°í)\n- ¼³Á¤°ª, ±â´É, Á¶Á¤ °¡ÀÌµå\n\nPDF ¿Ü¿¡ ÅØ½ºÆ®·Î ´õ ÇÊ¿äÇÑ Á¤º¸°¡ ÀÖÀ¸½Ã¸é ¸»¾¸ÇØÁÖ¼¼¿ä.'
+[slack-bot] 10:17:17 [webchat-push] webchat-chunk d479e86e (364b) OK
+[slack-bot] 10:17:22 [webchat-push] webchat-done d479e86e (0b) OK
+[slack-bot] 10:17:22 [api/chat/stream] ¿Ï·á: d479e86e
+[slack-bot] 10:17:43 [api/chat/stream] init: 6ca3e1a9 - ´Ù¿î·Îµå ¸µÅ©¸¦ º¸³»ÁÙ¼öÀÖÀÚ³ª
+[slack-bot] 10:17:43 Á÷Á¢ Àü¼Û ¿Ï·á ¡æ cs-agent:5602
+[slack-bot] 10:17:43 [api/chat/stream] webchat-req Àü¼Û ¡æ cs-agent: 6ca3e1a9
+[slack-bot] 10:17:54 [webchat-raw] 6ca3e1a9 chunk(16b, pipes=0): '¹®¼­ ¸µÅ© È®ÀÎ ÁßÀÔ´Ï´Ù...'
+[slack-bot] 10:17:54 [webchat-push] webchat-chunk 6ca3e1a9 (16b) OK
+[slack-bot] 10:18:30 [¼ö½Å] #docs Á¶ÇÑÁ¾: <@U0AP5B0F71C> ¾îÁ¦ º¸´ø Æ÷¸ä¿¡¼­ ¸¹ÀÌ º¯°æµÇ°íÀÕ´Â°Å°°Àºµ¥ ±¦ÂúÀ½? ¡æ docs-agent
+[slack-bot] 10:18:31 Á÷Á¢ Àü¼Û ¿Ï·á ¡æ docs-agent:5614
+[slack-bot] 10:18:35 [webchat-raw] 6ca3e1a9 chunk(300b, pipes=0): 'ÆÄ³ª¼Ò´Ğ °ø½Ä ¹®¼­´Â ÀúÀÛ±Ç ¹®Á¦·Î Á÷Á¢ ¸µÅ© Á¦°øÀÌ ¾î·Æ½À´Ï´Ù.\n\n**ÆÄ³ª¼Ò´Ğ °ø½Ä ¹®¼­ ´Ù¿î·Îµå ¹æ¹ı:**\n\n1. ÆÄ³ª¼Ò´Ğ FA °ø½Ä »çÀÌÆ® Á¢¼Ó\n2. °Ë»öÃ¢¿¡ **"SX-DSV03190"** ¶Ç´Â **"MINAS-A6B"** ÀÔ·Â\n3. ±â¼ú ¹®¼­ ¡æ ¸Å´º¾ó ¸Ş´º¿¡¼­ ¹«·á ´Ù¿î·Îµå °¡´É\n\n**¹®¼­¸í**: SX-DSV03190 (MINAS-A6BE series Parameter Manual)\n\nÆÄ³ª¼Ò´Ğ °ø½Ä ¹®¼­´Â È¸¿ø°¡ÀÔ ¾øÀÌµµ ´ëºÎºĞ ¹«·á·Î ¹ŞÀ» ¼ö ÀÖ½À´Ï´Ù. °Ë»ö ÈÄ ´Ù¿î·Îµå°¡ ¾È µÇ½Ã¸é WTA ±â¼úÁö¿øÆÀÀ¸·Î ¹®ÀÇÇØ ÁÖ¼¼¿ä.'
+[slack-bot] 10:18:35 [webchat-push] webchat-chunk 6ca3e1a9 (300b) OK
+[slack-bot] 10:18:41 [webchat-push] webchat-done 6ca3e1a9 (0b) OK
+[slack-bot] 10:18:41 [api/chat/stream] ¿Ï·á: 6ca3e1a9
+[slack-bot] 10:18:51 [ÀÀ´ä½Ã°£] docs-agent #docs: 20ÃÊ
+[slack-bot] 10:18:51 [½½·¢ ¹ß½Å] #docs ¡ç docs-agent: ºÎ¼­Àå´Ô, erp_data.json ÀÚÃ¼´Â ¾ÆÁ÷ ¼öÁ¤ Àû¿ëÇÏÁö ¾Ê¾Ò½À´Ï´Ù.
+
+ÇöÀç±îÁö ÇÑ °ÍÀº:
+\u2022 ÀåºñÀ¯Çü

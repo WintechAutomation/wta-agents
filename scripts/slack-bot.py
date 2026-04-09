@@ -1039,6 +1039,8 @@ if os.path.exists(_scripts_env_path) and not CS_API_KEY:
 # ── 웹챗 비동기 폴링 (cs-wta.com → slack-bot → cs-agent) ──
 _webchat_tickets: dict[str, dict] = {}  # ticket_id → {status, result, created_at}
 _webchat_lock = threading.Lock()
+# 스트리밍 세션 추적: request_id → {"query": str, "accum": str}
+_webchat_stream_sessions: dict[str, dict] = {}
 CS_AGENT_CHAT_PORT = 5602  # mcp-agent-channel (cs-agent) 내부 포트
 
 
@@ -1064,13 +1066,19 @@ def _webchat_push_to_hub(content: str, sender: str) -> None:
         pipe_cnt = text.count("|")
         log.info(f"[webchat-raw] {req_id} chunk({len(text)}b, pipes={pipe_cnt}): {text[:400]!r}")
         payload = {"request_id": req_id, "type": "chunk", "data": text}
+        # 스트리밍 텍스트 누적
+        if req_id in _webchat_stream_sessions:
+            _webchat_stream_sessions[req_id]["accum"] += text
     elif marker == "webchat-done":
         payload = {"request_id": req_id, "type": "done", "data": text}
-        # 스트리밍 완료 시 CS 세션 기록
+        # 스트리밍 완료 시 CS 세션 기록 (실제 질문/답변 텍스트 사용)
+        sess = _webchat_stream_sessions.pop(req_id, None)
+        actual_query = sess["query"] if sess else "(unknown)"
+        actual_answer = sess["accum"] if sess and sess["accum"] else text or "(no content)"
         _log_cs_session(
             session_id=f"webchat-stream-{req_id}",
-            query="(streaming)",
-            answer=text[:200] if text else "(stream completed)",
+            query=actual_query,
+            answer=actual_answer[:500] if actual_answer else "(no content)",
             channel="webchat",
             user="unknown",
             question_source="web",
@@ -1078,6 +1086,7 @@ def _webchat_push_to_hub(content: str, sender: str) -> None:
         )
     elif marker == "webchat-error":
         payload = {"request_id": req_id, "type": "error", "data": text}
+        _webchat_stream_sessions.pop(req_id, None)
     else:
         return
 
@@ -2444,6 +2453,8 @@ class AgentMessageHandler(BaseHTTPRequestHandler):
         # 이미지 첨부 지원 (2026-04-06): image_urls 배열을 마커 두번째 줄 `images:` 로 첨부
         try:
             webchat_req = f"webchat-req:{request_id}:{query}"
+            # 스트리밍 세션 추적 시작 (질문 텍스트 저장)
+            _webchat_stream_sessions[request_id] = {"query": query, "accum": ""}
             image_urls = data.get("image_urls") or []
             if isinstance(image_urls, list) and image_urls:
                 # 문자열만 필터 + S3 버킷 URL만 허용 (SSRF 방지)
