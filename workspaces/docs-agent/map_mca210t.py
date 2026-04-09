@@ -72,13 +72,13 @@ import re
 html = re.sub(r'<!-- MCA210T 발주이력 모달 -->.*?</div>\s*</div>\s*</div>', '', html, flags=re.DOTALL)
 # 이전 PO 스크립트 제거 (const PO_DATA 또는 let PO_DATA)
 html = re.sub(r'<script>\s*(?:const|let) PO_DATA[\s\S]*?</script>', '', html)
-# tr onclick 정리 — 중복된 onclick 포함 tr을 원래대로 복원
-# 패턴: h += '<tr style="cursor:pointer" onclick="showPO(...)"|...반복...>'
-html = re.sub(
-    r"""h \+= '<tr(?:\s+style=\\"cursor:pointer\\"\s+onclick=\\"showPO\([^)]*\)\\")+""",
-    "h += '<tr",
-    html
-)
+# tr onclick 정리 — 이전 실행에서 오염된 TR 시작 태그 원복
+tr_start = html.find("h += '<tr")
+if tr_start >= 0:
+    tr_end_marker = ">' +\n"
+    tr_end = html.find(tr_end_marker, tr_start)
+    if tr_end >= 0:
+        html = html[:tr_start] + "h += '<tr>' +\n" + html[tr_end + len(tr_end_marker):]
 
 # 모달 HTML
 modal_html = '''
@@ -191,15 +191,32 @@ document.getElementById('poModal').addEventListener('click', function(e) {
 # HTML에 모달 삽입 (</body> 앞)
 html = html.replace('</body>', modal_html + modal_js + '</body>')
 
-# 행 클릭 시 PO 조회
-old_tr = "h += '<tr"
-new_tr = "h += '<tr style=\"cursor:pointer\" onclick=\"showPO(\\''+r[1]+'\\',\\''+r[2].replace(/'/g,\"\")+'\\')\""
-html = html.replace(old_tr, new_tr, 1)  # 첫 번째만
+# 행 클릭 이벤트: JS에 renderRows 후 이벤트 위임 방식으로 추가 (TR 직접 수정 안 함)
+click_js = '''
+<script>
+document.getElementById('tbody').addEventListener('click', function(e) {
+  const tr = e.target.closest('tr');
+  if (!tr) return;
+  const cells = tr.querySelectorAll('td');
+  if (cells.length < 2) return;
+  const codeEl = cells[1].querySelector('.code');
+  const nmEl = cells[1].querySelector('.item-nm');
+  if (codeEl && nmEl) showPO(codeEl.textContent, nmEl.textContent.replace(/[()]/g,''));
+});
+</script>
+'''
+html = html.replace('</body>', click_js + '</body>')
 
-# 품목명 스타일 변경: 괄호 처리 + 짙은 회색 + 폰트 축소
-old_nm = ">\\'+" + "r[2]+" + "\\'</span>"
-new_nm = ">\\'('+r[2]+')" + "\\'</span>"
-html = html.replace(old_nm, new_nm)
+# 품목명 스타일: CSS만 수정 (JS 안 건드림)
+# .item-nm 기존 스타일 → 괄호 + 짙은 회색 + 폰트 축소
+css_patch = '''
+  .item-nm::before { content: "("; }
+  .item-nm::after { content: ")"; }
+'''
+html = html.replace(
+    '.item-nm {',
+    '.item-nm::before { content: "("; }\n  .item-nm::after { content: ")"; }\n  .item-nm {'
+)
 html = html.replace(
     'color:#333;font-size:8.5pt;',
     'color:#777;font-size:7.5pt;'
