@@ -1,0 +1,24 @@
+id | source_file | page_number | chunk_index
+----------------------------------------------------------------
+418991 | Unknown_BFP-A8588-B_Manual_KO.pdf | None | 0
+386396 | Mitsubishi_BFP-A8588-B_MaintenanceManual_KO.pdf | 1 | 0
+418992 | Unknown_BFP-A8588-B_Manual_KO.pdf | None | 1
+386399 | Mitsubishi_BFP-A8588-B_MaintenanceManual_KO.pdf | 1 | 1
+386401 | Mitsubishi_BFP-A8588-B_MaintenanceManual_KO.pdf | 2 | 2
+418993 | Unknown_BFP-A8588-B_Manual_KO.pdf | None | 2
+418994 | Unknown_BFP-A8588-B_Manual_KO.pdf | None | 3
+386402 | Mitsubishi_BFP-A8588-B_MaintenanceManual_KO.pdf | 2 | 3
+386404 | Mitsubishi_BFP-A8588-B_MaintenanceManual_KO.pdf | 3 | 4
+418995 | Unknown_BFP-A8588-B_Manual_KO.pdf | None | 4
+418996 | Unknown_BFP-A8588-B_Manual_KO.pdf | None | 5
+386406 | Mitsubishi_BFP-A8588-B_MaintenanceManual_KO.pdf | 3 | 5
+386408 | Mitsubishi_BFP-A8588-B_MaintenanceManual_KO.pdf | 3 | 6
+418997 | Unknown_BFP-A8588-B_Manual_KO.pdf | None | 6
+418998 | Unknown_BFP-A8588-B_Manual_KO.pdf | None | 7
+386410 | Mitsubishi_BFP-A8588-B_MaintenanceManual_KO.pdf | 4 | 7
+386413 | Mitsubishi_BFP-A8588-B_MaintenanceManual_KO.pdf | 4 | 8
+418999 | Unknown_BFP-A8588-B_Manual_KO.pdf | None | 8
+419000 | Unknown_BFP-A8588-B_Manual_KO.pdf | None | 9
+386415 | Mitsubishi_BFP-A8588-B_MaintenanceManual_KO.pdf | 4 | 9
+
+�� 20��

@@ -2509,18 +2509,6 @@
       "completed_at": null
     },
     {
-      "id": "tq-admin-agent-2f419c",
-      "agent": "admin-agent",
-      "task": "slack-bot 재시작 요청. 기존 프로세스 전체 종료 후 별도 터미널(백그라운드)로 1개만 실행. ConEmu 사용 금지.",
-      "message": "slack-bot 재시작 요청. 기존 프로세스 전체 종료 후 별도 터미널(백그라운드)로 1개만 실행. ConEmu 사용 금지.",
-      "status": "pending",
-      "priority": "medium",
-      "created_at": "2026-04-09 10:38:20",
-      "updated_at": "2026-04-09 10:38:20",
-      "last_report_at": null,
-      "completed_at": null
-    },
-    {
       "id": "tq-cs-agent-96553d",
       "agent": "cs-agent",
       "task": "부서장 추가 지시: PDF 페이지 추출 시 해당 페이지만이 아니라 앞뒤 1페이지씩 포함해서 추출해.",
@@ -2541,18 +2529,6 @@
       "priority": "medium",
       "created_at": "2026-04-09 10:44:30",
       "updated_at": "2026-04-09 10:44:30",
-      "last_report_at": null,
-      "completed_at": null
-    },
-    {
-      "id": "tq-admin-agent-b7a953",
-      "agent": "admin-agent",
-      "task": "slack-bot 재시작 요청. 기존 프로세스 전체 종료 후 별도 터미널(백그라운드)로 1개만 실행. ConEmu 사용 금지.",
-      "message": "slack-bot 재시작 요청. 기존 프로세스 전체 종료 후 별도 터미널(백그라운드)로 1개만 실행. ConEmu 사용 금지.",
-      "status": "pending",
-      "priority": "medium",
-      "created_at": "2026-04-09 10:46:47",
-      "updated_at": "2026-04-09 10:46:47",
       "last_report_at": null,
       "completed_at": null
     },
@@ -2613,6 +2589,42 @@
       "priority": "medium",
       "created_at": "2026-04-09 10:56:50",
       "updated_at": "2026-04-09 10:56:50",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-cs-agent-d0d14f",
+      "agent": "cs-agent",
+      "task": "부서장 지시사항 전달:",
+      "message": "부서장 지시사항 전달:\n\nPDF 요청 처리 시, PDF 추출/업로드 작업을 시작하기 전에 먼저 사용자에게 \"PDF 준비에 시간이 소요됩니다\" 안내 메시지를 보내고 나서 작업을 시작하세요.\n\n즉, 흐름:\n1. 사용자 PDF 요청 수신\n2. \"해당 매뉴얼 페이지를 PDF로 준비 중입니다. 잠시만 기다려주세요.\" 등의 안내 먼저 전송\n3. PDF 추출 → 캐시 확인 → 업로드 → URL 전달\n\n사용자가 응답 없이 기다리는 상황을 방지하기 위한 조치입니다. CLAUDE.md 파이프라인 규칙에도 반영해주세요.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-09 11:04:09",
+      "updated_at": "2026-04-09 11:04:09",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-cs-agent-54be77",
+      "agent": "cs-agent",
+      "task": "부서장 지시사항:",
+      "message": "부서장 지시사항:\n\n현재 대시보드 CS 세션에서 같은 사용자의 연속 대화가 각각 별개 세션으로 기록되고 있습니다.\n예: \"미쓰비시 H1043 에러 설명해줘\" → \"매뉴얼 보내줘\" 가 2건으로 분리됨 (실제로는 1건의 대화)\n\n개선 요청:\n- 같은 사용자(webchat session)의 연속 대화를 하나의 세션으로 묶어서 cs-sessions.jsonl에 기록\n- 웹챗에서 session_id가 있으면 그것으로 그룹핑, 없으면 같은 사용자의 일정 시간(예: 10분) 이내 메시지를 같은 세션으로 묶기\n- 대시보드에서도 하나의 세션으로 표시되도록\n\n현재 웹챗 요청에 session_id 같은 식별자가 있는지 확인하고, 세션 그룹핑 방안을 구현해서 보고해주세요.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-09 11:06:17",
+      "updated_at": "2026-04-09 11:06:17",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-cs-agent-b06191",
+      "agent": "cs-agent",
+      "task": "부서장 지시사항 전달 (중요):",
+      "message": "부서장 지시사항 전달 (중요):\n\ncs-wta.com AI 채팅 페이지를 ChatGPT/Claude/Gemini 스타일로 전면 재구성해주세요.\n\n핵심 요구사항:\n1. **사이드바 대화 이력** — 왼쪽에 이전 대화 세션 목록 (ChatGPT처럼)\n2. **새 채팅 버튼** — 사이드바 상단에 \"새 채팅\" 버튼\n3. **대화창** — 메인 영역에 채팅 메시지 표시 (user/assistant 구분)\n4. **입력창** — 하단 고정, 전송 버튼\n5. **세션 관리** — 새 채팅 누르면 새 세션, 사이드바에서 이전 세션 클릭하면 해당 대화 이력 로드\n\n기준: ChatGPT, Claude, Gemini의 채팅 UI/UX를 그대로 따라서 구현\n- 현재 만들다가 문제가 많은 상태이니, 기존 코드 정리하고 위 기준으로 깔끔하게 재구현\n- 세션 ID 기반으로 대화 이력 저장/로드\n- 스트리밍 응답 지원 유지\n\n현재 채팅 페이지 코드를 먼저 분석하고, 재구현 계획을 세운 후 작업 진행해주세요.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-09 11:09:45",
+      "updated_at": "2026-04-09 11:09:45",
       "last_report_at": null,
       "completed_at": null
     }

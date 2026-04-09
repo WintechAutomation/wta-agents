@@ -141,6 +141,12 @@ needs_dbmanager = True (RAG score < 0.60) →
   db-manager 응답 수신 후 → 답변 생성 + PDF 추출 (get_or_extract_pdf_page)
 ```
 
+**PDF 요청 처리 순서 (2026-04-09 부서장 지시)**:
+1. PDF 요청 수신 즉시 → keep-alive chunk 전송: "webchat-chunk:{id}:해당 매뉴얼 페이지를 PDF로 준비 중입니다. 잠시만 기다려주세요."
+2. PDF 추출 (get_or_extract_pdf_page) → 캐시 확인 → 업로드
+3. URL 포함 최종 답변 전송
+사용자가 응답 없이 기다리지 않도록 반드시 1번을 먼저 수행한다.
+
 **응답 전송:**
 ```
 send_message(to="slack-bot", message="webchat-chunk:{id}:{답변 텍스트}")
@@ -264,18 +270,33 @@ pipeline = search_with_pipeline(query)
 3. 없으면 get_or_extract_pdf_page()로 추출 + 업로드 (캐시 자동 저장)
 4. Cloudflare URL을 웹챗 답변에 포함하여 전달
 
-### cs-sessions.jsonl 기록 규칙 (강화)
-PDF 첨부가 있는 세션은 반드시 `attachments` 필드 포함:
-```json
-{
-  "request_id": "...",
-  "attachments": [{
-    "type": "pdf",
-    "source_file": "SX-DSV03190_R1_0E_170428.pdf",
-    "page": 78,
-    "cache_path": "reports/cs-cache/SX-DSV03190_..._p78.pdf",
-    "download_url": "https://agent.mes-wta.com/api/files/xxx.pdf",
-    "description": "Pr4.39 브레이크 해제 속도 설명 페이지"
-  }]
-}
+### cs-sessions.jsonl 기록 규칙 (강화) — 2026-04-09 세션 그룹핑 추가
+
+**직접 JSON append 금지. 반드시 cs_session_logger.log_session()을 사용한다.**
+
+```python
+import sys
+sys.path.insert(0, 'C:/MES/wta-agents/workspaces/cs-agent')
+from cs_session_logger import log_session
+
+session_id = log_session(
+    request_id="abc12345",
+    query="질문 텍스트",
+    response="답변 텍스트",
+    message_history=message_history,  # webchat 요청에서 수신한 대화이력
+    status="completed",
+    rag_source="db-manager",
+    attachments=[{                     # PDF 첨부 시 포함
+        "type": "pdf",
+        "source_file": "파일명.pdf",
+        "page": 20,
+        "download_url": "https://agent.mes-wta.com/api/files/xxx.pdf",
+        "description": "설명"
+    }],
+)
 ```
+
+**세션 그룹핑 원리**:
+- `message_history` 없음(첫 질문) → 신규 session_id = `webchat-{request_id}`
+- `message_history` 있음(연속 대화) → 첫 번째 user 메시지로 기존 세션 검색 → 동일 session_id 사용
+- 대시보드에서 같은 session_id끼리 1건의 대화로 표시됨

@@ -27297,3 +27297,40 @@ https:/
 2026-04-09 10:55:59,470 ERROR [webchat-push] webchat-chunk fe3ae5cf 예외: HTTP Error 404: Not Found
 2026-04-09 10:56:03,781 ERROR [webchat-push] webchat-done fe3ae5cf 예외: HTTP Error 404: Not Found
 2026-04-09 10:59:24,938 INFO [응답시간] docs-agent #docs: 7분 6초
+2026-04-09 10:59:24,938 INFO [슬랙 발신] #docs ← docs-agent: 김근형님, 기존 ERP 현재고현황 및 구매진행현황 리스트 포맷 그대로 TOP 100 뽑았습니다.
+
+https
+2026-04-09 11:01:00,779 INFO [라우팅] agents.json 로드 완료: 17개 포트, 14개 채널, 2개 prefix
+2026-04-09 11:01:01,491 INFO 봇 User ID: U0AP5B0F71C
+2026-04-09 11:01:01,676 INFO WTA 슬랙 봇 프로세스 시작 — PID 70804 — 2026-04-09 11:01:01 KST
+2026-04-09 11:01:01,677 INFO WTA 슬랙 봇 시작 (P2P 직접 통신)...
+2026-04-09 11:01:02,035 INFO 채널 캐시 갱신: 43개
+2026-04-09 11:01:02,036 INFO Socket Mode 연결 시작... (시도 #1)
+2026-04-09 11:01:02,069 INFO P2P HTTP 서버 시작 (포트 5612)
+2026-04-09 11:01:27,454 INFO [api/chat/stream] init: e9b518ba - 미쓰비시 H1043 에러에 대해서 설명해줘
+2026-04-09 11:01:27,458 INFO 직접 전송 완료 → cs-agent:5602
+2026-04-09 11:01:27,459 INFO [api/chat/stream] webchat-req 전송 → cs-agent: e9b518ba
+2026-04-09 11:01:35,971 INFO [webchat-raw] e9b518ba chunk(10b, pipes=0): '조회 중입니다...'
+2026-04-09 11:01:35,974 INFO [webchat-push] webchat-chunk e9b518ba (10b) OK
+2026-04-09 11:02:01,406 INFO [webchat-raw] e9b518ba chunk(414b, pipes=15): '## 미쓰비시 CRnQ/CRnD — H1043 에러\n\n| 항목 | 내용 |\n|------|------|\n| **에러 코드** | H1043 |\n| **에러명** | 3번 축 엔코더 초기 통신 이상 |\n| **영문명** | Encoder init communication error |\n\n**원인**: 서보 앰프 3번 축과 엔코더 간 초기 통신에 실패한 경우 발생합니다.\n\n**해결 방법**:\n1. 전원을 OFF → 재투입\n2. 재발하는 경우 미쓰비시 전기 구입처에 문의\n\n**참고**: H104n 계열은 축별 에러 코드입니다.\n- H1041 = 1번 축, H1042 = 2번 축, H1043 = 3번 축\n- H1044~H1048 = 4~8번 축\n\n**출처**: BFP-A8588-B (CRnQ/CRnD 컨트롤러 트러'
+2026-04-09 11:02:01,408 INFO [webchat-push] webchat-chunk e9b518ba (414b) OK
+2026-04-09 11:02:06,353 INFO [webchat-push] webchat-done e9b518ba (0b) OK
+2026-04-09 11:02:06,353 INFO [api/chat/stream] 완료: e9b518ba
+2026-04-09 11:02:55,822 INFO [api/chat/stream] init: 52a650a5 - 매뉴얼 보내줘
+2026-04-09 11:02:55,838 INFO 직접 전송 완료 → cs-agent:5602
+2026-04-09 11:02:55,838 INFO [api/chat/stream] webchat-req 전송 → cs-agent: 52a650a5
+2026-04-09 11:03:03,617 INFO [webchat-raw] 52a650a5 chunk(18b, pipes=0): '매뉴얼 페이지 확인 중입니다...'
+2026-04-09 11:03:03,621 INFO [webchat-push] webchat-chunk 52a650a5 (18b) OK
+2026-04-09 11:03:47,240 INFO [수신] #docs 김근형: MADHT1505BA1 이거 프로젝트 안잡혀 있는 이유 → docs-agent
+2026-04-09 11:03:47,656 INFO 직접 전송 완료 → docs-agent:5614
+2026-04-09 11:04:17,058 INFO [webchat-raw] 52a650a5 chunk(214b, pipes=0): '미쓰비시 H1043 관련 매뉴얼 페이지입니다.\n\n**다운로드 링크 (PDF)**:\nhttps://agent.mes-wta.com/api/files/a84162952512485b808ed5bb24e087b2.pdf\n\n- 문서: BFP-A8588-B (CRnQ/CRnD 컨트롤러 트러블슈팅 매뉴얼, 한국어)\n- 내용: 19~21페이지 — H104n 계열 엔코더 초기 통신 이상 에러 설명'
+2026-04-09 11:04:17,060 INFO [webchat-push] webchat-chunk 52a650a5 (214b) OK
+2026-04-09 11:04:21,914 INFO [webchat-push] webchat-done 52a650a5 (0b) OK
+2026-04-09 11:04:21,915 INFO [api/chat/stream] 완료: 52a650a5
+2026-04-09 11:04:53,816 INFO [응답시간] docs-agent #docs: 1분 6초
+2026-04-09 11:04:53,816 INFO [슬랙 발신] #docs ← docs-agent: 김근형님, MADHT1505BA1 (Panasonic A5B ServoDriver) 확인했습니다.
+
+마지막 
+2026-04-09 11:05:27,312 INFO [수신] #docs 김근형: 이건 그럼 뭐지? RLHW-70-37 → docs-agent
+2026-04-09 11:05:27,728 INFO 직접 전송 완료 → docs-agent:5614
+2026-04-09 11:07:38,475 INFO [응답시간] docs-agent #docs: 2분 10초
