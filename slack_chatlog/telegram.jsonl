@@ -334,3 +334,6 @@
 {"ts": "2026-04-10 10:53:05", "direction": "inbound", "user": "boss", "text": "음.. 지금 conEmu 에서 start-servers 를 실행하고나서 그 안에 프로세스가 중단되면 터미널자체가 사라져버려서 그안에서 무슨에러로 사라진건지 확인이 안되. 다시 그상태에서 서버를 재실행할수있도록 터미널이 유지되게 할수없나 ?"}
 {"ts": "2026-04-10 10:53:31", "direction": "outbound", "user": "MAX", "text": "👑 admin-agent에게 수정 지시했습니다.\n\n방법:\n1. ConEmu 탭 설정에서 프로세스 종료 시 \"터미널 유지\" 옵션 적용\n2. 또는 start-servers 스크립트에서 각 프로세스 실행 후 에러 시 pause 추가\n\n확인 후 보고드리겠습니다."}
 {"ts": "2026-04-10 10:54:03", "direction": "outbound", "user": "MAX", "text": "👑 수정 완료.\n\nlaunch-servers-conemu.ps1에 각 패널 `-new_console:c` 플래그 추가.\n프로세스 종료/크래시 시 터미널이 유지되어 에러 로그 확인 가능합니다.\n\n다음 start-servers 실행부터 적용됩니다."}
+{"ts": "2026-04-10 12:54:05", "direction": "inbound", "user": "boss", "text": "csagent 웹페에이지에 재고 메뉴에 재고등록시 ERP 검색으로 할때 검색이 품목코드, 품목명 만 검색되는상태인데, 판매코드도 같이 검색되도록해줘"}
+{"ts": "2026-04-10 12:54:30", "direction": "outbound", "user": "MAX", "text": "👑 dev-agent에게 지시 완료.\n\ncs-wta.com 재고등록 ERP 검색에 판매코드 검색 추가합니다.\n프론트/백엔드 양쪽 수정 후 배포까지 진행합니다."}
+{"ts": "2026-04-10 12:59:19", "direction": "outbound", "user": "MAX", "text": "👑 수정 완료, 배포됨.\n\n💻 dev-agent 완료:\n- ERP 검색에 판매코드(sale_code) 추가\n- 검색 결과 테이블에 판매코드 컬럼 표시\n- 프론트/백엔드 빌드 + EC2 배포 완료\n\ncs-wta.com 재고 메뉴에서 확인 가능합니다."}

@@ -371,6 +371,28 @@ new_html = new_html.replace(
 new_html = re.sub(r'<button[^>]*onclick="resetEquipPlan\(\)"[^>]*>초기화</button>\s*', '', new_html)
 new_html = re.sub(r'<button[^>]*onclick="exportCSV\(\)"[^>]*>CSV 내보내기</button>\s*', '', new_html)
 
+# "매칭되지않은 재고" 버튼 추가 (10년 버튼 오른쪽, 2026-04-10 부서장 지시)
+# 장비유형 미배정 품목 수 계산
+unmatched_count = sum(1 for r in data if not r[9] or r[9] == [])
+unmatched_btn = f'<button class="filter-btn" data-st="unmatched" onclick="setSt(\'unmatched\')" style="background:#fff3e0;border-color:#e65100;color:#e65100;">매칭되지않은 재고 ({unmatched_count:,})</button>'
+# 기존 10년 버튼 뒤에 삽입 (이전 실행 잔재 제거 후)
+new_html = re.sub(r'<button[^>]*data-st="unmatched"[^>]*>매칭되지않은 재고[^<]*</button>\s*', '', new_html)
+new_html = new_html.replace(
+    '</button>\n    <span class="result-count"',
+    f'</button>\n    {unmatched_btn}\n    <span class="result-count"'
+)
+
+# dateFilter에 unmatched 모드 추가 (장비유형 없는 품목만 표시)
+new_html = new_html.replace(
+    "if (stFilter === '10y') return d < '2021-01-01';",
+    "if (stFilter === '10y') return d < '2021-01-01';\n  if (stFilter === 'unmatched') return true;"
+)
+# applyFilters에 unmatched 필터 추가
+new_html = new_html.replace(
+    "if (!dateFilter(r[7])) return false;",
+    "if (stFilter === 'unmatched') { if (r[9] && r[9] !== '') return false; } else { if (!dateFilter(r[7])) return false; }"
+)
+
 # 합계행: CSS + JS 인라인 모두 regex로 폰트 크기 통일 (멱등)
 TFOOT_FONT = '13pt'
 # CSS tfoot td 폰트
