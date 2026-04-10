@@ -3575,6 +3575,30 @@
       "updated_at": "2026-04-10 18:49:52",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-crafter-c0c9a5",
+      "agent": "crafter",
+      "task": "[부서장 지시] cs-agent CS 질문 처리 파이프라인 점검 및 GraphRAG 완성",
+      "message": "[부서장 지시] cs-agent CS 질문 처리 파이프라인 점검 및 GraphRAG 완성\n\n**목적**\ncs-agent가 슬랙/웹/CS 질문을 받는 시점부터 답변 생성까지의 전체 파이프라인을 점검하고, GraphRAG가 아직 미구현/미연결된 부분이 있으면 마저 완성.\n\n**점검 항목**\n1. **진입점 (Entry Points)**\n   - 슬랙 #cs 채널 → cs-agent 라우팅\n   - cs-wta.com 웹 채팅 → cs-agent 백엔드\n   - 텔레그램/이메일 등 다른 진입점 존재 여부\n\n2. **처리 파이프라인**\n   - 질문 수신 → 의도 분류 → 자료 검색 → 답변 생성 → 송신\n   - 멀티모델 파이프라인 상태 (memory 기록: haiku 접수 + opus 이미지 + sonnet 답변)\n   - 세션 JSONL 로깅 (reports/cs-sessions.jsonl) 연동 상태\n\n3. **검색 백엔드**\n   - pgvector: manual.documents(265,635) + manual.wta_documents(120,084) + csagent.vector_embeddings(3,318)\n   - 임베딩 모델: Qwen3-Embedding-8B 2000차원\n   - **GraphRAG (Neo4j bolt://localhost:7688)**: 1,553 노드 (Phase1 수동 + Phase2 Claude + PhaseOllama qwen3.5:35b-a3b)\n   - 하이브리드 검색 (벡터 + 그래프) 연동 상태\n\n4. **GraphRAG 미구현 포인트**\n   - cs-agent → Neo4j 쿼리 경로 존재하는가?\n   - 엔티티 추출/링킹이 답변 생성에 반영되는가?\n   - 대시보드 지식그래프 비교 페이지는 완성되었으나 cs-agent 실사용 파이프라인에 연결되었는가?\n   - 누락된 단계가 있으면 연결/구현\n\n**산출물**\n1. 현재 파이프라인 구조도 (텍스트 또는 mermaid)\n2. GraphRAG 통합 현황 (완료 / 부분 / 미구현)\n3. 누락 항목 목록 + 완성 계획\n4. 완성 작업 수행 후 E2E 테스트 (샘플 CS 질문으로 검증)\n\n**주의**\n- 실제 수정 전 MAX에게 계획 보고 후 진행\n- cs-agent 워크스페이스에 영향 주는 변경은 cs-agent와 협의 (현재 cs-agent는 cs-wta.com 개발 중)\n- DB 스키마 변경 필요 시 MAX 승인 필수",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-10 18:51:02",
+      "updated_at": "2026-04-10 18:51:02",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-dev-agent-791a51",
+      "agent": "dev-agent",
+      "task": "[판매자재관리 스키마 추가 지시] 부서장 지시",
+      "message": "[판매자재관리 스키마 추가 지시] 부서장 지시\n\n판매자재에 **소모품 / Spare 구분 필드 추가**.\n\n추가 컬럼 제안:\n```sql\nmaterial_type VARCHAR(20) NOT NULL DEFAULT '일반'\n    CHECK (material_type IN ('소모품', 'Spare', '일반'))\n```\n또는 소모품/Spare만 쓰는 경우:\n```sql\nmaterial_type VARCHAR(20) CHECK (material_type IN ('소모품', 'Spare'))\n```\n\n**질문**:\n1. \"소모품 / Spare\" 외에 \"일반\" 또는 \"기타\" 같은 기본값이 필요한가? (CSV에는 구분 없음)\n2. 필드 영문명: `material_type` 괜찮은가?\n3. 리스트 필터/검색에 이 구분도 노출 (추가 필터 드롭다운)\n4. 등록/수정 모달에 라디오버튼 또는 드롭다운 추가\n\n이 추가 반영한 최종 스키마안으로 수정 제출해줘. 아직 생성하지 말고 설계 업데이트만.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-10 18:52:07",
+      "updated_at": "2026-04-10 18:52:07",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }
