@@ -350,3 +350,8 @@
 {"ts": "2026-04-10 13:20:53", "direction": "outbound", "user": "MAX", "text": "👑 2건 모두 완료, 배포됨.\n\n💻 dev-agent:\n1) 수량 입력 UX 개선\n- 기본값 0 → placeholder로 변경\n- 포커스 시 자동 전체선택\n- 재고등록 + 실사변경 양쪽 적용\n\n2) 부품 마스터 카드 레이아웃 변경\n- 품목코드(상단/파란색/큰 글씨) + 품목명(하단/회색)\n- 모바일 카드 뷰 적용\n\ncs-wta.com에서 확인 가능합니다."}
 {"ts": "2026-04-10 13:29:32", "direction": "inbound", "user": "boss", "text": "라벨 출력에 지금 템플릿대로 라벨  미리보기가 안나오는데?"}
 {"ts": "2026-04-10 13:29:52", "direction": "outbound", "user": "MAX", "text": "👑 dev-agent에게 긴급 조사 지시했습니다.\n\n조금 전 템플릿 드롭다운 기능 추가 후 회귀 가능성 있어서 바로 확인 중입니다."}
+{"ts": "2026-04-10 13:31:31", "direction": "inbound", "user": "boss", "text": "그리고 모바일에서 실사변경의 수치를 변경시  입력필드선택하면 숫자만 입력되는 키보드창이 뜨게 할수잇어?"}
+{"ts": "2026-04-10 13:31:49", "direction": "outbound", "user": "MAX", "text": "👑 추가 지시 전달.\n\ninputMode=\"numeric\" 속성 추가해서 모바일에서 숫자 키패드만 뜨도록 변경합니다. 실사변경 + 재고등록 양쪽 모두 적용.\n라벨 미리보기 이슈와 같이 반영합니다."}
+{"ts": "2026-04-10 13:32:17", "direction": "inbound", "user": "boss", "text": "품목 삭제 버튼은 국가별 언어변환이 되도록 조치"}
+{"ts": "2026-04-10 13:32:34", "direction": "outbound", "user": "MAX", "text": "👑 추가 전달.\n\n품목 삭제 버튼/다이얼로그를 i18n 번역 키로 전환해서 국가별 언어 변환 지원합니다.\n\ndev-agent가 3건(라벨 미리보기 + 숫자키패드 + i18n) 묶어서 배포 예정입니다."}
+{"ts": "2026-04-10 13:37:41", "direction": "outbound", "user": "MAX", "text": "👑 3건 묶음 완료, 배포됨.\n\n💻 dev-agent:\n1) 라벨 미리보기 수정 — asyncpg JSONB 문자열 반환 이슈, design_data 파싱 정규화\n2) 실사변경 수량 필드 모바일 숫자 키패드 (inputMode=\"decimal\")\n3) 품목 삭제 버튼/다이얼로그 i18n 적용 (ko/en/zh/ja 4개 언어)\n\ncs-wta.com에서 확인 가능합니다."}

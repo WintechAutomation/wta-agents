@@ -10,6 +10,33 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
 base = r'C:\MES\wta-agents\reports\김근형'
 
+# CS 전용 분류 품목 (사용자 지정) — 부서장/김근형 지시 (2026-04-10~)
+# 카테고리별 분류 (CS 필터 시 그룹 표시)
+CS_CATEGORIES = {
+    '기본': [
+        'MCDHT3520BA1',  # 35ea (부서장)
+        'DTP7-D2',       # 17ea (부서장)
+        'MADHT1505BA1',  # 35ea (부서장)
+    ],
+    '선삭조명': [
+        'WCDRL150-S24W',   # 8ea (김근형)
+        'WCRDRL130-S24W',  # 8ea
+        'WRH80x51-S24W',   # 10ea
+        'WBF130x86-S24W',  # 20ea
+        'WBF65x35-S24W',   # 10ea
+    ],
+    '밀링조명': [
+        'WCDRL150-S48W',    # (김근형)
+        'WRRDRL130-S48W',
+        'WSSL125X102-S24W',
+        'WBFL130x86-S24G',
+        'WBFL65x35-S24G',
+    ],
+}
+CS_USER_ITEMS = sorted({cd for items in CS_CATEGORIES.values() for cd in items})
+# 품목코드 → 카테고리 역방향 매핑
+CS_ITEM_CATEGORY = {cd: cat for cat, items in CS_CATEGORIES.items() for cd in items}
+
 # --- 제외 품목 (규칙 2-1~2-3: 사용예정에서 제외, 리스트 유지) ---
 # JSON 파일 의존성 제거 — 품목코드 직접 정의
 
@@ -366,11 +393,15 @@ new_html = re.sub(r'<button[^>]*onclick="exportCSV\(\)"[^>]*>CSV 내보내기</b
 # 장비유형 미배정 품목 수 계산
 unmatched_count = sum(1 for r in data if not r[9] or r[9] == [])
 unmatched_btn = f'<button class="filter-btn" data-st="unmatched" onclick="setSt(\'unmatched\')" title="어떤 장비유형에도 배정되지 못한 품목입니다.&#10;- 규칙으로 제외된 품목 (CS성/Cell Press/핸들러 등)&#10;- 3년내 유효 발주(MCA210T/MAD111T)가 없는 품목&#10;- BOM에 장비 배정이 없는 자재" style="background:#fff3e0;border-color:#e65100;color:#e65100;">매칭되지않은 재고 ({unmatched_count:,})</button>'
-# 기존 10년 버튼 뒤에 삽입 (이전 실행 잔재 제거 후)
+# CS 재고 필터 버튼
+cs_count = len(CS_USER_ITEMS)
+cs_btn = f'<button class="filter-btn" data-st="cs" onclick="setSt(\'cs\')" title="CS용 자재로 분류된 품목입니다.&#10;고객 사이트 유지보수/교체용 재고로 별도 관리됩니다." style="background:#ffebee;border-color:#c62828;color:#c62828;">CS 재고 ({cs_count:,})</button>'
+# 기존 unmatched/cs 버튼 잔재 제거 후 삽입
 new_html = re.sub(r'<button[^>]*data-st="unmatched"[^>]*>매칭되지않은 재고[^<]*</button>\s*', '', new_html)
+new_html = re.sub(r'<button[^>]*data-st="cs"[^>]*>CS 재고[^<]*</button>\s*', '', new_html)
 new_html = new_html.replace(
     '</button>\n    <span class="result-count"',
-    f'</button>\n    {unmatched_btn}\n    <span class="result-count"'
+    f'</button>\n    {unmatched_btn}\n    {cs_btn}\n    <span class="result-count"'
 )
 
 # 3년/5년/10년 버튼에 툴팁 추가 (2026-04-10 부서장 지시)
@@ -395,15 +426,45 @@ new_html = re.sub(
     new_html
 )
 
-# dateFilter에 unmatched 모드 추가 (장비유형 없는 품목만 표시)
-new_html = new_html.replace(
-    "if (stFilter === '10y') return d < '2021-01-01';",
-    "if (stFilter === '10y') return d < '2021-01-01';\n  if (stFilter === 'unmatched') return true;"
+# dateFilter 함수 전체를 깨끗한 버전으로 교체 (멱등)
+clean_date_filter = '''function dateFilter(dt) {
+  if (stFilter === 'all') return true;
+  const d = dt || '';
+  if (stFilter === '3y') return d >= '2023-01-01';
+  if (stFilter === '5y') return d >= '2021-01-01' && d < '2023-01-01';
+  if (stFilter === '10y') return d < '2021-01-01';
+  if (stFilter === 'unmatched') return true;
+  if (stFilter === 'cs') return true;
+  return true;
+}'''
+new_html = re.sub(
+    r"function dateFilter\(dt\) \{[\s\S]*?\n\}",
+    clean_date_filter,
+    new_html
 )
-# applyFilters에 unmatched 필터 추가
+
+# applyFilters의 filter 콜백 첫 줄을 깨끗하게 교체 (멱등)
+new_html = re.sub(
+    r"filtered = DATA\.filter\(r => \{\s*\n\s*if \([^\n]*?\n",
+    "filtered = DATA.filter(r => {\n    if (stFilter === 'unmatched') { if (r[9] && r[9] !== '') return false; } else if (stFilter === 'cs') { if (!CS_ITEMS.has(r[1])) return false; } else { if (!dateFilter(r[7])) return false; }\n",
+    new_html
+)
+
+# CS 필터 시 카테고리별 정렬 + 프로젝트열에 카테고리명 표시
+# applyFilters의 doSort() 호출 직전에 CS 분기 추가 (멱등)
+new_html = re.sub(r"\s*if \(stFilter === 'cs'\) \{ filtered\.sort[\s\S]*?\}\)\s*; \}\s*", '', new_html)
+cs_sort_block = """
+  if (stFilter === 'cs') { filtered.sort((a, b) => { const ca = CS_CATEGORY[a[1]] || ''; const cb = CS_CATEGORY[b[1]] || ''; if (ca !== cb) return ca.localeCompare(cb, 'ko'); return (b[4]||0) - (a[4]||0); }); renderRows(filtered); return; }
+"""
 new_html = new_html.replace(
-    "if (!dateFilter(r[7])) return false;",
-    "if (stFilter === 'unmatched') { if (r[9] && r[9] !== '') return false; } else { if (!dateFilter(r[7])) return false; }"
+    "  doSort();\n  renderRows(filtered);\n}\n\nfunction setSt",
+    cs_sort_block + "  doSort();\n  renderRows(filtered);\n}\n\nfunction setSt"
+)
+
+# renderRows에서 CS 필터 시 프로젝트 컬럼에 카테고리 배지 표시
+new_html = new_html.replace(
+    "let pjt = r[8] || '-';",
+    "let pjt = r[8] || '-'; if (stFilter === 'cs' && CS_CATEGORY[r[1]]) { pjt = '[' + CS_CATEGORY[r[1]] + '] ' + (r[8] || ''); }"
 )
 
 # 합계행: CSS + JS 인라인 모두 regex로 폰트 크기 통일 (멱등)
@@ -484,17 +545,13 @@ if 'CS용 자재 총액' not in new_html:
         '<div class="label">예상 잔여 재고금액</div>\n      <div><span class="value" style="color:#e65100;">1,602,345,489원</span><span class="sub-value">(약 16.0억원)</span></div>\n    </div>\n    ' + cs_card
     )
 
-# 6) CS_ITEMS Set 정의 (HTML 상단에 삽입). 김근형이 지정하는 품목 코드 누적
-# CS 전용 분류 품목 (사용자 지정) — 부서장 지시 (2026-04-10~)
-CS_USER_ITEMS = sorted(set([
-    'MCDHT3520BA1',  # 35ea
-    'DTP7-D2',       # 17ea
-    'MADHT1505BA1',  # 35ea
-]))
+# 6) CS_ITEMS Set + CS_CATEGORY 매핑 정의 (HTML 상단에 삽입, 멱등)
 cs_items_js = json.dumps(CS_USER_ITEMS, ensure_ascii=False)
-# 기존 정의 제거 후 1번만 삽입
-new_html = re.sub(r'<script>\s*const CS_ITEMS = new Set\([^)]*\);\s*</script>\s*', '', new_html)
-new_html = new_html.replace('<script>\nlet DATA = [];', f'<script>\nconst CS_ITEMS = new Set({cs_items_js});\nlet DATA = [];')
+cs_category_js = json.dumps(CS_ITEM_CATEGORY, ensure_ascii=False)
+cs_def = f'const CS_ITEMS = new Set({cs_items_js});\nconst CS_CATEGORY = {cs_category_js};\n'
+# 기존 CS 정의 모두 제거 후 1번만 삽입
+new_html = re.sub(r'const CS_ITEMS = new Set\([^)]*\);\s*\n(?:const CS_CATEGORY = [^;]*;\s*\n)?', '', new_html)
+new_html = new_html.replace('<script>\nlet DATA = [];', f'<script>\n{cs_def}let DATA = [];')
 
 # 네비게이션 버튼 정의 (regex로 기존 버튼 교체)
 btn_style = "background:#fff;color:#1a237e;border:none;padding:6px 14px;border-radius:20px;font-size:9pt;cursor:pointer;font-weight:700;font-family:'Malgun Gothic',sans-serif;margin-left:4px;"

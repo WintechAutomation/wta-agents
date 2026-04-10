@@ -379,3 +379,5 @@
 {"ts": "2026-04-10 13:22:31", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "예상잔여금액 요약섹션 이름을 예상 잔여 재고금액 이라고 수정하고, 우측에 CS용 자재 총액 섹션을 추가해줘 그리고 내가 말하는 품목을 분류시켜."}
 {"ts": "2026-04-10 13:24:03", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "MCDHT3520BA1 35ea\nDTP7-D2 17ea\nMADHT1505BA1 35ea"}
 {"ts": "2026-04-10 13:28:00", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "페이지 문제없어? 데이터가 다 안나옴"}
+{"ts": "2026-04-10 13:33:01", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "매칭되지 않은 재고 필터 오른쪽에 cs 재고 필터 버튼 추가."}
+{"ts": "2026-04-10 13:36:44", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "cs섹션에 분류 추가건 두 종류가 구분 되게 분류 요청\n선삭조명\nWCDRL150-S24W 8ea\nWCRDRL130-S24W 8ea\nWRH80x51-S24W 10ea\nWBF130x86-S24W 20ea\nWBF65x35-S24W 10ea\n밀링조명\nWCDRL150-S48W\nWRRDRL130-S48W\nWSSL125X102-S24W\nWBFL130x86-S24G\nWBFL65x35-S24G"}
