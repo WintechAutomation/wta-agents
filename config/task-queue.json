@@ -3503,6 +3503,18 @@
       "updated_at": "2026-04-10 14:55:57",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-admin-agent-473bfd",
+      "agent": "admin-agent",
+      "task": "[긴급] 부서장 슈퍼베이스(Supabase) 로그인 시 \"Kong Error: Invalid authentication credentials\" 에러 발생.",
+      "message": "[긴급] 부서장 슈퍼베이스(Supabase) 로그인 시 \"Kong Error: Invalid authentication credentials\" 에러 발생.\n\n확인 요청:\n1. Supabase 컨테이너 상태 (supabase-kong, supabase-auth, supabase-studio 등) docker ps\n2. Kong 로그 최근 50줄 (docker logs supabase-kong --tail 50)\n3. ANON_KEY / SERVICE_ROLE_KEY 만료 또는 변경 여부 (.env vs kong.yml 불일치 체크)\n4. JWT_SECRET 변경 이력\n\n원인 파악 후 MAX에게 즉시 보고. 재시작이 필요하면 먼저 보고 후 진행.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-10 16:40:58",
+      "updated_at": "2026-04-10 16:40:58",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }
