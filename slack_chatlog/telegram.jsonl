@@ -371,3 +371,5 @@
 {"ts": "2026-04-10 14:11:49", "direction": "inbound", "user": "boss", "text": "연동코드도 좀 바꾸지?"}
 {"ts": "2026-04-10 14:12:07", "direction": "outbound", "user": "MAX", "text": "👑 연동코드도 변경 지시 전달.\n\nLOCATION → SALE_CODE로 데이터 키 변경, 템플릿 DB 토큰도 마이그레이션합니다."}
 {"ts": "2026-04-10 14:14:55", "direction": "outbound", "user": "MAX", "text": "👑 완료, 배포됨.\n\n💻 dev-agent:\n- 데이터 키 LOCATION → SALE_CODE 변경\n- 기존 템플릿 중 LOCATION 토큰 사용 케이스 0건 확인 (마이그레이션 불필요)\n- 향후 라벨 디자이너에서 SALE_CODE 토큰 사용 가능\n\ncs-wta.com 확인 가능합니다."}
+{"ts": "2026-04-10 14:22:50", "direction": "inbound", "user": "boss", "text": "갤러리에 이미지말고도 일반 파일도 올릴수있도록 자료실 형태로사용가능하게 해보자"}
+{"ts": "2026-04-10 14:23:16", "direction": "outbound", "user": "MAX", "text": "👑 dev-agent에게 지시 완료.\n\n갤러리를 자료실 형태로 확장:\n- 일반 파일(pdf/docx/xlsx/zip 등) 업로드 허용\n- 파일 타입별 썸네일/아이콘\n- 이미지 그리드 뷰 + 문서 리스트 뷰\n- 다운로드 기능\n\n백엔드/스토리지/프론트 전부 확인해서 구현 후 배포합니다."}

@@ -3320,9 +3320,9 @@
       "status": "done",
       "priority": "medium",
       "created_at": "2026-04-10 13:29:45",
-      "updated_at": "2026-04-10 13:37:16",
+      "updated_at": "2026-04-10 14:23:11",
       "last_report_at": null,
-      "completed_at": "2026-04-10 13:37:16"
+      "completed_at": "2026-04-10 14:23:11"
     },
     {
       "id": "tq-dev-agent-289c7f",
@@ -3417,6 +3417,18 @@
       "priority": "medium",
       "created_at": "2026-04-10 14:12:02",
       "updated_at": "2026-04-10 14:12:02",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-dev-agent-755d5b",
+      "agent": "dev-agent",
+      "task": "부서장 지시: cs-wta.com 갤러리 기능 확장 — 이미지뿐만 아니라 일반 파일도 업로드 가능하도록 자료실 형태로 사용.",
+      "message": "부서장 지시: cs-wta.com 갤러리 기능 확장 — 이미지뿐만 아니라 일반 파일도 업로드 가능하도록 자료실 형태로 사용.\n\n**요구사항:**\n1. 업로드 파일 확장자 제한 해제 (또는 whitelist 확대)\n   - 이미지: jpg/png/gif/webp (기존)\n   - 문서: pdf/docx/xlsx/pptx/txt/md\n   - 압축: zip/rar/7z\n   - 기타 일반 파일\n2. 파일 타입별 썸네일/아이콘 표시\n   - 이미지는 기존 썸네일\n   - 문서/압축/기타는 아이콘으로 (pdf 아이콘, excel 아이콘 등)\n3. 파일 목록 UI\n   - 이미지는 그리드 뷰 (기존)\n   - 문서/파일은 리스트 뷰 옵션 추가\n   - 파일명, 크기, 업로드일, 업로드자 표시\n4. 다운로드 기능\n5. 삭제 권한 체크 유지\n6. 메뉴명 \"갤러리\" → \"자료실\" 또는 갤러리 탭 내에서 \"이미지/문서\" 탭 분리 검토\n\n백엔드 업로드 API + 스토리지 경로 + 프론트엔드 UI 전부 확인해서 구현.\n완료 후 빌드/배포.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-10 14:23:08",
+      "updated_at": "2026-04-10 14:23:08",
       "last_report_at": null,
       "completed_at": null
     }
