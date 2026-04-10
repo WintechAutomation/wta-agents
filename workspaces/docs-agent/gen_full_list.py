@@ -55,6 +55,7 @@ CELL_PRESS = {
     'RTLC40-S-105MM', '22-19-20-0', 'ZAPP-2S(연결형)', 'GDS-65-BSS-EUS-75',
     'C-MLG12-82', 'KES6-25',
     'EZI-EC-42M-A',  # 단, EXCLUDE_WHITELIST에서 복원됨
+    'WBF65X35-S24W',  # Cell Press 전용 (2026-04-10 김근형 지시)
 }
 
 # 규칙 2-3: Plan Only (78건)
@@ -158,6 +159,15 @@ def is_part_replacement_cs(proj_name):
     has_part = any(kw in proj_name for kw in PART_KWS)
     return has_equip and has_part
 
+# 전용 프로젝트 키워드 (이 프로젝트만 있는 품목은 사용예정 제외)
+DEDICATED_PJT_KWS = ['Cell', '키엔스', '챔퍼검사기']
+
+def is_dedicated_project(proj_name):
+    """전용 프로젝트인지 판단 (Cell Press, 키엔스, 챔퍼검사기 등)"""
+    if not proj_name:
+        return False
+    return any(kw in proj_name for kw in DEDICATED_PJT_KWS)
+
 # --- 수동 오버라이드 (김근형님 확인) ---
 # 장비유형 수정
 EQUIP_OVERRIDE = {
@@ -233,8 +243,6 @@ handler_removed = 0
 handler_excluded = 0
 exclude_applied = 0
 proj_changed = 0
-part_cs_changed = 0
-part_cs_excluded = 0
 
 equip_overridden = 0
 proj_overridden = 0
@@ -289,40 +297,22 @@ for row in data:
     if isinstance(equip, str) and '연삭핸들러' in equip:
         row[9] = ['연삭핸들러']
 
-    # 프로젝트 제외 키워드 또는 공용자재(미배정) → 비제외 프로젝트로 변경
-    needs_proj_change = False
-    if proj and any(kw in proj for kw in JS_EXCLUDE_PJT):
-        needs_proj_change = True
-    if proj and '공용자재' in proj:
-        needs_proj_change = True
-    if needs_proj_change:
-        cur_equip = row[9]
-        if cur_equip and cur_equip != []:
-            alt = find_alt_project(item_cd)
-            if alt:
+    # 프로젝트 결정: MCA210T/MAD111T 기준 (erp_data 프로젝트명 대신)
+    # 장비유형이 있는 품목만 대상
+    cur_equip = row[9]
+    if cur_equip and cur_equip != []:
+        alt = find_alt_project(item_cd)
+        if alt:
+            if alt != proj:
                 row[8] = alt
                 proj_changed += 1
-
-    # 규칙 2-12: 부품교체 CS건 감지 → 범용은 프로젝트 변경, 전용은 제외
-    proj = row[8] if row[8] else ''  # 위에서 변경됐을 수 있으므로 재확인
-    if proj and is_part_replacement_cs(proj):
-        cur_equip = row[9]
-        if cur_equip and cur_equip != []:
-            alt = find_alt_project(item_cd)
-            if alt:
-                row[8] = alt
-                part_cs_changed += 1
-            else:
-                # 3년 이내 비CS 프로젝트 없음 → CS성 제외
-                row[9] = []
-                part_cs_excluded += 1
+        # MCA210T/MAD111T에 유효 프로젝트 없으면 원본 유지 (JS가 제외 키워드로 필터링)
 
     # 규칙 2-5: 프로젝트 예외 미배정 — 장비유형 원본 유지
 
 print(f'제외(사용예정 비움): {exclude_applied}건, 핸들러 단독: {handler_excluded}건, 핸들러 제거: {handler_removed}건')
 print(f'장비유형 오버라이드: {equip_overridden}건, 프로젝트 오버라이드: {proj_overridden}건')
-print(f'프로젝트 변경(자동): {proj_changed}건')
-print(f'부품교체CS 프로젝트 변경: {part_cs_changed}건, 부품교체CS 제외: {part_cs_excluded}건')
+print(f'프로젝트 변경(MCA210T/MAD111T 기준): {proj_changed}건')
 print(f'전체 건수 유지: {len(data)}건')
 
 # 재고금액 내림차순 정렬
@@ -358,12 +348,6 @@ new_html = new_html.replace(js_patch_old, js_patch_new)
 new_html = new_html.replace(
     'if (types.length > 1 && r[8]) {',
     'if (types.length > 1 && r[8] && !MULTI_EQUIP.has(r[1])) {'
-)
-
-# JS EXCLUDE_PJT에 스페어 키워드 추가
-new_html = new_html.replace(
-    "const EXCLUDE_PJT = ['개발','판매','무상','교체','개조','부품','수리','소모품','소모성'];",
-    "const EXCLUDE_PJT = ['개발','판매','무상','교체','개조','부품','수리','소모품','소모성','스페어'];"
 )
 
 # 합계행 폰트 크기 → 열제목 수준 (11pt), 빈 칸 합쳐서 공간 확보
