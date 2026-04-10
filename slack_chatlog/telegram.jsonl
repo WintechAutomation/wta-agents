@@ -347,3 +347,6 @@
 {"ts": "2026-04-10 13:18:01", "direction": "outbound", "user": "MAX", "text": "👑 dev-agent에게 지시했습니다.\n\n수량 필드를 빈값+placeholder 방식으로 변경하거나, 포커스 시 자동 전체선택되도록 개선합니다. 재고등록 + 실사변경 양쪽 모두 수정."}
 {"ts": "2026-04-10 13:19:09", "direction": "inbound", "user": "boss", "text": "품목코드가 제일 위에 나오게하고 \n그다음에 품목명이 아래에 나오게 .", "files": [{"type": "image", "path": "C:\\MES\\wta-agents\\slack_chatlog\\telegram_files\\20260410_131909.jpg"}]}
 {"ts": "2026-04-10 13:19:33", "direction": "outbound", "user": "MAX", "text": "👑 확인. dev-agent에게 지시 완료.\n\n부품 마스터 카드에서 품목코드를 상단에, 품목명을 하단에 표시하도록 변경합니다."}
+{"ts": "2026-04-10 13:20:53", "direction": "outbound", "user": "MAX", "text": "👑 2건 모두 완료, 배포됨.\n\n💻 dev-agent:\n1) 수량 입력 UX 개선\n- 기본값 0 → placeholder로 변경\n- 포커스 시 자동 전체선택\n- 재고등록 + 실사변경 양쪽 적용\n\n2) 부품 마스터 카드 레이아웃 변경\n- 품목코드(상단/파란색/큰 글씨) + 품목명(하단/회색)\n- 모바일 카드 뷰 적용\n\ncs-wta.com에서 확인 가능합니다."}
+{"ts": "2026-04-10 13:29:32", "direction": "inbound", "user": "boss", "text": "라벨 출력에 지금 템플릿대로 라벨  미리보기가 안나오는데?"}
+{"ts": "2026-04-10 13:29:52", "direction": "outbound", "user": "MAX", "text": "👑 dev-agent에게 긴급 조사 지시했습니다.\n\n조금 전 템플릿 드롭다운 기능 추가 후 회귀 가능성 있어서 바로 확인 중입니다."}

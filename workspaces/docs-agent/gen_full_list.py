@@ -444,16 +444,57 @@ new_html = new_html.replace(
     "r[11] = Math.min(Math.round(useQty * unitP), r[4]);\n    r[12] = Math.max(0, r[3] - eqQty);\n    r[13] = Math.max(0, r[4] - r[11]);"
 )
 
-# 요약 카드: 총액도 동적 계산 + 잔여 = 총액 - 예정 (정합성 보장)
-new_html = new_html.replace(
-    "let totalUseAmt = 0, totalRemainAmt = 0;\n  for (const r of DATA) { totalUseAmt += r[11]; totalRemainAmt += r[13]; }",
-    "let totalAmt = 0, totalUseAmt = 0, totalRemainAmt = 0;\n  for (const r of DATA) { totalAmt += (r[4]||0); totalUseAmt += r[11]; }\n  totalRemainAmt = totalAmt - totalUseAmt;"
+# 요약 카드: 총액/예정/잔여/CS 동적 계산 (멱등 regex 패치)
+# 1) totalAmt/totalUseAmt/totalRemainAmt/totalCsAmt 계산 블록 전체 교체
+# const cards = ... 라인 직전까지를 매치 (앵커 사용)
+calc_block = (
+    "let totalAmt = 0, totalUseAmt = 0, totalRemainAmt = 0, totalCsAmt = 0;\n"
+    "  for (const r of DATA) { totalAmt += (r[4]||0); totalUseAmt += r[11]; if (CS_ITEMS.has(r[1])) totalCsAmt += (r[4]||0); }\n"
+    "  totalRemainAmt = totalAmt - totalUseAmt;\n  "
 )
-# 총액 카드도 동적 업데이트
-new_html = new_html.replace(
-    "if (totalCount) totalCount.textContent = DATA.length.toLocaleString() + '건';",
-    "if (totalCount) totalCount.textContent = DATA.length.toLocaleString() + '건';\n  if (cards[1]) { cards[1].querySelector('.value').textContent = totalAmt.toLocaleString() + '원'; cards[1].querySelector('.sub-value').textContent = '(약 ' + (totalAmt/100000000).toFixed(1) + '억원)'; }"
+new_html = re.sub(
+    r"let total[\s\S]*?(?=const cards = document\.querySelectorAll\('\.summary-card'\);)",
+    calc_block,
+    new_html
 )
+# 2) cards[1] 중복 라인 모두 제거 후 1줄만 삽입
+new_html = re.sub(
+    r"(?:\s*if \(cards\[1\]\) \{[^\n]*\})+",
+    "\n  if (cards[1]) { cards[1].querySelector('.value').textContent = totalAmt.toLocaleString() + '원'; cards[1].querySelector('.sub-value').textContent = '(약 ' + (totalAmt/100000000).toFixed(1) + '억원)'; }",
+    new_html
+)
+# 3) cards[4] (CS용 자재 총액) 동적 업데이트 라인 추가/갱신
+if 'cards[4]' not in new_html:
+    new_html = new_html.replace(
+        "if (cards[3]) { cards[3].querySelector('.value').textContent = totalRemainAmt.toLocaleString()",
+        "if (cards[4]) { cards[4].querySelector('.value').textContent = totalCsAmt.toLocaleString() + '원'; cards[4].querySelector('.sub-value').textContent = '(약 ' + (totalCsAmt/100000000).toFixed(1) + '억원)'; }\n  if (cards[3]) { cards[3].querySelector('.value').textContent = totalRemainAmt.toLocaleString()"
+    )
+
+# 4) "예상 잔여 금액" → "예상 잔여 재고금액"
+new_html = new_html.replace('<div class="label">예상 잔여 금액</div>', '<div class="label">예상 잔여 재고금액</div>')
+
+# 5) CS용 자재 총액 카드 추가 (오른쪽 끝)
+if 'CS용 자재 총액' not in new_html:
+    cs_card = '''<div class="summary-card">
+      <div class="label">CS용 자재 총액</div>
+      <div><span class="value" style="color:#c62828;">0원</span><span class="sub-value">(약 0.0억원)</span></div>
+    </div>'''
+    new_html = new_html.replace(
+        '<div class="label">예상 잔여 재고금액</div>\n      <div><span class="value" style="color:#e65100;">1,602,345,489원</span><span class="sub-value">(약 16.0억원)</span></div>\n    </div>',
+        '<div class="label">예상 잔여 재고금액</div>\n      <div><span class="value" style="color:#e65100;">1,602,345,489원</span><span class="sub-value">(약 16.0억원)</span></div>\n    </div>\n    ' + cs_card
+    )
+
+# 6) CS_ITEMS Set 정의 (HTML 상단에 삽입). 김근형이 지정하는 품목 코드 누적
+# CS 전용 분류 품목 (사용자 지정) — 부서장 지시 (2026-04-10~)
+CS_USER_ITEMS = sorted(set([
+    'MCDHT3520BA1',  # 35ea
+    'DTP7-D2',       # 17ea
+    'MADHT1505BA1',  # 35ea
+]))
+cs_items_js = json.dumps(CS_USER_ITEMS, ensure_ascii=False)
+# 기존 정의 제거 후 1번만 삽입
+new_html = re.sub(r'<script>\s*const CS_ITEMS = new Set\([^)]*\);\s*</script>\s*', '', new_html)
+new_html = new_html.replace('<script>\nlet DATA = [];', f'<script>\nconst CS_ITEMS = new Set({cs_items_js});\nlet DATA = [];')
 
 # 네비게이션 버튼 정의 (regex로 기존 버튼 교체)
 btn_style = "background:#fff;color:#1a237e;border:none;padding:6px 14px;border-radius:20px;font-size:9pt;cursor:pointer;font-weight:700;font-family:'Malgun Gothic',sans-serif;margin-left:4px;"
