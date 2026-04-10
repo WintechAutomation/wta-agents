@@ -3527,6 +3527,18 @@
       "updated_at": "2026-04-10 17:06:14",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-dev-agent-815032",
+      "agent": "dev-agent",
+      "task": "[cs-wta.com 재고 편집 모달 보완]",
+      "message": "[cs-wta.com 재고 편집 모달 보완]\n\nEditStockModal(재고 품목 전체 수정)에 **사진 업로드 필드가 빠져 있음**. 부서장 지적.\n\n요청:\n1. AddStockForm(재고등록) 모달과 동일한 사진 업로드 UI를 EditStockModal에도 추가\n2. 기존 등록된 이미지가 있으면 썸네일로 표시하고 교체/삭제 가능하게\n3. 다중 이미지 지원 여부는 재고등록 모달과 동일하게 맞추기\n4. 저장 시 기존 업로드 API 재사용 (multipart/form-data or Supabase Storage)\n\n빌드/EC2 배포/nginx reload 후 완료 보고.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-10 18:08:52",
+      "updated_at": "2026-04-10 18:08:52",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }
