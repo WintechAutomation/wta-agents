@@ -14,23 +14,33 @@ base = r'C:\MES\wta-agents\reports\김근형'
 # 카테고리별 분류 (CS 필터 시 그룹 표시)
 CS_CATEGORIES = {
     '기본': [
-        'MCDHT3520BA1',  # 35ea (부서장)
-        'DTP7-D2',       # 17ea (부서장)
-        'MADHT1505BA1',  # 35ea (부서장)
+        # 부서장 1차 (2026-04-10)
+        'MCDHT3520BA1', 'DTP7-D2', 'MADHT1505BA1',
+        # 부서장 2차 (2026-04-10)
+        'MDDHT5540BA1', 'MBDHT2510BA1', '110XI4600DPI+REWIND',
+        'NUVO-6002-I5-V1', 'MEDLN83BL', 'NUVO-6002-I5-V5',
+        'CSD5-01BX1', 'MSME5AZS1T', 'MSMD082S1S', 'MSMD042S1S',
+        'MSMD5AZS1T', 'LCP050-RT-600L-10B-N', 'PK543AW-T10',
+        'LCP070-RT-400L-20-H', 'CSD5-08BX1', 'CRD507-KD',
+        'CSMT-08BQ1ANT3', 'DTP7-D2-CABLE-5M', 'MBDHT2510BL1',
+        'MSME152S1G', 'CSD5-15BX1', 'MSME022S1S', 'MSMD042S1T',
+        'CSMT-10BQ1ANT3', 'CSMT-02BQ1ABT3', 'CSD5-02BX1',
+        'CSMT-10BQ1ABT3', 'CSD5-04BX1', 'MSMD082S1T',
+        'RSMS-15BQ1ASK3', 'CSMT-02BQ1ANT3', 'CSD5-10BX1',
     ],
     '선삭조명': [
         'WCDRL150-S24W',   # 8ea (김근형)
         'WCRDRL130-S24W',  # 8ea
-        'WRH80x51-S24W',   # 10ea
-        'WBF130x86-S24W',  # 20ea
-        'WBF65x35-S24W',   # 10ea
+        'WRH80X51-S24W',   # 10ea (대문자 X)
+        'WBF130X86-S24W',  # 20ea
+        'WBF65X35-S24W',   # 10ea
     ],
     '밀링조명': [
         'WCDRL150-S48W',    # (김근형)
         'WRRDRL130-S48W',
         'WSSL125X102-S24W',
-        'WBFL130x86-S24G',
-        'WBFL65x35-S24G',
+        'WBFL130X86-S24G',  # 대문자 X
+        'WBFL65X35-S24G',   # 등록만 (erp_data 없음, 김근형 요청)
     ],
 }
 CS_USER_ITEMS = sorted({cd for items in CS_CATEGORIES.values() for cd in items})
@@ -186,6 +196,23 @@ def is_part_replacement_cs(proj_name):
     has_part = any(kw in proj_name for kw in PART_KWS)
     return has_equip and has_part
 
+# 프로젝트명 → 장비유형 매핑 (JS EQUIP_PLAN_DEFAULT 키와 일치)
+def extract_equip_from_project(proj_name):
+    """프로젝트명에서 장비유형 추출 (JS EQUIP_PLAN 키와 매칭)"""
+    if not proj_name:
+        return []
+    types = []
+    if 'PVD' in proj_name: types.append('PVD')
+    if 'CVD' in proj_name: types.append('CVD')
+    if '검사기' in proj_name: types.append('검사기')
+    if '프레스' in proj_name: types.append('프레스')
+    if '포장기' in proj_name: types.append('포장기')
+    if '소결' in proj_name: types.append('소결')
+    if '호닝' in proj_name: types.append('호닝형상')
+    if 'CBN' in proj_name: types.append('CBN')
+    if '마스크' in proj_name: types.append('마스크자동기')
+    return types
+
 # 전용 프로젝트 키워드 (이 프로젝트만 있는 품목은 사용예정 제외)
 DEDICATED_PJT_KWS = ['Cell', '키엔스', '챔퍼검사기']
 
@@ -274,6 +301,7 @@ handler_excluded = 0
 exclude_applied = 0
 proj_changed = 0
 no_recent_po = 0
+handler_recovered = 0
 
 equip_overridden = 0
 proj_overridden = 0
@@ -305,11 +333,20 @@ for row in data:
         continue
 
     # 규칙 1-4: 핸들러 단독 → 장비유형 빈배열
-    if isinstance(equip, list) and equip == ['핸들러']:
-        row[9] = []
-        handler_excluded += 1
-        continue
-    if isinstance(equip, str) and equip.strip() == '핸들러':
+    # 단, MCA210T/MAD111T에 핸들러 외 다른 장비 발주이력이 3년내 있으면 그 장비유형 적용
+    if (isinstance(equip, list) and equip == ['핸들러']) or \
+       (isinstance(equip, str) and equip.strip() == '핸들러'):
+        # 다른 장비 프로젝트 탐색
+        alt_proj = find_alt_project(item_cd)
+        if alt_proj:
+            extracted = extract_equip_from_project(alt_proj)
+            # 핸들러 제외
+            extracted = [e for e in extracted if e != '핸들러']
+            if extracted:
+                row[9] = extracted
+                row[8] = alt_proj
+                handler_recovered += 1
+                continue
         row[9] = []
         handler_excluded += 1
         continue
@@ -348,6 +385,7 @@ print(f'제외(사용예정 비움): {exclude_applied}건, 핸들러 단독: {ha
 print(f'장비유형 오버라이드: {equip_overridden}건, 프로젝트 오버라이드: {proj_overridden}건')
 print(f'프로젝트 변경(MCA210T/MAD111T 기준): {proj_changed}건')
 print(f'3년내 유효발주 없어 사용예정 제외: {no_recent_po}건')
+print(f'핸들러 단독 → 다른 장비유형 복구: {handler_recovered}건')
 print(f'전체 건수 유지: {len(data)}건')
 
 # 재고금액 내림차순 정렬
