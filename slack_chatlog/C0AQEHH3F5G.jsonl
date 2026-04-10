@@ -24,3 +24,11 @@
 {"ts": "2026-04-10 18:24:40", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "phase 0 미완료된사항확인해"}
 {"ts": "2026-04-10 18:26:45", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "개발환경 도커로 안할거야 현상태 유지. 깃허브는 새 리포지티지 생성해야함.\ndb 스키마는 현재 데ㄷ이터 베이스가 어디로 되어있지?"}
 {"ts": "2026-04-10 18:28:13", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "음.. 이거를 데이터베이스를 지금 mes supabase 에 hardware 라는 스키마를 확인해봐 거기를 사용하는게 좋겟어"}
+{"ts": "2026-04-10 18:31:02", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "오케이 그렇게해. ."}
+{"ts": "2026-04-10 18:32:03", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "welec 이라는 텍스트 제거해"}
+{"ts": "2026-04-10 18:32:38", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "응 진행해"}
+{"ts": "2026-04-10 18:34:10", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "응 그렇긴한데 지금 db 접근을 postgresql 로 직접 하는거야? supabase 를 안거치고?"}
+{"ts": "2026-04-10 18:34:58", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "아 ㅇㅋㅇㅋ 문제없음."}
+{"ts": "2026-04-10 18:35:50", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "<@U0APMDZNX8S> 여기서 개발하라는건 아니고 내가 지시하는 작업들도 있을거라 그런내용은 여기서 확인해."}
+{"ts": "2026-04-10 18:36:42", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "<https://github.com/WintechAutomation/ELEC> 깃허브 리포지토리 추가함."}
+{"ts": "2026-04-10 18:37:50", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "관리팀한테 대시보드 스케쥴러에 elec git 도 같이 올릴수있게 기존 git 자동커밋에 추가해 ."}

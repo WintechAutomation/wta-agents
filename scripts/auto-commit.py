@@ -8,13 +8,16 @@ import sys
 from datetime import datetime, timezone, timedelta
 
 KST = timezone(timedelta(hours=9))
-REPO_DIR = "C:/MES/wta-agents"
+REPO_DIRS = [
+    "C:/MES/wta-agents",
+    "C:/wELEC",
+]
 
 
-def run_git(*args):
+def run_git(repo_dir, *args):
     """git 명령 실행"""
     result = subprocess.run(
-        ["git", "-C", REPO_DIR] + list(args),
+        ["git", "-C", repo_dir] + list(args),
         capture_output=True, text=True, encoding="utf-8", errors="replace",
     )
     return result.returncode, result.stdout.strip(), result.stderr.strip()
@@ -24,41 +27,42 @@ def now_kst():
     return datetime.now(KST).strftime("%Y-%m-%d %H:%M")
 
 
-def auto_commit():
-    """변경사항 감지 후 커밋+push (전체 프로젝트 추적)"""
-    # 전체 변경사항 add
-    run_git("add", "-A")
+def auto_commit_repo(repo_dir):
+    """단일 리포지토리 변경사항 감지 후 커밋+push"""
+    run_git(repo_dir, "add", "-A")
 
-    # 스테이징된 변경사항 확인
-    rc, diff, _ = run_git("diff", "--cached", "--name-only")
+    rc, diff, _ = run_git(repo_dir, "diff", "--cached", "--name-only")
     if not diff:
         return False
 
-    # 커밋
     timestamp = now_kst()
-    rc, out, err = run_git("commit", "-m", f"자동 저장 — {timestamp}")
+    rc, out, err = run_git(repo_dir, "commit", "-m", f"자동 저장 — {timestamp}")
     if rc != 0:
         if "nothing to commit" in out or "nothing to commit" in err:
             return False
-        print(f"[커밋 실패] {err}")
+        print(f"[커밋 실패] {repo_dir}: {err}")
         return False
 
-    print(f"[커밋] {timestamp}")
+    print(f"[커밋] {repo_dir} — {timestamp}")
 
-    # push
-    rc, out, err = run_git("push")
+    rc, out, err = run_git(repo_dir, "push")
     if rc == 0:
-        print(f"[push] 완료")
+        print(f"[push] {repo_dir} 완료")
     else:
-        print(f"[push 실패] {err}")
+        print(f"[push 실패] {repo_dir}: {err}")
 
     return True
 
 
 if __name__ == "__main__":
     try:
-        result = auto_commit()
-        print(f"[{now_kst()}] {'커밋 완료' if result else '변경 없음'}")
+        timestamp = now_kst()
+        any_committed = False
+        for repo in REPO_DIRS:
+            result = auto_commit_repo(repo)
+            if result:
+                any_committed = True
+        print(f"[{timestamp}] {'커밋 완료' if any_committed else '변경 없음'}")
     except Exception as e:
         print(f"[오류] {e}")
         sys.exit(1)
