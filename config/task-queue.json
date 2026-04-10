@@ -3407,6 +3407,18 @@
       "updated_at": "2026-04-10 14:09:24",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-dev-agent-5719e6",
+      "agent": "dev-agent",
+      "task": "부서장 추가 지시: 라벨출력 데이터 키(연동코드)도 LOCATION → SALE_CODE로 변경해줘.",
+      "message": "부서장 추가 지시: 라벨출력 데이터 키(연동코드)도 LOCATION → SALE_CODE로 변경해줘.\n\n조금 전 템플릿 호환성 때문에 LOCATION 데이터 키를 유지했는데, 부서장이 연동코드까지 같이 바꾸라고 함.\n\n변경 작업:\n1. 프론트엔드: LOCATION → SALE_CODE (데이터 키)\n2. 라벨 템플릿 DB에 저장된 토큰도 LOCATION → SALE_CODE로 업데이트 필요 (csagent.label_template 확인)\n3. 기존 템플릿과의 하위호환: LOCATION 토큰이 있는 템플릿은 SALE_CODE로 마이그레이션하거나, 둘 다 인식하도록 처리\n\n백엔드/DB 확인해서 진행하고 빌드/배포.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-10 14:12:02",
+      "updated_at": "2026-04-10 14:12:02",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }

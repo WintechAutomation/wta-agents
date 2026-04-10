@@ -367,3 +367,7 @@
 {"ts": "2026-04-10 14:07:12", "direction": "outbound", "user": "MAX", "text": "👑 2건 완료, 배포됨.\n\n💻 dev-agent:\n1) 실사변경 인라인 펼치기\n- 클릭한 카드/행 바로 아래에 폼 펼쳐짐\n- 활성 행 오렌지 하이라이트\n- 재클릭 시 접힘\n\n2) ERP 검색 결과 컬럼 순서\n- 재고등록 모달: 품목코드(굵게) → 품목명 순으로 변경\n- 부품 마스터 탭은 이미 올바른 순서\n\ncs-wta.com 확인 가능합니다."}
 {"ts": "2026-04-10 14:09:15", "direction": "inbound", "user": "boss", "text": "라벨 출력 페이지에 위치 필드를 판매코드로 변경해"}
 {"ts": "2026-04-10 14:09:31", "direction": "outbound", "user": "MAX", "text": "👑 dev-agent에게 지시 완료.\n\n라벨출력 페이지 \"위치\" 필드를 \"판매코드\"로 변경합니다 (i18n 4개 언어 포함)."}
+{"ts": "2026-04-10 14:11:37", "direction": "outbound", "user": "MAX", "text": "👑 완료, 배포됨.\n\n💻 dev-agent:\n- 라벨출력 재고라벨 탭 \"위치\" → \"판매코드\"\n- i18n 4개 언어: 판매코드/Sale Code/销售代码/販売コード\n- placeholder: A-1-2 → SO-2026-001\n- 데이터 키(LOCATION)는 템플릿 호환성 위해 유지\n\ncs-wta.com 확인 가능합니다."}
+{"ts": "2026-04-10 14:11:49", "direction": "inbound", "user": "boss", "text": "연동코드도 좀 바꾸지?"}
+{"ts": "2026-04-10 14:12:07", "direction": "outbound", "user": "MAX", "text": "👑 연동코드도 변경 지시 전달.\n\nLOCATION → SALE_CODE로 데이터 키 변경, 템플릿 DB 토큰도 마이그레이션합니다."}
+{"ts": "2026-04-10 14:14:55", "direction": "outbound", "user": "MAX", "text": "👑 완료, 배포됨.\n\n💻 dev-agent:\n- 데이터 키 LOCATION → SALE_CODE 변경\n- 기존 템플릿 중 LOCATION 토큰 사용 케이스 0건 확인 (마이그레이션 불필요)\n- 향후 라벨 디자이너에서 SALE_CODE 토큰 사용 가능\n\ncs-wta.com 확인 가능합니다."}
