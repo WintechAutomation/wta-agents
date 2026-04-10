@@ -7,6 +7,9 @@ import subprocess
 import sys
 from datetime import datetime, timezone, timedelta
 
+sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+
 KST = timezone(timedelta(hours=9))
 REPO_DIRS = [
     "C:/MES/wta-agents",
