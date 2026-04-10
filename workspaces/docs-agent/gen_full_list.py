@@ -80,6 +80,9 @@ PLAN_ONLY = {
 # 3년 경과 제외 (2026-04-09)
 EXPIRED = {'MDDLN45BL', 'E2E-C04S12-WC-C1', '110XI4300DPI+REWIND', 'NUVO-8108GC-XL'}
 
+# 소결체챔퍼검사기 전용 제외 (2026-04-10 김근형 지시: 검사기 분류 불가)
+CHAMFER_INSPECT = {'OR-Y4C0-XMX00'}
+
 # 규칙 2-10: 대구텍 키엔스검사자동화 전용 품목 제외 (34건, 2026-04-10 김근형 지시)
 DAEGU_KEYENCE = {
     '02-142-25-0', 'ACMC-76SS', 'ACMC-76SSB', 'BRW8', 'BYCS1223-240-316',
@@ -93,7 +96,7 @@ DAEGU_KEYENCE = {
 }
 
 # 전체 제외 Set 통합
-exclude_cds = CS_TYPE | CS_ONLY | CS_ADDITIONAL | CELL_PRESS | PLAN_ONLY | EXPIRED | DAEGU_KEYENCE
+exclude_cds = CS_TYPE | CS_ONLY | CS_ADDITIONAL | CELL_PRESS | PLAN_ONLY | EXPIRED | DAEGU_KEYENCE | CHAMFER_INSPECT
 
 # --- MCA210T 발주이력 로드 (프로젝트 변경용) ---
 import os
@@ -357,14 +360,43 @@ new_html = new_html.replace(
     'if (types.length > 1 && r[8] && !MULTI_EQUIP.has(r[1])) {'
 )
 
-# 합계행 폰트 크기 확대 (8pt → 11pt)
+# 합계행 폰트 크기 → 열제목 수준 (11pt), 빈 칸 합쳐서 공간 확보
 new_html = new_html.replace(
     "tfoot td { background: #f5f5f5; font-weight: 700; border-top: 2px solid #1a237e; position: sticky; bottom: 0; z-index: 4; }",
     "tfoot td { background: #f5f5f5; font-weight: 700; font-size: 11pt; border-top: 2px solid #1a237e; position: sticky; bottom: 0; z-index: 4; }"
 )
+# JS 합계행 렌더링 교체 (빈 셀 colspan 합침, 폰트 통일)
+old_tfoot_js = (
+    "const ts = 'font-weight:700;font-size:11pt;background:#f5f5f5;border-top:2px solid #1a237e;';\n"
+    "  tf.innerHTML = '<tr>' +\n"
+    "    '<td colspan=\"3\" style=\"text-align:right;' + ts + '\">합계</td>' +\n"
+    "    '<td class=\"right\" style=\"' + ts + '\">' + rows.length.toLocaleString() + '건</td>' +\n"
+    "    '<td class=\"right\" style=\"' + ts + 'color:#1a237e;\">재고금액 ' + Math.round(sumAmt).toLocaleString() + '</td>' +\n"
+    "    '<td colspan=\"3\" style=\"' + ts + '\"></td>' +\n"
+    "    '<td style=\"' + ts + '\"></td>' +\n"
+    "    '<td style=\"' + ts + '\"></td>' +\n"
+    "    '<td class=\"right\" style=\"font-weight:700;font-size:8pt;background:#e8f5e9;border-top:2px solid #2e7d32;color:#2e7d32;\">예정금액 -' + sumPlanAmt.toLocaleString() + '</td>' +\n"
+    "    '<td style=\"' + ts + '\"></td>' +\n"
+    "    '<td class=\"right\" style=\"font-weight:700;font-size:8pt;background:#fff3e0;border-top:2px solid #e65100;color:#e65100;\">남는금액 ' + sumRemainAmt.toLocaleString() + '</td></tr>';"
+)
+new_tfoot_js = (
+    "const ts = 'font-weight:700;font-size:11pt;border-top:2px solid #1a237e;';\n"
+    "  tf.innerHTML = '<tr>' +\n"
+    "    '<td colspan=\"3\" style=\"text-align:right;background:#f5f5f5;' + ts + '\">합계</td>' +\n"
+    "    '<td class=\"right\" style=\"background:#f5f5f5;' + ts + '\">' + rows.length.toLocaleString() + '건</td>' +\n"
+    "    '<td class=\"right\" style=\"background:#f5f5f5;color:#1a237e;' + ts + '\">재고금액 ' + Math.round(sumAmt).toLocaleString() + '</td>' +\n"
+    "    '<td colspan=\"3\" style=\"background:#f5f5f5;' + ts + '\"></td>' +\n"
+    "    '<td colspan=\"2\" style=\"background:#e8f5e9;border-top:2px solid #2e7d32;' + ts + '\"></td>' +\n"
+    "    '<td class=\"right\" style=\"background:#e8f5e9;border-top:2px solid #2e7d32;color:#2e7d32;' + ts + '\">예정금액 -' + sumPlanAmt.toLocaleString() + '</td>' +\n"
+    "    '<td class=\"right\" style=\"background:#fff3e0;border-top:2px solid #e65100;' + ts + '\"></td>' +\n"
+    "    '<td class=\"right\" style=\"background:#fff3e0;border-top:2px solid #e65100;color:#e65100;' + ts + '\">남는금액 ' + sumRemainAmt.toLocaleString() + '</td></tr>';"
+)
+new_html = new_html.replace(old_tfoot_js, new_tfoot_js)
+
+# JS 예정/잔여 금액 계산 수정: 예정금액 ≤ 재고금액, 잔여 = 재고 - 예정 (음수 방지)
 new_html = new_html.replace(
-    "font-weight:700;font-size:8pt;background:#f5f5f5;border-top:2px solid #1a237e;",
-    "font-weight:700;font-size:11pt;background:#f5f5f5;border-top:2px solid #1a237e;"
+    "r[11] = Math.round(useQty * unitP);\n    r[12] = Math.max(0, r[3] - eqQty);\n    r[13] = Math.round(r[12] * unitP);",
+    "r[11] = Math.min(Math.round(useQty * unitP), r[4]);\n    r[12] = Math.max(0, r[3] - eqQty);\n    r[13] = Math.max(0, r[4] - r[11]);"
 )
 
 # 네비게이션 버튼 정의 (regex로 기존 버튼 교체)
