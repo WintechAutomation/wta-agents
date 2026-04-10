@@ -365,12 +365,34 @@ new_html = re.sub(r'<button[^>]*onclick="exportCSV\(\)"[^>]*>CSV 내보내기</b
 # "매칭되지않은 재고" 버튼 추가 (10년 버튼 오른쪽, 2026-04-10 부서장 지시)
 # 장비유형 미배정 품목 수 계산
 unmatched_count = sum(1 for r in data if not r[9] or r[9] == [])
-unmatched_btn = f'<button class="filter-btn" data-st="unmatched" onclick="setSt(\'unmatched\')" style="background:#fff3e0;border-color:#e65100;color:#e65100;">매칭되지않은 재고 ({unmatched_count:,})</button>'
+unmatched_btn = f'<button class="filter-btn" data-st="unmatched" onclick="setSt(\'unmatched\')" title="어떤 장비유형에도 배정되지 못한 품목입니다.&#10;- 규칙으로 제외된 품목 (CS성/Cell Press/핸들러 등)&#10;- 3년내 유효 발주(MCA210T/MAD111T)가 없는 품목&#10;- BOM에 장비 배정이 없는 자재" style="background:#fff3e0;border-color:#e65100;color:#e65100;">매칭되지않은 재고 ({unmatched_count:,})</button>'
 # 기존 10년 버튼 뒤에 삽입 (이전 실행 잔재 제거 후)
 new_html = re.sub(r'<button[^>]*data-st="unmatched"[^>]*>매칭되지않은 재고[^<]*</button>\s*', '', new_html)
 new_html = new_html.replace(
     '</button>\n    <span class="result-count"',
     f'</button>\n    {unmatched_btn}\n    <span class="result-count"'
+)
+
+# 3년/5년/10년 버튼에 툴팁 추가 (2026-04-10 부서장 지시)
+new_html = re.sub(
+    r'<button class="filter-btn active" data-st="all" onclick="setSt\(\'all\'\)">전체',
+    '<button class="filter-btn active" data-st="all" onclick="setSt(\'all\')" title="전체 재고 품목입니다.">전체',
+    new_html
+)
+new_html = re.sub(
+    r'<button class="filter-btn" data-st="3y" onclick="setSt\(\'3y\'\)">3년',
+    '<button class="filter-btn" data-st="3y" onclick="setSt(\'3y\')" title="최근 3년 이내(2023-01-01 이후) 입고된 품목입니다.&#10;가장 최근에 사용/구매된 활성 재고입니다.">3년',
+    new_html
+)
+new_html = re.sub(
+    r'<button class="filter-btn" data-st="5y" onclick="setSt\(\'5y\'\)">5년',
+    '<button class="filter-btn" data-st="5y" onclick="setSt(\'5y\')" title="3~5년 전(2021-01-01 ~ 2022-12-31) 입고된 품목입니다.&#10;사용 빈도가 낮아진 재고입니다.">5년',
+    new_html
+)
+new_html = re.sub(
+    r'<button class="filter-btn" data-st="10y" onclick="setSt\(\'10y\'\)">10년',
+    '<button class="filter-btn" data-st="10y" onclick="setSt(\'10y\')" title="5년 이상(2021-01-01 이전) 입고된 품목입니다.&#10;장기 미사용 재고로 처분/재활용 검토 대상입니다.">10년',
+    new_html
 )
 
 # dateFilter에 unmatched 모드 추가 (장비유형 없는 품목만 표시)

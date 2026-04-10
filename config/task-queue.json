@@ -3287,6 +3287,30 @@
       "updated_at": "2026-04-10 13:08:41",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-dev-agent-408336",
+      "agent": "dev-agent",
+      "task": "부서장 지시: cs-wta.com 재고등록 페이지의 수량 입력필드 UX 개선.",
+      "message": "부서장 지시: cs-wta.com 재고등록 페이지의 수량 입력필드 UX 개선.\n\n**현재 문제:**\n- 수량 필드 기본값이 \"0\"으로 되어 있어서 숫자 입력 시 \"01\", \"02\" 형태로 들어감\n- 사용자가 수동으로 0을 지워야 함\n\n**개선 방안:**\n1. 기본값을 빈 문자열(\"\")로 변경, placeholder에 \"0\" 표시\n2. 또는 포커스 시 자동 전체선택 (onFocus에서 e.target.select())\n3. 또는 타입 숫자 필드 처리 개선\n\n재고등록 모달 + 실사변경 폼 양쪽 모두 동일하게 수정해줘.\n완료 후 빌드/배포까지.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-10 13:17:55",
+      "updated_at": "2026-04-10 13:17:55",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-dev-agent-02ecba",
+      "agent": "dev-agent",
+      "task": "부서장 지시: cs-wta.com 부품 마스터 목록 카드 레이아웃 변경.",
+      "message": "부서장 지시: cs-wta.com 부품 마스터 목록 카드 레이아웃 변경.\n\n**현재:**\n- 상단: 품목명 (예: \"DTP7H-D 정션박스\") — 검정/큰 글씨\n- 하단: 품목코드 (예: \"DTP-CUD-JB\") — 파란색/작은 글씨\n\n**변경:**\n- 상단: 품목코드를 제일 위에 (크게)\n- 하단: 품목명을 그 아래에\n\n부품 마스터 탭의 카드 목록 컴포넌트 찾아서 수정. 완료 후 빌드/배포.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-10 13:19:27",
+      "updated_at": "2026-04-10 13:19:27",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }

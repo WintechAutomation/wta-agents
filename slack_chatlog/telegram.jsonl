@@ -342,3 +342,8 @@
 {"ts": "2026-04-10 13:06:40", "direction": "outbound", "user": "MAX", "text": "👑 완료, 배포됨.\n\n💻 dev-agent:\n- 실사변경 폼에 \"품목 삭제\" 버튼 추가 (빨간색)\n- 삭제 확인 다이얼로그 (품목코드/품목명/수량 표시)\n- 백엔드 DELETE API는 기존 구현 활용\n\ncs-wta.com에서 확인 가능합니다."}
 {"ts": "2026-04-10 13:08:30", "direction": "inbound", "user": "boss", "text": "라벨출력페이지에 라벨템플릿중에 \" 재고라벨 \" 을 선택해서 출력되도록해ㅜ저"}
 {"ts": "2026-04-10 13:08:47", "direction": "outbound", "user": "MAX", "text": "👑 dev-agent에게 지시 완료.\n\n라벨출력 페이지에 \"재고라벨\" 템플릿 선택/출력 기능 추가합니다."}
+{"ts": "2026-04-10 13:12:21", "direction": "outbound", "user": "MAX", "text": "👑 완료, 배포됨.\n\n💻 dev-agent:\n- 라벨 템플릿 드롭다운 선택 기능 추가\n- \"재고라벨\" 이름 우선 기본 선택\n- 매칭 없으면 전체 활성 템플릿에서 선택 가능\n\n⚠️ 확인 필요: csagent.label_template DB에 \"재고라벨\" 이름의 템플릿이 없으면 라벨설정 페이지에서 먼저 생성해야 드롭다운에 나타납니다."}
+{"ts": "2026-04-10 13:17:40", "direction": "inbound", "user": "boss", "text": "재고등록쪽에 재고수량입력필드가 수량 기입하는데 숫자를 기입할려면 0앞자리에 숫자기입하고 0삭제해야 되어서 기입방식을 변경"}
+{"ts": "2026-04-10 13:18:01", "direction": "outbound", "user": "MAX", "text": "👑 dev-agent에게 지시했습니다.\n\n수량 필드를 빈값+placeholder 방식으로 변경하거나, 포커스 시 자동 전체선택되도록 개선합니다. 재고등록 + 실사변경 양쪽 모두 수정."}
+{"ts": "2026-04-10 13:19:09", "direction": "inbound", "user": "boss", "text": "품목코드가 제일 위에 나오게하고 \n그다음에 품목명이 아래에 나오게 .", "files": [{"type": "image", "path": "C:\\MES\\wta-agents\\slack_chatlog\\telegram_files\\20260410_131909.jpg"}]}
+{"ts": "2026-04-10 13:19:33", "direction": "outbound", "user": "MAX", "text": "👑 확인. dev-agent에게 지시 완료.\n\n부품 마스터 카드에서 품목코드를 상단에, 품목명을 하단에 표시하도록 변경합니다."}
