@@ -24869,3 +24869,10 @@
 {"agent_id": "control-agent", "tool_name": "Edit", "timestamp": "2026-04-10 18:39:11"}
 {"agent_id": "admin-agent", "tool_name": "Edit", "timestamp": "2026-04-10 18:39:18"}
 {"agent_id": "control-agent", "tool_name": "Edit", "timestamp": "2026-04-10 18:39:19"}
+{"agent_id": "admin-agent", "tool_name": "Bash", "timestamp": "2026-04-10 18:39:27"}
+{"agent_id": "control-agent", "tool_name": "Bash", "timestamp": "2026-04-10 18:39:36"}
+{"agent_id": "admin-agent", "tool_name": "Bash", "timestamp": "2026-04-10 18:39:36"}
+{"agent_id": "admin-agent", "tool_name": "Bash", "timestamp": "2026-04-10 18:39:41"}
+{"agent_id": "control-agent", "tool_name": "Bash", "timestamp": "2026-04-10 18:39:44"}
+{"agent_id": "admin-agent", "tool_name": "Bash", "timestamp": "2026-04-10 18:39:48"}
+{"agent_id": "control-agent", "tool_name": "Bash", "timestamp": "2026-04-10 18:39:50"}
