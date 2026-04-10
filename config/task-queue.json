@@ -3359,6 +3359,54 @@
       "updated_at": "2026-04-10 13:52:22",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-dev-agent-b16f54",
+      "agent": "dev-agent",
+      "task": "긴급 수정: cs-wta.com 수량 입력 필드 전체선택 이슈.",
+      "message": "긴급 수정: cs-wta.com 수량 입력 필드 전체선택 이슈.\n\n**부서장 재지적:**\n- 필드에 \"0\"이 떠있는 상태에서 다른 숫자 입력하면 \"40\" 또는 \"04\"가 되는 문제\n- 조금 전에 onFocus 전체선택 추가했는데 제대로 동작 안 함\n\n**원인 추정:**\n- 모바일에서 onFocus 시 select() 호출이 무시되거나\n- React controlled input에서 setTimeout 없이 바로 select() 호출 시 타이밍 이슈\n- inputMode=\"decimal\"과 충돌 가능성\n\n**해결:**\n1. onFocus에서 `setTimeout(() => e.target.select(), 0)` 으로 변경\n2. 또는 onClick에서도 select() 호출 추가\n3. 모바일에서 확실히 블럭 선택되도록 확인\n4. 혹시 더 확실한 방법은 기본값을 숫자 0 대신 빈 문자열 \"\" 로 두고 placeholder만 \"0\" 표시하는 방식\n\n실사변경 + 재고등록 모달 양쪽 전부 확인해서 반드시 블럭선택되도록 수정. 모바일/데스크톱 둘 다 테스트하고 배포.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-10 14:01:06",
+      "updated_at": "2026-04-10 14:01:06",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-dev-agent-649ce8",
+      "agent": "dev-agent",
+      "task": "부서장 지시: cs-wta.com 실사변경 UI 위치 수정.",
+      "message": "부서장 지시: cs-wta.com 실사변경 UI 위치 수정.\n\n**현재:** 실사변경 버튼 클릭 시 변경 창이 화면 맨 위에 뜸\n**변경:** 해당 리스트 카드 바로 아래에 펼쳐지도록 (또는 인라인으로)\n\n즉, 모달이 아니라 클릭한 카드 아래에 아코디언/인라인 폼으로 펼쳐지는 형태.\n사용자가 어느 카드를 수정 중인지 명확하게 보이도록.\n\n카드별로 실사변경 폼이 바로 아래 나타나는 구조로 수정. 완료 후 빌드/배포.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-10 14:02:52",
+      "updated_at": "2026-04-10 14:02:52",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-dev-agent-841759",
+      "agent": "dev-agent",
+      "task": "추가 지시: cs-wta.com ERP 검색 결과 테이블 컬럼 순서 변경.",
+      "message": "추가 지시: cs-wta.com ERP 검색 결과 테이블 컬럼 순서 변경.\n\n**현재:** 품목명 → 품목코드 (순서)\n**변경:** 품목코드 → 품목명 (순서)\n\n부품 마스터 탭의 ERP 품목 검색 결과 테이블과 재고등록 모달 내 ERP 검색 결과 양쪽 모두 순서 변경.\n품목코드가 먼저, 품목명이 그 다음에 나오도록.\n\n실사변경 인라인 펼치기 작업과 같이 묶어서 배포해줘.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-10 14:04:55",
+      "updated_at": "2026-04-10 14:04:55",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-dev-agent-4e3074",
+      "agent": "dev-agent",
+      "task": "부서장 지시: cs-wta.com 라벨출력 페이지에서 \"위치\" 필드를 \"판매코드\"로 변경해줘.",
+      "message": "부서장 지시: cs-wta.com 라벨출력 페이지에서 \"위치\" 필드를 \"판매코드\"로 변경해줘.\n\n라벨출력 페이지의 입력 필드 중 \"위치\" 라벨을 \"판매코드\"로 변경.\n- 입력 필드 라벨 변경\n- i18n 키도 해당 locale 파일 수정 (ko/en/zh/ja)\n- 라벨 출력 시 표시 텍스트도 동일하게 변경\n\n완료 후 빌드/배포.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-10 14:09:24",
+      "updated_at": "2026-04-10 14:09:24",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }
