@@ -122,7 +122,9 @@ python C:/MES/wta-agents/workspaces/cs-agent/cs_pipeline.py "{query}"
 
 결과 JSON 필드:
 - `session_hit`: 이전 세션 이력 (있으면 즉시 URL 재사용)
-- `rag_results`: pgvector 검색 결과 (score 포함)
+- `graph_result`: Neo4j GraphRAG 검색 결과 (nodes/relationships/keywords)
+- `rag_results`: GraphRAG 엔티티 flat list (호환용)
+- `rag_source`: 검색 백엔드 식별자 — 현재 "graph" (2026-04-10 pgvector → Neo4j 전환)
 - `needs_dbmanager`: True면 db-manager 폴백 필요
 - `pdf_info`: PDF 자동 추출 결과 (가능한 경우)
 
@@ -132,13 +134,13 @@ python C:/MES/wta-agents/workspaces/cs-agent/cs_pipeline.py "{query}"
 session_hit 있음 →
   1) 안내 chunk 먼저 전송: "webchat-chunk:{id}:이전에 유사한 질의응답 이력이 있어 바로 답변드리겠습니다."
   2) 이전 답변 + 기존 PDF URL chunk 전송
-  3) webchat-done (pipeline 종료, RAG 검색 불필요)
+  3) webchat-done (pipeline 종료, GraphRAG 검색 불필요)
 
-needs_dbmanager = False (RAG score >= 0.60) →
-  RAG 결과로 답변 생성
+needs_dbmanager = False (GraphRAG 엔티티 >= 1개) →
+  graph_result 엔티티/관계로 답변 생성
   pdf_info 있으면 PDF URL 첨부
 
-needs_dbmanager = True (RAG score < 0.60) →
+needs_dbmanager = True (GraphRAG 엔티티 0개) →
   keep-alive chunk 전송: "webchat-chunk:{id}:관련 자료를 검색 중입니다..."
   send_message(to="db-manager", message="CS 질문: {query}\n매뉴얼 검색 + source_file + page_number 포함 회신 요청")
   db-manager 응답 수신 후 → 답변 생성 + PDF 추출 (get_or_extract_pdf_page)
