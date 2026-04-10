@@ -3431,6 +3431,30 @@
       "updated_at": "2026-04-10 14:23:08",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-dev-agent-da6650",
+      "agent": "dev-agent",
+      "task": "부서장 지적: cs-wta.com 라벨출력 문제.",
+      "message": "부서장 지적: cs-wta.com 라벨출력 문제.\n\n**문제:** 40mm x 20mm 라벨 사이즈인데 브라우저 프린트 기능 사용 시 용지 크기 문제로 프린터가 진행 안 됨.\n\n**원인 추정:**\n- CSS @page 규칙에 라벨 사이즈가 제대로 설정되지 않음\n- 기본 A4 용지로 인식돼서 프린터가 일반 용지를 찾고 있음\n- @media print 스타일 누락 가능\n\n**해결 방안:**\n1. 인쇄용 CSS @page 규칙 추가: `@page { size: 40mm 20mm; margin: 0; }`\n2. @media print 에서 body/html 크기도 40x20mm로 강제\n3. 라벨 사이즈를 드롭다운/설정에서 선택 가능하게 (40x20, 50x30 등 사전 정의)\n4. 브라우저 프린트 다이얼로그에서도 \"실제 크기\" 옵션 자동 선택되도록\n\n라벨출력 페이지 CSS/print 스타일 확인하고 수정해줘. 40x20mm 라벨용 프린터에서 정상 출력되도록.\n완료 후 빌드/배포.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-10 14:44:44",
+      "updated_at": "2026-04-10 14:44:44",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-dev-agent-c088a4",
+      "agent": "dev-agent",
+      "task": "부서장 지시: cs-wta.com 재고 리스트 데스크톱 레이아웃 개선.",
+      "message": "부서장 지시: cs-wta.com 재고 리스트 데스크톱 레이아웃 개선.\n\n**요구사항:**\n1. 품목코드/품목명/규격 3개를 하나의 컬럼에 3줄로 표시\n   ```\n   [품목코드]\n   [품목명]\n   [규격]\n   ```\n2. 그 외 컬럼들(판매코드, 창고/법인, 위치, 재고수량, B급, 불량, 단위, 단가, 재고금액, 사진, 관리)은 잘 조율해서 배치\n3. \"관리\" 컬럼의 \"실사변경\" 버튼이 세로로 글자가 쌓이지 않도록 충분한 너비 확보 (또는 아이콘 버튼으로 변경)\n4. 가로 스크롤 최소화\n5. 전체적으로 읽기 편하게 정렬\n\n모바일 카드 뷰는 건드리지 말고 데스크톱 테이블만 수정.\n첨부한 스크린샷 참고해서 개선해줘. 완료 후 빌드/배포.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-10 14:49:15",
+      "updated_at": "2026-04-10 14:49:15",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }
