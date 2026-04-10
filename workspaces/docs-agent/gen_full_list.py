@@ -80,8 +80,20 @@ PLAN_ONLY = {
 # 3년 경과 제외 (2026-04-09)
 EXPIRED = {'MDDLN45BL', 'E2E-C04S12-WC-C1', '110XI4300DPI+REWIND', 'NUVO-8108GC-XL'}
 
+# 규칙 2-10: 대구텍 키엔스검사자동화 전용 품목 제외 (34건, 2026-04-10 김근형 지시)
+DAEGU_KEYENCE = {
+    '02-142-25-0', 'ACMC-76SS', 'ACMC-76SSB', 'BRW8', 'BYCS1223-240-316',
+    'CDQSB12-35DC', 'CORO-15', 'E-PMXRM10', 'EE-SX-952-W',
+    'GL-75-ARF-SUNS', 'GL-75-BSF-SUNS', 'HDR0801D3C5T-102', 'HDR0802D3C5T-257',
+    'HOSVA2-B-20-2-D1', 'HSP0450-4BN50R22LINK', 'HTBN186S3M-60', 'HTBN234S3M-60',
+    'HTBN237S3M-60', 'HXNN3-2', 'IV-121T', 'KQ2S06-02NS1',
+    'LHFC-N10', 'LHFRMF16', 'LVB8-20', 'LVN8', 'LWLG9C2R204S1_Rail',
+    'MDDLN55BL', 'MK2TB20-10L-M9BL', 'MS15.XXMK_1300MM', 'MS15.XXMK_800MM',
+    'SENCF3-140', 'USB3.0-AMAF-3M', 'VQ21A1-5GZ-C6', 'byhs5065-118',
+}
+
 # 전체 제외 Set 통합
-exclude_cds = CS_TYPE | CS_ONLY | CS_ADDITIONAL | CELL_PRESS | PLAN_ONLY | EXPIRED
+exclude_cds = CS_TYPE | CS_ONLY | CS_ADDITIONAL | CELL_PRESS | PLAN_ONLY | EXPIRED | DAEGU_KEYENCE
 
 # --- multi_project 로드 (프로젝트 변경용) ---
 with open(f'{base}/multi_project_items.json', 'r', encoding='utf-8') as f:
@@ -101,6 +113,12 @@ EQUIP_OVERRIDE = {
 # 프로젝트 수동 지정 (multi_project에 없거나 cutoff 경계선)
 PROJ_OVERRIDE = {
     'MSMF042L1T2': '아크시스 프레스 #2 (Kob,NSX2-25A)',  # 2023-04-05 발주, cutoff 경계선
+    # 대구텍 키엔스 범용 부품 → 비제외 프로젝트로 변경 (2026-04-10)
+    '4080ENDCAP': '몰디노 리팔레팅 #1',
+    '50-02-55-0': '사천신공 2jaw Gripper(MGT)',
+    'HXN6-2': '한국야금 검사기 F1 (선제작#1)',
+    'LVBM20-50': '한국야금 소결 #4',
+    'ZFC54-B': 'MMC 기후 프레스 #1',
 }
 # 제외 목록에서 빼야 할 품목 (범용 부품이 잘못 제외된 경우)
 EXCLUDE_WHITELIST = {
