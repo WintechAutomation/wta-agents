@@ -3647,6 +3647,30 @@
       "updated_at": "2026-04-10 19:38:33",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-dev-agent-579cbb",
+      "agent": "dev-agent",
+      "task": "[긴급 수정] cs-wta.com 모바일 네비 메뉴 누락",
+      "message": "[긴급 수정] cs-wta.com 모바일 네비 메뉴 누락\n\n부서장 지적: **모바일에서 \"판매자재관리\" 메뉴가 안 보임**.\n\n**확인 필요**\n1. 사이드바(데스크톱)와 모바일 햄버거/드로어 메뉴가 별도 컴포넌트로 분리돼 있는지 확인\n2. \"부품 판매 > 판매 현황 / 판매자재관리\" children이 모바일 메뉴에도 노출되는지\n3. 기존 \"부품 판매\" 단일 메뉴만 있고 하위 확장이 모바일에서 안 되는 구조라면 확장 가능하도록 수정\n4. 모바일 뷰(bottom nav 또는 drawer) 구성 전체 점검 — 다른 메뉴도 동일한 누락 가능성\n\n**작업**\n- 모바일 메뉴 컴포넌트에 신규 경로 반영\n- 하위 메뉴 확장 UI (아코디언 또는 클릭 시 서브메뉴 표시)\n- 반응형 BP 기준으로 데스크톱/모바일 동일한 라우트 노출\n- i18n 키 동일 사용\n\n**배포**\n- 빌드 → EC2 반영 → nginx reload\n- 완료 후 Playwright로 모바일 뷰포트(iPhone 12, Galaxy S20) 스크린샷 2장 첨부해 보고\n\n긴급. 바로 진행.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-10 19:42:33",
+      "updated_at": "2026-04-10 19:42:33",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-dev-agent-2136dd",
+      "agent": "dev-agent",
+      "task": "[긴급 버그] cs-wta.com 판매자재관리 API 500",
+      "message": "[긴급 버그] cs-wta.com 판매자재관리 API 500\n\nqa-agent Playwright 검증 결과:\n\n**❌ 크리티컬**: `GET /api/v1/sales-material?page=1&limit=20` **500 에러** → 데이터 0건 로드 (실제 DB에는 287건)\n   - 페이지는 정상 렌더링되나 리스트 비어있음\n   - 콘솔/네트워크 500 에러\n   - 즉시 원인 파악 + 수정 (백엔드 로그 확인)\n\n**⚠️ 기획 확인 필요** (qa-agent 지적)\n1. 파일 업로드: 현재 \"저장 후 업로드(2-step)\" 구현. 기획은 등록 모달에서 1회 저장이 자연스러움 — 단일 흐름으로 변경 검토 (신규 등록 시 tempId/transaction 방식)\n2. material_type: **라디오 버튼(소모품/Spare/일반)** 합의였는데 드롭다운으로 구현됨 → 라디오로 수정\n\n**기타 QA 결과**\n- ✅ 메뉴, 검색 입력, 필터 드롭다운 3종, 페이지네이션, 모바일 반응형, 등록 모달 노출, 장비모델 관리 모달, i18n 다국어 정상\n- ⚠️ 상세/편집 모달은 데이터 없어 미검증\n\n**작업 순서**\n1. 500 에러 즉시 수정 → cs-backend 로그 첨부해서 원인 보고\n2. material_type 드롭다운 → 라디오 변경\n3. 파일 업로드 단일 흐름(옵션)\n4. qa-agent 재검증 요청을 위해 수정 완료 보고 시 변경 요약 포함\n\n모바일 메뉴 누락 건과 병렬 진행. 500 에러가 최우선.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-10 19:43:47",
+      "updated_at": "2026-04-10 19:43:47",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }
