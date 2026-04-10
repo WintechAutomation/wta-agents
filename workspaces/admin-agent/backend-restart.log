@@ -185,3 +185,84 @@ exit status 1
 {"time":"2026-04-09T20:24:36.4830511+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"GET","path":"/api/erp/purchase/mca210t","latency":10027576500,"ip":"::1","user_id":102,"username":"max","query":"limit=100&page=61"}
 {"time":"2026-04-09T20:24:37.9493898+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"GET","path":"/api/erp/purchase/mca210t","latency":23171393400,"ip":"127.0.0.1","user_id":102,"username":"max","query":"limit=200&page=74"}
 exit status 0xffffffff
+{"time":"2026-04-10T09:59:42.7602687+09:00","level":"INFO","msg":"설정 로드 완료","port":8100,"env":"production"}
+{"time":"2026-04-10T09:59:42.8413078+09:00","level":"INFO","msg":"PostgreSQL 연결 성공"}
+{"time":"2026-04-10T09:59:42.8502766+09:00","level":"INFO","msg":"ERP SQL Server 연결 성공"}
+{"time":"2026-04-10T09:59:42.8516854+09:00","level":"INFO","msg":"ERP 관리 기능 활성화"}
+{"time":"2026-04-10T09:59:42.8518101+09:00","level":"INFO","msg":"NAS 관리 기능 활성화","host":"192.168.1.6","port":"5001"}
+{"time":"2026-04-10T09:59:42.8518101+09:00","level":"INFO","msg":"SPA 정적 파일 서빙 활성화","dist":"..\\frontend\\dist"}
+{"time":"2026-04-10T09:59:42.8518101+09:00","level":"INFO","msg":"서버 시작","addr":":8100"}
+{"time":"2026-04-10T09:59:51.7520587+09:00","level":"WARN","msg":"HTTP 요청","status":401,"method":"GET","path":"/api/erp/purchase/mad111t/export","latency":859600,"ip":"::1"}
+{"time":"2026-04-10T10:00:00.159376+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"GET","path":"/health","latency":0,"ip":"::1"}
+{"time":"2026-04-10T10:00:16.780444+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"POST","path":"/api/auth/login","latency":394838800,"ip":"::1"}
+{"time":"2026-04-10T10:00:16.7863991+09:00","level":"ERROR","msg":"MAD111T export 실패","error":"MAD111T export 조회 실패: mssql: 열 이름 'PO_NO'이(가) 잘못되었습니다."}
+{"time":"2026-04-10T10:00:16.7863991+09:00","level":"ERROR","msg":"HTTP 요청","status":500,"method":"GET","path":"/api/erp/purchase/mad111t/export","latency":4225400,"ip":"::1","user_id":102,"username":"max","query":"fr_dt=2016-01-01&to_dt=2026-04-10"}
+{"time":"2026-04-10T10:00:27.6304037+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"POST","path":"/api/auth/login","latency":329711200,"ip":"::1"}
+{"time":"2026-04-10T10:00:27.6454059+09:00","level":"ERROR","msg":"MAD111T export 실패","error":"MAD111T export 조회 실패: mssql: 열 이름 'PO_NO'이(가) 잘못되었습니다."}
+{"time":"2026-04-10T10:00:27.6454059+09:00","level":"ERROR","msg":"HTTP 요청","status":500,"method":"GET","path":"/api/erp/purchase/mad111t/export","latency":3525700,"ip":"::1","user_id":102,"username":"max","query":"fr_dt=2026-01-01&to_dt=2026-04-10"}
+exit status 0xffffffff
+{"time":"2026-04-10T10:01:26.9870136+09:00","level":"INFO","msg":"설정 로드 완료","port":8100,"env":"production"}
+{"time":"2026-04-10T10:01:27.0838534+09:00","level":"INFO","msg":"PostgreSQL 연결 성공"}
+{"time":"2026-04-10T10:01:27.0914029+09:00","level":"INFO","msg":"ERP SQL Server 연결 성공"}
+{"time":"2026-04-10T10:01:27.0919276+09:00","level":"INFO","msg":"ERP 관리 기능 활성화"}
+{"time":"2026-04-10T10:01:27.0919276+09:00","level":"INFO","msg":"NAS 관리 기능 활성화","host":"192.168.1.6","port":"5001"}
+{"time":"2026-04-10T10:01:27.0919276+09:00","level":"INFO","msg":"SPA 정적 파일 서빙 활성화","dist":"..\\frontend\\dist"}
+{"time":"2026-04-10T10:01:27.0919276+09:00","level":"INFO","msg":"서버 시작","addr":":8100"}
+{"time":"2026-04-10T10:01:34.7915324+09:00","level":"WARN","msg":"HTTP 요청","status":401,"method":"GET","path":"/api/erp/purchase/mad111t/export","latency":89100,"ip":"::1"}
+{"time":"2026-04-10T10:01:47.1411704+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"POST","path":"/api/auth/login","latency":316156200,"ip":"::1"}
+{"time":"2026-04-10T10:01:47.1460793+09:00","level":"ERROR","msg":"MAD111T export 실패","error":"MAD111T export 조회 실패: mssql: 열 이름 'PO_NO'이(가) 잘못되었습니다."}
+{"time":"2026-04-10T10:01:47.1460793+09:00","level":"ERROR","msg":"HTTP 요청","status":500,"method":"GET","path":"/api/erp/purchase/mad111t/export","latency":3604300,"ip":"::1","user_id":102,"username":"max","query":"fr_dt=2016-01-01&to_dt=2026-04-10"}
+exit status 0xffffffff
+{"time":"2026-04-10T10:03:14.9777253+09:00","level":"INFO","msg":"설정 로드 완료","port":8100,"env":"production"}
+{"time":"2026-04-10T10:03:15.0570411+09:00","level":"INFO","msg":"PostgreSQL 연결 성공"}
+{"time":"2026-04-10T10:03:15.0648813+09:00","level":"INFO","msg":"ERP SQL Server 연결 성공"}
+{"time":"2026-04-10T10:03:15.065677+09:00","level":"INFO","msg":"ERP 관리 기능 활성화"}
+{"time":"2026-04-10T10:03:15.066245+09:00","level":"INFO","msg":"NAS 관리 기능 활성화","host":"192.168.1.6","port":"5001"}
+{"time":"2026-04-10T10:03:15.0663258+09:00","level":"INFO","msg":"SPA 정적 파일 서빙 활성화","dist":"..\\frontend\\dist"}
+{"time":"2026-04-10T10:03:15.0663258+09:00","level":"INFO","msg":"서버 시작","addr":":8100"}
+{"time":"2026-04-10T10:03:22.8311115+09:00","level":"WARN","msg":"HTTP 요청","status":401,"method":"GET","path":"/api/erp/purchase/mad111t/export","latency":0,"ip":"::1"}
+{"time":"2026-04-10T10:03:36.8002339+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"POST","path":"/api/auth/login","latency":350265800,"ip":"::1"}
+{"time":"2026-04-10T10:03:36.8142652+09:00","level":"ERROR","msg":"MAD111T export 실패","error":"MAD111T export 조회 실패: mssql: 열 이름 'PO_NO'이(가) 잘못되었습니다."}
+{"time":"2026-04-10T10:03:36.8142652+09:00","level":"ERROR","msg":"HTTP 요청","status":500,"method":"GET","path":"/api/erp/purchase/mad111t/export","latency":3280700,"ip":"::1","user_id":102,"username":"max","query":"fr_dt=2026-01-01&to_dt=2026-04-10"}
+{"time":"2026-04-10T10:03:47.1845265+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"GET","path":"/wp-admin/install.php","latency":62865000,"ip":"2a06:98c0:3600::103","query":"step=1"}
+exit status 0xffffffff
+{"time":"2026-04-10T10:04:20.9427856+09:00","level":"INFO","msg":"설정 로드 완료","port":8100,"env":"production"}
+{"time":"2026-04-10T10:04:21.0122272+09:00","level":"INFO","msg":"PostgreSQL 연결 성공"}
+{"time":"2026-04-10T10:04:21.0201115+09:00","level":"INFO","msg":"ERP SQL Server 연결 성공"}
+{"time":"2026-04-10T10:04:21.02088+09:00","level":"INFO","msg":"ERP 관리 기능 활성화"}
+{"time":"2026-04-10T10:04:21.02088+09:00","level":"INFO","msg":"NAS 관리 기능 활성화","host":"192.168.1.6","port":"5001"}
+{"time":"2026-04-10T10:04:21.02088+09:00","level":"INFO","msg":"SPA 정적 파일 서빙 활성화","dist":"..\\frontend\\dist"}
+{"time":"2026-04-10T10:04:21.02088+09:00","level":"INFO","msg":"서버 시작","addr":":8100"}
+{"time":"2026-04-10T10:04:31.5706431+09:00","level":"WARN","msg":"HTTP 요청","status":401,"method":"GET","path":"/api/erp/purchase/mad111t/export","latency":521500,"ip":"::1"}
+{"time":"2026-04-10T10:04:45.05707+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"POST","path":"/api/auth/login","latency":331576900,"ip":"::1"}
+{"time":"2026-04-10T10:04:45.0633772+09:00","level":"ERROR","msg":"MAD111T export 실패","error":"MAD111T export 조회 실패: mssql: 열 이름 'PO_NO'이(가) 잘못되었습니다."}
+{"time":"2026-04-10T10:04:45.0634969+09:00","level":"ERROR","msg":"HTTP 요청","status":500,"method":"GET","path":"/api/erp/purchase/mad111t/export","latency":3693600,"ip":"::1","user_id":102,"username":"max","query":"fr_dt=2026-01-01&to_dt=2026-04-10"}
+{"time":"2026-04-10T10:04:56.1089527+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"GET","path":"/wp-admin/install.php","latency":75381800,"ip":"2a06:98c0:3600::103","query":"step=1"}
+exit status 0xffffffff
+{"time":"2026-04-10T10:06:03.7748078+09:00","level":"INFO","msg":"설정 로드 완료","port":8100,"env":"production"}
+{"time":"2026-04-10T10:06:03.8708291+09:00","level":"INFO","msg":"PostgreSQL 연결 성공"}
+{"time":"2026-04-10T10:06:03.8845681+09:00","level":"INFO","msg":"ERP SQL Server 연결 성공"}
+{"time":"2026-04-10T10:06:03.8862374+09:00","level":"INFO","msg":"ERP 관리 기능 활성화"}
+{"time":"2026-04-10T10:06:03.8868771+09:00","level":"INFO","msg":"NAS 관리 기능 활성화","host":"192.168.1.6","port":"5001"}
+{"time":"2026-04-10T10:06:03.8869988+09:00","level":"INFO","msg":"SPA 정적 파일 서빙 활성화","dist":"..\\frontend\\dist"}
+{"time":"2026-04-10T10:06:03.8869988+09:00","level":"INFO","msg":"서버 시작","addr":":8100"}
+{"time":"2026-04-10T10:06:11.7738989+09:00","level":"WARN","msg":"HTTP 요청","status":401,"method":"GET","path":"/api/erp/purchase/mad111t/export","latency":59200,"ip":"::1"}
+{"time":"2026-04-10T10:06:27.3028391+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"POST","path":"/api/auth/login","latency":335580300,"ip":"::1"}
+{"time":"2026-04-10T10:06:27.3086384+09:00","level":"ERROR","msg":"MAD111T export 실패","error":"MAD111T export 조회 실패: mssql: 열 이름 'PO_NO'이(가) 잘못되었습니다."}
+{"time":"2026-04-10T10:06:27.3086384+09:00","level":"ERROR","msg":"HTTP 요청","status":500,"method":"GET","path":"/api/erp/purchase/mad111t/export","latency":3846100,"ip":"::1","user_id":102,"username":"max","query":"fr_dt=2026-03-01&to_dt=2026-04-10"}
+{"time":"2026-04-10T10:07:32.730761+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"GET","path":"/wordpress/wp-admin/setup-config.php","latency":57912500,"ip":"2a06:98c0:3600::103"}
+exit status 0xffffffff
+{"time":"2026-04-10T10:07:47.1103606+09:00","level":"INFO","msg":"설정 로드 완료","port":8100,"env":"production"}
+{"time":"2026-04-10T10:07:47.1967132+09:00","level":"INFO","msg":"PostgreSQL 연결 성공"}
+{"time":"2026-04-10T10:07:47.2035404+09:00","level":"INFO","msg":"ERP SQL Server 연결 성공"}
+{"time":"2026-04-10T10:07:47.2069477+09:00","level":"INFO","msg":"ERP 관리 기능 활성화"}
+{"time":"2026-04-10T10:07:47.2075792+09:00","level":"INFO","msg":"NAS 관리 기능 활성화","host":"192.168.1.6","port":"5001"}
+{"time":"2026-04-10T10:07:47.2078582+09:00","level":"INFO","msg":"SPA 정적 파일 서빙 활성화","dist":"..\\frontend\\dist"}
+{"time":"2026-04-10T10:07:47.2079616+09:00","level":"INFO","msg":"서버 시작","addr":":8100"}
+{"time":"2026-04-10T10:07:56.0524893+09:00","level":"WARN","msg":"HTTP 요청","status":401,"method":"GET","path":"/api/erp/purchase/mad111t/export","latency":0,"ip":"::1"}
+{"time":"2026-04-10T10:07:57.2443117+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"GET","path":"/wp-admin/setup-config.php","latency":77316000,"ip":"2a06:98c0:3600::103"}
+{"time":"2026-04-10T10:08:12.3203594+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"POST","path":"/api/auth/login","latency":326343800,"ip":"::1"}
+{"time":"2026-04-10T10:08:12.3251391+09:00","level":"ERROR","msg":"MAD111T export 실패","error":"MAD111T export 조회 실패: mssql: 열 이름 'TR_NO'이(가) 잘못되었습니다."}
+{"time":"2026-04-10T10:08:12.3251391+09:00","level":"ERROR","msg":"HTTP 요청","status":500,"method":"GET","path":"/api/erp/purchase/mad111t/export","latency":3776000,"ip":"::1","user_id":102,"username":"max","query":"fr_dt=2026-03-01&to_dt=2026-04-10"}
+{"time":"2026-04-10T10:08:18.0587233+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"GET","path":"/wordpress/wp-admin/setup-config.php","latency":605800,"ip":"2a06:98c0:3600::103"}
+exit status 0xffffffff
