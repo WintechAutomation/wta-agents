@@ -1,0 +1,212 @@
+[
+  {
+    "id": 505404,
+    "file": "Panasonic_CHO-PC_InstallGuide_EN.pdf",
+    "chunk": 0,
+    "page": null,
+    "content": "문서: Panasonic_CHO-PC_InstallGuide_EN\n\n---\nsource: Panasonic_CHO-PC_InstallGuide_EN.pdf\ncategory: 4_servo\nmethod: docling\nparsed_at: 2026-04-05 01:57:05\n---\n\n<!-- image -->\n\n- Important Notes on exporting this product or equipment containing this product;\n\nIf the end-user or application of this product is related to military affairs or weapons, its export may be controlled by 'Foreign Exchange and Foreign Trade Control Law' of Japan where export license will be required before product can be exported from Japan.\n\n- This product is designed and manufactured for use in General Purpose Industrial Equipment and it is not intended to be used in equipment or system that may cause personal injury or death.\n- All servicing such as installation, wiring, operation, maintenance and etc., should be performed by qualified personnel only.\n- Tighten mounting screws with an adequate torque by taking into consideration strength of the screws and the characteristics of material to which the product will be mounted. Over tightening can damage"
+  },
+  {
+    "id": 505405,
+    "file": "Panasonic_CHO-PC_InstallGuide_EN.pdf",
+    "chunk": 1,
+    "page": null,
+    "content": "문서: Panasonic_CHO-PC_InstallGuide_EN\n\nand the characteristics of material to which the product will be mounted. Over tightening can damage the screw and/or material; under tightening can result in loosening.\n- *Example: apply 2.7 N·m - 3.3 N·m torque when tightening steel screw (M5) to steel surface.\n- Install safety equipment to prevent serious accidents or loss that is expected in case of failure of this product.\n- Consult us before using this product under such special conditions and environments as nuclear energy control, aerospace, transportation, medical equipment, various safety equipments or equipments which require a lesser air contamination.\n- We have been making the best effort to ensure the highest quality of our products, however, some applications with exceptionally large external noise disturbance and static electricity, or failure in input power, wiring and components may result in unexpected action. It is highly recommended that you make a fail-safe design and secure the safety in the operative range.\n- If"
+  },
+  {
+    "id": 505406,
+    "file": "Panasonic_CHO-PC_InstallGuide_EN.pdf",
+    "chunk": 2,
+    "page": null,
+    "content": "문서: Panasonic_CHO-PC_InstallGuide_EN\n\nghly recommended that you make a fail-safe design and secure the safety in the operative range.\n- If the motor shaft is not electrically grounded, it may cause an electrolytic corrosion to the bearing, depending on the condition of the machine and its mounting environment, and may result in the bearing noise. Checking and verification by customer is required.\n- Failure of this product depending on its content may generate smoke of about one cigarette. Take this into consideration when the application of the machine is clean room related.\n- Please be careful when using the product in an environment with high concentrations of sulfur or sulfuric gases, as sulfuration can lead to disconnection from the chip resistor or a poor contact connection.\n- Do not input a supply voltage which significantly exceeds the rated range to the power supply of this product. Failure to heed this caution may lead to damage of the internal parts, causing smoke and/or fire and other troubles.\n- The user is res"
+  },
+  {
+    "id": 505407,
+    "file": "Panasonic_CHO-PC_InstallGuide_EN.pdf",
+    "chunk": 3,
+    "page": null,
+    "content": "문서: Panasonic_CHO-PC_InstallGuide_EN\n\nead to damage of the internal parts, causing smoke and/or fire and other troubles.\n- The user is responsible for matching between machine and components in terms of configuration, dimensions, life expectancy, characteristics, when installing the machine or changing specification of the machine. The user is also responsible for complying with applicable laws and regulations.\n- Manufacturer's warranty will be invalid if the product has been used outside its stated specifications.\n- Component parts are subject to minor change to improve performance.\n- Read and observe the instruction manual to ensure correct use of the product.\n\nRepair\n\nConsult to the dealer from whom you have purchased this product for details of repair work. When the product is incorporated to the machine you have purchased, consult to the machine manufacturer or its dealer.\n\nURL\n\n·  Printed colors may be slightly different from the actual products.\n\nElectronic data of this product (Instruction Manual, CAD data) can be"
+  },
+  {
+    "id": 505408,
+    "file": "Panasonic_CHO-PC_InstallGuide_EN.pdf",
+    "chunk": 4,
+    "page": null,
+    "content": "문서: Panasonic_CHO-PC_InstallGuide_EN\n\nnt from the actual products.\n\nElectronic data of this product (Instruction Manual, CAD data) can be downloaded from the following web site; &lt;http://industrial.panasonic.com/ww/products/motors-compressors/motors-for-fa-and-industrial-application&gt;\n\n<!-- image -->\n\n<!-- image -->\n\nMotor Business Unit, Smart Factory Solutions Business Division, Automotive &amp; Industrial Systems Company, Panasonic Corporation\n\n1-1 Morofuku 7-chome, Daito, Osaka 574-0044, Japan Tel : +81-72-871-1212 Fax: +81-72-870-3151\n\nThe contents of this catalog apply to the products as of April 2015.\n\n·  This product is for industrial equipment. Don't use this product at general household.\n\n·  Specifications and design of the products are subject to change without notice for the product improvement.\n\n<!-- image -->\n\n<!-- image -->\n\n2015/04 Catalog"
+  },
+  {
+    "id": 505409,
+    "file": "Panasonic_CHO-PC_InstallGuide_EN.pdf",
+    "chunk": 5,
+    "page": null,
+    "content": "문서: Panasonic_CHO-PC_InstallGuide_EN > 섹션: AC Servo\n\n## AC Servo\n\n## Network, Linear &amp; Direct Drive Motor Control System Collaboration\n\nMotor Business Unit, Smart Factory Solutions Business Division, Automotive &amp; Industrial Systems Company, Panasonic Corporation http://industrial.panasonic.com/ww/products/motors-compressors/motors-for-fa-and-industrial-application"
+  },
+  {
+    "id": 505410,
+    "file": "Panasonic_CHO-PC_InstallGuide_EN.pdf",
+    "chunk": 6,
+    "page": null,
+    "content": "문서: Panasonic_CHO-PC_InstallGuide_EN > 섹션: Line-up\n\n## Line-up\n\n## Servo motor that brings out potential of the machine."
+  },
+  {
+    "id": 505411,
+    "file": "Panasonic_CHO-PC_InstallGuide_EN.pdf",
+    "chunk": 7,
+    "page": null,
+    "content": "문서: Panasonic_CHO-PC_InstallGuide_EN > 섹션: 'Realtime Express' model\n\n## 'Realtime Express' model\n\n## A5ⅡN series\n\n<!-- image -->\n\n- Synchronized motion and precise CP control up to 32 axes\n- Standard Ethernet cable *1 using"
+  },
+  {
+    "id": 505412,
+    "file": "Panasonic_CHO-PC_InstallGuide_EN.pdf",
+    "chunk": 8,
+    "page": null,
+    "content": "문서: Panasonic_CHO-PC_InstallGuide_EN > 섹션: EtherCAT communication type\n\n## EtherCAT communication type\n\n## A5B series\n\n<!-- image -->\n\n- Supports PC-based controller\n- Standard Ethernet cable *1 using\n- *1  Shielded twisted pair cable (CAT5e or higher)"
+  },
+  {
+    "id": 505413,
+    "file": "Panasonic_CHO-PC_InstallGuide_EN.pdf",
+    "chunk": 9,
+    "page": null,
+    "content": "문서: Panasonic_CHO-PC_InstallGuide_EN > 섹션: RS485 communication AE-LINK type\n\n## RS485 communication AE-LINK type\n\n## A5A series\n\n<!-- image -->\n\n- Positioning is possible by built-in NC function\n- Can connect up to 31 axes"
+  },
+  {
+    "id": 505414,
+    "file": "Panasonic_CHO-PC_InstallGuide_EN.pdf",
+    "chunk": 10,
+    "page": null,
+    "content": "문서: Panasonic_CHO-PC_InstallGuide_EN > 섹션: Linear and DD motor control type\n\n## Linear and DD motor control type\n\n## A5L\n\nseries\n\n<!-- image -->\n\n- Position, Speed, Thrust control\n- Drastically reduced setup time by automatic setup\n\n<!-- image -->"
+  },
+  {
+    "id": 505415,
+    "file": "Panasonic_CHO-PC_InstallGuide_EN.pdf",
+    "chunk": 11,
+    "page": null,
+    "content": "문서: Panasonic_CHO-PC_InstallGuide_EN > 섹션: INDEX\n\n## INDEX\n\n[Partner product] (Quality of partner product is guaranteed by the manufacturer and distributor.)"
+  },
+  {
+    "id": 505416,
+    "file": "Panasonic_CHO-PC_InstallGuide_EN.pdf",
+    "chunk": 12,
+    "page": null,
+    "content": "문서: Panasonic_CHO-PC_InstallGuide_EN > 섹션: INDEX\n\n............................................................................................................................................... 97\n\n<!-- image -->\n\nHarmonic Drive Systems Inc."
+  },
+  {
+    "id": 505417,
+    "file": "Panasonic_CHO-PC_InstallGuide_EN.pdf",
+    "chunk": 13,
+    "page": null,
+    "content": "문서: Panasonic_CHO-PC_InstallGuide_EN > 섹션: Ultra High-Speed Network Servo\n\n## Ultra High-Speed Network Servo\n\n## MINAS A5ⅡNseries\n\n## Ultimate Real-time performance\n\n- Velocity response 2300 Hz\n- Com. speed 100 Mbps Full-duplex\n- Com. period min. 0.083 ms\n\n<!-- image -->"
+  },
+  {
+    "id": 505418,
+    "file": "Panasonic_CHO-PC_InstallGuide_EN.pdf",
+    "chunk": 14,
+    "page": null,
+    "content": "문서: Panasonic_CHO-PC_InstallGuide_EN > 섹션: Functionality to meet various needs\n\n## Functionality to meet various needs\n\n- Pos./Vel./Torq. all modes\n- Accurate position latch\n- IEC safety I/F model available *1"
+  },
+  {
+    "id": 505419,
+    "file": "Panasonic_CHO-PC_InstallGuide_EN.pdf",
+    "chunk": 15,
+    "page": null,
+    "content": "문서: Panasonic_CHO-PC_InstallGuide_EN > 섹션: Simple network\n\n## Simple network\n\n- High-performance &amp; Low-cost\n- Isochronous established by ASIC\n- Easy device development"
+  },
+  {
+    "id": 505420,
+    "file": "Panasonic_CHO-PC_InstallGuide_EN.pdf",
+    "chunk": 16,
+    "page": null,
+    "content": "문서: Panasonic_CHO-PC_InstallGuide_EN > 섹션: [Typical system configuration]\n\n## [Typical system configuration]\n\n<!-- image -->\n\n<!-- image -->\n\nInter-node cable length of max.100 m\n\nNoise immunity 2.5 kV over with unique error correction (IEC61000-4-4 compliant)"
+  },
+  {
+    "id": 505421,
+    "file": "Panasonic_CHO-PC_InstallGuide_EN.pdf",
+    "chunk": 17,
+    "page": null,
+    "content": "문서: Panasonic_CHO-PC_InstallGuide_EN > 섹션: [Typical system configuration]\n\n- *1: Special model. IEC61800-5-2 STO, IEC61508 SIL2.   *2: The communication period and connection of slave devices depend on the controller specification. *3: For communication period 0.083 ms, command update period is 0.166ms only.   *4: Slave nodes.\n- Speed response frequency\n- Minimum communication period\n\n<!-- image -->\n\n<!-- image -->\n\n<!-- image -->\n\n<!-- image -->\n\n· Max. frequency is 4 Mpps when A/B phase feedback scale is used."
+  },
+  {
+    "id": 505422,
+    "file": "Panasonic_CHO-PC_InstallGuide_EN.pdf",
+    "chunk": 18,
+    "page": null,
+    "content": "문서: Panasonic_CHO-PC_InstallGuide_EN > 섹션: INDEX\n\n| ## RTEX  (Applicable product : A5 Ⅱ N / A5 Ⅱ NL / A5 Ⅱ MN / A5 Ⅱ MNL series)  Introduction of MINAS A5  Ⅱ  N series and RTEX   .......................................................................................................................... 3  AJINEXTEK CO., LTD.  .............................................................................................................................................................. 5  Asahi Engineering Co., Ltd.  .................................................................................................................................................... 7  Aurotek Corporation  ................................................................................................................................................................ 9  Delta Tau Data Systems, inc.  ................................................................................................................................................  11  Panasonic Industrial Devices SUNX Co., Ltd.  ..................................................................................................................... 13  Prime Motion Inc.  ................................................................................................................................................................... 15  Shanghai Bitpass Automation Technology Development Co., Ltd  ................................................................................... 17  SOFT SERVO SYSTEMS, INC.  .............................................................................................................................................. 21  TIETECH Co., Ltd.  .................................................................................................................................................................. 23  Trio Motion Technology Ltd.  ..........................................................................."
+  },
+  {
+    "id": 505423,
+    "file": "Panasonic_CHO-PC_InstallGuide_EN.pdf",
+    "chunk": 19,
+    "page": null,
+    "content": "문서: Panasonic_CHO-PC_InstallGuide_EN > 섹션: Drive list\n\n## Drive list\n\n- Some motors do not match model numbers in the table. Check correct combination in the A5 Ⅱ family catalog.\n- Trailing ND1 in the part number for product with safety I/F option is replaced with N21,excluding the M-frame."
+  },
+  {
+    "id": 505424,
+    "file": "Panasonic_CHO-PC_InstallGuide_EN.pdf",
+    "chunk": 20,
+    "page": null,
+    "content": "문서: Panasonic_CHO-PC_InstallGuide_EN > 섹션: Appearance\n\n## Appearance\n\nDimensions (mm): W40 × H150 × D135 (A-frame)\n\n<!-- image -->"
+  },
+  {
+    "id": 505425,
+    "file": "Panasonic_CHO-PC_InstallGuide_EN.pdf",
+    "chunk": 21,
+    "page": null,
+    "content": "문서: Panasonic_CHO-PC_InstallGuide_EN > 섹션: Applicable standards\n\n## Applicable standards\n\n<!-- image -->\n\n<!-- image -->\n\n<!-- image -->\n\n<!-- image -->\n\n<!-- image -->\n\n<!-- image -->\n\n<!-- image -->\n\n<!-- image -->\n\nRoHS\n\n<!-- image -->"
+  },
+  {
+    "id": 505426,
+    "file": "Panasonic_CHO-PC_InstallGuide_EN.pdf",
+    "chunk": 22,
+    "page": null,
+    "content": "문서: Panasonic_CHO-PC_InstallGuide_EN > 섹션: RTEX Master Board\n\n## RTEX Master Board\n\n## PCI-R1604\n\n## Features\n\n- RTEX network Master Board\n- Network Speed 100 Mbps, Communication Period 0.5 ms\n- Support\tRTEX\tStandard\tServo\tProfile,\tStandard\tI/O\tProfile\n- Basic\tconfiguration\tis\t16\taxes\tcontrol (Can be expanded to 20,24,28, and 32 axes)\n- Easy to wire, saving wiring working-hour\n- Max. 32 nodes\n- Network connection - 100 BASE-TX, STP Cable (above CAT5e)\n- Excellent Error correction\n- Multi-axes linear / circular interpolation\n- Limit setting functions : soft stop, emergency stop, and two positions"
+  },
+  {
+    "id": 505427,
+    "file": "Panasonic_CHO-PC_InstallGuide_EN.pdf",
+    "chunk": 23,
+    "page": null,
+    "content": "문서: Panasonic_CHO-PC_InstallGuide_EN > 섹션: Specification\n\n## Specification\n\n## Application Sample\n\n- Semiconductor\tfront/back\tend\tprocess\tfield\n- Solar\tEnergy/FPD/PCB\tfield\n- Processing\tmachine\tfield\n\nPlease contact the following address for details\n\nURL : http://www.ajinextek.com/ENG/menu04/page01.php"
+  },
+  {
+    "id": 505428,
+    "file": "Panasonic_CHO-PC_InstallGuide_EN.pdf",
+    "chunk": 24,
+    "page": null,
+    "content": "문서: Panasonic_CHO-PC_InstallGuide_EN > 섹션: System Configuration\n\n## System Configuration\n\n## RTEX Based Motion Network\n\n<!-- image -->\n\n<!-- image -->"
+  },
+  {
+    "id": 505429,
+    "file": "Panasonic_CHO-PC_InstallGuide_EN.pdf",
+    "chunk": 25,
+    "page": null,
+    "content": "문서: Panasonic_CHO-PC_InstallGuide_EN > 섹션: Motion Function Module -RTEX-PM\n\n## Motion Function Module -RTEX-PM\n\n## Digital Input Function Module -RTEX-DI32\n\n## Analog Input Function Module -RTEX-AI8H\n\n## Sales area and Language\n\n<!-- image -->\n\n<!-- image -->\n\n<!-- image -->\n\n<!-- image -->\n\n<!-- image -->"
+  },
+  {
+    "id": 505430,
+    "file": "Panasonic_CHO-PC_InstallGuide_EN.pdf",
+    "chunk": 26,
+    "page": null,
+    "content": "문서: Panasonic_CHO-PC_InstallGuide_EN > 섹션: [Typical system configuration]\n\n| Com. Period  *2  1 ms  0.5 ms  0.166 ms  0.083 ms *3  Max. Nodes  *4  32  32  10  5   |\n|---------------------------------------------------------------------------------------|"
+  },
+  {
+    "id": 505431,
+    "file": "Panasonic_CHO-PC_InstallGuide_EN.pdf",
+    "chunk": 27,
+    "page": null,
+    "content": "문서: Panasonic_CHO-PC_InstallGuide_EN > 섹션: Please contact the following address for details.\n\n## Please contact the following address for details."
+  },
+  {
+    "id": 505432,
+    "file": "Panasonic_CHO-PC_InstallGuide_EN.pdf",
+    "chunk": 28,
+    "page": null,
+    "content": "문서: Panasonic_CHO-PC_InstallGuide_EN > 섹션: For more information\n\n## For more information\n\nContact:\n\nAJINEXTEK CO., LTD.\n\n9-3, Horim-dong, Dalseo-gu, Daegu-city, Korea"
+  },
+  {
+    "id": 505433,
+    "file": "Panasonic_CHO-PC_InstallGuide_EN.pdf",
+    "chunk": 29,
+    "page": null,
+    "content": "문서: Panasonic_CHO-PC_InstallGuide_EN > 섹션: Drive list\n\n| Motor rated output  10 W to  30 W  50 W  100 W  200 W  400 W  750 W  1 kW to  1.5 kW  2 kW  3 kW  4 k to  5 kW  7.5 kW  11 kW to  15 kW  Drive power supply  DC  24 V  Frame  M  Driver  Part No.  MMDH  T2C09  ND1  Single phase  100 to 120 VAC  Frame  A  A  B  C  Driver  Part No.  MADH  T1105  ND1  MADH  T1107  ND1  MBDH  T2110  ND1  MCDH  T3120  ND1  Single/3-phase  200 to 240 VAC  Frame  A  A  B  C  D  Driver  Part No.  MADH  T1505  ND1  MADH  T1507  ND1  MBDH  T2510  ND1  MCDH  T3520  ND1  MDDH  T5540  ND1  3-phase  200 to 230 VAC  Frame  E  F  F  G  H  Driver  Part No.  MEDH  T7364  ND1  MFDH  TA390  ND1  MFDH  TB3A2  ND1  MGDH  TC3B4  ND1  MHDH  TC3B4  ND1  3-phase  380 to 480 VAC  Frame  D  D  E  F  F  G  H  Driver  Part No.  MDDH  T2412  ND1  MDDH  T3420  ND1  MEDH  T4430  ND1  MFDH  T5440  ND1  MFDH  TA464  ND1  MGDH  TB4A2  ND1  MHDH  TB4A2  ND1   |\n|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|"
+  }
+]

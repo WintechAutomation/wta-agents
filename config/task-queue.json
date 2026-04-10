@@ -3623,6 +3623,18 @@
       "updated_at": "2026-04-10 19:05:29",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-dev-agent-47aa1c",
+      "agent": "dev-agent",
+      "task": "[판매자재관리 equipment_type 확정 — 부서장 결정]",
+      "message": "[판매자재관리 equipment_type 확정 — 부서장 결정]\n\n**방침**\n- MES 실시간 연동/주기 동기화 **포기**\n- cs-wta.com에서 독립적으로 CRUD 가능한 **equipment_models 테이블**을 자체 관리\n- **초기 seed 데이터는 현재 MES의 api_equipmentmodel 내용으로 1회 구축**\n\n**작업**\n1. `csagent.equipment_models` 테이블 신규 생성\n   ```sql\n   CREATE TABLE csagent.equipment_models (\n       id BIGSERIAL PRIMARY KEY,\n       name VARCHAR(100) UNIQUE NOT NULL,\n       code VARCHAR(50),\n       description TEXT,\n       is_active BOOLEAN NOT NULL DEFAULT TRUE,\n       sort_order INT NOT NULL DEFAULT 0,\n       created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),\n       updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()\n   );\n   CREATE INDEX idx_equipment_models_active ON csagent.equipment_models(is_active, sort_order);\n   ```\n\n2. **초기 seed**: MES의 `public.api_equipmentmodel`에서 현재 데이터 export → csagent.equipment_models로 1회 import\n   - db-manager에 MES 테이블 데이터 조회 요청 (SELECT id, name, code, description, type, is_active FROM public.api_equipmentmodel WHERE is_active=true)\n   - 결과를 cs-wta.com DB에 INSERT\n   - 이후에는 각자 독립\n\n3. **sales_material_master.equipment_type** 컬럼 방식\n   - 권장: `equipment_type` 컬럼은 `VARCHAR(100)` free-form (FK 대신 name 저장 — 텍스트 매칭 단순화). 이유: 모델명 변경/삭제 시 sales_material 기존 데이터 깨지지 않음.\n   - 또는 FK로 `equipment_model_id BIGINT REFERENCES csagent.equipment_models(id)` + ON DELETE SET NULL\n   - **결정**: FK 방식 권장. name은 조인으로 표시. 삭제 시 SET NULL로 고아 레코드 유지.\n\n4. **관리 페이지 추가**: 시스템 설정 또는 부품판매 하위에 \"장비모델 관리\" 페이지 (목록/등록/수정/활성화 토글/정렬). 권한: 관리자만.\n\n5. **CSV 287행 임포트 시**: CSV의 \"장비모델구분\" 값(공통/PVD 로딩/언로딩 등)과 seed한 MES 모델명의 매칭률이 낮을 수 있음.\n   - 매칭 안 되는 값은 자동으로 equipment_models에 신규 추가 (is_active=true)하거나, \"미분류\" 기본값으로 임시 저장.\n   - 매칭 결과 로그 MAX에 제출.\n\n**진행 순서**\n1. db-manager에 MES api_equipmentmodel 데이터 export 요청 (5분)\n2. csagent.equipment_models 테이블 생성 + seed 삽입\n3. sales_material_master 테이블 생성 (equipment_model_id FK)\n4. 백엔드 API (판매자재 CRUD + 장비모델 CRUD + CSV 임포트 + 파일 업로드)\n5. 프론트 (부품판매 → 판매자재관리 세부메뉴 + 장비모델 관리 페이지)\n6. CSV 287행 임포트 + 매칭 결과 보고\n7. 빌드/배포/보고\n\n병목 있으면 즉시 MAX 보고.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-10 19:20:10",
+      "updated_at": "2026-04-10 19:20:10",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }

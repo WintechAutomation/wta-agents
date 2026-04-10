@@ -1,0 +1,114 @@
+[
+  {
+    "id": 2,
+    "name": "호닝형상검사기",
+    "code": "HIM-H",
+    "description": "기본모델",
+    "type": "HN",
+    "is_active": true
+  },
+  {
+    "id": 4,
+    "name": "검사기-F1",
+    "code": "HIM-F1",
+    "description": "HIM-F1 Final Inspection Equipment",
+    "type": "HIM",
+    "is_active": true
+  },
+  {
+    "id": 5,
+    "name": "프레스-2CV",
+    "code": "HAM-HP3-2CV",
+    "description": "",
+    "type": "HP",
+    "is_active": true
+  },
+  {
+    "id": 6,
+    "name": "검사기-F2",
+    "code": "HIM-F2",
+    "description": "",
+    "type": "HIM",
+    "is_active": true
+  },
+  {
+    "id": 7,
+    "name": "프레스-EV",
+    "code": "HAM-HP3-EV",
+    "description": "",
+    "type": "HP",
+    "is_active": true
+  },
+  {
+    "id": 8,
+    "name": "소결취출기",
+    "code": "HAM-SINT",
+    "description": "",
+    "type": "HS3",
+    "is_active": true
+  },
+  {
+    "id": 9,
+    "name": "PVD-L",
+    "code": "HAM-PVD-L",
+    "description": "PVD Loading",
+    "type": "HS2",
+    "is_active": true
+  },
+  {
+    "id": 10,
+    "name": "PVD-UL",
+    "code": "HAM-PVD-UL",
+    "description": "PVD Unloading",
+    "type": "HS2",
+    "is_active": true
+  },
+  {
+    "id": 11,
+    "name": "포장기",
+    "code": "HAM-HPL",
+    "description": "",
+    "type": "HPL",
+    "is_active": true
+  },
+  {
+    "id": 12,
+    "name": "CVD",
+    "code": "HAM-CVD",
+    "description": "",
+    "type": "HS1",
+    "is_active": true
+  },
+  {
+    "id": 13,
+    "name": "마스크자동기",
+    "code": "HAM-MASK",
+    "description": "",
+    "type": "HS5",
+    "is_active": true
+  },
+  {
+    "id": 14,
+    "name": "양면연삭핸들러",
+    "code": "HGM-HD",
+    "description": "",
+    "type": "HG",
+    "is_active": true
+  },
+  {
+    "id": 17,
+    "name": "라벨부착기",
+    "code": "HAM-LABEL",
+    "description": "",
+    "type": "HLB",
+    "is_active": true
+  },
+  {
+    "id": 22,
+    "name": "양면연삭설비",
+    "code": "HGM-DG",
+    "description": "",
+    "type": "HGM",
+    "is_active": true
+  }
+]

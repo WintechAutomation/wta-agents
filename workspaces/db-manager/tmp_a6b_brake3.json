@@ -1,0 +1,212 @@
+[
+  {
+    "id": 505471,
+    "file": "Panasonic_CHO-PC_InstallGuide_EN.pdf",
+    "chunk": 67,
+    "page": null,
+    "content": "문서: Panasonic_CHO-PC_InstallGuide_EN > 섹션: Specification\n\n| Item  Description  Power supply  Main power supply: 24 VDC±10 % (4.0 A max.)  Sensor power supply: 24 VDC±10 % (0.1 A)  Applicable motor  2.55 A/phase or less 2-phase HB type stepping motor  Driving capacity  2.55 A/phase  Micro step resolution  Basic step divided by 200 (for 40000 p/r basic step 1.8 deg motor)  Communication specification  Realtime Express (RTEX)  Input signal  Sensor\tinput\t4\t(HOME,\tEX,\tCWLS,\tCCWLS),\tencoder\tinput\tand\tstop\tinput  Output signal  Brake output and alarm output  Protective function  Over\tcurrent,\tpower\tsupply\tvoltage\tmonitoring\tand\tstep-out\tdetection  Environment  Ambient temperature  0 °C to 50 °C (no freezing), Storage: -20 °C to 60 °C (no freezing)  Ambient humidity  90 %RH max. (no dewing). Storage: 90 %RH max. (no dewing)  Atmosphere  Indoor\t(no\tdirect\tsunshine).\tNo\tcorrosive\tgas,\tflammable\tgas,\toil\tmist,\tdust,\tetc.  Altitude  Max. 1000 m above sea level  Operating vibration  (shock) environment  Max.\t2\tG\t(10\tHz\tto\t250\tHz,\tin\tX,Y,Z\tdirection\t1\thour),\tmax.\t10\tG\t(Ones)  Outline dimensions (mm)  160 × 92 × 29  Mass  Approx. 300  g   |\n|---|"
+  },
+  {
+    "id": 505988,
+    "file": "Panasonic_IMD88_InstallGuide_EN.pdf",
+    "chunk": 156,
+    "page": null,
+    "content": "문서: Panasonic_IMD88_InstallGuide_EN > 섹션: Output Timing of BRK-OFF Signal\n\n## Output Timing of BRK-OFF Signal\n\n- For\t the\t brake\t release\t timing\t at\t power-on,\t or\t braking\t timing\t at\t Servo-OFF/ServoAlarm\twhile\tthe\tmotor\tis\tin\tmotion,\trefer\tto\tthe\tOperating\tInstructions\t(Overall).\n- With\tthe\tparameter,\tPr4.38\t(Setup\tof\tmechanical\tbrake\taction\twhile\tthe\tmotor\tis\tin motion),\tyou\tcan\tset\tup\ta\ttime\tbetween\twhen\tthe\tmotor\tenters\tto\ta\tfree-run\t\tfrom energized\tstatus\tand\twhen\tBRK-OFF\tsignal\tturns\toff\t(brake\twill\tbe\tengaged),\twhen the\tServo-OFF\tor\talarm\toccurs\twhile\tthe\tmotor\tis\tin\tmotion.\tRefer\tto\tthe\tOperating Instructions\t(Overall)\tfor\tthe\tdetails."
+  },
+  {
+    "id": 505992,
+    "file": "Panasonic_IMD88_InstallGuide_EN.pdf",
+    "chunk": 160,
+    "page": null,
+    "content": "문서: Panasonic_IMD88_InstallGuide_EN > 섹션: Specifications of Built-in Holding Brake\n\n## Specifications of Built-in Holding Brake\n\n- Releasing\ttime\tvalues\trepresent\tthe\tones\twith\tDC-cutoff\tusing\ta\tvaristor.\n\nValues\tin\t(\t\t\t)\trepresent\tthose\tmeasured\tby\tusing\ta\tdiode\t(V03C\tby\tHitachi,\tLtd.)\n\n- Above\tvalues\t(except\tstatic\tfriction\ttorque,\treleasing\tvoltage\tand\texcitation\tcurrent)\trepresent\ttypical\tvalues.\n- Backlash\tof\tthe\tbuilt-in\tholding\tbrake\tis\tkept\t±1˚or\tsmaller\tat\tex-factory\tpoint.\n- Service\t life\t of\t the\t number\t of\t acceleration/deceleration\t with\t the\t above\t permissible\t angular\tacceleration\tis\tmore\tthan\t10\tmillion\ttimes.\t(Life\tend\tis\tdefined\tas\twhen\tthe\tbrake backlash\tdrastically\tchanges.)"
+  },
+  {
+    "id": 506019,
+    "file": "Panasonic_IMD88_InstallGuide_EN.pdf",
+    "chunk": 187,
+    "page": null,
+    "content": "문서: Panasonic_IMD88_InstallGuide_EN > 섹션: Specifications of Built-in Holding Brake\n\n| Motor  series  Motor  output  Static  friction  torque  N·m  Rotor  inertia  x 10  -4  kg·m  2  Engaging  time  ms  Releasing  time  ms  Exciting  current  DC A  (at cool-off)  Releasing  voltage  Permissible  work (J) per  one braking  Permissible  total work  x 10  3  J  Permissible  angular  acceleration  rad/s  2  MSME  50W,\t100W  0.29\tor\tmore  0.002  35\tor\tless  20\tor\tless  0.3  DC1V  or\tmore  39.2  4.9  30000  200W,\t400W  1.27\tor\tmore  0.018  50\tor\tless  15\tor\tless  0.36  137  44.1  750W  2.45\tor\tmore  0.075  70\tor\tless  20\tor\tless  0.42  196  147  1.0kW,\t1.5kW,  2.0kW  7.8\tor\tmore  0.33  50\tor\tless  15\tor\tless  (100  )  0.81  DC2V  or\tmore  392  490  10000  3.0kW  11.8\tor\tmore  80\tor\tless  4.0kW,\t5.0kW  16.2\tor\tmore  1.35  110\tor  less  50\tor\tless  (130  )  0.9  1470  2200  MDME  1.0kW  4.9\tor\tmore  1.35  80\tor\tless  70\tor\tless  (200  )  0.59  DC2V  or\tmore  588  780  10000  1.5kW,\t2.0kW  13.7\tor\tmore  100\tor  less  50\tor\tless  (130  )  0.79  1176  1500  3.0kW  16.2\tor\tmore  110\tor  less  0.9  1470  2200  4.0kW,\t5.0kW  24.5\tor\tmore  4.7  80\tor\tless  25\tor\tless  (200  )  1.3  1372  2900  5440  MFME  1.5kW  7.8\tor\tmore  4.7  80\tor\tless 35\tor\tless  0.83  DC2V  or\tmore  1372  2900  10000  2.5kW  21.6\tor\tmore  8.75  150\tor  less  100\tor  less  0.75  1470  1500  4.5kW  31.4\tor\tmore  2200  MGME  900W  13.7\tor\tmore  1.35  100\tor  less  50\tor\tless  (130  )  0.79  DC2V  or\tmore  1176  1500  10000  2.0kW  24.5\tor\tmore  4.7  80\tor\tless  25\tor\tless  (200  )  1.3  1372  2900  5440  3.0kW  58.8\tor\tmore  150\tor  less  50\tor\tless  (130  )  1.4  4.5  kW  50\tor\tless  5000  MHME  1.0kW  4.9\tor\tmore  1.35  80\tor\tless  70\tor\tless  (200  )  0.59  DC2V  or\tmore  588  780  10000  1.5kW  13.7\tor\tmore  100\tor  less  50\tor\tless  (130  )  0.79  1176  1500  2.0kW\tto  5.0kW  24.5\tor\tmore  4.7  80\tor\tless  25\tor\tless  (200  )  1.3  1372  2900  5440   |\n|---|"
+  },
+  {
+    "id": 506176,
+    "file": "Panasonic_IME15_InstallGuide_EN.pdf",
+    "chunk": 150,
+    "page": null,
+    "content": "문서: Panasonic_IME15_InstallGuide_EN > 섹션: Output Timing of BRK-OFF Signal\n\n## Output Timing of BRK-OFF Signal\n\n- For\t the\t brake\t release\t timing\t at\t power-on,\t or\t braking\t timing\t at\t Servo-OFF/ServoAlarm\twhile\tthe\tmotor\tis\tin\tmotion,\trefer\tto\tthe\tOperating\tInstructions\t(Overall).\n- With\tthe\tparameter,\tPr4.38\t(Setup\tof\tmechanical\tbrake\taction\twhile\tthe\tmotor\tis\tin motion),\tyou\tcan\tset\tup\ta\ttime\tbetween\twhen\tthe\tmotor\tenters\tto\ta\tfree-run\t\tfrom energized\tstatus\tand\twhen\tBRK-OFF\tsignal\tturns\toff\t(brake\twill\tbe\tengaged),\twhen the\tServo-OFF\tor\talarm\toccurs\twhile\tthe\tmotor\tis\tin\tmotion.\tRefer\tto\tthe\tOperating Instructions\t(Overall)\tfor\tthe\tdetails."
+  },
+  {
+    "id": 506178,
+    "file": "Panasonic_IME15_InstallGuide_EN.pdf",
+    "chunk": 152,
+    "page": null,
+    "content": "문서: Panasonic_IME15_InstallGuide_EN > 섹션: Specifications of Built-in Holding Brake\n\n## Specifications of Built-in Holding Brake\n\n- Excitation\tvoltage\tis\tDC24V±10%.\n- Releasing\ttime\tvalues\trepresent\tthe\tones\twith\tDC-cutoff\tusing\ta\tvaristor.\n- Above\tvalues\t(except\tstatic\tfriction\ttorque,\treleasing\tvoltage\tand\texcitation\tcurrent) represent\ttypical\tvalues.\n- Backlash\tof\tthe\tbuilt-in\tholding\tbrake\tis\tkept\t±1˚or\tsmaller\tat\tex-factory\tpoint.\n- Service\t life\t of\t the\t number\t of\t acceleration/deceleration\t with\t the\t above\t permissible angular\tacceleration\tis\tmore\tthan\t10\tmillion\ttimes.\t(Life\tend\tis\tdefined\tas\twhen\tthe brake\tbacklash\tdrastically\tchanges.)"
+  },
+  {
+    "id": 506182,
+    "file": "Panasonic_IME15_InstallGuide_EN.pdf",
+    "chunk": 156,
+    "page": null,
+    "content": "문서: Panasonic_IME15_InstallGuide_EN > 섹션: Caution\n\nervo-OFF\n- 3) when\tone\tof\tthe\tprotective\tfunction\tis\tactivated.\n- 4) when\tover-travel\tinhibit\tinput\t(NOT,\tPOT)\tof\tconnector\tX4\tis\tactivated In\tthe\tabove\tcases\tfrom\t1)\tto\t4),\tyou\tcan\tselect\teither\tactivation\tof the\tdynamic\tbrake\tor\tmaking\tthe\tmotor\tfree-run\tduring\tdeceleration\tor\tafter\tthe\tstop,\twith\tparameter.\n\nNote\tthat\twhen\tthe\tcontrol\tpower\tis\toff,\tthe\tdynamic\tbrake\twill\tbe kept\treleased.\n\n- If the built-in dynamic brake resistor of the G-frame driver is insufficient, external dynamic brake resistors can be connected.\n- For the H-frame driver, external dynamic brake resistors can be connected.\n\nConnections of the external dynamic brake resistors are the same as those of the G-frame driver. (The DB3 and DB4 terminals are not provided.)\n\n- Use the following resistors as the external dynamic brake resistors. (To be prepared by user)"
+  },
+  {
+    "id": 506217,
+    "file": "Panasonic_IME15_InstallGuide_EN.pdf",
+    "chunk": 191,
+    "page": null,
+    "content": "문서: Panasonic_IME15_InstallGuide_EN > 섹션: Specifications of Built-in Holding Brake\n\n| Motor  series  Motor  output  Static  friction  torque  N·m  Rotor  inertia  x 10  -4  kg·m 2  Engaging  time  ms  Releasing  time  ms  Exciting  current  DC A  (at cool-off)  Releasing  voltage  Permissible  work (J) per  one braking  Permissible  total work  x 10  3  J  Permissible  angular  acceleration  rad/s  2  MGME  6.0kW  58.8  or\tmore  4.7  150  or\tless  50  or\tless  1.4  DC2V  or  more  1372  2900  5000  MHME  7.5kW  MDME  7.5kW  11kW  15kW  100  or\tmore  7.1  300  or\tless  140  or\tless  1.08  2000  4000  3000   |\n|---|"
+  },
+  {
+    "id": 506917,
+    "file": "Panasonic_PANATERM_Manual_KO_2.pdf",
+    "chunk": 161,
+    "page": null,
+    "content": "문서: Panasonic_PANATERM_Manual_KO_2 > 섹션: (2) 측정 조건 입력 필드\n\n「샘플링 비율」 0 에서 7 까지의 값을 설정할 수 있습니다 .\n\n- ※ 샘플링 비율을 크게 하면 낮은 주파수 대역의 측정 정밀도는 향 상되나 측정 시간이 길어집니다 . 반대로 작게 하면 높은 주파수 대역의 측정 정밀도가 향상됩니다 . 우선 0 부터 시작하여 측정 결과를 보면서 조정하십시오 .\n- ※ 샘플링 비율이 1 이상인 경우 앨리어싱에 의한 오차가 발생할 수 있습니다 .\n\n「자동 서보 온」체크하는 것으로 , 측정 시작시 자동으로 서보 온 합니다 .\n\n- ※ 범용 타입에서는 외부 입력에 의한 서보 온 상태에서 측정하는 경우 체크하지 마십시오 .\n\n네트워크 타입에서는 브레이크 해제 조작을 상위 장치에서 실 시하고 있을 경우에는 체크를 해제하십시오 .\n\n※ 측정 창을 닫으면 설정이 지워집니다 .\n\n- 3 (3) 조작 버튼 「서보 온」이 무효이거나 표시하지 않은 경우 다음 으로 이동하십시오 .\n\n「서보 온」이 활성화되면 「서보 온」을 클릭하십시오 . 주의 화 면이 표시됩니다 . 잘 확인하신 후 , 「실행」을 클릭하십시오 .Q\n\n<!-- image -->\n\n서보 ON 후 「측정 수행」이 활성화됩니다 .\n\n<!-- image -->\n\n- 4 (3) 의 조작 버튼「측정 실행」을 클릭하면 공진 측정 시의 주의 윈 도우가 표시됩니다 . 잘 확인하신 후「실행」을 클릭하십시오 .\n\n<!-- image -->\n\n5 주의 화면이 표시됩니다 . 서보 온 후「실행」을 클릭하면 측정이 시작됩니다 .\n\n<!-- image -->\n\n- 6 측정 완료 후 측정 창이 자동으로 닫습니다 . 닫히지 않으면 「서보 오프」를 클릭하십시오 . 서보 오프 후 상위 장치에서 제동하십시오 .\n\n<!-- image -->"
+  },
+  {
+    "id": 507232,
+    "file": "Panasonic_PANATERM_Manual_KO_3.pdf",
+    "chunk": 187,
+    "page": null,
+    "content": "문서: Panasonic_PANATERM_Manual_KO_3 > 섹션: &lt; 네트워크 타입 (MINAS-A5N, MINAS-A5NL 등 ) 의 경우 &gt;\n\n지의 값을 설정할 수 있습니다 .\n\n- ※ 샘플링 비율을 크게 하면 낮은 주파수 대역의 측정 정밀도는 향 상되나 측정 시간이 길어집니다 . 반대로 작게 하면 높은 주파수 대역의 측정 정밀도가 향상됩니다 . 우선 0 부터 시작하여 측정 결과를 보면서 조정하십시오 .\n- ※ 샘플링 비율이 1 이상인 경우 앨리어싱에 의한 오차가 발생할 수 있습니다 .\n\n「자동 서보 온」체크하는 것으로 , 측정 시작시 자동으로 서보 온 합니다 .\n\n- ※ 범용 타입에서는 외부 입력에 의한 서보 온 상태에서 측정하는 경우 체크하지 마십시오 .\n\n네트워크 타입에서는 브레이크 해제 조작을 상위 장치에서 실 시하고 있을 경우에는 체크를 해제하십시오 .\n\n※ 측정 창을 닫으면 설정이 지워집니다 .\n\n- 3 (3) 조작 버튼 「서보 온」이 무효이거나 표시하지 않은 경우 다음 으로 이동하십시오 .\n\n「서보 온」이 활성화되면 「서보 온」을 클릭하십시오 . 주의 화 면이 표시됩니다 . 잘 확인하신 후 , 「실행」을 클릭하십시오 .\n\n<!-- image -->\n\n서보 ON 후 「측정 수행」이 활성화됩니다 .\n\n<!-- image -->\n\n- 4 (3) 의 조작 버튼「측정 실행」을 클릭하면 공진 측정 시의 주의 윈 도우가 표시됩니다 . 잘 확인하신 후「실행」을 클릭하십시오 .\n\n<!-- image -->\n\n5 주의 화면이 표시됩니다 . 서보 온 후「실행」을 클릭하면 측정이 시작됩니다 .\n\n<!-- image -->\n\n- 6 측정 완료 후 측정 창이 자동으로 닫습니다 . 닫히지 않으면 「서보 오프」를 클릭하십시오 . 서보 오프 후 상위 장치에서 제동하십시오 .\n\n<!-- image -->"
+  },
+  {
+    "id": 506628,
+    "file": "Panasonic_PANATERM_Manual_KO.pdf",
+    "chunk": 161,
+    "page": null,
+    "content": "문서: Panasonic_PANATERM_Manual_KO > 섹션: (2) 측정 조건 입력 필드\n\n「샘플링 비율」 0 에서 7 까지의 값을 설정할 수 있습니다 .\n\n- ※ 샘플링 비율을 크게 하면 낮은 주파수 대역의 측정 정밀도는 향 상되나 측정 시간이 길어집니다 . 반대로 작게 하면 높은 주파수 대역의 측정 정밀도가 향상됩니다 . 우선 0 부터 시작하여 측정 결과를 보면서 조정하십시오 .\n- ※ 샘플링 비율이 1 이상인 경우 앨리어싱에 의한 오차가 발생할 수 있습니다 .\n\n「자동 서보 온」체크하는 것으로 , 측정 시작시 자동으로 서보 온 합니다 .\n\n- ※ 범용 타입에서는 외부 입력에 의한 서보 온 상태에서 측정하는 경우 체크하지 마십시오 .\n\n네트워크 타입에서는 브레이크 해제 조작을 상위 장치에서 실 시하고 있을 경우에는 체크를 해제하십시오 .\n\n※ 측정 창을 닫으면 설정이 지워집니다 .\n\n- 3 (3) 조작 버튼 「서보 온」이 무효이거나 표시하지 않은 경우 다음 으로 이동하십시오 .\n\n「서보 온」이 활성화되면 「서보 온」을 클릭하십시오 . 주의 화 면이 표시됩니다 . 잘 확인하신 후 , 「실행」을 클릭하십시오 .Q\n\n<!-- image -->\n\n서보 ON 후 「측정 수행」이 활성화됩니다 .\n\n<!-- image -->\n\n- 4 (3) 의 조작 버튼「측정 실행」을 클릭하면 공진 측정 시의 주의 윈 도우가 표시됩니다 . 잘 확인하신 후「실행」을 클릭하십시오 .\n\n<!-- image -->\n\n5 주의 화면이 표시됩니다 . 서보 온 후「실행」을 클릭하면 측정이 시작됩니다 .\n\n<!-- image -->\n\n- 6 측정 완료 후 측정 창이 자동으로 닫습니다 . 닫히지 않으면 「서보 오프」를 클릭하십시오 . 서보 오프 후 상위 장치에서 제동하십시오 .\n\n<!-- image -->"
+  },
+  {
+    "id": 507918,
+    "file": "Panasonic_PANATERM_SetupGuide_KO_2.pdf",
+    "chunk": 202,
+    "page": 103,
+    "content": "103 \n \n「자동 서보 온」체크하는 것으로, 측정 시작시 자동으로 서보 온\n합니다. \n※ 범용 타입에서는 외부 입력에 의한 서보 온 상태에서 측정하는 \n경우 체크하지 마십시오. \n네트워크 타입에서는 브레이크 해제 조작을 상위 장치에서 실\n시하고 있을 경우에는 체크를 해제하십시오.  \n※ 측정 창을 닫으면 설정이 지워집니다. \n \n3 (3) 조작 버튼 「서보 온」이 무효이거나 표시하지 않은 경우 다음\n으로 이동하십시오.  \n「서보 온」이 활성화되면 「서보 온」을 클릭하십시오. 주의 화\n면이 표시됩니다. 잘 확인하신 후, 「실행」을 클릭하십시오.Q \n \n \n \n서보 ON 후 「측정 수행」이 활성화됩니다."
+  },
+  {
+    "id": 508256,
+    "file": "Panasonic_PANATERM_SetupGuide_KO_3.pdf",
+    "chunk": 251,
+    "page": 122,
+    "content": "Rev 3.09 \n－ 118 － \n \n「자동 서보 온」체크하는 것으로, 측정 시작시 자동으로 서보 온\n합니다. \n※ 범용 타입에서는 외부 입력에 의한 서보 온 상태에서 측정하는 \n경우 체크하지 마십시오. \n네트워크 타입에서는 브레이크 해제 조작을 상위 장치에서 실\n시하고 있을 경우에는 체크를 해제하십시오.  \n※ 측정 창을 닫으면 설정이 지워집니다. \n \n3 (3) 조작 버튼 「서보 온」이 무효이거나 표시하지 않은 경우 다음\n으로 이동하십시오.  \n「서보 온」이 활성화되면 「서보 온」을 클릭하십시오. 주의 화\n면이 표시됩니다. 잘 확인하신 후, 「실행」을 클릭하십시오. \n \n \n \n서보 ON 후 「측정 수행」이 활성화됩니다."
+  },
+  {
+    "id": 507629,
+    "file": "Panasonic_PANATERM_SetupGuide_KO.pdf",
+    "chunk": 202,
+    "page": 103,
+    "content": "103 \n \n「자동 서보 온」체크하는 것으로, 측정 시작시 자동으로 서보 온\n합니다. \n※ 범용 타입에서는 외부 입력에 의한 서보 온 상태에서 측정하는 \n경우 체크하지 마십시오. \n네트워크 타입에서는 브레이크 해제 조작을 상위 장치에서 실\n시하고 있을 경우에는 체크를 해제하십시오.  \n※ 측정 창을 닫으면 설정이 지워집니다. \n \n3 (3) 조작 버튼 「서보 온」이 무효이거나 표시하지 않은 경우 다음\n으로 이동하십시오.  \n「서보 온」이 활성화되면 「서보 온」을 클릭하십시오. 주의 화\n면이 표시됩니다. 잘 확인하신 후, 「실행」을 클릭하십시오.Q \n \n \n \n서보 ON 후 「측정 수행」이 활성화됩니다."
+  },
+  {
+    "id": 508437,
+    "file": "Panasonic_SX-DSV02931_ParameterManual_EN.pdf",
+    "chunk": 50,
+    "page": null,
+    "content": "문서: Panasonic_SX-DSV02931_ParameterManual_EN > 섹션: Input signals (command pulse train) and their functions\n\n| Name  Symbol  Description  Servo Alarm  ALM    Digital output to indicate the drive is in alarm status..  Servo ready  S-RDY    Digital output to indicate the drive is ready to be enabled.  Motor holding break release  BRK-OFF    Digital output to provide the timing signal to control the motor holding brake.  Zero speed  ZSP    Outputs the zero speed detection signal.  Torque limited  TLC    Outputs the torque limit signal.  In-position  INP    Outputs the positioning completion signal.  Positioning completion 2  INP2    Outputs the positioning completion signal 2.  At speed  AT-SPD    Outputs the at-speed signal.  V-COIN  V-COIN    Outputs the speed coincidence signal.  Warning output 1  WARN1    Outputs the warning output signal configured in Pr4. 40 \"Warning output  selection 1\".  Warning output 2  WARN2    Outputs the warning output signal configured in Pr4. 41 \"Warning output  selection 2\".  Position command ON/OFF  P-CMD    Outputs meaning positional command applied.  Speed in -limit output  V-LIMIT    Outputs meaning the speed is limited at torque control mode.  Alarm attribute output  ALM-ATB    Outputs meaning occur an alarm that can be cleared.   |\n|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
+  },
+  {
+    "id": 508454,
+    "file": "Panasonic_SX-DSV02931_ParameterManual_EN.pdf",
+    "chunk": 67,
+    "page": null,
+    "content": "문서: Panasonic_SX-DSV02931_ParameterManual_EN > 섹션: 9.  Safety Precautions\n\nbraking device on the equipment to secure safety.\n- (50) Pay attention to heat radiation. The servo driver generates heat by operating a motor. A servo driver used in a sealed control box may cause an extreme rise of temperature. Consider cooling so that an ambient temperature around the servo driver satisfies an operating range.\n- (51) Maintenance and inspection is allowed only for a specializing person.\n- (52) Turn off the power when the equipment is not used for a long term.\n- (53) When the dynamic brake operates at the high speed driving, stop the motor during about 10 minutes. When operating the motor on the conditions beyond it, dynamic brake may be disconnected and the brake function may stop operating.\n22.  Capacitance of the capacitors of power supply rectifier circuit drops over time. To avoid a secondary problem due to a failure, replacement of capacitors is recommended at an interval of approximately 5 years. Commission the manufacturer or sales agency authorized by the m"
+  },
+  {
+    "id": 508481,
+    "file": "Panasonic_SX-DSV02931_ParameterManual_EN.pdf",
+    "chunk": 94,
+    "page": null,
+    "content": "문서: Panasonic_SX-DSV02931_ParameterManual_EN > 섹션: ■ Default value of the parameters(1/2)\n\n| 分  類  No  パラメータ  出荷値  Cate  gory  Pr.  Parameter  Default  value  Cate  gory  Pr.  Parameter  Default value  Cate  gory  Pr.  Default  value  Cate  gory  Pr.  Default  value  0  0  Reference direction  1  1  13  Torque feed forward filter  0.00  2  16  Anti-vibration frequency 2  0.0  3  23  0  4  24  *2  0.0  1  Control mode  0  14  Second gain enable  1  17  Anti-vibration filter configuration 2  0.0  24  0  25  *2  0  2  RTAT mode  1  15  Gain switching mode for position  0  18  Anti-vibration frequency 3  0.0  25  0  26  *2  0.00  3  Mechanical stiffness for  RTAT  13  16  Gain switching delay for position  5.0  19  Anti-vibration filter configuration 3  0.0  26  0  27  *2  0.0  4  Mass ratio  250  17  Gain switching level for position  50  20  Anti-vibration frequency 4  0.0  27  0  28  *2  0  5  Command pulse mode  1  18  Gain switching hysteresis for position  33  21  Anti-vibration filter configuration 4  0.0  28  0  29  *2  0.00  6  Command pulse counting direction  0  19  Position loop gain switching time  3.3  22  First order filter time constant for  position command  0.0  29  0  30  *2  0.0  7  Command pulse input mode setting  1  20  Gain switching mode for velocity  0  23  FIR filter time constant for position  command  0.0  4  0  197379  31  10  8  For manufacturer use  0  21  Gain switching delay for velocity  0.0  3  0  *2  Velocity command type  1  1  *2  0  32  0  9  1st numerator of electronic gear  10000  22  Gain switching level for velocity  0  1  Velocity command direction source  0  2  *2  0  33  0  10  Denominator of electronic gear  10000  23  Gain switching hysteresis for velocity  0  2  *2  Velocity command gain  100  3  263172  34  50  11  Numrator of pulse output division  2500  24  *2  Gain switching mode for thrust  0  3  *2  Velocity command polarity  1  4  *2  0  35  50  12  Output pulse logic  0  25  *2  Gain switching delay for thrust  0"
+  },
+  {
+    "id": 508549,
+    "file": "Panasonic_SX-DSV03190_ParameterManual_EN.pdf",
+    "chunk": 66,
+    "page": null,
+    "content": "문서: Panasonic_SX-DSV03190_ParameterManual_EN > 섹션: 8-4 Dynamic brake\n\n## 8-4 Dynamic brake\n\nServo driver(size A-F)    has built-in dynamic brake function to stop motor in an emergency.\n\nDynamic brake can be operated in the following cases\n\n1. The main power off\n2. The servo off\n3. Protection action\n4. Connector X4 driving ban importation (POT, NOT) action\n\nOn the above 1-4 cases, valid or invalid of dynamic brake can be determined by the parameters.\n\nHowever, when the control power off, dynamic brake of size A-F keep valid condition.\n\nDynamic brake is what is intended for use in a short time as only emergency\n\n1. Do not start / stop the motor by the servo signal (SRV-ON) . Built-in dynamic brake circuit may be damaged.\n2. Do not drive the motor with external torque. Motor generates electricity by external torque. Dynamic brake circuit will be damaged and it is possible that short-circuit current cause smoke or combustion.\n3. Allow approx. 10 minutes pause when the dynamic brake is activated during high-speed running.\n\nResistor  is  damaged  and  the  dyn"
+  },
+  {
+    "id": 508586,
+    "file": "Panasonic_SX-DSV03190_ParameterManual_EN.pdf",
+    "chunk": 103,
+    "page": null,
+    "content": "문서: Panasonic_SX-DSV03190_ParameterManual_EN > 섹션: SAFETY PRECAUTIONS\n\na braking device on the equipment to secure safety.\n- (54) Pay attention to heat radiation.    The driver generates heat by operating a motor.    A driver used in a sealed control box may cause an extreme rise of temperature.\n25. Consider cooling so that an ambient temperature around the driver satisfies an operating range.\n- (55) Maintenance and inspection is allowed only for a specializing person.\n- (56) Turn off the power when the equipment is not used for a long term.\n- (57) Allow approx. 10 minutes pause when the dynamic brake is activated during high-speed running. Resistor is damaged and the dynamic brake might not work when using it under more critical operating condition.\n29.  Capacitance of the capacitors of power supply rectifier circuit drops over time.    To avoid a secondary problem due to a failure, replacement of capacitors is recommended at an interval of Abt imately 5 years.    Commission the manufacturer or sales agency authorized by the manufacturer to replace the"
+  },
+  {
+    "id": 508622,
+    "file": "Panasonic_SX-DSV03190_ParameterManual_EN.pdf",
+    "chunk": 139,
+    "page": null,
+    "content": "문서: Panasonic_SX-DSV03190_ParameterManual_EN > 섹션: I/O connector (X4) default setting\n\n| Ｘ  4connector  Default  function  Name  Pin No.  Signal name  Symbol  Logic  SI1  5  Multi-function input 5  SI-MON5  Normally-Open  SI2  7  Positive overtravel  POT  Normally-Closed  SI3  8  Negative overtravel  NOT  Normally-Closed  SI4  9  Home position  HOME  Normally-Open  SI5  10  External latch input 1  EXT1  Normally-Open  SI6  11  External latch input 2  EXT2  Normally-Open  SI7  12  Multi-function  input  3  SI-MON3  Normally-Open  SI8  13  Multi-function  input  4  SI-MON4  Normally-Open  SO1  1,2  External brake release  BRK-OFF  Normally-Open  SO2  25,26  External output 1  EX-OUT1  Normally-Open  SO3  3,4  Alarm output  ALM  Normally-Closed   |\n|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|"
+  },
+  {
+    "id": 508627,
+    "file": "Panasonic_SX-DSV03190_ParameterManual_EN.pdf",
+    "chunk": 144,
+    "page": null,
+    "content": "문서: Panasonic_SX-DSV03190_ParameterManual_EN > 섹션: I/O connector (X4) default setting\n\n| No.SX-DSV03190  Cat  e  Pr.  Parameter  Default  value  Cat  e  Pr.  Parameter  Default  value  Cat  e  Pr.  Parameter  Default  value  Cat  e  Pr.  Parameter  Default  value  Cat  e  Pr.  Parameter  Default  value  4  0  SI1 input selection  3289650  4  31  Positioning complete (In-position)  range  8400  1  SI2 input selection  8487297  32  Positioning complete (In-position)  output setup  0  2  SI3 input selection  8553090  33  INP hold time  0  3  SI4 input selection  2236962  34  Zero-speed  50  4  SI5 input selection  2105376  35  Speed coincidence range  50  5  SI6 input selection  2171169  36  At-speed (Speed arrival)  1000  6  SI7 input selection  3158064  37  Mechanical brake action at stalling  setup  0  7  SI8 input selection  3223857  38  Mechanical brake action at  running setup  0  8  No available  -  39  Brake release speed setup  30  9  No available  -  40  Selection of alarm output 1  0  10  SO1 output selection  197379  41  Selection of alarm output 2  0  11  SO2 output selection  1052688  42  2nd Positioning complete (In-  position) range  8400  12  SO3 output selection  65793  43  No available  -  13  No available  -  44  Position comparison output pulse  width setting  0  14  No available  -  45  Position comparison output  polarity selection  0  15  No available  -  46  No available  -  16  Type of analog monitor 1  0  47  Pulse output selection  0  17  Analog monitor 1 output gain  0  48  Position comparison value 1  0  18  Type of analog monitor 2  4  49  Position comparison value 2  0  19  Analog monitor 2 output gain  0  50  Position comparison value 3  0  20  No available  -  51  Position comparison value 4  0  21  Analog monitor output setup  0  52  Position comparison value 5  0  22  Manufacturer use  0  53  Position comparison value 6  0  23  Manufacturer use  0  54  Position comparison value 7  0  24  Manufacturer use  0  55  Position comparison v"
+  },
+  {
+    "id": 508629,
+    "file": "Panasonic_SX-DSV03190_ParameterManual_EN.pdf",
+    "chunk": 146,
+    "page": null,
+    "content": "문서: Panasonic_SX-DSV03190_ParameterManual_EN > 섹션: I/O connector (X4) default setting\n\n| No.SX-DSV03190  Cat  e  Pr.  Parameter  Default  value  Cat  e  Pr.  Parameter  Default  value  Cat  e  Pr.  Parameter  Default  value  Cat  e  Pr.  Parameter  Default  value  Cat  e  Pr.  Parameter  Default  value  6  0  No available  -  6  31  Real time auto tuning estimation  speed  1  6  62  1st resonance attenuation ratio  0  6  93  No available  -  1  No available  -  32  Real time auto tuning custom  setup  0  63  *1  1st anti-resonance frequency  0.0  94  No available  -  2  Velocity deviation excess setup  0  33  No available  -  64  1st anti-resonance attenuation ratio  0  95  Overload warning detection level  0  3  No available  -  34  *1  Hybrid vibration suppression  gain(no supported)  0.0  65  *1  1st response frequency  0.0  96  Overload warning release level  0  4  No available  -  35  *1  Hybrid vibration suppression  filter(no supported)  0.10  66  *1  2nd resonance frequency  0.0  97  Function expansion setup 3  0  5  *1  Position 3rd gain valid time  0.0  36  Dynamic brake operation input  setup  0  67  2nd resonance attenuation ratio  0  98  Function expansion setup 4  0  6  Position 3rd gain scale factor  100  37  *1  Oscillation detecting level  0.0  68  *1  2nd anti-resonance frequency  0.0  7  Torque command additional value  0  38  Warning mask setup  4  69  2nd anti-resonance attenuation  ratio  0  8  Positive direction torque  compensation value  0  39  Warning mask setup2  0  70  *1  2nd response frequency  0.0  9  Negative direction torque  compensation value  0  40  No available  -  71  3rd damping depth  0  10  Function expansion setup  528  41  1st damping depth  0  72  4th damping depth  0  11  Current response setup  100  42  *1  Two-stage torque filter time  constant  0.0  73  *1  Load estimation filter  0.0  12  No available  -  43  Two-stage torque filter attenuation  term  1000  74  *1  Torque compensation frequency 1  0.0  13  No availabl"
+  },
+  {
+    "id": 509263,
+    "file": "Panasonic_SX-DSV03383_CommManual_KO_2.pdf",
+    "chunk": 3,
+    "page": null,
+    "content": "문서: Panasonic_SX-DSV03383_CommManual_KO_2 > 섹션: 기술자료변경이력서\n\n| Date  제출연월일  Page  변경  장소  변경  도번  Sym  개정  부호  REVISION  변경  이유  ・  변경  내용  Signed  기인  2015/10/27  -  1.0  신규  작성  2016/8/1  P2  2.0  ・  소프트웨어  버전업  CPU1 Ver1.03  →  Ver1.05  CPU2 Ver1.03  →  Ver1.05  P5,84,P188,192,200,  224,243  1)  기능  추가  「  무한  회전  앱소  기능  」  P4,5,53,54,97,230,  240,244  2)  기능  추가  「  세미  클로즈  제어  시  외부  스케일  위치  정보  모니터  기능  」  P5,149,157,240,242  3)  기능  추가  「  부하  변동  억제  기능의  풀클로즈  제어  대응  」  P157,243  4)  기능  추가  「  상한  돌기  억제  기능의  기능  확장  」  P4,5,9,10,15,16,53,  184-187,232,233  5)  기능  추가  「  위치  컴페어  기능  」  P53,54,242  6)  기능  추가  「  펄스  재생  기능의  시리얼  앱솔루트  외부  스케일  Ｚ  상  시프트량  설정  」  P180-182,237,239  7)  기능  추가  「  Slow Stop  기능  」  P5,10,15,189,190,210,211,  237,242  8)  기능  추가  「  열화  진단  경고  기능  」  P236-238  9)  기능  추가  「  Modbus  기능  확장  」  P3,58,191,192,197,  200,201,240  10)  기능  추가  「  Block  동작  기능  확장  」  표지  ・  변경  문서명에  「  기본  기능  사양편  」  을  추가  ,  부서명을  변경  P1  ・  추기  기능  비교표를  추기  P2  ・  추기  관련  자료를  추기  P3,80  ・  변경  시리얼  통신  스케일의  기재를  변경  P6,7,9,10  ・  수정  제어  모드별로  프레임을  분할  P18  ・  수정  Pr4.16/Pr4.18=25,26  시의  출력  게인의  설명을  수정  P23  ・  추기  통신과  전면  패널의  배타  기능의  기재를  추기  P29  ・  수정  오버로드  부하율의  기재를  수정  P34  ・  변경  온도  정보의  주기를  삭제  P41  ・  수정  커넥터명의  오기를  수정  P41  ・  추기  Error  가  되는  조건을  추기  P43  ・  수정  실행  표시  설명  오기를  수정  P55,56  ・  수정  기능  설명의  기재를  수정  ,  스케일  품번을  삭제  P60  ・  추기  Pr4.31, Pr4.42  의  기능  설명을  추기  P74  ・  추기  속도  제한이  되지  않는  경우의  주기를  추기   |\n|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
+  },
+  {
+    "id": 509267,
+    "file": "Panasonic_SX-DSV03383_CommManual_KO_2.pdf",
+    "chunk": 7,
+    "page": null,
+    "content": "문서: Panasonic_SX-DSV03383_CommManual_KO_2 > 섹션: 기술자료변경이력서\n\n| Date  제출연월일  Page  변경  장소  변경  도번  Sym  개정  부호  REVISION  변경  이유  ・  변경  내용  Signed  기인  （전  페이지로부터  계속）  P79  ・  수정  하이브리드  편차에  관한  주의  사항  기재를  수정  P80,230  ・  변경  Pr3.23, P3.26  의  설정  범위를  변경  P81  ・  수정  주기  *3  의  스케일  분해능  값  오기를  수정  P103,112,121  ・  수정  Pr1.10  설정  범위「  0  ～  2000  」→「  0  ～  4000  」  P106,116,124  ・  수정  주기  *1  의  기재를  삭제  P108  ・  수정  Pr2.11,Pr2.12  의  기능의  기재를  수정  P128  ・  수정  블록  다이어그램의  노치  필터  내용을  수정  P129,165  ・  수정  블록  다이어그램에  부하  변동  억제를  추기  P138  ・  수정  주파수  설정의  최대  동시  가능수의  오기를  수정  P140,227  ・  수정  Pr2.14,Pr2.16,Pr2.18,Pr2.20  의  유효  범위  설정의  오기를  수정  P143  ・  수정  파라미터  설정의  기재를  수정  P144  ・  수정  Pr2.13  의  기능  설명의  오기를  수정  P156  ・  추기  사용  방법의  내용을  추기  P161,163  ・  추기  동기  타입에  관한  설명을  추기  P163  ・  수정  Pr6.47  의  기능  설명부터  bit3  의  기재를  삭제  P170,171,234  ・  수정  주의사항의  내용을  수정  P173  ・  추기  주기  *5  의  내용을  추기  P191,193,195  ・  수정  Err16.0  의  보호  기능  명칭을  수정  P191,193,195  ・  수정  Err16.2  의  기재를  삭제  P192  ・  변경  Err80.0  의  속성을  변경  P192,200  ・  추기  Err93.3  을  추가  P200  ・  수정  Err93.2  의  처치  기재를  수정  P210,232  ・  변경  Pr4.40,Pr4.41  의  설정  범위를  변경  P210  ・  수정  Pr6.38,Pr6.39  대응  bit  의  기재를  수정  P213,235  ・  추기  Pr5.20  의  기능  ・  내용에  추기  P213,214  ・  추기  ２자유도  제어  시의  위치  편차  과대  설정의  예를  추기  P215  ・  추기  안전  기능의  이상  검출을  추기  P219  ・  수정  다이나믹  브레이크의  타이밍을  수정  P229  ・  수정  Pr3.13  의  기능  ・  내용의  오기를  수정  P234  ・  수정  Pr5.12  의  기재를  수정  ( 주 ) 개정 페이지 번호 (Page) 는 각 개정 발행시의 것입니다 .   |\n|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
+  },
+  {
+    "id": 509271,
+    "file": "Panasonic_SX-DSV03383_CommManual_KO_2.pdf",
+    "chunk": 11,
+    "page": null,
+    "content": "문서: Panasonic_SX-DSV03383_CommManual_KO_2 > 섹션: 기술자료변경이력서\n\n| Date  제출연월일  Page  변경  장소  변경  도번  Sym  개정  부호  REVISION  변경  이유  ・  변경  내용  Signed  기인  （전  페이지로부터  계속）  P235  ・  추기  Pr5.31  의  기능  ・  내용에  추기  P241  ・  변경  Pr6.47 bit15  를  메이커  사양으로  변경  P243  ・  추기  Pr6.87  을  추가  P243  ・  추기  Pr6.98  을  추가  P248  ・  변경  분류  14  의  파라미터를  삭제  P247  ・  추가  분류  9  의  파라미터를  추가  P252  ・  수정  주기를  추기  P253  ・  추가  즉시  정지  동작의  타이밍  도안을  추가  P258,259  ・  수정  접속도의  GND  배선을  추기  P284  ・  추가  외부  스케일의  읽기  커맨드  상세를  추가  P270,271,283,291  ・  수정  커맨드  구성의  오기를  수정  2016/8/25  P2  2.1  ・  소프트웨어  버전업  CPU1 Ver1.05  →  Ver1.06  CPU2 Ver1.05  →  Ver1.06  P235  1)  주전원  오프  검출  시간  설정  범위  확장  P156,241  2)  하이브리드  제진  필터  설정  범위  확장  P171,172,244  3)  모터  가동  범위  설정  보호  기능  확장  -  4)  블록  동작  기능  감속  정지  명령  사양의  개선  2017/7/10  2.2  ・  소프트웨어  버전업  CPU1 Ver1.06  →  Ver1.07  CPU2 Ver1.06  →  Ver1.07  P37,276,P277  1)  제조  번호  표시  기능의  범위  확장  P1,4-9  ・  수정  사양  일람표를  수정  P10,66  ・  추기  지령  펄스  금지  기능（  INH  ）의  주의사항을  추기  P11,178  ・  추기  지령분주체배전환기능（  DIV1,DIV2  ）주의사항을  추기  P17,20  ・  추기  신호  할당의  주의사항을  추기  P96  ・  추기  배터리  리프레시의  설명을  추기  P105,115,123  ・  추기  리얼타임  오토튜닝의  주의  사항을  추기  P181  ・  수정  다이나믹  브레이크  전환  입력  (DB-SEL)  의  설명을  수정  P185  ・  수정  알람  발생  시의  낙하  방지  기능의  설명을  수정  P198,205  ・  추기  Err50.2  를  추가  P203  ・  추기  Err34.0  의  설명을  추기  P221-228  ・  수정  안전  기능에  관한  기재를  수정   |\n|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
+  },
+  {
+    "id": 509311,
+    "file": "Panasonic_SX-DSV03383_CommManual_KO_2.pdf",
+    "chunk": 51,
+    "page": null,
+    "content": "문서: Panasonic_SX-DSV03383_CommManual_KO_2 > 섹션: ２－１ Ｉ／Ｆ 커넥터 입력 신호 사양\n\n| 분류  신  호  명  기호  커넥터  핀  №  내  용  제어  모드  위치  속도  토크  풀  클로즈  제  어  출  력  속도  일치  출력  V-COIN  －  ・  속도  일치  신호를  출력합니다  .  ・  속도  일치  검출  상태에서  출력  트랜지스터를  ON  합니다  .  ・  상세한  내용은  ４－３－５  항을  참조해  주십시오  .  －  ○  ○  －  위치  결정  완료  ２  INP2  －  ・  위치  결정  완료  ２  신호를  출력합니다  .  ・  위치  결정  완료  상태에서  출력  트랜지스터를  ON  합니다  .  ・  상세한  내용은  ４－２－６  항을  참조해  주십시오  .  ○  －  －  ○  경고  출력  １  WARN1  －  ・  Pr4.40  「  경고  출력  선택  １」  에서  설정한  경고  출력  신호를  출력합니다  .  ・  경고  발생  상태에서  출력  트랜지스터를  ON  합니다  .  ○  ○  ○  ○  경고  출력  ２  WARN2  －  ・  Pr4.41  「  경고  출력  선택  ２」  에서  설정한  경고  출력  신호를  출력합니다  .  ・  경고  발생  상태에서  출력  트랜지스터를  ON  합니다  .  ○  ○  ○  ○  위치  지령  유무  출력  P-CMD  －  ・  위치  지령이  있으면  출력  트랜지스터를  ON  합니다  .  ○  －  －  ○  속도  제한  중  출력  V-LIMIT  －  ・  토크  제어  시의  속도  제한  상태  시에  출력  트랜지스터를  ON  합니다  .  －  －  ○  －  알람  클리어  속성  출력  ALM-ATB  －  ・  클리어  가능의  알람  발생  시에  출력  트랜지스터가  ON  합니다  .  ○  ○  ○  ○  속도  지령  유무  출력  V-CMD  －  ・  속도  제어  시에  속도  지령이  있으면  출력  트랜지스터를  ON  합니다  .  －  ○  －  －  Servo-ON  상태  출력  SRV-ST  －  ・  Servo-ON  시에  출력  트랜지스터가  ON  합니다  .  ○  ○  ○  ○  열화  진단  속도  출력  V-DIAG  －  ・  모터  속도가  Pr5.75  （  열화  진단  속도  설정  ）  의  Pr4.35  （  속도  일치  폭  ）  범위  내에  있을  시  ,  출력  트랜지스터가  ON  합니다  .  ・  열화  진단  속도의  일치  판정에는  10 r/min  의  히스테리시스가  있습니다  .  ○  ○  ○  ○  위치  컴페어  출력  CMP-OUT  －  ・  실  위치가  파라미터에서  설정된  위치를  통과한  시에  출력  트랜지스터를  ON  합니다  .  ○  －  －  ○  아  날  로  그  출  력  아날로그  모니터  2  출력  IM  42  ・  아날로그  모니터  ２  를  출력합니다  .  ・  상세한  내용은  ２－３－３  항을  참조해  주십시오  .  ○  ○  ○  ○  아날로그  모니터  1  출력  SP  43  ・  아날로그  모니터  １  를  출력합니다  .  ・  상세한  내용은  ２－３－３  항을  참조해  주십시오  .  ○  ○  ○  ○   |\n|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
+  },
+  {
+    "id": 509332,
+    "file": "Panasonic_SX-DSV03383_CommManual_KO_2.pdf",
+    "chunk": 72,
+    "page": null,
+    "content": "문서: Panasonic_SX-DSV03383_CommManual_KO_2 > 섹션: 경우\n\n| 신호명  기호  설정치  무효  －  00h  알람  출력  ALM  01h  서보  레디  출력  S-RDY  02h  외부  브레이크  해제  신호  BRK-OFF  03h  위치  결정  완료  INP  04h  속도  도달  출력  AT-SPEED  05h  토크  제한  중  신호  출력  TLC  06h  제로  속도  검출  신호  ZSP  07h  속도  일치  출력  V-COIN  08h  경고  출력１  WARN1  09h  경고  출력２  WARN2  0Ah  위치  지령  유무  출력  P-CMD  0Bh  위치  결정  완료２  INP2  0Ch  속도  제한  중  출력  V-LIMIT  0Dh  알람  속성  출력  ALM-ATB  0Eh  속도  지령  유무  출력  V-CMD  0Fh  Servo-ON  상태  출력  SRV-ST  10h  위치  컴페어  출력  CMP-OUT  14h  열화  진단  속도  출력  V-DIAG  15h   |\n|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|"
+  },
+  {
+    "id": 509377,
+    "file": "Panasonic_SX-DSV03383_CommManual_KO_2.pdf",
+    "chunk": 117,
+    "page": null,
+    "content": "문서: Panasonic_SX-DSV03383_CommManual_KO_2 > 섹션: ４－３－４ 속도 도달 출력（ＡＴ－ＳＰＥＥＤ）\n\n## ４－３－４ 속도 도달 출력（ＡＴ－ＳＰＥＥＤ）\n\n모터 속도가 Pr4.36 「도달 속도」에 설정된 속도에 도달한 때에 속도 도달 출력（ AT-SPEED ）신호를 출력합니다 ."
+  },
+  {
+    "id": 509378,
+    "file": "Panasonic_SX-DSV03383_CommManual_KO_2.pdf",
+    "chunk": 118,
+    "page": null,
+    "content": "문서: Panasonic_SX-DSV03383_CommManual_KO_2 > 섹션: 기술자료변경이력서\n\n## ■관련 파라미터\n\n<!-- image -->\n\nR2.2\n\n## ４－３－５ 속도 일치 출력（Ｖ－ＣＯＩＮ）\n\n속도 지령（가감속 처리 전）과 모터 속도가 일치하고 있는 경우에 출력합니다 . 일치 판정은 앰프 내부의 가감속 처리 전의 속도 지령과 모터 속도와의 차가 Pr4.35 「속도 일치 폭」이내이면 일치로 판정합니다 ."
+  },
+  {
+    "id": 509379,
+    "file": "Panasonic_SX-DSV03383_CommManual_KO_2.pdf",
+    "chunk": 119,
+    "page": null,
+    "content": "문서: Panasonic_SX-DSV03383_CommManual_KO_2 > 섹션: ■관련 파라미터\n\n## ■관련 파라미터\n\n*1 속도 일치 검출은 10 r/min 의 히스테리시스를 갖기 때문에 실제 검출 폭은 하기와 같습니다 . 속도 일치 출력 ＯＦＦ→ＯＮ 시의 임계치 (Pr4.35 － 10)r/min ＯＮ →ＯＦＦ 시의 임계치 (Pr4.35 ＋ 10)r/min"
+  }
+]
