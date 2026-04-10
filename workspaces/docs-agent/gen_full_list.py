@@ -367,38 +367,41 @@ new_html = new_html.replace(
     'if (types.length > 1 && r[8] && !MULTI_EQUIP.has(r[1])) {'
 )
 
-# 합계행 폰트 크기 → 열제목 수준 (11pt), 빈 칸 합쳐서 공간 확보
-new_html = new_html.replace(
-    "tfoot td { background: #f5f5f5; font-weight: 700; border-top: 2px solid #1a237e; position: sticky; bottom: 0; z-index: 4; }",
-    "tfoot td { background: #f5f5f5; font-weight: 700; font-size: 11pt; border-top: 2px solid #1a237e; position: sticky; bottom: 0; z-index: 4; }"
+# 초기화/CSV 내보내기 버튼 제거 (2026-04-10 부서장 지시)
+new_html = re.sub(r'<button[^>]*onclick="resetEquipPlan\(\)"[^>]*>초기화</button>\s*', '', new_html)
+new_html = re.sub(r'<button[^>]*onclick="exportCSV\(\)"[^>]*>CSV 내보내기</button>\s*', '', new_html)
+
+# 합계행: CSS + JS 인라인 모두 regex로 폰트 크기 통일 (멱등)
+TFOOT_FONT = '13pt'
+# CSS tfoot td 폰트
+new_html = re.sub(
+    r'tfoot td \{([^}]*)\}',
+    lambda m: 'tfoot td {' + (re.sub(r'font-size:\s*\d+pt;?\s*', '', m.group(1)) + f' font-size: {TFOOT_FONT};') + '}',
+    new_html
 )
-# JS 합계행 렌더링 교체 (빈 셀 colspan 합침, 폰트 통일)
-old_tfoot_js = (
-    "const ts = 'font-weight:700;font-size:11pt;background:#f5f5f5;border-top:2px solid #1a237e;';\n"
-    "  tf.innerHTML = '<tr>' +\n"
-    "    '<td colspan=\"3\" style=\"text-align:right;' + ts + '\">합계</td>' +\n"
-    "    '<td class=\"right\" style=\"' + ts + '\">' + rows.length.toLocaleString() + '건</td>' +\n"
-    "    '<td class=\"right\" style=\"' + ts + 'color:#1a237e;\">재고금액 ' + Math.round(sumAmt).toLocaleString() + '</td>' +\n"
-    "    '<td colspan=\"3\" style=\"' + ts + '\"></td>' +\n"
-    "    '<td style=\"' + ts + '\"></td>' +\n"
-    "    '<td style=\"' + ts + '\"></td>' +\n"
-    "    '<td class=\"right\" style=\"font-weight:700;font-size:8pt;background:#e8f5e9;border-top:2px solid #2e7d32;color:#2e7d32;\">예정금액 -' + sumPlanAmt.toLocaleString() + '</td>' +\n"
-    "    '<td style=\"' + ts + '\"></td>' +\n"
-    "    '<td class=\"right\" style=\"font-weight:700;font-size:8pt;background:#fff3e0;border-top:2px solid #e65100;color:#e65100;\">남는금액 ' + sumRemainAmt.toLocaleString() + '</td></tr>';"
+# JS const ts 폰트
+new_html = re.sub(
+    r"const ts = 'font-weight:700;font-size:\d+pt;",
+    f"const ts = 'font-weight:700;font-size:{TFOOT_FONT};",
+    new_html
 )
-new_tfoot_js = (
-    "const ts = 'font-weight:700;font-size:11pt;border-top:2px solid #1a237e;';\n"
-    "  tf.innerHTML = '<tr>' +\n"
-    "    '<td colspan=\"3\" style=\"text-align:right;background:#f5f5f5;' + ts + '\">합계</td>' +\n"
-    "    '<td class=\"right\" style=\"background:#f5f5f5;' + ts + '\">' + rows.length.toLocaleString() + '건</td>' +\n"
-    "    '<td class=\"right\" style=\"background:#f5f5f5;color:#1a237e;' + ts + '\">재고금액 ' + Math.round(sumAmt).toLocaleString() + '</td>' +\n"
-    "    '<td colspan=\"3\" style=\"background:#f5f5f5;' + ts + '\"></td>' +\n"
-    "    '<td colspan=\"2\" style=\"background:#e8f5e9;border-top:2px solid #2e7d32;' + ts + '\"></td>' +\n"
-    "    '<td class=\"right\" style=\"background:#e8f5e9;border-top:2px solid #2e7d32;color:#2e7d32;' + ts + '\">예정금액 -' + sumPlanAmt.toLocaleString() + '</td>' +\n"
-    "    '<td class=\"right\" style=\"background:#fff3e0;border-top:2px solid #e65100;' + ts + '\"></td>' +\n"
-    "    '<td class=\"right\" style=\"background:#fff3e0;border-top:2px solid #e65100;color:#e65100;' + ts + '\">남는금액 ' + sumRemainAmt.toLocaleString() + '</td></tr>';"
+# JS 합계행 인라인 font-size (예정금액/남는금액 셀)
+new_html = re.sub(
+    r"font-weight:700;font-size:\d+pt;background:#e8f5e9;",
+    f"font-weight:700;font-size:{TFOOT_FONT};background:#e8f5e9;",
+    new_html
 )
-new_html = new_html.replace(old_tfoot_js, new_tfoot_js)
+new_html = re.sub(
+    r"font-weight:700;font-size:\d+pt;background:#fff3e0;",
+    f"font-weight:700;font-size:{TFOOT_FONT};background:#fff3e0;",
+    new_html
+)
+# 합계행 빈 셀 colspan 합침 (사용예정/남는금액 영역)
+new_html = re.sub(
+    r"<td style=\"' \+ ts \+ '\"></td>' \+\n\s*'    '<td style=\"' \+ ts \+ '\"></td>' \+\n\s*'    '<td class=\"right\" style=\"",
+    "<td colspan=\"2\" style=\"background:#e8f5e9;border-top:2px solid #2e7d32;' + ts + '\"></td>' +\n    '<td class=\"right\" style=\"",
+    new_html
+)
 
 # JS 예정/잔여 금액 계산 수정: 예정금액 ≤ 재고금액, 잔여 = 재고 - 예정 (음수 방지)
 new_html = new_html.replace(
