@@ -1,0 +1,1744 @@
+{
+  "schema_exists": true,
+  "tables": [
+    "axis",
+    "camera",
+    "controller",
+    "equipment",
+    "hardware_change_history",
+    "ioaddress",
+    "iomodule",
+    "lanhub",
+    "lighting",
+    "networkdevice",
+    "pc",
+    "reducer",
+    "serialport",
+    "servodrive",
+    "servomotor",
+    "transformer",
+    "usbdevice",
+    "usbhub",
+    "wmx_license"
+  ],
+  "columns": {
+    "axis": [
+      {
+        "col": "id",
+        "type": "bigint",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "axis_name",
+        "type": "character varying",
+        "len": 100,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "axis_type",
+        "type": "character varying",
+        "len": 50,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "acc",
+        "type": "integer",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "dec",
+        "type": "integer",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "jerk_acc",
+        "type": "numeric",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "jerk_dec",
+        "type": "numeric",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "vel",
+        "type": "integer",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "ratio",
+        "type": "numeric",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "lead",
+        "type": "numeric",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "resolution",
+        "type": "integer",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "has_brake",
+        "type": "boolean",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "brake_type",
+        "type": "character varying",
+        "len": 50,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "efficiency",
+        "type": "numeric",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "max_speed",
+        "type": "numeric",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "description",
+        "type": "text",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "created_at",
+        "type": "timestamp with time zone",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "updated_at",
+        "type": "timestamp with time zone",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "controller_id",
+        "type": "bigint",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "equipment_id",
+        "type": "bigint",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "reducer_id",
+        "type": "bigint",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "servo_drive_id",
+        "type": "bigint",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "servo_motor_id",
+        "type": "bigint",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "axis_index",
+        "type": "integer",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "actuator_type",
+        "type": "character varying",
+        "len": 50,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "stroke_positive",
+        "type": "numeric",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "stroke_negative",
+        "type": "numeric",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "load_ratio",
+        "type": "numeric",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "regen_load_ratio",
+        "type": "numeric",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "stiffness",
+        "type": "integer",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "dwell_time",
+        "type": "numeric",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "m_time",
+        "type": "numeric",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "vel_actual",
+        "type": "integer",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "acc_actual",
+        "type": "integer",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "dec_actual",
+        "type": "integer",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      }
+    ],
+    "camera": [
+      {
+        "col": "id",
+        "type": "bigint",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "camera_model",
+        "type": "character varying",
+        "len": 200,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "ip_address",
+        "type": "inet",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "pcie_port",
+        "type": "character varying",
+        "len": 100,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "location",
+        "type": "character varying",
+        "len": 200,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "camera_type",
+        "type": "character varying",
+        "len": 50,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "description",
+        "type": "text",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "created_at",
+        "type": "timestamp with time zone",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "updated_at",
+        "type": "timestamp with time zone",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "equipment_id",
+        "type": "bigint",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "lens_model",
+        "type": "character varying",
+        "len": 200,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "working_distance",
+        "type": "numeric",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "fov",
+        "type": "character varying",
+        "len": 100,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "glass_type",
+        "type": "character varying",
+        "len": 100,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "vision_controller",
+        "type": "character varying",
+        "len": 200,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "vision_license",
+        "type": "character varying",
+        "len": 200,
+        "nullable": "YES",
+        "default": null
+      }
+    ],
+    "controller": [
+      {
+        "col": "id",
+        "type": "bigint",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "controller_model",
+        "type": "character varying",
+        "len": 200,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "axis_count",
+        "type": "integer",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "axis_count_display",
+        "type": "character varying",
+        "len": 50,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "description",
+        "type": "text",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "created_at",
+        "type": "timestamp with time zone",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "updated_at",
+        "type": "timestamp with time zone",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "equipment_id",
+        "type": "bigint",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "error_code_range",
+        "type": "character varying",
+        "len": 100,
+        "nullable": "YES",
+        "default": null
+      }
+    ],
+    "equipment": [
+      {
+        "col": "id",
+        "type": "bigint",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "equipment_name",
+        "type": "character varying",
+        "len": 200,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "controller_no",
+        "type": "character varying",
+        "len": 100,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "created_date",
+        "type": "date",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "description",
+        "type": "text",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "remarks",
+        "type": "text",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "created_at",
+        "type": "timestamp with time zone",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "updated_at",
+        "type": "timestamp with time zone",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "created_by_id",
+        "type": "integer",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "project_id",
+        "type": "bigint",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "inter_phase_voltage",
+        "type": "character varying",
+        "len": 100,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "power_consumption",
+        "type": "numeric",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      }
+    ],
+    "hardware_change_history": [
+      {
+        "col": "id",
+        "type": "bigint",
+        "len": null,
+        "nullable": "NO",
+        "default": "nextval('hardware.hardware_change_history_id_seq'::regclass)"
+      },
+      {
+        "col": "model_type",
+        "type": "character varying",
+        "len": 100,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "model_id",
+        "type": "integer",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "model_name",
+        "type": "character varying",
+        "len": 200,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "action_type",
+        "type": "character varying",
+        "len": 20,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "field_name",
+        "type": "character varying",
+        "len": 100,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "field_display_name",
+        "type": "character varying",
+        "len": 100,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "old_value",
+        "type": "text",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "new_value",
+        "type": "text",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "old_value_display",
+        "type": "text",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "new_value_display",
+        "type": "text",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "description",
+        "type": "text",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "additional_data",
+        "type": "jsonb",
+        "len": null,
+        "nullable": "YES",
+        "default": "'{}'::jsonb"
+      },
+      {
+        "col": "created_at",
+        "type": "timestamp with time zone",
+        "len": null,
+        "nullable": "YES",
+        "default": "now()"
+      },
+      {
+        "col": "ip_address",
+        "type": "inet",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "user_agent",
+        "type": "character varying",
+        "len": 500,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "equipment_id",
+        "type": "bigint",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "changed_by_id",
+        "type": "integer",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      }
+    ],
+    "ioaddress": [
+      {
+        "col": "id",
+        "type": "bigint",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "variable_name",
+        "type": "character varying",
+        "len": 200,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "description",
+        "type": "character varying",
+        "len": 500,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "address_number",
+        "type": "integer",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "voltage",
+        "type": "character varying",
+        "len": 50,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "device_location",
+        "type": "character varying",
+        "len": 200,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "device_address",
+        "type": "character varying",
+        "len": 200,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "inspection_item",
+        "type": "text",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "status",
+        "type": "character varying",
+        "len": 20,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "remarks",
+        "type": "text",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "created_at",
+        "type": "timestamp with time zone",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "updated_at",
+        "type": "timestamp with time zone",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "equipment_id",
+        "type": "bigint",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "io_module_id",
+        "type": "bigint",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      }
+    ],
+    "iomodule": [
+      {
+        "col": "id",
+        "type": "bigint",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "module_name",
+        "type": "character varying",
+        "len": 200,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "module_type",
+        "type": "character varying",
+        "len": 20,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "channel_count",
+        "type": "integer",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "module_number",
+        "type": "integer",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "description",
+        "type": "text",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "created_at",
+        "type": "timestamp with time zone",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "updated_at",
+        "type": "timestamp with time zone",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "equipment_id",
+        "type": "bigint",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      }
+    ],
+    "lanhub": [
+      {
+        "col": "id",
+        "type": "bigint",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "hub_name",
+        "type": "character varying",
+        "len": 100,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "hub_number",
+        "type": "integer",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "description",
+        "type": "text",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "created_at",
+        "type": "timestamp with time zone",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "updated_at",
+        "type": "timestamp with time zone",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "equipment_id",
+        "type": "bigint",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      }
+    ],
+    "lighting": [
+      {
+        "col": "id",
+        "type": "bigint",
+        "len": null,
+        "nullable": "NO",
+        "default": "nextval('hardware.lighting_id_seq'::regclass)"
+      },
+      {
+        "col": "equipment_id",
+        "type": "bigint",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "lighting_type",
+        "type": "character varying",
+        "len": 100,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "lighting_model",
+        "type": "character varying",
+        "len": 200,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "manufacturer",
+        "type": "character varying",
+        "len": 100,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "channel_count",
+        "type": "integer",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "description",
+        "type": "text",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "created_at",
+        "type": "timestamp with time zone",
+        "len": null,
+        "nullable": "NO",
+        "default": "now()"
+      },
+      {
+        "col": "updated_at",
+        "type": "timestamp with time zone",
+        "len": null,
+        "nullable": "NO",
+        "default": "now()"
+      }
+    ],
+    "networkdevice": [
+      {
+        "col": "id",
+        "type": "bigint",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "device_name",
+        "type": "character varying",
+        "len": 200,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "ip_address",
+        "type": "inet",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "lan_id",
+        "type": "character varying",
+        "len": 50,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "device_type",
+        "type": "character varying",
+        "len": 50,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "description",
+        "type": "text",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "created_at",
+        "type": "timestamp with time zone",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "updated_at",
+        "type": "timestamp with time zone",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "equipment_id",
+        "type": "bigint",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "lan_hub_id",
+        "type": "bigint",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      }
+    ],
+    "pc": [
+      {
+        "col": "id",
+        "type": "bigint",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "pc_name",
+        "type": "character varying",
+        "len": 100,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "model",
+        "type": "character varying",
+        "len": 100,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "ssd_mven",
+        "type": "character varying",
+        "len": 100,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "ram",
+        "type": "character varying",
+        "len": 100,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "backup_ssd",
+        "type": "character varying",
+        "len": 100,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "description",
+        "type": "text",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "created_at",
+        "type": "timestamp with time zone",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "updated_at",
+        "type": "timestamp with time zone",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "equipment_id",
+        "type": "bigint",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "os",
+        "type": "character varying",
+        "len": 100,
+        "nullable": "YES",
+        "default": null
+      }
+    ],
+    "reducer": [
+      {
+        "col": "id",
+        "type": "bigint",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "reducer_model",
+        "type": "character varying",
+        "len": 200,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "manufacturer",
+        "type": "character varying",
+        "len": 100,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "reducer_type",
+        "type": "character varying",
+        "len": 50,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "description",
+        "type": "text",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "created_at",
+        "type": "timestamp with time zone",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "updated_at",
+        "type": "timestamp with time zone",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      }
+    ],
+    "serialport": [
+      {
+        "col": "id",
+        "type": "bigint",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "serial_pot",
+        "type": "character varying",
+        "len": 100,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "com_id",
+        "type": "character varying",
+        "len": 50,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "connected_device",
+        "type": "character varying",
+        "len": 200,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "baudrate",
+        "type": "integer",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "description",
+        "type": "text",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "created_at",
+        "type": "timestamp with time zone",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "updated_at",
+        "type": "timestamp with time zone",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "equipment_id",
+        "type": "bigint",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      }
+    ],
+    "servodrive": [
+      {
+        "col": "id",
+        "type": "bigint",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "drive_model",
+        "type": "character varying",
+        "len": 200,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "manufacturer",
+        "type": "character varying",
+        "len": 100,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "drive_type",
+        "type": "character varying",
+        "len": 50,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "description",
+        "type": "text",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "created_at",
+        "type": "timestamp with time zone",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "updated_at",
+        "type": "timestamp with time zone",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      }
+    ],
+    "servomotor": [
+      {
+        "col": "id",
+        "type": "bigint",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "motor_type",
+        "type": "character varying",
+        "len": 50,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "motor_model",
+        "type": "character varying",
+        "len": 200,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "manufacturer",
+        "type": "character varying",
+        "len": 100,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "power_rating",
+        "type": "character varying",
+        "len": 50,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "cont_force",
+        "type": "numeric",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "r_per_phase",
+        "type": "numeric",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "km",
+        "type": "numeric",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "inductance",
+        "type": "numeric",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "pole_pitch",
+        "type": "numeric",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "weight",
+        "type": "numeric",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "attraction_force",
+        "type": "numeric",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "ir",
+        "type": "numeric",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "imax",
+        "type": "numeric",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "efficiency",
+        "type": "numeric",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "max_speed",
+        "type": "numeric",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "torque",
+        "type": "numeric",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "description",
+        "type": "text",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "created_at",
+        "type": "timestamp with time zone",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "updated_at",
+        "type": "timestamp with time zone",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      }
+    ],
+    "transformer": [
+      {
+        "col": "id",
+        "type": "bigint",
+        "len": null,
+        "nullable": "NO",
+        "default": "nextval('hardware.transformer_id_seq'::regclass)"
+      },
+      {
+        "col": "equipment_id",
+        "type": "bigint",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "model",
+        "type": "character varying",
+        "len": 200,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "manufacturer",
+        "type": "character varying",
+        "len": 100,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "ratio",
+        "type": "character varying",
+        "len": 100,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "capacity_kva",
+        "type": "numeric",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "primary_voltage",
+        "type": "character varying",
+        "len": 50,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "secondary_voltage",
+        "type": "character varying",
+        "len": 50,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "description",
+        "type": "text",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "created_at",
+        "type": "timestamp with time zone",
+        "len": null,
+        "nullable": "NO",
+        "default": "now()"
+      },
+      {
+        "col": "updated_at",
+        "type": "timestamp with time zone",
+        "len": null,
+        "nullable": "NO",
+        "default": "now()"
+      }
+    ],
+    "usbdevice": [
+      {
+        "col": "id",
+        "type": "bigint",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "usb_port",
+        "type": "character varying",
+        "len": 50,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "device_name",
+        "type": "character varying",
+        "len": 200,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "device_type",
+        "type": "character varying",
+        "len": 50,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "description",
+        "type": "text",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "created_at",
+        "type": "timestamp with time zone",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "updated_at",
+        "type": "timestamp with time zone",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "equipment_id",
+        "type": "bigint",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "usb_hub_id",
+        "type": "bigint",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      }
+    ],
+    "usbhub": [
+      {
+        "col": "id",
+        "type": "bigint",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "hub_name",
+        "type": "character varying",
+        "len": 100,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "description",
+        "type": "text",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "created_at",
+        "type": "timestamp with time zone",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "updated_at",
+        "type": "timestamp with time zone",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "equipment_id",
+        "type": "bigint",
+        "len": null,
+        "nullable": "NO",
+        "default": null
+      }
+    ],
+    "wmx_license": [
+      {
+        "col": "id",
+        "type": "integer",
+        "len": null,
+        "nullable": "NO",
+        "default": "nextval('hardware.wmx_license_id_seq'::regclass)"
+      },
+      {
+        "col": "version",
+        "type": "character varying",
+        "len": 10,
+        "nullable": "NO",
+        "default": null
+      },
+      {
+        "col": "company_name",
+        "type": "character varying",
+        "len": 200,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "project_number",
+        "type": "character varying",
+        "len": 100,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "equipment_name",
+        "type": "character varying",
+        "len": 200,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "unit_number",
+        "type": "character varying",
+        "len": 50,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "product_part_number",
+        "type": "character varying",
+        "len": 100,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "serial_number",
+        "type": "character varying",
+        "len": 100,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "pik_code",
+        "type": "character varying",
+        "len": 200,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "dongle",
+        "type": "character varying",
+        "len": 100,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "rtx_pac",
+        "type": "character varying",
+        "len": 100,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "license_code",
+        "type": "text",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "computer_id",
+        "type": "character varying",
+        "len": 200,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "dongle_id",
+        "type": "character varying",
+        "len": 100,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "update_date",
+        "type": "date",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "created_at",
+        "type": "timestamp with time zone",
+        "len": null,
+        "nullable": "NO",
+        "default": "now()"
+      },
+      {
+        "col": "updated_at",
+        "type": "timestamp with time zone",
+        "len": null,
+        "nullable": "NO",
+        "default": "now()"
+      },
+      {
+        "col": "matched_project_id",
+        "type": "integer",
+        "len": null,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "matched_project_name",
+        "type": "character varying",
+        "len": 300,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "match_type",
+        "type": "character varying",
+        "len": 20,
+        "nullable": "YES",
+        "default": null
+      },
+      {
+        "col": "match_confidence",
+        "type": "character varying",
+        "len": 10,
+        "nullable": "YES",
+        "default": null
+      }
+    ]
+  }
+}
