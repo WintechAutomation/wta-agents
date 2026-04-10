@@ -135,9 +135,9 @@
   },
   "nc_overdue": {
     "name": "nc_overdue",
-    "description": "중요도별 기한 초과 미조치 부적합 목록 (critical=3일, high=7일, medium=14일, low=30일) — importance 파라미터로 필터 가능",
+    "description": "중요도별 기한 초과 미조치 부적합 목록 (critical=3일, high=7일, medium=14일, low=30일) — completed 프로젝트 제외, action_completion_date 기준",
     "db": "mes",
-    "sql": "SELECT r.id, r.importance, r.title, p.name AS project_name, CONCAT(u.last_name, u.first_name) AS reporter, am.username AS action_manager_username, CONCAT(am.last_name, am.first_name) AS action_manager_name, (r.created_at AT TIME ZONE 'UTC' AT TIME ZONE 'Asia/Seoul')::text AS created_kst, EXTRACT(DAY FROM NOW() - r.created_at)::int - CASE r.importance WHEN 'critical' THEN 3 WHEN 'high' THEN 7 WHEN 'medium' THEN 14 WHEN 'low' THEN 30 ELSE 14 END AS overdue_days FROM api_nonconformancereport r LEFT JOIN api_project p ON p.id = r.project_id LEFT JOIN auth_user u ON u.id = r.reporter_id LEFT JOIN auth_user am ON am.id = r.action_manager_id WHERE (r.action_result IS NULL OR r.action_result = '') AND EXTRACT(DAY FROM NOW() - r.created_at) > CASE r.importance WHEN 'critical' THEN 3 WHEN 'high' THEN 7 WHEN 'medium' THEN 14 WHEN 'low' THEN 30 ELSE 14 END AND ('{importance}' = 'all' OR r.importance = '{importance}') ORDER BY CASE r.importance WHEN 'critical' THEN 1 WHEN 'high' THEN 2 WHEN 'medium' THEN 3 ELSE 4 END, r.created_at ASC",
+    "sql": "SELECT r.id, r.importance, r.title, p.name AS project_name, CONCAT(u.last_name, u.first_name) AS reporter, am.username AS action_manager_username, CONCAT(am.last_name, am.first_name) AS action_manager_name, (r.created_at AT TIME ZONE 'UTC' AT TIME ZONE 'Asia/Seoul')::text AS created_kst, EXTRACT(DAY FROM NOW() - r.created_at)::int - CASE r.importance WHEN 'critical' THEN 3 WHEN 'high' THEN 7 WHEN 'medium' THEN 14 WHEN 'low' THEN 30 ELSE 14 END AS overdue_days FROM api_nonconformancereport r LEFT JOIN api_project p ON p.id = r.project_id LEFT JOIN auth_user u ON u.id = r.reporter_id LEFT JOIN auth_user am ON am.id = r.action_manager_id WHERE r.action_completion_date IS NULL AND p.status NOT IN ('completed') AND EXTRACT(DAY FROM NOW() - r.created_at) > CASE r.importance WHEN 'critical' THEN 3 WHEN 'high' THEN 7 WHEN 'medium' THEN 14 WHEN 'low' THEN 30 ELSE 14 END AND ('{importance}' = 'all' OR r.importance = '{importance}') ORDER BY CASE r.importance WHEN 'critical' THEN 1 WHEN 'high' THEN 2 WHEN 'medium' THEN 3 ELSE 4 END, r.created_at ASC",
     "params": [
       {
         "name": "importance",
@@ -148,17 +148,17 @@
     ],
     "example": "GET /api/query/nc_overdue?importance=high",
     "registered_by": "db-manager",
-    "registered_at": "2026-03-29 11:33:47"
+    "registered_at": "2026-04-11 08:29:15"
   },
   "nc_weekly_summary": {
     "name": "nc_weekly_summary",
-    "description": "중요도별 미조치 요약 — 총 미조치, 납기위험(D-30 이내 진행중 프로젝트), 이번 주 조치 완료 건수",
+    "description": "중요도별 미조치 요약 — 총 미조치, 납기위험(D-30 이내 진행중 프로젝트), 이번 주 조치 완료 건수 (action_completion_date 기준)",
     "db": "mes",
-    "sql": "SELECT r.importance, COUNT(*) FILTER (WHERE r.action_result IS NULL OR r.action_result = '') as total_open, COUNT(*) FILTER (WHERE (r.action_result IS NULL OR r.action_result = '') AND p.delivery_date BETWEEN CURRENT_DATE AND CURRENT_DATE + INTERVAL '30 days' AND p.status NOT IN ('완료', '취소', 'completed', 'cancelled')) as delivery_risk, COUNT(*) FILTER (WHERE r.action_result IS NOT NULL AND r.action_result != '' AND r.updated_at >= date_trunc('week', NOW())) as closed_this_week FROM api_nonconformancereport r LEFT JOIN api_project p ON p.id = r.project_id GROUP BY r.importance ORDER BY CASE r.importance WHEN 'critical' THEN 1 WHEN 'high' THEN 2 WHEN 'medium' THEN 3 ELSE 4 END",
+    "sql": "SELECT r.importance, COUNT(*) FILTER (WHERE r.action_completion_date IS NULL) as total_open, COUNT(*) FILTER (WHERE r.action_completion_date IS NULL AND p.delivery_date BETWEEN CURRENT_DATE AND CURRENT_DATE + INTERVAL '30 days' AND p.status NOT IN ('완료', '취소', 'completed', 'cancelled')) as delivery_risk, COUNT(*) FILTER (WHERE r.action_completion_date IS NOT NULL AND r.updated_at >= date_trunc('week', NOW())) as closed_this_week FROM api_nonconformancereport r LEFT JOIN api_project p ON p.id = r.project_id GROUP BY r.importance ORDER BY CASE r.importance WHEN 'critical' THEN 1 WHEN 'high' THEN 2 WHEN 'medium' THEN 3 ELSE 4 END",
     "params": [],
     "example": "GET /api/query/nc_weekly_summary",
     "registered_by": "db-manager",
-    "registered_at": "2026-03-29 11:34:54"
+    "registered_at": "2026-04-11 08:29:28"
   },
   "nc_new_this_week": {
     "name": "nc_new_this_week",

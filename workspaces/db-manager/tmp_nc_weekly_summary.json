@@ -1,0 +1,10 @@
+{
+  "db": "mes",
+  "description": "중요도별 미조치 요약 — 총 미조치, 납기위험(D-30 이내 진행중 프로젝트), 이번 주 조치 완료 건수",
+  "example": "GET /api/query/nc_weekly_summary",
+  "name": "nc_weekly_summary",
+  "params": [],
+  "registered_at": "2026-03-29 11:34:54",
+  "registered_by": "db-manager",
+  "sql": "SELECT r.importance, COUNT(*) FILTER (WHERE r.action_result IS NULL OR r.action_result = '') as total_open, COUNT(*) FILTER (WHERE (r.action_result IS NULL OR r.action_result = '') AND p.delivery_date BETWEEN CURRENT_DATE AND CURRENT_DATE + INTERVAL '30 days' AND p.status NOT IN ('완료', '취소', 'completed', 'cancelled')) as delivery_risk, COUNT(*) FILTER (WHERE r.action_result IS NOT NULL AND r.action_result != '' AND r.updated_at >= date_trunc('week', NOW())) as closed_this_week FROM api_nonconformancereport r LEFT JOIN api_project p ON p.id = r.project_id GROUP BY r.importance ORDER BY CASE r.importance WHEN 'critical' THEN 1 WHEN 'high' THEN 2 WHEN 'medium' THEN 3 ELSE 4 END"
+}
