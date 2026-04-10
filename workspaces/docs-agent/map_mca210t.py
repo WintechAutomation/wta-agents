@@ -174,12 +174,14 @@ document.getElementById('poModal').addEventListener('click', function(e) {
   if (e.target === this) this.style.display = 'none';
 });
 
-// 행 클릭 이벤트 위임 (renderRows JS 수정 없이)
-document.getElementById('tbody').addEventListener('click', function(e) {
-  const tr = e.target.closest('tr');
+// 품목코드 셀 더블클릭 시에만 발주이력 팝업 (renderRows JS 수정 없이)
+document.getElementById('tbody').addEventListener('dblclick', function(e) {
+  const td = e.target.closest('td');
+  if (!td) return;
+  const tr = td.closest('tr');
   if (!tr) return;
   const cells = tr.querySelectorAll('td');
-  if (cells.length < 2) return;
+  if (cells.length < 2 || td !== cells[1]) return;
   const codeEl = cells[1].querySelector('.code');
   const nmEl = cells[1].querySelector('.item-nm');
   if (codeEl && nmEl) showPO(codeEl.textContent, nmEl.textContent.replace(/[()]/g,'').trim());
@@ -199,11 +201,11 @@ html = html.replace(
     'color:#333;font-size:8.5pt;',
     'color:#777;font-size:7.5pt;'
 )
-# TR 커서 포인터 (CSS로)
-if '#tbody tr {' in html:
-    html = html.replace('#tbody tr {', '#tbody tr { cursor: pointer;')
-elif 'cursor: pointer' not in html:
-    html = html.replace('</style>', '  #tbody tr { cursor: pointer; }\n</style>')
+# 품목코드 셀에만 커서 포인터 (CSS로)
+# 이전 TR 커서 제거
+html = html.replace('#tbody tr { cursor: pointer;', '#tbody tr {')
+if '#tbody tr td:nth-child(2)' not in html:
+    html = html.replace('</style>', '  #tbody tr td:nth-child(2) { cursor: pointer; }\n</style>')
 
 # 저장
 with open(f'{base}/ERP_현재고_구매진행_전체.html', 'w', encoding='utf-8') as f:
