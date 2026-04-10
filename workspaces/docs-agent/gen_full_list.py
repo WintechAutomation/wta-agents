@@ -360,6 +360,12 @@ new_html = new_html.replace(
     'if (types.length > 1 && r[8] && !MULTI_EQUIP.has(r[1])) {'
 )
 
+# JS EXCLUDE_PJT에 스페어 키워드 추가
+new_html = new_html.replace(
+    "const EXCLUDE_PJT = ['개발','판매','무상','교체','개조','부품','수리','소모품','소모성'];",
+    "const EXCLUDE_PJT = ['개발','판매','무상','교체','개조','부품','수리','소모품','소모성','스페어'];"
+)
+
 # 합계행 폰트 크기 → 열제목 수준 (11pt), 빈 칸 합쳐서 공간 확보
 new_html = new_html.replace(
     "tfoot td { background: #f5f5f5; font-weight: 700; border-top: 2px solid #1a237e; position: sticky; bottom: 0; z-index: 4; }",
@@ -397,6 +403,17 @@ new_html = new_html.replace(old_tfoot_js, new_tfoot_js)
 new_html = new_html.replace(
     "r[11] = Math.round(useQty * unitP);\n    r[12] = Math.max(0, r[3] - eqQty);\n    r[13] = Math.round(r[12] * unitP);",
     "r[11] = Math.min(Math.round(useQty * unitP), r[4]);\n    r[12] = Math.max(0, r[3] - eqQty);\n    r[13] = Math.max(0, r[4] - r[11]);"
+)
+
+# 요약 카드: 총액도 동적 계산 + 잔여 = 총액 - 예정 (정합성 보장)
+new_html = new_html.replace(
+    "let totalUseAmt = 0, totalRemainAmt = 0;\n  for (const r of DATA) { totalUseAmt += r[11]; totalRemainAmt += r[13]; }",
+    "let totalAmt = 0, totalUseAmt = 0, totalRemainAmt = 0;\n  for (const r of DATA) { totalAmt += (r[4]||0); totalUseAmt += r[11]; }\n  totalRemainAmt = totalAmt - totalUseAmt;"
+)
+# 총액 카드도 동적 업데이트
+new_html = new_html.replace(
+    "if (totalCount) totalCount.textContent = DATA.length.toLocaleString() + '건';",
+    "if (totalCount) totalCount.textContent = DATA.length.toLocaleString() + '건';\n  if (cards[1]) { cards[1].querySelector('.value').textContent = totalAmt.toLocaleString() + '원'; cards[1].querySelector('.sub-value').textContent = '(약 ' + (totalAmt/100000000).toFixed(1) + '억원)'; }"
 )
 
 # 네비게이션 버튼 정의 (regex로 기존 버튼 교체)
