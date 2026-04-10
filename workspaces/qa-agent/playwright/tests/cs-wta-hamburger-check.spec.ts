@@ -21,41 +21,72 @@ async function login(page: Page) {
   }
 }
 
-test('hamburger button discovery', async ({ page }) => {
+test('mobile hamburger menu — Parts Sales children', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await login(page);
   await page.goto('https://cs-wta.com/sales-material', { waitUntil: 'domcontentloaded', timeout: 20_000 });
   await page.waitForTimeout(2000);
-  await shot(page, 'hb-before-click');
+  await shot(page, '05-mobile-before-hamburger');
 
-  // 모든 보이는 버튼 목록
-  const btns = await page.locator('button:visible').all();
-  console.log(`\n총 보이는 버튼: ${btns.length}개`);
-  for (const btn of btns) {
-    const text = await btn.textContent().catch(() => '');
-    const ariaLabel = await btn.getAttribute('aria-label').catch(() => '');
-    const cls = await btn.getAttribute('class').catch(() => '');
+  // 실제 모바일 햄버거 버튼: md:hidden 클래스 포함 버튼 (viewport 내 좌상단)
+  const hamburgerBtn = page.locator('button.rounded-lg.p-2').filter({ hasText: '' }).first();
+
+  // viewport 안에 있는 좌상단 버튼 찾기 (x>=0, y<60)
+  const allBtns = await page.locator('button:visible').all();
+  let hamburger = null;
+  for (const btn of allBtns) {
     const box = await btn.boundingBox().catch(() => null);
-    if (box) {
-      console.log(`  버튼[${Math.round(box.x)},${Math.round(box.y)}]: text="${text?.trim().substring(0,20)}" aria="${ariaLabel}" class="${cls?.substring(0,40)}"`);
+    if (box && box.x >= 0 && box.x < 60 && box.y < 60) {
+      const cls = await btn.getAttribute('class').catch(() => '');
+      console.log(`후보 햄버거 버튼: [${Math.round(box.x)},${Math.round(box.y)}] class="${cls}"`);
+      if (cls?.includes('md:hidd') || cls?.includes('p-2')) {
+        hamburger = btn;
+        break;
+      }
+      if (!hamburger) hamburger = btn; // fallback
     }
   }
 
-  // 좌상단 버튼 클릭 시도 (y<100, x<100)
-  for (const btn of btns) {
-    const box = await btn.boundingBox().catch(() => null);
-    if (box && box.x < 60 && box.y < 60) {
-      console.log(`\n좌상단 버튼 클릭: [${Math.round(box.x)},${Math.round(box.y)}]`);
-      await btn.click();
-      await page.waitForTimeout(1000);
-      await shot(page, 'hb-after-click');
+  if (!hamburger) {
+    console.log('❌ 햄버거 버튼 없음');
+    await shot(page, '05-mobile-hamburger-notfound');
+    return;
+  }
 
-      const bodyText = await page.locator('body').textContent().catch(() => '');
-      const hasParts = /부품\s*판매|Parts\s*Sales/i.test(bodyText || '');
-      const hasSalesMaterial = /판매\s*자재|Sales\s*Material/i.test(bodyText || '');
-      console.log(`클릭 후 — 부품판매=${hasParts}, 판매자재=${hasSalesMaterial}`);
-      console.log(`메뉴 텍스트 일부: ${bodyText?.substring(0, 300)}`);
-      break;
+  await hamburger.click({ force: true });
+  await page.waitForTimeout(1200);
+  await shot(page, '05-mobile-hamburger-opened');
+
+  const bodyText = await page.locator('body').textContent().catch(() => '');
+
+  const hasParts = /부품\s*판매|Parts\s*Sales/i.test(bodyText || '');
+  const hasSalesList = /판매\s*현황|Sales\s*List/i.test(bodyText || '');
+  const hasSalesMaterial = /판매\s*자재|Sales\s*Material/i.test(bodyText || '');
+
+  console.log(`부품판매=${hasParts}, 판매현황=${hasSalesList}, 판매자재관리=${hasSalesMaterial}`);
+
+  if (hasParts) console.log('✅ [5-1] 부품 판매 메뉴 노출');
+  else console.log('❌ [5-1] 부품 판매 메뉴 미노출');
+
+  if (hasSalesList) console.log('✅ [5-2] 판매 현황 children 노출');
+  else console.log('❌ [5-2] 판매 현황 children 미노출');
+
+  if (hasSalesMaterial) console.log('✅ [5-3] 판매자재관리 children 노출');
+  else console.log('❌ [5-3] 판매자재관리 children 미노출');
+
+  // Parts Sales 클릭하여 children 확장
+  if (!hasSalesList || !hasSalesMaterial) {
+    const partsBtn = page.locator('button, a').filter({ hasText: /Parts\s*Sales|부품\s*판매/i }).first();
+    if (await partsBtn.isVisible().catch(() => false)) {
+      await partsBtn.click();
+      await page.waitForTimeout(800);
+      await shot(page, '05-mobile-parts-expanded');
+      const bodyText2 = await page.locator('body').textContent().catch(() => '');
+      const sl2 = /판매\s*현황|Sales\s*List/i.test(bodyText2 || '');
+      const sm2 = /판매\s*자재|Sales\s*Material/i.test(bodyText2 || '');
+      console.log(`확장 후 — 판매현황=${sl2}, 판매자재관리=${sm2}`);
+      if (sl2) console.log('✅ [5-2] 판매 현황 children 노출 (확장 후)');
+      if (sm2) console.log('✅ [5-3] 판매자재관리 children 노출 (확장 후)');
     }
   }
-});
+}, { timeout: 60_000 });
