@@ -337,3 +337,8 @@
 {"ts": "2026-04-10 12:54:05", "direction": "inbound", "user": "boss", "text": "csagent 웹페에이지에 재고 메뉴에 재고등록시 ERP 검색으로 할때 검색이 품목코드, 품목명 만 검색되는상태인데, 판매코드도 같이 검색되도록해줘"}
 {"ts": "2026-04-10 12:54:30", "direction": "outbound", "user": "MAX", "text": "👑 dev-agent에게 지시 완료.\n\ncs-wta.com 재고등록 ERP 검색에 판매코드 검색 추가합니다.\n프론트/백엔드 양쪽 수정 후 배포까지 진행합니다."}
 {"ts": "2026-04-10 12:59:19", "direction": "outbound", "user": "MAX", "text": "👑 수정 완료, 배포됨.\n\n💻 dev-agent 완료:\n- ERP 검색에 판매코드(sale_code) 추가\n- 검색 결과 테이블에 판매코드 컬럼 표시\n- 프론트/백엔드 빌드 + EC2 배포 완료\n\ncs-wta.com 재고 메뉴에서 확인 가능합니다."}
+{"ts": "2026-04-10 13:04:12", "direction": "inbound", "user": "boss", "text": "실사변경에서 재고품목을 삭제할수있게 해줘"}
+{"ts": "2026-04-10 13:04:32", "direction": "outbound", "user": "MAX", "text": "👑 dev-agent에게 지시 완료.\n\n실사변경에서 재고품목 삭제 기능 추가합니다. 완료되면 보고드리겠습니다."}
+{"ts": "2026-04-10 13:06:40", "direction": "outbound", "user": "MAX", "text": "👑 완료, 배포됨.\n\n💻 dev-agent:\n- 실사변경 폼에 \"품목 삭제\" 버튼 추가 (빨간색)\n- 삭제 확인 다이얼로그 (품목코드/품목명/수량 표시)\n- 백엔드 DELETE API는 기존 구현 활용\n\ncs-wta.com에서 확인 가능합니다."}
+{"ts": "2026-04-10 13:08:30", "direction": "inbound", "user": "boss", "text": "라벨출력페이지에 라벨템플릿중에 \" 재고라벨 \" 을 선택해서 출력되도록해ㅜ저"}
+{"ts": "2026-04-10 13:08:47", "direction": "outbound", "user": "MAX", "text": "👑 dev-agent에게 지시 완료.\n\n라벨출력 페이지에 \"재고라벨\" 템플릿 선택/출력 기능 추가합니다."}

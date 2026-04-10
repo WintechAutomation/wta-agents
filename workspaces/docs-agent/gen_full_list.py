@@ -246,7 +246,7 @@ handler_removed = 0
 handler_excluded = 0
 exclude_applied = 0
 proj_changed = 0
-dedicated_excluded = 0
+no_recent_po = 0
 
 equip_overridden = 0
 proj_overridden = 0
@@ -311,25 +311,16 @@ for row in data:
                 row[8] = alt
                 proj_changed += 1
         else:
-            # MCA210T/MAD111T에 유효 프로젝트 없음 → 전용 프로젝트만 있는지 확인
-            # 전용 프로젝트(Cell/키엔스/챔퍼검사기)만 있으면 사용예정 제외
-            all_history = []
-            if item_cd in mca_by_item:
-                all_history.extend(mca_by_item[item_cd])
-            if item_cd in mad_by_item:
-                all_history.extend(mad_by_item[item_cd])
-            has_dedicated = any(is_dedicated_project(po.get('pjt_name', '')) for po in all_history
-                               if po.get('po_dt', '') >= '2023-03-01')
-            if has_dedicated:
-                row[9] = []
-                dedicated_excluded += 1
+            # MCA210T/MAD111T에 3년내 유효 프로젝트 없음 → 사용예정 제외
+            row[9] = []
+            no_recent_po += 1
 
     # 규칙 2-5: 프로젝트 예외 미배정 — 장비유형 원본 유지
 
 print(f'제외(사용예정 비움): {exclude_applied}건, 핸들러 단독: {handler_excluded}건, 핸들러 제거: {handler_removed}건')
 print(f'장비유형 오버라이드: {equip_overridden}건, 프로젝트 오버라이드: {proj_overridden}건')
 print(f'프로젝트 변경(MCA210T/MAD111T 기준): {proj_changed}건')
-print(f'전용 프로젝트 자동 제외(Cell/키엔스/챔퍼): {dedicated_excluded}건')
+print(f'3년내 유효발주 없어 사용예정 제외: {no_recent_po}건')
 print(f'전체 건수 유지: {len(data)}건')
 
 # 재고금액 내림차순 정렬
