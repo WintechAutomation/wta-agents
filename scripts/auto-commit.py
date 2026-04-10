@@ -1,7 +1,9 @@
 """
 WTA 에이전트 데이터 자동 커밋 + push
 APScheduler --once 모드 전용. 1회 실행 후 종료.
-대시보드 jobs.json에서 */10 * * * * 주기로 호출됨.
+대시보드 jobs.json에서 호출됨.
+사용법: python auto-commit.py [--repo <경로>]
+  --repo 미지정 시 기본 리포(wta-agents)만 커밋
 """
 import subprocess
 import sys
@@ -11,10 +13,7 @@ sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 sys.stderr.reconfigure(encoding="utf-8", errors="replace")
 
 KST = timezone(timedelta(hours=9))
-REPO_DIRS = [
-    "C:/MES/wta-agents",
-    "C:/wELEC",
-]
+DEFAULT_REPO = "C:/MES/wta-agents"
 
 
 def run_git(repo_dir, *args):
@@ -58,14 +57,16 @@ def auto_commit_repo(repo_dir):
 
 
 if __name__ == "__main__":
+    # --repo 인자 파싱
+    repo = DEFAULT_REPO
+    if "--repo" in sys.argv:
+        idx = sys.argv.index("--repo")
+        if idx + 1 < len(sys.argv):
+            repo = sys.argv[idx + 1]
+
     try:
-        timestamp = now_kst()
-        any_committed = False
-        for repo in REPO_DIRS:
-            result = auto_commit_repo(repo)
-            if result:
-                any_committed = True
-        print(f"[{timestamp}] {'커밋 완료' if any_committed else '변경 없음'}")
+        result = auto_commit_repo(repo)
+        print(f"[{now_kst()}] {'커밋 완료' if result else '변경 없음'}")
     except Exception as e:
         print(f"[오류] {e}")
         sys.exit(1)

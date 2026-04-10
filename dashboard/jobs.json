@@ -28,12 +28,21 @@
   },
   {
     "id": "auto-commit",
-    "name": "자동 커밋",
-    "description": "10분 주기 — git add -A, commit, push (변경사항 있을 때만)",
-    "command": "\"C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python311\\python.exe\" \"C:\\MES\\wta-agents\\scripts\\auto-commit.py\" --once",
+    "name": "자동 커밋 (wta-agents)",
+    "description": "10분 주기 — wta-agents git add -A, commit, push (변경사항 있을 때만)",
+    "command": "\"C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python311\\python.exe\" \"C:\\MES\\wta-agents\\scripts\\auto-commit.py\" --repo \"C:/MES/wta-agents\"",
     "cron": "*/10 * * * *",
     "enabled": true,
     "created_at": "2026-04-03 23:00:00"
+  },
+  {
+    "id": "auto-commit-welec",
+    "name": "자동 커밋 (wELEC)",
+    "description": "30분 주기 — wELEC git add -A, commit, push (변경사항 있을 때만)",
+    "command": "\"C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python311\\python.exe\" \"C:\\MES\\wta-agents\\scripts\\auto-commit.py\" --repo \"C:/wELEC\"",
+    "cron": "*/30 * * * *",
+    "enabled": true,
+    "created_at": "2026-04-10 18:41:00"
   },
   {
     "id": "health-check",
