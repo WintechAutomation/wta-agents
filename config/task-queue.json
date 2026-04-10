@@ -3635,6 +3635,18 @@
       "updated_at": "2026-04-10 19:20:10",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-qa-agent-71a17d",
+      "agent": "qa-agent",
+      "task": "[Playwright 검증 요청] cs-wta.com 판매자재관리 신규 페이지",
+      "message": "[Playwright 검증 요청] cs-wta.com 판매자재관리 신규 페이지\n\n**URL**: https://cs-wta.com → 로그인 → 좌측 메뉴 \"부품 판매\" → \"판매자재관리\"\n\n**검증 항목**\n1. 메뉴 네비게이션: 부품 판매 하위에 \"판매 현황\", \"판매자재관리\" 2개 children 존재\n2. 리스트 페이지:\n   - 287건 로드 (장비모델 매칭 100%)\n   - 검색(품명/품번/판매형번)\n   - 필터(상태/구분/장비모델) 드롭다운 동작\n   - 페이지네이션\n   - 데스크톱 테이블 / 모바일 카드 반응형\n3. 상세 모달: 이미지/도면/SOP 탭 또는 섹션 표시\n4. 등록 모달:\n   - 필수 필드 검증\n   - 파일 업로드 3종(이미지/도면/SOP)\n   - 장비모델 드롭다운 25건\n   - material_type 라디오(소모품/Spare/일반)\n   - status 드롭다운\n5. 편집 모달: 기존값 prefill, 파일 교체/삭제\n6. 장비모델 관리 모달 (관리자)\n7. i18n 4언어 전환 확인 (ko/en/zh/ja, 새 키 nav.salesMaterial)\n8. 콘솔 에러 없음, 네트워크 4xx/5xx 없음\n\n**결과 양식**\n- 기능별 PASS/FAIL\n- 스크린샷 1~2장 (리스트 + 등록 모달)\n- 발견된 버그/UX 이슈 목록\n\n완료 후 MAX 보고 부탁.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-10 19:38:33",
+      "updated_at": "2026-04-10 19:38:33",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }
