@@ -266,3 +266,27 @@ exit status 0xffffffff
 {"time":"2026-04-10T10:08:12.3251391+09:00","level":"ERROR","msg":"HTTP 요청","status":500,"method":"GET","path":"/api/erp/purchase/mad111t/export","latency":3776000,"ip":"::1","user_id":102,"username":"max","query":"fr_dt=2026-03-01&to_dt=2026-04-10"}
 {"time":"2026-04-10T10:08:18.0587233+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"GET","path":"/wordpress/wp-admin/setup-config.php","latency":605800,"ip":"2a06:98c0:3600::103"}
 exit status 0xffffffff
+{"time":"2026-04-10T10:09:15.6787091+09:00","level":"INFO","msg":"설정 로드 완료","port":8100,"env":"production"}
+{"time":"2026-04-10T10:09:15.7691134+09:00","level":"INFO","msg":"PostgreSQL 연결 성공"}
+{"time":"2026-04-10T10:09:15.7777306+09:00","level":"INFO","msg":"ERP SQL Server 연결 성공"}
+{"time":"2026-04-10T10:09:15.7802762+09:00","level":"INFO","msg":"ERP 관리 기능 활성화"}
+{"time":"2026-04-10T10:09:15.7802762+09:00","level":"INFO","msg":"NAS 관리 기능 활성화","host":"192.168.1.6","port":"5001"}
+{"time":"2026-04-10T10:09:15.7808058+09:00","level":"INFO","msg":"SPA 정적 파일 서빙 활성화","dist":"..\\frontend\\dist"}
+{"time":"2026-04-10T10:09:15.7809321+09:00","level":"INFO","msg":"서버 시작","addr":":8100"}
+{"time":"2026-04-10T10:09:24.0980573+09:00","level":"WARN","msg":"HTTP 요청","status":401,"method":"GET","path":"/api/erp/purchase/mad111t/export","latency":0,"ip":"::1"}
+{"time":"2026-04-10T10:09:24.1170656+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"GET","path":"/wordpress/wp-admin/setup-config.php","latency":58599100,"ip":"2a06:98c0:3600::103"}
+{"time":"2026-04-10T10:09:39.1258149+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"POST","path":"/api/auth/login","latency":329729100,"ip":"::1"}
+{"time":"2026-04-10T10:09:39.3081276+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"GET","path":"/api/erp/purchase/mad111t/export","latency":180174900,"ip":"::1","user_id":102,"username":"max","query":"fr_dt=2026-03-01&to_dt=2026-04-10"}
+exit status 0xffffffff
+{"time":"2026-04-10T10:10:33.3297263+09:00","level":"INFO","msg":"설정 로드 완료","port":8100,"env":"production"}
+{"time":"2026-04-10T10:10:33.425261+09:00","level":"INFO","msg":"PostgreSQL 연결 성공"}
+{"time":"2026-04-10T10:10:33.4482737+09:00","level":"INFO","msg":"ERP SQL Server 연결 성공"}
+{"time":"2026-04-10T10:10:33.450676+09:00","level":"INFO","msg":"ERP 관리 기능 활성화"}
+{"time":"2026-04-10T10:10:33.450676+09:00","level":"INFO","msg":"NAS 관리 기능 활성화","host":"192.168.1.6","port":"5001"}
+{"time":"2026-04-10T10:10:33.450676+09:00","level":"INFO","msg":"SPA 정적 파일 서빙 활성화","dist":"..\\frontend\\dist"}
+{"time":"2026-04-10T10:10:33.450676+09:00","level":"INFO","msg":"서버 시작","addr":":8100"}
+{"time":"2026-04-10T10:10:44.0481987+09:00","level":"WARN","msg":"HTTP 요청","status":401,"method":"GET","path":"/api/erp/purchase/mad111t/export","latency":0,"ip":"::1"}
+{"time":"2026-04-10T10:10:53.2503755+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"POST","path":"/api/auth/login","latency":344936000,"ip":"::1"}
+{"time":"2026-04-10T10:10:54.9116086+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"GET","path":"/api/erp/purchase/mad111t/export","latency":1650293800,"ip":"::1","user_id":102,"username":"max","query":"fr_dt=2016-01-01&to_dt=2026-04-10"}
+{"time":"2026-04-10T10:11:45.0552722+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"GET","path":"/","latency":68522800,"ip":"129.226.93.214"}
+exit status 0xffffffff

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""MCA210T 발주이력을 ERP_현재고_구매진행_전체.html에 매핑
+"""MCA210T 발주이력 + MAD111T 재고감안을 ERP_현재고_구매진행_전체.html에 매핑
 PO 데이터는 별도 JSON 파일, 클릭 시 fetch 로딩
 10년치 + 1년치 데이터 병합
 """
@@ -10,11 +10,14 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
 base = r'C:\MES\wta-agents\reports\김근형'
 
-# MCA210T 10년치 + 1년치 데이터 병합 (중복 제거)
+# MCA210T 10년치 데이터 로드 (1년치 포함)
 all_items = []
 seen = set()
-for fname in ['MCA210T_발주현황_10년.json', 'MCA210T_발주현황_1년.json']:
-    with open(f'{base}/{fname}', 'r', encoding='utf-8') as f:
+for fname in ['MCA210T_발주현황_10년.json']:
+    fpath = f'{base}/{fname}'
+    if not os.path.exists(fpath):
+        continue
+    with open(fpath, 'r', encoding='utf-8') as f:
         data = json.load(f)
     for r in data['items']:
         key = (r['po_no'], r['po_seq'], r['item_cd'])
@@ -22,12 +25,35 @@ for fname in ['MCA210T_발주현황_10년.json', 'MCA210T_발주현황_1년.json
             seen.add(key)
             all_items.append(r)
     print(f'{fname}: {len(data["items"])}건 로드')
-print(f'병합 후 총: {len(all_items)}건 (중복 제거)')
+# 1년치 파일이 있으면 병합
+fname_1y = 'MCA210T_발주현황_1년.json'
+if os.path.exists(f'{base}/{fname_1y}'):
+    with open(f'{base}/{fname_1y}', 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    added = 0
+    for r in data['items']:
+        key = (r['po_no'], r['po_seq'], r['item_cd'])
+        if key not in seen:
+            seen.add(key)
+            all_items.append(r)
+            added += 1
+    print(f'{fname_1y}: {len(data["items"])}건 로드 (신규 {added}건)')
+print(f'MCA210T 총: {len(all_items)}건')
 
-# 품목코드별 그룹화 (최신 발주순)
+# MAD111T 재고감안 데이터 로드
+mad_fname = 'MAD111T_재고감안_10년.json'
+with open(f'{base}/{mad_fname}', 'r', encoding='utf-8') as f:
+    mad_data = json.load(f)
+mad_items = mad_data['items']
+print(f'{mad_fname}: {len(mad_items)}건 로드')
+
+# 품목코드별 그룹화 (최신순)
 po_groups = defaultdict(list)
+
+# MCA210T 발주
 for r in all_items:
     po_groups[r['item_cd']].append({
+        'tp': '발주',
         'po_no': r['po_no'],
         'po_dt': r['po_dt'],
         'qty': r['po_unit_qty'],
@@ -41,10 +67,29 @@ for r in all_items:
         'rmk': r['rmk'] or '',
     })
 
+# MAD111T 재고감안
+for r in mad_items:
+    po_groups[r['item_cd']].append({
+        'tp': '재고감안',
+        'po_no': r.get('adv_no') or '',
+        'po_dt': r.get('adv_dt') or '',
+        'qty': r.get('adv_qty') or 0,
+        'price': r.get('avg_price') or 0,
+        'amt': r.get('amt') or 0,
+        'pjt': r.get('pjt_name') or '',
+        'cust': '',
+        'dvry': r.get('dvry_dt') or '',
+        'sts': '재고감안',
+        'acpt': 0,
+        'rmk': '',
+    })
+
 for cd in po_groups:
     po_groups[cd].sort(key=lambda x: x['po_dt'], reverse=True)
 
-print(f'MCA210T: {len(all_items)}건 → {len(po_groups)}개 품목')
+po_cnt = len(all_items)
+mad_cnt = len(mad_items)
+print(f'MCA210T: {po_cnt}건 + MAD111T: {mad_cnt}건 → {len(po_groups)}개 품목')
 
 # erp_data의 품목코드만 필터링
 with open(f'{base}/erp_data.json', 'r', encoding='utf-8') as f:
@@ -82,8 +127,9 @@ modal_html = '''
     <table id="poTable" style="width:100%;border-collapse:collapse;font-size:11px;">
       <thead>
         <tr style="background:#e8eaf6;">
-          <th style="padding:6px;border:1px solid #c5cae9;white-space:nowrap;">발주번호</th>
-          <th style="padding:6px;border:1px solid #c5cae9;white-space:nowrap;">발주일</th>
+          <th style="padding:6px;border:1px solid #c5cae9;white-space:nowrap;">구분</th>
+          <th style="padding:6px;border:1px solid #c5cae9;white-space:nowrap;">번호</th>
+          <th style="padding:6px;border:1px solid #c5cae9;white-space:nowrap;">일자</th>
           <th style="padding:6px;border:1px solid #c5cae9;white-space:nowrap;">수량</th>
           <th style="padding:6px;border:1px solid #c5cae9;white-space:nowrap;">단가</th>
           <th style="padding:6px;border:1px solid #c5cae9;white-space:nowrap;">금액</th>
@@ -140,11 +186,16 @@ async function showPO(itemCd, itemNm) {
   document.getElementById('poTable').style.display = 'table';
 
   if (!pos || pos.length === 0) {
-    document.getElementById('poTitle').textContent = itemCd + ' / ' + itemNm + ' — 발주이력 없음';
-    document.getElementById('poBody').innerHTML = '<tr><td colspan="11" style="padding:20px;text-align:center;color:#999;">발주이력이 없습니다.</td></tr>';
+    document.getElementById('poTitle').textContent = itemCd + ' / ' + itemNm + ' — 이력 없음';
+    document.getElementById('poBody').innerHTML = '<tr><td colspan="12" style="padding:20px;text-align:center;color:#999;">발주/재고감안 이력이 없습니다.</td></tr>';
     return;
   }
-  document.getElementById('poTitle').textContent = itemCd + ' / ' + itemNm + ' — 발주이력 (' + pos.length + '건)';
+  const poCnt = pos.filter(x => x.tp === '발주').length;
+  const madCnt = pos.filter(x => x.tp === '재고감안').length;
+  let titleParts = [];
+  if (poCnt > 0) titleParts.push('발주 ' + poCnt + '건');
+  if (madCnt > 0) titleParts.push('재고감안 ' + madCnt + '건');
+  document.getElementById('poTitle').textContent = itemCd + ' / ' + itemNm + ' — ' + titleParts.join(' + ') + ' (총 ' + pos.length + '건)';
   let h = '';
   let totalQty = 0, totalAmt = 0;
   for (const p of pos) {
@@ -152,13 +203,17 @@ async function showPO(itemCd, itemNm) {
     totalAmt += p.amt;
     const pjt = p.pjt.length > 30 ? p.pjt.substring(0,28)+'..' : p.pjt;
     const cust = p.cust.length > 15 ? p.cust.substring(0,13)+'..' : p.cust;
-    h += '<tr>';
+    const isMad = p.tp === '재고감안';
+    const rowBg = isMad ? 'background:#fff8e1;' : '';
+    const tpBadge = isMad ? '<span style="color:#e65100;font-weight:bold;">재고</span>' : '<span style="color:#1565c0;">발주</span>';
+    h += '<tr style="' + rowBg + '">';
+    h += '<td style="padding:4px 6px;border:1px solid #e0e0e0;text-align:center;white-space:nowrap;">' + tpBadge + '</td>';
     h += '<td style="padding:4px 6px;border:1px solid #e0e0e0;white-space:nowrap;">' + p.po_no + '</td>';
     h += '<td style="padding:4px 6px;border:1px solid #e0e0e0;white-space:nowrap;">' + p.po_dt + '</td>';
     h += '<td style="padding:4px 6px;border:1px solid #e0e0e0;text-align:right;">' + p.qty.toLocaleString() + '</td>';
-    h += '<td style="padding:4px 6px;border:1px solid #e0e0e0;text-align:right;">' + p.price.toLocaleString() + '</td>';
-    h += '<td style="padding:4px 6px;border:1px solid #e0e0e0;text-align:right;">' + p.amt.toLocaleString() + '</td>';
-    h += '<td style="padding:4px 6px;border:1px solid #e0e0e0;text-align:right;">' + p.acpt + '</td>';
+    h += '<td style="padding:4px 6px;border:1px solid #e0e0e0;text-align:right;">' + (p.price ? p.price.toLocaleString() : '-') + '</td>';
+    h += '<td style="padding:4px 6px;border:1px solid #e0e0e0;text-align:right;">' + (p.amt ? p.amt.toLocaleString() : '-') + '</td>';
+    h += '<td style="padding:4px 6px;border:1px solid #e0e0e0;text-align:right;">' + (isMad ? '-' : p.acpt) + '</td>';
     h += '<td style="padding:4px 6px;border:1px solid #e0e0e0;white-space:nowrap;">' + p.dvry + '</td>';
     h += '<td style="padding:4px 6px;border:1px solid #e0e0e0;">' + p.sts + '</td>';
     h += '<td style="padding:4px 6px;border:1px solid #e0e0e0;" title="' + p.pjt + '">' + pjt + '</td>';
@@ -167,7 +222,7 @@ async function showPO(itemCd, itemNm) {
     h += '</tr>';
   }
   document.getElementById('poBody').innerHTML = h;
-  document.getElementById('poSummary').textContent = '합계: ' + totalQty.toLocaleString() + '개, ' + totalAmt.toLocaleString() + '원';
+  document.getElementById('poSummary').textContent = '합계: ' + totalQty.toLocaleString() + '개, ' + totalAmt.toLocaleString() + '원 (발주 ' + poCnt + '건 + 재고감안 ' + madCnt + '건)';
 }
 
 document.getElementById('poModal').addEventListener('click', function(e) {
@@ -215,4 +270,6 @@ html_size = os.path.getsize(f'{base}/ERP_현재고_구매진행_전체.html')
 po_size = os.path.getsize(po_json_path)
 print(f'HTML: {html_size/1024:.0f} KB (PO 데이터 분리)')
 print(f'po_data.json: {po_size/1024/1024:.1f} MB')
-print(f'매핑 품목: {len(po_filtered)}개, 총 PO: {sum(len(v) for v in po_filtered.values())}건')
+total_po = sum(1 for v in po_filtered.values() for x in v if x['tp'] == '발주')
+total_mad = sum(1 for v in po_filtered.values() for x in v if x['tp'] == '재고감안')
+print(f'매핑 품목: {len(po_filtered)}개, 발주: {total_po}건 + 재고감안: {total_mad}건 = 총 {total_po+total_mad}건')

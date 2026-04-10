@@ -326,3 +326,8 @@
 {"ts": "2026-04-10 09:28:24", "direction": "outbound", "user": "MAX", "text": "👑 #생관 이슈 목록 (2건)\n\n#1 [open/high] 2026-04-07\n사내 검수 및 고객사검수 후에 이슈들의 추적관리가 안되고있다.\n\n#2 [open/high] 2026-04-07\n검수 이슈사항의 동일고객사 동일장비에 횡전개 또는 점검이 되고있지않다."}
 {"ts": "2026-04-10 09:28:46", "direction": "inbound", "user": "boss", "text": "이 항목들이 어디에 저장되게 되어잇지?"}
 {"ts": "2026-04-10 09:28:54", "direction": "outbound", "user": "MAX", "text": "👑 reports/production-issues.json 파일에 저장됩니다.\n\n경로: C:\\MES\\wta-agents\\reports\\production-issues.json"}
+{"ts": "2026-04-10 10:11:59", "direction": "inbound", "user": "boss", "text": "뭐해"}
+{"ts": "2026-04-10 10:12:12", "direction": "outbound", "user": "MAX", "text": "👑 대기 중입니다.\n\n오늘 처리 완료 건:\n- MCA210T 발주상세 API 개발 (db-manager)\n- 대시보드 reports 하위폴더 라우팅 수정\n- 일일 업무보고 14명 수합/종합보고서\n- vLLM gemma-4-31b-it 서빙 성공\n- 외부 LLM 서버 agent-channel 통신 구성 완료\n\n지시사항 있으시면 말씀해주세요."}
+{"ts": "2026-04-10 10:14:31", "direction": "inbound", "user": "boss", "text": "지금 8100 백앤드가 계속 죽는데, 왜그런지 좀 알아봐"}
+{"ts": "2026-04-10 10:14:49", "direction": "outbound", "user": "MAX", "text": "👑 admin-agent에게 긴급 조사 지시했습니다.\n\n프로세스 상태, 로그, 크래시 패턴, MCA210T API 추가 이후 발생 여부 등 확인 중입니다. 결과 오면 바로 보고드리겠습니다."}
+{"ts": "2026-04-10 10:15:29", "direction": "outbound", "user": "MAX", "text": "👑 조사 결과: 자동 크래시 아닙니다.\n\n📋 admin-agent 확인:\n- db-manager가 MCA210T API 개발 중 빌드 반영을 위해 재시작 요청 → 총 8회 수동 재시작\n- admin-agent가 Stop-Process로 의도적 종료한 것\n- 실제 크래시/패닉 없음, 메모리 누수 없음\n\n현재 상태:\n- PID 42324, 메모리 25.5MB, 정상 실행 중\n- 10:13 이후 안정적으로 유지\n\n500 에러는 MAD111T 쿼리 컬럼명 오류 때문이었고 수정 중입니다."}
