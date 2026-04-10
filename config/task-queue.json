@@ -3239,6 +3239,18 @@
       "updated_at": "2026-04-10 10:14:42",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-admin-agent-3360a3",
+      "agent": "admin-agent",
+      "task": "부서장 요청: ConEmu에서 start-servers 실행 시, 프로세스가 중단되면 터미널 자체가 사라져서 에러 확인이 안 되는 문제.",
+      "message": "부서장 요청: ConEmu에서 start-servers 실행 시, 프로세스가 중단되면 터미널 자체가 사라져서 에러 확인이 안 되는 문제.\n\n프로세스가 종료/크래시되어도 터미널이 유지되도록 수정해줘.\n\n방법 확인:\n1. ConEmu 설정: \"When process is closed\" → \"Keep console open\" 또는 유사 옵션\n2. start-servers 스크립트 내 각 프로세스 실행 명령에 에러 시 pause 추가\n3. ConEmu task 설정에서 `-new_console:c` 플래그 (close confirmation)\n\nstart-servers 관련 스크립트/배치 파일을 확인하고, 프로세스 종료 시에도 터미널이 유지되게 수정해줘.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-10 10:53:24",
+      "updated_at": "2026-04-10 10:53:24",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }

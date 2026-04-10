@@ -331,3 +331,6 @@
 {"ts": "2026-04-10 10:14:31", "direction": "inbound", "user": "boss", "text": "지금 8100 백앤드가 계속 죽는데, 왜그런지 좀 알아봐"}
 {"ts": "2026-04-10 10:14:49", "direction": "outbound", "user": "MAX", "text": "👑 admin-agent에게 긴급 조사 지시했습니다.\n\n프로세스 상태, 로그, 크래시 패턴, MCA210T API 추가 이후 발생 여부 등 확인 중입니다. 결과 오면 바로 보고드리겠습니다."}
 {"ts": "2026-04-10 10:15:29", "direction": "outbound", "user": "MAX", "text": "👑 조사 결과: 자동 크래시 아닙니다.\n\n📋 admin-agent 확인:\n- db-manager가 MCA210T API 개발 중 빌드 반영을 위해 재시작 요청 → 총 8회 수동 재시작\n- admin-agent가 Stop-Process로 의도적 종료한 것\n- 실제 크래시/패닉 없음, 메모리 누수 없음\n\n현재 상태:\n- PID 42324, 메모리 25.5MB, 정상 실행 중\n- 10:13 이후 안정적으로 유지\n\n500 에러는 MAD111T 쿼리 컬럼명 오류 때문이었고 수정 중입니다."}
+{"ts": "2026-04-10 10:53:05", "direction": "inbound", "user": "boss", "text": "음.. 지금 conEmu 에서 start-servers 를 실행하고나서 그 안에 프로세스가 중단되면 터미널자체가 사라져버려서 그안에서 무슨에러로 사라진건지 확인이 안되. 다시 그상태에서 서버를 재실행할수있도록 터미널이 유지되게 할수없나 ?"}
+{"ts": "2026-04-10 10:53:31", "direction": "outbound", "user": "MAX", "text": "👑 admin-agent에게 수정 지시했습니다.\n\n방법:\n1. ConEmu 탭 설정에서 프로세스 종료 시 \"터미널 유지\" 옵션 적용\n2. 또는 start-servers 스크립트에서 각 프로세스 실행 후 에러 시 pause 추가\n\n확인 후 보고드리겠습니다."}
+{"ts": "2026-04-10 10:54:03", "direction": "outbound", "user": "MAX", "text": "👑 수정 완료.\n\nlaunch-servers-conemu.ps1에 각 패널 `-new_console:c` 플래그 추가.\n프로세스 종료/크래시 시 터미널이 유지되어 에러 로그 확인 가능합니다.\n\n다음 start-servers 실행부터 적용됩니다."}

@@ -126,6 +126,21 @@ if os.path.exists(mad_path):
 JS_EXCLUDE_PJT = ['개발', '판매', '무상', '교체', '개조', '부품', '수리', '소모품', '소모성']
 cutoff_3y = datetime(2023, 3, 1)  # 3년+1개월 여유 (경계선 품목 누락 방지)
 
+# 규칙 2-12: 부품교체 CS건 감지 키워드 (프로젝트명에 장비+부품 키워드 → CS성)
+EQUIP_KWS = ['검사기', 'PVD', 'CVD', '프레스', '포장기', '소결', '호닝', '연삭', '그라인더']
+PART_KWS = ['볼스크류', '스크류', '모터', '실린더', '센서', '벨트', '베어링', '기어',
+            '밸브', '스핀들', '그리퍼', '척', '노즐', '필터', '커플링', '엔코더', '브레이크',
+            '컨베이어', '로봇', '카메라', '렌즈', '조명', '케이블', '커넥터', 'PCB',
+            'Jig', '지그', '치구', '가이드', '레일', 'LM', '리니어']
+
+def is_part_replacement_cs(proj_name):
+    """프로젝트명이 '장비 + 부품' 패턴인 부품교체 CS건인지 판단"""
+    if not proj_name:
+        return False
+    has_equip = any(kw in proj_name for kw in EQUIP_KWS)
+    has_part = any(kw in proj_name for kw in PART_KWS)
+    return has_equip and has_part
+
 # --- 수동 오버라이드 (김근형님 확인) ---
 # 장비유형 수정
 EQUIP_OVERRIDE = {
@@ -169,6 +184,9 @@ def find_alt_project(item_cd):
         # 공용자재/비프로젝트도 제외
         if any(kw in pjt for kw in ['공용자재', '비프로젝트', '미배정']):
             continue
+        # 부품교체 CS건 프로젝트도 제외
+        if is_part_replacement_cs(pjt):
+            continue
         try:
             dt = datetime.strptime(po_dt[:10], '%Y-%m-%d')
             if dt >= cutoff_3y:
@@ -199,6 +217,8 @@ handler_removed = 0
 handler_excluded = 0
 exclude_applied = 0
 proj_changed = 0
+part_cs_changed = 0
+part_cs_excluded = 0
 
 equip_overridden = 0
 proj_overridden = 0
@@ -262,11 +282,26 @@ for row in data:
                 row[8] = alt
                 proj_changed += 1
 
+    # 규칙 2-12: 부품교체 CS건 감지 → 범용은 프로젝트 변경, 전용은 제외
+    proj = row[8] if row[8] else ''  # 위에서 변경됐을 수 있으므로 재확인
+    if proj and is_part_replacement_cs(proj):
+        cur_equip = row[9]
+        if cur_equip and cur_equip != []:
+            alt = find_alt_project(item_cd)
+            if alt:
+                row[8] = alt
+                part_cs_changed += 1
+            else:
+                # 3년 이내 비CS 프로젝트 없음 → CS성 제외
+                row[9] = []
+                part_cs_excluded += 1
+
     # 규칙 2-5: 프로젝트 예외 미배정 — 장비유형 원본 유지
 
 print(f'제외(사용예정 비움): {exclude_applied}건, 핸들러 단독: {handler_excluded}건, 핸들러 제거: {handler_removed}건')
 print(f'장비유형 오버라이드: {equip_overridden}건, 프로젝트 오버라이드: {proj_overridden}건')
 print(f'프로젝트 변경(자동): {proj_changed}건')
+print(f'부품교체CS 프로젝트 변경: {part_cs_changed}건, 부품교체CS 제외: {part_cs_excluded}건')
 print(f'전체 건수 유지: {len(data)}건')
 
 # 재고금액 내림차순 정렬
