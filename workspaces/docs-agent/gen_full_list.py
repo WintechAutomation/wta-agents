@@ -273,8 +273,13 @@ for row in data:
     if isinstance(equip, str) and '연삭핸들러' in equip:
         row[9] = ['연삭핸들러']
 
-    # 프로젝트 제외 키워드 → 비제외 프로젝트로 변경
+    # 프로젝트 제외 키워드 또는 공용자재(미배정) → 비제외 프로젝트로 변경
+    needs_proj_change = False
     if proj and any(kw in proj for kw in JS_EXCLUDE_PJT):
+        needs_proj_change = True
+    if proj and '공용자재' in proj:
+        needs_proj_change = True
+    if needs_proj_change:
         cur_equip = row[9]
         if cur_equip and cur_equip != []:
             alt = find_alt_project(item_cd)

@@ -341,3 +341,9 @@
 {"ts": "2026-04-10 11:09:49", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "po data 를 그럼 다시 생성해"}
 {"ts": "2026-04-10 11:09:51", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "아 햇구나"}
 {"ts": "2026-04-10 11:09:52", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "ㅇㅋ"}
+{"ts": "2026-04-10 11:11:31", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "공용자재(미배정) 으로 등록되있는 품목들은 3년 이내 다른 발주건 없나?"}
+{"ts": "2026-04-10 11:13:22", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "오케이"}
+{"ts": "2026-04-10 11:14:54", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "K20A-M 이건 데이터 없는데 화루이 ATC CONNECTOR-T,ATC 이거 왜 잡혀있지?"}
+{"ts": "2026-04-10 11:16:02", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "po_data json 이 지금 왜 필요하냐?"}
+{"ts": "2026-04-10 11:16:10", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "원본에서 바로 html 로 필터링 하면 되지않아?"}
+{"ts": "2026-04-10 11:16:48", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "html 파일 복사해서 변경내용 수정해봐"}
