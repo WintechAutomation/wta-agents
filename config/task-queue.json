@@ -3599,6 +3599,30 @@
       "updated_at": "2026-04-10 18:52:07",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-dev-agent-fbaf49",
+      "agent": "dev-agent",
+      "task": "[판매자재관리 최종 확정 — 진행하세요]",
+      "message": "[판매자재관리 최종 확정 — 진행하세요]\n\n부서장 답변 반영:\n\n1. **equipment_type**: MES 시스템설정 > **제조시스템설정** 페이지에 모델 정보 있음\n   - MES DB(PostgreSQL localhost:55432)에서 해당 테이블 조회 후 연계\n   - 테이블명 알 수 없으면 db-manager에 조회 요청 (시스템설정/제조시스템 관련 테이블)\n   - 하드코딩 CHECK 제약 대신 참조 테이블 또는 마스터 조회로 대체\n   - MES API 엔드포인트 있으면 그것 사용 우선\n\n2. **S3 경로 (확정)**:\n   - `material/image/`\n   - `material/drawings/`\n   - `material/sop/`\n   - ⚠️ **legacy_id 경로 제거**. legacy_id는 DB 컬럼으론 유지(다우오피스 Works 이미지 다운로드 마이그레이션용)지만 파일 경로에는 포함하지 않음.\n   - 파일명은 `{uuid}_{원본파일명}` 또는 적절한 유니크 네이밍\n\n3. **권한 확정**: 로그인 사용자 CRUD, 삭제는 관리자만\n4. **CSV 287행**: 전부 `material_type='일반'`, `status='대기'`로 임포트 후 사후 분류\n\n**진행 순서**\n1. MES 제조시스템설정 테이블 확인 (db-manager 조회 또는 MES 백엔드 코드 확인)\n2. 스키마 최종 확정 (equipment_type 참조 방식 결정) → SQL 실행\n3. 백엔드 FastAPI 구현 (CRUD + 파일 업로드 + CSV 임포트)\n4. 프론트엔드 (부품판매 → 판매자재관리 세부메뉴, 리스트/상세/등록·수정 모달, i18n 4언어)\n5. CSV 287행 임포트\n6. 빌드/EC2 배포/nginx reload\n7. 완료 보고 (DB 생성 전/후 사항 구분)\n\n진행 중 병목(MES 테이블 못 찾음 등) 있으면 즉시 MAX에 보고.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-10 19:02:43",
+      "updated_at": "2026-04-10 19:02:43",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-crafter-1dca45",
+      "agent": "crafter",
+      "task": "[CS 파이프라인 GraphRAG 전환 — 부서장 확정 지시]",
+      "message": "[CS 파이프라인 GraphRAG 전환 — 부서장 확정 지시]\n\n**결정 사항**\n1. **하이브리드 아님** — cs-agent는 GraphRAG **단독**으로 전환. pgvector 호출 제거.\n2. 지금 바로 개발 진행.\n3. 운영 후 답변 퀄리티 또는 이슈 발생 시에만 pgvector를 다시 합쳐 하이브리드화 (나중 판단).\n\n**작업 범위**\n1. `cs_rag_search.py`에서 pgvector 직접 쿼리 로직 제거 또는 비활성화\n2. Neo4j(bolt://localhost:7688, 1,553노드) 기반 GraphRAG 검색 함수 신규 구현\n   - 대시보드에 이미 구현되어 있는 그래프 검색 로직을 참조/재사용 (/api/search/hybrid의 graph 파트만)\n   - 권장: 대시보드가 단일 진실원칙을 유지할 수 있도록 대시보드 API를 graph-only 모드로 호출하거나, 공유 모듈로 분리\n3. `cs_pipeline.py`:\n   - 2단계 search_rag → GraphRAG 호출로 교체\n   - 3단계 is_sufficient(score 기준) → 그래프 결과 기준으로 재정의 (엔티티 개수/관계 깊이 등)\n   - 4단계 PDF 캐시는 기존 유지\n4. 답변 프롬프트: 그래프 엔티티/관계를 컨텍스트로 주입\n5. JSONL 로깅에 `rag_source: \"graph\"` 필드 추가 (운영 분석용)\n6. E2E 테스트: 샘플 CS 질문 5건으로 답변 생성/로깅 확인\n\n**주의**\n- cs-agent는 현재 cs-wta.com 개발 중. 파일 수정 시점 cs-agent와 충돌하지 않도록 조율 후 진행 (세션 교착 방지)\n- cs_rag_search.py / cs_pipeline.py는 cs-agent 워크스페이스 파일이므로 수정 전 cs-agent에 1줄 통지 바람직\n- DB 변경 없음 (Neo4j 읽기 전용)\n- pgvector 8.4초 지연 이슈는 보류 (별도 티켓)\n\n**진행 순서**\n1. cs-agent에 파일 수정 통지 → 응답 받은 후 진행\n2. 코드 수정 → 로컬 E2E → 배포 → 부서장 보고\n3. 완료 시 샘플 질문 답변 예시 1~2건 첨부해 품질 참고자료 제공\n\n문제 생기면 즉시 MAX 보고.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-10 19:05:29",
+      "updated_at": "2026-04-10 19:05:29",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }

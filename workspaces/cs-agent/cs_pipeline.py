@@ -1,17 +1,21 @@
 """
 CS 자동 파이프라인 — 웹챗/슬랙 CS 질문 처리 단일 진입점
 
+2026-04-10 전환: pgvector 제거, Neo4j GraphRAG 단독 사용.
+
 사용법:
   python cs_pipeline.py "질문 텍스트"
 
 출력 (JSON):
   {
     "session_hit": {...} | null,     # 이전 세션 이력
-    "rag_results": [...],            # RAG 검색 결과
-    "needs_dbmanager": bool,         # db-manager 폴백 필요 여부
-    "merged_context": str,           # 합산 컨텍스트 텍스트
-    "best_source": {...} | null,     # 최고 점수 소스 (PDF 첨부용)
-    "pdf_info": {...} | null         # PDF 추출 결과 (source_file + page 있을 때)
+    "graph_result": {...},            # Neo4j 검색 결과 (nodes/relationships)
+    "rag_results": [...],             # 호환: 엔티티 flat list
+    "needs_dbmanager": bool,          # db-manager 폴백 필요 여부
+    "merged_context": str,            # 합산 컨텍스트 텍스트
+    "best_source": {...} | null,      # 최고 순위 소스 (PDF 첨부용)
+    "pdf_info": {...} | null,         # PDF 추출 결과
+    "rag_source": "graph"             # 검색 백엔드 식별자 (로깅용)
   }
 """
 
@@ -27,16 +31,16 @@ from cs_pdf_cache import get_or_extract_pdf_page, lookup_session_attachment
 
 def _extract_pdf_if_available(rag_results: list[dict]) -> dict | None:
     """
-    RAG 결과에서 source_file + page_number가 있는 최고 점수 결과의
-    PDF를 추출(또는 캐시에서 로드)하여 반환.
+    엔티티 속성에 source_file + page_number가 있으면
+    해당 PDF 페이지를 추출(캐시 활용)하여 반환.
     """
     for r in rag_results:
-        source_file = r.get("source_file", "")
-        page = r.get("page_number") or r.get("page")
+        props = r.get("properties", {}) or {}
+        source_file = r.get("source_file", "") or props.get("source_file", "") or props.get("source", "")
+        page = props.get("page_number") or props.get("page") or r.get("page_number") or r.get("page")
         if not source_file or not page:
             continue
 
-        # PDF 파일 경로 찾기 (db-manager 매뉴얼 저장 경로)
         pdf_paths = [
             f"C:/MES/wta-agents/manuals/{source_file}",
             f"C:/wMES/media/manuals/{source_file}",
@@ -48,7 +52,7 @@ def _extract_pdf_if_available(rag_results: list[dict]) -> dict | None:
                     result = get_or_extract_pdf_page(pdf_path, int(page), context=1)
                     result["source_file"] = source_file
                     result["page"] = page
-                    result["score"] = r.get("score", 0)
+                    result["name"] = r.get("name", "")
                     return result
                 except Exception:
                     continue
@@ -60,31 +64,34 @@ def run(query: str) -> dict:
     """
     4단계 CS 파이프라인 실행:
     1. cs-sessions.jsonl 이전 이력 검색
-    2. self RAG (pgvector 직접)
-    3. db-manager 폴백 필요 여부 판단
+    2. GraphRAG (Neo4j 단독)
+    3. 충분성 판정 → db-manager 폴백 필요 여부
     4. PDF 추출 가능 시 자동 처리
     """
-    # 1단계 + 2단계: search_with_pipeline이 이전 세션 + RAG 통합 처리
     pipeline = search_with_pipeline(query)
 
     session_hit = pipeline["session_hit"]
+    graph_result = pipeline["graph_result"]
     rag_results = pipeline["rag_results"]
     needs_dbmanager = pipeline["needs_dbmanager"]
     merged_context = pipeline["merged_context"]
+    rag_source = pipeline.get("rag_source", "graph")
 
-    # 최고 점수 소스
+    # 최상위 소스 (엔티티 첫 번째)
     best_source = rag_results[0] if rag_results else None
 
-    # 4단계: PDF 자동 추출 (source_file + page 있는 경우)
+    # 4단계: PDF 자동 추출 (엔티티 속성에 source_file + page가 있는 경우)
     pdf_info = _extract_pdf_if_available(rag_results)
 
     return {
         "session_hit": session_hit,
+        "graph_result": graph_result,
         "rag_results": rag_results,
         "needs_dbmanager": needs_dbmanager,
         "merged_context": merged_context,
         "best_source": best_source,
         "pdf_info": pdf_info,
+        "rag_source": rag_source,
     }
 
 
@@ -98,7 +105,7 @@ def run_with_dbmanager_context(query: str, dbmanager_text: str) -> dict:
     pipeline = run(query)
     if dbmanager_text:
         pipeline["merged_context"] = merge_results(
-            pipeline["rag_results"], dbmanager_text
+            pipeline["graph_result"], dbmanager_text
         )
     pipeline["dbmanager_text"] = dbmanager_text
     return pipeline
