@@ -355,3 +355,6 @@
 {"ts": "2026-04-10 13:32:17", "direction": "inbound", "user": "boss", "text": "품목 삭제 버튼은 국가별 언어변환이 되도록 조치"}
 {"ts": "2026-04-10 13:32:34", "direction": "outbound", "user": "MAX", "text": "👑 추가 전달.\n\n품목 삭제 버튼/다이얼로그를 i18n 번역 키로 전환해서 국가별 언어 변환 지원합니다.\n\ndev-agent가 3건(라벨 미리보기 + 숫자키패드 + i18n) 묶어서 배포 예정입니다."}
 {"ts": "2026-04-10 13:37:41", "direction": "outbound", "user": "MAX", "text": "👑 3건 묶음 완료, 배포됨.\n\n💻 dev-agent:\n1) 라벨 미리보기 수정 — asyncpg JSONB 문자열 반환 이슈, design_data 파싱 정규화\n2) 실사변경 수량 필드 모바일 숫자 키패드 (inputMode=\"decimal\")\n3) 품목 삭제 버튼/다이얼로그 i18n 적용 (ko/en/zh/ja 4개 언어)\n\ncs-wta.com에서 확인 가능합니다."}
+{"ts": "2026-04-10 13:52:08", "direction": "inbound", "user": "boss", "text": "양품이라는 구분을 B급으로 구분명을 달리해줘"}
+{"ts": "2026-04-10 13:52:29", "direction": "outbound", "user": "MAX", "text": "👑 dev-agent에게 지시 완료.\n\n\"양품\" → \"B급\" 으로 프론트엔드 표시 레이블 전체 변경합니다 (i18n 4개 언어 포함). 백엔드 API 필드명은 그대로 유지."}
+{"ts": "2026-04-10 13:54:16", "direction": "outbound", "user": "MAX", "text": "👑 완료, 배포됨.\n\n💻 dev-agent:\n- i18n 키 통일로 4개 locale만 수정: ko/en/zh/ja\n- 양품 → B급 / Good → B-Grade / 良品 → B级 / 良品 → Bランク\n- 재고목록/재고등록/실사변경 모두 자동 반영\n\ncs-wta.com 확인 가능합니다."}

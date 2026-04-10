@@ -29,17 +29,14 @@ CS_CATEGORIES = {
         'RSMS-15BQ1ASK3', 'CSMT-02BQ1ANT3', 'CSD5-10BX1',
     ],
     '선삭조명': [
-        'WCDRL150-S24W',   # 8ea (김근형)
-        'WCRDRL130-S24W',  # 8ea
+        # 부서장 제거 (2026-04-10): WCDRL150-S24W, WCRDRL130-S24W
         'WRH80X51-S24W',   # 10ea (대문자 X)
         'WBF130X86-S24W',  # 20ea
         'WBF65X35-S24W',   # 10ea
     ],
     '밀링조명': [
-        'WCDRL150-S48W',    # (김근형)
-        'WRRDRL130-S48W',
-        'WSSL125X102-S24W',
-        'WBFL130X86-S24G',  # 대문자 X
+        # 부서장 제거 (2026-04-10):
+        # 'WCDRL150-S48W', 'WRRDRL130-S48W', 'WSSL125X102-S24W', 'WBFL130X86-S24G'
         'WBFL65X35-S24G',   # 등록만 (erp_data 없음, 김근형 요청)
     ],
 }
