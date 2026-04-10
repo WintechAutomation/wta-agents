@@ -1,0 +1,1481 @@
+{
+  "total": 29980,
+  "matched": [
+    {
+      "item_cd": "TCL0.23X-130I-HR",
+      "item_nm": "0.23x Telecentric Lens",
+      "spec": "대구텍 BTM 검사 Telecentric 렌즈, 0.23x / F/# 7.2 / WD 130mm / 2/3\"(11mm) ",
+      "keyword": "검사"
+    },
+    {
+      "item_cd": "VHS40-04",
+      "item_nm": "Pressure Relief Valve",
+      "spec": "",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "ISE30A-01-N-L",
+      "item_nm": "PRESSURE S/W",
+      "spec": "",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "HAR_304_1",
+      "item_nm": "Harness",
+      "spec": "CVD Assy",
+      "keyword": "cvd"
+    },
+    {
+      "item_cd": "HAR_PVD_CIRCLE",
+      "item_nm": "CABLE",
+      "spec": "PVD SPACER MOTER CABLE(Motor = k22-0105-kb2419r2 )",
+      "keyword": "pvd"
+    },
+    {
+      "item_cd": "ZSE10-M5-A-G",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "ISE10-M5-A-G",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "정압용",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "C17521-LISA4-RS",
+      "item_nm": "CREE LED LENS",
+      "spec": "Deg 16, 3.45 package led lens, h: 7.7 mm",
+      "keyword": "pack"
+    },
+    {
+      "item_cd": "DPHN210020",
+      "item_nm": "PRESSURE S/W",
+      "spec": "CN-ISE30A-01-N-L",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "DPSN101020",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "CN - ZSE10-M5-A-G",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "DPSN101020",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "CN - ZSE10-M5-A-G",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "DPSN101020",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "CN - ZSE10-M5-A-G",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "GZ40015",
+      "item_nm": "Pressure Relief Valve",
+      "spec": "CN-VHS40-04",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "GZ40015",
+      "item_nm": "Pressure Relief Valve",
+      "spec": "CN-VHS40-04",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "GZ40015",
+      "item_nm": "Pressure Relief Valve",
+      "spec": "CN-VHS40-04",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "DPHN210020",
+      "item_nm": "PRESSURE S/W",
+      "spec": "CN-ISE30A-01-N-L",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "DPHN210020",
+      "item_nm": "PRESSURE S/W",
+      "spec": "CN-ISE30A-01-N-L",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "GZ40015",
+      "item_nm": "Pressure Relief Valve",
+      "spec": "CN-VHS40-04",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "GZ40015",
+      "item_nm": "Pressure Relief Valve",
+      "spec": "CN-VHS40-04",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "DPHN210020",
+      "item_nm": "PRESSURE S/W",
+      "spec": "CN-ISE30A-01-N-L",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "DPHN210020",
+      "item_nm": "PRESSURE S/W",
+      "spec": "CN-ISE30A-01-N-L",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "PVD_NUMBERING",
+      "item_nm": "원형스티커",
+      "spec": "PVD원형넘버링 (1SET 60장)",
+      "keyword": "pvd"
+    },
+    {
+      "item_cd": "GZ40015",
+      "item_nm": "Pressure Relief Valve",
+      "spec": "CN-VHS40-04",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "DPHN210020",
+      "item_nm": "PRESSURE S/W",
+      "spec": "CN-ISE30A-01-N-L",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "PACK-PWTB6-20-3",
+      "item_nm": "Washer",
+      "spec": "공용 자재 하부Cover Washer 1PACK : 50EA",
+      "keyword": "pack"
+    },
+    {
+      "item_cd": "MOUNT-4-WHITE",
+      "item_nm": "마운트",
+      "spec": "JOLM-4 / (1PACK=1,000EA)",
+      "keyword": "pack"
+    },
+    {
+      "item_cd": "MOUNT-4-BLACK",
+      "item_nm": "마운트",
+      "spec": "JOLM-4 / (1PACK=1,000EA)",
+      "keyword": "pack"
+    },
+    {
+      "item_cd": "01-00-63-0",
+      "item_nm": "Press Cover",
+      "spec": "SP160 Cover",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "01-00-63-0",
+      "item_nm": "Press Cover",
+      "spec": "SP160 Cover",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "03-29-48-3",
+      "item_nm": "45 deg Target",
+      "spec": "*한국야금 청주 호닝형상검사기",
+      "keyword": "검사기"
+    },
+    {
+      "item_cd": "99-123-01-0",
+      "item_nm": "Inspection Jig Base",
+      "spec": "",
+      "keyword": "inspect"
+    },
+    {
+      "item_cd": "98-14-48-1",
+      "item_nm": "Y-Axis Fixed Brkt",
+      "spec": "프레스",
+      "keyword": "프레스"
+    },
+    {
+      "item_cd": "98-14-48-1",
+      "item_nm": "Y-Axis Fixed Brkt",
+      "spec": "프레스",
+      "keyword": "프레스"
+    },
+    {
+      "item_cd": "98-14-48-1",
+      "item_nm": "Y-Axis Fixed Brkt",
+      "spec": "프레스",
+      "keyword": "프레스"
+    },
+    {
+      "item_cd": "98-14-47-0",
+      "item_nm": "X2-Axis Fixed Brkt",
+      "spec": "프레스",
+      "keyword": "프레스"
+    },
+    {
+      "item_cd": "98-14-46-1",
+      "item_nm": "X-Axis Fixed Brkt",
+      "spec": "프레스",
+      "keyword": "프레스"
+    },
+    {
+      "item_cd": "98-14-46-1",
+      "item_nm": "X-Axis Fixed Brkt",
+      "spec": "프레스",
+      "keyword": "프레스"
+    },
+    {
+      "item_cd": "98-14-49-0",
+      "item_nm": "Feeder Fixed Brkt",
+      "spec": "프레스&소결, 대칭가공",
+      "keyword": "프레스"
+    },
+    {
+      "item_cd": "98-14-47-0",
+      "item_nm": "X2-Axis Fixed Brkt",
+      "spec": "프레스",
+      "keyword": "프레스"
+    },
+    {
+      "item_cd": "98-14-48-1",
+      "item_nm": "Y-Axis Fixed Brkt",
+      "spec": "프레스",
+      "keyword": "프레스"
+    },
+    {
+      "item_cd": "98-14-55-0",
+      "item_nm": "Pallet Feeder Fix",
+      "spec": "PVD",
+      "keyword": "pvd"
+    },
+    {
+      "item_cd": "98-14-84-0",
+      "item_nm": "Feeder Fixed Brkt",
+      "spec": "프레스&소결, 대칭가공",
+      "keyword": "프레스"
+    },
+    {
+      "item_cd": "98-14-29-0",
+      "item_nm": "Camera Robot Fix",
+      "spec": "Camera 090-Body Robot 공용 / 소결,CVD, PVD, 포장기",
+      "keyword": "소결"
+    },
+    {
+      "item_cd": "98-14-48-1",
+      "item_nm": "Y-Axis Fixed Brkt",
+      "spec": "프레스",
+      "keyword": "프레스"
+    },
+    {
+      "item_cd": "98-14-30-0",
+      "item_nm": "X-Axis Head Fix",
+      "spec": "소결, PVD",
+      "keyword": "소결"
+    },
+    {
+      "item_cd": "98-14-48-1",
+      "item_nm": "Y-Axis Fixed Brkt",
+      "spec": "프레스",
+      "keyword": "프레스"
+    },
+    {
+      "item_cd": "98-14-47-0",
+      "item_nm": "X2-Axis Fixed Brkt",
+      "spec": "프레스",
+      "keyword": "프레스"
+    },
+    {
+      "item_cd": "98-14-46-1",
+      "item_nm": "X-Axis Fixed Brkt",
+      "spec": "프레스",
+      "keyword": "프레스"
+    },
+    {
+      "item_cd": "AL-COATING-SINGLE",
+      "item_nm": "AL 단면코팅",
+      "spec": "450_650nm 기준 코팅",
+      "keyword": "coat"
+    },
+    {
+      "item_cd": "PCB_PVD_ULO",
+      "item_nm": "PCB잡자재",
+      "spec": "가로55/세로50/층수2/두께1.6/재질FR-4/PCB색상녹색/실크색상흰색/홀크기0.3/간격6/동박외층1/표면처리HASL",
+      "keyword": "pvd"
+    },
+    {
+      "item_cd": "VHS40-04",
+      "item_nm": "Pressure Relief Valve",
+      "spec": "",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "ISE30A-01-N-L",
+      "item_nm": "PRESSURE S/W",
+      "spec": "",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "4CH_LIGHT_CABLE(S)",
+      "item_nm": "4채널 조명케이블",
+      "spec": "CFKOR900.09.396(4*(2*0.25))C - 소결,리팔레팅,CVD",
+      "keyword": "소결"
+    },
+    {
+      "item_cd": "SHORTBAR-12P-15A-BL",
+      "item_nm": "쇼트바",
+      "spec": "COATING(BLUE)",
+      "keyword": "coat"
+    },
+    {
+      "item_cd": "SHORTBAR-12P-15A-RD",
+      "item_nm": "쇼트바",
+      "spec": "COATING(RED)",
+      "keyword": "coat"
+    },
+    {
+      "item_cd": "SHORTBAR-12P-15A",
+      "item_nm": "쇼트바",
+      "spec": "COATING(BLACK)",
+      "keyword": "coat"
+    },
+    {
+      "item_cd": "98-14-78-0",
+      "item_nm": "Coating Tray Fix",
+      "spec": "",
+      "keyword": "coat"
+    },
+    {
+      "item_cd": "98-14-77-0",
+      "item_nm": "Coating Tray Fix",
+      "spec": "",
+      "keyword": "coat"
+    },
+    {
+      "item_cd": "98-14-30-0",
+      "item_nm": "X-Axis Head Fix",
+      "spec": "소결, PVD",
+      "keyword": "소결"
+    },
+    {
+      "item_cd": "ZSE10-M5-A-G",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "ZSE10-M5-A-G",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "ISE10-M5-A-G",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "정압용",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "ISE20A-R-01-J",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "NPN / Analog 출력",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "ZSE10-M5-A-G",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "ISE10-M5-A-G",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "정압용",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "ISE10-M5-A-G",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "정압용",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "HAR_311_1",
+      "item_nm": "Harness",
+      "spec": "(HS2 PVD 기본형) Assy",
+      "keyword": "pvd"
+    },
+    {
+      "item_cd": "ISE20A-R-01-J",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "NPN / Analog 출력",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "ISE10-M5-A-G",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "정압용",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "ISE20A-R-01-J",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "NPN / Analog 출력",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "ISE10-M5-A-G",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "정압용",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "HAR_312_1",
+      "item_nm": "Harness",
+      "spec": "PVD Assy(UnLoading)",
+      "keyword": "pvd"
+    },
+    {
+      "item_cd": "ISE10-M5-A-G",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "정압용",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "ISE10-M5-A-G",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "정압용",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "99-14-70-0",
+      "item_nm": "Sinter Tray",
+      "spec": "297x277x5T (Fix Hole)",
+      "keyword": "sinter"
+    },
+    {
+      "item_cd": "99-14-69-0",
+      "item_nm": "Sinter Tray",
+      "spec": "350x350x5T",
+      "keyword": "sinter"
+    },
+    {
+      "item_cd": "SMP-03V-BC",
+      "item_nm": "JST",
+      "spec": "1PACK=1000EA",
+      "keyword": "pack"
+    },
+    {
+      "item_cd": "SMP-10V-BC",
+      "item_nm": "JST",
+      "spec": "하우징　(1PACK=500EA)",
+      "keyword": "pack"
+    },
+    {
+      "item_cd": "JOMB19-WHITE",
+      "item_nm": "마운트",
+      "spec": "MOUNT 소 WHITE (*비접착) 1PACK = 1,000EA",
+      "keyword": "pack"
+    },
+    {
+      "item_cd": "PSE540-R06",
+      "item_nm": "digital pressure switch",
+      "spec": "",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "ISE20A-R-01-J",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "NPN / Analog 출력",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "GZ40015",
+      "item_nm": "Pressure Relief Valve",
+      "spec": "CN-VHS40-04",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "GZ40015",
+      "item_nm": "Pressure Relief Valve",
+      "spec": "CN-VHS40-04",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "DPHN210020",
+      "item_nm": "PRESSURE S/W",
+      "spec": "CN-ISE30A-01-N-L",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "DPHN210020",
+      "item_nm": "PRESSURE S/W",
+      "spec": "CN-ISE30A-01-N-L",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "DPHN210020",
+      "item_nm": "PRESSURE S/W",
+      "spec": "CN-ISE30A-01-N-L",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "GZ40015",
+      "item_nm": "Pressure Relief Valve",
+      "spec": "CN-VHS40-04",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "HAR_405_1",
+      "item_nm": "Harness",
+      "spec": "(검사기F1)Assy",
+      "keyword": "검사기"
+    },
+    {
+      "item_cd": "CABLETIE-140MM-BK",
+      "item_nm": "케이블타이",
+      "spec": "1PACK=1000EA",
+      "keyword": "pack"
+    },
+    {
+      "item_cd": "CABLETIE-100MM-BK",
+      "item_nm": "케이블타이",
+      "spec": "1PACK=1000EA",
+      "keyword": "pack"
+    },
+    {
+      "item_cd": "NMX-P5251A",
+      "item_nm": "PC자재",
+      "spec": "[강원전자] NETmate SMPS 아답터, 5V-2A [외경 5.5/내경2.1] NMX-P5251A 전원 코드 일체형 [박스포장]",
+      "keyword": "포장"
+    },
+    {
+      "item_cd": "60-08-19-0",
+      "item_nm": "Pressure SW Brkt",
+      "spec": "",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "SS-540A-V1",
+      "item_nm": "VISION_PC",
+      "spec": "검사장비(SYS-540A,XeonGold6342,DDR4 32GBx4,SSD 500GB,HDD 4TBx2(Raid0),Win10IOT(2021)",
+      "keyword": "검사"
+    },
+    {
+      "item_cd": "SS-540A-V1",
+      "item_nm": "VISION_PC",
+      "spec": "검사장비(SYS-540A,XeonGold6342,DDR4 32GBx4,SSD 500GB,HDD 4TBx2(Raid0),Win10IOT(2021)",
+      "keyword": "검사"
+    },
+    {
+      "item_cd": "ISE10-M5-A-G",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "정압용",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "ISE20A-R-01-J",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "NPN / Analog 출력",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "ZSE10-M5-A-G",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "ISE10-M5-A-G",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "정압용",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "PSE540-R06",
+      "item_nm": "digital pressure switch",
+      "spec": "",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "67-00-102-0",
+      "item_nm": "Pin Guide(Ø2.5)",
+      "spec": "PVD Handler Centering Pin (Ø2.5)",
+      "keyword": "pvd"
+    },
+    {
+      "item_cd": "ISE10-M5-A-G",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "정압용",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "ISE20A-R-01-J",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "NPN / Analog 출력",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "16-47-20-1",
+      "item_nm": "Pressure Switch Brkt",
+      "spec": "",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "ZSE10-M5-A-G",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "ISE10-M5-A-G",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "정압용",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "ISE10-M5-A-G",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "정압용",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "HAR_312_1",
+      "item_nm": "Harness",
+      "spec": "PVD Assy(UnLoading)",
+      "keyword": "pvd"
+    },
+    {
+      "item_cd": "80-86-01-0",
+      "item_nm": "Coating Tray Sub Plate",
+      "spec": "",
+      "keyword": "coat"
+    },
+    {
+      "item_cd": "ISE10-M5-A-G",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "정압용",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "ZSE10-M5-A-G",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "ISE20A-R-01-J",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "NPN / Analog 출력",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "25-07-06-0",
+      "item_nm": "Cup",
+      "spec": "세라티즈 PVD 로딩&언로딩 Cup",
+      "keyword": "pvd"
+    },
+    {
+      "item_cd": "ISE10-M5-A-G",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "정압용",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "ZSE10-M5-A-G",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "SS-540A-V1",
+      "item_nm": "VISION_PC",
+      "spec": "검사장비(SYS-540A,XeonGold6342,DDR4 32GBx4,SSD 500GB,HDD 4TBx2(Raid0),Win10IOT(2021)",
+      "keyword": "검사"
+    },
+    {
+      "item_cd": "16-48-08-0",
+      "item_nm": "Pressure SW Cover",
+      "spec": "",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "ISE10-M5-A-G",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "정압용",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "HAR_312_1",
+      "item_nm": "Harness",
+      "spec": "PVD Assy(UnLoading)",
+      "keyword": "pvd"
+    },
+    {
+      "item_cd": "4CH_LIGHT_CABLE(S)",
+      "item_nm": "4채널 조명케이블",
+      "spec": "CFKOR900.09.396(4*(2*0.25))C - 소결,리팔레팅,CVD",
+      "keyword": "소결"
+    },
+    {
+      "item_cd": "HAR_304_1",
+      "item_nm": "Harness",
+      "spec": "CVD Assy",
+      "keyword": "cvd"
+    },
+    {
+      "item_cd": "HAR_323_1",
+      "item_nm": "Harness",
+      "spec": "(소결 취출기) FD+EV Assy",
+      "keyword": "소결"
+    },
+    {
+      "item_cd": "53-10-35-0",
+      "item_nm": "Case Holder_4",
+      "spec": "한국야금 Case 포장기 Reversal ",
+      "keyword": "포장"
+    },
+    {
+      "item_cd": "53-03-35-1",
+      "item_nm": "Case Holder_4",
+      "spec": "한국야금 Case 포장기 Reversal ",
+      "keyword": "포장"
+    },
+    {
+      "item_cd": "53-10-36-0",
+      "item_nm": "Case Holder_2",
+      "spec": "한국야금 Case 포장기 Reversal ",
+      "keyword": "포장"
+    },
+    {
+      "item_cd": "53-03-36-1",
+      "item_nm": "Case Holder_2",
+      "spec": "한국야금 Case 포장기 Reversal ",
+      "keyword": "포장"
+    },
+    {
+      "item_cd": "4CH_LIGHT_CABLE(S)",
+      "item_nm": "4채널 조명케이블",
+      "spec": "CFKOR900.09.396(4*(2*0.25))C - 소결,리팔레팅,CVD",
+      "keyword": "소결"
+    },
+    {
+      "item_cd": "4CH_LIGHT_CABLE(S)",
+      "item_nm": "4채널 조명케이블",
+      "spec": "CFKOR900.09.396(4*(2*0.25))C - 소결,리팔레팅,CVD",
+      "keyword": "소결"
+    },
+    {
+      "item_cd": "64-09-95-0",
+      "item_nm": "Guide Clamp",
+      "spec": "17.5mm Clamp, 지우장진루 소결#1",
+      "keyword": "소결"
+    },
+    {
+      "item_cd": "ZSE10-M5-A-G",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "ISE10-M5-A-G",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "정압용",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "ISE20A-R-01-J",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "NPN / Analog 출력",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "ZSE10-M5-A-G",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "HSP0320-5037R21LINK",
+      "item_nm": "Robot Chain",
+      "spec": "HSP0320-50(3BN), 37R 24LINK, HPLPB02305002 교세라포장기#1 용적률증대",
+      "keyword": "포장"
+    },
+    {
+      "item_cd": "ISE20A-R-01-J",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "NPN / Analog 출력",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "25701",
+      "item_nm": "PrismMirror_30mm",
+      "spec": "30mm, Protected Silver Coated, N-BK7 90° Specialty Mirror",
+      "keyword": "coat"
+    },
+    {
+      "item_cd": "32527",
+      "item_nm": "Prism_30mm",
+      "spec": "30mm, Uncoated, N-BK7 Right Angle Prism",
+      "keyword": "coat"
+    },
+    {
+      "item_cd": "ISE10-M5-A-G",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "정압용",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "HAR_209_1",
+      "item_nm": "Harness",
+      "spec": "포장기 레이저 & 라벨-2 & 탈자기",
+      "keyword": "포장"
+    },
+    {
+      "item_cd": "67-00-103-0",
+      "item_nm": "Centering Pin Cap(Ø2.5)",
+      "spec": "PVD Handler Centering Pin (Ø2.5)",
+      "keyword": "pvd"
+    },
+    {
+      "item_cd": "67-00-107-0",
+      "item_nm": "Centering Pin Cap(Ø4.0)",
+      "spec": "PVD Handler Centering Pin (Ø4.0)",
+      "keyword": "pvd"
+    },
+    {
+      "item_cd": "67-00-103-0",
+      "item_nm": "Centering Pin Cap(Ø2.5)",
+      "spec": "PVD Handler Centering Pin (Ø2.5)",
+      "keyword": "pvd"
+    },
+    {
+      "item_cd": "67-00-107-0",
+      "item_nm": "Centering Pin Cap(Ø4.0)",
+      "spec": "PVD Handler Centering Pin (Ø4.0)",
+      "keyword": "pvd"
+    },
+    {
+      "item_cd": "67-00-106-0",
+      "item_nm": "Pin Guide(Ø4.0)",
+      "spec": "PVD Handler Centering Pin (Ø4.0)",
+      "keyword": "pvd"
+    },
+    {
+      "item_cd": "67-00-106-0",
+      "item_nm": "Pin Guide(Ø4.0)",
+      "spec": "PVD Handler Centering Pin (Ø4.0)",
+      "keyword": "pvd"
+    },
+    {
+      "item_cd": "67-00-102-0",
+      "item_nm": "Pin Guide(Ø2.5)",
+      "spec": "PVD Handler Centering Pin (Ø2.5)",
+      "keyword": "pvd"
+    },
+    {
+      "item_cd": "67-00-102-0",
+      "item_nm": "Pin Guide(Ø2.5)",
+      "spec": "PVD Handler Centering Pin (Ø2.5)",
+      "keyword": "pvd"
+    },
+    {
+      "item_cd": "HAR_432_1",
+      "item_nm": "Harness",
+      "spec": "F2 검사기 Assy ",
+      "keyword": "검사기"
+    },
+    {
+      "item_cd": "21186",
+      "item_nm": "90° Specialty Mirror",
+      "spec": "10mm, Protected Silver Coated, N-BK7 90° Specialty Mirror",
+      "keyword": "coat"
+    },
+    {
+      "item_cd": "32540",
+      "item_nm": "RA Prism",
+      "spec": "5mm, Aluminum Coated, N-BK7 High Tolerance RA Prism",
+      "keyword": "coat"
+    },
+    {
+      "item_cd": "SS-540A-V1",
+      "item_nm": "VISION_PC",
+      "spec": "검사장비(SYS-540A,XeonGold6342,DDR4 32GBx4,SSD 500GB,HDD 4TBx2(Raid0),Win10IOT(2021)",
+      "keyword": "검사"
+    },
+    {
+      "item_cd": "C17521-LISA4-RS",
+      "item_nm": "CREE LED LENS",
+      "spec": "Deg 16, 3.45 package led lens, h: 7.7 mm",
+      "keyword": "pack"
+    },
+    {
+      "item_cd": "PPD-20",
+      "item_nm": "Lip Packing",
+      "spec": "",
+      "keyword": "pack"
+    },
+    {
+      "item_cd": "NMY-16",
+      "item_nm": "Lip Packing",
+      "spec": "",
+      "keyword": "pack"
+    },
+    {
+      "item_cd": "ISE20A-R-01-J",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "NPN / Analog 출력",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "PVHR-302-3H-15A",
+      "item_nm": "Pressure Relief Valve",
+      "spec": "",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "SEU-32-NV-01",
+      "item_nm": "Pressure S/W",
+      "spec": "",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "99-99-02-0",
+      "item_nm": "Tray Plate",
+      "spec": "YG1 CVD",
+      "keyword": "cvd"
+    },
+    {
+      "item_cd": "ML-PWB050",
+      "item_nm": "PC잡자재",
+      "spec": "[MachLink] 마하링크 국산 파워케이블 [AC 220V] 개별포장 5M",
+      "keyword": "포장"
+    },
+    {
+      "item_cd": "ML-PWB100",
+      "item_nm": "PC잡자재",
+      "spec": "[MachLink] 마하링크 국산 파워케이블 [AC 220V] 개별포장 10M",
+      "keyword": "포장"
+    },
+    {
+      "item_cd": "PACK-SWSPT16-8-0_3",
+      "item_nm": "Washer",
+      "spec": "PACK-SWSPT16-8-0.3",
+      "keyword": "pack"
+    },
+    {
+      "item_cd": "VHS40-04",
+      "item_nm": "Pressure Relief Valve",
+      "spec": "",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "ISE30A-01-N-L",
+      "item_nm": "PRESSURE S/W",
+      "spec": "",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "ZSE20A-R-M5-J",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "ZSE30A-01-C-G 단종 대체 품목/ M5",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "ZSE20A-R-M5-J",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "ZSE30A-01-C-G 단종 대체 품목/ M5",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "ZSE30A-01-C-G",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "ZSE20A-R-M5-J",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "ZSE30A-01-C-G 단종 대체 품목/ M5",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "96-35-17-1",
+      "item_nm": "Camera Brkt_2",
+      "spec": "한국야금 Case 포장기 Reversal + Vision",
+      "keyword": "포장"
+    },
+    {
+      "item_cd": "53-03-06-1",
+      "item_nm": "Case Holder_1",
+      "spec": "한국야금 Case 포장기 Reversal + Vision",
+      "keyword": "포장"
+    },
+    {
+      "item_cd": "53-03-34-0",
+      "item_nm": "Case Holder_3",
+      "spec": "한국야금 Case 포장기 Reversal + Vision",
+      "keyword": "포장"
+    },
+    {
+      "item_cd": "96-35-21-0",
+      "item_nm": "Floating Joint Brkt",
+      "spec": "한국야금 Case 포장기 Reversal + Vision",
+      "keyword": "포장"
+    },
+    {
+      "item_cd": "ZSE30A-01-C-G",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "ZSE30A-01-C-G",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "WTRGDIV_CH6",
+      "item_nm": "6채널 트리거 분배기 (F2)",
+      "spec": "HIM-F2 검사기 트리거 분배기 (보드 + 아두이노 세트)",
+      "keyword": "검사기"
+    },
+    {
+      "item_cd": "WTRGDIV_CH3",
+      "item_nm": "3채널 트리거 분배기 (F1)",
+      "spec": "HIM-F1 검사기 트리거 분배기 (보드 + 아두이노 세트)",
+      "keyword": "검사기"
+    },
+    {
+      "item_cd": "ZSE30A-01-C-G",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "ISE20A-R-01-J",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "NPN / Analog 출력",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "ISE10-M5-A-G",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "정압용",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "ISE10-M5-A-G",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "정압용",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "PACK-MSSFS5-20-YBM",
+      "item_nm": "M5 풀림 방지 Bolt",
+      "spec": "1 pack/10ea",
+      "keyword": "pack"
+    },
+    {
+      "item_cd": "PVD_NUMBERING",
+      "item_nm": "원형스티커",
+      "spec": "PVD원형넘버링 (1SET 60장)",
+      "keyword": "pvd"
+    },
+    {
+      "item_cd": "SS-540A-V1",
+      "item_nm": "VISION_PC",
+      "spec": "검사장비(SYS-540A,XeonGold6342,DDR4 32GBx4,SSD 500GB,HDD 4TBx2(Raid0),Win10IOT(2021)",
+      "keyword": "검사"
+    },
+    {
+      "item_cd": "ZSE10-M5-A-G",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "ZSE20A-R-M5-J",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "ZSE30A-01-C-G 단종 대체 품목/ M5",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "ZSE20A-R-M5-J",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "ZSE30A-01-C-G 단종 대체 품목/ M5",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "VHS40-04",
+      "item_nm": "Pressure Relief Valve",
+      "spec": "",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "ISE30A-01-N-L",
+      "item_nm": "PRESSURE S/W",
+      "spec": "",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "PACK-SWSPT16-8-0_3",
+      "item_nm": "Washer",
+      "spec": "PACK-SWSPT16-8-0.3",
+      "keyword": "pack"
+    },
+    {
+      "item_cd": "SMR-02V-B",
+      "item_nm": "JST",
+      "spec": "1PACK=1000EA",
+      "keyword": "pack"
+    },
+    {
+      "item_cd": "SMP-02V-BC",
+      "item_nm": "JST",
+      "spec": "1PACK=1000EA",
+      "keyword": "pack"
+    },
+    {
+      "item_cd": "HAR_312_1",
+      "item_nm": "Harness",
+      "spec": "PVD Assy(UnLoading)",
+      "keyword": "pvd"
+    },
+    {
+      "item_cd": "96-35-21-0",
+      "item_nm": "Floating Joint Brkt",
+      "spec": "한국야금 Case 포장기 Reversal + Vision",
+      "keyword": "포장"
+    },
+    {
+      "item_cd": "96-35-21-0",
+      "item_nm": "Floating Joint Brkt",
+      "spec": "한국야금 Case 포장기 Reversal + Vision",
+      "keyword": "포장"
+    },
+    {
+      "item_cd": "HAR_405_1",
+      "item_nm": "Harness",
+      "spec": "(검사기F1)Assy",
+      "keyword": "검사기"
+    },
+    {
+      "item_cd": "DOMELIGHT100",
+      "item_nm": "WTA-LDM100-W12",
+      "spec": "DOME LIGHT (TOP OPEN 35X35, BOTTOM OPEN 100PI)_HAM 포장기 혼입검사",
+      "keyword": "포장"
+    },
+    {
+      "item_cd": "DOMELIGHT100",
+      "item_nm": "WTA-LDM100-W12",
+      "spec": "DOME LIGHT (TOP OPEN 35X35, BOTTOM OPEN 100PI)_HAM 포장기 혼입검사",
+      "keyword": "포장"
+    },
+    {
+      "item_cd": "DOMELIGHT100",
+      "item_nm": "WTA-LDM100-W12",
+      "spec": "DOME LIGHT (TOP OPEN 35X35, BOTTOM OPEN 100PI)_HAM 포장기 혼입검사",
+      "keyword": "포장"
+    },
+    {
+      "item_cd": "DOMELIGHT100",
+      "item_nm": "WTA-LDM100-W12",
+      "spec": "DOME LIGHT (TOP OPEN 35X35, BOTTOM OPEN 100PI)_HAM 포장기 혼입검사",
+      "keyword": "포장"
+    },
+    {
+      "item_cd": "DOMELIGHT100",
+      "item_nm": "WTA-LDM100-W12",
+      "spec": "DOME LIGHT (TOP OPEN 35X35, BOTTOM OPEN 100PI)_HAM 포장기 혼입검사",
+      "keyword": "포장"
+    },
+    {
+      "item_cd": "ISE20A-R-01-J",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "NPN / Analog 출력",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "ISE20A-R-01-J",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "NPN / Analog 출력",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "HIM-F_H-TARGET",
+      "item_nm": "SodaLime Chrome mask target",
+      "spec": "HIM-F MA, SI Dimension inspection Target, HIM-H 5X, 10X USAF & Mag Target",
+      "keyword": "inspect"
+    },
+    {
+      "item_cd": "25-08-01-1",
+      "item_nm": "Cup",
+      "spec": "PVD Handler[한국야금]",
+      "keyword": "pvd"
+    },
+    {
+      "item_cd": "ZSE10-M5-A-G",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "ISE20A-R-01-J",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "NPN / Analog 출력",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "ISE10-M5-A-G",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "정압용",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "VHS40-04",
+      "item_nm": "Pressure Relief Valve",
+      "spec": "",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "ISE10-M5-A-G",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "정압용",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "ISE30A-01-N-L",
+      "item_nm": "PRESSURE S/W",
+      "spec": "",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "HAR_209_1",
+      "item_nm": "Harness",
+      "spec": "포장기 레이저 & 라벨-2 & 탈자기",
+      "keyword": "포장"
+    },
+    {
+      "item_cd": "HAR_209_1",
+      "item_nm": "Harness",
+      "spec": "포장기 레이저 & 라벨-2 & 탈자기",
+      "keyword": "포장"
+    },
+    {
+      "item_cd": "ML-PWB100",
+      "item_nm": "PC잡자재",
+      "spec": "[MachLink] 마하링크 국산 파워케이블 [AC 220V] 개별포장 10M",
+      "keyword": "포장"
+    },
+    {
+      "item_cd": "ML-PWB050",
+      "item_nm": "PC잡자재",
+      "spec": "[MachLink] 마하링크 국산 파워케이블 [AC 220V] 개별포장 5M",
+      "keyword": "포장"
+    },
+    {
+      "item_cd": "ML-PWB100",
+      "item_nm": "PC잡자재",
+      "spec": "[MachLink] 마하링크 국산 파워케이블 [AC 220V] 개별포장 10M",
+      "keyword": "포장"
+    },
+    {
+      "item_cd": "ML-PWB050",
+      "item_nm": "PC잡자재",
+      "spec": "[MachLink] 마하링크 국산 파워케이블 [AC 220V] 개별포장 5M",
+      "keyword": "포장"
+    },
+    {
+      "item_cd": "ZSE10-M5-A-G",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "ISE10-M5-A-G",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "정압용",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "ISE20A-R-01-J",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "NPN / Analog 출력",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "VHS40-04",
+      "item_nm": "Pressure Relief Valve",
+      "spec": "",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "ISE30A-01-N-L",
+      "item_nm": "PRESSURE S/W",
+      "spec": "",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "16-47-20-1",
+      "item_nm": "Pressure Switch Brkt",
+      "spec": "",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "667ERJP06F78R7V",
+      "item_nm": "2012_78Ohm_0.5W_Resistor",
+      "spec": "SMD 0805 78.7ohms 0.5W 1% AECQ200 (1PACK = 500EA)",
+      "keyword": "pack"
+    },
+    {
+      "item_cd": "67-00-104-0",
+      "item_nm": "Pin Guide(Ø3.0)",
+      "spec": "PVD Handler Centering Pin (Ø3.0)",
+      "keyword": "pvd"
+    },
+    {
+      "item_cd": "67-00-105-0",
+      "item_nm": "Centering Pin Cap(Ø3.0)",
+      "spec": "PVD Handler Centering Pin (Ø3.0)",
+      "keyword": "pvd"
+    },
+    {
+      "item_cd": "PPD-10",
+      "item_nm": "Lip Packing",
+      "spec": "외경10/내경5.4/폭1.6/NBR/SAKAGAMI",
+      "keyword": "pack"
+    },
+    {
+      "item_cd": "96-35-21-0",
+      "item_nm": "Floating Joint Brkt",
+      "spec": "한국야금 Case 포장기 Reversal + Vision",
+      "keyword": "포장"
+    },
+    {
+      "item_cd": "96-35-17-1",
+      "item_nm": "Camera Brkt_2",
+      "spec": "한국야금 Case 포장기 Reversal + Vision",
+      "keyword": "포장"
+    },
+    {
+      "item_cd": "ZSE30A-01-C-G",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "HSP0180-5028R27LINK",
+      "item_nm": "Robot Chain",
+      "spec": "HSP0180-50, 28R 27LINK, HPLPB02305002 교세라포장기#1 용적률증대",
+      "keyword": "포장"
+    },
+    {
+      "item_cd": "C17521-LISA4-RS",
+      "item_nm": "CREE LED LENS",
+      "spec": "Deg 16, 3.45 package led lens, h: 7.7 mm",
+      "keyword": "pack"
+    },
+    {
+      "item_cd": "99-14-68-0",
+      "item_nm": "소결판",
+      "spec": "400x300 (MGT, 돌기)",
+      "keyword": "소결"
+    },
+    {
+      "item_cd": "HAR_312_1",
+      "item_nm": "Harness",
+      "spec": "PVD Assy(UnLoading)",
+      "keyword": "pvd"
+    },
+    {
+      "item_cd": "ISE10-M5-A-G",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "정압용",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "25-08-02-0",
+      "item_nm": "Cup Cover",
+      "spec": "PVD Handler[한국야금]",
+      "keyword": "pvd"
+    },
+    {
+      "item_cd": "25-08-01-0",
+      "item_nm": "Cup",
+      "spec": "PVD Handler[한국야금]",
+      "keyword": "pvd"
+    },
+    {
+      "item_cd": "PressCell-FilmTarget",
+      "item_nm": "BFP Centering & DOT Film Target",
+      "spec": "BFP Centering[L.W 0.05, D.S 0.5, 50pi] & Dot FilmTarget[D.Si 5, D.Sp 10, 50x40]",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "4CH_LIGHT_CABLE",
+      "item_nm": "4채널 조명케이블",
+      "spec": "PRESS",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "ZSE10-M5-A-G",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "WRH100X45-12W",
+      "item_nm": "호닝형상검사기 저배율 조명",
+      "spec": "Size: 100 pi x 45 pi, Color: White, 1ch 구성",
+      "keyword": "검사기"
+    },
+    {
+      "item_cd": "ISE10-M5-A-G",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "정압용",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "ISE20A-R-01-J",
+      "item_nm": "Digital Pressure Switch",
+      "spec": "NPN / Analog 출력",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "IR1020-01BEA-ZA-A",
+      "item_nm": "PRESSURE REGULATOR",
+      "spec": "",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "PACK-MSSFS5-20-YBM",
+      "item_nm": "M5 풀림 방지 Bolt",
+      "spec": "1 pack/10ea",
+      "keyword": "pack"
+    },
+    {
+      "item_cd": "VHS40-04",
+      "item_nm": "Pressure Relief Valve",
+      "spec": "",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "ISE30A-01-N-L",
+      "item_nm": "PRESSURE S/W",
+      "spec": "",
+      "keyword": "press"
+    },
+    {
+      "item_cd": "67-00-103-0",
+      "item_nm": "Centering Pin Cap(Ø2.5)",
+      "spec": "PVD Handler Centering Pin (Ø2.5)",
+      "keyword": "pvd"
+    },
+    {
+      "item_cd": "67-00-102-0",
+      "item_nm": "Pin Guide(Ø2.5)",
+      "spec": "PVD Handler Centering Pin (Ø2.5)",
+      "keyword": "pvd"
+    }
+  ]
+}
