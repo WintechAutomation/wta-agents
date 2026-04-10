@@ -347,3 +347,7 @@
 {"ts": "2026-04-10 11:16:02", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "po_data json 이 지금 왜 필요하냐?"}
 {"ts": "2026-04-10 11:16:10", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "원본에서 바로 html 로 필터링 하면 되지않아?"}
 {"ts": "2026-04-10 11:16:48", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "html 파일 복사해서 변경내용 수정해봐"}
+{"ts": "2026-04-10 11:20:12", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "multi_project_items.json 이거 내가 규칙만들었떤 내용 아님?"}
+{"ts": "2026-04-10 11:21:54", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "프로젝트 반영시 MCA210T/MAD111T 이것만 참고해 그러려고 데이터 삭제한거임"}
+{"ts": "2026-04-10 11:22:25", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "3년 이내 발주는 사용예정이라 별개임"}
+{"ts": "2026-04-10 11:28:34", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "맨아래 합계행 글자가 너무작아 안보여"}

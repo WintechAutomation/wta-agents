@@ -95,13 +95,28 @@ DAEGU_KEYENCE = {
 # 전체 제외 Set 통합
 exclude_cds = CS_TYPE | CS_ONLY | CS_ADDITIONAL | CELL_PRESS | PLAN_ONLY | EXPIRED | DAEGU_KEYENCE
 
-# --- multi_project 로드 (프로젝트 변경용) ---
-with open(f'{base}/multi_project_items.json', 'r', encoding='utf-8') as f:
-    multi = json.load(f)
-multi_dict = {it['item_cd']: it for it in multi['items']}
+# --- MCA210T 발주이력 로드 (프로젝트 변경용) ---
+import os
+mca_path = f'{base}/MCA210T_발주현황_10년.json'
+mca_by_item = {}
+if os.path.exists(mca_path):
+    with open(mca_path, 'r', encoding='utf-8') as f:
+        mca_data = json.load(f)
+    for r in mca_data['items']:
+        cd = r['item_cd']
+        if cd not in mca_by_item:
+            mca_by_item[cd] = []
+        mca_by_item[cd].append({
+            'po_no': r.get('po_no', ''),
+            'po_dt': r.get('po_dt', ''),
+            'pjt_name': r.get('pjt_name', ''),
+            'po_qty': r.get('po_unit_qty', 0),
+        })
+    for cd in mca_by_item:
+        mca_by_item[cd].sort(key=lambda x: x['po_dt'], reverse=True)
+    print(f'MCA210T 발주이력: {len(mca_data["items"])}건 → {len(mca_by_item)}개 품목 로드')
 
 # --- MAD111T 재고감안 이력 로드 (프로젝트/장비 판단에 활용) ---
-import os
 mad_path = f'{base}/MAD111T_재고감안_10년.json'
 mad_by_item = {}
 if os.path.exists(mad_path):
@@ -117,7 +132,6 @@ if os.path.exists(mad_path):
             'pjt_name': r.get('pjt_name', ''),
             'po_qty': r.get('adv_qty', 0),
         })
-    # 날짜 역순 정렬
     for cd in mad_by_item:
         mad_by_item[cd].sort(key=lambda x: x['po_dt'], reverse=True)
     print(f'MAD111T 재고감안: {len(mad_data["items"])}건 → {len(mad_by_item)}개 품목 로드')
@@ -163,13 +177,12 @@ EXCLUDE_WHITELIST = {
 }
 
 def find_alt_project(item_cd):
-    """JS 제외 키워드에 안 걸리는 3년내 최신 프로젝트 찾기 (발주+재고감안 통합)"""
-    # MCA210T 발주이력
+    """JS 제외 키워드에 안 걸리는 3년내 최신 프로젝트 찾기 (MCA210T+MAD111T)"""
     po_history = []
-    mi = multi_dict.get(item_cd)
-    if mi:
-        po_history.extend(mi.get('po_history', []))
-    # MAD111T 재고감안 이력 추가
+    # MCA210T 발주이력
+    if item_cd in mca_by_item:
+        po_history.extend(mca_by_item[item_cd])
+    # MAD111T 재고감안 이력
     if item_cd in mad_by_item:
         po_history.extend(mad_by_item[item_cd])
     if not po_history:
@@ -342,6 +355,16 @@ new_html = new_html.replace(js_patch_old, js_patch_new)
 new_html = new_html.replace(
     'if (types.length > 1 && r[8]) {',
     'if (types.length > 1 && r[8] && !MULTI_EQUIP.has(r[1])) {'
+)
+
+# 합계행 폰트 크기 확대 (8pt → 11pt)
+new_html = new_html.replace(
+    "tfoot td { background: #f5f5f5; font-weight: 700; border-top: 2px solid #1a237e; position: sticky; bottom: 0; z-index: 4; }",
+    "tfoot td { background: #f5f5f5; font-weight: 700; font-size: 11pt; border-top: 2px solid #1a237e; position: sticky; bottom: 0; z-index: 4; }"
+)
+new_html = new_html.replace(
+    "font-weight:700;font-size:8pt;background:#f5f5f5;border-top:2px solid #1a237e;",
+    "font-weight:700;font-size:11pt;background:#f5f5f5;border-top:2px solid #1a237e;"
 )
 
 # 네비게이션 버튼 정의 (regex로 기존 버튼 교체)
