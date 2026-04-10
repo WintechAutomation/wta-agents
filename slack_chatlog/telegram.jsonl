@@ -391,3 +391,5 @@
 {"ts": "2026-04-10 14:55:42", "direction": "inbound", "user": "boss", "text": "리스트에서 qr 아이콘 누르면 라벨미리보기 나오게 하고 라벨인쇄 누르면 바로 데이터 연계해서 라벨프린트 되도록"}
 {"ts": "2026-04-10 14:56:05", "direction": "outbound", "user": "MAX", "text": "👑 전달 완료.\n\nQR 아이콘 클릭 시:\n- 해당 품목 데이터로 라벨 미리보기 표시\n- \"라벨 인쇄\" 버튼으로 바로 프린트\n\n총 4건 묶음 배포 예정."}
 {"ts": "2026-04-10 15:03:50", "direction": "outbound", "user": "MAX", "text": "👑 방금 cs-wta.com 재고 4건 묶음 배포 완료 받았습니다.\n\n- QR 데이터: 판매코드:품목코드\n- 품목코드 글씨: 가장 크고 굵게(black)\n- 재고등록: 창고/법인 드롭다운 + 위치 필드 추가\n- QR 아이콘 → 라벨 미리보기 모달 + 바로인쇄\n\n빌드/EC2 배포/nginx reload 완료.\n\n⚠️ 확인 필요: DB에 \"재고라벨\" 템플릿이 등록되어 있고 dataKey가 ITEM_CD/ITEM_NM/SPEC/SALE_CODE/LOCATION/QR 중 하나여야 자동 바인딩됩니다. db-manager에 확인 붙일까요?"}
+{"ts": "2026-04-10 17:05:54", "direction": "inbound", "user": "boss", "text": "재고 등록 이후에 관리 열에서 모든 필드를 수정하는 버튼을 추가해줘 실사변경 아이콘은 의미적으로 다른이미지로 변경"}
+{"ts": "2026-04-10 17:06:20", "direction": "outbound", "user": "MAX", "text": "👑 dev-agent에 요청 전달했습니다.\n\n- 관리 열에 전체 필드 수정 버튼 추가 (Edit 아이콘, i18n 4개 언어)\n- 실사변경 아이콘은 ClipboardCheck/PackageCheck 계열로 교체 (Pencil은 편집에 양보)\n\n빌드/배포 후 보고드리겠습니다."}
