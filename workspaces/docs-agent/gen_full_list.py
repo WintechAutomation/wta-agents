@@ -100,6 +100,28 @@ with open(f'{base}/multi_project_items.json', 'r', encoding='utf-8') as f:
     multi = json.load(f)
 multi_dict = {it['item_cd']: it for it in multi['items']}
 
+# --- MAD111T 재고감안 이력 로드 (프로젝트/장비 판단에 활용) ---
+import os
+mad_path = f'{base}/MAD111T_재고감안_10년.json'
+mad_by_item = {}
+if os.path.exists(mad_path):
+    with open(mad_path, 'r', encoding='utf-8') as f:
+        mad_data = json.load(f)
+    for r in mad_data['items']:
+        cd = r['item_cd']
+        if cd not in mad_by_item:
+            mad_by_item[cd] = []
+        mad_by_item[cd].append({
+            'po_no': r.get('adv_no', ''),
+            'po_dt': r.get('adv_dt', ''),
+            'pjt_name': r.get('pjt_name', ''),
+            'po_qty': r.get('adv_qty', 0),
+        })
+    # 날짜 역순 정렬
+    for cd in mad_by_item:
+        mad_by_item[cd].sort(key=lambda x: x['po_dt'], reverse=True)
+    print(f'MAD111T 재고감안: {len(mad_data["items"])}건 → {len(mad_by_item)}개 품목 로드')
+
 # JS EXCLUDE_PJT 키워드 (recalcAll에서 사용예정 제외하는 키워드)
 JS_EXCLUDE_PJT = ['개발', '판매', '무상', '교체', '개조', '부품', '수리', '소모품', '소모성']
 cutoff_3y = datetime(2023, 3, 1)  # 3년+1개월 여유 (경계선 품목 누락 방지)
@@ -126,11 +148,20 @@ EXCLUDE_WHITELIST = {
 }
 
 def find_alt_project(item_cd):
-    """JS 제외 키워드에 안 걸리는 3년내 최신 프로젝트 찾기"""
+    """JS 제외 키워드에 안 걸리는 3년내 최신 프로젝트 찾기 (발주+재고감안 통합)"""
+    # MCA210T 발주이력
+    po_history = []
     mi = multi_dict.get(item_cd)
-    if not mi:
+    if mi:
+        po_history.extend(mi.get('po_history', []))
+    # MAD111T 재고감안 이력 추가
+    if item_cd in mad_by_item:
+        po_history.extend(mad_by_item[item_cd])
+    if not po_history:
         return None
-    for po in mi.get('po_history', []):
+    # 날짜 역순 정렬 (최신순)
+    po_history.sort(key=lambda x: x.get('po_dt', ''), reverse=True)
+    for po in po_history:
         pjt = po.get('pjt_name', '')
         po_dt = po.get('po_dt', '')
         if any(kw in pjt for kw in JS_EXCLUDE_PJT):
