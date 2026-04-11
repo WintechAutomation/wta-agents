@@ -1,0 +1,402 @@
+[
+  {
+    "id": 361395,
+    "source_file": "ABB_ABB_Manual_EN.pdf",
+    "category": "1_robot",
+    "page_number": 6,
+    "chunk_index": 11,
+    "content": "IRB 360 High payload variants\n© ABB Group \nDecember 14, 2013 | Slide 6\nIRB 360-8/1130\n8 kg payload capacity\n1130 mm reach\n350 mm vertical stroke\nIRB 360-6/1600\n6 kg payload capacity\n1600 mm reach\n460 mm vertical stroke"
+  },
+  {
+    "id": 361708,
+    "source_file": "Cognex_Unknown_InstallGuide_EN_2.pdf",
+    "category": "1_robot",
+    "page_number": null,
+    "chunk_index": 2,
+    "content": "문서: Cognex_Unknown_InstallGuide_EN_2 > 섹션: Legal Notices\n\n## Legal Notices\n\nThe software described in this document is furnished under license, and may be used or copied only in accordance with the terms of such license and with the inclusion of the copyright notice shown on this page. Neither the software, this document, nor any copies thereof may be provided to, or otherwise made available to, anyone other than the licensee. Title to, and ownership of, this software remains with Cognex Corporation or its licensor. Cognex Corporation assumes no responsibility for the use or reliability of its software on equipment that is not supplied by Cognex Corporation. Cognex Corporation makes no warranties, either express or implied, regarding the described software, its merchantability, non-infringement or its fitness for any particular purpose.\n\nThe information in this document is subject to change without notice and should not be construed as a commitment by Cognex Corporation. Cognex Corpora"
+  },
+  {
+    "id": 361918,
+    "source_file": "Cognex_Unknown_InstallGuide_EN_3.pdf",
+    "category": "1_robot",
+    "page_number": null,
+    "chunk_index": 2,
+    "content": "문서: Cognex_Unknown_InstallGuide_EN_3 > 섹션: Legal Notices\n\n## Legal Notices\n\nThe software described in this document is furnished under license, and may be used or copied only in accordance with the terms of such license and with the inclusion of the copyright notice shown on this page. Neither the software, this document, nor any copies thereof may be provided to, or otherwise made available to, anyone other than the licensee. Title to, and ownership of, this software remains with Cognex Corporation or its licensor. Cognex Corporation assumes no responsibility for the use or reliability of its software on equipment that is not supplied by Cognex Corporation. Cognex Corporation makes no warranties, either express or implied, regarding the described software, its merchantability, non-infringement or its fitness for any particular purpose.\n\nThe information in this document is subject to change without notice and should not be construed as a commitment by Cognex Corporation. Cognex Corpora"
+  },
+  {
+    "id": 362095,
+    "source_file": "Cognex_Unknown_InstallGuide_EN_4.pdf",
+    "category": "1_robot",
+    "page_number": null,
+    "chunk_index": 2,
+    "content": "문서: Cognex_Unknown_InstallGuide_EN_4 > 섹션: Legal Notices\n\n## Legal Notices\n\nThe software described in this document is furnished under license, and may be used or copied only in accordance with the terms of such license and with the inclusion of the copyright notice shown on this page. Neither the software, this document, nor any copies thereof may be provided to, or otherwise made available to, anyone other than the licensee. Title to, and ownership of, this software remains with Cognex Corporation or its licensor. Cognex Corporation assumes no responsibility for the use or reliability of its software on equipment that is not supplied by Cognex Corporation. Cognex Corporation makes no warranties, either express or implied, regarding the described software, its merchantability, non-infringement or its fitness for any particular purpose.\n\nThe information in this document is subject to change without notice and should not be construed as a commitment by Cognex Corporation. Cognex Corpora"
+  },
+  {
+    "id": 362305,
+    "source_file": "Cognex_Unknown_InstallGuide_EN_5.pdf",
+    "category": "1_robot",
+    "page_number": null,
+    "chunk_index": 2,
+    "content": "문서: Cognex_Unknown_InstallGuide_EN_5 > 섹션: Legal Notices\n\n## Legal Notices\n\nThe software described in this document is furnished under license, and may be used or copied only in accordance with the terms of such license and with the inclusion of the copyright notice shown on this page. Neither the software, this document, nor any copies thereof may be provided to, or otherwise made available to, anyone other than the licensee. Title to, and ownership of, this software remains with Cognex Corporation or its licensor. Cognex Corporation assumes no responsibility for the use or reliability of its software on equipment that is not supplied by Cognex Corporation. Cognex Corporation makes no warranties, either express or implied, regarding the described software, its merchantability, non-infringement or its fitness for any particular purpose.\n\nThe information in this document is subject to change without notice and should not be construed as a commitment by Cognex Corporation. Cognex Corpora"
+  },
+  {
+    "id": 361449,
+    "source_file": "Cognex_Unknown_InstallGuide_EN.pdf",
+    "category": "1_robot",
+    "page_number": null,
+    "chunk_index": 37,
+    "content": "문서: Cognex_Unknown_InstallGuide_EN > 섹션: Precautions\n\n## Precautions\n\nObserve these precautionswhen installing In-Sight 5000 series vision systems to reduce the risk of injury or equipment damage:\n\n- l In-Sight 5000 series vision systems are intended to be supplied by a UL or NRTLlisted power supplywith a 24VDC output rated for at least 600 mA continuousand a maximum short circuit current rating of less than 8A and a maximumpower rating of lessthan 100VA and marked Class2 or Limited Power Source (LPS). Anyother voltage creates a risk of fire or shock and can damage the In-Sight components.\n- l DonotinstallIn-Sight vision systems where they are directly exposed to environmentalhazardssuch asexcessive heat, dust, moisture, humidity, impact, vibration, corrosive substances, flammable substances, or static electricity.\n- l Toreduce the risk of damage or malfunction due to over-voltage, line noise, electrostatic discharge (ESD), power surges, or other irregularities in the power supply, rou"
+  },
+  {
+    "id": 362514,
+    "source_file": "Cognex_Unknown_Manual_KO.pdf",
+    "category": "1_robot",
+    "page_number": null,
+    "chunk_index": 1,
+    "content": "문서: Cognex_Unknown_Manual_KO\n\nht  2008 - 2009 Cognex Corporation. All Rights Reserved.\n\nCognex 가 제공하는 하드웨어 및 소프트웨어는 아래의 미국 및 해외 특허법을 비롯하여 출원 중인 미국 및 해외 특허법 중 하나 이상의 적용을 받 을 수 있습니다 . 이 문서의 발행 날짜 이후에 발급된 출원 중인 미국 및 해외 특허는 Cognex 의 웹사이트 http://www.cognex.com/patents 에 나와 있습니다 .\n\n5481712, 5742037, 5751853, 5845007, 5909504, 5943441, 5949905, 5960125, 5978080, 5978081, 6005978, 6137893, 6141033, 6154567, 6215915, 6236769, 6282328, 6301396, 6327393, 6381375, 6408109, 6457032, 6490600, 6563324, 6658145, 6690842, 6771808, 6804416, 6836567, 6850646, 6856698, 6859907, 6920241, 6941026, 6959112, 6963338, 6975764, 6985625, 6993192, 7006712, 7016539, 7043081, 7058225, 7065262, 7069499, 7088862, 7107519, 7164796, 7175090, 7181066, 7251366, JP 3927239\n\nCognex, In-Sight, VisionView, DVT 는 Cognex Corporation 의 등록상표입니다 .\n\nCognex 로고는 Cognex Corporation 의 상표입니다 .\n\n본 문서에 언급된 기타 제품 및 회사명은 각 소유자의 상표 또는 등록 상표입니다 ."
+  },
+  {
+    "id": 362629,
+    "source_file": "LS_SANMOTION_SetupGuide_EN.pdf",
+    "category": "1_robot",
+    "page_number": null,
+    "chunk_index": 5,
+    "content": "문서: LS_SANMOTION_SetupGuide_EN > 섹션: Preface\n\n## Preface\n\nThank you for purchasing our SANMOTION servo system.\n\nThis is instruction manual for SANMOTION Motor Setup that is convenient introduction support tool for our servo amplifier.\n\n-  Please refer this at startup and adjustment of the servo system.\n-  Also refer a manual of each servo amplifier.\n\n※ The screenshot in this manual might differ from actual.\n\n※ In  this  document,  RS3 means \"SANMOTION R 3E Model\", RS2 means \"SANMOTION R ADVANCED MODEL\", SSmeans  \"SANMOTION  S\",  F2  means  \"SANMOTION  F2\",  F5  means  \"SANMOTION  F5\"  and  PB  means \"SANMOTION Model No.PB\"."
+  },
+  {
+    "id": 362920,
+    "source_file": "LS_SPOT-CHAPTER4_Manual_EN.pdf",
+    "category": "1_robot",
+    "page_number": 1,
+    "chunk_index": 1,
+    "content": "11.1  \u0001\u0002 \u0004\u0005 \u0006\u0007\n11-1\n11 \u0001\u0002\u0003\u0004\u0005\u0006\u0007\b\n\u0001\u0001\u0002\u0001 \u0001\u0002 \u0004\u0005 \u0006\u0007\n*1\n\u0001\u0002 \u0004\u0005 \u0006\u0007\b \t\n\u000b\f\r \u000e\n\u000f \u0010\u0011\u0012\u0013\u0014\u0015 \u0016\u0012\u0017 \u0018\u0019\n\u0010\u0011\u0012\u0013\u0014\u0015 \u0016\u0012\u0017 \u0018\u0019\u001a \u001b\u001c\u001d \u001e\u001f \f\r \u000e\n!\"#$#%&' \u001d ()\u0007 *+, *-- . /0 12\u000b\f\r \u000e\n3 4 50\n\u0001\u0002 \u0004\u0005 67\n\u001a 8/ 4 50\u001d \u001e\u001f \f\r \u000e\n!\"#$#%&' \u001d ()\u0007 \u00019 :; /<= >?= , \u00019 :;@A !#+&#B' \u001d (\nC\f\r \u000e\nD 67E4 FG&HI\n\u0001\u0002 \u0004\u0005 67\n\u001a 67 E4 50\u001d \u001e\u001f \f\r \u000e\n!\"#$#%&' \u001d ()\u0007 \u00019 :; /<= >?= , \u00019 :;@A !#+&#B' \u001d\n(C\f\r \u000e\nJ \u0002K LM\n4\u001a \u0002K LM\u001d \u001e\u001f \f\r \u000e\n67NO 67P\u001a 4\u001a QR/<. \t\n>\u0019 ST\f\r \u000e\nQR/<\u001d UVW VXY !\"#$#%&' \u001d ()\u0007 Z[ 8\u0006/\\. \t\n\u000b\f\r \u000e\n]@Y QR/<\u001d Z[ \f\r \u000e\n\u0001\u0002\u0003\u0004 \u0006\u0007 \b \t\n\u000b\f\n\r \u000e\u000f\u0010\u0011\u0012 \u0013 \u0014\u0015\u0016 \u0001\u0002\n\u0017\u0018\u0019\u001a\u001b \u0019\u001c \u001d\u001e\u0013 \u001f \n\u0001\u0002\u0003\u0004\n\u0005\u0006\n\u0001\n\u0002\n\u0003\n\u0004\nEDIT\nDISPLAY\nDATA\nUTILITY\nMANUAL SPOT\nTWO GUN CONTROL       : OFF\nGUN NO.                            : 1\nWELDING COND(WTM)    :1\nACTION MODE                   :MODE1\n!\nR1\nS\nC\nL"
+  },
+  {
+    "id": 362964,
+    "source_file": "LS_Unknown_CommManual_EN_2.pdf",
+    "category": "1_robot",
+    "page_number": null,
+    "chunk_index": 1,
+    "content": "문서: LS_Unknown_CommManual_EN_2 > 섹션: Connection with personal computer[RS-232C/Ethernet]\n\n## Connection with personal computer[RS-232C/Ethernet]\n\nRevision  N:  Oct  11,  2011 Revision M: Mar 26, 2009 Revision  L:  Oct  23,  2008 Revision  K:  Feb  15,  2005 Revision  J:  Jul  7    ,  2004 Revision  H:  Feb  10,  2004 Revision  G:  Jan  23,  2004 Revision  F:  Aug  19,  2003"
+  },
+  {
+    "id": 363298,
+    "source_file": "LS_Unknown_CommManual_EN_3.pdf",
+    "category": "1_robot",
+    "page_number": null,
+    "chunk_index": 1,
+    "content": "문서: LS_Unknown_CommManual_EN_3 > 섹션: Connection with personal computer[RS-232C/Ethernet]\n\n## Connection with personal computer[RS-232C/Ethernet]\n\nRevision  N:  Oct  11,  2011 Revision M: Mar 26, 2009 Revision  L:  Oct  23,  2008 Revision  K:  Feb  15,  2005 Revision  J:  Jul  7    ,  2004 Revision  H:  Feb  10,  2004 Revision  G:  Jan  23,  2004 Revision  F:  Aug  19,  2003"
+  },
+  {
+    "id": 363632,
+    "source_file": "LS_Unknown_CommManual_EN_4.pdf",
+    "category": "1_robot",
+    "page_number": null,
+    "chunk_index": 1,
+    "content": "문서: LS_Unknown_CommManual_EN_4 > 섹션: Connection with personal computer[RS-232C/Ethernet]\n\n## Connection with personal computer[RS-232C/Ethernet]\n\nRevision  N:  Oct  11,  2011 Revision M: Mar 26, 2009 Revision  L:  Oct  23,  2008 Revision  K:  Feb  15,  2005 Revision  J:  Jul  7    ,  2004 Revision  H:  Feb  10,  2004 Revision  G:  Jan  23,  2004 Revision  F:  Aug  19,  2003"
+  },
+  {
+    "id": 467573,
+    "source_file": "Applied Motion_TSM23S-Q_InstallGuide_EN.pdf",
+    "category": "4_servo",
+    "page_number": null,
+    "chunk_index": 7,
+    "content": "문서: Applied Motion_TSM23S-Q_InstallGuide_EN > 섹션: 1.1  Features\n\n## 1.1  Features\n\n- Programmable, Digital servo driver and motor in an integrated package\n- Operates from a 12 to 70 volt DC power supply\n- Control Modes:"
+  },
+  {
+    "id": 467655,
+    "source_file": "Applied Motion_TSM_ParameterManual_EN.pdf",
+    "category": "4_servo",
+    "page_number": null,
+    "chunk_index": 1,
+    "content": "문서: Applied Motion_TSM_ParameterManual_EN > 섹션: TSM Integrated S tepS ervo\n\n## TSM Integrated S tepS ervo\n\nThe Step Servo is an innovative revolution for the world of stepping motor, it enhances the stepping motor with servo technology to create a product with exceptional feature and broad capability.\n\nTSM is MOONS' 3 rd generation integrated step-servo and compact motor+drive+encoder+controller all-in-one solution. With improved technology, TSM upgrades significant key features based on 2 nd generation SSM and operates more efficiently and intelligently."
+  },
+  {
+    "id": 467686,
+    "source_file": "Beckhoff_CAT_CommManual_EN.pdf",
+    "category": "4_servo",
+    "page_number": null,
+    "chunk_index": 3,
+    "content": "문서: Beckhoff_CAT_CommManual_EN > 섹션: EtherCAT Basics\n\n## EtherCAT Basics\n\nSlave Structure\n\nDevice Model (ISO/OSI)\n\nPhysical Layer\n\nData Link Layer\n\nFrame Structure\n\nAddressing\n\nCommands\n\nMemory/Registers\n\nSyncManager\n\nFMMU\n\nDiagnosis\n\nDistributed Clocks\n\nApplication Layer\n\nState Machine"
+  },
+  {
+    "id": 468285,
+    "source_file": "Beckhoff_EM3E-B_UserManual_EN.pdf",
+    "category": "4_servo",
+    "page_number": null,
+    "chunk_index": 3,
+    "content": "문서: Beckhoff_EM3E-B_UserManual_EN > 섹션: Notice\n\n## Notice\n\nRead this manual carefully before any assembling and using. Incorrect handling of products in this manual can result in injury and damage to persons and machinery. Strictly adhere to the technical information regarding installation requirements.\n\nThis manual is not for use or disclosure outside of Leadshine except under permission. All rights are reserved. No part of this manual shall be reproduced, stored in retrieval form, or transmitted by any means, electronic, mechanical, photocopying, recording, or otherwise without approval from Leadshine. While every precaution has been taken in the preparation of the book, Leadshine assumes no responsibility for errors or omissions. Neither is any liability assumed for damages resulting from the use of the information contained herein.\n\nThis document is proprietary information of Leadshine that is furnished for customer use ONLY. Information in this document is subject to change withou"
+  },
+  {
+    "id": 468562,
+    "source_file": "EtherCAT_CAT_Reference_EN.pdf",
+    "category": "4_servo",
+    "page_number": null,
+    "chunk_index": 1,
+    "content": "문서: EtherCAT_CAT_Reference_EN > 섹션: EtherCAT is:\n\n## EtherCAT is:\n\n- Faster\n- Synchronization\n- Industrial Ethernet\n- Flexible\n- Easier to configure\n- Cost effective\n- Easier to implement\n- Well proven\n- Open\n- Conformance\n- Safety\n- Redundancy\n- Versatile"
+  },
+  {
+    "id": 468931,
+    "source_file": "Fastech_CAT_CommManual_KO_2.pdf",
+    "category": "4_servo",
+    "page_number": null,
+    "chunk_index": 1,
+    "content": "문서: Fastech_CAT_CommManual_KO_2 > 섹션: 목   차\n\n## 목   차\n\n## Manual Version : [ver1.0]\n\n적용 GUI version : 없음\n\n## 제 1 장 안전 및 설치 시 주의 사항\n\n## 안전 및 설치 시 주의 사항\n\n## ※ 사용하시기 전에\n\n- ㈜파스텍 Ezi-IO EtherCAT 을 구입해 주셔서 대단히 감사합니다.\n- Ezi-IO EtherCAT 은 EtherCAT Slave Controller 칩을 탑재한 Full Digital 입출력 제어 Unit 입니다.\n- 이 사용자 설명서에는 Ezi-IO EtherCAT 의 취급 방법, 안전상의 주의 사항, 이상 진단과 처치 방법 및 사양 등이 기재 되어 있습니다.\n- 사용자 설명서를 잘 이해하신 후에 Ezi-IO EtherCAT 을 안전하게 사용하여 주십시오.\n- 사용자 설명서를 다 읽으신 후에는 본 제품을 사용하는 사람이 언제든지 볼 수 있도록 잘 보관해 주십시오."
+  },
+  {
+    "id": 469093,
+    "source_file": "Fastech_CAT_CommManual_KO_3.pdf",
+    "category": "4_servo",
+    "page_number": null,
+    "chunk_index": 1,
+    "content": "문서: Fastech_CAT_CommManual_KO_3 > 섹션: 목 차\n\n## 목 차\n\n## 제 1 장 안전 및 설치 시 주의 사항\n\n## 1.1 사용하시기 전에\n\n-  ㈜파스텍 Ezi-IO EtherCAT DA 를 구입해 주셔서 감사합니다 .\n-  Ezi-IO EtherCAT DA 는 EtherCAT Slave Controller 칩을 탑재한 아날로그 출력 모듈입니다 .\n-  이 사용자 설명서에는 Ezi-IO EtherCAT DA 의 취급 방법 , 안전상의 주의 사항 및 사양 등이 기재되어 있습니다 .\n-  사용자 설명서를 잘 이해하신 후에 Ezi-IO EtherCAT DA 를 안전하게 사용하여 주십시오 .\n-  사용자 설명서를 다 읽으신 후에는 본 제품을 사용하는 사람이 언제든지 볼 수 있도록 잘 보관해 주십시오 ."
+  },
+  {
+    "id": 468785,
+    "source_file": "Fastech_CAT_CommManual_KO.pdf",
+    "category": "4_servo",
+    "page_number": null,
+    "chunk_index": 43,
+    "content": "문서: Fastech_CAT_CommManual_KO > 섹션: 제 1 장 안전 및 설치 시 주의\n\n## 제 1 장 안전 및 설치 시 주의\n\n## 1.1 사용하시기 전에\n\n- ㈜파스텍 Ezi-IO EtherCAT AD 를 구입해 주셔서 대단히 감사합니다 .\n- Ezi-IO EtherCAT AD 는 EtherCAT Slave Controller 칩을 탑재한 아날로그 입력 모듈 입니다 .\n- 이 사용자 설명서에는 Ezi-IO EtherCAT AD 의 취급 방법 , 안전상의 주의 사항 및 사양 등이 기재되어 있습니다 .\n- 사용자 설명서를 잘 이해하신 후에 Ezi-IO EtherCAT AD 를 안전하게 사용하여 주십시오 .\n- 사용자 설명서를 다 읽으신 후에는 본 제품을 사용하는 사람이 언제든지 볼 수 있도록 잘 보관해 주십시오 ."
+  },
+  {
+    "id": 469355,
+    "source_file": "Fastech_MOTIONLINK_CommManual_KO.pdf",
+    "category": "4_servo",
+    "page_number": null,
+    "chunk_index": 2,
+    "content": "문서: Fastech_MOTIONLINK_CommManual_KO > 섹션: １－１－１．통신 사양\n\n## １－１－１．통신 사양\n\n## １－１－２．Ethernet IP 주소\n\n-  공장출하 시 초기값\n-  PC 또는 Ethernet 장치에서 직접   Plus-E 에 연결할 경우 반드시 Network 설정을 위의 IP  주소에 준하여 설정하여 주십시오. 설정이 안되었거나 상이할 경우 연결할 수 없습니다.\n- DHCP 를 사용하기 때문에 공유기를 사용할 경우에만 IP Address 가 자동으로 설정\n-  스위치를 255(FF)로 설정하면 IP Address 는 자동으로 설정됩니다. 됩니다. (Ethernet IN 커넥터에 Ethernet 을 연결 하십시오)\n-  제어기(PC, PLC 등)에서 직접 연결할 경우에는 반드시 스위치로 IP Address 를 설정 하십시오.\n-  상기의 기본 IP Address 를 사용하지 않을 경우에만 IP Address 를 자동으로 설정 하십시오. 자동으로 IP 가 설정 되면 사용자 프로그램(GUI)을 접속하여 IP Address 를 저장한 후에 전원을 차단하고 스위치로 IP의 마지막 번호를 설정 하십시오.\n-  IP  설정 스위치를 0 으로 하면 IP 설정이 상기 값으로 초기화 됩니다.\n\n- 1) Gateway     : 192.168.0.1\n\n- 2)\n\n- Subnet Mask : 255.255.255.0\n\n- 3) IP address    : 192.168.0.x (x 는 외부 스위치에 의해 설정)"
+  },
+  {
+    "id": 469690,
+    "source_file": "Fastech_MOTIONLINK_Manual_KO_2.pdf",
+    "category": "4_servo",
+    "page_number": null,
+    "chunk_index": 2,
+    "content": "문서: Fastech_MOTIONLINK_Manual_KO_2 > 섹션: １．안전 및 설치 시 주의 사항\n\n## １．안전 및 설치 시 주의 사항\n\n## ※ 사용하시기 전에\n\n- 파스텍 Ezi-MOTIONLINK Plus-E 을 구입해 주셔서 대단히 감사합니다.\n- Ezi-MOTIONLINK Plus-E 은 32bit 고성능 ARM 칩을 탑재한 Full Digital 위치 제어 Unit 입니다.\n- 이 사용자 설명서에는 Ezi-MOTIONLINK Plus-E의 취급 방법, 안전상의 주의 사항, 이상 진단과 조치 방법 및 사양 등이 기재되어 있습니다.\n- 사용자 설명서를 잘 이해하신 후에 Ezi-MOTIONLINK Plus-E을 안전하게 사용하여 주십시오.\n- 사용자 설명서를 다 읽으신 후에는 본 제품을 사용하는 사람이 언제든지 볼 수 있도록 잘 보관해 주십시오."
+  },
+  {
+    "id": 469655,
+    "source_file": "Fastech_MOTIONLINK_Manual_KO.pdf",
+    "category": "4_servo",
+    "page_number": null,
+    "chunk_index": 2,
+    "content": "문서: Fastech_MOTIONLINK_Manual_KO > 섹션: 목   차\n\n## 목   차\n\n## ※ 사용하시기 전에\n\n-  본제품 「Ezi-MOTIONLINK Plus-E 사용자 매뉴얼 '포지션 테이블 기능편'」은 Ezi-MOTIONLINK Plus-E 의 포지션 테이블 기능을 설명한 것입니다. 본서와 함께 「사용자 매뉴얼\\_본문편」, 「사용자 매뉴얼\\_통신 기능편」이 있습니다. 이 내용을 숙독하여 올바른 사용 방법을 이해한 후에 사용해 주십시오. '포지션 테이블'이라는 단어를 아래의 본문에서는 'PT(Position Table)'로도 표현합니다.\n-  특히 자매편 「사용자 매뉴얼\\_본문편」에 기재되어 있는 안전에 관한 주의 사항 내용은 올바르게 이해하신 후 잊지 않도록 유의해 주십시오. 또한 어떠한 경우에도 절대로 잘못된 취급을 하지 않도록 충분히 주의해 주십시오. 최악의 경우 사망 사고 등의 중대 사고 발생의 우려가 있습니다.\n-  Ezi-MOTIONLINK Plus-E 의 포지션 테이블은 통신 명령에 의해서만 동작하며, 외부 접점으로는 동작하지 않습니다."
+  },
+  {
+    "id": 469749,
+    "source_file": "Fastech_MOTIONLINK_SetupGuide_KO.pdf",
+    "category": "4_servo",
+    "page_number": null,
+    "chunk_index": 2,
+    "content": "문서: Fastech_MOTIONLINK_SetupGuide_KO > 섹션: 목   차\n\n## 목   차\n\n본 매뉴얼은 사용자 프로그램(GUI)의 작동법 위주로 설명되어 있습니다.\n\n자세한 기능에 대해서는 다음의 관련 매뉴얼을 참조하여 주십시오.\n\n- (1)  사용자 매뉴얼\\_본문편\n- (2)  사용자 매뉴얼\\_통신 기능편\n- (3)  사용자 매뉴얼\\_포지션 테이블 기능편"
+  },
+  {
+    "id": 438096,
+    "source_file": "ABB_ABB_CommManual_KO_2.pdf",
+    "category": "3_hmi",
+    "page_number": 2,
+    "chunk_index": 3,
+    "content": "TOP 통신 매뉴얼 \nCOM1,COM2 2PORT 동시 통신 [Rev. A] \n페이지 2\n \n1. PORT 구성 및 연결 \nTOP 본체는 기존의 PLC 및 외부기기 컨트롤러에 대한 시리얼 인터페이스를 위해 COM2 \n포트를 제공하고 있습니다. COM2 포트는 RS-232 또는 RS-422/485 시리얼 통신을 사용할\n수 있습니다,  \nCOM1 포트는 Designer 에서 작성한 작화를 TOP 본체로 다운로드하기 위한 전용 포트로서 \nRS-232 시리얼 통신만 지원하고 있습니다. COM1 포트의 경우 사용자가 2PORT 통신을 사\n용할 경우 PLC 및 컨트롤러와 연결하여 COM2 포트와 동시에 사용이 가능합니다. \n이때 COM2 의 경우에는 RS-232 와 RS-422/485 통신을 지원하지만 COM1 의 경우에는 \nRS-232 통신만을 지원하기 때문에 RS-422/485 통신을 사용하는 PLC 및 컨트롤러는 \nCOM1 포트를 사용할 수 없습니다. \n \nTOP 의 COM1 포트는 RS232 시리얼 통신만 지원하기 때문에 RS422/485 통신\n을 사용하는 PLC 나 컨트롤러는 연결할 수 없습니다. \n \n2. COM2/COM1 포트 연결 및 통신 설정 \nCOM1, COM2 를 사용하여 2 대 이상의 PLC, 컨트롤러간의 2 포트 통신을 하기 위해서는 \n다음과 같은 방식으로 연결해야 합니다. \n \nCOM2 포트 연결 및 통신 설정 \nCOM2 포트를 사용한 통신연결 및 설정은 기존의 방식과 동일하며 각 PLC, 컨트롤러에 \n대한 결선 및 통신 설정은 통신 매뉴얼을 참조하시기 바랍니다.  \n \nCOM1 포트 연결 \nC"
+  },
+  {
+    "id": 691241,
+    "source_file": "ABB_ABB_CommManual_KO.pdf",
+    "category": "3_hmi",
+    "page_number": 5,
+    "chunk_index": 9,
+    "content": "TOP 통신 매뉴얼 \nABB INVERTER ACS140/400 Series \n페이지 4\n< TOP 설정 > \n(1) TOP Designer 에서의 설정 \n외부기기 기종 중에서 “ABB Inverter ACS140/400 Series”을 선택합니다. \n \n \n(2) TOP 에서의 시리얼 설정 \n시리얼 설정은 PLC 와 동일하게 설정해 주어야 합니다.  \n \n시리얼 보우레이트 : PLC 와 동일하게 설정 \n시리얼 데이터비트 : PLC 와 동일하게 설정 \n시리얼 정지비트: PLC 와 동일하게 설정 \n시리얼 패리티비트 : PLC 와 동일하게 설정 \n시리얼 신호레벨 : RS-485 \n통신진단시 상대 국번(0~31) : PLC 와 동일하게 설정"
+  },
+  {
+    "id": 438112,
+    "source_file": "ABB_TOP_Manual_KO_2.pdf",
+    "category": "3_hmi",
+    "page_number": null,
+    "chunk_index": 2,
+    "content": "문서: ABB_TOP_Manual_KO_2 > 섹션: 페이지 2\n\n## 페이지 2\n\n1. PORT 구성 및 연결\n\nTOP 본체는 기존의 PLC 및 외부기기 컨트롤러에 대한 시리얼 인터페이스를 위해 COM2\n\n포트를 제공하고 있습니다. COM2 포트는 RS-232 또는 RS-422/485 시리얼 통신을 사용할\n\n수 있습니다,\n\nCOM1 포트는 Designer 에서 작성한 작화를 TOP 본체로 다운로드하기 위한 전용 포트로서\n\nRS-232 시리얼 통신만 지원하고 있습니다. COM1 포트의 경우 사용자가 2PORT 통신을 사\n\n용할 경우 PLC 및 컨트롤러와 연결하여 COM2 포트와 동시에 사용이 가능합니다.\n\n이때 COM2 의 경우에는 RS-232 와 RS-422/485 통신을 지원하지만 COM1 의 경우에는\n\nRS-232 통신만을 지원하기 때문에 RS-422/485 통신을 사용하는 PLC 및 컨트롤러는\n\nCOM1 포트를 사용할 수 없습니다.\n\nTOP 의 COM1 포트는 RS232 시리얼 통신만 지원하기 때문에 RS422/485 통신\n\n주의\n\n을 사용하는 PLC 나 컨트롤러는 연결할 수 없습니다.\n\n2. COM2/COM1 포트 연결 및 통신 설정\n\nCOM1, COM2 를 사용하여 2 대 이상의 PLC, 컨트롤러간의 2 포트 통신을 하기 위해서는\n\n다음과 같은 방식으로 연결해야 합니다.\n\nCOM2 포트 연결 및 통신 설정\n\nCOM2 포트를 사용한 통신연결 및 설정은 기존의 방식과 동일하며 각 PLC, 컨트롤러에\n\n대한 결선 및 통신 설정은 통신 매뉴얼을 참조하시기 바랍니다.\n\nCOM1 포트 연결\n\nCOM1 포트는 RS232 통신 방식으로 6PIN 커넥터를 사용하며 PLC 나 컨트롤러와의 결선\n\n방법은 다음과 같습니다.\n\n1\n\n1\n\n6\n\n6\n\n5\n\n5\n\nPLC/Controller측TX\n\n2               \nRD\n\n2               \nRD\n\n4\n\n4\n\n3\n\n3\n\nPLC/Controller측SG\n\n3               \nSG\n\n3       "
+  },
+  {
+    "id": 438104,
+    "source_file": "ABB_TOP_Manual_KO.pdf",
+    "category": "3_hmi",
+    "page_number": null,
+    "chunk_index": 2,
+    "content": "문서: ABB_TOP_Manual_KO > 섹션: 페이지 2\n\n## 페이지 2\n\nABB INVERTER ACS140/400 Series\n\nABB INVERTER ACS140/400 Series 인터페이스\n\nABB INVERTER ACS140/400 와 본 기기간의 RS-485 시리얼 인터페이스 방법에 대해 알\n\n아봅니다.\n\n< 시스템 구성 >\n\n본 기기와 ABB INVERTER ACS140/400 을 연결하는 경우의 시스템 구성을 나타냅니다\n\n외부기기 \n통신 유닛 \n케이블 \nTOP\n\nTOP\n\nACS140 \nRS485/232\n\nAdapter \n결선도 참조 \nTOP 전기종\n\nACS400 \n없음\n\n< 케이블 결선 >\n\n(1) RS-485 케이블 결선도(ACS140 시리즈 ↔ TOP 시리즈)\n\n외부기기측                          TOP 측(5Pin Terminal / 15Pin)\n\n1 \nB\n\n1 \nB\n\n1/11           RDA\n\n1/11           RDA\n\n2 \nC\n\n2 \nC\n\n2/12            RDB\n\n2/12            RDB\n\n3 \nA\n\n3 \nA\n\n3/13          SDA\n\n3/13          SDA\n\n4/14            SDB\n\n4/14            SDB\n\n5/15            SG\n\n5/15            SG\n\nTOP 통신 매뉴얼 \nABB INVERTER ACS140/400 Series \n페이지 1\n\n---"
+  },
+  {
+    "id": 438120,
+    "source_file": "ACS_Unknown_CommManual_KO.pdf",
+    "category": "3_hmi",
+    "page_number": null,
+    "chunk_index": 1,
+    "content": "문서: ACS_Unknown_CommManual_KO > 섹션: 페이지 1\n\n## 페이지 1\n\nVersion 5.20\n\n---\n\n## 페이지 2\n\n목차\n\n▣ SPiiPlus <-> Hakko Touch 통신연결 Cable 배선도\n\n1\n\n1\n\n▣ SPiiPlus ModBus 통신연결  Program 설정방법\n\n2\n\n▣ ModBus Protocal\n\n▣ Standard Variable as Holding Registers Address(7page)\n\n2 ~ 8\n\n▣ Standard Variable as Holding Registers 설정방법\n\n8\n\n9\n\n▣ ACSPL+ Standard Variable as Coil Address(1page)\n\n9\n\n▣ ACSPL+ Standard Variable as Coil 설정방법\n\n▣ User-defind Variables as Holding Registers Address(1page)\n\n10\n\n▣ User-defind Variables as Holding Registers 설정방법\n\n10\n\n▣ ACSPL+ Commands Address(1page)\n\n11\n\n12\n\n▣ ACSPL+ Commands 설정방법\n\n---"
+  },
+  {
+    "id": 438157,
+    "source_file": "BoschRexroth_TOP_Manual_KO.pdf",
+    "category": "3_hmi",
+    "page_number": null,
+    "chunk_index": 2,
+    "content": "문서: BoschRexroth_TOP_Manual_KO > 섹션: 페이지 2\n\n## 페이지 2\n\nM2I Corporation\n\nVisualMotion VM7,8 Series\n\nVisualMotion Vm7,8 Series 인터페이스\n\nVisualMotion 과 본 기기간의 RS-232 시리얼 인터페이스 방법에 대해 알아봅니다.\n\n< 시스템 구성 >\n\n본 기기와 VisualMotion 을 연결하는 경우의 시스템 구성을 나타냅니다\n\n외부기기 \n통신 유닛 \n케이블 \nTOP\n\nTOP\n\nVisualMotion\n\n(VM7,8) \n없음 \n결선도 참조 \nTOP 전기종\n\n< 케이블 결선 >\n\n(1) RS-232 케이블 결선도(VisualMotion V7,8 시리즈 ↔ TOP 시리즈)\n\n외부기기측                            TOP 측(9Pin / 15Pin)\n\n1\n\n1\n\n1\n\n1\n\n2              \nTX\n\n2              \nTX\n\n2                       RD\n\n2                       RD\n\n3                 \nRX\n\n3                 \nRX\n\n3                 \nTD\n\n3                 \nTD\n\n4\n\n4\n\n4\n\n4\n\n5\n\n5\n\n5                   \nSG\n\n5                   \nSG\n\n6                     DSR\n\n6                     DSR\n\n6\n\n6\n\n7                  \nSG\n\n7                  \nSG\n\n7\n\n7\n\n:\n\n:\n\n8\n\n8\n\n13 \nRTS\n\n13 \nRTS\n\n9\n\n9\n\n14 \nCTS\n\n14 \nCTS\n\n15 \nDTR\n\n15 \nDTR\n\nTOP 통신 매뉴얼  \nRexroth Indramat VisualMotion VM7,8 \n페이지 1\n\n---"
+  },
+  {
+    "id": 438139,
+    "source_file": "Bosch_TOP_ParameterManual_KO.pdf",
+    "category": "3_hmi",
+    "page_number": 2,
+    "chunk_index": 6,
+    "content": "M2I Corporation \nTOP 통신 매뉴얼  \nRexroth Indramat VisualMotion VM7,8 \n페이지 1\nVisualMotion VM7,8 Series \nVisualMotion Vm7,8 Series 인터페이스 \nVisualMotion 과 본 기기간의 RS-232 시리얼 인터페이스 방법에 대해 알아봅니다. \n \n< 시스템 구성 > \n \n본 기기와 VisualMotion 을 연결하는 경우의 시스템 구성을 나타냅니다 \n외부기기 \n통신 유닛 \n케이블 \nTOP \n \n \n \n \nVisualMotion \n(VM7,8) \n없음 \n결선도 참조 \nTOP 전기종 \n \n \n< 케이블 결선 > \n(1) RS-232 케이블 결선도(VisualMotion V7,8 시리즈 ↔ TOP 시리즈) \n외부기기측                            TOP 측(9Pin / 15Pin) \n13 \nRTS\n14 \nCTS\n:\n15 \nDTR\n7                  \nSG\n6                     DSR\n5                     \n4\n3                 \nRX\n2              \nTX\n1 \n13 \nRTS\n14 \nCTS\n:\n15 \nDTR\n7                  \nSG\n6                     DSR\n5                     \n4\n3                 \nRX\n2              \nTX\n1 \n9                 \n8                 \n7          \n6"
+  },
+  {
+    "id": 691340,
+    "source_file": "Delta_DELTA_CommManual_KO.pdf",
+    "category": "3_hmi",
+    "page_number": 1,
+    "chunk_index": 4,
+    "content": "1\n2.21 DELTA DVP 시리즈 \n \n2.21.1 DELTA DVP-ES 시리얼 인터페이스 \nDELTA DVP-ES PLC 시리즈와 통신 포트를 이용해 통신을 사용하는 방법을 알아봅니다. \n \n< 시스템 구성 > \n \n본 기기와 DELTA DVP-ES PLC 를 연결하는 경우의 시스템 구성을 나타냅니다. \n외부기기 \n통신 유닛 \n케이블 \n본 기기 \n \n \n \n \nDELTA DVP-ES \n옵션 유닛 \n결선도 참조 \nRS-232C \n본 기기 전기종 \n \n< 케이블 결선 > \n \n(1) RS-232C 결선도(DELTA DVP-ES ↔ 본 기기 시리즈) \n외부기기측(8Pin)                       본 기기측(9Pin / 25 Pin) \n5                 SG\n6 \nDSR\n7 \nRTS\n8 \nCTS\n9\n4 \nDTR\n3                SD\n2                 RD\n1                 CD\n5                 SG\n6 \nDSR\n7 \nRTS\n8 \nCTS\n9\n4 \nDTR\n3                SD\n2                 RD\n1                 CD\n5                 RX\n6 \n7 \n8 \nGND\n4                 TX\n3                \n2                 \n1                 \n5                 RX\n6 \n7 \n8 \nGND\n4                 TX\n3                \n2                 \n1"
+  },
+  {
+    "id": 438182,
+    "source_file": "Delta_DELTA_Manual_KO.pdf",
+    "category": "3_hmi",
+    "page_number": null,
+    "chunk_index": 1,
+    "content": "문서: Delta_DELTA_Manual_KO > 섹션: 페이지 1\n\n## 페이지 1\n\n2.21 DELTA DVP 시리즈\n\n2.21.1 DELTA DVP-ES 시리얼 인터페이스\n\nDELTA DVP-ES PLC 시리즈와 통신 포트를 이용해 통신을 사용하는 방법을 알아봅니다. \n \n< 시스템 구성 >\n\n본 기기와 DELTA DVP-ES PLC 를 연결하는 경우의 시스템 구성을 나타냅니다.\n\n외부기기 \n통신 유닛 \n케이블 \n본 기기\n\nDELTA DVP-ES \n옵션 유닛 \n결선도 참조\n\nRS-232C \n본 기기 전기종\n\n< 케이블 결선 >\n\n(1) RS-232C 결선도(DELTA DVP-ES ↔ 본 기기 시리즈)\n\n외부기기측(8Pin)                       본 기기측(9Pin / 25 Pin)\n\n1\n\n1\n\n1                 CD\n\n1                 CD\n\n2\n\n2\n\n2                 RD\n\n2                 RD\n\n3\n\n3\n\n3                SD\n\n3                SD\n\n4                 TX\n\n4                 TX\n\n4 \nDTR\n\n4 \nDTR\n\n5                 RX\n\n5                 RX\n\n5                 SG\n\n5                 SG\n\n6\n\n6\n\n6 \nDSR\n\n6 \nDSR\n\n7\n\n7\n\n7 \nRTS\n\n7 \nRTS\n\n8 \nGND\n\n8 \nGND\n\n8 \nCTS\n\n8 \nCTS\n\n9\n\n9\n\n8\n\n2\n\n7\n\n1\n\n6 \n5\n\n4\n\n< DELTA DVP-ES  PLC 설정 >\n\n3\n\n1\n\n---"
+  },
+  {
+    "id": 691391,
+    "source_file": "Delta_TOP_CommManual_KO.pdf",
+    "category": "3_hmi",
+    "page_number": 1,
+    "chunk_index": 4,
+    "content": "1\n2.21 DELTA DVP 시리즈 \n \n2.21.1 DELTA DVP-ES 시리얼 인터페이스 \nDELTA DVP-ES PLC 시리즈와 통신 포트를 이용해 통신을 사용하는 방법을 알아봅니다. \n \n< 시스템 구성 > \n \n본 기기와 DELTA DVP-ES PLC 를 연결하는 경우의 시스템 구성을 나타냅니다. \n외부기기 \n통신 유닛 \n케이블 \n본 기기 \n \n \n \n \nDELTA DVP-ES \n없음 \n결선도 참조 \nRS-232C \n본 기기 전기종 \n \n< 케이블 결선 > \n \n(1) RS-232C 결선도(DELTA DVP-ES ↔ 본 기기 시리즈) \n외부기기측(8Pin)                       본 기기측(9Pin / 25 Pin) \n5                 SG\n6 \nDSR\n7 \nRTS\n8 \nCTS\n9\n4 \nDTR\n3                SD\n2                 RD\n1                 CD\n5                 SG\n6 \nDSR\n7 \nRTS\n8 \nCTS\n9\n4 \nDTR\n3                SD\n2                 RD\n1                 CD\n5                 RX\n6 \n7 \n8 \nGND\n4                 TX\n3                \n2                 \n1                 \n5                 RX\n6 \n7 \n8 \nGND\n4                 TX\n3                \n2                 \n1"
+  },
+  {
+    "id": 426884,
+    "source_file": "ABB_ABB_CommManual_KO.pdf",
+    "category": "2_sensor",
+    "page_number": 2,
+    "chunk_index": 3,
+    "content": "TOP 통신 매뉴얼 \nABB INVERTER ACS140/400 Series \n페이지 1\nABB INVERTER ACS140/400 Series \nABB INVERTER ACS140/400 Series 인터페이스 \nABB INVERTER ACS140/400 와 본 기기간의 RS-485 시리얼 인터페이스 방법에 대해 알\n아봅니다. \n \n< 시스템 구성 > \n \n본 기기와 ABB INVERTER ACS140/400 을 연결하는 경우의 시스템 구성을 나타냅니다 \n외부기기 \n통신 유닛 \n케이블 \nTOP \n \n \n \n \nACS140 \nRS485/232 \nAdapter \n결선도 참조 \nTOP 전기종 \nACS400 \n없음 \n \n< 케이블 결선 > \n(1) RS-485 케이블 결선도(ACS140 시리즈 ↔ TOP 시리즈) \n외부기기측                          TOP 측(5Pin Terminal / 15Pin) \n5/15            SG\n4/14            SDB\n3/13          SDA\n2/12            RDB\n1/11           RDA\n5/15            SG\n4/14            SDB\n3/13          SDA\n2/12            RDB\n1/11           RDA\n3 \nA\n2 \nC\n1 \nB\n3 \nA\n2 \nC\n1 \nB\n \n \n \nTOP"
+  },
+  {
+    "id": 426922,
+    "source_file": "ABB_ABB_InstallGuide_EN_2.pdf",
+    "category": "2_sensor",
+    "page_number": 1,
+    "chunk_index": 1,
+    "content": "Genie Nano-CL Series™ \nCamera User’s Manual \nCamera Link – Monochrome & Color Area Scan \nNovember 18, 2022 \nRev: 0004  \nP/N:  G3-C00M-USR00 \nwww.teledynedalsa.com  \nsensors | cameras | frame grabbers | processors | software | vision solutions"
+  },
+  {
+    "id": 427199,
+    "source_file": "ABB_ABB_InstallGuide_EN_3.pdf",
+    "category": "2_sensor",
+    "page_number": 1,
+    "chunk_index": 2,
+    "content": "Key Features\nIntroduction\nAll rights reserved. Copyright © 2020 Neousys Technology Inc.\nwww.neousys-tech.com\nMachine Vision \nPCIe-PoE354at/PoE352at\n4-Port / 2-Port Server-grade Gigabit 802.3at PoE+ Frame Grabber Card\n‧ x4, Gen2 PCI Express interface (2GB/s total bandwidth)\n‧ Intel\n® I350 server-grade Gigabit Ethernet controller\n‧ Supports four (354at) or two (352at) independent GigE ports\n‧ Compliant with IEEE 802.3at to deliver 25.5 W each port\n‧ Supports 9.5 kB jumbo frame, teaming and IEEE 1588\n‧ Per-port PoE+ power on/ off control\n* PCIe-PoE354at is designed to obtain 12 VDC for PoE devices from either PCI Express bus or on-board 4-pin power connector according to a user-configurable jumper.\n** PCIe-PoE352at is designed to obtain 12 VDC for PoE devices directly from PCI Express bus. No"
+  },
+  {
+    "id": 669813,
+    "source_file": "ABB_ABB_InstallGuide_EN_4.pdf",
+    "category": "2_sensor",
+    "page_number": 1,
+    "chunk_index": 1,
+    "content": "PCIe-PoE354at/PCIe-PoE352at User’s Manual\nCopyright © 2015 Neousys Technology Inc. All Right Reserved.\nPage 1 of 31\nNeousys Technology Inc.\nPCIe-PoE354at/PCIe-PoE352at\n4-Port / 2-Port Server-grade Gigabit 802.3at PoE+\nFrame Grabber Card\nUser’s Manual\nRev. A1\nPublished Jun 18th, 2015"
+  },
+  {
+    "id": 427244,
+    "source_file": "ABB_ABB_InstallGuide_EN_5.pdf",
+    "category": "2_sensor",
+    "page_number": 1,
+    "chunk_index": 1,
+    "content": "Basler beat\nAREA SCAN CAMERAS\n High-resolution 12 MP cameras with  \n\t global shutter\n Outstanding price / performance ratio\n High speed through Camera \tLink  \n\t interface\n Flexible and easy integration"
+  },
+  {
+    "id": 427261,
+    "source_file": "ABB_ABB_InstallGuide_EN_6.pdf",
+    "category": "2_sensor",
+    "page_number": 1,
+    "chunk_index": 1,
+    "content": "Genie Nano-CL Series™ \nCamera User’s Manual \nCamera Link – Monochrome & Color Area Scan \nOctober 15, 2019 \nRev: 0003  \nP/N:  G3-C00M-USR00 \nwww.teledynedalsa.com  \nsensors | cameras | frame grabbers | processors | software | vision solutions"
+  },
+  {
+    "id": 426888,
+    "source_file": "ABB_ABB_InstallGuide_EN.pdf",
+    "category": "2_sensor",
+    "page_number": 1,
+    "chunk_index": 1,
+    "content": "Australia\nPhone +61 3 9457 0600\nBelgium/Luxembourg\nPhone +32 (0)2 466 55 66\nBrasil\nPhone +55 11 3215-4900\nCanada\nPhone +1 905 771 14 44\nCeská Republika\nPhone +420 2 57 91 18 50\nChina\nPhone +86 4000 121 000\n \n+852-2153 6300\nDanmark\nPhone +45 45 82 64 00\nDeutschland\nPhone +49 211 5301-301\nEspaña\nPhone +34 93 480 31 00\nFrance\nPhone +33 1 64 62 35 00\nGreat Britain\nPhone +44 (0)1727 831121\nIndia\nPhone +91–22–4033 8333\nIsrael\nPhone +972-4-6801000\nItalia\nPhone +39 02 27 43 41\nJapan\nPhone +81 (0)3 3358 1341\nMagyarország\nPhone +36 1 371 2680\nNederlands\nPhone +31 (0)30 229 25 44\nÖsterreich\nPhone +43 (0)22 36 62 28 8-0\nNorge\nPhone +47 67 81 50 00\nPolska\nPhone +48 22 837 40 50\nRomânia\nPhone +40 356 171 120 \nRussia\nPhone +7-495-775-05-30\nSchweiz\nPhone +41 41 619 29 39\nSingapore\nPhone +65 6744 3732\nSlov"
+  },
+  {
+    "id": 427526,
+    "source_file": "ABB_ABB_MaintenanceManual_EN.pdf",
+    "category": "2_sensor",
+    "page_number": 1,
+    "chunk_index": 1,
+    "content": "DEUTSCH\nIrrtümer und Änderungen vorbehalten\n8012953/ZMO9/2017-06/SH_8M\nOD Value\nDisplacement-Sensor OD Value\nmit Distanzbargraph\nQuickstart\nLaserstrahlung – Nicht in den \nLichtstrahl blicken – Laserklasse 2 \n(EN/IEC 60825-1:2014)\nErfüllt 21 CFR 1040.10 und \n1040.11 mit Ausnahme der \naufgeführten Abweichungen im \nDokument Laser Notice No. 50 vom \n24. Juni 2007.\nIdentische Laserklasse für Ausgabe \nEN/IEC 60825-1:2007\nSicherheitshinweise\n•\n• Vor allen Arbeiten das Quickstart lesen.\n•\n• Anschluss, Montage und Einstellung nur durch Fachper-\nsonal.\n•\n• Gerät bei Inbetriebnahme vor Feuchte und Verunreini-\ngung schützen.\n•\n• Kein Sicherheitsbauteil gemäß EU-Maschinenrichtlinie.\nBestimmungsgemäße Verwendung\nDer Displacement-Sensor OD Value ist ein optoelektro-\nnischer Sensor und wird zur optischen,"
+  },
+  {
+    "id": 548116,
+    "source_file": "ABB_Unknown_CommManual_EN_2.pdf",
+    "category": "6_plc",
+    "page_number": null,
+    "chunk_index": 3,
+    "content": "문서: ABB_Unknown_CommManual_EN_2 > 섹션: 1.1 Scope of this document\n\n## 1.1 Scope of this document\n\nMODBUS is an application layer messaging protocol, positioned at level 7 of the OSI model, that  provides  client/server  communication  between  devices  connected  on  different  types  of buses or networks.\n\nThe industry's serial de facto standard since 1979, MODBUS continues to enable millions of automation devices to communicate. Today, support for the simple and elegant structure of MODBUS continues  to  grow.  The  Internet  community  can  access  MODBUS  at    a  reserved system port 502 on the TCP/IP stack.\n\nMODBUS  is  a  request/reply  protocol  and  offers  services  specified  by function  codes . MODBUS function codes are elements of MODBUS request/reply PDUs. The objective of this document  is  to  describe  the  function  codes  used  within  the  framework  of  MODBUS transactions.\n\nMODBUS is an application layer messaging protocol for client/server communication between d"
+  },
+  {
+    "id": 547896,
+    "source_file": "ABB_Unknown_CommManual_EN.pdf",
+    "category": "6_plc",
+    "page_number": null,
+    "chunk_index": 4,
+    "content": "문서: ABB_Unknown_CommManual_EN > 섹션: 1.1 Scope of this document\n\n## 1.1 Scope of this document\n\nMODBUS is an application layer messaging protocol, positioned at level 7 of the OSI model, that provides client/server communication between devices connected on different types of buses or networks.\n\nThe industry's serial de facto standard since 1979, Modbus continues to enable millions of automation devices to communicate. Today, support for the simple and elegant structure of MODBUS continues to grow. The Internet community can access MODBUS at  a reserved system port 502 on the TCP/IP stack.\n\nMODBUS is a request/reply protocol and offers services specified by function codes .  MODBUS function codes are elements of MODBUS request/reply PDUs. The objective of this document is to describe the function codes used within the framework of MODBUS transactions.\n\nMODBUS is an application layer messaging protocol for client/server communication between devices connected on different types of buses "
+  },
+  {
+    "id": 548345,
+    "source_file": "ABB_Unknown_ParameterManual_EN_2.pdf",
+    "category": "6_plc",
+    "page_number": null,
+    "chunk_index": 2,
+    "content": "문서: ABB_Unknown_ParameterManual_EN_2 > 섹션: CONTENTS\n\n## CONTENTS\n\n## 1 INTRODUCTION\n\n## 1.1 OBJECTIVES\n\nThe  objective  of  this  document  is  to  present  the  MODBUS  messaging  service  over TCP/IP  ,  in  order  to  provide  reference  information  that  helps  software  developers  to implement this service. The encoding of the MODBUS function codes is not described in  this  document,  for  this  information  please  read  the  MODBUS  Application  Protocol Specification [1].\n\nThis document gives accurate and comprehensive description of a MODBUS messaging service  implementation.  Its  purpose  is  to  facilitate  the  interoperability  between  the devices using the MODBUS messaging service.\n\nThis document comprises mainly three parts:\n\n- An overview of the MODBUS over TCP/IP protocol\n- A functional description of a MODBUS client, server and gateway implementation.\n- An  implementation  guideline  that  proposes  the  object  model  of  an  MODBUS implementation example."
+  },
+  {
+    "id": 548477,
+    "source_file": "ACS_RTU_CommManual_KO.pdf",
+    "category": "6_plc",
+    "page_number": null,
+    "chunk_index": 4,
+    "content": "문서: ACS_RTU_CommManual_KO > 섹션: ▣ ModBus RTU 통신 ModBus Protocal\n\n## ▣ ModBus RTU 통신 ModBus Protocal\n\n- ＊ Read Coils(01)\n- ＊ Write Single Coil(05)\n- ＊ Write Multiple Coils(15)\n- ＊ Read Holding Register(03)\n- ＊ Write Multiple Registers(16)\n- ＊ Read Device Identification(43)"
+  },
+  {
+    "id": 548504,
+    "source_file": "Beckhoff_BK7300_ParameterManual_EN.pdf",
+    "category": "6_plc",
+    "page_number": null,
+    "chunk_index": 3,
+    "content": "문서: Beckhoff_BK7300_ParameterManual_EN > 섹션: MODBUS BK7300\n\nThe  documentation  has  been  prepared  with  care.  The  products  described  are, however, constantly under development. For that reason the documentation is not in  every case checked for consistency with performance data, standards or other characteristics, and does not represent an assurance of characteristics in the sense of § 459, Para. 2 of the German Civil Code. In the event that it contains technical or editorial  errors,  we  retain  the  right  to  make  alterations  at  any  time  and  without warning. No claims for the modification of products that have already been supplied may  be  made  on  the  basis  of  the  data,  diagrams  and  descriptions  in  this documentation.\n\nThis  manual is  copyrighted.  Any  reproduction or  third  party  use  of  this  protected publication,  whether in  whole  or in part,  without  the  written  permission  of  Elektro Beckhoff GmbH, is forbidden.\n\n©"
+  },
+  {
+    "id": 554195,
+    "source_file": "ACS_ACSPL_SetupGuide_EN.pdf",
+    "category": "8_etc",
+    "page_number": null,
+    "chunk_index": 1,
+    "content": "문서: ACS_ACSPL_SetupGuide_EN > 섹션: SPiiPlus Programmer's Guide\n\n## SPiiPlus Programmer's Guide\n\nVersion 6.50, 30 January 2009 COPYRIGHT\n\nCopyright ® 1999 - 2009 ACS MotionControl Ltd.\n\nChanges are periodically made to the information in this document. Changes are published as release notes and are be incorporated into future revisions of this document.\n\nNo part of this document may be reproduced in any form without prior written permission from ACS MotionControl."
+  },
+  {
+    "id": 554186,
+    "source_file": "ACS_ACS_SetupGuide_KO.pdf",
+    "category": "8_etc",
+    "page_number": null,
+    "chunk_index": 1,
+    "content": "문서: ACS_ACS_SetupGuide_KO > 섹션: PROTECT &amp; UNPROTECT기능\n\n## PROTECT &amp; UNPROTECT기능\n\nPROTECT란 명령은 암호를 설정하고 Parameter를 보호하는 기능를 가지고 있습니다.\n\nSPiiPlus MMI를 통한 접속 시 Commnication Viewer를 통하여 특정 설정 Comman와 PASSWORD를 입력하여 설정할 수 있습니다.\n\nPROTECT 및 UNPROTECT는 Communication Viewer창을 통해서만 명령할 수 있습니다.\n\nProtect기능이 ON되어 있는 상태에서는 ACS Controller의 설정 Parameter를 보호합니다.\n\nProtect로 보호당하는 Paramter들을 몇가지 예를 들자면, MERRI MERRV MFF MFLGAS RVFIL SETTLE STEPE STEPW SYNV TARGRAD XACC XCURI XCURV XRMS DCOM FAULT XVEL(속도제한관련 Paramter) FDEF FMASK SAFINI S\\_FMASK S\\_SAFINI CFG IMASK BAUD 등의 Paramter들을 보호합니다. 위의 Paramter들은 setup에 관련 된 것이며, 집적적인 구동 시에 속도 Profile 관련 된 것은 아닙니다. ex) VEL, ACC, DEC, JERK, KDEC등은 Protect기능 ON시에도 변화됨.\n\nPROTECT기능이 ON되어 있고 각각 관련 Parameter의 설정값이 지정이 된 후에 바꾸려고 한다면 바뀌지 않습니다.\n\nTerminal 창을 이용하여 바꾸려 하게 되면 Protect 기능이 ON되어 있어서 바꾸지 못한다는 Error Code가 나타나게 되며, ACS MMI Tool에 접속하여 바꾸려 한다면 수치 입력란에 적색의 수치로 표시되며, 바꿀 수 없다는 Popup창이 나타나게 됩니다. 또한 ACS MMI Tool은 Down됩니다.\n\n이러한 현상은 PROTECT되어 있는 동안 Parameter가 바뀌려고 하는것을 "
+  },
+  {
+    "id": 554008,
+    "source_file": "EtherCAT_PNOZ_Safety_KO.pdf",
+    "category": "7_pneumatic",
+    "page_number": null,
+    "chunk_index": 4,
+    "content": "문서: EtherCAT_PNOZ_Safety_KO > 섹션: 모듈형 및 유연성\n\n## 모듈형 및 유연성\n\n소형 안전 컨트롤러는 단순 기계류와 대형 자동화 프로젝트에 모두 적합합니다. 웹 기반의 시각화 소프트웨어 PASvisu, 진단 및 시각화 패널 PMIvisu, 안전 센서 기술 PSEN, 운영자 장치 PIT, 분산형 주변 장치 PDP67와 함께 사용하여 100% 호환 가능 하며 완전한 자동화 작업 솔루션을 완성하세요. 아날로그 입력 모듈, 듀얼 폴 출력 모듈, 모션 감시 모듈, 입/출력 모듈, 연결 모 듈 등 광범위한 확장 모듈은 어플리케이션에 최대의 융통성을 제공합니다."
+  }
+]

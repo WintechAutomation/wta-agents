@@ -2585,12 +2585,12 @@
       "agent": "cs-agent",
       "task": "부서장 지시사항 전달 (중요):",
       "message": "부서장 지시사항 전달 (중요):\n\ncs-wta.com AI 채팅 페이지를 ChatGPT/Claude/Gemini 스타일로 전면 재구성해주세요.\n\n핵심 요구사항:\n1. **사이드바 대화 이력** — 왼쪽에 이전 대화 세션 목록 (ChatGPT처럼)\n2. **새 채팅 버튼** — 사이드바 상단에 \"새 채팅\" 버튼\n3. **대화창** — 메인 영역에 채팅 메시지 표시 (user/assistant 구분)\n4. **입력창** — 하단 고정, 전송 버튼\n5. **세션 관리** — 새 채팅 누르면 새 세션, 사이드바에서 이전 세션 클릭하면 해당 대화 이력 로드\n\n기준: ChatGPT, Claude, Gemini의 채팅 UI/UX를 그대로 따라서 구현\n- 현재 만들다가 문제가 많은 상태이니, 기존 코드 정리하고 위 기준으로 깔끔하게 재구현\n- 세션 ID 기반으로 대화 이력 저장/로드\n- 스트리밍 응답 지원 유지\n\n현재 채팅 페이지 코드를 먼저 분석하고, 재구현 계획을 세운 후 작업 진행해주세요.",
-      "status": "pending",
+      "status": "done",
       "priority": "medium",
       "created_at": "2026-04-09 11:09:45",
-      "updated_at": "2026-04-09 11:09:45",
+      "updated_at": "2026-04-11 12:03:37",
       "last_report_at": null,
-      "completed_at": null
+      "completed_at": "2026-04-11 12:03:37"
     },
     {
       "id": "tq-crafter-e17b8d",
@@ -2609,12 +2609,12 @@
       "agent": "cs-agent",
       "task": "채팅 페이지 재구성 확인했습니다. 부서장 승인 완료 — 바로 배포 진행해주세요.",
       "message": "채팅 페이지 재구성 확인했습니다. 부서장 승인 완료 — 바로 배포 진행해주세요.\n\n빌드 후 cs-wta.com에 배포하고 결과 보고 바랍니다.",
-      "status": "pending",
+      "status": "done",
       "priority": "medium",
       "created_at": "2026-04-09 11:17:26",
-      "updated_at": "2026-04-09 11:17:26",
+      "updated_at": "2026-04-11 12:03:37",
       "last_report_at": null,
-      "completed_at": null
+      "completed_at": "2026-04-11 12:03:37"
     },
     {
       "id": "tq-cs-agent-e1b04f",
@@ -4125,6 +4125,90 @@
       "priority": "medium",
       "created_at": "2026-04-11 11:17:22",
       "updated_at": "2026-04-11 11:17:22",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-crafter-b6ceed",
+      "agent": "crafter",
+      "task": "[CS GraphRAG Phase6 착수 승인 - 외부 LLM(Claude API) 사용]",
+      "message": "[CS GraphRAG Phase6 착수 승인 - 외부 LLM(Claude API) 사용]\n\n부서장 지시: \"그래프rag 외부 llm으로 검토해\" → Ollama 제외, 외부 LLM(Claude API)로 재구축 진행.\n\n방향:\n- 옵션 B(전부 Claude Sonnet API) 기본 채택. 추정 $855 / 8~12시간 병렬\n- 옵션 C 보다 품질/속도 우선. Ollama 제외\n- research-agent 분담은 유지 (스크립트: crafter, 실행: research-agent)\n\n착수 전 확인 필수:\n1. Claude API 비용 실제 견적 재산정 (chunk 수 × 토큰 × 단가). $855는 초안 추정이었음\n2. 프롬프트 버전 v1 잠금 (Phase2/3/5와 라벨 체계 통일: Component/Process/Issue/Equipment/Tool/Product/Resolution)\n3. 중간 체크포인트 설정 (1,000 chunk마다 Neo4j flush + JSON 백업)\n4. 파일럿: 먼저 manual.documents 중 50 chunk 시범 실행 → 품질 샘플링 → MAX 보고 → 승인 후 전체 실행\n\n진행 순서:\n- Step1: 비용 재산정 + 파일럿 50 chunk 실행 (30분 내)\n- Step2: 파일럿 결과 MAX 보고 (엔티티 샘플 20건, 추정 비용, 예상 시간)\n- Step3: MAX 승인 후 전체 실행 (research-agent 분담)\n\n파일럿부터 착수해주세요. 결과 30분 내 보고 기대.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 12:03:00",
+      "updated_at": "2026-04-11 12:03:00",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-cs-agent-a8dde8",
+      "agent": "cs-agent",
+      "task": "[작업큐 정리] 부서장 확인: cs-wta.com 채팅 UI ChatGPT 스타일 재구성은 이미 완료됐다고 합니다.",
+      "message": "[작업큐 정리] 부서장 확인: cs-wta.com 채팅 UI ChatGPT 스타일 재구성은 이미 완료됐다고 합니다.\n\n조치:\n- tq-cs-agent-b06191 / tq-cs-agent-81a45e done 처리 (본인 확인)\n- 기타 완료됐으나 큐에 pending 쌓인 건(일일보고 04-08/09/10, 공개CS등록페이지, 팀통신테스트 등) 일괄 done 처리\n- 정리 결과 한 줄 보고",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 12:03:31",
+      "updated_at": "2026-04-11 12:03:31",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-crafter-dd46b6",
+      "agent": "crafter",
+      "task": "[GraphRAG Phase6 - 로컬 LLM으로 변경]",
+      "message": "[GraphRAG Phase6 - 로컬 LLM으로 변경]\n\n부서장 정정 지시: \"클로드 말고 로컬 LLM 있잖아\" → Claude API 전면 제외, 로컬 LLM 사용.\n\nLLM:\n- 로컬 Ollama 서버: **182.224.6.147:11434**\n- 모델: **qwen3.5:35b-a3b** (기존 PhaseOllama에서 사용한 그 모델)\n- 비용 0원, 무제한\n\n이전 지시(Claude Sonnet API $855) 전면 철회. 옵션 A(로컬 Ollama) 채택.\n\n재조정:\n1. 비용: $0\n2. 속도: 초당 1~2 chunk 기준 40~80시간 → 병렬화·배치 최적화 필요\n3. 서버 디스크 88% 사용 중이었음 — 재개 전 여유공간 확보 확인\n4. Phase5_Manual과 동일 프롬프트/라벨 체계 유지 (Component/Process/Issue/Equipment/Tool/Product/Resolution)\n\n진행:\n- Step1: 서버 헬스체크 + 디스크 여유공간 확인 (admin-agent 협조 가능)\n- Step2: 파일럿 50 chunk 시범 실행 → 품질 샘플 20건 + 소요시간 측정\n- Step3: MAX 보고 → 승인 후 전체 실행 (research-agent 분담)\n\n파일럿 결과 보고 부탁. 시간 많이 걸리니 진행률 1,000 chunk마다 중간 보고 포함.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 12:04:29",
+      "updated_at": "2026-04-11 12:04:29",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-crafter-a8d8c9",
+      "agent": "crafter",
+      "task": "[GraphRAG Phase6 - LLM 재정정]",
+      "message": "[GraphRAG Phase6 - LLM 재정정] \n\n부서장 재정정: Ollama 말고 **vLLM + Gemma 4 31B** 사용 가능. 이걸로 진행.\n\n작업:\n1. 로컬 LLM 서버(182.224.6.147)에서 vLLM 가동 상태 확인 (admin-agent 협조 가능)\n2. gemma4:31b 모델 다운로드/로드 가능 여부 확인 (VRAM 충분한지, 디스크 여유공간)\n3. vLLM OpenAI-compatible API 엔드포인트 확인\n4. 안 되어 있으면 admin-agent/crafter가 vLLM 셋업\n5. 셋업 완료 후 파일럿 50 chunk 시범 실행\n\n비용: $0\n속도: vLLM은 Ollama보다 훨씬 빠름 (배치/PagedAttention), 전체 285k chunk 예상 시간 대폭 단축 가능\n\n파일럿 전 셋업 상태 먼저 보고 부탁. 블로킹 있으면 즉시 MAX에게.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 12:05:07",
+      "updated_at": "2026-04-11 12:05:07",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-admin-agent-56ced0",
+      "agent": "admin-agent",
+      "task": "[로컬 LLM 서버 상태 점검 요청]",
+      "message": "[로컬 LLM 서버 상태 점검 요청]\n\n부서장 지시로 GraphRAG Phase6를 vLLM + Gemma 4 31B로 진행. 서버 상태 확인 부탁:\n\n대상: 182.224.6.147\n확인 항목:\n1. vLLM 프로세스/서비스 가동 여부 (현재 띄워져 있나)\n2. 사용 가능한 모델 목록 (gemma4:31b 또는 gemma-4-31b 로드 상태)\n3. VRAM/RAM/디스크 여유공간 (이전 기록상 디스크 88% 사용)\n4. OpenAI-compatible API 엔드포인트 URL/포트\n5. 동시 요청 수용 가능 수준\n\n5분 내 회신 부탁. crafter와 협조해서 셋업 지원 필요할 수 있음.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 12:05:12",
+      "updated_at": "2026-04-11 12:05:12",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-crafter-07f09a",
+      "agent": "crafter",
+      "task": "[Phase6 셋업 진행 - SSH 접근 가능]",
+      "message": "[Phase6 셋업 진행 - SSH 접근 가능]\n\n부서장 확인: 182.224.6.147 **SSH 포트 2222로 접속 가능**. admin-agent 점검에서 closed 뜬 건 네트워크 경로 문제 가능성.\n\n진행:\n1. ssh -p 2222 접속 시도 (계정/키는 기존 LLM 서버 접속 정보 참조, 없으면 부서장에 요청)\n2. 디스크 상태 확인 (df -h), VRAM(nvidia-smi) 확인\n3. vLLM 설치 여부 확인, 없으면 설치\n4. gemma-4-31b 모델 다운로드 (HuggingFace google/gemma-3-27b-it 또는 gemma4 계열 확인)\n   - 주의: \"Gemma 4 31B\"라는 모델명 실제 존재 여부 확인. Gemma 3 27B가 현재 정식. 부서장이 말한 모델이 구체적으로 뭔지 애매하니 사용 가능한 가장 큰 gemma 계열 + 31B급 중 적합한 것 선택\n5. vLLM OpenAI-compatible 서버 실행 (--port 8000)\n6. phase6_pilot.py base_url 변경 (http://182.224.6.147:8000/v1)\n7. 파일럿 50 chunk 실행 → 결과 MAX 보고\n\n디스크 부족 시 기존 불필요 모델 정리 필요. 각 단계에서 블로킹 발생 시 즉시 MAX에 보고.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 12:08:14",
+      "updated_at": "2026-04-11 12:08:14",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-crafter-a82d12",
+      "agent": "crafter",
+      "task": "[Phase6 - 모델 사전 설치 확인 먼저]",
+      "message": "[Phase6 - 모델 사전 설치 확인 먼저]\n\n부서장 지시: \"이미 모델 깔려있으니 확인부터 해\" — 다운로드/설치 시도하지 말고 현재 서버에 이미 있는 모델부터 찾아라.\n\n1. ssh -p 2222 접속\n2. 찾아볼 경로들:\n   - HuggingFace 캐시: ~/.cache/huggingface/hub/\n   - vLLM 기본 경로: /root/models, /data/models, /opt/models, /home/*/models\n   - Ollama 모델: ~/.ollama/models (단 Ollama에는 embedding만 로드됨)\n   - 사용자별 홈디렉토리\n3. `find / -name \"*.safetensors\" -o -name \"*.bin\" 2>/dev/null | head` 등으로 모델 파일 위치 탐색\n4. 설치된 모델 리스트 + 경로 + 크기 정리\n5. vLLM 프로세스 기존 설정 스크립트(systemd/supervisor/scripts) 있는지 확인\n\n확인 결과 보고 후, 이미 있는 모델 중 적절한 것 사용해서 vLLM 가동.\n절대 새로 다운로드 시도 금지. 먼저 재고 파악만.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 12:08:54",
+      "updated_at": "2026-04-11 12:08:54",
       "last_report_at": null,
       "completed_at": null
     }
