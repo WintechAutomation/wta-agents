@@ -1,0 +1,60 @@
+﻿idx,status,category,old_filename,new_filename,mfr,model,doctype,lang,size,pages,md5
+1,ok,3_hmi,Beijer Electronics company presentation June 20 2017.pdf,Unknown_Beijer_Manual_EN.pdf,Unknown,Beijer,Manual,EN,1738346,31,4b2399c17ac53d01ca10eea3de83d744
+2,ok,3_hmi,gelic复制加密锁.pdf,Unknown_gelic_Manual_EN.pdf,Unknown,gelic,Manual,EN,446976,11,790c240512fc57a569e05bddeba96984
+3,ok,3_hmi,DELTA.pdf,Unknown_DELTA_SetupGuide_KO.pdf,Unknown,DELTA,SetupGuide,KO,81009,3,de01868bed364f2d6238c3a77280244c
+4,ok,3_hmi,GE Fanuc .pdf,Fanuc_GE_SetupGuide_KO.pdf,Fanuc,GE,SetupGuide,KO,160810,7,08c6edc79f93fc82db4595ba103bab85
+5,ok,3_hmi,Fuji Micrex-F .pdf,Keyence_Fuji_ParameterManual_KO.pdf,Keyence,Fuji,ParameterManual,KO,226571,8,5d928c5cf1c3137ee90ffb7a098d640f
+6,ok,3_hmi,Allen-Bradley .pdf,Rockwell_Allen-Bradley_SetupGuide_KO.pdf,Rockwell,Allen-Bradley,SetupGuide,KO,160904,7,37313ce4000db9af72c56deb60d4d1d8
+7,ocr,3_hmi,DS_JetNet 3008.pdf,Unknown_DS_EthernetInterface_EN.pdf,Unknown,DS,EthernetInterface,EN,160102,3,1531e5556c5257626a11b4192b336724
+8,ok,3_hmi,AGP3000H-ADPCOM-MT01E-BTH.pdf,Omron_AGP3000H-ADPCOM-MT01_Troubleshooting_EN.pdf,Omron,AGP3000H-ADPCOM-MT01,Troubleshooting,EN,845352,16,4315818cbf8a65972cb2bf3b57bd247c
+9,ok,3_hmi,GT11 본체 취급설명서(KC용).pd.pdf,Unknown_GT11_MaintenanceManual_KO.pdf,Unknown,GT11,MaintenanceManual,KO,4776714,56,ca31275c7b28dd36c085b1cf12f6a581
+10,ok,3_hmi,gpwpts_m.pdf,Unknown_gpwpts_UserManual_EN.pdf,Unknown,gpwpts,UserManual,EN,3302728,220,ea9dfed80809e78dbcc2e232d57cdce3
+11,ok,3_hmi,DS_JetNet 2005.pdf,Unknown_DS_SetupGuide_EN.pdf,Unknown,DS,SetupGuide,EN,258352,3,6097c44c7f9f19d5dcd72d859beefccb
+12,ok,3_hmi,GP-PRO_PB III for Device_PLC Connection manual.pdf,Mitsubishi_GP-PRO_WiringGuide_EN.pdf,Mitsubishi,GP-PRO,WiringGuide,EN,372692,24,c32161ad95959aed1d5161c31bcfeca7
+13,ok,3_hmi,GT15 본체 취급설명서(KCC용).pdf,Unknown_GT15_MaintenanceManual_KO.pdf,Unknown,GT15,MaintenanceManual,KO,4402379,72,7555aab65c0d554bedca4a02b1451b68
+14,ok,3_hmi,AGP3300H-MT01E-BTH.pdf,Unknown_AGP3300H-MT01E-BTH_Troubleshooting_EN.pdf,Unknown,AGP3300H-MT01E-BTH,Troubleshooting,EN,1203985,16,6a1cfd634a1c2c90cc12eedb7fdc8940
+15,ok,3_hmi,gpwtag_m.pdf,Unknown_gpwtag_UserManual_EN.pdf,Unknown,gpwtag,UserManual,EN,4457613,846,2a685bee8d7efcbedd38f0b86ce97277
+16,ok,3_hmi,GP-PRO_PB III Windows Ver7.pdf,Unknown_GP-PRO_UserManual_EN.pdf,Unknown,GP-PRO,UserManual,EN,6481319,874,75f3d958c9701ae047c4dc164a5a1806
+17,ok,3_hmi,HTV HTU_VGA示教器使用说明v01 한국어.pdf,Unknown_HTV_SetupGuide_KO.pdf,Unknown,HTV,SetupGuide,KO,412627,4,6e93fe09c89ae18745d2b14cae1286c8
+18,ok,3_hmi,GP-Series Manual.pdf,Unknown_GP-Series_UserManual_KO.pdf,Unknown,GP-Series,UserManual,KO,75885396,836,52c55f4857a8528a14fdcbaadaafe8c9
+19,ok,3_hmi,GT14 본체 취급설명서.pdf,Unknown_GT14_MaintenanceManual_KO.pdf,Unknown,GT14,MaintenanceManual,KO,18654451,284,2efcb2dadd2345e0afbe4f69fba2208f
+20,ok,3_hmi,GP-PRO_PB III Windows Ver5.pdf,Unknown_GP-PRO_UserManual_EN_v2.pdf,Unknown,GP-PRO,UserManual,EN,22535265,634,11a82d23d83bff0517abc895291aed09
+21,ok,3_hmi,KDT CIM0N .pdf,Unknown_KDT_SetupGuide_KO.pdf,Unknown,KDT,SetupGuide,KO,155582,6,184886dec999984f3ff5929ce954e7b0
+22,docx,3_hmi,M2I TOP SERIES 통신 드라이버.docx,Unknown_M2I_Manual_EN.docx,Unknown,M2I,Manual,EN,142589,0,8030be8bc266340b8ca29b06a3c18a45
+23,ok,3_hmi,KOYO.pdf,Unknown_KOYO_Manual_KO.pdf,Unknown,KOYO,Manual,KO,102436,3,5a01c34a165b7e438bbf0b36d75a4d6c
+24,ok,3_hmi,GT12 본체 보충 설명서.pdf,Mitsubishi_GT12_UserManual_KO.pdf,Mitsubishi,GT12,UserManual,KO,613949,3,622819103b5e56cf8fe38140b4fc4fcf
+25,ok,3_hmi,LG Inverter .pdf,Unknown_LG_SetupGuide_KO.pdf,Unknown,LG,SetupGuide,KO,75589,3,9b4db30ff9be07331f9f890580ac6002
+26,ok,3_hmi,Master-K - GM.pdf,Unknown_Master-K_SetupGuide_KO.pdf,Unknown,Master-K,SetupGuide,KO,933136,18,604f3a93fa47064bd6ec378fc1de8057
+27,ok,3_hmi,khtcdvnb.pdf,Rockwell_khtcdvnb_SetupGuide_KO.pdf,Rockwell,khtcdvnb,SetupGuide,KO,254311,7,ba1c061b0f25e93b65fd831a90f7d0c7
+28,ok,3_hmi,Modicon.pdf,Unknown_Modicon_SetupGuide_KO.pdf,Unknown,Modicon,SetupGuide,KO,86826,3,ee6b19a2ca9116fa5ef7a634b91148ce
+29,ok,3_hmi,GT16+본체+취급설명서(하드웨어+상세편)(KOR).pdf,Unknown_GT16_MaintenanceManual_KO.pdf,Unknown,GT16,MaintenanceManual,KO,8401169,206,0f5013c8b56aa0936dcc4fee552e3acf
+30,ok,3_hmi,OMRON SYSMAC .pdf,Omron_OMRON_Manual_KO.pdf,Omron,OMRON,Manual,KO,194421,16,10135a7ee5165054a29f142e1d5e7df5
+31,ok,3_hmi,Mitsubishi melsec.pdf,Mitsubishi_Mitsubishi_ParameterManual_KO.pdf,Mitsubishi,Mitsubishi,ParameterManual,KO,790849,27,8df76e33c6717208bf82de317e69c280
+32,ok,3_hmi,KORENIX 자동화장비용 산업용이더넷스위치.pdf,Unknown_KORENIX_MaintenanceManual_KO.pdf,Unknown,KORENIX,MaintenanceManual,KO,3693387,31,0979a9cc2db0fbdb6d63da0a91ebebe6
+33,docx,3_hmi,SRC2 제어기 MEMORY MAP.doc,Keyence_SRC2_Manual_EN.doc,Keyence,SRC2,Manual,EN,549888,0,22027ab958158411ee730266019a1c40
+34,ok,3_hmi,SAIA PCD .pdf,Unknown_SAIA_SetupGuide_KO.pdf,Unknown,SAIA,SetupGuide,KO,147858,4,a49420aac3801d044b8f035199f3669c
+35,ok,3_hmi,ROBOSTAR RCS6000 - 다사iMS-J.pdf,Unknown_ROBOSTAR_SetupGuide_KO.pdf,Unknown,ROBOSTAR,SetupGuide,KO,329433,6,0cc655bb61205b131bd26205fd121511
+36,ok,3_hmi,POSCON.pdf,Unknown_POSCON_Manual_KO.pdf,Unknown,POSCON,Manual,KO,200738,6,d92336b7bcae80cbd5b70b33eb8d5683
+37,ok,3_hmi,GT16+본체+취급설명서(기본+유틸리티편)(KOR).pdf,Unknown_GT16_MaintenanceManual_KO_v2.pdf,Unknown,GT16,MaintenanceManual,KO,17729638,334,e64e37c754179f3494afae57a00e6dec
+38,ok,3_hmi,Tiny.pdf,Unknown_Tiny_SetupGuide_KO.pdf,Unknown,Tiny,SetupGuide,KO,81108,3,96b9b2cd895e639ba1df18c3e3415770
+39,ok,3_hmi,Siemens S5S7.pdf,Siemens_Siemens_Manual_KO.pdf,Siemens,Siemens,Manual,KO,259759,8,5cb900a5807ac6115004f29d646cae88
+40,ok,3_hmi,spiiplus_Modbus.pdf,Unknown_spiiplus_WiringGuide_KO.pdf,Unknown,spiiplus,WiringGuide,KO,924067,14,ac30be2522c1e95e6ca20ca884ab7c00
+41,ok,3_hmi,YASKAWA.pdf,Yaskawa_YASKAWA_Manual_KO.pdf,Yaskawa,YASKAWA,Manual,KO,156985,3,85b0c49b2adc2822013aeb13eed19848
+42,ok,3_hmi,pro-face gp-2401_2501_2601 series user manual.pdf,Mitsubishi_pro-face_UserManual_EN.pdf,Mitsubishi,pro-face,UserManual,EN,1591286,139,6e4a6d839b2cb678935c89b268878768
+43,ok,3_hmi,Yokogawa.pdf,Unknown_Yokogawa_SetupGuide_KO.pdf,Unknown,Yokogawa,SetupGuide,KO,82376,4,7fc33c22bbdf9ee2f531e04ab9f8f63b
+44,ok,3_hmi,top 본체 메인메뉴 및 터치위치 보정설정 매뉴얼.pdf,Unknown_top_Manual_KO.pdf,Unknown,top,Manual,KO,379958,8,d76ab3611bedae322a0151c1108ae00d
+45,ok,3_hmi,삼성전자 SPC .pdf,Unknown_SPC_Manual_KO.pdf,Unknown,SPC,Manual,KO,111011,3,51d79dc8e9b3cc95dc202147be09a6b2
+46,ok,3_hmi,삼성전자 FARA .pdf,Unknown_FARA_SetupGuide_KO.pdf,Unknown,FARA,SetupGuide,KO,280960,10,4e7a699184279c653b86aa92622dca68
+47,ok,3_hmi,top5 series 본체 사용설명서.pdf,Unknown_top5_SetupGuide_KO.pdf,Unknown,top5,SetupGuide,KO,840883,16,8f56e3d27117888686ad3612b9bc52d7
+48,ok,3_hmi,전송설정-v7.0.pdf,Unknown_v7_SetupGuide_KO.pdf,Unknown,v7,SetupGuide,KO,527282,21,75ad3e1baf26f9053f8bef8c34875824
+49,ok,3_hmi,슬레이브.pdf,Unknown_Unknown_Manual_KO.pdf,Unknown,Unknown,Manual,KO,323068,15,0d469e2a0baa8215f37119aa9d70e08d
+50,ok,3_hmi,통신 개요.pdf,Unknown_Unknown_ParameterManual_KO.pdf,Unknown,Unknown,ParameterManual,KO,86503,8,bd6f72feff7420b1288745898840cff7
+51,ok,3_hmi,GT15 본체취급 설명서.pdf,Unknown_GT15_MaintenanceManual_KO_v2.pdf,Unknown,GT15,MaintenanceManual,KO,38886580,546,24f94d4efc1b5d1ae9ee8856fb0eb4e5
+52,ok,3_hmi,TOP Designer 사용설명서 (051230).pdf,Unknown_TOP_ParameterManual_KO.pdf,Unknown,TOP,ParameterManual,KO,4466287,380,d13c882b49d1fb93aacf7a5686c0c9a1
+53,ok,3_hmi,GT11 Handy GOT User's Manual.pdf,Unknown_GT11_UserManual_EN.pdf,Unknown,GT11,UserManual,EN,57567390,1038,6e9e8c83257e1c54b14f2c43e620988d
+54,ok,3_hmi,GT16+사용자매뉴얼(ENG).pdf,Unknown_GT16_UserManual_EN.pdf,Unknown,GT16,UserManual,EN,27705358,602,95c4ee54855b2b39072a3feb2f9efd44
+55,ok,3_hmi,GT14핸디GOT_유저메뉴얼(ENG_Ver.).pdf,Unknown_GT14_UserManual_EN.pdf,Unknown,GT14,UserManual,EN,51216912,1546,13609d736a521100b0ef814f87e7bac4
+56,ok,3_hmi,GOT1000 Connections Manual.pdf,Unknown_GOT1000_WiringGuide_EN.pdf,Unknown,GOT1000,WiringGuide,EN,51341247,1658,e799cf47add8fca7a0c4a5418fc6614a
+57,ok,3_hmi,GOT1000 교육교재.pdf,Mitsubishi_GOT1000_Manual_EN.pdf,Mitsubishi,GOT1000,Manual,EN,119986148,255,6c88b06a0491d8bfb02e4c9d8e4e84d5
+58,ok,3_hmi,GT Designer Version2 작화메뉴얼.pdf,Unknown_GT_MaintenanceManual_KO.pdf,Unknown,GT,MaintenanceManual,KO,81940501,1750,544be251595039b20b7aa68357005aa3
+59,ok,3_hmi,GOT 시리즈 접속매뉴얼.pdf,Unknown_GOT_MaintenanceManual_KO.pdf,Unknown,GOT,MaintenanceManual,KO,144069169,1701,c49f3adb36f7ca50eba9ae2e5b603402

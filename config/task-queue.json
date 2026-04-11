@@ -4727,6 +4727,42 @@
       "updated_at": "2026-04-11 21:44:44",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-docs-agent-21fdd2",
+      "agent": "docs-agent",
+      "task": "[진행 OK] 부서장 확인: 현재 분류 수준 충분. 컨텍스트 낭비 우려로 물어본 것.",
+      "message": "[진행 OK] 부서장 확인: 현재 분류 수준 충분. 컨텍스트 낭비 우려로 물어본 것.\n\n- 2_sensor~8_etc 동일 파이프라인 그대로 진행\n- 파일당 400자 샘플 + 파일명 조합 분류 유지 (적절히 조절)\n- 본문 이해 수준은 이 단계 목표 아님 (RAG 임베딩은 다음 단계 Docling/Qwen3-Embedding-8B가 담당)\n- 중복 격리 + 표준 리네임 + 카테고리 정리에 집중\n- CID 바이너리/DOCX는 _filtered/로 격리 우선 (1_robot에서 섞인 13건도 같이 정리 권장)\n- 카테고리별 완료 시 간단히 결과 보고 (제조사 분포 + 유니크/중복/격리 수치만)",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 21:50:53",
+      "updated_at": "2026-04-11 21:50:53",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-docs-agent-74fbe1",
+      "agent": "docs-agent",
+      "task": "[파싱 전략 요청] 부서장 질문: 1_robot 분류된 파일들 파싱은 어떻게 할 생각?",
+      "message": "[파싱 전략 요청] 부서장 질문: 1_robot 분류된 파일들 파싱은 어떻게 할 생각?\n\n다음 항목 포함해서 계획안 제시:\n1) 파서 선택: Docling vs pdfplumber vs PyMuPDF vs Unstructured. 각 장단점, 표/그림/수식/레이아웃 보존 수준\n2) CID 바이너리 13건 처리: EasyOCR / Tesseract / Docling OCR 모드 중 뭐 쓸지\n3) DOCX 3건: python-docx / Docling DOCX 모드\n4) 청킹 전략:\n   - 기존 청킹(manual.documents 218k, manual.wta_documents 67k) 그대로? 재청킹?\n   - 크기 (512/1024/2000 토큰?) + 오버랩\n   - 섹션/페이지 경계 존중 여부\n   - 표/코드블록 분리 유지\n5) 임베딩: Qwen3-Embedding-8B (2000차원) 확정. 청크당 몇 개 벡터?\n6) GraphRAG 엔티티 추출: qwen3.5:35b-a3b 확정. 파싱 후 청크 단위? 섹션 단위?\n7) 저장: manual.documents 유지 vs 새 테이블 manual.documents_v2?\n8) 예상 처리 시간/비용 (108건 로봇 기준, 그리고 전체 1,965건 확장 시)\n\n너무 길게 말고 항목별 1~2줄로 간결하게. 15분 내 회신.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 21:53:00",
+      "updated_at": "2026-04-11 21:53:00",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-research-agent-addc0d",
+      "agent": "research-agent",
+      "task": "[온라인 리서치 요청] 산업용 매뉴얼 PDF → RAG + GraphRAG 파이프라인 최신 베스트 프랙티스 조사. 부서장이 현재 계획이 최적인지 확인하고 싶어함.",
+      "message": "[온라인 리서치 요청] 산업용 매뉴얼 PDF → RAG + GraphRAG 파이프라인 최신 베스트 프랙티스 조사. 부서장이 현재 계획이 최적인지 확인하고 싶어함.\n\n**현재 계획 (검증 대상)**\n- 파서: Docling (IBM) — 레이아웃/표/섹션 보존\n- OCR: Docling 내장 EasyOCR (CID 바이너리 대응)\n- 청킹: 1,024 토큰 + 128 오버랩, 섹션/페이지 경계 존중, 표/코드 단일 청크\n- 임베딩: Qwen3-Embedding-8B (2000차원)\n- GraphRAG 엔티티 추출: qwen3.5:35b-a3b (로컬 Ollama), 청크 단위\n- 저장: PostgreSQL pgvector (manual.documents_v2)\n- 대상: 산업용 매뉴얼 PDF 1,939건 (로봇/센서/HMI/서보/인버터/PLC/공압 등)\n\n**조사 항목**\n1) **Docling vs 대안** (2025~2026 기준)\n   - LlamaParse, Marker, Unstructured, Nougat, Surya, MinerU 등과 비교\n   - 표/수식/다단조판 품질 벤치마크\n2) **청킹 전략** 최신 권장\n   - Semantic chunking vs Fixed-size 1024+128 vs Hierarchical vs Late chunking\n   - Qwen3-Embedding 권장 청크 크기 (공식 문서 확인)\n3) **임베딩 모델 비교**\n   - Qwen3-Embedding-8B vs BGE-M3 vs Stella vs Jina-v3 vs E5-Mistral\n   - 한글/기술문서 성능 벤치마크 (MTEB-ko 등)\n4) **GraphRAG 구현**\n   - Microsoft GraphRAG vs LlamaIndex vs LightRAG vs nano-graphrag 최신 동향\n   - 엔티티 추출 단위 (청크/섹션/문서) 권장\n   - qwen3.5:35b-a3b 같은 MoE 모델이 엔티티 추출에 적합한지\n5) **Industrial Manual RAG 사례**\n   - 산업/제조 도메인 RAG 사례, 실패 사례, 교훈\n   - 표/도면/회로도 처리 전략\n6) **하이브리드 검색**\n   - BM25 + Dense + GraphRAG 결합 방식 (현재 하이브리드 비교 페이지 있음)\n\n**출력 형식**\n- 각 항목별 핵심 요약 (3~5줄)\n- 현재 계획의 강점/약점 (우리 계획 기준)\n- 구체적 개선 제안 (있다면 3개 이내)\n- 참고 URL\n\n30~45분 내 회신. 컨텍스트 과부하되면 항목 1~4 우선.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 21:58:30",
+      "updated_at": "2026-04-11 21:58:30",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }
