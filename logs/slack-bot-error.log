@@ -350,3 +350,17 @@ UnicodeDecodeError: 'utf-8' codec can't decode byte 0x98 in position 1057442: in
 - 페이지: `AdminUsers.tsx`
 - 라우트: `/se
 [slack-bot] 18:58:58 [CS세션] 답변 기록: slack-cs-csagent-조한종-20260411-185824 #cs-csagent (227자, 첨부:0건)
+[slack-bot] 19:00:29 [수신] #cs-csagent 조한종: 아 모바일에서만 안보인건가보네. → cs-agent
+[slack-bot] 19:00:30 [CS세션] 질문 기록: slack-cs-csagent-조한종-20260411-185824 #cs-csagent 조한종: 아 모바일에서만 안보인건가보네.
+[slack-bot] 19:00:30 직접 전송 완료 → cs-agent:5602
+[slack-bot] 19:01:27 [수신] #cs-csagent 조한종: 레포트생성하는거 이전에 생성한 파일이 있으면 레포트생성눌럿을때 리스트를 띄워줘 또안만들게. 리스트에 파일링크 생성해서 바로다운만 받을수잇게. → cs-agent
+[slack-bot] 19:01:27 [CS세션] 질문 기록: slack-cs-csagent-조한종-20260411-185824 #cs-csagent 조한종: 레포트생성하는거 이전에 생성한 파일이 있으면 레포트생성눌럿을때 리스트를 띄워줘 또안만들게. 리스트에 파일링크
+[slack-bot] 19:01:27 직접 전송 완료 → cs-agent:5602
+[slack-bot] 19:02:05 [슬랙 발신] #cs-csagent ← cs-agent: 모바일 더보기 페이지에 사용자관리 메뉴 추가 배포했습니다. (admin 권한만 노출)
+- 프론트 해시: `i
+[slack-bot] 19:02:05 [CS세션] 답변 기록: slack-cs-csagent-조한종-20260411-185824 #cs-csagent (207자, 첨부:0건)
+[slack-bot] 19:07:44 [슬랙 발신] #cs-csagent ← cs-agent: 완료했습니다. 레포트 생성 버튼을 관리 모달로 개편했습니다.
+
+**동작**
+- "레포트 생성" 클릭 → 관리
+[slack-bot] 19:07:44 [CS세션] 답변 기록: slack-cs-csagent-조한종-20260411-185824 #cs-csagent (702자, 첨부:0건)
