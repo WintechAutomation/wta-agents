@@ -495,3 +495,5 @@
 {"ts": "2026-04-11 12:10:13", "direction": "outbound", "user": "MAX", "text": "👑 서버 재고 확인 완료 — 말씀대로 이미 준비되어 있습니다.\n\n✅ **서버**: NVIDIA GB10 (Grace Blackwell, ARM64 통합메모리)\n✅ **디스크**: 916GB 중 191GB 사용 (22%, 679GB 여유) — 이전 88%는 오측정이었던 듯\n✅ **모델**: `google/gemma-4-31b-it` (59GB) 풀 스냅샷 존재, config.json 정상\n✅ **vLLM**: `~/.local/bin/vllm` 0.19.0 설치됨 (현재 미가동)\n✅ **SSH**: 2222 포트 tiaworks 계정 접속 성공\n\n⚠️ 남은 리스크\n- vllm 0.19.0이 **Gemma4ForConditionalGeneration** 아키텍처를 지원하는지 미확인 (미지원 시 transformers fallback 또는 Gemma3 27B로 대체 검토 필요)\n\n🔧 승인 요청\ncrafter가 `vllm serve .../gemma-4-31b-it --port 8000 --host 0.0.0.0` 백그라운드 실행 후 파일럿 50건 돌리려 합니다. \n- VRAM 점유 + 8000 포트 바인딩\n- 다른 워크로드와 충돌 가능성 있음\n\n가도 될까요?"}
 {"ts": "2026-04-11 12:10:24", "direction": "inbound", "user": "boss", "text": "ㅇㅋㅇㅋ"}
 {"ts": "2026-04-11 12:10:43", "direction": "outbound", "user": "MAX", "text": "👑 진행 지시 완료. vLLM 로드 후 파일럿 50건 실행 → 결과 오는 대로 보고드리겠습니다."}
+{"ts": "2026-04-11 12:32:16", "direction": "inbound", "user": "boss", "text": "파일럿 50건이 뭐 테스트인건가?"}
+{"ts": "2026-04-11 12:34:17", "direction": "inbound", "user": "boss", "text": "근데 llm서버 메모리가 100% 까지 차버리는데 왜그런지 암???"}
