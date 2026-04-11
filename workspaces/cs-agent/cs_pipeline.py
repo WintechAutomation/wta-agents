@@ -22,11 +22,45 @@ CS 자동 파이프라인 — 웹챗/슬랙 CS 질문 처리 단일 진입점
 import sys
 import json
 import os
+import urllib.request
+import urllib.parse
 
 sys.path.insert(0, os.path.dirname(__file__))
 
-from cs_rag_search import search_with_pipeline, is_sufficient
+from cs_rag_search import search_with_pipeline, is_sufficient, _extract_keywords
 from cs_pdf_cache import get_or_extract_pdf_page, lookup_session_attachment
+
+_DASHBOARD_API = os.environ.get("DASHBOARD_API", "http://localhost:5555")
+
+
+def _fetch_cs_history_context(query: str) -> str:
+    """
+    등록된 cs_history_search API로 CS 이력 DB 검색.
+    질문에서 가장 구체적인 키워드로 조회 후 컨텍스트 텍스트 반환.
+    """
+    keywords = _extract_keywords(query)
+    if not keywords:
+        return ""
+
+    # 가장 긴(구체적인) 키워드 우선
+    keyword = max(keywords, key=len)
+
+    try:
+        url = f"{_DASHBOARD_API}/api/query/cs_history_search?keyword={urllib.parse.quote(keyword)}"
+        with urllib.request.urlopen(url, timeout=5) as resp:
+            data = json.loads(resp.read().decode())
+
+        if not data.get("ok"):
+            return ""
+
+        result_text = data.get("result", "")
+        if not result_text or "0 rows" in result_text:
+            return ""
+
+        # result는 텍스트 테이블 형식 — 그대로 컨텍스트에 포함
+        return f"=== [CS 이력 DB 검색 결과 (키워드: {keyword})] ===\n{result_text[:2000]}"
+    except Exception:
+        return ""
 
 
 def _extract_pdf_if_available(rag_results: list[dict]) -> dict | None:
@@ -62,11 +96,12 @@ def _extract_pdf_if_available(rag_results: list[dict]) -> dict | None:
 
 def run(query: str) -> dict:
     """
-    4단계 CS 파이프라인 실행:
+    5단계 CS 파이프라인 실행:
     1. cs-sessions.jsonl 이전 이력 검색
     2. GraphRAG (Neo4j 단독)
     3. 충분성 판정 → db-manager 폴백 필요 여부
-    4. PDF 추출 가능 시 자동 처리
+    4. CS 이력 DB 검색 (장비탭 이슈사항 자동 참조)
+    5. PDF 추출 가능 시 자동 처리
     """
     pipeline = search_with_pipeline(query)
 
@@ -77,10 +112,15 @@ def run(query: str) -> dict:
     merged_context = pipeline["merged_context"]
     rag_source = pipeline.get("rag_source", "graph")
 
+    # 4단계: CS 이력 DB 검색 (장비탭 이슈사항 자동 보강)
+    cs_db_context = _fetch_cs_history_context(query)
+    if cs_db_context:
+        merged_context = merged_context + "\n\n" + cs_db_context
+
     # 최상위 소스 (엔티티 첫 번째)
     best_source = rag_results[0] if rag_results else None
 
-    # 4단계: PDF 자동 추출 (엔티티 속성에 source_file + page가 있는 경우)
+    # 5단계: PDF 자동 추출 (엔티티 속성에 source_file + page가 있는 경우)
     pdf_info = _extract_pdf_if_available(rag_results)
 
     return {
@@ -92,6 +132,7 @@ def run(query: str) -> dict:
         "best_source": best_source,
         "pdf_info": pdf_info,
         "rag_source": rag_source,
+        "cs_db_context": cs_db_context,
     }
 
 

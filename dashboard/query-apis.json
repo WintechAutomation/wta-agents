@@ -169,5 +169,37 @@
     "example": "GET /api/query/nc_new_this_week",
     "registered_by": "db-manager",
     "registered_at": "2026-03-29 11:33:51"
+  },
+  "cs_history_search": {
+    "name": "cs_history_search",
+    "description": "키워드로 CS 이력 검색 (장비명, 증상, 처리방법 포함)",
+    "db": "mes",
+    "sql": "SELECT id, title, symptom_and_cause, handling_method, cause_detail_description, action_result, status, cs_received_at, free_paid_type FROM csagent.cs_history WHERE title ILIKE '%{keyword}%' OR symptom_and_cause ILIKE '%{keyword}%' OR cause_detail_description ILIKE '%{keyword}%' ORDER BY cs_received_at DESC NULLS LAST LIMIT 10",
+    "params": [
+      {
+        "name": "keyword",
+        "description": "검색 키워드 (장비명, 증상 등)",
+        "required": true
+      }
+    ],
+    "example": "GET /api/query/cs_history_search?keyword=PVD",
+    "registered_by": "db-manager",
+    "registered_at": "2026-04-11 16:11:33"
+  },
+  "equipment_cs_issues": {
+    "name": "equipment_cs_issues",
+    "description": "장비명으로 CS 이슈사항 조회",
+    "db": "mes",
+    "sql": "SELECT h.id, h.title, h.symptom_and_cause, h.handling_method, h.action_result, h.status, h.cs_received_at FROM csagent.cs_history h WHERE h.title ILIKE '%{equipment_name}%' OR h.symptom_and_cause ILIKE '%{equipment_name}%' ORDER BY h.cs_received_at DESC NULLS LAST LIMIT 15",
+    "params": [
+      {
+        "name": "equipment_name",
+        "description": "장비명 (예: PVD, 검사기, 프레스)",
+        "required": true
+      }
+    ],
+    "example": "GET /api/query/equipment_cs_issues?equipment_name=PVD",
+    "registered_by": "db-manager",
+    "registered_at": "2026-04-11 16:11:35"
   }
 }

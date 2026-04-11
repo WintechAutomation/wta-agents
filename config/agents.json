@@ -96,7 +96,7 @@
       "일반"
     ],
     "mention_required": true,
-    "auto_response": true,
+    "auto_response": false,
     "ack_message": true,
     "context_hint": "",
     "slack_prefix": [
