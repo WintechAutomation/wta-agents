@@ -224,3 +224,63 @@ test('[2b] 스케줄러 탭 클릭 — URL 동기화', async ({ page }) => {
   const activeTab = await page.locator('[role="tab"][aria-selected="true"]').first().textContent().catch(() => '');
   if (activeTab) pass('[2b] 탭 활성화', `"${activeTab.trim()}" 활성`);
 });
+
+// ─────────────────────────────────────────────
+// [2c] 스케줄러 서브라우트 직접 접근 → 탭 활성화
+// ─────────────────────────────────────────────
+test('[2c] 스케줄러 서브라우트 직접 접근 탭 동기화', async ({ page }) => {
+  await login(page);
+
+  // 메인에서 탭 클릭 → URL 수집
+  await page.goto(`${BASE_URL}/system/scheduler-management`, { waitUntil: 'domcontentloaded', timeout: 20_000 });
+  await page.waitForLoadState('networkidle', { timeout: 10_000 }).catch(() => {});
+  await page.waitForTimeout(1500);
+
+  const tabs = await page.locator('[role="tab"]').all();
+  const tabRoutes: { label: string; url: string }[] = [];
+
+  for (const tab of tabs) {
+    const label = (await tab.textContent().catch(() => '')).trim();
+    await tab.click();
+    await page.waitForTimeout(600);
+    tabRoutes.push({ label, url: page.url() });
+  }
+  console.log(`\n탭-URL 매핑 (${tabRoutes.length}개):`);
+  tabRoutes.forEach(r => console.log(`  "${r.label}" → ${r.url}`));
+
+  // 각 URL 직접 접근 → 해당 탭 활성화 확인
+  console.log('\n서브라우트 직접 접근 테스트:');
+  let passCount = 0, failCount = 0;
+
+  for (const { label, url } of tabRoutes) {
+    await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 15_000 });
+    await page.waitForLoadState('networkidle', { timeout: 10_000 }).catch(() => {});
+    await page.waitForTimeout(1000);
+
+    const currentUrl = page.url();
+    await shot(page, `07-direct-${label.replace(/[\s\/\(\)]/g, '-')}`);
+
+    if (currentUrl.includes('/login')) {
+      fail(`"${label}" 직접접근`, '로그인 리다이렉트');
+      failCount++;
+      continue;
+    }
+
+    const activeTabText = await page.locator('[role="tab"][aria-selected="true"]').first().textContent().catch(() => '');
+    const allActiveTabs = await page.locator('[role="tab"][aria-selected="true"]').allTextContents().catch(() => []);
+
+    if (allActiveTabs.some(t => t.trim() === label)) {
+      pass(`"${label}" 직접접근`, `활성탭 "${activeTabText?.trim()}" ✓`);
+      passCount++;
+    } else if (activeTabText?.trim()) {
+      fail(`"${label}" 직접접근`, `활성탭 "${activeTabText?.trim()}" ≠ 기대 "${label}"`);
+      failCount++;
+    } else {
+      warn(`"${label}" 직접접근`, '활성탭 감지 불가');
+    }
+  }
+
+  console.log(`\n최종: ${passCount}/${tabRoutes.length} PASS, ${failCount} FAIL`);
+  if (failCount === 0 && passCount > 0) pass('[2c] 탭 동기화 전체', `${passCount}개 탭 모두 정상`);
+  else if (failCount > 0) fail('[2c] 탭 동기화', `${failCount}개 불일치`);
+}, { timeout: 90_000 });
