@@ -4583,6 +4583,18 @@
       "updated_at": "2026-04-11 17:50:37",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-docs-agent-7ba56f",
+      "agent": "docs-agent",
+      "task": "[부서장 지시] 2_sensor 폴더 137개 파일 내용 확인 후 리네임 작업.",
+      "message": "[부서장 지시] 2_sensor 폴더 137개 파일 내용 확인 후 리네임 작업.\n\n**위치**: data/manuals-ready/2_sensor/ (137 files)\n\n**현재 파일명 문제점**:\n- 패턴: `{Manufacturer}_{Model}_{DocType}_{Lang}.pdf`\n- 예시: ABB_ABB_InstallGuide_EN.pdf (제조사=ABB, 모델=ABB 중복), ABB_Unknown_UserManual_EN.pdf (Unknown 모델), Keyence_KEYENCE_Manual_KO.pdf\n- 센서 카테고리인데 ABB(주로 로봇/드라이브) 파일이 많음 → 카테고리 오분류 의심\n\n**작업 지시**:\n1. **137개 파일 전수 검사**:\n   - 각 PDF 첫 1~3페이지 텍스트 추출\n   - 실제 제조사(Manufacturer) 식별\n   - 실제 모델/시리즈(Model) 식별\n   - 문서 유형(DocType: Manual/UserManual/InstallGuide/CommManual/Datasheet/Catalog 등) 판별\n   - 언어(KO/EN/JA/ZH) 판별\n   - 진짜 센서 문서인지 카테고리 확인 (센서가 아니면 다른 카테고리로 이동 권장)\n\n2. **리네임 규칙** (표준화):\n   - 형식: `{제조사}_{모델}_{문서유형}_{언어}.pdf`\n   - 제조사 중복 금지 (ABB_ABB → ABB)\n   - Unknown 금지 (내용으로 추출 못하면 파일 목록에 flag)\n   - 중복 파일명 시 _v2, _v3 suffix\n   - 제조사 표준 영문 표기 (파스텍 → Fastech, 미쓰비시 → Mitsubishi)\n\n3. **산출물**:\n   - `workspaces/docs-agent/2_sensor_rename_plan.csv`\n   - 컬럼: old_filename, new_filename, manufacturer, model, doctype, language, category_valid, notes\n   - category_valid = 센서 카테고리가 맞는지 (true/false, false면 권장 카테고리 기재)\n   - notes = 불확실하거나 Unknown 사유\n\n4. **실행 단계**:\n   - Phase 1: 전수 분석 + rename plan CSV 작성 (드라이런)\n   - Phase 2: CSV를 MAX에게 먼저 보고 → 부서장 검토 → 승인 후 실행\n   - Phase 3: 실제 rename 실행 + 변경 로그 JSON 저장 (롤백 가능하게)\n\n**주의**:\n- 파일 이동/삭제 금지, 오직 rename만\n- 원본 보존을 위해 변경 전 파일명 전체 로그 필수\n- 137개 많으니 병렬 처리 활용 (PyPDF2/pdfplumber로 텍스트 추출 + 정규식/LLM 판별)\n- 20~30분 내 Phase 1 완료 목표\n\n완료 후 MAX에 CSV Cloudflare URL로 보고. 검토 후 실행 승인 요청.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 18:24:05",
+      "updated_at": "2026-04-11 18:24:05",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }

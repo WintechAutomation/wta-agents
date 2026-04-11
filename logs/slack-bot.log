@@ -29466,3 +29466,8 @@ https://agent.mes-wta.com/cs-agent/setup-
 2026-04-11 18:07:16,255 INFO [CS세션] confirmed 종료: slack-cs-csagent-조한종-20260411-180239 (도움됨 피드백)
 2026-04-11 18:07:23,841 INFO [피드백] good ← U0A7S89M5S7 (cs-agent)
 2026-04-11 18:07:23,850 INFO [CS세션] confirmed 종료: slack-cs-csagent-조한종-20260411-180239 (도움됨 피드백)
+2026-04-11 18:15:40,026 INFO [슬랙 발신] #cs-csagent ← cs-agent: 완료했습니다.
+
+**변경 내용**
+- 셋업 상세 페이지 상단에 **레포트 생성** 버튼 상시 노출 (완료 상
+2026-04-11 18:15:40,129 INFO [CS세션] 답변 기록: slack-cs-csagent-조한종-20260411-181540 #cs-csagent (640자, 첨부:0건)
