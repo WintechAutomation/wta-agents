@@ -1,0 +1,10 @@
+{"time":"2026-04-11T17:35:19.739603+09:00","level":"INFO","msg":"설정 로드 완료","port":8100,"env":"production"}
+{"time":"2026-04-11T17:35:19.8168794+09:00","level":"INFO","msg":"PostgreSQL 연결 성공"}
+{"time":"2026-04-11T17:35:19.8256424+09:00","level":"INFO","msg":"ERP SQL Server 연결 성공"}
+{"time":"2026-04-11T17:35:19.8269661+09:00","level":"INFO","msg":"ERP 관리 기능 활성화"}
+{"time":"2026-04-11T17:35:19.8269661+09:00","level":"INFO","msg":"NAS 관리 기능 활성화","host":"192.168.1.6","port":"5001"}
+{"time":"2026-04-11T17:35:19.8274719+09:00","level":"INFO","msg":"SPA 정적 파일 서빙 활성화","dist":"..\\frontend\\dist"}
+{"time":"2026-04-11T17:35:19.8274835+09:00","level":"INFO","msg":"서버 시작","addr":":8100"}
+{"time":"2026-04-11T17:35:22.608474+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"GET","path":"/health","latency":0,"ip":"::1"}
+{"time":"2026-04-11T17:35:43.1089765+09:00","level":"WARN","msg":"HTTP 요청","status":401,"method":"POST","path":"/api/auth/login","latency":10508500,"ip":"::1"}
+{"time":"2026-04-11T17:36:52.0982208+09:00","level":"INFO","msg":"HTTP 요청","status":200,"method":"POST","path":"/api/daouoffice/sync-departments","latency":3155316800,"ip":"::1","user_id":102,"username":"max"}

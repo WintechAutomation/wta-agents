@@ -4523,6 +4523,42 @@
       "updated_at": "2026-04-11 17:39:39",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-dev-agent-e9ea32",
+      "agent": "dev-agent",
+      "task": "[정정 사항 - 부서장 확인]",
+      "message": "[정정 사항 - 부서장 확인]\n\n1. **ghkim (김근형)**: 부서 \"기계설계팀\" → **생산관리팀**으로 수정 필요\n2. **mwjung**: 이름 \"문선우\" → **정민웅**으로 수정 필요 (이름 오표기)\n3. **hjcho 식별 혼선**: db-manager 조회 결과 ID 10 hjcho = 조혜진 / 인사관리부 / 주임 으로 나옴. 그런데 dev-agent는 hjcho를 조한종(부서장, 팀장)으로 봤음. \n   - hjcho가 부서장(조한종)이 맞는지, 아니면 다른 사용자(조혜진)인지 재확인 필요\n   - 부서장 username이 hjcho가 맞다면 → 부서 \"생산관리팀\"\n   - 다른 사용자라면 → 부서장 실제 username 조회 필요\n\n즉시 처리:\n- ghkim 부서 = 생산관리팀으로 UPDATE\n- mwjung 이름 = 정민웅으로 UPDATE (first_name/last_name 적절히)\n- hjcho 재확인 후 보고\n\n동시에 다우 API에서 이름 매핑 로직이 왜 틀렸는지도 확인 부탁 (근본 원인).",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 17:40:35",
+      "updated_at": "2026-04-11 17:40:35",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-dev-agent-c198d4",
+      "agent": "dev-agent",
+      "task": "[긴급/부서장 직접 지적] MES 시스템관리 - 사용자관리 페이지의 **편집 팝업창에 부서/직급 수정 필드가 누락**되어 있습니다.",
+      "message": "[긴급/부서장 직접 지적] MES 시스템관리 - 사용자관리 페이지의 **편집 팝업창에 부서/직급 수정 필드가 누락**되어 있습니다.\n\n부서장이 직접 확인 후 지적: \"뭐래는거야 다 할루시네이션이잖아 제대로 전달받은거 맞아?\"\n\n즉 동기화만 고친 게 아니라 **사용자관리 UI도 부서/직급 수정 불가능** 상태입니다.\n\n**즉시 조치**:\n1. frontend: src/pages/system/ (또는 유사 경로) 사용자관리 페이지 편집 팝업 컴포넌트 확인\n2. 부서(department_name/code), 직급(position_name/code) 입력 필드 추가\n3. 백엔드 PUT /api/users/{id} 또는 유사 엔드포인트가 해당 필드를 받는지 확인, 없으면 추가\n4. 빌드 → 배포 → Playwright 검증 (qa-agent에 위임)\n\n**검증 기준**:\n- 사용자관리 페이지에서 사용자 더블클릭 → 편집 팝업 → 부서/직급 입력 또는 드롭다운 존재\n- 수정 → 저장 → 목록 반영 확인\n- 스크린샷 첨부 필수\n\n부서장이 실측으로 확인한 이슈이니 **할루시네이션 없이 실제 Playwright로 재현 후 수정**해주세요. 완료 보고 전 반드시 qa-agent Playwright 스크린샷으로 실증해서 MAX에 보내주세요.\n\ncs-wta.com 계정 관리 작업은 이 건 끝나고 이어서 진행.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 17:48:14",
+      "updated_at": "2026-04-11 17:48:14",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-qa-agent-e89338",
+      "agent": "qa-agent",
+      "task": "[부서장 요청 - 2건 Playwright 검증 필요]",
+      "message": "[부서장 요청 - 2건 Playwright 검증 필요]\n\n**1. cs-wta.com 계정 관리 기능 검증 (dev-agent 배포 완료)**\n- URL: https://cs-wta.com\n- 확인 항목:\n  a) 로그인 후 우측 상단 사용자 이름 옆 ⚙️ 아이콘 표시 여부\n  b) ⚙️ 클릭 → /profile 이동 → 프로필 수정 동작\n  c) 비밀번호 변경 폼 동작\n  d) 사이드바 \"설정\" 메뉴 하위 \"계정 관리\" 노출 (admin 권한)\n  e) /settings/users 접근 → 사용자 목록/생성/수정/삭제 CRUD 동작\n- 스크린샷 각 단계별 필수\n\n**2. MES 사용자관리 페이지 부서/직급 필드 확인 (dev-agent 작업 중)**\n- URL: mes-wta.com (또는 로컬)\n- 경로: 시스템관리 → 사용자관리\n- 현재 상태 먼저 스크린샷 (편집 팝업에 부서/직급 필드 없음 확인)\n- dev-agent 수정 완료 후 재확인 → 부서/직급 필드 추가됨 확인\n- 실제 편집 → 저장 → 반영 동작 확인\n\n**1번은 즉시 진행 가능**, 2번은 dev-agent 완료 알림 후 진행.\n\n결과는 스크린샷 첨부해서 MAX에 보고. 실측 기반으로만 보고 (할루시네이션 금지, 부서장 지시).",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 17:49:13",
+      "updated_at": "2026-04-11 17:49:13",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }

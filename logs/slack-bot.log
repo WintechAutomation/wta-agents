@@ -29399,3 +29399,6 @@ https://agent.mes-wta.com/cs-agent/setup-
 2026-04-11 17:29:50,612 INFO [슬랙 발신] #cs-csagent ← cs-agent: 네, 바로 dev-agent에 재위임했습니다. 완료되는 대로 보고드리겠습니다.
 2026-04-11 17:29:50,666 INFO [CS세션] 답변 기록: slack-cs-csagent-조한종-20260411-164329 #cs-csagent (43자, 첨부:0건)
 2026-04-11 17:29:52,812 INFO [수신] #cs-csagent 심경기: <@U0A7S89M5S7>저 계정도 중국으로 되어있어요 ㅋㅋㅋ 펑마이에 제 정보 사용하는것같아요 → cs-agent
+2026-04-11 17:30:17,926 INFO [수신] #cs-csagent 조한종: 아 그러냐? ㅋㅋㅋ → cs-agent
+2026-04-11 17:30:17,996 INFO [CS세션] 질문 기록: slack-cs-csagent-조한종-20260411-164329 #cs-csagent 조한종: 아 그러냐? ㅋㅋㅋ
+2026-04-11 17:30:18,009 INFO 직접 전송 완료 → cs-agent:5602
