@@ -4811,6 +4811,66 @@
       "updated_at": "2026-04-11 22:17:32",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-docs-agent-3f21f6",
+      "agent": "docs-agent",
+      "task": "[파이프라인 최종 확정 — 부서장 승인 2026-04-11]",
+      "message": "[파이프라인 최종 확정 — 부서장 승인 2026-04-11]\n\n## manuals-v2 RAG+GraphRAG 파이프라인 (확정판)\n\n### 1. 파서\n- **Docling** (메인) — `generate_picture_images=True, images_scale=2.0`\n- 한국어 OCR 실패 시 **MinerU(PaddleOCR)** 폴백 검토\n- 표: Docling TableFormer로 구조 보존, 별도 청크\n\n### 2. OCR\n- Docling 내장 EasyOCR (CID 바이너리 대응)\n- DOCX: Docling DOCX 모드\n\n### 3. 청킹 (★변경)\n- **512 토큰 + 64 오버랩** (1024 → 512 하향)\n- Docling HierarchicalChunker 사용, 섹션/페이지 경계 준수\n- 표/코드블록 단일 청크 분리 보존\n- 섹션 헤더(H1/H2/H3) 컨텍스트 포함\n\n### 4. 임베딩\n- **Qwen3-Embedding-8B** (2000dim, MRL 슬라이싱)\n- 로컬 Ollama 182.224.6.147:11434\n\n### 5. 리랭커 (★신규)\n- **Qwen3-Reranker-4B** (vLLM 로컬 실행)\n- BM25 + Dense RRF → Qwen3-Reranker-4B 후단 재순위화\n- PostgreSQL BM25: pg_bm25 확장 검토 (없으면 앱 레벨)\n\n### 6. GraphRAG (★변경)\n- **LightRAG 프레임워크 채택** (MS GraphRAG 대신)\n- 엔티티 추출: **qwen3.5:35b-a3b** 로컬 Ollama\n- 청크 단위 추출, 증분 업데이트 활용\n- 노드 타입: 기본 + `Figure`/`Table`/`Diagram` 추가\n\n### 7. 텍스트-이미지 정렬 (★핵심)\n- Docling picture/table 노드로 bbox/캡션/parent_section 보존\n- 본문 \"그림 X.Y/Fig./표\" 참조 정규식 후처리 매칭\n- **Qwen2.5-VL-7B 로컬**로 figure 설명 자동 생성 → `vlm_description` 저장\n- 텍스트와 동일 벡터 공간에 통합 인덱싱\n- 이미지 PNG → **Supabase Storage `manual-images` 버킷** 업로드, 썸네일 256px 별도\n\n### 8. 저장 스키마 (manual.documents_v2)\n```sql\nid, file_id, chunk_id, category, mfr, model, doctype, lang,\nsection_path,               -- [\"3. 배선\", \"3.2 전원결선\"]\npage_start, page_end,\ncontent,                    -- 청크 텍스트\nembedding vector(2000),\nfigure_refs JSONB,          -- [{figure_id, caption, image_url, bbox, page, image_type, vlm_description}]\ntable_refs JSONB,\ninline_refs JSONB,          -- 본문 참조 매칭\ncreated_at\n```\n\n### 9. 2차 확장 (차후)\n- **ColQwen2** 멀티벡터 페이지 검색 (pgvector multi-vector 지원 확인 후)\n- Jina-CLIP-v2 보조 벡터화\n\n### 실행 순서\n1. db-manager와 `manual.documents_v2` + Supabase `manual-images` 버킷 협의/생성\n2. 기존 `batch-parse-docling.py` 수정 (이미지 export + 청킹 512)\n3. Qwen3-Reranker-4B vLLM 실행 환경 구축 (crafter 지원 요청 가능)\n4. Qwen2.5-VL-7B 환경 확인 (admin-agent에 Ollama 모델 pull 요청)\n5. **1_robot 샘플 3건 PoC** (Mitsubishi 대형 매뉴얼)\n6. 품질 검증 → OK면 1_robot 전체 → 나머지 카테고리 확장\n\n현재 진행 중인 4_servo + 8_etc 분류는 그대로 완료. 파싱/임베딩은 위 파이프라인 적용.\n\n문서화: `docs/manuals-v2-pipeline-v1.md`에 위 내용 정리해서 커밋 부탁.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 22:20:22",
+      "updated_at": "2026-04-11 22:20:22",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-db-manager-892644",
+      "agent": "db-manager",
+      "task": "[협의 요청] docs-agent와 협의하여 다음 준비 부탁합니다 (부서장 승인 완료).",
+      "message": "[협의 요청] docs-agent와 협의하여 다음 준비 부탁합니다 (부서장 승인 완료).\n\n## 1. 신규 테이블 `manual.documents_v2`\n- 기존 `manual.documents`(218k), `manual.wta_documents`(67k)는 그대로 보존\n- 스키마:\n```sql\nCREATE TABLE manual.documents_v2 (\n  id BIGSERIAL PRIMARY KEY,\n  file_id TEXT NOT NULL,\n  chunk_id TEXT NOT NULL,\n  category TEXT,\n  mfr TEXT,\n  model TEXT,\n  doctype TEXT,\n  lang TEXT,\n  section_path JSONB,\n  page_start INT, page_end INT,\n  content TEXT NOT NULL,\n  embedding vector(2000) NOT NULL,\n  figure_refs JSONB,\n  table_refs JSONB,\n  inline_refs JSONB,\n  created_at TIMESTAMPTZ DEFAULT NOW()\n);\nCREATE INDEX ON manual.documents_v2 USING ivfflat (embedding vector_cosine_ops);\nCREATE INDEX ON manual.documents_v2 (category, mfr, model);\n```\n\n## 2. BM25 지원\n- `pg_bm25` (ParadeDB) 확장 설치 가능성 검토\n- 불가능 시 앱 레벨 BM25(rank_bm25 python)로 대체 가능\n\n## 3. Supabase Storage\n- `manual-images` 버킷 생성\n- 경로 규칙: `{category}/{file_id}/page_{N}_{figure_id}.png` + 썸네일 256px\n\n스키마 제안 검토 후 docs-agent와 협의해서 진행해줘. MAX는 승인만 하고 구현은 두 에이전트가 주관.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 22:20:31",
+      "updated_at": "2026-04-11 22:20:31",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-admin-agent-68e9ce",
+      "agent": "admin-agent",
+      "task": "[Ollama 모델 추가 요청] Qwen2.5-VL-7B (이미지 설명 생성용) Ollama에 pull 가능 여부 확인 부탁합니다.",
+      "message": "[Ollama 모델 추가 요청] Qwen2.5-VL-7B (이미지 설명 생성용) Ollama에 pull 가능 여부 확인 부탁합니다.\n\n- 대상 서버: 182.224.6.147:11434\n- 목적: 산업 매뉴얼 RAG 파이프라인에서 figure/회로도 설명 자동 생성\n- 모델: `qwen2.5vl:7b` (Ollama 공식) 또는 HuggingFace GGUF\n- VRAM/디스크 여유 확인 후 가능하면 pull, 불가능하면 제약사항 보고\n\n별도 긴급 아님, 확인 결과만 알려주세요.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 22:20:35",
+      "updated_at": "2026-04-11 22:20:35",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-db-manager-a61dbd",
+      "agent": "db-manager",
+      "task": "[확인 요청] 부서장 질문: manual-images 버킷 또는 유사한 매뉴얼 이미지 저장 버킷이 Supabase Storage에 이미 있는지 확인 부탁.",
+      "message": "[확인 요청] 부서장 질문: manual-images 버킷 또는 유사한 매뉴얼 이미지 저장 버킷이 Supabase Storage에 이미 있는지 확인 부탁.\n\n- 현재 Supabase Storage 버킷 목록 전부 조회\n- manual 관련 / images 관련 버킷 있으면 용도/경로 규칙/현 사용량 보고\n- 기존 버킷 재사용 가능하면 재사용, 별도 생성 불필요\n- 5분 내 회신 부탁",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 22:24:07",
+      "updated_at": "2026-04-11 22:24:07",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-db-manager-58d3c4",
+      "agent": "db-manager",
+      "task": "[경로 전략 변경] 부서장 지시: `v2/` prefix 사용하지 말고, 기존 레거시(`images/`)와 중복만 안 되게 폴더 잡을 것.",
+      "message": "[경로 전략 변경] 부서장 지시: `v2/` prefix 사용하지 말고, 기존 레거시(`images/`)와 중복만 안 되게 폴더 잡을 것.\n\n제안안 중 docs-agent와 합의해서 하나 선택:\n- A) `manuals/{category}/{file_id}/page_{N:04d}_{figure_id}.png`\n- B) `manual_images/{category}/{file_id}/...`\n- C) 다른 제안\n\n조건:\n- 기존 `images/` 경로와 충돌 없어야 함\n- 카테고리 구조 보존\n- 나중에 v2라는 단어 없이도 용도 명확\n- 테이블 이름은 `manual.documents_v2` 유지 (v2가 내부 버전 관리용)\n\n5분 내 합의안 회신. 합의 완료 즉시 테이블/경로 확정 보고.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 22:28:08",
+      "updated_at": "2026-04-11 22:28:08",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }

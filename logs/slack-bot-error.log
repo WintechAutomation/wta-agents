@@ -364,3 +364,13 @@ UnicodeDecodeError: 'utf-8' codec can't decode byte 0x98 in position 1057442: in
 **동작**
 - "레포트 생성" 클릭 → 관리
 [slack-bot] 19:07:44 [CS세션] 답변 기록: slack-cs-csagent-조한종-20260411-185824 #cs-csagent (702자, 첨부:0건)
+[slack-bot] 21:26:25 Connecting to a new endpoint...
+[slack-bot] 21:26:28 The connection has been closed (session id: 83dbb7e9-bcb8-4dde-84aa-a43773f8061a)
+[slack-bot] 21:26:28 A new session has been established (session id: ff8a8da4-c3cb-4bd2-a1e5-d541dd115571)
+[slack-bot] 21:26:28 Stopped receiving messages from a connection (session id: 83dbb7e9-bcb8-4dde-84aa-a43773f8061a)
+[slack-bot] 21:26:28 Connected to a new endpoint...
+[slack-bot] 21:26:28 Starting to receive messages from a new connection (session id: ff8a8da4-c3cb-4bd2-a1e5-d541dd115571)
+[slack-bot] 22:00:10 [수신] MAX: [일일 업무보고 요청 \u2014 2026-04-11]
+
+각자 오늘 처리 작업을 다음 경로에 저장 부탁합니다:
+`reports/daily-reports/ (슬랙 발신 형식 아님 \u2014 무시)
