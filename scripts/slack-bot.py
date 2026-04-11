@@ -2261,7 +2261,15 @@ def handle_slack_message(event, say):
 
     # 레거시 Ack-first: 즉시 처리중 메시지 발송 (ack_message=false인 채널 제외)
     ch_ack_cfg = CHANNEL_CONFIG.get(channel_name, {})
-    if ch_ack_cfg.get("ack_message", True):
+    if ch_ack_cfg:
+        ack_enabled = ch_ack_cfg.get("ack_message", True)
+    else:
+        prefix_cfg_ack = next(
+            (cfg for prefix, cfg in CHANNEL_PREFIX_CONFIG.items() if channel_name.startswith(prefix)),
+            None
+        )
+        ack_enabled = prefix_cfg_ack.get("ack_message", True) if prefix_cfg_ack else True
+    if ack_enabled:
         if ch_id_for_ack:
             try:
                 ack_resp = slack_app.client.chat_postMessage(
