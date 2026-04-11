@@ -15,3 +15,7 @@
   {'file_id': '1_robot_c7fe37c1ed98', 'chunks': 395, 'figures': 94, 'tables': 14}
   elapsed: 634.4s  vlm_err=0  upload_err=0  (total: 24.1 min)
 --- [5/10] ABB_IRB360_ProductSpec_EN.pdf ---
+  mfr=ABB model=IRB360 dt=ProductSpec lang=EN
+  {'file_id': '1_robot_54fdb56329f0', 'chunks': 159, 'figures': 38, 'tables': 63}
+  elapsed: 248.6s  vlm_err=0  upload_err=0  (total: 28.3 min)
+--- [6/10] Sanyo_SanmotionR_ProductSpec_EN.pdf ---
