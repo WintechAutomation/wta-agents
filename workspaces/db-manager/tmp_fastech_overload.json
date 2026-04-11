@@ -1,0 +1,117 @@
+{
+  "columns": [
+    "id",
+    "source_file",
+    "chunk_index",
+    "page_number",
+    "content"
+  ],
+  "rows": [
+    [
+      "469509",
+      "Fastech_MOTIONLINK_CommManual_KO.pdf",
+      "156",
+      "None",
+      "문서: Fastech_MOTIONLINK_CommManual_KO > 섹션: FAS\\_ServoEnable\n\n); _ASSERT(nRtn == FMM_OK); } // Alarm 이 있으면 AlarmReset 을 합니다. if (AxisStatus.FFLAG_ERRORALL || AxisStatus.FFLAG_ERROVERCURRENT || AxisStatus.FFLAG_ERROVERLOAD) { nRtn = FAS_ServoAlarmReset(iBdID); _ASSERT(nRtn == FMM_OK); } //  연결을 종료합니다. FAS_Close(iBdID); } See Also FAS_ServoAlarmReset\n```"
+    ],
+    [
+      "470066",
+      "Fastech_SERVOII_CommManual_KO_5.pdf",
+      "118",
+      "None",
+      "문서: Fastech_SERVOII_CommManual_KO_5 > 섹션: 4.2 Error Code\n\n| Error Code  History  1  상태  설명  Hex  / Dec  7500h / 29952  500  EtherCAT  통신 오류  EtherCAT  통신에 오류가 발생하였습니다  .  FF01h / 65281  1  과전류 이상  모터 구동 소자에 과도한  4.8A  이상의 전류가 흘  렀습니다  .  FF02h / 65282  2  과속도 이상  모터 속도가  3,000  [rpm]  을 초과하였습니다  .  FF03h / 65283  3  위치 추종 이상  위치 명령 중 위치 오차가 설정된 값 보다 크게  발생하였습니다  .  2  FF04h / 65284  4  과부하 이상  모터의 최대 토크를 초과하는 부하가  5  초 이상 가  해졌습니다  .  FF05h / 65285  5  과열 이상  드라이브의 내부 온도가  85°C  를 초과하였습니다  .  FF06h / 65286  6  회생 전압 이상  모터의 역기전력 전압이 한계 값을 초과하였습니  다  .  3  FF07h / 65287  7  모터 접속 이상  드라이브와 모터의 "
+    ],
+    [
+      "470189",
+      "Fastech_SERVOII_CommManual_KO_5.pdf",
+      "241",
+      "None",
+      "문서: Fastech_SERVOII_CommManual_KO_5 > 섹션: 5.5 Error Code 의 진단과 해제\n\n| Error Code /  이름  설명  점검 및 조치  FF01h /  과전류 이상  모터 구동 소자에 과도한  전류가 흘렀습니다  .  (  모터에 이상이 있는 경우  )  모터선의 단락 상태  를 확인하고  ,  모터를 교체합니다  .  (  드라이브에 이상이 있는 경우  )  위의 조치 후에  도 알람이 계속되면 드라이브를 교체합니다  .  FF02h /  과속도 이상  모터 속도가  3,000  [rpm]  을 초과하였습니다  .  상위 드라이브의 속도 지령값을 확인하여 낮춥니  다  .  FF03h /  위치 추종  이상  위치 명령 중 위치 오차  가 설정된 값 보다 크게  발생하였습니다  .  (  기구적인 문제로 모터의 회전이 원활하지 못한  경우  )  유니트 조립 상태 점검하고  ,  장비의 구조  이상을 바로 잡습니다  .  (  브레이크가 풀리지 않은 상태  )  브레이크 케이블  점검  .  브레이크 동작 시 작동 소리가 들리는지  확인하고  ,  브레이크 이상을 바로 잡거나 교체합  니다  .  (  모터의 고장"
+    ],
+    [
+      "470191",
+      "Fastech_SERVOII_CommManual_KO_5.pdf",
+      "243",
+      "None",
+      "문서: Fastech_SERVOII_CommManual_KO_5 > 섹션: 5.5 Error Code 의 진단과 해제\n\n| Error Code /  이름  설명  점검 및 조치  FF07h /  모터 접속  이상  드라이브와 모터의 연결  에 이상이 있습니다  .  (  모터에 이상이 있는 경우  )  모터의 상 단선을 확  인하고  ,  모터를 교체합니다  .  (  모터와 드라이브 간 케이블에 문제가 있는 경  우  )  모터 케이블의 접속 상태를 확인합니다  .  케이블 커넥터의 연결 상태  (  핀맵  )  를 확인하여 이  상을 수정합니다  .  케이블을 교체합니다  .  위의 조치 후에도 알람이 계속되면 드라이브를  교체합니다  .  FF08h /  엔코더 접속  이상  드라이브와 엔코더의 연  결에 이상이 있습니다  .  (  엔코더 중계 케이블에 이상이 있는 경우  )  드라  이브와 모터의 엔코더 커넥터 간 연결 상태를 확  인하고  ,  조치합니다  .  엔코더 중계 케이블의 단선 유무를 확인하고 교  체합니다  .  엔코더 케이블 배선 상태를 확인하고 수정합니  다  .  (  엔코더에 이상이 있는 경우  )  엔코더 파손  ,  엔코  "
+    ],
+    [
+      "470478",
+      "Fastech_SERVOII_Manual_KO.pdf",
+      "15",
+      "None",
+      "문서: Fastech_SERVOII_Manual_KO > 섹션: 페이지 7\n\n## 페이지 7\n\n7 \n드라이브 사양\n\n２．드라이브 사양\n\n２－１．드라이브 특성표\n\n드라이브형식 \nEzi-SERVOⅡ-PE-ALL 42/56/60 series \nEzi-SERVOⅡ-PE-ALL 86 series\n\n입력 전압 \n24VDC ± 10% \n40~70VDC\n\n제어 방식 \nARM based 32bit MCU에 의한 Closed Loop 제어\n\n다축 제어 \n최대 254축 구동(IP : 1~254설정 가능)\n\nPositon Table \n256개의 Motion Step 지정 기능 \n(Speed, External start, Jump, Loop, Wait and PT finish 등)\n\n소비 전류 \n최대 500mA (모터 전류 제외)\n\n온도 \n사용 : 0~50℃ \n보관 : -20~70℃\n\n환경\n\n습도 \n사용 : 35~85%RH (결로는 없을 것) \n보관 : 10~90%RH (결로는 없을 것)\n\n내진동 \n0.5G\n\n회전 속도 \n0~3,000rpm*1\n\n분해능[P/R]\n\n10,000/회전 엔코더 사용 모델 : 500 1,000 1,600 2,000 3,600 5,000 6,400 7,20"
+    ],
+    [
+      "470511",
+      "Fastech_SERVOII_Manual_KO.pdf",
+      "48",
+      "None",
+      "문서: Fastech_SERVOII_Manual_KO > 섹션: 페이지 37\n\n## 페이지 37\n\n37 \n제어 입력 및 출력 신호\n\n６－４．출력 신호\n\n1) Compare Out/Trigger Pulse Output 출력\n\n「Trigger Pulse Output」신호는 특정 조건이 충족되었을 때 [ON]이 출력되는 것으로 CN1\n\n커넥터의 「COMP」 (Compare Out pin)에 고정되어 있습니다. 이것은 외부 controller 와의\n\n동기 모션 제어가 필요한 경우에 사용됩니다.\n\n(자세한 사항은 ’8-5.Trigger Pulse Output’항 참조)\n\n2) Inposition 출력\n\nServo ON 상태에서 motor 가 목표 위치를 정확히 찾으면 [ON] 신호를 출력합니다.\n\n이 신호의 출력 조건은 파라미터의 ‘Position Loop Gain’ 및 ‘Inpos Value’ 값에 의해\n\n결정됩니다.\n\n* 파라미터 ‘Inpos Value’ 값에 따른 출력 신호의 시간 지연 :\n\n값 \nMode \n내용\n\n0~63 \nFast mode \n목표 위치 도달 후 1[msec] 이내에 신호가 출력됨.\n\n목표 위치 도달 후 최대 100[msec] 이내에 신호가 출"
+    ],
+    [
+      "470553",
+      "Fastech_SERVOII_Manual_KO.pdf",
+      "90",
+      "None",
+      "문서: Fastech_SERVOII_Manual_KO > 섹션: 페이지 64\n\n## 페이지 64\n\n보호 기능 \n64\n\n１１．보호 기능\n\n１１－１．알람 종류\n\n1) 드라이브 운전 중 알람이 발생하면 상태 표시 LED 중 적색 LED 가 점멸하며 알람 번호와\n\n동일하게 LED 가 점멸하며 다음 표와 같은 보호 기능이 작동됩니다.\n\n2) 알람 번호 15 번 이후는 알람 LED 는 점멸하지 않습니다.\n\n알람\n\n알람명 \n내용\n\n번호\n\n1 \n과전류 이상 \n모터 구동 소자에 과도한 전류가 흘렀을 때*1\n\n2 \n과속도 이상 \n모터 속도가 3,000[rpm]을 초과하였을 때\n\n3 \n위치 추종 이상 \n위치 명령 중 위치 오차가 주어진 값*2 보다 크게 발생한 경우\n\n4 \n과부하 이상 \n모터의 최대 토크를 초과하는 부하가 5 초 이상 가해졌을 때\n\n5 \n과열 이상 \n드라이브의 내부 온도가 85°C 를 초과한 경우\n\n6 \n회생전압 이상 \n모터의 역기전력 전압이 한계값을 초과하는 경우*3\n\n7 \n모터 접속 이상 \n드라이브와 모터의 연결에 이상이 있을 때\n\n8 \n엔코더 접속 이상 \n드라이브와 엔코더의 연결에 이상이 있을 때\n\n10 \n인포지션 이상 \n운전 완료 후 위치 오차(1 이상)"
+    ],
+    [
+      "470555",
+      "Fastech_SERVOII_Manual_KO.pdf",
+      "92",
+      "None",
+      "문서: Fastech_SERVOII_Manual_KO > 섹션: 페이지 65\n\n## 페이지 65\n\n65 \n보호 기능\n\n１１－３．알람의 진단과 해제\n\n알람이 발생하면 발생 원인을 없앤 다음, 알람을 해제해 주십시오. 해제하는 방법은 아래와\n\n같습니다. 아래 표［리셋트］항이 「무효」가 되어 있는 알람은 전원을 떨어뜨려야만 해제할\n\n수 있습니다.\n\n알람\n\n리셋\n\n알람명 \n내용 확인\n\n번호\n\n트\n\n1) 모터 선(A/A, B/B)의 단락 상태를 확인해 주십시오.\n\n1 \n과전류 이상\n\n유효\n\n2) 파라미터의 설정, 기계의 부하 상태를 확인해 주십시오.\n\n1) 파라미터의 설정, 모터의 이상 동작을 확인해 주십시오.\n\n2 \n과속도 이상\n\n유효\n\n2) 상위 제어기(PLC 등)의 속도 지령을 확인해 주십시오.\n\n1) 부하를 줄이거나 가감속 값을 증가 시킵니다.\n\n2) 기구부의 조립 상태를 점검합니다.\n\n3) 브레이크 케이블을 점검합니다.\n\n3 \n위치 추종 이상\n\n유효\n\n4) 모터 선 쇼트 또는 단선 여부를 점검합니다.\n\n5) 엔코더 케이블의 배선 상태를 점검합니다.\n\n6) 파라미터 24 번의 설정 값을 점검합니다.\n\n1) 모터 정격과 부하의 크기를 비교 하십시오.\n\n2) 기구"
+    ],
+    [
+      "470784",
+      "Fastech_SERVOII_ParameterManual_KO.pdf",
+      "147",
+      "None",
+      "문서: Fastech_SERVOII_ParameterManual_KO > 섹션: ◼ 알람 LED 의 점멸횟수와 에러 종류 일람표\n\n|   LED 점멸횟수 | 에러 종류           | 원인                                                                                    |\n|----------------|---------------------|-----------------------------------------------------------------------------------------|\n|              1 | 과전류 이상         | 모터 구동 소자에 과도한 전류가 흐른 경우 *1                                             |\n|              2 | 과속도 이상         | 모터 구동 속도가 3,000 r/min 을 넘은 경우 *2                                            |\n|              3 | 위치 추종 이상      | 모터 운전 중 위치 오차 ( 위"
+    ],
+    [
+      "471288",
+      "Fastech_SERVOII_ParameterManual_KO.pdf",
+      "651",
+      "None",
+      "문서: Fastech_SERVOII_ParameterManual_KO > 섹션: 6.1 에러 코드 일람\n\n| 에러 코드   | 외부 표시   | 에러 종류        | 원인                                                            | 대책                                                                                                                                                                                                                                                                                                                                                                                                                                                      "
+    ],
+    [
+      "471770",
+      "Fastech_Unknown_CommManual_KO.pdf",
+      "157",
+      "None",
+      "문서: Fastech_Unknown_CommManual_KO > 섹션: １－２－５．상태 Flag의 bit 설정\n\n| Flag define명         | 내용                                                                                            | 해당 bit 위치   |\n|-----------------------|-------------------------------------------------------------------------------------------------|-----------------|\n| FFLAG_ERRORALL        | 여러 에러 중 하나 이상의 에러가 발생한 경우.                                                    | 0X00000001      |\n| FFLAG_HWPOSILMT       | +방향 Limit 센서가 ON이 된 경우.                                                                | 0X00000002      |\n| F"
+    ],
+    [
+      "471808",
+      "Fastech_Unknown_CommManual_KO.pdf",
+      "195",
+      "None",
+      "문서: Fastech_Unknown_CommManual_KO > 섹션: FAS\\_ServoEnable\n\n_ASSERT(nRtn == FMM_OK); } // Alarm 이 있으면 AlarmReset 을 합니다. if (AxisStatus.FFLAG_ERRORALL || AxisStatus.FFLAG_ERROVERCURRENT || AxisStatus.FFLAG_ERROVERLOAD) { nRtn = FAS_ServoAlarmReset(iBdID); _ASSERT(nRtn == FMM_OK); } //  연결을 종료합니다. FAS_Close(iBdID); } See Also FAS_ServoAlarmReset\n```"
+    ],
+    [
+      "472257",
+      "Fastech_Unknown_FirmwareNote_KO_2.pdf",
+      "60",
+      "None",
+      "문서: Fastech_Unknown_FirmwareNote_KO_2 > 섹션: １－２－１．Frame type 별 송수신 내용\n\n| 0x2E   | FAS_ GetAlarmType   | 현재 Alarm 상태 및 정보를 의뢰함. 송신 : 0 byte 답신 : 2 byte ♦ Alarm type: No alarm (0) OverCurrent(1) StepOut(3) OverLoad(4) BackEMF(6) MotorConnect(7) MotorPower(9) Inposition(10) ROMdevice(12) OverInputVoltage(14) Position Overflow(15) 1 byte 1 byte 통신 상태 Alarm 상태 (0:No alarm,   |\n|--------|---------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
+    ],
+    [
+      "472290",
+      "Fastech_Unknown_FirmwareNote_KO_2.pdf",
+      "93",
+      "None",
+      "문서: Fastech_Unknown_FirmwareNote_KO_2 > 섹션: １－２－５．상태 Flag 의 bit 설정\n\n| FFLAG_ERRSPEED        | 모터가 펄스 입력에 정상적으로 추종하지 않는 Alarm 발생.                                       | 0X00000400   |\n|-----------------------|-----------------------------------------------------------------------------------------------|--------------|\n| FFLAG_ERROVERLOAD     | 모터의 최대토크를 초과하는 부하가 5 초 이상 또는 10바퀴 이상의 거리 동안 가해지는 Alarm 발생. | 0X00000800   |\n| FFLAG_ERROVERHEAT     | 드라이브의 내부온도가 55°C 를 초과하는 Alarm 발생.                                            | 0X00001000   |\n| FFLAG_ERRREVPWR       | 모터의 역기전력 전압이 70V를 초과하는 Alarm 발생"
+    ],
+    [
+      "472294",
+      "Fastech_Unknown_FirmwareNote_KO_2.pdf",
+      "97",
+      "None",
+      "문서: Fastech_Unknown_FirmwareNote_KO_2 > 섹션: １－２－５．상태 Flag 의 bit 설정\n\n| FFLAG_ERRPOSTRACKING   | 위치명령중 위치오차가 'Pos Tracking Limit'값보다 크게 발생한 경우                             | 0X00000400   |\n|------------------------|-----------------------------------------------------------------------------------------------|--------------|\n| FFLAG_ERROVERLOAD      | 모터의 최대토크를 초과하는 부하가 5 초 이상 또는 10바퀴 이상의 거리 동안 가해지는 Alarm 발생. | 0X00000800   |\n| FFLAG_ERROVERHEAT      | 드라이브의 내부온도가 55°C 를 초과하는 Alarm 발생.                                            | 0X00001000   |\n| FFLAG_ERRBACKEMF       | 모터의 역기전력 전압이 70V를 초과하는 Al"
+    ]
+  ],
+  "count": 15
+}
