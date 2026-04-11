@@ -4799,6 +4799,30 @@
       "updated_at": "2026-04-12 02:06:53",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-docs-agent-197a8f",
+      "agent": "docs-agent",
+      "task": "[재촉 — 부서장 대기 중]",
+      "message": "[재촉 — 부서장 대기 중]\n\n7분 전 파일 8 원인 조사 지시 보냈는데 회신이 없습니다. 부서장이 \"????\" 라고 독촉 중입니다.\n\n**즉시 회신 바람**:\n1. 파일 9/10 중단 처리 상태 (OK or 진행 중)\n2. 현재 뭘 하고 있는지 (조사 착수? 로그 파싱 중? 아직 확인 안 함?)\n3. 조기 종료 11.2s 로그 실제 내용 (한 줄이라도 먼저 보내세요)\n\n분석 완료 전이라도 \"조사 착수함, X 확인 중, Y 분 후 1차 결과\" 식 중간 상태라도 좋습니다. 침묵은 금지입니다.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-12 02:14:32",
+      "updated_at": "2026-04-12 02:14:32",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-docs-agent-7a2077",
+      "agent": "docs-agent",
+      "task": "[부서장 승인 — A안 재개]",
+      "message": "[부서장 승인 — A안 재개]\n\n\"오류해결한거면 남은파일 재진행\"\n\n### 즉시 실행\n1. 오케스트레이터 파일 리스트 경로 수정:\n - 파일 8: `data/manuals-v2/2_sensor/Cognex_IS5000_QuickStart_KO.pdf`\n - 파일 10: `data/manuals-v2/5_inverter/Yaskawa_V1000_TechnicalManual_KO.pdf`\n2. `Path.exists()` pre-check 추가 (재발 방지, 필수)\n3. 파일 8 → 9 → 10 순서 재실행 (1~7 건너뛰기)\n4. 실행 전 10개 파일 경로 전수 pre-check 결과를 먼저 한 줄로 보고 (예: \"10/10 exist OK\")\n5. 실행 시작 시각 보고, 파일 완료마다 간단 보고\n6. 10건 완료 후 통합 리포트 + 검증 쿼리 5건 + Qwen3-Reranker 파싱 드래프트\n\n### 주의\n- 재실행 시 파일 8/9/10 file_id는 동일하게 유지 (재현 가능성 보장)\n- 파일 9 (BFP-A8586-D)는 기존 폴더 그대로 사용 (덮어쓰기)\n- 에러 발생 시 즉시 kill + 보고\n\nETA 갱신도 같이 회신 바랍니다. 부서장 대기 중.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-12 02:17:52",
+      "updated_at": "2026-04-12 02:17:52",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }
