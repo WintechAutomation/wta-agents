@@ -1,0 +1,2 @@
+{"session_id": "slack-cs-csagent-조한종-20260411-185709", "timestamp": "2026-04-11T18:57:18.008127+09:00", "channel": "cs-csagent", "user": "조한종", "question_source": "slack", "language": "ko", "query": "아직이냐?", "full_response": "방금 배포 완료했습니다. 본사보고용(슬라이드) 클릭 시 프롬프트 입력 모달이 뜨고, 프리셋 저장/재사용 가능합니다.\n- 프론트 해시: `index-B9zmxEkm.js`\n- Ctrl+Shift+R로 새로고침해주세요.", "status": "responded"}
+{"type": "feedback", "value": "positive", "ts": "2026-04-11T18:57:29.753106+09:00", "user": "U0A7S89M5S7", "session_id": "slack-cs-csagent-조한종-20260411-185709"}

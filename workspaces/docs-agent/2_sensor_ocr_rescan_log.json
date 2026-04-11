@@ -1,0 +1,69 @@
+{
+  "phase": "2b",
+  "executed_at": "2026-04-11 18:57:44 KST",
+  "total_rescanned": 27,
+  "auto_renamed": 10,
+  "auto_rename_candidates": 10,
+  "entries": [
+    {
+      "old": "Unknown_DA-S_Manual_KO.pdf",
+      "new": "Omron_E3X-DA-SIE3X-MDA_SetupGuide_KO.pdf",
+      "ts": "2026-04-11 18:57:44 KST",
+      "status": "success"
+    },
+    {
+      "old": "Unknown_SERIES_Manual_KO.pdf",
+      "new": "Panasonic_GX-U_SetupGuide_KO.pdf",
+      "ts": "2026-04-11 18:57:44 KST",
+      "status": "success"
+    },
+    {
+      "old": "Unknown_SERIES_WiringGuide_KO.pdf",
+      "new": "Panasonic_GX-U_SetupGuide_KO_v2.pdf",
+      "ts": "2026-04-11 18:57:44 KST",
+      "status": "success"
+    },
+    {
+      "old": "Unknown_Unknown_Manual_KO_17.pdf",
+      "new": "Basler_IOVIS-TECH-MANUAL-2014_SetupGuide_KO.pdf",
+      "ts": "2026-04-11 18:57:44 KST",
+      "status": "success"
+    },
+    {
+      "old": "Unknown_Unknown_Manual_KO_18.pdf",
+      "new": "ABB_IOVIS-TECH-MANUAL-2014_SetupGuide_KO.pdf",
+      "ts": "2026-04-11 18:57:44 KST",
+      "status": "success"
+    },
+    {
+      "old": "Unknown_Unknown_Manual_KO_3.pdf",
+      "new": "Keyence_CYENCE_Manual_KO.pdf",
+      "ts": "2026-04-11 18:57:44 KST",
+      "status": "success"
+    },
+    {
+      "old": "Unknown_Unknown_Manual_KO_4.pdf",
+      "new": "Basler_IOVIS-TECH-MANUAL-2014_SetupGuide_KO_v2.pdf",
+      "ts": "2026-04-11 18:57:44 KST",
+      "status": "success"
+    },
+    {
+      "old": "Unknown_Unknown_Manual_KO_6.pdf",
+      "new": "ABB_IOVIS-TECH-MANUAL-2014_SetupGuide_KO_v2.pdf",
+      "ts": "2026-04-11 18:57:44 KST",
+      "status": "success"
+    },
+    {
+      "old": "Unknown_VERSION_MaintenanceManual_KO.pdf",
+      "new": "Keyence_EMERGENCY_Manual_KO.pdf",
+      "ts": "2026-04-11 18:57:44 KST",
+      "status": "success"
+    },
+    {
+      "old": "Unknown_VERSION_Manual_KO.pdf",
+      "new": "Keyence_EMERGENCY_Manual_KO_v2.pdf",
+      "ts": "2026-04-11 18:57:44 KST",
+      "status": "success"
+    }
+  ]
+}
