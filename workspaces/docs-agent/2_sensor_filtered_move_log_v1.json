@@ -1,0 +1,238 @@
+{
+  "phase": "2c-move",
+  "executed_at": "2026-04-11 21:09:30 KST",
+  "total": 27,
+  "success": 14,
+  "errors": 13,
+  "entries": [
+    {
+      "src": "C:\\MES\\wta-agents\\data\\manuals-ready\\2_sensor\\Unknown_DA-S_Manual_KO.pdf",
+      "dst": "C:\\MES\\wta-agents\\data\\manuals-filtered\\2_sensor\\Unknown_DA-S_Manual_KO.pdf",
+      "reason": "OCR Unknown",
+      "phase": "2c",
+      "ts": "2026-04-11 21:09:30 KST",
+      "status": "error",
+      "error": "dst exists"
+    },
+    {
+      "src": "C:\\MES\\wta-agents\\data\\manuals-ready\\2_sensor\\Unknown_FOQ-0527-101_Manual_KO.pdf",
+      "dst": "C:\\MES\\wta-agents\\data\\manuals-filtered\\2_sensor\\Unknown_FOQ-0527-101_Manual_KO.pdf",
+      "reason": "OCR Unknown",
+      "phase": "2c",
+      "ts": "2026-04-11 21:09:30 KST",
+      "status": "error",
+      "error": "dst exists"
+    },
+    {
+      "src": "C:\\MES\\wta-agents\\data\\manuals-ready\\2_sensor\\Unknown_HR10A-7P_InstallGuide_EN.pdf",
+      "dst": "C:\\MES\\wta-agents\\data\\manuals-filtered\\2_sensor\\Unknown_HR10A-7P_InstallGuide_EN.pdf",
+      "reason": "OCR Unknown",
+      "phase": "2c",
+      "ts": "2026-04-11 21:09:30 KST",
+      "status": "success"
+    },
+    {
+      "src": "C:\\MES\\wta-agents\\data\\manuals-ready\\2_sensor\\Unknown_SERIES_Manual_KO.pdf",
+      "dst": "C:\\MES\\wta-agents\\data\\manuals-filtered\\2_sensor\\Unknown_SERIES_Manual_KO.pdf",
+      "reason": "OCR Unknown",
+      "phase": "2c",
+      "ts": "2026-04-11 21:09:30 KST",
+      "status": "success"
+    },
+    {
+      "src": "C:\\MES\\wta-agents\\data\\manuals-ready\\2_sensor\\Unknown_SERIES_WiringGuide_KO.pdf",
+      "dst": "C:\\MES\\wta-agents\\data\\manuals-filtered\\2_sensor\\Unknown_SERIES_WiringGuide_KO.pdf",
+      "reason": "OCR Unknown",
+      "phase": "2c",
+      "ts": "2026-04-11 21:09:30 KST",
+      "status": "error",
+      "error": "dst exists"
+    },
+    {
+      "src": "C:\\MES\\wta-agents\\data\\manuals-ready\\2_sensor\\Unknown_STC-SB_Manual_EN_2.pdf",
+      "dst": "C:\\MES\\wta-agents\\data\\manuals-filtered\\2_sensor\\Unknown_STC-SB_Manual_EN_2.pdf",
+      "reason": "OCR Unknown",
+      "phase": "2c",
+      "ts": "2026-04-11 21:09:30 KST",
+      "status": "error",
+      "error": "dst exists"
+    },
+    {
+      "src": "C:\\MES\\wta-agents\\data\\manuals-ready\\2_sensor\\Unknown_Unknown_MaintenanceManual_EN.pdf",
+      "dst": "C:\\MES\\wta-agents\\data\\manuals-filtered\\2_sensor\\Unknown_Unknown_MaintenanceManual_EN.pdf",
+      "reason": "OCR Unknown",
+      "phase": "2c",
+      "ts": "2026-04-11 21:09:30 KST",
+      "status": "success"
+    },
+    {
+      "src": "C:\\MES\\wta-agents\\data\\manuals-ready\\2_sensor\\Unknown_Unknown_MaintenanceManual_KO_2.pdf",
+      "dst": "C:\\MES\\wta-agents\\data\\manuals-filtered\\2_sensor\\Unknown_Unknown_MaintenanceManual_KO_2.pdf",
+      "reason": "OCR Unknown",
+      "phase": "2c",
+      "ts": "2026-04-11 21:09:30 KST",
+      "status": "error",
+      "error": "dst exists"
+    },
+    {
+      "src": "C:\\MES\\wta-agents\\data\\manuals-ready\\2_sensor\\Unknown_Unknown_MaintenanceManual_KO_3.pdf",
+      "dst": "C:\\MES\\wta-agents\\data\\manuals-filtered\\2_sensor\\Unknown_Unknown_MaintenanceManual_KO_3.pdf",
+      "reason": "OCR Unknown",
+      "phase": "2c",
+      "ts": "2026-04-11 21:09:30 KST",
+      "status": "error",
+      "error": "dst exists"
+    },
+    {
+      "src": "C:\\MES\\wta-agents\\data\\manuals-ready\\2_sensor\\Unknown_Unknown_Manual_EN_2.pdf",
+      "dst": "C:\\MES\\wta-agents\\data\\manuals-filtered\\2_sensor\\Unknown_Unknown_Manual_EN_2.pdf",
+      "reason": "OCR Unknown",
+      "phase": "2c",
+      "ts": "2026-04-11 21:09:30 KST",
+      "status": "error",
+      "error": "dst exists"
+    },
+    {
+      "src": "C:\\MES\\wta-agents\\data\\manuals-ready\\2_sensor\\Unknown_Unknown_Manual_EN_3.pdf",
+      "dst": "C:\\MES\\wta-agents\\data\\manuals-filtered\\2_sensor\\Unknown_Unknown_Manual_EN_3.pdf",
+      "reason": "OCR Unknown",
+      "phase": "2c",
+      "ts": "2026-04-11 21:09:30 KST",
+      "status": "success"
+    },
+    {
+      "src": "C:\\MES\\wta-agents\\data\\manuals-ready\\2_sensor\\Unknown_Unknown_Manual_KO_11.pdf",
+      "dst": "C:\\MES\\wta-agents\\data\\manuals-filtered\\2_sensor\\Unknown_Unknown_Manual_KO_11.pdf",
+      "reason": "OCR Unknown",
+      "phase": "2c",
+      "ts": "2026-04-11 21:09:30 KST",
+      "status": "success"
+    },
+    {
+      "src": "C:\\MES\\wta-agents\\data\\manuals-ready\\2_sensor\\Unknown_Unknown_Manual_KO_12.pdf",
+      "dst": "C:\\MES\\wta-agents\\data\\manuals-filtered\\2_sensor\\Unknown_Unknown_Manual_KO_12.pdf",
+      "reason": "OCR Unknown",
+      "phase": "2c",
+      "ts": "2026-04-11 21:09:30 KST",
+      "status": "success"
+    },
+    {
+      "src": "C:\\MES\\wta-agents\\data\\manuals-ready\\2_sensor\\Unknown_Unknown_Manual_KO_14.pdf",
+      "dst": "C:\\MES\\wta-agents\\data\\manuals-filtered\\2_sensor\\Unknown_Unknown_Manual_KO_14.pdf",
+      "reason": "OCR Unknown",
+      "phase": "2c",
+      "ts": "2026-04-11 21:09:30 KST",
+      "status": "success"
+    },
+    {
+      "src": "C:\\MES\\wta-agents\\data\\manuals-ready\\2_sensor\\Unknown_Unknown_Manual_KO_16.pdf",
+      "dst": "C:\\MES\\wta-agents\\data\\manuals-filtered\\2_sensor\\Unknown_Unknown_Manual_KO_16.pdf",
+      "reason": "OCR Unknown",
+      "phase": "2c",
+      "ts": "2026-04-11 21:09:30 KST",
+      "status": "success"
+    },
+    {
+      "src": "C:\\MES\\wta-agents\\data\\manuals-ready\\2_sensor\\Unknown_Unknown_Manual_KO_17.pdf",
+      "dst": "C:\\MES\\wta-agents\\data\\manuals-filtered\\2_sensor\\Unknown_Unknown_Manual_KO_17.pdf",
+      "reason": "OCR Unknown",
+      "phase": "2c",
+      "ts": "2026-04-11 21:09:30 KST",
+      "status": "success"
+    },
+    {
+      "src": "C:\\MES\\wta-agents\\data\\manuals-ready\\2_sensor\\Unknown_Unknown_Manual_KO_18.pdf",
+      "dst": "C:\\MES\\wta-agents\\data\\manuals-filtered\\2_sensor\\Unknown_Unknown_Manual_KO_18.pdf",
+      "reason": "OCR Unknown",
+      "phase": "2c",
+      "ts": "2026-04-11 21:09:30 KST",
+      "status": "success"
+    },
+    {
+      "src": "C:\\MES\\wta-agents\\data\\manuals-ready\\2_sensor\\Unknown_Unknown_Manual_KO_19.pdf",
+      "dst": "C:\\MES\\wta-agents\\data\\manuals-filtered\\2_sensor\\Unknown_Unknown_Manual_KO_19.pdf",
+      "reason": "OCR Unknown",
+      "phase": "2c",
+      "ts": "2026-04-11 21:09:30 KST",
+      "status": "success"
+    },
+    {
+      "src": "C:\\MES\\wta-agents\\data\\manuals-ready\\2_sensor\\Unknown_Unknown_Manual_KO_2.pdf",
+      "dst": "C:\\MES\\wta-agents\\data\\manuals-filtered\\2_sensor\\Unknown_Unknown_Manual_KO_2.pdf",
+      "reason": "OCR Unknown",
+      "phase": "2c",
+      "ts": "2026-04-11 21:09:30 KST",
+      "status": "error",
+      "error": "dst exists"
+    },
+    {
+      "src": "C:\\MES\\wta-agents\\data\\manuals-ready\\2_sensor\\Unknown_Unknown_Manual_KO_3.pdf",
+      "dst": "C:\\MES\\wta-agents\\data\\manuals-filtered\\2_sensor\\Unknown_Unknown_Manual_KO_3.pdf",
+      "reason": "OCR Unknown",
+      "phase": "2c",
+      "ts": "2026-04-11 21:09:30 KST",
+      "status": "error",
+      "error": "dst exists"
+    },
+    {
+      "src": "C:\\MES\\wta-agents\\data\\manuals-ready\\2_sensor\\Unknown_Unknown_Manual_KO_4.pdf",
+      "dst": "C:\\MES\\wta-agents\\data\\manuals-filtered\\2_sensor\\Unknown_Unknown_Manual_KO_4.pdf",
+      "reason": "OCR Unknown",
+      "phase": "2c",
+      "ts": "2026-04-11 21:09:30 KST",
+      "status": "error",
+      "error": "dst exists"
+    },
+    {
+      "src": "C:\\MES\\wta-agents\\data\\manuals-ready\\2_sensor\\Unknown_Unknown_Manual_KO_5.pdf",
+      "dst": "C:\\MES\\wta-agents\\data\\manuals-filtered\\2_sensor\\Unknown_Unknown_Manual_KO_5.pdf",
+      "reason": "OCR Unknown",
+      "phase": "2c",
+      "ts": "2026-04-11 21:09:30 KST",
+      "status": "error",
+      "error": "dst exists"
+    },
+    {
+      "src": "C:\\MES\\wta-agents\\data\\manuals-ready\\2_sensor\\Unknown_Unknown_Manual_KO_6.pdf",
+      "dst": "C:\\MES\\wta-agents\\data\\manuals-filtered\\2_sensor\\Unknown_Unknown_Manual_KO_6.pdf",
+      "reason": "OCR Unknown",
+      "phase": "2c",
+      "ts": "2026-04-11 21:09:30 KST",
+      "status": "error",
+      "error": "dst exists"
+    },
+    {
+      "src": "C:\\MES\\wta-agents\\data\\manuals-ready\\2_sensor\\Unknown_Unknown_Manual_KO_8.pdf",
+      "dst": "C:\\MES\\wta-agents\\data\\manuals-filtered\\2_sensor\\Unknown_Unknown_Manual_KO_8.pdf",
+      "reason": "OCR Unknown",
+      "phase": "2c",
+      "ts": "2026-04-11 21:09:30 KST",
+      "status": "success"
+    },
+    {
+      "src": "C:\\MES\\wta-agents\\data\\manuals-ready\\2_sensor\\Unknown_Unknown_Manual_KO_9.pdf",
+      "dst": "C:\\MES\\wta-agents\\data\\manuals-filtered\\2_sensor\\Unknown_Unknown_Manual_KO_9.pdf",
+      "reason": "OCR Unknown",
+      "phase": "2c",
+      "ts": "2026-04-11 21:09:30 KST",
+      "status": "success"
+    },
+    {
+      "src": "C:\\MES\\wta-agents\\data\\manuals-ready\\2_sensor\\Unknown_VERSION_MaintenanceManual_KO.pdf",
+      "dst": "C:\\MES\\wta-agents\\data\\manuals-filtered\\2_sensor\\Unknown_VERSION_MaintenanceManual_KO.pdf",
+      "reason": "OCR Unknown",
+      "phase": "2c",
+      "ts": "2026-04-11 21:09:30 KST",
+      "status": "error",
+      "error": "dst exists"
+    },
+    {
+      "src": "C:\\MES\\wta-agents\\data\\manuals-ready\\2_sensor\\Unknown_VERSION_Manual_KO.pdf",
+      "dst": "C:\\MES\\wta-agents\\data\\manuals-filtered\\2_sensor\\Unknown_VERSION_Manual_KO.pdf",
+      "reason": "OCR Unknown",
+      "phase": "2c",
+      "ts": "2026-04-11 21:09:30 KST",
+      "status": "success"
+    }
+  ]
+}

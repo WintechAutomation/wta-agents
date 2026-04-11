@@ -4643,6 +4643,42 @@
       "updated_at": "2026-04-11 21:09:44",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-docs-agent-c78778",
+      "agent": "docs-agent",
+      "task": "[부서장 전면 재분류 지시 - 기존 Phase 전면 취소, 신규 작업]",
+      "message": "[부서장 전면 재분류 지시 - 기존 Phase 전면 취소, 신규 작업]\n\n**이전 Phase 2c 중단 가능** (이미 진행 중이면 완료 후 롤백 불필요, 하지만 새 작업이 이를 덮어씀)\n\n---\n\n## 🆕 신규 작업: manuals 폴더 전수 재분류\n\n**목적**: 부서장 지시 - data/manuals/ 원본 1,900개 파일을 처음부터 전수 확인해서 사용 가능한 파일을 신규 폴더에 깔끔하게 재분류\n\n**원본**: `data/manuals/` (1,900개 PDF/DOCX)\n**산출 폴더**: `data/manuals-v2/` (신규 생성)\n\n**새 폴더 구조**:\n```\ndata/manuals-v2/\n  ├── 1_robot/\n  ├── 2_sensor/\n  ├── 3_hmi/\n  ├── 4_servo/\n  ├── 5_inverter/\n  ├── 6_plc/\n  ├── 7_pneumatic/\n  ├── 8_etc/\n  └── _filtered/  (사용 불가)\n      ├── no_text/         # 텍스트 추출 실패 (이미지만)\n      ├── damaged/         # 파일 손상\n      ├── duplicate/       # 중복 내용\n      ├── unknown/         # 제조사/모델 식별 불가\n      └── non_manual/      # 매뉴얼 아님 (카탈로그/브로셔는 살릴지 판단)\n```\n\n**파일명 규칙**: `{Manufacturer}_{Model}_{DocType}_{Language}.pdf`\n- 제조사: 영문 표준 표기 (파스텍→Fastech 등)\n- 모델: 실제 제품명/시리즈\n- DocType: Manual/UserManual/InstallGuide/CommManual/SetupGuide/Datasheet/Catalog/ParameterManual/MaintenanceManual\n- Language: KO/EN/JA/ZH\n- 중복 시 _v2, _v3\n\n## 분석 단계\n\n**Step 1 - 추출**:\n- 각 파일 1~5페이지 텍스트 추출 (PyPDF2/pdfplumber)\n- 실패 시 Tesseract OCR (한+영)\n- 추출 실패 확정 시 → `_filtered/no_text/`\n\n**Step 2 - 판별** (핵심 - LLM 활용):\n- 추출된 텍스트를 Claude API(sonnet 또는 haiku)로 판별\n- 프롬프트: \"제조사/모델/문서유형/언어/카테고리를 JSON으로 반환. 확신 없으면 null\"\n- 확신도 점수 포함 (0~1)\n\n**Step 3 - 분류**:\n- 확신도 ≥ 0.7: 해당 카테고리로 이동 + rename\n- 확신도 0.4~0.7: `_filtered/unknown/` 로 보관하고 CSV에 flag\n- 확신도 < 0.4: `_filtered/unknown/` + OCR 재시도\n\n**Step 4 - 중복 감지**:\n- 파일 해시(md5) + 내용 해시(텍스트 처음 2000자)로 중복 체크\n- 중복 감지 시 가장 큰 파일만 유지, 나머지 `_filtered/duplicate/`\n\n**Step 5 - 결과 리포트**:\n- workspaces/docs-agent/manuals_v2_classification_report.csv\n  - 컬럼: old_path, new_path, manufacturer, model, doctype, language, category, confidence, status, reason\n- 카테고리별 파일 수 요약\n- 제조사별 파일 수 요약\n- filtered 사유별 카운트\n\n## 주의사항\n\n1. **원본 보존**: data/manuals/ 는 손대지 말고 **copy** (move 아님). manuals-v2/ 는 복사본.\n2. **파일 크기**: 1,900개 전수 처리 → 시간 소요. 20~30분은 Phase 1 text 추출, OCR은 더 오래 걸림.\n3. **LLM 호출 비용**: 1,900건 × 판별. Haiku 사용 권장 (저렴하고 빠름). 예상 비용 $5~15.\n4. **병렬 처리**: ThreadPoolExecutor 10~20 워커로 병렬화.\n5. **진행 중계**: 15분마다 진행도 보고 (100건 단위).\n6. **중단 내성**: 체크포인트 저장, 중단 시 이어서 재개 가능.\n\n## 최종 보고\n\n- 총 처리 건수 / 성공 / _filtered 분포\n- 카테고리별 파일 수 (new vs 원본 대비)\n- 제조사 top 10\n- CSV + JSON Cloudflare URL\n- 신규 폴더 구조 요약 (tree)\n\n**즉시 착수**. 먼저 전체 계획 확인 메시지 1회 주고 바로 Step 1부터 시작해주세요.\n\n**예상 소요**: 60~120분 (LLM 호출 포함, OCR 빈도에 따라)",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 21:14:26",
+      "updated_at": "2026-04-11 21:14:26",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-docs-agent-4e15e9",
+      "agent": "docs-agent",
+      "task": "[긴급 중단] Haiku API 사용 **즉시 중단**. 부서장이 Haiku 방식에 반대.",
+      "message": "[긴급 중단] Haiku API 사용 **즉시 중단**. 부서장이 Haiku 방식에 반대. \n\n**중단 지시**:\n- Step 1(텍스트 추출)까지는 진행해도 OK (LLM 무관)\n- **Step 3 (Claude Haiku 분류)는 반드시 대기**\n- anthropic API 호출 코드는 실행 금지\n\n부서장이 분류 LLM 방식을 재지정 중입니다. Step 1(텍스트 추출) 완료 후 Step 2(OCR) 까지만 진행하고, Step 3는 부서장 지시 대기.\n\n즉시 수정해서 재보고 부탁.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 21:15:31",
+      "updated_at": "2026-04-11 21:15:31",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-docs-agent-edd021",
+      "agent": "docs-agent",
+      "task": "[LLM 결정] 부서장 지시: A안 확정 — docs-agent 자체 세션(sonnet)으로 직접 분류.",
+      "message": "[LLM 결정] 부서장 지시: A안 확정 — docs-agent 자체 세션(sonnet)으로 직접 분류.\n\n- Step 3 분류: 너 세션(claude-sonnet-4-6)으로 파일별 텍스트/OCR 결과 직접 판독 후 카테고리/제조사/모델/DocType/Lang 판정\n- Claude Haiku API / anthropic API 호출 금지 (계속 유지)\n- qwen3.5:35b-a3b 로컬도 사용 안 함\n- 너 세션이 판단 주체\n\nStep 1 텍스트 추출 진행 계속. 완료 후 통계 보고 시 Step 3 배치 단위(예: 100건씩) 처리 계획도 같이 제시해줘. 메모리/컨텍스트 관리 필요하면 워크스페이스에 중간 JSON 저장하며 진행.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 21:18:38",
+      "updated_at": "2026-04-11 21:18:38",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }
