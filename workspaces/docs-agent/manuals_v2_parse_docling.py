@@ -152,9 +152,9 @@ def export_images(doc, img_dir, Image, category=None, file_id=None, requests=Non
             except Exception as e:
                 print(f'    업로드 실패 {figure_id}: {e}')
 
-        # Qwen2.5-VL 캡션 생성
+        # Qwen2.5-VL 캡션 생성 (PoC에서는 환경변수로 스킵 — 서버 과부하 대응)
         vlm_description = None
-        if requests is not None:
+        if os.environ.get('V2_VLM','0') == '1' and requests is not None:
             try:
                 vlm_description = generate_vlm_caption(img_path, requests)
             except Exception as e:

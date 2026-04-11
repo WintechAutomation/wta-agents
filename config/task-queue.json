@@ -4943,6 +4943,18 @@
       "updated_at": "2026-04-11 22:43:19",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-admin-agent-101a3f",
+      "agent": "admin-agent",
+      "task": "[점검 요청] Qwen2.5-VL-7B Ollama 서버 이상.",
+      "message": "[점검 요청] Qwen2.5-VL-7B Ollama 서버 이상.\n\n- docs-agent PoC 첫 파일 처리 중 Qwen2.5-VL-7B 호출 시 500 에러 + 타임아웃 반복\n- 파일당 VLM 호출이 전체 시간의 70% 차지 → 서버 과부하 추정\n- 현재 PoC는 VLM 스킵하고 진행 중 (나중 배치로 보완)\n\n점검 항목:\n1. Qwen2.5-VL-7B pull 완료 여부 (아까 25% 진행 중이었음)\n2. Ollama 서버 상태 (182.224.6.147:11434)\n3. VRAM/GPU 사용률\n4. 에러 로그 (`ollama logs` 또는 journalctl)\n5. 필요 시 재시작\n\nVLM 서버 안정되면 보고해줘. 그때 docs-agent가 별도 배치로 vlm_description 채울 예정.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 22:58:57",
+      "updated_at": "2026-04-11 22:58:57",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }

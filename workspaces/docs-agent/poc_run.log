@@ -1,1 +1,40 @@
 --- [1/10] Mitsubishi_BFP-A8662_Troubleshooting_EN.pdf ---
+out. (connect timeout=180)'))
+    VLM 실패 fig_006_012: 500 Server Error: Internal Server Error for url: http://182.224.6.147:11434/api/generate
+    VLM 실패 fig_006_014: 500 Server Error: Internal Server Error for url: http://182.224.6.147:11434/api/generate
+    VLM 실패 fig_007_018: 500 Server Error: Internal Server Error for url: http://182.224.6.147:11434/api/generate
+    VLM 실패 fig_010_040: 500 Server Error: Internal Server Error for url: http://182.224.6.147:11434/api/generate
+    VLM 실패 fig_014_048: 500 Server Error: Internal Server Error for url: http://182.224.6.147:11434/api/generate
+    VLM 실패 fig_044_083: 500 Server Error: Internal Server Error for url: http://182.224.6.147:11434/api/generate
+    VLM 실패 fig_044_086: 500 Server Error: Internal Server Error for url: http://182.224.6.147:11434/api/generate
+    VLM 실패 fig_045_092: 500 Server Error: Internal Server Error for url: http://182.224.6.147:11434/api/generate
+    VLM 실패 fig_045_094: 500 Server Error: Internal Server Error for url: http://182.224.6.147:11434/api/generate
+    VLM 실패 fig_046_098: 500 Server Error: Internal Server Error for url: http://182.224.6.147:11434/api/generate
+    VLM 실패 fig_048_100: 500 Server Error: Internal Server Error for url: http://182.224.6.147:11434/api/generate
+  figures: 14
+  tables: 38
+  chunks: 68
+  JSONL: C:\MES\wta-agents\workspaces\docs-agent\v2_poc\1_robot_2d77a92d4066\chunks.jsonl
+
+=== PoC 요약 ===
+  {'file_id': '1_robot_2d77a92d4066', 'chunks': 68, 'figures': 14, 'tables': 38}
+
+  elapsed: 462.6s
+--- [2/10] Yaskawa_RS232C_ParameterManual_KO.pdf ---
+
+[1_robot_2d70fa79608e] Yaskawa_RS232C_ParameterManual_KO.pdf
+  mfr=Yaskawa model=RS232C dt=ParameterManual lang=KO
+  파싱 완료: 14.0s, pages=3
+    VLM 실패 fig_002_013: 500 Server Error: Internal Server Error for url: http://182.224.6.147:11434/api/generate
+    VLM 실패 fig_002_016: 500 Server Error: Internal Server Error for url: http://182.224.6.147:11434/api/generate
+    VLM 실패 fig_003_019: 500 Server Error: Internal Server Error for url: http://182.224.6.147:11434/api/generate
+  figures: 3
+  tables: 4
+  chunks: 7
+  JSONL: C:\MES\wta-agents\workspaces\docs-agent\v2_poc\1_robot_2d70fa79608e\chunks.jsonl
+
+=== PoC 요약 ===
+  {'file_id': '1_robot_2d70fa79608e', 'chunks': 7, 'figures': 3, 'tables': 4}
+
+  elapsed: 53.4s
+--- [3/10] Mitsubishi_BFP-A8615_CCLinkInterface_KO.pdf ---
