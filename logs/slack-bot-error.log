@@ -284,3 +284,25 @@ UnicodeDecodeError: 'utf-8' codec can't decode byte 0x98 in position 1057442: in
 [slack-bot] 17:59:09 [CS세션] 답변 기록: slack-cs-csagent-조한종-20260411-175826 #cs-csagent (103자, 첨부:0건)
 [slack-bot] 17:59:11 [피드백] good ← U0A7S89M5S7 (cs-agent)
 [slack-bot] 17:59:11 [CS세션] confirmed 종료: slack-cs-csagent-조한종-20260411-175826 (도움됨 피드백)
+[slack-bot] 18:00:27 [수신] #cs-csagent 조한종: 장비 / 고객정보 섹션에 장비 시리얼번호는 왜 mes 에서 못가져온거지? → cs-agent
+[slack-bot] 18:00:27 [CS세션] 질문 기록: slack-cs-csagent-조한종-20260411-180027 #cs-csagent 조한종: 장비 / 고객정보 섹션에 장비 시리얼번호는 왜 mes 에서 못가져온거지?
+[slack-bot] 18:00:27 직접 전송 완료 → cs-agent:5602
+[slack-bot] 18:00:32 [슬랙 발신] #cs-csagent ← cs-agent: 네, 확인해보겠습니다. 잠시만요.
+[slack-bot] 18:00:32 [CS세션] 답변 기록: slack-cs-csagent-조한종-20260411-180027 #cs-csagent (18자, 첨부:0건)
+[slack-bot] 18:00:37 [피드백] good ← U0A7S89M5S7 (cs-agent)
+[slack-bot] 18:00:38 [CS세션] confirmed 종료: slack-cs-csagent-조한종-20260411-180027 (도움됨 피드백)
+[slack-bot] 18:02:39 [수신] #cs-csagent 조한종: 현재는 셋업이 완료되어야만 레포트 생성 버튼이 활성되는데,
+그걸 없애고 상단에 항상 레포트생성 이라는 버튼을 추가해주고. 누르면 본사보고용(sl → cs-agent
+[slack-bot] 18:02:39 [CS세션] 질문 기록: slack-cs-csagent-조한종-20260411-180239 #cs-csagent 조한종: 현재는 셋업이 완료되어야만 레포트 생성 버튼이 활성되는데,
+그걸 없애고 상단에 항상 레포트생성 이라는 버튼을
+[slack-bot] 18:02:39 직접 전송 완료 → cs-agent:5602
+[slack-bot] 18:06:46 [슬랙 발신] #cs-csagent ← cs-agent: 시리얼번호 MES 미가져옴 원인 확인했습니다.
+
+**결론**: 셋업 생성 UI가 "MES 프로젝트 선택 → 
+[slack-bot] 18:06:47 [CS세션] 답변 기록: slack-cs-csagent-조한종-20260411-180239 #cs-csagent (802자, 첨부:0건)
+[slack-bot] 18:06:55 [슬랙 발신] #cs-csagent ← cs-agent: 네, 확인했습니다. 레포트 생성 버튼 상단 상시 노출 + 본사보고용(slide) / 최종레포트(pdf) 2종
+[slack-bot] 18:06:55 [CS세션] 답변 기록: slack-cs-csagent-조한종-20260411-180239 #cs-csagent (106자, 첨부:0건)
+[slack-bot] 18:07:16 [피드백] good ← U0A7S89M5S7 (cs-agent)
+[slack-bot] 18:07:16 [CS세션] confirmed 종료: slack-cs-csagent-조한종-20260411-180239 (도움됨 피드백)
+[slack-bot] 18:07:23 [피드백] good ← U0A7S89M5S7 (cs-agent)
+[slack-bot] 18:07:23 [CS세션] confirmed 종료: slack-cs-csagent-조한종-20260411-180239 (도움됨 피드백)
