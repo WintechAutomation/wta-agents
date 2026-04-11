@@ -4595,6 +4595,30 @@
       "updated_at": "2026-04-11 18:24:05",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-docs-agent-441186",
+      "agent": "docs-agent",
+      "task": "[부서장 승인 - Phase 2 부분 실행]",
+      "message": "[부서장 승인 - Phase 2 부분 실행]\n\n**실행 범위**: Unknown 제조사 **27건 제외**하고 나머지 **110건만** rename 실행.\nUnknown 27건은 부서장이 직접 CSV로 재지정 후 전달 예정 → 별도 처리.\n\n**실행 지시**:\n1. CSV에서 manufacturer != \"Unknown\" 인 110건만 필터링\n2. 각 파일 rename 실행 (old → new)\n3. 롤백 JSON 로그 생성: workspaces/docs-agent/2_sensor_rename_log_phase2a.json\n   - 형식: [{\"old\": \"...\", \"new\": \"...\", \"ts\": \"...\", \"status\": \"success/skip/error\"}]\n4. 중복 파일명 충돌 시 _v2 suffix 처리\n5. category_valid=false 22건도 일단 rename만 하고, 카테고리 이동은 **보류** (부서장 별도 지시 대기)\n\n**주의**:\n- Unknown 27건은 건드리지 말 것 (원본 파일명 유지)\n- 실행 전 최종 파일 목록 요약(rename 110건, skip 27건) MAX에 먼저 확인\n- 실제 rename 후 전수 검증 (새 파일명 exists, 이전 파일명 not exists)\n\n**보고**:\n- 실행 결과 성공/실패 카운트\n- 로그 Cloudflare URL\n- Unknown 27건 플레이스홀더 명단 (부서장이 수정할 기준표 만들어 같이 전달)\n\n실행 승인. 즉시 착수 부탁드립니다.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 18:48:21",
+      "updated_at": "2026-04-11 18:48:21",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-docs-agent-388510",
+      "agent": "docs-agent",
+      "task": "[부서장 추가 지시 - Phase 2b: OCR 재스캐닝]",
+      "message": "[부서장 추가 지시 - Phase 2b: OCR 재스캐닝]\n\nPhase 2a(110건 rename) 완료 직후 바로 착수:\n\n**Phase 2b: Unknown 27건 OCR 재판별**\n\n1. **대상**: Phase 1에서 manufacturer=\"Unknown\"으로 분류된 27개 파일 (2_sensor 폴더)\n2. **방법**:\n   - PyPDF2/pdfplumber로 텍스트 추출 실패한 파일은 스캔 PDF로 간주\n   - **Tesseract OCR** (한글+영어 trained data) 또는 **EasyOCR** 사용\n   - 각 PDF 1~3페이지 이미지 변환(pdf2image) → OCR → 텍스트 추출\n   - 제조사/모델/문서유형/언어 재판별 시도\n3. **산출물**:\n   - workspaces/docs-agent/2_sensor_ocr_rescan_result.csv\n   - 컬럼: old_filename, ocr_text_sample, new_manufacturer, new_model, new_doctype, new_lang, confidence, status\n   - confidence: high/medium/low (OCR 신뢰도)\n   - status: success/failed_ocr/ambiguous\n4. **자동 rename 가능한 것**:\n   - confidence=high 이고 new_filename 결정 가능한 것만 자동 rename\n   - 나머지(medium/low/ambiguous)는 CSV로 MAX에 보고 → 부서장 최종 판단\n5. **보고**:\n   - 성공 카운트 / 실패 카운트\n   - OCR 결과 CSV Cloudflare URL\n   - 부서장 판단 필요 명단 (ambiguous/medium/low)\n\n**필요한 도구**:\n- Tesseract 설치 여부 확인 (없으면 설치 or EasyOCR 대체)\n- pdf2image (poppler 의존)\n- python: pytesseract / easyocr\n\n**시간 목표**: Phase 2a 완료 후 20~30분 내 Phase 2b 완료\n\n즉시 Phase 2a 이후 순차 진행해주세요.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 18:49:07",
+      "updated_at": "2026-04-11 18:49:07",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }

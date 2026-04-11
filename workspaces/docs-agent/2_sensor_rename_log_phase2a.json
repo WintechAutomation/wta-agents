@@ -1,0 +1,676 @@
+{
+  "phase": "2a",
+  "executed_at": "2026-04-11 18:49:02 KST",
+  "total_targets": 110,
+  "success": 105,
+  "skip_identical": 5,
+  "errors": 0,
+  "unknown_skipped": 27,
+  "entries": [
+    {
+      "old": "ABB_ABB_CommManual_KO.pdf",
+      "new": "ABB_PCIe_CommManual_KO.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "ABB_ABB_InstallGuide_EN.pdf",
+      "new": "ABB_Unknown_UserManual_JA.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "ABB_ABB_InstallGuide_EN_2.pdf",
+      "new": "ABB_G3-C00M-USR00_InstallGuide_EN.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "ABB_ABB_InstallGuide_EN_3.pdf",
+      "new": "ABB_PCIe-PoE354at-PoE352at_CommManual_EN.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "ABB_ABB_InstallGuide_EN_4.pdf",
+      "new": "ABB_PCIe-PoE354at-PCIe-_InstallGuide_EN.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "ABB_ABB_InstallGuide_EN_5.pdf",
+      "new": "ABB_AREA_InstallGuide_EN.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "ABB_ABB_InstallGuide_EN_6.pdf",
+      "new": "ABB_G3-C00M-USR00_InstallGuide_EN_v2.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "ABB_ABB_MaintenanceManual_EN.pdf",
+      "new": "ABB_DEUTSCH_InstallGuide_EN.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "ABB_ABB_ParameterManual_EN.pdf",
+      "new": "ABB_EURESYS_ParameterManual_EN.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "ABB_ABB_SetupGuide_EN.pdf",
+      "new": "ABB_Unknown_ParameterManual_EN_v2.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "ABB_ABB_UserManual_EN.pdf",
+      "new": "ABB_OC-Y4CM-MUSR0_UserManual_EN.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "ABB_DALSA-G_InstallGuide_EN.pdf",
+      "new": "ABB_DALSA-G_InstallGuide_EN.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "skip",
+      "reason": "identical"
+    },
+    {
+      "old": "ABB_MX4_Manual_KO.pdf",
+      "new": "ABB_MX4_CommManual_KO.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "ABB_MX4_UserManual_EN.pdf",
+      "new": "ABB_MX4_UserManual_EN.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "skip",
+      "reason": "identical"
+    },
+    {
+      "old": "ABB_PCI_InstallGuide_EN.pdf",
+      "new": "ABB_PCI_CommManual_EN.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "ABB_PCI_InstallGuide_EN_2.pdf",
+      "new": "ABB_PCI_InstallGuide_EN.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "ABB_SENSICK_MaintenanceManual_EN.pdf",
+      "new": "ABB_SENSICK_InstallGuide_EN.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "ABB_Unknown_InstallGuide_EN.pdf",
+      "new": "ABB_AREA_InstallGuide_EN_v2.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "ABB_Unknown_ParameterManual_EN.pdf",
+      "new": "ABB_EURESYS_ParameterManual_EN_v2.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "ABB_Unknown_SetupGuide_EN.pdf",
+      "new": "ABB_Unknown_ParameterManual_EN_v2_v2.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "ABB_Unknown_UserManual_EN.pdf",
+      "new": "ABB_G3-C00M-USR00_InstallGuide_EN_v3.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Autonics_PR12-4DN_InstallGuide_KO.pdf",
+      "new": "Autonics_PR12-4DN_UserManual_KO.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Keyence_GT2_CommManual_KO.pdf",
+      "new": "Keyence_GT2_CommManual_KO.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "skip",
+      "reason": "identical"
+    },
+    {
+      "old": "Keyence_GT2_Manual_KO.pdf",
+      "new": "Keyence_GT2_CommManual_KO_v2.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Keyence_IL-030_CommManual_KO.pdf",
+      "new": "Keyence_IL-030_CommManual_KO.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "skip",
+      "reason": "identical"
+    },
+    {
+      "old": "Keyence_IL-030_Manual_KO.pdf",
+      "new": "Keyence_IL-030_CommManual_KO_v2.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Keyence_KEYENCE_Manual_KO.pdf",
+      "new": "Keyence_G87KO_UserManual_KO.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Keyence_KEYENCE_UserManual_KO.pdf",
+      "new": "Keyence_G87KO_UserManual_KO_v2.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Keyence_Unknown_CommManual_KO.pdf",
+      "new": "Keyence_CMOS_UserManual_KO.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Keyence_Unknown_Manual_KO.pdf",
+      "new": "Keyence_D05KO_UserManual_KO.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Keyence_Unknown_UserManual_KO.pdf",
+      "new": "Keyence_CMOS_UserManual_KO_v2.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Keyence_Unknown_UserManual_KO_2.pdf",
+      "new": "Keyence_D05KO_UserManual_KO_v2.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "LS_HR10A-7P_InstallGuide_EN.pdf",
+      "new": "LSIS_HR10A-7P_InstallGuide_EN.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "LS_LK-H1W-MANUAL_InstallGuide_EN.pdf",
+      "new": "LSIS_LK-H1W-MANUAL_InstallGuide_EN.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "LS_LK-H1W-MANUAL_OperationManual_EN.pdf",
+      "new": "LSIS_LK-H1W-MANUAL_InstallGuide_EN_v2.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "LS_NLS-FM305X-2X_SetupGuide_EN.pdf",
+      "new": "LSIS_NLS-FM305X-2X_SetupGuide_EN.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "LS_PR12-4DN_InstallGuide_KO.pdf",
+      "new": "Autonics_PR12-4DN_UserManual_KO_v2.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "LS_UD34944B_UserManual_EN.pdf",
+      "new": "Hikrobot_UD34944B_UserManual_EN.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "LS_Unknown_CommManual_KO.pdf",
+      "new": "LSIS_TIME_CommManual_KO.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "LS_Unknown_InstallGuide_EN.pdf",
+      "new": "LSIS_AL-71831_UserManual_EN.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "LS_Unknown_MaintenanceManual_EN.pdf",
+      "new": "LSIS_M100_CommManual_EN.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "LS_Unknown_Manual_EN.pdf",
+      "new": "LSIS_VISION_Manual_EN.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "LS_Unknown_Safety_EN.pdf",
+      "new": "LSIS_VISION_Manual_EN_v2.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "LS_Unknown_UserManual_EN.pdf",
+      "new": "LSIS_ELIIXA_UserManual_EN.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Panasonic_FX-100_SetupGuide_KO.pdf",
+      "new": "Panasonic_FX-100_MaintenanceManual_KO.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Panasonic_HG-C_Manual_KO.pdf",
+      "new": "Panasonic_HG-C_SetupGuide_KO.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Panasonic_Unknown_MaintenanceManual_KO.pdf",
+      "new": "Panasonic_SF4D_CommManual_KO.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Panasonic_Unknown_MaintenanceManual_KO_2.pdf",
+      "new": "Panasonic_FX-500_SetupGuide_KO.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Panasonic_Unknown_Manual_KO.pdf",
+      "new": "Panasonic_SF4D_Manual_KO.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Panasonic_Unknown_Safety_KO.pdf",
+      "new": "Panasonic_SF4D_CommManual_KO_v2.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "SICK_CQ4_InstallGuide_EN.pdf",
+      "new": "SICK_CQ4_InstallGuide_EN.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "skip",
+      "reason": "identical"
+    },
+    {
+      "old": "SICK_SICK_InstallGuide_EN.pdf",
+      "new": "SICK_CHoose_InstallGuide_EN.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "SICK_SICK_MaintenanceManual_EN.pdf",
+      "new": "SICK_HS_8M-ITL_UserManual_JA.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "SICK_SICK_MaintenanceManual_KO.pdf",
+      "new": "SICK_EN-IEC_InstallGuide_KO.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "SICK_SICK_Manual_EN.pdf",
+      "new": "SICK_UM30_InstallGuide_EN.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "SICK_SICK_Manual_KO.pdf",
+      "new": "SICK_CQ35-25NNP-KW1_Manual_KO.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "SICK_UM30_Manual_EN.pdf",
+      "new": "SICK_UM30_InstallGuide_EN_v2.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "SICK_Unknown_MaintenanceManual_KO.pdf",
+      "new": "SICK_EN-IEC_InstallGuide_KO_v2.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "SICK_Unknown_Manual_KO.pdf",
+      "new": "SICK_CQ35-25NNP-KW1_Manual_KO_v2.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Unknown_AL-69545-AF_Manual_KO.pdf",
+      "new": "Keyence_AL-69545-AF_SetupGuide_KO.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Unknown_AW00015119000_InstallGuide_EN.pdf",
+      "new": "Basler_AW00015119000_CommManual_EN.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Unknown_AW00015119000_UserManual_EN.pdf",
+      "new": "Basler_AW00015119000_CommManual_EN_v2.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Unknown_AW00089316000_InstallGuide_EN.pdf",
+      "new": "Basler_AW00089316000_CommManual_EN.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Unknown_AW00089316000_UserManual_EN.pdf",
+      "new": "Basler_AW00089316000_CommManual_EN_v2.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Unknown_AW00130804000_InstallGuide_EN.pdf",
+      "new": "Basler_AW00130804000_CommManual_EN.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Unknown_DF-20_MaintenanceManual_KO.pdf",
+      "new": "Keyence_DF-20_Manual_KO.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Unknown_DF-20_Manual_KO.pdf",
+      "new": "Keyence_DF-20_Manual_KO_v2.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Unknown_DF-20_Manual_KO_2.pdf",
+      "new": "Keyence_DF-20_Manual_KO_v3.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Unknown_DF-20_Manual_KO_3.pdf",
+      "new": "Keyence_DF-20_Manual_KO_v4.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Unknown_EX-10_Manual_KO.pdf",
+      "new": "Panasonic_EX-10_Manual_KO.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Unknown_FX-100_Manual_KO.pdf",
+      "new": "Panasonic_FX-100_MaintenanceManual_KO_v2.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Unknown_FX-300_Manual_KO.pdf",
+      "new": "Panasonic_FX-300_SetupGuide_KO.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Unknown_FX-300_WiringGuide_KO.pdf",
+      "new": "Panasonic_FX-300_SetupGuide_KO_v2.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Unknown_GFS4400_Manual_KO.pdf",
+      "new": "Datalogic_GFS4400_CommManual_KO.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Unknown_GFS4500_ParameterManual_EN.pdf",
+      "new": "Datalogic_GFS4500_CommManual_EN.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Unknown_GS-M_Manual_KO.pdf",
+      "new": "Panasonic_GS-M_Manual_KO.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Unknown_GX-F_Manual_KO.pdf",
+      "new": "Panasonic_GX-F_Manual_KO.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Unknown_GX-F_WiringGuide_KO.pdf",
+      "new": "Panasonic_GX-F_Manual_KO_v2.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Unknown_HL-G1_MaintenanceManual_KO.pdf",
+      "new": "Keyence_HL-G1_CommManual_KO.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Unknown_HL-G1_Manual_KO.pdf",
+      "new": "Keyence_HL-G1_CommManual_KO_v2.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Unknown_LK-G_Manual_KO.pdf",
+      "new": "Keyence_LK-G_Manual_KO.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Unknown_LK-G_UserManual_KO.pdf",
+      "new": "Keyence_LK-G_Manual_KO_v2.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Unknown_LR-T_Manual_KO.pdf",
+      "new": "Keyence_LR-T_SetupGuide_KO.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Unknown_LR-X250_Manual_KO.pdf",
+      "new": "Keyence_LR-X250_UserManual_KO.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Unknown_LR-X250_Manual_KO_2.pdf",
+      "new": "Keyence_LR-X250_UserManual_KO_v2.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Unknown_LR-X250_UserManual_KO.pdf",
+      "new": "Keyence_LR-X250_UserManual_KO_v3.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Unknown_LR-X250_UserManual_KO_2.pdf",
+      "new": "Keyence_LR-X250_UserManual_KO_v4.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Unknown_LR-X_MaintenanceManual_KO.pdf",
+      "new": "Keyence_LR-X_SetupGuide_KO.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Unknown_LR-X_Manual_KO.pdf",
+      "new": "Keyence_LR-X_SetupGuide_KO_v2.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Unknown_LR-ZB250AN_Manual_KO.pdf",
+      "new": "Keyence_LR-ZB250AN_SetupGuide_KO.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Unknown_LV-N_Manual_KO.pdf",
+      "new": "Keyence_LV-N_UserManual_KO.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Unknown_LV-N_Manual_KO_2.pdf",
+      "new": "Keyence_LV-N_UserManual_KO_v2.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Unknown_LV-N_Manual_KO_3.pdf",
+      "new": "Keyence_LV-N_UserManual_KO_v3.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Unknown_LV-N_WiringGuide_KO.pdf",
+      "new": "Keyence_LV-N_UserManual_KO_v4.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Unknown_MD-X_Manual_KO.pdf",
+      "new": "Keyence_MD-X_Manual_KO.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Unknown_ML-LP_Manual_KO.pdf",
+      "new": "Keyence_ML-LP_UserManual_KO.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Unknown_ML-LP_UserManual_KO.pdf",
+      "new": "Keyence_ML-LP_UserManual_KO_v2.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Unknown_PR12-4DN_InstallGuide_KO.pdf",
+      "new": "Autonics_PR12-4DN_UserManual_KO_v3.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Unknown_TM-310_Manual_KO.pdf",
+      "new": "Keyence_TM-310_Manual_KO.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Unknown_Unknown_MaintenanceManual_KO.pdf",
+      "new": "Videojet_CLARiTYTM_CommManual_KO.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Unknown_Unknown_Manual_EN.pdf",
+      "new": "Computar_MPW2_Manual_EN.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Unknown_Unknown_Manual_KO.pdf",
+      "new": "Omron_E3Z-L_Manual_KO.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Unknown_Unknown_Manual_KO_10.pdf",
+      "new": "Videojet_CLARiTYTM_CommManual_KO_v2.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Unknown_Unknown_Manual_KO_13.pdf",
+      "new": "Keyence_LK-G_SetupGuide_KO.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Unknown_Unknown_Manual_KO_15.pdf",
+      "new": "Keyence_LK-G_SetupGuide_KO_v2.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Unknown_Unknown_Manual_KO_7.pdf",
+      "new": "Panasonic_FX-500_SetupGuide_KO_v2.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Unknown_VJ1620HR_CommManual_KO.pdf",
+      "new": "Videojet_VJ1620HR_CommManual_KO.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Unknown_VJ1620HR_Manual_KO.pdf",
+      "new": "Videojet_VJ1620HR_CommManual_KO_v2.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Unknown_VJ7330_InstallGuide_KO.pdf",
+      "new": "Videojet_VJ7330_InstallGuide_KO.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    },
+    {
+      "old": "Unknown_XENON-1900SD_Manual_KO.pdf",
+      "new": "Honeywell_XENON-1900SD_Manual_KO.pdf",
+      "ts": "2026-04-11 18:49:02 KST",
+      "status": "success"
+    }
+  ]
+}

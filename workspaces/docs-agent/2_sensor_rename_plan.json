@@ -17,7 +17,7 @@
     "doctype": "UserManual",
     "language": "JA",
     "category_valid": "true",
-    "notes": "model 미식별"
+    "notes": "model unidentified"
   },
   {
     "old_filename": "ABB_ABB_InstallGuide_EN_2.pdf",
@@ -97,7 +97,7 @@
     "doctype": "ParameterManual",
     "language": "EN",
     "category_valid": "true",
-    "notes": "model 미식별"
+    "notes": "model unidentified"
   },
   {
     "old_filename": "ABB_ABB_UserManual_EN.pdf",
@@ -197,7 +197,7 @@
     "doctype": "ParameterManual",
     "language": "EN",
     "category_valid": "true",
-    "notes": "model 미식별"
+    "notes": "model unidentified"
   },
   {
     "old_filename": "ABB_Unknown_UserManual_EN.pdf",
@@ -591,13 +591,13 @@
   },
   {
     "old_filename": "Unknown_AL-69545-AF_Manual_KO.pdf",
-    "new_filename": "Unknown_AL-69545-AF_SetupGuide_KO.pdf",
-    "manufacturer": "",
+    "new_filename": "Keyence_AL-69545-AF_SetupGuide_KO.pdf",
+    "manufacturer": "Keyence",
     "model": "AL-69545-AF",
     "doctype": "SetupGuide",
     "language": "KO",
     "category_valid": "true",
-    "notes": "manufacturer 미식별"
+    "notes": "mfr inferred from model prefix"
   },
   {
     "old_filename": "Unknown_AW00015119000_InstallGuide_EN.pdf",
@@ -657,57 +657,57 @@
     "doctype": "SetupGuide",
     "language": "KO",
     "category_valid": "false",
-    "notes": "manufacturer 미식별"
+    "notes": "manufacturer unidentified"
   },
   {
     "old_filename": "Unknown_DF-20_MaintenanceManual_KO.pdf",
-    "new_filename": "Unknown_DF-20_Manual_KO.pdf",
-    "manufacturer": "",
+    "new_filename": "Keyence_DF-20_Manual_KO.pdf",
+    "manufacturer": "Keyence",
     "model": "DF-20",
     "doctype": "Manual",
     "language": "KO",
     "category_valid": "true",
-    "notes": "manufacturer 미식별"
+    "notes": "mfr inferred from model prefix"
   },
   {
     "old_filename": "Unknown_DF-20_Manual_KO.pdf",
-    "new_filename": "Unknown_DF-20_Manual_KO_v2.pdf",
-    "manufacturer": "",
+    "new_filename": "Keyence_DF-20_Manual_KO_v2.pdf",
+    "manufacturer": "Keyence",
     "model": "DF-20",
     "doctype": "Manual",
     "language": "KO",
     "category_valid": "true",
-    "notes": "manufacturer 미식별"
+    "notes": "mfr inferred from model prefix"
   },
   {
     "old_filename": "Unknown_DF-20_Manual_KO_2.pdf",
-    "new_filename": "Unknown_DF-20_Manual_KO_v3.pdf",
-    "manufacturer": "",
+    "new_filename": "Keyence_DF-20_Manual_KO_v3.pdf",
+    "manufacturer": "Keyence",
     "model": "DF-20",
     "doctype": "Manual",
     "language": "KO",
     "category_valid": "true",
-    "notes": "manufacturer 미식별"
+    "notes": "mfr inferred from model prefix"
   },
   {
     "old_filename": "Unknown_DF-20_Manual_KO_3.pdf",
-    "new_filename": "Unknown_DF-20_Manual_KO_v4.pdf",
-    "manufacturer": "",
+    "new_filename": "Keyence_DF-20_Manual_KO_v4.pdf",
+    "manufacturer": "Keyence",
     "model": "DF-20",
     "doctype": "Manual",
     "language": "KO",
     "category_valid": "true",
-    "notes": "manufacturer 미식별"
+    "notes": "mfr inferred from model prefix"
   },
   {
     "old_filename": "Unknown_EX-10_Manual_KO.pdf",
-    "new_filename": "Unknown_EX-10_Manual_KO.pdf",
-    "manufacturer": "",
+    "new_filename": "Panasonic_EX-10_Manual_KO.pdf",
+    "manufacturer": "Panasonic",
     "model": "EX-10",
     "doctype": "Manual",
     "language": "KO",
     "category_valid": "true",
-    "notes": "manufacturer 미식별"
+    "notes": "mfr inferred from model prefix"
   },
   {
     "old_filename": "Unknown_FOQ-0527-101_Manual_KO.pdf",
@@ -717,7 +717,7 @@
     "doctype": "Manual",
     "language": "KO",
     "category_valid": "true",
-    "notes": "manufacturer 미식별"
+    "notes": "manufacturer unidentified"
   },
   {
     "old_filename": "Unknown_FX-100_Manual_KO.pdf",
@@ -731,23 +731,23 @@
   },
   {
     "old_filename": "Unknown_FX-300_Manual_KO.pdf",
-    "new_filename": "Unknown_FX-300_SetupGuide_KO.pdf",
-    "manufacturer": "",
+    "new_filename": "Panasonic_FX-300_SetupGuide_KO.pdf",
+    "manufacturer": "Panasonic",
     "model": "FX-300",
     "doctype": "SetupGuide",
     "language": "KO",
     "category_valid": "true",
-    "notes": "manufacturer 미식별"
+    "notes": "mfr inferred from model prefix"
   },
   {
     "old_filename": "Unknown_FX-300_WiringGuide_KO.pdf",
-    "new_filename": "Unknown_FX-300_SetupGuide_KO_v2.pdf",
-    "manufacturer": "",
+    "new_filename": "Panasonic_FX-300_SetupGuide_KO_v2.pdf",
+    "manufacturer": "Panasonic",
     "model": "FX-300",
     "doctype": "SetupGuide",
     "language": "KO",
     "category_valid": "true",
-    "notes": "manufacturer 미식별"
+    "notes": "mfr inferred from model prefix"
   },
   {
     "old_filename": "Unknown_GFS4400_Manual_KO.pdf",
@@ -771,53 +771,53 @@
   },
   {
     "old_filename": "Unknown_GS-M_Manual_KO.pdf",
-    "new_filename": "Unknown_GS-M_Manual_KO.pdf",
-    "manufacturer": "",
+    "new_filename": "Panasonic_GS-M_Manual_KO.pdf",
+    "manufacturer": "Panasonic",
     "model": "GS-M",
     "doctype": "Manual",
     "language": "KO",
     "category_valid": "true",
-    "notes": "manufacturer 미식별"
+    "notes": "mfr inferred from model prefix"
   },
   {
     "old_filename": "Unknown_GX-F_Manual_KO.pdf",
-    "new_filename": "Unknown_GX-F_Manual_KO.pdf",
-    "manufacturer": "",
+    "new_filename": "Panasonic_GX-F_Manual_KO.pdf",
+    "manufacturer": "Panasonic",
     "model": "GX-F",
     "doctype": "Manual",
     "language": "KO",
     "category_valid": "true",
-    "notes": "manufacturer 미식별"
+    "notes": "mfr inferred from model prefix"
   },
   {
     "old_filename": "Unknown_GX-F_WiringGuide_KO.pdf",
-    "new_filename": "Unknown_GX-F_Manual_KO_v2.pdf",
-    "manufacturer": "",
+    "new_filename": "Panasonic_GX-F_Manual_KO_v2.pdf",
+    "manufacturer": "Panasonic",
     "model": "GX-F",
     "doctype": "Manual",
     "language": "KO",
     "category_valid": "true",
-    "notes": "manufacturer 미식별"
+    "notes": "mfr inferred from model prefix"
   },
   {
     "old_filename": "Unknown_HL-G1_MaintenanceManual_KO.pdf",
-    "new_filename": "Unknown_HL-G1_CommManual_KO.pdf",
-    "manufacturer": "",
+    "new_filename": "Keyence_HL-G1_CommManual_KO.pdf",
+    "manufacturer": "Keyence",
     "model": "HL-G1",
     "doctype": "CommManual",
     "language": "KO",
     "category_valid": "true",
-    "notes": "manufacturer 미식별"
+    "notes": "mfr inferred from model prefix"
   },
   {
     "old_filename": "Unknown_HL-G1_Manual_KO.pdf",
-    "new_filename": "Unknown_HL-G1_CommManual_KO_v2.pdf",
-    "manufacturer": "",
+    "new_filename": "Keyence_HL-G1_CommManual_KO_v2.pdf",
+    "manufacturer": "Keyence",
     "model": "HL-G1",
     "doctype": "CommManual",
     "language": "KO",
     "category_valid": "true",
-    "notes": "manufacturer 미식별"
+    "notes": "mfr inferred from model prefix"
   },
   {
     "old_filename": "Unknown_HR10A-7P_InstallGuide_EN.pdf",
@@ -827,177 +827,177 @@
     "doctype": "InstallGuide",
     "language": "EN",
     "category_valid": "false",
-    "notes": "manufacturer 미식별"
+    "notes": "manufacturer unidentified"
   },
   {
     "old_filename": "Unknown_LK-G_Manual_KO.pdf",
-    "new_filename": "Unknown_LK-G_Manual_KO.pdf",
-    "manufacturer": "",
+    "new_filename": "Keyence_LK-G_Manual_KO.pdf",
+    "manufacturer": "Keyence",
     "model": "LK-G",
     "doctype": "Manual",
     "language": "KO",
     "category_valid": "true",
-    "notes": "manufacturer 미식별"
+    "notes": "mfr inferred from model prefix"
   },
   {
     "old_filename": "Unknown_LK-G_UserManual_KO.pdf",
-    "new_filename": "Unknown_LK-G_Manual_KO_v2.pdf",
-    "manufacturer": "",
+    "new_filename": "Keyence_LK-G_Manual_KO_v2.pdf",
+    "manufacturer": "Keyence",
     "model": "LK-G",
     "doctype": "Manual",
     "language": "KO",
     "category_valid": "true",
-    "notes": "manufacturer 미식별"
+    "notes": "mfr inferred from model prefix"
   },
   {
     "old_filename": "Unknown_LR-T_Manual_KO.pdf",
-    "new_filename": "Unknown_LR-T_SetupGuide_KO.pdf",
-    "manufacturer": "",
+    "new_filename": "Keyence_LR-T_SetupGuide_KO.pdf",
+    "manufacturer": "Keyence",
     "model": "LR-T",
     "doctype": "SetupGuide",
     "language": "KO",
     "category_valid": "true",
-    "notes": "manufacturer 미식별"
+    "notes": "mfr inferred from model prefix"
   },
   {
     "old_filename": "Unknown_LR-X250_Manual_KO.pdf",
-    "new_filename": "Unknown_LR-X250_UserManual_KO.pdf",
-    "manufacturer": "",
+    "new_filename": "Keyence_LR-X250_UserManual_KO.pdf",
+    "manufacturer": "Keyence",
     "model": "LR-X250",
     "doctype": "UserManual",
     "language": "KO",
     "category_valid": "true",
-    "notes": "manufacturer 미식별"
+    "notes": "mfr inferred from model prefix"
   },
   {
     "old_filename": "Unknown_LR-X250_Manual_KO_2.pdf",
-    "new_filename": "Unknown_LR-X250_UserManual_KO_v2.pdf",
-    "manufacturer": "",
+    "new_filename": "Keyence_LR-X250_UserManual_KO_v2.pdf",
+    "manufacturer": "Keyence",
     "model": "LR-X250",
     "doctype": "UserManual",
     "language": "KO",
     "category_valid": "true",
-    "notes": "manufacturer 미식별"
+    "notes": "mfr inferred from model prefix"
   },
   {
     "old_filename": "Unknown_LR-X250_UserManual_KO.pdf",
-    "new_filename": "Unknown_LR-X250_UserManual_KO_v3.pdf",
-    "manufacturer": "",
+    "new_filename": "Keyence_LR-X250_UserManual_KO_v3.pdf",
+    "manufacturer": "Keyence",
     "model": "LR-X250",
     "doctype": "UserManual",
     "language": "KO",
     "category_valid": "true",
-    "notes": "manufacturer 미식별"
+    "notes": "mfr inferred from model prefix"
   },
   {
     "old_filename": "Unknown_LR-X250_UserManual_KO_2.pdf",
-    "new_filename": "Unknown_LR-X250_UserManual_KO_v4.pdf",
-    "manufacturer": "",
+    "new_filename": "Keyence_LR-X250_UserManual_KO_v4.pdf",
+    "manufacturer": "Keyence",
     "model": "LR-X250",
     "doctype": "UserManual",
     "language": "KO",
     "category_valid": "true",
-    "notes": "manufacturer 미식별"
+    "notes": "mfr inferred from model prefix"
   },
   {
     "old_filename": "Unknown_LR-X_MaintenanceManual_KO.pdf",
-    "new_filename": "Unknown_LR-X_SetupGuide_KO.pdf",
-    "manufacturer": "",
+    "new_filename": "Keyence_LR-X_SetupGuide_KO.pdf",
+    "manufacturer": "Keyence",
     "model": "LR-X",
     "doctype": "SetupGuide",
     "language": "KO",
     "category_valid": "true",
-    "notes": "manufacturer 미식별"
+    "notes": "mfr inferred from model prefix"
   },
   {
     "old_filename": "Unknown_LR-X_Manual_KO.pdf",
-    "new_filename": "Unknown_LR-X_SetupGuide_KO_v2.pdf",
-    "manufacturer": "",
+    "new_filename": "Keyence_LR-X_SetupGuide_KO_v2.pdf",
+    "manufacturer": "Keyence",
     "model": "LR-X",
     "doctype": "SetupGuide",
     "language": "KO",
     "category_valid": "true",
-    "notes": "manufacturer 미식별"
+    "notes": "mfr inferred from model prefix"
   },
   {
     "old_filename": "Unknown_LR-ZB250AN_Manual_KO.pdf",
-    "new_filename": "Unknown_LR-ZB250AN_SetupGuide_KO.pdf",
-    "manufacturer": "",
+    "new_filename": "Keyence_LR-ZB250AN_SetupGuide_KO.pdf",
+    "manufacturer": "Keyence",
     "model": "LR-ZB250AN",
     "doctype": "SetupGuide",
     "language": "KO",
     "category_valid": "true",
-    "notes": "manufacturer 미식별"
+    "notes": "mfr inferred from model prefix"
   },
   {
     "old_filename": "Unknown_LV-N_Manual_KO.pdf",
-    "new_filename": "Unknown_LV-N_UserManual_KO.pdf",
-    "manufacturer": "",
+    "new_filename": "Keyence_LV-N_UserManual_KO.pdf",
+    "manufacturer": "Keyence",
     "model": "LV-N",
     "doctype": "UserManual",
     "language": "KO",
     "category_valid": "true",
-    "notes": "manufacturer 미식별"
+    "notes": "mfr inferred from model prefix"
   },
   {
     "old_filename": "Unknown_LV-N_Manual_KO_2.pdf",
-    "new_filename": "Unknown_LV-N_UserManual_KO_v2.pdf",
-    "manufacturer": "",
+    "new_filename": "Keyence_LV-N_UserManual_KO_v2.pdf",
+    "manufacturer": "Keyence",
     "model": "LV-N",
     "doctype": "UserManual",
     "language": "KO",
     "category_valid": "true",
-    "notes": "manufacturer 미식별"
+    "notes": "mfr inferred from model prefix"
   },
   {
     "old_filename": "Unknown_LV-N_Manual_KO_3.pdf",
-    "new_filename": "Unknown_LV-N_UserManual_KO_v3.pdf",
-    "manufacturer": "",
+    "new_filename": "Keyence_LV-N_UserManual_KO_v3.pdf",
+    "manufacturer": "Keyence",
     "model": "LV-N",
     "doctype": "UserManual",
     "language": "KO",
     "category_valid": "true",
-    "notes": "manufacturer 미식별"
+    "notes": "mfr inferred from model prefix"
   },
   {
     "old_filename": "Unknown_LV-N_WiringGuide_KO.pdf",
-    "new_filename": "Unknown_LV-N_UserManual_KO_v4.pdf",
-    "manufacturer": "",
+    "new_filename": "Keyence_LV-N_UserManual_KO_v4.pdf",
+    "manufacturer": "Keyence",
     "model": "LV-N",
     "doctype": "UserManual",
     "language": "KO",
     "category_valid": "true",
-    "notes": "manufacturer 미식별"
+    "notes": "mfr inferred from model prefix"
   },
   {
     "old_filename": "Unknown_MD-X_Manual_KO.pdf",
-    "new_filename": "Unknown_MD-X_Manual_KO.pdf",
-    "manufacturer": "",
+    "new_filename": "Keyence_MD-X_Manual_KO.pdf",
+    "manufacturer": "Keyence",
     "model": "MD-X",
     "doctype": "Manual",
     "language": "KO",
     "category_valid": "true",
-    "notes": "manufacturer 미식별"
+    "notes": "mfr inferred from model prefix"
   },
   {
     "old_filename": "Unknown_ML-LP_Manual_KO.pdf",
-    "new_filename": "Unknown_ML-LP_UserManual_KO.pdf",
-    "manufacturer": "",
+    "new_filename": "Keyence_ML-LP_UserManual_KO.pdf",
+    "manufacturer": "Keyence",
     "model": "ML-LP",
     "doctype": "UserManual",
     "language": "KO",
     "category_valid": "true",
-    "notes": "manufacturer 미식별"
+    "notes": "mfr inferred from model prefix"
   },
   {
     "old_filename": "Unknown_ML-LP_UserManual_KO.pdf",
-    "new_filename": "Unknown_ML-LP_UserManual_KO_v2.pdf",
-    "manufacturer": "",
+    "new_filename": "Keyence_ML-LP_UserManual_KO_v2.pdf",
+    "manufacturer": "Keyence",
     "model": "ML-LP",
     "doctype": "UserManual",
     "language": "KO",
     "category_valid": "true",
-    "notes": "manufacturer 미식별"
+    "notes": "mfr inferred from model prefix"
   },
   {
     "old_filename": "Unknown_PR12-4DN_InstallGuide_KO.pdf",
@@ -1017,7 +1017,7 @@
     "doctype": "SetupGuide",
     "language": "KO",
     "category_valid": "true",
-    "notes": "manufacturer 미식별"
+    "notes": "manufacturer unidentified"
   },
   {
     "old_filename": "Unknown_SERIES_WiringGuide_KO.pdf",
@@ -1027,7 +1027,7 @@
     "doctype": "SetupGuide",
     "language": "KO",
     "category_valid": "true",
-    "notes": "manufacturer 미식별"
+    "notes": "manufacturer unidentified"
   },
   {
     "old_filename": "Unknown_STC-SB_Manual_EN_2.pdf",
@@ -1037,17 +1037,17 @@
     "doctype": "CommManual",
     "language": "JA",
     "category_valid": "true",
-    "notes": "manufacturer 미식별"
+    "notes": "manufacturer unidentified"
   },
   {
     "old_filename": "Unknown_TM-310_Manual_KO.pdf",
-    "new_filename": "Unknown_TM-310_Manual_KO.pdf",
-    "manufacturer": "",
+    "new_filename": "Keyence_TM-310_Manual_KO.pdf",
+    "manufacturer": "Keyence",
     "model": "TM-310",
     "doctype": "Manual",
     "language": "KO",
     "category_valid": "true",
-    "notes": "manufacturer 미식별"
+    "notes": "mfr inferred from model prefix"
   },
   {
     "old_filename": "Unknown_Unknown_MaintenanceManual_EN.pdf",
@@ -1057,17 +1057,17 @@
     "doctype": "CommManual",
     "language": "EN",
     "category_valid": "true",
-    "notes": "manufacturer 미식별"
+    "notes": "manufacturer unidentified"
   },
   {
     "old_filename": "Unknown_Unknown_MaintenanceManual_KO.pdf",
-    "new_filename": "Unknown_CLARiTYTM_CommManual_KO.pdf",
-    "manufacturer": "",
+    "new_filename": "Videojet_CLARiTYTM_CommManual_KO.pdf",
+    "manufacturer": "Videojet",
     "model": "CLARiTYTM",
     "doctype": "CommManual",
     "language": "KO",
     "category_valid": "true",
-    "notes": "manufacturer 미식별"
+    "notes": "mfr inferred from model prefix"
   },
   {
     "old_filename": "Unknown_Unknown_MaintenanceManual_KO_2.pdf",
@@ -1077,7 +1077,7 @@
     "doctype": "MaintenanceManual",
     "language": "KO",
     "category_valid": "true",
-    "notes": "manufacturer 미식별; model 미식별"
+    "notes": "manufacturer unidentified; model unidentified"
   },
   {
     "old_filename": "Unknown_Unknown_MaintenanceManual_KO_3.pdf",
@@ -1087,7 +1087,7 @@
     "doctype": "CommManual",
     "language": "KO",
     "category_valid": "true",
-    "notes": "manufacturer 미식별"
+    "notes": "manufacturer unidentified"
   },
   {
     "old_filename": "Unknown_Unknown_Manual_EN.pdf",
@@ -1107,7 +1107,7 @@
     "doctype": "Manual",
     "language": "EN",
     "category_valid": "false",
-    "notes": "manufacturer 미식별"
+    "notes": "manufacturer unidentified"
   },
   {
     "old_filename": "Unknown_Unknown_Manual_EN_3.pdf",
@@ -1117,27 +1117,27 @@
     "doctype": "Manual",
     "language": "EN",
     "category_valid": "false",
-    "notes": "manufacturer 미식별"
+    "notes": "manufacturer unidentified"
   },
   {
     "old_filename": "Unknown_Unknown_Manual_KO.pdf",
-    "new_filename": "Unknown_E3Z-L_Manual_KO.pdf",
-    "manufacturer": "",
+    "new_filename": "Omron_E3Z-L_Manual_KO.pdf",
+    "manufacturer": "Omron",
     "model": "E3Z-L",
     "doctype": "Manual",
     "language": "KO",
     "category_valid": "true",
-    "notes": "manufacturer 미식별"
+    "notes": "mfr inferred from model prefix"
   },
   {
     "old_filename": "Unknown_Unknown_Manual_KO_10.pdf",
-    "new_filename": "Unknown_CLARiTYTM_CommManual_KO_v2.pdf",
-    "manufacturer": "",
+    "new_filename": "Videojet_CLARiTYTM_CommManual_KO_v2.pdf",
+    "manufacturer": "Videojet",
     "model": "CLARiTYTM",
     "doctype": "CommManual",
     "language": "KO",
     "category_valid": "true",
-    "notes": "manufacturer 미식별"
+    "notes": "mfr inferred from model prefix"
   },
   {
     "old_filename": "Unknown_Unknown_Manual_KO_11.pdf",
@@ -1147,7 +1147,7 @@
     "doctype": "CommManual",
     "language": "KO",
     "category_valid": "true",
-    "notes": "manufacturer 미식별"
+    "notes": "manufacturer unidentified"
   },
   {
     "old_filename": "Unknown_Unknown_Manual_KO_12.pdf",
@@ -1157,17 +1157,17 @@
     "doctype": "Manual",
     "language": "KO",
     "category_valid": "true",
-    "notes": "manufacturer 미식별; model 미식별"
+    "notes": "manufacturer unidentified; model unidentified"
   },
   {
     "old_filename": "Unknown_Unknown_Manual_KO_13.pdf",
-    "new_filename": "Unknown_LK-G_SetupGuide_KO.pdf",
-    "manufacturer": "",
+    "new_filename": "Keyence_LK-G_SetupGuide_KO.pdf",
+    "manufacturer": "Keyence",
     "model": "LK-G",
     "doctype": "SetupGuide",
     "language": "KO",
     "category_valid": "false",
-    "notes": "manufacturer 미식별"
+    "notes": "mfr inferred from model prefix"
   },
   {
     "old_filename": "Unknown_Unknown_Manual_KO_14.pdf",
@@ -1177,17 +1177,17 @@
     "doctype": "Manual",
     "language": "KO",
     "category_valid": "true",
-    "notes": "manufacturer 미식별; model 미식별"
+    "notes": "manufacturer unidentified; model unidentified"
   },
   {
     "old_filename": "Unknown_Unknown_Manual_KO_15.pdf",
-    "new_filename": "Unknown_LK-G_SetupGuide_KO_v2.pdf",
-    "manufacturer": "",
+    "new_filename": "Keyence_LK-G_SetupGuide_KO_v2.pdf",
+    "manufacturer": "Keyence",
     "model": "LK-G",
     "doctype": "SetupGuide",
     "language": "KO",
     "category_valid": "false",
-    "notes": "manufacturer 미식별"
+    "notes": "mfr inferred from model prefix"
   },
   {
     "old_filename": "Unknown_Unknown_Manual_KO_16.pdf",
@@ -1197,7 +1197,7 @@
     "doctype": "Manual",
     "language": "EN",
     "category_valid": "true",
-    "notes": "manufacturer 미식별; model 미식별"
+    "notes": "manufacturer unidentified; model unidentified"
   },
   {
     "old_filename": "Unknown_Unknown_Manual_KO_17.pdf",
@@ -1207,7 +1207,7 @@
     "doctype": "SetupGuide",
     "language": "KO",
     "category_valid": "true",
-    "notes": "manufacturer 미식별"
+    "notes": "manufacturer unidentified"
   },
   {
     "old_filename": "Unknown_Unknown_Manual_KO_18.pdf",
@@ -1217,7 +1217,7 @@
     "doctype": "SetupGuide",
     "language": "KO",
     "category_valid": "false",
-    "notes": "manufacturer 미식별"
+    "notes": "manufacturer unidentified"
   },
   {
     "old_filename": "Unknown_Unknown_Manual_KO_19.pdf",
@@ -1227,7 +1227,7 @@
     "doctype": "Manual",
     "language": "KO",
     "category_valid": "true",
-    "notes": "manufacturer 미식별; model 미식별"
+    "notes": "manufacturer unidentified; model unidentified"
   },
   {
     "old_filename": "Unknown_Unknown_Manual_KO_2.pdf",
@@ -1237,7 +1237,7 @@
     "doctype": "Manual",
     "language": "EN",
     "category_valid": "true",
-    "notes": "manufacturer 미식별; model 미식별"
+    "notes": "manufacturer unidentified; model unidentified"
   },
   {
     "old_filename": "Unknown_Unknown_Manual_KO_3.pdf",
@@ -1247,7 +1247,7 @@
     "doctype": "Catalog",
     "language": "KO",
     "category_valid": "true",
-    "notes": "manufacturer 미식별"
+    "notes": "manufacturer unidentified"
   },
   {
     "old_filename": "Unknown_Unknown_Manual_KO_4.pdf",
@@ -1257,7 +1257,7 @@
     "doctype": "SetupGuide",
     "language": "KO",
     "category_valid": "true",
-    "notes": "manufacturer 미식별"
+    "notes": "manufacturer unidentified"
   },
   {
     "old_filename": "Unknown_Unknown_Manual_KO_5.pdf",
@@ -1267,7 +1267,7 @@
     "doctype": "MaintenanceManual",
     "language": "KO",
     "category_valid": "true",
-    "notes": "manufacturer 미식별; model 미식별"
+    "notes": "manufacturer unidentified; model unidentified"
   },
   {
     "old_filename": "Unknown_Unknown_Manual_KO_6.pdf",
@@ -1277,7 +1277,7 @@
     "doctype": "SetupGuide",
     "language": "KO",
     "category_valid": "false",
-    "notes": "manufacturer 미식별"
+    "notes": "manufacturer unidentified"
   },
   {
     "old_filename": "Unknown_Unknown_Manual_KO_7.pdf",
@@ -1297,7 +1297,7 @@
     "doctype": "Manual",
     "language": "KO",
     "category_valid": "true",
-    "notes": "manufacturer 미식별; model 미식별"
+    "notes": "manufacturer unidentified; model unidentified"
   },
   {
     "old_filename": "Unknown_Unknown_Manual_KO_9.pdf",
@@ -1307,7 +1307,7 @@
     "doctype": "CommManual",
     "language": "KO",
     "category_valid": "true",
-    "notes": "manufacturer 미식별"
+    "notes": "manufacturer unidentified"
   },
   {
     "old_filename": "Unknown_VERSION_MaintenanceManual_KO.pdf",
@@ -1317,7 +1317,7 @@
     "doctype": "Manual",
     "language": "KO",
     "category_valid": "true",
-    "notes": "manufacturer 미식별"
+    "notes": "manufacturer unidentified"
   },
   {
     "old_filename": "Unknown_VERSION_Manual_KO.pdf",
@@ -1327,46 +1327,46 @@
     "doctype": "Manual",
     "language": "KO",
     "category_valid": "true",
-    "notes": "manufacturer 미식별"
+    "notes": "manufacturer unidentified"
   },
   {
     "old_filename": "Unknown_VJ1620HR_CommManual_KO.pdf",
-    "new_filename": "Unknown_VJ1620HR_CommManual_KO.pdf",
-    "manufacturer": "",
+    "new_filename": "Videojet_VJ1620HR_CommManual_KO.pdf",
+    "manufacturer": "Videojet",
     "model": "VJ1620HR",
     "doctype": "CommManual",
     "language": "KO",
     "category_valid": "false",
-    "notes": "manufacturer 미식별"
+    "notes": "mfr inferred from model prefix"
   },
   {
     "old_filename": "Unknown_VJ1620HR_Manual_KO.pdf",
-    "new_filename": "Unknown_VJ1620HR_CommManual_KO_v2.pdf",
-    "manufacturer": "",
+    "new_filename": "Videojet_VJ1620HR_CommManual_KO_v2.pdf",
+    "manufacturer": "Videojet",
     "model": "VJ1620HR",
     "doctype": "CommManual",
     "language": "KO",
     "category_valid": "false",
-    "notes": "manufacturer 미식별"
+    "notes": "mfr inferred from model prefix"
   },
   {
     "old_filename": "Unknown_VJ7330_InstallGuide_KO.pdf",
-    "new_filename": "Unknown_VJ7330_InstallGuide_KO.pdf",
-    "manufacturer": "",
+    "new_filename": "Videojet_VJ7330_InstallGuide_KO.pdf",
+    "manufacturer": "Videojet",
     "model": "VJ7330",
     "doctype": "InstallGuide",
     "language": "KO",
     "category_valid": "true",
-    "notes": "manufacturer 미식별"
+    "notes": "mfr inferred from model prefix"
   },
   {
     "old_filename": "Unknown_XENON-1900SD_Manual_KO.pdf",
-    "new_filename": "Unknown_XENON-1900SD_Manual_KO.pdf",
-    "manufacturer": "",
+    "new_filename": "Honeywell_XENON-1900SD_Manual_KO.pdf",
+    "manufacturer": "Honeywell",
     "model": "XENON-1900SD",
     "doctype": "Manual",
     "language": "KO",
     "category_valid": "false",
-    "notes": "manufacturer 미식별"
+    "notes": "mfr inferred from model prefix"
   }
 ]
