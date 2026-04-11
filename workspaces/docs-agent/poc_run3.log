@@ -23,3 +23,9 @@
   {'file_id': '1_robot_0b0c3108c6c9', 'chunks': 440, 'figures': 198, 'tables': 128}
   elapsed: 1633.9s  vlm_err=0  upload_err=0  (total: 55.5 min)
 --- [7/10] Mitsubishi_BFP-A8614_TrackingManual_JA.pdf ---
+  mfr=Mitsubishi model=BFP-A8614 dt=TrackingManual lang=JA
+  {'file_id': '1_robot_c5a220711bc5', 'chunks': 1229, 'figures': 203, 'tables': 52}
+  elapsed: 1335.1s  vlm_err=0  upload_err=0  (total: 77.8 min)
+--- [8/10] Cognex_IS5000_QuickStart_KO.pdf ---
+  elapsed: 11.2s  vlm_err=0  upload_err=0  (total: 77.9 min)
+--- [9/10] Mitsubishi_BFP-A8586-D_MaintenanceManual_KO.pdf ---
