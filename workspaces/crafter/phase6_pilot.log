@@ -1,0 +1,77 @@
+[PILOT] 입력 50 chunks, 모델=google/gemma-4-31b-it
+======================================================================
+[ 1/50] ABB_ABB_Manual_EN.pdf                    p  6 → ent= 3 rel= 2 in=  703 out= 374 $0.00000
+[ 2/50] Cognex_Unknown_InstallGuide_EN_2.pdf     p  0 → ent= 2 rel= 1 in=  811 out= 174 $0.00000
+[ 3/50] Cognex_Unknown_InstallGuide_EN_3.pdf     p  0 → ent= 2 rel= 0 in=  811 out= 123 $0.00000
+[ 4/50] Cognex_Unknown_InstallGuide_EN_4.pdf     p  0 → ent= 2 rel= 0 in=  811 out= 123 $0.00000
+[ 5/50] Cognex_Unknown_InstallGuide_EN_5.pdf     p  0 → ent= 2 rel= 1 in=  811 out= 174 $0.00000
+[6/50] ERROR: Request timed out.
+[7/50] ERROR: Request timed out.
+[8/50] ERROR: Request timed out.
+[9/50] ERROR: Request timed out.
+[10/50] ERROR: Request timed out.
+[11/50] ERROR: Request timed out.
+[12/50] ERROR: Request timed out.
+[13/50] ERROR: Request timed out.
+[14/50] ERROR: Request timed out.
+[15/50] ERROR: Request timed out.
+[16/50] ERROR: Request timed out.
+[17/50] ERROR: Request timed out.
+[18/50] ERROR: Request timed out.
+[19/50] ERROR: Request timed out.
+[20/50] ERROR: Request timed out.
+[21/50] ERROR: Request timed out.
+[22/50] ERROR: Request timed out.
+[23/50] ERROR: Request timed out.
+[24/50] ERROR: Request timed out.
+[25/50] ERROR: Request timed out.
+[26/50] ERROR: Request timed out.
+[27/50] ERROR: Request timed out.
+[28/50] ERROR: Request timed out.
+[29/50] ERROR: Request timed out.
+[30/50] ERROR: Request timed out.
+[31/50] ERROR: Request timed out.
+[32/50] ERROR: Request timed out.
+[33/50] ERROR: Request timed out.
+[34/50] ERROR: Request timed out.
+[35/50] ERROR: Request timed out.
+[36/50] ERROR: Request timed out.
+[37/50] ERROR: Request timed out.
+[38/50] ERROR: Request timed out.
+[39/50] ERROR: Request timed out.
+[40/50] ERROR: Request timed out.
+[41/50] ERROR: Request timed out.
+[42/50] ERROR: Request timed out.
+[43/50] ERROR: Request timed out.
+[44/50] ERROR: Request timed out.
+[45/50] ERROR: Request timed out.
+[46/50] ERROR: Request timed out.
+[47/50] ERROR: Request timed out.
+[48/50] ERROR: Request timed out.
+[49/50] ERROR: Request timed out.
+[50/50] ERROR: Request timed out.
+
+======================================================================
+[요약]
+{
+  "model": "google/gemma-4-31b-it",
+  "pilot_chunks": 5,
+  "elapsed_sec": 1796.3,
+  "avg_sec_per_chunk": 359.26,
+  "total_entities": 11,
+  "total_relations": 4,
+  "avg_entities_per_chunk": 2.2,
+  "avg_relations_per_chunk": 0.8,
+  "total_input_tokens": 3947,
+  "total_output_tokens": 968,
+  "total_cost_usd": 0.0,
+  "avg_cost_per_chunk_usd": 0.0,
+  "projected_full_run": {
+    "target_chunks": 285248,
+    "estimated_cost_usd": 0.0,
+    "estimated_hours_serial": 28466.3,
+    "estimated_hours_parallel10": 2846.6
+  }
+}
+
+저장: C:\MES\wta-agents\workspaces\crafter\phase6_pilot_result.json
