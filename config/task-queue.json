@@ -1649,12 +1649,12 @@
       "agent": "dev-agent",
       "task": "cs-wta.com 라벨 디자인 기능 수정 요청 (부서장 지시).",
       "message": "cs-wta.com 라벨 디자인 기능 수정 요청 (부서장 지시).\n\n위치: 설정 → 라벨 프린터설정 → 템플릿관리 → 라벨 디자인\n\n현재: 텍스트 객체에 너비 설정이 없어서 긴 텍스트가 한 줄로 나감\n변경: 텍스트 객체에 너비(width) 속성을 설정할 수 있게 하고, 설정된 너비를 초과하는 텍스트는 자동 줄바꿈 처리\n\n구현 포인트:\n1. 텍스트 객체 속성 패널에 \"너비\" 입력 필드 추가\n2. 너비 미설정 시 기존처럼 한 줄 (하위 호환)\n3. 너비 설정 시 해당 너비에서 자동 줄바꿈 (word-wrap)\n4. 라벨 미리보기 및 실제 인쇄 시 모두 적용\n\n완료 후 보고해줘.",
-      "status": "pending",
+      "status": "done",
       "priority": "medium",
       "created_at": "2026-04-08 23:05:24",
-      "updated_at": "2026-04-08 23:05:24",
+      "updated_at": "2026-04-11 10:43:53",
       "last_report_at": null,
-      "completed_at": null
+      "completed_at": "2026-04-11 10:43:53"
     },
     {
       "id": "tq-crafter-cf10a0",
@@ -1709,12 +1709,12 @@
       "agent": "dev-agent",
       "task": "cs-wta.com 배포 진행해줘. 라벨 디자인 텍스트 너비/줄바꿈 기능 빌드 완료 확인됐으니 프로덕션 배포.",
       "message": "cs-wta.com 배포 진행해줘. 라벨 디자인 텍스트 너비/줄바꿈 기능 빌드 완료 확인됐으니 프로덕션 배포.",
-      "status": "pending",
+      "status": "done",
       "priority": "medium",
       "created_at": "2026-04-08 23:11:52",
-      "updated_at": "2026-04-08 23:11:52",
+      "updated_at": "2026-04-11 10:43:56",
       "last_report_at": null,
-      "completed_at": null
+      "completed_at": "2026-04-11 10:43:56"
     },
     {
       "id": "tq-crafter-68151c",
@@ -1841,12 +1841,12 @@
       "agent": "dev-agent",
       "task": "통신 테스트: crafter, db-manager, sales-agent 에게 각각 \"통신 라인 테스트\" 메시지를 보내줘. send_message 3번 실행.",
       "message": "통신 테스트: crafter, db-manager, sales-agent 에게 각각 \"통신 라인 테스트\" 메시지를 보내줘. send_message 3번 실행.",
-      "status": "pending",
+      "status": "done",
       "priority": "medium",
       "created_at": "2026-04-09 00:01:57",
-      "updated_at": "2026-04-09 00:01:57",
+      "updated_at": "2026-04-11 10:43:58",
       "last_report_at": null,
-      "completed_at": null
+      "completed_at": "2026-04-11 10:43:58"
     },
     {
       "id": "tq-crafter-c007af",
@@ -2849,48 +2849,48 @@
       "agent": "dev-agent",
       "task": "cs-wta.com 공개 CS 등록 페이지 구현 요청:",
       "message": "cs-wta.com 공개 CS 등록 페이지 구현 요청:\n\n기준 페이지: https://cs-wta.com/cs/new (기존 CS 등록 페이지)\n- 이 페이지의 필드 구성을 그대로 살려서 공개용 새 페이지로 만들기\n- 기존 /cs/new 페이지와 겹치면 안 됨 (별도 경로)\n- 경로: /public/cs-register (또는 적절한 경로)\n- 로그인 불필요, 계정 없는 지원인력(SW개발자, 비전팀 등)이 사용\n- 필드는 기존 /cs/new와 동일하게 유지\n- 제출 → 기존 cs_history 테이블에 저장, 접수번호 표시\n\n백엔드:\n- POST /api/v1/public/cs-submit (인증 없음, rate-limit 권장)\n- 기존 cs_history 테이블에 insert (status='접수', cs_receiver='공개등록')\n\n프론트엔드:\n- App.tsx에 인증 불필요 경로로 추가\n- 기존 /cs/new 컴포넌트와 충돌 없이 별도 컴포넌트로 구현\n\n코드 위치: C:\\MES\\csagent\\\n구현 완료 후 빌드 + 배포까지 진행해주세요.",
-      "status": "pending",
+      "status": "done",
       "priority": "medium",
       "created_at": "2026-04-09 19:23:58",
-      "updated_at": "2026-04-09 19:23:58",
+      "updated_at": "2026-04-11 10:44:00",
       "last_report_at": null,
-      "completed_at": null
+      "completed_at": "2026-04-11 10:44:00"
     },
     {
       "id": "tq-dev-agent-59eebb",
       "agent": "dev-agent",
       "task": "공개 CS 등록 페이지 작업 취소해주세요. cs-agent가 이미 구현+배포 완료했습니다. 중복 작업 불필요합니다.",
       "message": "공개 CS 등록 페이지 작업 취소해주세요. cs-agent가 이미 구현+배포 완료했습니다. 중복 작업 불필요합니다.",
-      "status": "pending",
+      "status": "done",
       "priority": "medium",
       "created_at": "2026-04-09 19:29:54",
-      "updated_at": "2026-04-09 19:29:54",
+      "updated_at": "2026-04-11 10:44:02",
       "last_report_at": null,
-      "completed_at": null
+      "completed_at": "2026-04-11 10:44:02"
     },
     {
       "id": "tq-dev-agent-679bd5",
       "agent": "dev-agent",
       "task": "MES 백엔드에 ERP MCA210T (발주진행현황) 테이블 조회 API를 추가해줘.",
       "message": "MES 백엔드에 ERP MCA210T (발주진행현황) 테이블 조회 API를 추가해줘.\n\n**요구사항:**\n1. ERP SQL Server (192.168.1.201:1433, 읽기전용)의 MCA210T 테이블 전체 필드 조회 API\n2. 엔드포인트: GET /api/erp/mca210t (또는 적절한 RESTful 경로)\n3. MCA210T 테이블의 모든 필드 정보를 반환\n4. 기존 MES 백엔드의 ERP 연결 패턴을 따를 것 (mirae. 스키마)\n5. 페이징/필터 지원 권장\n6. ERP는 READ-ONLY — SELECT만 허용\n\n**참고:**\n- db-manager가 ERP 직접 접속이 차단되어 MES 백엔드 API가 필요한 상황\n- 이 API를 통해 db-manager 등 다른 에이전트들이 발주진행현황 데이터를 조회할 수 있게 됨\n\n부서장 승인 완료된 건이니 바로 진행해줘.",
-      "status": "pending",
+      "status": "done",
       "priority": "medium",
       "created_at": "2026-04-09 19:49:36",
-      "updated_at": "2026-04-09 19:49:36",
+      "updated_at": "2026-04-11 10:44:04",
       "last_report_at": null,
-      "completed_at": null
+      "completed_at": "2026-04-11 10:44:04"
     },
     {
       "id": "tq-dev-agent-db6356",
       "agent": "dev-agent",
       "task": "아까 보낸 MCA210T API 건은 취소해줘. db-manager가 진행하기로 했어.",
       "message": "아까 보낸 MCA210T API 건은 취소해줘. db-manager가 진행하기로 했어.",
-      "status": "pending",
+      "status": "done",
       "priority": "medium",
       "created_at": "2026-04-09 19:50:23",
-      "updated_at": "2026-04-09 19:50:23",
+      "updated_at": "2026-04-11 10:44:06",
       "last_report_at": null,
-      "completed_at": null
+      "completed_at": "2026-04-11 10:44:06"
     },
     {
       "id": "tq-db-manager-31a883",
@@ -2981,12 +2981,12 @@
       "agent": "dev-agent",
       "task": "일일 업무보고 요청 (2026-04-09)",
       "message": "일일 업무보고 요청 (2026-04-09)\nreports/daily-reports/2026-04-09/dev-agent.md 에 작성해줘.\n포맷:\n# 일일 업무보고 — dev-agent\n날짜: 2026-04-09\n## 처리 작업\n## 특이사항\n## 내일 예정",
-      "status": "pending",
+      "status": "done",
       "priority": "medium",
       "created_at": "2026-04-09 22:00:23",
-      "updated_at": "2026-04-09 22:00:23",
+      "updated_at": "2026-04-11 10:44:08",
       "last_report_at": null,
-      "completed_at": null
+      "completed_at": "2026-04-11 10:44:08"
     },
     {
       "id": "tq-admin-agent-4a336b",
@@ -3257,60 +3257,60 @@
       "agent": "dev-agent",
       "task": "부서장 지시: cs-wta.com 재고 메뉴에서 ERP 검색 시 검색 범위 확장 필요.",
       "message": "부서장 지시: cs-wta.com 재고 메뉴에서 ERP 검색 시 검색 범위 확장 필요.\n\n**현재:** 품목코드, 품목명만 검색됨\n**변경:** 판매코드(SO_NO 또는 관련 필드)도 함께 검색되도록 추가\n\ncs-wta.com 재고등록 페이지의 ERP 품목 검색 기능을 확인하고 수정해줘.\n프론트엔드 검색 필터 + 백엔드 API 쿼리 양쪽 모두 확인.\n\n완료 후 빌드/배포까지 진행해줘.",
-      "status": "pending",
+      "status": "done",
       "priority": "medium",
       "created_at": "2026-04-10 12:54:19",
-      "updated_at": "2026-04-10 12:54:19",
+      "updated_at": "2026-04-11 10:44:10",
       "last_report_at": null,
-      "completed_at": null
+      "completed_at": "2026-04-11 10:44:10"
     },
     {
       "id": "tq-dev-agent-db880d",
       "agent": "dev-agent",
       "task": "부서장 지시: cs-wta.com 재고 메뉴의 \"실사변경\" 기능에서 재고품목 삭제 기능 추가해줘.",
       "message": "부서장 지시: cs-wta.com 재고 메뉴의 \"실사변경\" 기능에서 재고품목 삭제 기능 추가해줘.\n\n현재는 실사변경에서 수량 변경만 가능한 것으로 보이는데, 품목 자체를 삭제할 수 있도록 해줘.\n- 삭제 버튼/아이콘 추가\n- 삭제 확인 다이얼로그\n- 백엔드 DELETE API 추가 (없으면)\n\n완료 후 빌드/배포까지 진행해줘.",
-      "status": "pending",
+      "status": "done",
       "priority": "medium",
       "created_at": "2026-04-10 13:04:26",
-      "updated_at": "2026-04-10 13:04:26",
+      "updated_at": "2026-04-11 10:44:12",
       "last_report_at": null,
-      "completed_at": null
+      "completed_at": "2026-04-11 10:44:12"
     },
     {
       "id": "tq-dev-agent-a27396",
       "agent": "dev-agent",
       "task": "부서장 지시: cs-wta.com 라벨출력 페이지에서 \"재고라벨\" 템플릿을 선택해서 출력할 수 있도록 해줘.",
       "message": "부서장 지시: cs-wta.com 라벨출력 페이지에서 \"재고라벨\" 템플릿을 선택해서 출력할 수 있도록 해줘.\n\n라벨출력 페이지에 라벨 템플릿 선택 기능이 있을 텐데, \"재고라벨\" 템플릿이 선택 가능하고 출력되도록 구현해줘.\n기존 라벨 템플릿 구조를 확인해서 맞춰서 진행.\n\n완료 후 빌드/배포까지.",
-      "status": "pending",
+      "status": "done",
       "priority": "medium",
       "created_at": "2026-04-10 13:08:41",
-      "updated_at": "2026-04-10 13:08:41",
+      "updated_at": "2026-04-11 10:44:14",
       "last_report_at": null,
-      "completed_at": null
+      "completed_at": "2026-04-11 10:44:14"
     },
     {
       "id": "tq-dev-agent-408336",
       "agent": "dev-agent",
       "task": "부서장 지시: cs-wta.com 재고등록 페이지의 수량 입력필드 UX 개선.",
       "message": "부서장 지시: cs-wta.com 재고등록 페이지의 수량 입력필드 UX 개선.\n\n**현재 문제:**\n- 수량 필드 기본값이 \"0\"으로 되어 있어서 숫자 입력 시 \"01\", \"02\" 형태로 들어감\n- 사용자가 수동으로 0을 지워야 함\n\n**개선 방안:**\n1. 기본값을 빈 문자열(\"\")로 변경, placeholder에 \"0\" 표시\n2. 또는 포커스 시 자동 전체선택 (onFocus에서 e.target.select())\n3. 또는 타입 숫자 필드 처리 개선\n\n재고등록 모달 + 실사변경 폼 양쪽 모두 동일하게 수정해줘.\n완료 후 빌드/배포까지.",
-      "status": "pending",
+      "status": "done",
       "priority": "medium",
       "created_at": "2026-04-10 13:17:55",
-      "updated_at": "2026-04-10 13:17:55",
+      "updated_at": "2026-04-11 10:44:16",
       "last_report_at": null,
-      "completed_at": null
+      "completed_at": "2026-04-11 10:44:16"
     },
     {
       "id": "tq-dev-agent-02ecba",
       "agent": "dev-agent",
       "task": "부서장 지시: cs-wta.com 부품 마스터 목록 카드 레이아웃 변경.",
       "message": "부서장 지시: cs-wta.com 부품 마스터 목록 카드 레이아웃 변경.\n\n**현재:**\n- 상단: 품목명 (예: \"DTP7H-D 정션박스\") — 검정/큰 글씨\n- 하단: 품목코드 (예: \"DTP-CUD-JB\") — 파란색/작은 글씨\n\n**변경:**\n- 상단: 품목코드를 제일 위에 (크게)\n- 하단: 품목명을 그 아래에\n\n부품 마스터 탭의 카드 목록 컴포넌트 찾아서 수정. 완료 후 빌드/배포.",
-      "status": "pending",
+      "status": "done",
       "priority": "medium",
       "created_at": "2026-04-10 13:19:27",
-      "updated_at": "2026-04-10 13:19:27",
+      "updated_at": "2026-04-11 10:44:18",
       "last_report_at": null,
-      "completed_at": null
+      "completed_at": "2026-04-11 10:44:18"
     },
     {
       "id": "tq-dev-agent-754bdd",
@@ -3353,156 +3353,156 @@
       "agent": "dev-agent",
       "task": "부서장 지시: cs-wta.com 재고 구분 명칭 변경.",
       "message": "부서장 지시: cs-wta.com 재고 구분 명칭 변경.\n\n**변경:** \"양품\" → \"B급\"\n\n재고등록, 실사변경, 재고목록, 라벨 등 \"양품\"이라는 구분명이 표시되는 모든 곳을 \"B급\"으로 변경.\n- 프론트엔드 하드코딩 텍스트\n- i18n locale 파일 (ko/en/zh/ja)\n- 컬럼명 표시\n- 백엔드 API 응답 필드명은 그대로 유지 (good_qty 등), 표시 레이블만 변경\n\ncs-wta.com 전체에서 일관되게 \"B급\"으로 통일. 완료 후 빌드/배포.",
-      "status": "pending",
+      "status": "done",
       "priority": "medium",
       "created_at": "2026-04-10 13:52:22",
-      "updated_at": "2026-04-10 13:52:22",
+      "updated_at": "2026-04-11 10:44:20",
       "last_report_at": null,
-      "completed_at": null
+      "completed_at": "2026-04-11 10:44:20"
     },
     {
       "id": "tq-dev-agent-b16f54",
       "agent": "dev-agent",
       "task": "긴급 수정: cs-wta.com 수량 입력 필드 전체선택 이슈.",
       "message": "긴급 수정: cs-wta.com 수량 입력 필드 전체선택 이슈.\n\n**부서장 재지적:**\n- 필드에 \"0\"이 떠있는 상태에서 다른 숫자 입력하면 \"40\" 또는 \"04\"가 되는 문제\n- 조금 전에 onFocus 전체선택 추가했는데 제대로 동작 안 함\n\n**원인 추정:**\n- 모바일에서 onFocus 시 select() 호출이 무시되거나\n- React controlled input에서 setTimeout 없이 바로 select() 호출 시 타이밍 이슈\n- inputMode=\"decimal\"과 충돌 가능성\n\n**해결:**\n1. onFocus에서 `setTimeout(() => e.target.select(), 0)` 으로 변경\n2. 또는 onClick에서도 select() 호출 추가\n3. 모바일에서 확실히 블럭 선택되도록 확인\n4. 혹시 더 확실한 방법은 기본값을 숫자 0 대신 빈 문자열 \"\" 로 두고 placeholder만 \"0\" 표시하는 방식\n\n실사변경 + 재고등록 모달 양쪽 전부 확인해서 반드시 블럭선택되도록 수정. 모바일/데스크톱 둘 다 테스트하고 배포.",
-      "status": "pending",
+      "status": "done",
       "priority": "medium",
       "created_at": "2026-04-10 14:01:06",
-      "updated_at": "2026-04-10 14:01:06",
+      "updated_at": "2026-04-11 10:44:22",
       "last_report_at": null,
-      "completed_at": null
+      "completed_at": "2026-04-11 10:44:22"
     },
     {
       "id": "tq-dev-agent-649ce8",
       "agent": "dev-agent",
       "task": "부서장 지시: cs-wta.com 실사변경 UI 위치 수정.",
       "message": "부서장 지시: cs-wta.com 실사변경 UI 위치 수정.\n\n**현재:** 실사변경 버튼 클릭 시 변경 창이 화면 맨 위에 뜸\n**변경:** 해당 리스트 카드 바로 아래에 펼쳐지도록 (또는 인라인으로)\n\n즉, 모달이 아니라 클릭한 카드 아래에 아코디언/인라인 폼으로 펼쳐지는 형태.\n사용자가 어느 카드를 수정 중인지 명확하게 보이도록.\n\n카드별로 실사변경 폼이 바로 아래 나타나는 구조로 수정. 완료 후 빌드/배포.",
-      "status": "pending",
+      "status": "done",
       "priority": "medium",
       "created_at": "2026-04-10 14:02:52",
-      "updated_at": "2026-04-10 14:02:52",
+      "updated_at": "2026-04-11 10:44:25",
       "last_report_at": null,
-      "completed_at": null
+      "completed_at": "2026-04-11 10:44:25"
     },
     {
       "id": "tq-dev-agent-841759",
       "agent": "dev-agent",
       "task": "추가 지시: cs-wta.com ERP 검색 결과 테이블 컬럼 순서 변경.",
       "message": "추가 지시: cs-wta.com ERP 검색 결과 테이블 컬럼 순서 변경.\n\n**현재:** 품목명 → 품목코드 (순서)\n**변경:** 품목코드 → 품목명 (순서)\n\n부품 마스터 탭의 ERP 품목 검색 결과 테이블과 재고등록 모달 내 ERP 검색 결과 양쪽 모두 순서 변경.\n품목코드가 먼저, 품목명이 그 다음에 나오도록.\n\n실사변경 인라인 펼치기 작업과 같이 묶어서 배포해줘.",
-      "status": "pending",
+      "status": "done",
       "priority": "medium",
       "created_at": "2026-04-10 14:04:55",
-      "updated_at": "2026-04-10 14:04:55",
+      "updated_at": "2026-04-11 10:44:27",
       "last_report_at": null,
-      "completed_at": null
+      "completed_at": "2026-04-11 10:44:27"
     },
     {
       "id": "tq-dev-agent-4e3074",
       "agent": "dev-agent",
       "task": "부서장 지시: cs-wta.com 라벨출력 페이지에서 \"위치\" 필드를 \"판매코드\"로 변경해줘.",
       "message": "부서장 지시: cs-wta.com 라벨출력 페이지에서 \"위치\" 필드를 \"판매코드\"로 변경해줘.\n\n라벨출력 페이지의 입력 필드 중 \"위치\" 라벨을 \"판매코드\"로 변경.\n- 입력 필드 라벨 변경\n- i18n 키도 해당 locale 파일 수정 (ko/en/zh/ja)\n- 라벨 출력 시 표시 텍스트도 동일하게 변경\n\n완료 후 빌드/배포.",
-      "status": "pending",
+      "status": "done",
       "priority": "medium",
       "created_at": "2026-04-10 14:09:24",
-      "updated_at": "2026-04-10 14:09:24",
+      "updated_at": "2026-04-11 10:44:29",
       "last_report_at": null,
-      "completed_at": null
+      "completed_at": "2026-04-11 10:44:29"
     },
     {
       "id": "tq-dev-agent-5719e6",
       "agent": "dev-agent",
       "task": "부서장 추가 지시: 라벨출력 데이터 키(연동코드)도 LOCATION → SALE_CODE로 변경해줘.",
       "message": "부서장 추가 지시: 라벨출력 데이터 키(연동코드)도 LOCATION → SALE_CODE로 변경해줘.\n\n조금 전 템플릿 호환성 때문에 LOCATION 데이터 키를 유지했는데, 부서장이 연동코드까지 같이 바꾸라고 함.\n\n변경 작업:\n1. 프론트엔드: LOCATION → SALE_CODE (데이터 키)\n2. 라벨 템플릿 DB에 저장된 토큰도 LOCATION → SALE_CODE로 업데이트 필요 (csagent.label_template 확인)\n3. 기존 템플릿과의 하위호환: LOCATION 토큰이 있는 템플릿은 SALE_CODE로 마이그레이션하거나, 둘 다 인식하도록 처리\n\n백엔드/DB 확인해서 진행하고 빌드/배포.",
-      "status": "pending",
+      "status": "done",
       "priority": "medium",
       "created_at": "2026-04-10 14:12:02",
-      "updated_at": "2026-04-10 14:12:02",
+      "updated_at": "2026-04-11 10:44:31",
       "last_report_at": null,
-      "completed_at": null
+      "completed_at": "2026-04-11 10:44:31"
     },
     {
       "id": "tq-dev-agent-755d5b",
       "agent": "dev-agent",
       "task": "부서장 지시: cs-wta.com 갤러리 기능 확장 — 이미지뿐만 아니라 일반 파일도 업로드 가능하도록 자료실 형태로 사용.",
       "message": "부서장 지시: cs-wta.com 갤러리 기능 확장 — 이미지뿐만 아니라 일반 파일도 업로드 가능하도록 자료실 형태로 사용.\n\n**요구사항:**\n1. 업로드 파일 확장자 제한 해제 (또는 whitelist 확대)\n   - 이미지: jpg/png/gif/webp (기존)\n   - 문서: pdf/docx/xlsx/pptx/txt/md\n   - 압축: zip/rar/7z\n   - 기타 일반 파일\n2. 파일 타입별 썸네일/아이콘 표시\n   - 이미지는 기존 썸네일\n   - 문서/압축/기타는 아이콘으로 (pdf 아이콘, excel 아이콘 등)\n3. 파일 목록 UI\n   - 이미지는 그리드 뷰 (기존)\n   - 문서/파일은 리스트 뷰 옵션 추가\n   - 파일명, 크기, 업로드일, 업로드자 표시\n4. 다운로드 기능\n5. 삭제 권한 체크 유지\n6. 메뉴명 \"갤러리\" → \"자료실\" 또는 갤러리 탭 내에서 \"이미지/문서\" 탭 분리 검토\n\n백엔드 업로드 API + 스토리지 경로 + 프론트엔드 UI 전부 확인해서 구현.\n완료 후 빌드/배포.",
-      "status": "pending",
+      "status": "done",
       "priority": "medium",
       "created_at": "2026-04-10 14:23:08",
-      "updated_at": "2026-04-10 14:23:08",
+      "updated_at": "2026-04-11 10:44:33",
       "last_report_at": null,
-      "completed_at": null
+      "completed_at": "2026-04-11 10:44:33"
     },
     {
       "id": "tq-dev-agent-da6650",
       "agent": "dev-agent",
       "task": "부서장 지적: cs-wta.com 라벨출력 문제.",
       "message": "부서장 지적: cs-wta.com 라벨출력 문제.\n\n**문제:** 40mm x 20mm 라벨 사이즈인데 브라우저 프린트 기능 사용 시 용지 크기 문제로 프린터가 진행 안 됨.\n\n**원인 추정:**\n- CSS @page 규칙에 라벨 사이즈가 제대로 설정되지 않음\n- 기본 A4 용지로 인식돼서 프린터가 일반 용지를 찾고 있음\n- @media print 스타일 누락 가능\n\n**해결 방안:**\n1. 인쇄용 CSS @page 규칙 추가: `@page { size: 40mm 20mm; margin: 0; }`\n2. @media print 에서 body/html 크기도 40x20mm로 강제\n3. 라벨 사이즈를 드롭다운/설정에서 선택 가능하게 (40x20, 50x30 등 사전 정의)\n4. 브라우저 프린트 다이얼로그에서도 \"실제 크기\" 옵션 자동 선택되도록\n\n라벨출력 페이지 CSS/print 스타일 확인하고 수정해줘. 40x20mm 라벨용 프린터에서 정상 출력되도록.\n완료 후 빌드/배포.",
-      "status": "pending",
+      "status": "done",
       "priority": "medium",
       "created_at": "2026-04-10 14:44:44",
-      "updated_at": "2026-04-10 14:44:44",
+      "updated_at": "2026-04-11 10:44:35",
       "last_report_at": null,
-      "completed_at": null
+      "completed_at": "2026-04-11 10:44:35"
     },
     {
       "id": "tq-dev-agent-c088a4",
       "agent": "dev-agent",
       "task": "부서장 지시: cs-wta.com 재고 리스트 데스크톱 레이아웃 개선.",
       "message": "부서장 지시: cs-wta.com 재고 리스트 데스크톱 레이아웃 개선.\n\n**요구사항:**\n1. 품목코드/품목명/규격 3개를 하나의 컬럼에 3줄로 표시\n   ```\n   [품목코드]\n   [품목명]\n   [규격]\n   ```\n2. 그 외 컬럼들(판매코드, 창고/법인, 위치, 재고수량, B급, 불량, 단위, 단가, 재고금액, 사진, 관리)은 잘 조율해서 배치\n3. \"관리\" 컬럼의 \"실사변경\" 버튼이 세로로 글자가 쌓이지 않도록 충분한 너비 확보 (또는 아이콘 버튼으로 변경)\n4. 가로 스크롤 최소화\n5. 전체적으로 읽기 편하게 정렬\n\n모바일 카드 뷰는 건드리지 말고 데스크톱 테이블만 수정.\n첨부한 스크린샷 참고해서 개선해줘. 완료 후 빌드/배포.",
-      "status": "pending",
+      "status": "done",
       "priority": "medium",
       "created_at": "2026-04-10 14:49:15",
-      "updated_at": "2026-04-10 14:49:15",
+      "updated_at": "2026-04-11 10:44:37",
       "last_report_at": null,
-      "completed_at": null
+      "completed_at": "2026-04-11 10:44:37"
     },
     {
       "id": "tq-dev-agent-cdc919",
       "agent": "dev-agent",
       "task": "부서장 지시: cs-wta.com 재고 QR 코드 데이터 구성 변경.",
       "message": "부서장 지시: cs-wta.com 재고 QR 코드 데이터 구성 변경.\n\n**변경:** QR 코드 데이터를 \"판매코드+품목코드\" 형태로 구성\n\n재고 리스트의 QR코드 버튼 클릭 시 생성되는 QR 데이터에 판매코드와 품목코드가 함께 포함되도록 수정.\n- 포맷 예시: \"B007076:DTP-CUD-JB\" 또는 \"B007076-DTP-CUD-JB\" (구분자는 적절히)\n- 또는 JSON 형태 `{\"sale\":\"B007076\",\"item\":\"DTP-CUD-JB\"}`\n\n현재 QR 데이터 구성 확인 후 판매코드+품목코드로 변경. 완료 후 빌드/배포.",
-      "status": "pending",
+      "status": "done",
       "priority": "medium",
       "created_at": "2026-04-10 14:53:55",
-      "updated_at": "2026-04-10 14:53:55",
+      "updated_at": "2026-04-11 10:44:39",
       "last_report_at": null,
-      "completed_at": null
+      "completed_at": "2026-04-11 10:44:39"
     },
     {
       "id": "tq-dev-agent-484a20",
       "agent": "dev-agent",
       "task": "부서장 추가 지시: 재고 리스트 데스크톱 테이블 품목정보 컬럼에서 품목코드가 가장 크고 진하게 나와야 함.",
       "message": "부서장 추가 지시: 재고 리스트 데스크톱 테이블 품목정보 컬럼에서 품목코드가 가장 크고 진하게 나와야 함.\n\n조금 전 설정:\n- 품목코드: 작은 글씨/회색 (font-mono) ← 잘못됨\n- 품목명: medium/진한 회색\n- 규격: 작은 글씨/회색\n\n**변경:**\n- 품목코드: **가장 큰 글씨 + 굵게(bold) + 진한 색(black/gray-900)** (가장 눈에 띄게)\n- 품목명: 중간 크기, 회색\n- 규격: 작은 글씨, 더 연한 회색\n\n부품 마스터 카드 레이아웃과 동일하게, 품목코드가 메인 식별자로 보이게.\n\nQR 데이터 변경과 같이 묶어서 배포.",
-      "status": "pending",
+      "status": "done",
       "priority": "medium",
       "created_at": "2026-04-10 14:54:41",
-      "updated_at": "2026-04-10 14:54:41",
+      "updated_at": "2026-04-11 10:44:41",
       "last_report_at": null,
-      "completed_at": null
+      "completed_at": "2026-04-11 10:44:41"
     },
     {
       "id": "tq-dev-agent-7e3cfd",
       "agent": "dev-agent",
       "task": "추가 지시: 재고 등록 모달에 \"창고/법인\" 지정 필드 + \"위치\" 지정 필드 누락되어 있음. 추가해줘.",
       "message": "추가 지시: 재고 등록 모달에 \"창고/법인\" 지정 필드 + \"위치\" 지정 필드 누락되어 있음. 추가해줘.\n\n**현재 문제:**\n- 재고 리스트에 창고/법인, 위치 컬럼은 있는데\n- 재고등록 모달에는 해당 입력 필드가 없어서 신규 등록 시 값을 못 넣음\n\n**변경:**\n1. 재고등록 모달에 \"창고/법인\" 선택 드롭다운 추가\n   - 기존 법인 목록(본사/일본 모리야/주주 펑마이 등) 사용\n2. \"위치\" 입력 필드 추가 (텍스트 입력)\n3. 백엔드 API가 해당 필드 저장 지원하는지 확인, 없으면 추가\n\nQR 데이터 변경 + 품목코드 폰트 + 창고/위치 필드 3건 같이 묶어서 배포해줘.",
-      "status": "pending",
+      "status": "done",
       "priority": "medium",
       "created_at": "2026-04-10 14:55:00",
-      "updated_at": "2026-04-10 14:55:00",
+      "updated_at": "2026-04-11 10:44:43",
       "last_report_at": null,
-      "completed_at": null
+      "completed_at": "2026-04-11 10:44:43"
     },
     {
       "id": "tq-dev-agent-9b5a3a",
       "agent": "dev-agent",
       "task": "추가 지시: 재고 리스트의 QR 아이콘 클릭 동작 변경.",
       "message": "추가 지시: 재고 리스트의 QR 아이콘 클릭 동작 변경.\n\n**현재:** QR 아이콘 클릭 → QR 코드 표시\n**변경:**\n1. QR 아이콘 클릭 → 해당 품목 데이터로 라벨 미리보기 표시 (재고라벨 템플릿 사용)\n2. 미리보기에서 \"라벨 인쇄\" 버튼 클릭 → 바로 프린트 실행\n3. 품목 데이터(품목코드, 품목명, 판매코드, 규격, QR 등)가 자동으로 라벨 템플릿에 바인딩되어야 함\n\n즉, 재고 리스트에서 각 품목의 라벨을 한 번의 클릭으로 미리보기→인쇄할 수 있도록.\n\nQR 데이터 변경, 품목코드 폰트, 창고/위치 필드 추가에 이것도 같이 묶어서 배포해줘 (총 4건).",
-      "status": "pending",
+      "status": "done",
       "priority": "medium",
       "created_at": "2026-04-10 14:55:57",
-      "updated_at": "2026-04-10 14:55:57",
+      "updated_at": "2026-04-11 10:44:45",
       "last_report_at": null,
-      "completed_at": null
+      "completed_at": "2026-04-11 10:44:45"
     },
     {
       "id": "tq-admin-agent-473bfd",
@@ -3521,24 +3521,24 @@
       "agent": "dev-agent",
       "task": "[cs-wta.com 재고 페이지 수정 요청]",
       "message": "[cs-wta.com 재고 페이지 수정 요청]\n\n1) 관리 열에 **전체 필드 수정 버튼** 추가\n   - 재고 등록 이후 품목코드/품목명/규격/판매코드/위치/창고/수량/단위 등 모든 필드를 수정할 수 있는 \"편집\" 버튼\n   - 아이콘: Edit (lucide-react `Edit` 또는 `Settings2`) 권장\n   - 클릭 시 재고등록 모달과 동일한 폼을 기존 값 채워서 오픈, PATCH /api/v1/inventory/stock/{id}로 저장\n   - i18n 키 추가 (ko/en/zh/ja): inventory.editItem, inventory.editItemTitle 등\n\n2) **실사변경 아이콘 변경**\n   - 현재 Pencil(✏️) → 실사(재고 실제 수량 대조)의 의미에 맞게 변경\n   - 권장: `ClipboardCheck` 또는 `PackageCheck`, `Scale` (lucide-react)\n   - Pencil은 \"편집\"(전체 수정)에 양보\n\n모바일/데스크톱 모두 반영, 빌드 성공 후 배포. 완료 시 DB 확인 필요 사항 포함해 보고.",
-      "status": "pending",
+      "status": "done",
       "priority": "medium",
       "created_at": "2026-04-10 17:06:14",
-      "updated_at": "2026-04-10 17:06:14",
+      "updated_at": "2026-04-11 10:44:47",
       "last_report_at": null,
-      "completed_at": null
+      "completed_at": "2026-04-11 10:44:47"
     },
     {
       "id": "tq-dev-agent-815032",
       "agent": "dev-agent",
       "task": "[cs-wta.com 재고 편집 모달 보완]",
       "message": "[cs-wta.com 재고 편집 모달 보완]\n\nEditStockModal(재고 품목 전체 수정)에 **사진 업로드 필드가 빠져 있음**. 부서장 지적.\n\n요청:\n1. AddStockForm(재고등록) 모달과 동일한 사진 업로드 UI를 EditStockModal에도 추가\n2. 기존 등록된 이미지가 있으면 썸네일로 표시하고 교체/삭제 가능하게\n3. 다중 이미지 지원 여부는 재고등록 모달과 동일하게 맞추기\n4. 저장 시 기존 업로드 API 재사용 (multipart/form-data or Supabase Storage)\n\n빌드/EC2 배포/nginx reload 후 완료 보고.",
-      "status": "pending",
+      "status": "done",
       "priority": "medium",
       "created_at": "2026-04-10 18:08:52",
-      "updated_at": "2026-04-10 18:08:52",
+      "updated_at": "2026-04-11 10:44:49",
       "last_report_at": null,
-      "completed_at": null
+      "completed_at": "2026-04-11 10:44:49"
     },
     {
       "id": "tq-purchase-agent-eade25",
@@ -3569,12 +3569,12 @@
       "agent": "dev-agent",
       "task": "[cs-wta.com 신규 페이지 개발] 판매자재관리",
       "message": "[cs-wta.com 신규 페이지 개발] 판매자재관리\n\n**메뉴 위치**: 부품판매 → 판매자재관리 (세부메뉴로 추가)\n\n**데이터 소스 (부서장 제공 CSV, 약 310행)**:\n파일: `C:\\MES\\wta-agents\\data\\uploads\\beef1cc6-8119-4a65-8c9e-5e6320b35b9a\\판매자재관리_20260410.csv`\n또는: https://agent.mes-wta.com/api/files/beef1cc6-8119-4a65-8c9e-5e6320b35b9a\n\n**CSV 컬럼 (16개)**:\n1. *ID (고유ID)\n2. 상태 (대기/승인/반려 등)\n3. ERP 품목코드\n4. 품명\n5. 판매형번\n6. 단가\n7. 비고 (긴 텍스트, 줄바꿈 포함)\n8. 제조사\n9. 장비모델구분 (공통/프레스핸들러/PVD 로딩·언로딩/포장기 등)\n10. 제품이미지 (파일명 CSV, 콤마 구분 복수)\n11. 도면(dwg) (파일명 CSV)\n12. 조립SOP & 점검표 (파일명)\n13. 등록일\n14. 등록자 (이름 + 이메일)\n15. 수정일\n16. 수정자\n\n**요구 사항**:\n1. **DB 스키마 설계**\n   - 테이블명: `sales_material_master` (혹은 csagent 네임스페이스 규칙 따름)\n   - CSV 컬럼 매핑 + 파일 첨부 JSONB 배열 (image_urls, drawing_urls, sop_urls)\n   - 상태 CHECK 제약 (대기/승인/반려)\n   - ⚠️ DB 스키마 생성은 MAX 승인 필요 (설계안 먼저 제시)\n\n2. **백엔드 API (FastAPI)**\n   - GET /api/v1/sales-material — 목록 (페이지/검색/상태·장비모델 필터)\n   - GET /api/v1/sales-material/{id}\n   - POST / PUT / DELETE\n   - POST /api/v1/sales-material/import — CSV 임포트 (첨부파일은 추후)\n   - 파일 업로드/삭제 엔드포인트 (이미지/도면/SOP)\n\n3. **프론트엔드 페이지**\n   - 네비: 부품판매 (기존) → 판매자재관리 (신규)\n   - 리스트: 카드/테이블 토글, 검색(품명/품번/판매형번), 장비모델구분·상태 필터\n   - 상세: 이미지 갤러리, 도면(dwg) 다운로드, SOP 다운로드\n   - 등록/수정: 모달 또는 페이지 (모든 필드 + 멀티 파일 업로드)\n   - CSV 임포트 버튼 (관리자)\n   - 모바일 대응, i18n (ko/en/zh/ja)\n\n4. **초기 데이터 임포트**\n   - 위 CSV 310행 DB 적재 (파일 참조는 경로만, 실제 파일은 추후 업로드)\n\n**진행 순서**:\n1. CSV 전체 분석 → 필드/제약 정리 → **DB 스키마 설계안 MAX에 제출**\n2. 승인 후 백엔드 → 프론트엔드 → 임포트 → 배포 → 보고\n\n먼저 1단계 설계안 제출해줘.",
-      "status": "pending",
+      "status": "done",
       "priority": "medium",
       "created_at": "2026-04-10 18:49:52",
-      "updated_at": "2026-04-10 18:49:52",
+      "updated_at": "2026-04-11 10:44:51",
       "last_report_at": null,
-      "completed_at": null
+      "completed_at": "2026-04-11 10:44:51"
     },
     {
       "id": "tq-crafter-c0c9a5",
@@ -3593,24 +3593,24 @@
       "agent": "dev-agent",
       "task": "[판매자재관리 스키마 추가 지시] 부서장 지시",
       "message": "[판매자재관리 스키마 추가 지시] 부서장 지시\n\n판매자재에 **소모품 / Spare 구분 필드 추가**.\n\n추가 컬럼 제안:\n```sql\nmaterial_type VARCHAR(20) NOT NULL DEFAULT '일반'\n    CHECK (material_type IN ('소모품', 'Spare', '일반'))\n```\n또는 소모품/Spare만 쓰는 경우:\n```sql\nmaterial_type VARCHAR(20) CHECK (material_type IN ('소모품', 'Spare'))\n```\n\n**질문**:\n1. \"소모품 / Spare\" 외에 \"일반\" 또는 \"기타\" 같은 기본값이 필요한가? (CSV에는 구분 없음)\n2. 필드 영문명: `material_type` 괜찮은가?\n3. 리스트 필터/검색에 이 구분도 노출 (추가 필터 드롭다운)\n4. 등록/수정 모달에 라디오버튼 또는 드롭다운 추가\n\n이 추가 반영한 최종 스키마안으로 수정 제출해줘. 아직 생성하지 말고 설계 업데이트만.",
-      "status": "pending",
+      "status": "done",
       "priority": "medium",
       "created_at": "2026-04-10 18:52:07",
-      "updated_at": "2026-04-10 18:52:07",
+      "updated_at": "2026-04-11 10:44:54",
       "last_report_at": null,
-      "completed_at": null
+      "completed_at": "2026-04-11 10:44:54"
     },
     {
       "id": "tq-dev-agent-fbaf49",
       "agent": "dev-agent",
       "task": "[판매자재관리 최종 확정 — 진행하세요]",
       "message": "[판매자재관리 최종 확정 — 진행하세요]\n\n부서장 답변 반영:\n\n1. **equipment_type**: MES 시스템설정 > **제조시스템설정** 페이지에 모델 정보 있음\n   - MES DB(PostgreSQL localhost:55432)에서 해당 테이블 조회 후 연계\n   - 테이블명 알 수 없으면 db-manager에 조회 요청 (시스템설정/제조시스템 관련 테이블)\n   - 하드코딩 CHECK 제약 대신 참조 테이블 또는 마스터 조회로 대체\n   - MES API 엔드포인트 있으면 그것 사용 우선\n\n2. **S3 경로 (확정)**:\n   - `material/image/`\n   - `material/drawings/`\n   - `material/sop/`\n   - ⚠️ **legacy_id 경로 제거**. legacy_id는 DB 컬럼으론 유지(다우오피스 Works 이미지 다운로드 마이그레이션용)지만 파일 경로에는 포함하지 않음.\n   - 파일명은 `{uuid}_{원본파일명}` 또는 적절한 유니크 네이밍\n\n3. **권한 확정**: 로그인 사용자 CRUD, 삭제는 관리자만\n4. **CSV 287행**: 전부 `material_type='일반'`, `status='대기'`로 임포트 후 사후 분류\n\n**진행 순서**\n1. MES 제조시스템설정 테이블 확인 (db-manager 조회 또는 MES 백엔드 코드 확인)\n2. 스키마 최종 확정 (equipment_type 참조 방식 결정) → SQL 실행\n3. 백엔드 FastAPI 구현 (CRUD + 파일 업로드 + CSV 임포트)\n4. 프론트엔드 (부품판매 → 판매자재관리 세부메뉴, 리스트/상세/등록·수정 모달, i18n 4언어)\n5. CSV 287행 임포트\n6. 빌드/EC2 배포/nginx reload\n7. 완료 보고 (DB 생성 전/후 사항 구분)\n\n진행 중 병목(MES 테이블 못 찾음 등) 있으면 즉시 MAX에 보고.",
-      "status": "pending",
+      "status": "done",
       "priority": "medium",
       "created_at": "2026-04-10 19:02:43",
-      "updated_at": "2026-04-10 19:02:43",
+      "updated_at": "2026-04-11 10:44:56",
       "last_report_at": null,
-      "completed_at": null
+      "completed_at": "2026-04-11 10:44:56"
     },
     {
       "id": "tq-crafter-1dca45",
@@ -3629,12 +3629,12 @@
       "agent": "dev-agent",
       "task": "[판매자재관리 equipment_type 확정 — 부서장 결정]",
       "message": "[판매자재관리 equipment_type 확정 — 부서장 결정]\n\n**방침**\n- MES 실시간 연동/주기 동기화 **포기**\n- cs-wta.com에서 독립적으로 CRUD 가능한 **equipment_models 테이블**을 자체 관리\n- **초기 seed 데이터는 현재 MES의 api_equipmentmodel 내용으로 1회 구축**\n\n**작업**\n1. `csagent.equipment_models` 테이블 신규 생성\n   ```sql\n   CREATE TABLE csagent.equipment_models (\n       id BIGSERIAL PRIMARY KEY,\n       name VARCHAR(100) UNIQUE NOT NULL,\n       code VARCHAR(50),\n       description TEXT,\n       is_active BOOLEAN NOT NULL DEFAULT TRUE,\n       sort_order INT NOT NULL DEFAULT 0,\n       created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),\n       updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()\n   );\n   CREATE INDEX idx_equipment_models_active ON csagent.equipment_models(is_active, sort_order);\n   ```\n\n2. **초기 seed**: MES의 `public.api_equipmentmodel`에서 현재 데이터 export → csagent.equipment_models로 1회 import\n   - db-manager에 MES 테이블 데이터 조회 요청 (SELECT id, name, code, description, type, is_active FROM public.api_equipmentmodel WHERE is_active=true)\n   - 결과를 cs-wta.com DB에 INSERT\n   - 이후에는 각자 독립\n\n3. **sales_material_master.equipment_type** 컬럼 방식\n   - 권장: `equipment_type` 컬럼은 `VARCHAR(100)` free-form (FK 대신 name 저장 — 텍스트 매칭 단순화). 이유: 모델명 변경/삭제 시 sales_material 기존 데이터 깨지지 않음.\n   - 또는 FK로 `equipment_model_id BIGINT REFERENCES csagent.equipment_models(id)` + ON DELETE SET NULL\n   - **결정**: FK 방식 권장. name은 조인으로 표시. 삭제 시 SET NULL로 고아 레코드 유지.\n\n4. **관리 페이지 추가**: 시스템 설정 또는 부품판매 하위에 \"장비모델 관리\" 페이지 (목록/등록/수정/활성화 토글/정렬). 권한: 관리자만.\n\n5. **CSV 287행 임포트 시**: CSV의 \"장비모델구분\" 값(공통/PVD 로딩/언로딩 등)과 seed한 MES 모델명의 매칭률이 낮을 수 있음.\n   - 매칭 안 되는 값은 자동으로 equipment_models에 신규 추가 (is_active=true)하거나, \"미분류\" 기본값으로 임시 저장.\n   - 매칭 결과 로그 MAX에 제출.\n\n**진행 순서**\n1. db-manager에 MES api_equipmentmodel 데이터 export 요청 (5분)\n2. csagent.equipment_models 테이블 생성 + seed 삽입\n3. sales_material_master 테이블 생성 (equipment_model_id FK)\n4. 백엔드 API (판매자재 CRUD + 장비모델 CRUD + CSV 임포트 + 파일 업로드)\n5. 프론트 (부품판매 → 판매자재관리 세부메뉴 + 장비모델 관리 페이지)\n6. CSV 287행 임포트 + 매칭 결과 보고\n7. 빌드/배포/보고\n\n병목 있으면 즉시 MAX 보고.",
-      "status": "pending",
+      "status": "done",
       "priority": "medium",
       "created_at": "2026-04-10 19:20:10",
-      "updated_at": "2026-04-10 19:20:10",
+      "updated_at": "2026-04-11 10:44:58",
       "last_report_at": null,
-      "completed_at": null
+      "completed_at": "2026-04-11 10:44:58"
     },
     {
       "id": "tq-qa-agent-71a17d",
@@ -3653,24 +3653,24 @@
       "agent": "dev-agent",
       "task": "[긴급 수정] cs-wta.com 모바일 네비 메뉴 누락",
       "message": "[긴급 수정] cs-wta.com 모바일 네비 메뉴 누락\n\n부서장 지적: **모바일에서 \"판매자재관리\" 메뉴가 안 보임**.\n\n**확인 필요**\n1. 사이드바(데스크톱)와 모바일 햄버거/드로어 메뉴가 별도 컴포넌트로 분리돼 있는지 확인\n2. \"부품 판매 > 판매 현황 / 판매자재관리\" children이 모바일 메뉴에도 노출되는지\n3. 기존 \"부품 판매\" 단일 메뉴만 있고 하위 확장이 모바일에서 안 되는 구조라면 확장 가능하도록 수정\n4. 모바일 뷰(bottom nav 또는 drawer) 구성 전체 점검 — 다른 메뉴도 동일한 누락 가능성\n\n**작업**\n- 모바일 메뉴 컴포넌트에 신규 경로 반영\n- 하위 메뉴 확장 UI (아코디언 또는 클릭 시 서브메뉴 표시)\n- 반응형 BP 기준으로 데스크톱/모바일 동일한 라우트 노출\n- i18n 키 동일 사용\n\n**배포**\n- 빌드 → EC2 반영 → nginx reload\n- 완료 후 Playwright로 모바일 뷰포트(iPhone 12, Galaxy S20) 스크린샷 2장 첨부해 보고\n\n긴급. 바로 진행.",
-      "status": "pending",
+      "status": "done",
       "priority": "medium",
       "created_at": "2026-04-10 19:42:33",
-      "updated_at": "2026-04-10 19:42:33",
+      "updated_at": "2026-04-11 10:45:00",
       "last_report_at": null,
-      "completed_at": null
+      "completed_at": "2026-04-11 10:45:00"
     },
     {
       "id": "tq-dev-agent-2136dd",
       "agent": "dev-agent",
       "task": "[긴급 버그] cs-wta.com 판매자재관리 API 500",
       "message": "[긴급 버그] cs-wta.com 판매자재관리 API 500\n\nqa-agent Playwright 검증 결과:\n\n**❌ 크리티컬**: `GET /api/v1/sales-material?page=1&limit=20` **500 에러** → 데이터 0건 로드 (실제 DB에는 287건)\n   - 페이지는 정상 렌더링되나 리스트 비어있음\n   - 콘솔/네트워크 500 에러\n   - 즉시 원인 파악 + 수정 (백엔드 로그 확인)\n\n**⚠️ 기획 확인 필요** (qa-agent 지적)\n1. 파일 업로드: 현재 \"저장 후 업로드(2-step)\" 구현. 기획은 등록 모달에서 1회 저장이 자연스러움 — 단일 흐름으로 변경 검토 (신규 등록 시 tempId/transaction 방식)\n2. material_type: **라디오 버튼(소모품/Spare/일반)** 합의였는데 드롭다운으로 구현됨 → 라디오로 수정\n\n**기타 QA 결과**\n- ✅ 메뉴, 검색 입력, 필터 드롭다운 3종, 페이지네이션, 모바일 반응형, 등록 모달 노출, 장비모델 관리 모달, i18n 다국어 정상\n- ⚠️ 상세/편집 모달은 데이터 없어 미검증\n\n**작업 순서**\n1. 500 에러 즉시 수정 → cs-backend 로그 첨부해서 원인 보고\n2. material_type 드롭다운 → 라디오 변경\n3. 파일 업로드 단일 흐름(옵션)\n4. qa-agent 재검증 요청을 위해 수정 완료 보고 시 변경 요약 포함\n\n모바일 메뉴 누락 건과 병렬 진행. 500 에러가 최우선.",
-      "status": "pending",
+      "status": "done",
       "priority": "medium",
       "created_at": "2026-04-10 19:43:47",
-      "updated_at": "2026-04-10 19:43:47",
+      "updated_at": "2026-04-11 10:45:02",
       "last_report_at": null,
-      "completed_at": null
+      "completed_at": "2026-04-11 10:45:02"
     },
     {
       "id": "tq-db-manager-46d2c7",
@@ -3713,12 +3713,12 @@
       "agent": "dev-agent",
       "task": "[일일 업무보고 요청] 2026-04-10",
       "message": "[일일 업무보고 요청] 2026-04-10\n저장: reports/daily-reports/2026-04-10/dev-agent.md\n포맷:\n# 일일 업무보고 — dev-agent\n날짜: 2026-04-10\n## 처리 작업\n## 특이사항\n## 내일 예정\n완료 후 MAX 1줄 보고. 30분 내.",
-      "status": "pending",
+      "status": "done",
       "priority": "medium",
       "created_at": "2026-04-10 22:00:43",
-      "updated_at": "2026-04-10 22:00:43",
+      "updated_at": "2026-04-11 10:45:04",
       "last_report_at": null,
-      "completed_at": null
+      "completed_at": "2026-04-11 10:45:04"
     },
     {
       "id": "tq-admin-agent-345f2f",
@@ -3945,6 +3945,30 @@
       "priority": "medium",
       "created_at": "2026-04-11 10:20:12",
       "updated_at": "2026-04-11 10:20:12",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-dev-agent-bfa6c7",
+      "agent": "dev-agent",
+      "task": "[부서장 지시] 판매자재관리 후속 작업",
+      "message": "[부서장 지시] 판매자재관리 후속 작업\n\n**1. 파일 업로드 2-step → 단일 흐름 전환**\n- 현재: 등록 모달에서 [저장] → 레코드 생성 → 파일 업로드 2단계\n- 변경: 등록 모달에서 [저장] 1번으로 레코드 생성 + 파일(이미지/도면/SOP) 일괄 업로드 처리\n- 구현 방식 (검토):\n  - 옵션 A: 클라이언트에서 multipart/form-data 1개 요청으로 모든 파일 + JSON 필드를 함께 전송 → 백엔드에서 트랜잭션으로 INSERT + S3 업로드 + URL 컬럼 업데이트\n  - 옵션 B: 클라이언트가 먼저 파일을 S3에 직접 업로드(presigned URL 발급) → URL 목록을 JSON에 담아 POST 1회\n  - 권장: 옵션 A (트랜잭션 보장, 복잡도 낮음). S3 업로드 실패 시 INSERT 롤백.\n- 기존 편집 모달의 신규 파일 업로드도 동일하게 단일 흐름화 (PUT + 새 파일 multipart 1회)\n- 실패 케이스 처리: 파일 일부 업로드 실패 시 부분 성공 메시지 + 재시도 가능\n\n**2. sale_code(판매코드) 편집 허용**\n- 현재 백엔드 update allowed 목록에 `sale_code` 없음 → 편집 모달에서 수정해도 무시됨\n- 변경: `sale_code`를 update allowed 목록에 추가 (재고 마스터 update API)\n- 단, ERP 원본 보호 측면에서 우려가 있다면 별도 audit log 남기고 진행\n- 프론트 편집 모달에 sale_code 입력 필드 활성화 (이미 표시되고 있다면 disabled 해제)\n\n**진행 순서**\n1. 옵션 A로 파일 업로드 단일 흐름 구현 (백엔드 + 프론트)\n2. sale_code 백엔드 allowed 추가 + 프론트 활성화\n3. 빌드 → EC2 배포 → nginx reload + cs-backend 재시작\n4. qa-agent에 재검증 요청\n5. 완료 보고\n\n질문/병목 있으면 즉시 MAX 보고. 작업큐 등록도 새로 잡아둘게요.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 10:48:08",
+      "updated_at": "2026-04-11 10:48:08",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-dev-agent-efe62b",
+      "agent": "dev-agent",
+      "task": "[판매자재관리 후속] 1) 파일 업로드 2-step → 단일 흐름(옵션A multipart 트랜잭션) 2) sale_code 편집 허용(백엔드 allowed + 프론트 활성화)",
+      "message": "",
+      "status": "pending",
+      "priority": "high",
+      "created_at": "2026-04-11 10:48:28",
+      "updated_at": "2026-04-11 10:48:28",
       "last_report_at": null,
       "completed_at": null
     }
