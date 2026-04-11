@@ -7,3 +7,7 @@
   {'file_id': '1_robot_2d77a92d4066', 'chunks': 68, 'figures': 14, 'tables': 38}
   elapsed: 284.8s  vlm_err=0  upload_err=0  (total: 5.5 min)
 --- [3/10] Mitsubishi_BFP-A8615_CCLinkInterface_KO.pdf ---
+  mfr=Mitsubishi model=BFP-A8615 dt=CCLinkInterface lang=KO
+  {'file_id': '1_robot_3c1dcc39da41', 'chunks': 205, 'figures': 67, 'tables': 41}
+  elapsed: 483.3s  vlm_err=0  upload_err=0  (total: 13.6 min)
+--- [4/10] Mitsubishi_BFP-A8601-D_SetupGuide_KO.pdf ---

@@ -5075,6 +5075,18 @@
       "updated_at": "2026-04-12 00:20:40",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-db-manager-320f61",
+      "agent": "db-manager",
+      "task": "[지시 — Neo4j manuals-v2 네임스페이스 사전 준비]",
+      "message": "[지시 — Neo4j manuals-v2 네임스페이스 사전 준비]\n\n부서장 승인 완료. manuals-v2 PoC 적재 전에 Neo4j(bolt://localhost:7688)에 다음 선작업 해주세요.\n\n### 작업 내용\n1. **라벨 정책**: manuals-v2에서 생성되는 모든 노드는 `:ManualV2` 라벨 필수 부착 (기존 :PhaseOllama / :Phase3 와 네임스페이스 완전 분리)\n\n2. **유니크 제약 생성**:\n```cypher\nCREATE CONSTRAINT manualv2_id IF NOT EXISTS\nFOR (n:ManualV2) REQUIRE n._id IS UNIQUE;\n```\n\n3. **ID 규칙** (문서화):\n - Document 노드: `doc:{file_id}`\n - Chunk 노드: `chunk:{file_id}:{chunk_id}`\n - Figure 노드: `fig:{file_id}:p{page}:{figure_id}`\n - Table 노드: `tbl:{file_id}:p{page}:{table_id}`\n - Section 노드: `sec:{file_id}:{section_path_hash}`\n - Entity(Component/Model/Manufacturer 등): `ent:{type}:{normalized_name}`\n\n4. **관계 타입** (기존 파이프라인과 호환):\n - (Chunk)-[:BELONGS_TO]->(Section)\n - (Chunk)-[:REFERENCES]->(Figure|Table)\n - (Figure)-[:DEPICTS]->(Component)\n - (Document)-[:HAS_CHUNK]->(Chunk)\n - (Document)-[:MANUFACTURED_BY]->(Manufacturer)\n - (Document)-[:DESCRIBES]->(Model)\n\n5. **중복 방지 패턴**: 모든 삽입은 MERGE 사용, CREATE 금지\n```cypher\nMERGE (n:ManualV2:Chunk {_id: $id}) SET n += $props\n```\n\n6. **재실행 안전성 검증**: 같은 file_id 두 번 적재해도 노드/관계 개수 동일해야 함 (idempotent 테스트)\n\n### 확인 쿼리 (완료 후 보고)\n```cypher\nSHOW CONSTRAINTS YIELD name, labelsOrTypes, properties WHERE 'ManualV2' IN labelsOrTypes;\nMATCH (n:ManualV2) RETURN count(n);  // 0 예상\nMATCH (n:PhaseOllama) RETURN count(n);  // 기존값 보존 확인\nMATCH (n:Phase3) RETURN count(n);  // 기존값 보존 확인\n```\n\n### 중요\n- 기존 1,553노드(PhaseOllama/Phase3)는 절대 건드리지 말 것\n- 제약 생성만 하고 데이터 삽입은 docs-agent PoC JSONL 도착 후\n- 완료되면 제약 목록 + 기존 노드 수 보존 확인 결과 보고\n\nPoC 10건 JSONL 도착과 병렬로 진행해도 됩니다.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-12 00:35:48",
+      "updated_at": "2026-04-12 00:35:48",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }
