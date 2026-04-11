@@ -4835,6 +4835,18 @@
       "updated_at": "2026-04-12 02:46:52",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-crafter-5454f7",
+      "agent": "crafter",
+      "task": "[지시 — manuals-v2 청킹 재설계 구현 담당 (B안 승인)]",
+      "message": "[지시 — manuals-v2 청킹 재설계 구현 담당 (B안 승인)]\n\n부서장 B안 승인. crafter가 **구현 담당**입니다.\n\n### 배경\nPoC 10건 검수 결과, 88.2% 청크가 50토큰 이하(중위값 10)로 과분할. CJK 대형 매뉴얼 심각 (JA avg 11.5, KO 53.7). 전량 1,939건 확장 전 청킹 후처리 파이프라인을 추가해야 함.\n\n### 주요 산출물\n1. **`scripts/chunk_postprocess.py`** (신규) — 청킹 후처리 모듈\n - `min_chunk_tokens` 가드 (기본 40)\n - 인접 청크 병합 (target 150~300 토큰)\n - 대형 테이블 50행 단위 분할 (max 1,000 토큰 넘으면 분할)\n - CJK 토크나이저 교체 (sudachi for JA, mecab-ko for KO, 또는 HF 다국어 토크나이저)\n - `section_path` 경계는 유지 (병합 시 같은 섹션 내에서만)\n2. **`scripts/manuals_v2_parse_docling.py` 수정**\n - HierarchicalChunker 결과 → chunk_postprocess 호출 → 임베딩\n - document.json 재사용 (재파싱 안 함)\n - images/ 재사용\n - chunks.jsonl만 재생성\n3. **PoC 10건 재파싱 실행**\n - 기존 v2_poc/ 폴더의 document.json 재사용\n - VLM 재호출 안 함 (이미 생성된 캡션 보존)\n - 예상 소요 ~1.5시간\n4. **before/after 수치 비교**\n - 청크 수 변화 / 토큰 히스토그램 / 언어별 avg\n - issue-manager에게 결과 전달 (리포트화)\n\n### 파라미터 근거 (issue-manager가 리서치해서 전달 예정)\n- min_chunk_tokens, target range, 테이블 행 수 등은 issue-manager 리서치 결과 기다려서 확정\n- 초기 버전은 기본값(40 / 200 / 50)으로 구현하되, 리서치 결과 도착 시 상수만 교체 가능한 구조\n\n### 업무 부하\n- 메인 구현자\n- 동시 진행 중인 Phase6 모델 선정 / GraphRAG 파이프라인 설계도 있으니 우선순위 조율 필요하면 MAX에게 보고\n\n### 완료 기준\n- PoC 10건 재파싱 완료 + chunks.jsonl 재생성\n- db-manager가 재적재 가능한 JSONL 준비\n- before/after 비교 수치 MAX에게 보고\n\n**우선 현재 chunks.jsonl 구조 확인 + 후처리 모듈 설계부터 착수. 설계 초안 먼저 MAX에게 리뷰 요청 바람.**",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-12 06:58:38",
+      "updated_at": "2026-04-12 06:58:38",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }
