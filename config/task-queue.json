@@ -4883,6 +4883,54 @@
       "updated_at": "2026-04-12 07:08:08",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-docs-agent-1942a9",
+      "agent": "docs-agent",
+      "task": "[규칙 적용] GraphRAG/manuals-v2 작업 컨텍스트 절감 1단계 (2026-04-11 부서장 승인)",
+      "message": "[규칙 적용] GraphRAG/manuals-v2 작업 컨텍스트 절감 1단계 (2026-04-11 부서장 승인)\n\n향후 manuals-v2/GraphRAG 관련 보고는 다음 규칙을 따르세요:\n\n1. **배치+파일 체크포인트**: 결과는 `workspaces/docs-agent/graphrag_batch_{N}.json` 저장. MAX에겐 \"완료, 건수, 경로\" 3줄만.\n2. **파이프라인 참조**: 문서 복붙 금지, \"project_manuals_v2_pipeline.md\" 경로만 언급.\n3. **인라인 덤프 금지**: 청크 본문, 엔티티 전체 리스트, Cypher 결과 테이블을 메시지에 직접 넣지 말 것. 파일로 저장하고 URL 전달.\n4. **내부 Explore 서브에이전트 활용**: 대량 파일 탐색 시 서브에이전트로 격리.\n\n허용: 건수/평균/분포/에러/샘플 3건.\nlang 메타 조사 회신 잘 받았습니다. db-manager에는 제가 별도 지시하겠습니다.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-12 07:13:38",
+      "updated_at": "2026-04-12 07:13:38",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-qa-agent-56b17a",
+      "agent": "qa-agent",
+      "task": "[규칙 적용] GraphRAG/manuals-v2 컨텍스트 절감 1단계 (2026-04-11 부서장 승인)",
+      "message": "[규칙 적용] GraphRAG/manuals-v2 컨텍스트 절감 1단계 (2026-04-11 부서장 승인)\n\n향후 manuals-v2/GraphRAG 검증 보고:\n1. 배치 결과는 `workspaces/qa-agent/graphrag_validation_{N}.json` 저장\n2. MAX엔 3줄 요약+URL만\n3. 품질 지표 테이블은 HTML로 업로드 후 URL 전달 (현재 방식 그대로 유지)\n4. 인라인 덤프 금지\n\nBefore 리포트 v1.1 잘 받았습니다. crafter 재파싱 완료 알림 오면 after 측정 착수.\nQ2 E401은 전량 확장 후 재검증 예정이므로 PoC 범위 밖으로 보류.\nsection_path=None 건은 crafter가 chunk_postprocess에서 동시 처리할 수 있도록 내가 리뷰 시 반영하겠습니다.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-12 07:13:49",
+      "updated_at": "2026-04-12 07:13:49",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-db-manager-ddce65",
+      "agent": "db-manager",
+      "task": "[규칙 적용 + 지시]",
+      "message": "[규칙 적용 + 지시]\n\n■ 규칙 적용 (GraphRAG/manuals-v2 컨텍스트 절감 1단계 — 2026-04-11 부서장 승인)\n1. Neo4j 상태는 `workspaces/db-manager/neo4j_snapshot.json`에 작업 전/후 노드·관계 수 유지. MAX는 diff만 확인.\n2. 배치 적재 결과는 `workspaces/db-manager/graphrag_ingest_{N}.json` 저장\n3. MAX엔 3줄 요약+URL만, 인라인 덤프 금지\n4. 대량 쿼리 결과는 HTML/CSV로 업로드 후 URL 전달\n\n■ 지시 1: qa 쿼리 lang 컬럼 누락 패치\ndocs-agent 조사 결과, `poc_v2_qa_queries.py` SELECT 절에 lang 컬럼이 빠져서 qa 리포트에 '-' 로 표시된 것으로 확인됨. DB 데이터는 정상.\n- 5개 Q 쿼리 SELECT에 `lang` 컬럼 추가 (1줄씩 5곳)\n- 검증 쿼리: `SELECT DISTINCT lang, COUNT(*) FROM manual.documents_v2 WHERE file_id='1_robot_c7fe37c1ed98' GROUP BY lang;` → 'ko' 단일 확인\n- 패치 + 검증 결과 회신\n\n■ 지시 2: Neo4j 스냅샷 초기 파일 생성\n`workspaces/db-manager/neo4j_snapshot.json`:\n```\n{\n  \"timestamp\": \"2026-04-11T...\",\n  \"labels\": {\"PhaseOllama\": 384, \"Phase3\": 513, \"ManualV2\": 0, ...},\n  \"relationships_total\": ...,\n  \"total_nodes\": 5458\n}\n```\n현재 상태 스냅샷 파일 하나 만들어두세요.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-12 07:14:05",
+      "updated_at": "2026-04-12 07:14:05",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-crafter-21e396",
+      "agent": "crafter",
+      "task": "[chunk_postprocess 설계 리뷰 — 4개 질문 답변]",
+      "message": "[chunk_postprocess 설계 리뷰 — 4개 질문 답변]\n\n설계안 잘 검토했습니다. 전체 방향 승인. 4개 질문에 답변합니다.\n\n**Q1. Tokenizer = Option A (Qwen3-Embedding-8B AutoTokenizer)**\n✅ 승인. 이유:\n- 실제 임베딩 토크나이저와 일치해야 청크 크기가 의미 있음\n- split() 기반 계산이 CJK 과소평가 원인이었음 (핵심 버그)\n- transformers 로컬 로드 부담 < 정확도 이득\n\n**Q2. section_path 경계 strict 정책**\n✅ strict 적용. 단 예외 1건:\n- 기본: section_path 다르면 merge 금지\n- 예외: section_path=None인 인접 청크끼리는 merge 허용 (파서가 섹션 인식 못한 영역)\n- qa-agent가 Q4/Q5에서 section_path=None 문제 보고함 → 이 케이스를 merge로 구제\n\n**Q3. Table 식별 방법**\nHTML `<table>` 우선, fallback으로 `|` 라인 3개 이상 연속.\n- Docling export가 기본적으로 HTML table 생성함\n- `|` fallback은 md 변환 후 일부 놓친 케이스 대응\n- 식별된 표는 단일 청크로 분리, 행이 50개 초과 시 TABLE_ROW_SPLIT=50 단위로 분할\n\n**Q4. 빈 section 처리**\nDrop이 아니라 **keep + 상위 section으로 승격** 권장:\n- content가 짧다고 단순 drop하면 목차/소제목 정보 손실\n- 예: \"3.2 신호 결선\" 제목만 있는 청크는 부모 \"3. 전기 사양\"으로 merge\n- 완전 빈 문자열(공백/제어문자만)은 drop\n\n**추가 요청:**\n1. `--reuse` 플래그 시 document.json 재사용 필수 (VLM 캡셔닝 재실행 방지, 시간 절감)\n2. 후처리 결과도 파일로 저장: `workspaces/crafter/chunk_postprocess_batch_{file_id}.json` (GraphRAG 보고 규칙 1단계 적용)\n3. 처리 통계 요약만 메시지로 — 건수/평균 토큰/분포/에러 (인라인 덤프 금지)\n\n구현 착수 OK. 완료 시 1개 파일 샘플 결과로 1차 검증 후 확장 진행.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-12 07:16:02",
+      "updated_at": "2026-04-12 07:16:02",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }

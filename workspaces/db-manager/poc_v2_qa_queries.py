@@ -46,7 +46,7 @@ QUERIES = [
         "id": "Q3",
         "q": "Mitsubishi CR 컨트롤러 초기 셋업 절차",
         "filter": "category='1_robot' AND mfr='Mitsubishi' AND doctype ILIKE '%setup%'",
-        "select": "file_id, chunk_id, mfr, model, doctype, section_path, LEFT(content, 300) AS preview, "
+        "select": "file_id, chunk_id, mfr, model, lang, doctype, section_path, LEFT(content, 300) AS preview, "
                   "figure_refs->0->>'storage_path' AS fig0_path, "
                   "figure_refs->0->>'vlm_description' AS fig0_vlm",
     },
@@ -62,7 +62,7 @@ QUERIES = [
         "id": "Q5",
         "q": "CC-Link 국번 설정 방법",
         "filter": "content ILIKE '%CC-Link%' OR content ILIKE '%CCLink%'",
-        "select": "file_id, chunk_id, mfr, model, doctype, LEFT(content, 300) AS preview, "
+        "select": "file_id, chunk_id, mfr, model, lang, doctype, LEFT(content, 300) AS preview, "
                   "figure_refs->0->>'vlm_description' AS fig0_vlm, inline_refs",
     },
 ]

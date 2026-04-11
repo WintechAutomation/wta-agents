@@ -1,0 +1,37 @@
+{
+  "timestamp": "2026-04-12T07:15:22.432423+09:00",
+  "labels": {
+    "base": 0,
+    "Equipment": 493,
+    "Customer": 22,
+    "Issue": 577,
+    "Person": 43,
+    "Process": 1574,
+    "Component": 2009,
+    "Product": 61,
+    "Resolution": 202,
+    "Tool": 150,
+    "Phase2": 585,
+    "Phase3": 513,
+    "PhaseOllama": 384,
+    "Manual": 327,
+    "Phase5_Manual": 502,
+    "ManualV2": 0
+  },
+  "total_nodes": 5458,
+  "relationships_total": 2926,
+  "relationships_by_type": {
+    "OWNS": 17,
+    "HAS_ISSUE": 235,
+    "SIMILAR_TO": 9,
+    "RESOLVED_BY": 177,
+    "INVOLVES_COMPONENT": 281,
+    "USES_COMPONENT": 951,
+    "INVOLVED_IN": 262,
+    "HAS_SUBPROCESS": 551,
+    "MAINTAINS": 32,
+    "USES_TOOL": 144,
+    "USES_PROCESS": 3,
+    "DOCUMENTS": 264
+  }
+}
