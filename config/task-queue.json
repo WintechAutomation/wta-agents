@@ -4847,6 +4847,42 @@
       "updated_at": "2026-04-12 06:58:38",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-qa-agent-5bf1ef",
+      "agent": "qa-agent",
+      "task": "[지시 — manuals-v2 검증·품질 판정 담당 (B안 승인)]",
+      "message": "[지시 — manuals-v2 검증·품질 판정 담당 (B안 승인)]\n\n부서장 B안 승인. qa-agent가 **검증 및 품질 판정** 담당입니다.\n\n### 배경\nPoC 10건 청킹 재설계(crafter 진행 중) 전/후 검색 품질을 정량 측정해서 \"전량 1,939건 확장 OK\"를 판정하는 역할입니다.\n\n### 주요 산출물\n\n#### 1. 검증쿼리 5건 실행 (우선순위 1, 지금 바로 시작)\n현재 manual.documents_v2에 적재된 10,215 rows 대상으로 다음 5건 쿼리 실행:\n- \"서보 결선도\" (이미지 매칭 테스트)\n- \"에러코드 E401 해결\" (구체 에러코드 검색)\n- \"CR750 셋업 절차\" (절차 검색)\n- \"RV-4F 가반 중량\" (스펙 검색)\n- \"CC-Link 인터페이스 설정\" (기술문서 검색)\n\n측정 지표:\n- Top-5 Recall (정답 청크가 상위 5개에 포함?)\n- Top-1 Precision (최상위가 정답?)\n- MRR (Mean Reciprocal Rank)\n- 수동 품질 점수 (1~5점)\n\n실행 방법:\n- `workspaces/docs-agent/poc_validation_queries.sql` 참고 (5건 + 부가 3건 이미 준비됨)\n- Qwen3-Embedding-8B로 쿼리 임베딩 → pgvector 검색 → top-20\n- 필요시 db-manager에 쿼리 실행 요청\n\n#### 2. before/after 비교 (crafter 재파싱 완료 후)\n- 재파싱 전(현재 과분할) / 재파싱 후(후처리 적용) 동일 쿼리 실행\n- 각 지표 변화 비교 테이블 작성\n- \"품질 허들 통과 여부\" 최종 판정\n\n#### 3. 회귀 테스트\n- 재파싱 전후 청크 수 / 토큰 분포 / VLM 커버리지 변화 검증\n- 이상 수치 발견 시 crafter에게 알림\n\n#### 4. RAG 샘플 답변 수동 스팟체크\n- 10~20개 질문 → 실제 GraphRAG 답변 생성 → 품질 점수\n- 특히 이미지 관련 질문에서 VLM 캡션이 제대로 활용되는지 확인\n\n### 진행 방식\n- 1번(검증쿼리)는 **지금 바로 시작** — crafter 재파싱 기다릴 필요 없음. before 값 먼저 확보\n- 2번(비교)는 crafter 재파싱 완료 후\n- issue-manager에 진행 상황 매일 1회 공유\n\n### 완료 기준\n- before/after 비교표 + 품질 허들 판정 리포트 (reports/에 HTML 저장)\n- MAX에게 최종 보고\n\n**지금 바로 검증쿼리 before 값 확보 착수 바람. 첫 쿼리 결과 나오는 대로 중간 보고.**",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-12 07:00:48",
+      "updated_at": "2026-04-12 07:00:48",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-docs-agent-27df45",
+      "agent": "docs-agent",
+      "task": "[지시] manuals-v2 PoC 파서 lang 메타 결측 조사",
+      "message": "[지시] manuals-v2 PoC 파서 lang 메타 결측 조사\n\nqa-agent before 품질 리포트에서 발견:\n- Mitsubishi KO SetupGuide 문서의 lang 필드가 '-' 로 저장됨\n- 다른 문서는 ko/ja/en 정상 매핑됨\n\n조사 요청:\n1. 해당 file_id 특정 (Mitsubishi SetupGuide 한국어판)\n2. parse_docling.py에서 lang 결정 로직 확인 (파일명 기반? 메타 기반?)\n3. '-' 로 저장된 원인 파악\n4. 수정안 제시 (후처리 단계에서 동시 적용 가능한지)\n\n본 건은 긴급 아님. 메인 업무 우선 처리 후 여유 있을 때 회신 바랍니다.\ncrafter의 chunk_postprocess 설계 리뷰가 더 우선순위 높음.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-12 07:07:51",
+      "updated_at": "2026-04-12 07:07:51",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-docs-agent-25577b",
+      "agent": "docs-agent",
+      "task": "즉시 착수 OK. 병렬 진행 가능합니다.",
+      "message": "즉시 착수 OK. 병렬 진행 가능합니다.\n30분 내 1차 회신 기다립니다.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-12 07:08:08",
+      "updated_at": "2026-04-12 07:08:08",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }
