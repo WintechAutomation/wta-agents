@@ -4955,6 +4955,54 @@
       "updated_at": "2026-04-11 22:58:57",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-docs-agent-a174ac",
+      "agent": "docs-agent",
+      "task": "[VLM 호출 방식 확인] 부서장 지시: \"올라마로 해야지\"",
+      "message": "[VLM 호출 방식 확인] 부서장 지시: \"올라마로 해야지\"\n\n현재 Qwen2.5-VL-7B 호출 방식 확인 부탁:\n1. 어느 엔드포인트로 호출 중? (`/api/generate`, `/v1/chat/completions`, 다른 거?)\n2. Ollama API 사용 중인가, 아니면 vLLM/OpenAI-compatible API인가?\n3. 모델명 태그 정확 (`qwen2.5vl:7b` vs 다른 것)\n4. 이미지 전달 방식 (base64 vs url)\n\n500 에러 원인이 호출 방식 미스매치일 수 있어. Ollama 네이티브 API로 맞춰야 하면 코드 확인하고 수정해.\n\nOllama 공식 엔드포인트:\n- POST http://182.224.6.147:11434/api/generate\n  ```json\n  {\"model\":\"qwen2.5vl:7b\",\"prompt\":\"...\",\"images\":[\"<base64>\"]}\n  ```\n- POST http://182.224.6.147:11434/api/chat\n  ```json\n  {\"model\":\"qwen2.5vl:7b\",\"messages\":[{\"role\":\"user\",\"content\":\"...\",\"images\":[\"<base64>\"]}]}\n  ```\n\nVLM 서버 안정화되면 이 방식으로 다시 시도해. 현재는 PoC 파싱 계속 진행 (VLM 없이).",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 23:00:46",
+      "updated_at": "2026-04-11 23:00:46",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-docs-agent-0ba18a",
+      "agent": "docs-agent",
+      "task": "[긴급 전체 중단] 부서장 지시: 즉시 전체 중단.",
+      "message": "[긴급 전체 중단] 부서장 지시: 즉시 전체 중단.\n\n- PoC 파싱 프로세스 즉시 kill\n- manuals_v2_parse_docling.py 실행 전부 종료\n- 적재 대기 중인 JSONL 있으면 그대로 유지 (삭제 금지)\n- 8_etc 분류도 재개 금지\n- 추가 지시 대기\n\n즉시 중단 후 완료 보고.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 23:04:26",
+      "updated_at": "2026-04-11 23:04:26",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-db-manager-680e66",
+      "agent": "db-manager",
+      "task": "[긴급 전체 중단] 부서장 지시: 즉시 전체 중단.",
+      "message": "[긴급 전체 중단] 부서장 지시: 즉시 전체 중단.\n\n- JSONL 적재 작업 중단 (진행 중이면)\n- 신규 INSERT 중단\n- 이미 생성된 manual.documents_v2 테이블은 그대로 보존 (DROP 금지)\n- 추가 지시 대기\n\n즉시 중단 후 현재 상태 보고.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 23:04:32",
+      "updated_at": "2026-04-11 23:04:32",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-admin-agent-2c4a08",
+      "agent": "admin-agent",
+      "task": "[긴급 전체 중단] 부서장 지시: 전체 중단.",
+      "message": "[긴급 전체 중단] 부서장 지시: 전체 중단.\n\n- qwen2.5vl:7b 재pull 중단 필요 여부 판단해서 처리 (진행 중이면 일단 완료시키거나 중단, 둘 중 영향 적은 쪽)\n- Ollama 서버는 그대로 유지\n- 추가 지시 대기",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 23:04:38",
+      "updated_at": "2026-04-11 23:04:38",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }

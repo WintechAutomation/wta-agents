@@ -1,0 +1,27 @@
+--- [1/10] Yaskawa_RS232C_ParameterManual_KO.pdf ---
+  mfr=Yaskawa model=RS232C dt=ParameterManual lang=KO
+  figures: 3
+  tables: 4
+  chunks: 7
+  JSONL: C:\MES\wta-agents\workspaces\docs-agent\v2_poc\1_robot_2d70fa79608e\chunks.jsonl
+  {'file_id': '1_robot_2d70fa79608e', 'chunks': 7, 'figures': 3, 'tables': 4}
+  elapsed: 26.0s  (total: 0.4 min)
+--- [2/10] Mitsubishi_BFP-A8662_Troubleshooting_EN.pdf ---
+  mfr=Mitsubishi model=BFP-A8662 dt=Troubleshooting lang=EN
+  figures: 14
+  tables: 38
+  chunks: 68
+  JSONL: C:\MES\wta-agents\workspaces\docs-agent\v2_poc\1_robot_2d77a92d4066\chunks.jsonl
+  {'file_id': '1_robot_2d77a92d4066', 'chunks': 68, 'figures': 14, 'tables': 38}
+  elapsed: 261.5s  (total: 4.8 min)
+--- [3/10] Mitsubishi_BFP-A8615_CCLinkInterface_KO.pdf ---
+  mfr=Mitsubishi model=BFP-A8615 dt=CCLinkInterface lang=KO
+STDERR: nd, then device pinned memory won't be used.
+  super().__init__(loader)
+C:\Python314\Lib\site-packages\torch\utils\data\dataloader.py:775: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+C:\Python314\Lib\site-packages\torch\utils\data\dataloader.py:775: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+
+  elapsed: 164.0s  (total: 7.5 min)
+--- [4/10] Mitsubishi_BFP-A8601-D_SetupGuide_KO.pdf ---
