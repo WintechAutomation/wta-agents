@@ -1,0 +1,5 @@
+=== manuals_v2_reprocess start 2026-04-12 07:46:34 ===
+[07:46:34] targets: 10건
+[07:46:34] [1_robot_0b0c3108c6c9] load n=440 avg=263.5 med=17 lang=en
+[07:46:45] [1_robot_0b0c3108c6c9] post  n=1172 avg=254.1 med=276 in_target=91% max=345
+[07:46:45] [1_robot_0b0c3108c6c9] embed start n=1172

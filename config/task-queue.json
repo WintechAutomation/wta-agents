@@ -4991,6 +4991,30 @@
       "updated_at": "2026-04-12 07:38:37",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-crafter-9f4368",
+      "agent": "crafter",
+      "task": "[긴급 확인]",
+      "message": "[긴급 확인]\n부서장이 실제 재처리 진행 여부 확인 중입니다. 지금 어느 단계입니까?\n- parse_docling.py --reuse 훅 연결 진행도?\n- 10건 중 몇 건 재처리 완료?\n- 현재 실행 중인 프로세스/로그 파일 경로?\n\n간단히 현재 상태만 즉시 회신 부탁합니다.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-12 07:44:59",
+      "updated_at": "2026-04-12 07:44:59",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-crafter-9cb71b",
+      "agent": "crafter",
+      "task": "[긴급 보완 — 현재 재처리 작업에 즉시 적용]",
+      "message": "[긴급 보완 — 현재 재처리 작업에 즉시 적용]\n\n부서장 지시: 장시간 작업은 재개 가능 체크포인트 구조 필수화.\n메모리 규칙: feedback_resumable_task_checkpoint.md\n\n**지금 진행 중인 manuals_v2_reprocess.py에 즉시 보완**\n\n1. `workspaces/crafter/manuals_v2_reprocess_state.json` 추가\n```json\n{\n  \"task_id\": \"manuals_v2_reprocess_poc10\",\n  \"status\": \"running\",\n  \"total\": 10,\n  \"completed\": 0,\n  \"current\": \"1_robot_0b0c3108c6c9\",\n  \"items\": [\n    {\"id\": \"1_robot_0b0c3108c6c9\", \"status\": \"running\", \"step\": \"embedding\"},\n    {\"id\": \"1_robot_2d70fa79608e\", \"status\": \"pending\"},\n    ...\n  ],\n  \"last_update\": \"2026-04-11T22:47:00+09:00\"\n}\n```\n\n2. 각 파일 처리 단계별 flush (load → post → embed → write → done)\n3. 스크립트 재시작 시 state.json 읽고 status=\"done\" 건 스킵, \"pending\"/\"running\"부터 재개\n4. 기존 로그 파일(manuals_v2_reprocess.log)은 그대로 유지\n\n**진행 중단하지 말고 다음 파일(2번째)부터 state.json 기록 시작**해도 됩니다. 1번째(0b0c)는 완료 후 단순히 completed=1로 기록.\n\n5분 후 state.json 최초 생성 확인 보고 부탁합니다.\n\n향후 모든 장시간 작업(10분 이상) 배치 스크립트는 이 패턴 의무 적용.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-12 07:49:50",
+      "updated_at": "2026-04-12 07:49:50",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }
