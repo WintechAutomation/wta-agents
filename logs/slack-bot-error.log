@@ -145,3 +145,36 @@
 
 원인: MES `public.auth_user.department_name` 컬럼은 존재하
 [slack-bot] 17:08:05 [CS세션] 답변 기록: slack-cs-csagent-조한종-20260411-164329 #cs-csagent (459자, 첨부:0건)
+[slack-bot] 17:10:03 [수신] #cs-csagent 조한종: <@U0AP5B0F71C> dev 한테 위임해서 mes 사용자관리 에 부서, 직급 정보를 다우오피스 정보를 토대로 업데이트 해놓으라고 해 . → cs-agent
+[slack-bot] 17:10:03 [CS세션] 질문 기록: slack-cs-csagent-조한종-20260411-164329 #cs-csagent 조한종: <@U0AP5B0F71C> dev 한테 위임해서 mes 사용자관리 에 부서, 직급 정보를 다우오피스 정보를 
+[slack-bot] 17:10:03 직접 전송 완료 → cs-agent:5602
+[slack-bot] 17:11:20 [슬랙 발신] #cs-csagent ← cs-agent: 위임 완료했습니다. (MAX 라우팅 안내로 dev-agent → crafter로 재위임)
+
+담당: craft
+[slack-bot] 17:11:20 [CS세션] 답변 기록: slack-cs-csagent-조한종-20260411-164329 #cs-csagent (225자, 첨부:0건)
+[slack-bot] 17:12:03 [수신] #cs-csagent 조한종: <@U0AP5B0F71C> 보고서는 어찌됫나 → cs-agent
+[slack-bot] 17:12:03 [CS세션] 질문 기록: slack-cs-csagent-조한종-20260411-164329 #cs-csagent 조한종: <@U0AP5B0F71C> 보고서는 어찌됫나
+[slack-bot] 17:12:03 직접 전송 완료 → cs-agent:5602
+[slack-bot] 17:12:47 [슬랙 발신] #cs-csagent ← cs-agent: 보고서 견본 작성 완료했습니다.
+
+https://agent.mes-wta.com/cs-agent/setup-
+[slack-bot] 17:12:48 [CS세션] 답변 기록: slack-cs-csagent-조한종-20260411-164329 #cs-csagent (380자, 첨부:0건)
+[slack-bot] 17:13:46 [수신] #cs-csagent 조한종: <@U0APHKH0613> 문서작업은 굳이 안해도되겟다잉 너 ㅋ → cs-agent
+[slack-bot] 17:13:46 [CS세션] 질문 기록: slack-cs-csagent-조한종-20260411-164329 #cs-csagent 조한종: <@U0APHKH0613> 문서작업은 굳이 안해도되겟다잉 너 ㅋ
+[slack-bot] 17:13:46 직접 전송 완료 → cs-agent:5602
+[slack-bot] 17:14:39 [수신] #cs-csagent 조한종: <@U0AP5B0F71C> 항상슬라이드 페이지 작성하는 스킬사용할때 페이지 상단에 ppt 변환, pdf 저장 두가지 버튼기능 만들어. (ppt는 → cs-agent
+[slack-bot] 17:14:39 [CS세션] 질문 기록: slack-cs-csagent-조한종-20260411-164329 #cs-csagent 조한종: <@U0AP5B0F71C> 항상슬라이드 페이지 작성하는 스킬사용할때 페이지 상단에 ppt 변환, pdf 저장
+[slack-bot] 17:14:39 직접 전송 완료 → cs-agent:5602
+[slack-bot] 17:17:12 [수신] #cs-csagent 심경기: <@U0A7S89M5S7> ppt로 빼는것도 가능해요??? → cs-agent
+[slack-bot] 17:17:12 [CS세션] 질문 기록: slack-cs-csagent-심경기-20260411-171712 #cs-csagent 심경기: <@U0A7S89M5S7> ppt로 빼는것도 가능해요???
+[slack-bot] 17:17:12 직접 전송 완료 → cs-agent:5602
+[slack-bot] 17:17:39 [수신] #cs-csagent 심경기: <@U0A7S89M5S7> 보고서 ㅋㅋㅋㅋ 최곤데요 → cs-agent
+[slack-bot] 17:17:39 [CS세션] 질문 기록: slack-cs-csagent-심경기-20260411-171712 #cs-csagent 심경기: <@U0A7S89M5S7> 보고서 ㅋㅋㅋㅋ 최곤데요
+[slack-bot] 17:17:39 직접 전송 완료 → cs-agent:5602
+[slack-bot] 17:18:13 [수신] #cs-csagent 조한종: <@U0APHKH0613> 원래 되는데 쟤가 계속 빼머거. 근데 ㅂ완벽히 동일하게는못빼 좀 틀어지더라고 → cs-agent
+[slack-bot] 17:18:13 [CS세션] 질문 기록: slack-cs-csagent-조한종-20260411-164329 #cs-csagent 조한종: <@U0APHKH0613> 원래 되는데 쟤가 계속 빼머거. 근데 ㅂ완벽히 동일하게는못빼 좀 틀어지더라고
+[slack-bot] 17:18:13 직접 전송 완료 → cs-agent:5602
+[slack-bot] 17:18:40 [슬랙 발신] #cs-csagent ← cs-agent: 슬라이드 스킬에 상단 버튼 두 가지(\U0001f4e5 PPT 변환 / \U0001f4c4 PDF 저장) 추가 적용했습니다.
+
+- 스킬 파일
+[slack-bot] 17:18:40 [CS세션] 답변 기록: slack-cs-csagent-조한종-20260411-164329 #cs-csagent (445자, 첨부:0건)

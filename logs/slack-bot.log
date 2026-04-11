@@ -29330,3 +29330,36 @@ Supabase를 거치지 않고 **PostgreSQL
 
 원인: MES `public.auth_user.department_name` 컬럼은 존재하
 2026-04-11 17:08:05,353 INFO [CS세션] 답변 기록: slack-cs-csagent-조한종-20260411-164329 #cs-csagent (459자, 첨부:0건)
+2026-04-11 17:10:03,460 INFO [수신] #cs-csagent 조한종: <@U0AP5B0F71C> dev 한테 위임해서 mes 사용자관리 에 부서, 직급 정보를 다우오피스 정보를 토대로 업데이트 해놓으라고 해 . → cs-agent
+2026-04-11 17:10:03,517 INFO [CS세션] 질문 기록: slack-cs-csagent-조한종-20260411-164329 #cs-csagent 조한종: <@U0AP5B0F71C> dev 한테 위임해서 mes 사용자관리 에 부서, 직급 정보를 다우오피스 정보를 
+2026-04-11 17:10:03,540 INFO 직접 전송 완료 → cs-agent:5602
+2026-04-11 17:11:20,259 INFO [슬랙 발신] #cs-csagent ← cs-agent: 위임 완료했습니다. (MAX 라우팅 안내로 dev-agent → crafter로 재위임)
+
+담당: craft
+2026-04-11 17:11:20,321 INFO [CS세션] 답변 기록: slack-cs-csagent-조한종-20260411-164329 #cs-csagent (225자, 첨부:0건)
+2026-04-11 17:12:03,607 INFO [수신] #cs-csagent 조한종: <@U0AP5B0F71C> 보고서는 어찌됫나 → cs-agent
+2026-04-11 17:12:03,671 INFO [CS세션] 질문 기록: slack-cs-csagent-조한종-20260411-164329 #cs-csagent 조한종: <@U0AP5B0F71C> 보고서는 어찌됫나
+2026-04-11 17:12:03,683 INFO 직접 전송 완료 → cs-agent:5602
+2026-04-11 17:12:47,963 INFO [슬랙 발신] #cs-csagent ← cs-agent: 보고서 견본 작성 완료했습니다.
+
+https://agent.mes-wta.com/cs-agent/setup-
+2026-04-11 17:12:48,029 INFO [CS세션] 답변 기록: slack-cs-csagent-조한종-20260411-164329 #cs-csagent (380자, 첨부:0건)
+2026-04-11 17:13:46,575 INFO [수신] #cs-csagent 조한종: <@U0APHKH0613> 문서작업은 굳이 안해도되겟다잉 너 ㅋ → cs-agent
+2026-04-11 17:13:46,645 INFO [CS세션] 질문 기록: slack-cs-csagent-조한종-20260411-164329 #cs-csagent 조한종: <@U0APHKH0613> 문서작업은 굳이 안해도되겟다잉 너 ㅋ
+2026-04-11 17:13:46,668 INFO 직접 전송 완료 → cs-agent:5602
+2026-04-11 17:14:39,387 INFO [수신] #cs-csagent 조한종: <@U0AP5B0F71C> 항상슬라이드 페이지 작성하는 스킬사용할때 페이지 상단에 ppt 변환, pdf 저장 두가지 버튼기능 만들어. (ppt는 → cs-agent
+2026-04-11 17:14:39,432 INFO [CS세션] 질문 기록: slack-cs-csagent-조한종-20260411-164329 #cs-csagent 조한종: <@U0AP5B0F71C> 항상슬라이드 페이지 작성하는 스킬사용할때 페이지 상단에 ppt 변환, pdf 저장
+2026-04-11 17:14:39,443 INFO 직접 전송 완료 → cs-agent:5602
+2026-04-11 17:17:12,622 INFO [수신] #cs-csagent 심경기: <@U0A7S89M5S7> ppt로 빼는것도 가능해요??? → cs-agent
+2026-04-11 17:17:12,699 INFO [CS세션] 질문 기록: slack-cs-csagent-심경기-20260411-171712 #cs-csagent 심경기: <@U0A7S89M5S7> ppt로 빼는것도 가능해요???
+2026-04-11 17:17:12,719 INFO 직접 전송 완료 → cs-agent:5602
+2026-04-11 17:17:39,836 INFO [수신] #cs-csagent 심경기: <@U0A7S89M5S7> 보고서 ㅋㅋㅋㅋ 최곤데요 → cs-agent
+2026-04-11 17:17:39,921 INFO [CS세션] 질문 기록: slack-cs-csagent-심경기-20260411-171712 #cs-csagent 심경기: <@U0A7S89M5S7> 보고서 ㅋㅋㅋㅋ 최곤데요
+2026-04-11 17:17:39,932 INFO 직접 전송 완료 → cs-agent:5602
+2026-04-11 17:18:13,771 INFO [수신] #cs-csagent 조한종: <@U0APHKH0613> 원래 되는데 쟤가 계속 빼머거. 근데 ㅂ완벽히 동일하게는못빼 좀 틀어지더라고 → cs-agent
+2026-04-11 17:18:13,835 INFO [CS세션] 질문 기록: slack-cs-csagent-조한종-20260411-164329 #cs-csagent 조한종: <@U0APHKH0613> 원래 되는데 쟤가 계속 빼머거. 근데 ㅂ완벽히 동일하게는못빼 좀 틀어지더라고
+2026-04-11 17:18:13,846 INFO 직접 전송 완료 → cs-agent:5602
+2026-04-11 17:18:40,916 INFO [슬랙 발신] #cs-csagent ← cs-agent: 슬라이드 스킬에 상단 버튼 두 가지(📥 PPT 변환 / 📄 PDF 저장) 추가 적용했습니다.
+
+- 스킬 파일
+2026-04-11 17:18:40,975 INFO [CS세션] 답변 기록: slack-cs-csagent-조한종-20260411-164329 #cs-csagent (445자, 첨부:0건)
