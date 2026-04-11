@@ -4283,6 +4283,18 @@
       "updated_at": "2026-04-11 16:39:29",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-crafter-0aa3a5",
+      "agent": "crafter",
+      "task": "[부서장 승인] 추가 벤치마크 2개 순차 실행 지시.",
+      "message": "[부서장 승인] 추가 벤치마크 2개 순차 실행 지시.\n\n**테스트 대상**:\n1. qwen3.5:35b-a3b (MoE, 균형 우선)\n2. qwen3.5:27b (dense, 품질 우선)\n\n**조건** (기존 4모델 파일럿과 완전 동일하게):\n- 동일 50 chunk\n- 동일 v1 온톨로지 프롬프트\n- num_ctx=4096, think=false, temperature=0\n- 결과 파일: phase6_pilot_qwen35_35b_a3b_result.json / phase6_pilot_qwen35_27b_result.json\n\n**순차 실행** (한 번에 하나씩, 메모리 해제 후):\n1. 먼저 35b-a3b 다운 → 로드 → 50 chunk → unload\n2. 그 다음 27b 다운 → 로드 → 50 chunk → unload\n\n**보고 포맷**:\n- 기존 4모델 + 신규 2모델 통합 비교표 (6모델 최종표)\n- 동일 PDF 3건 품질 교차 샘플 (Fastech/ACS/EtherCAT PNOZ)\n- 최종 추천 재검토\n\n완료 후 docs-agent가 HTML 리포트 업데이트할 수 있도록 raw 결과 JSON과 통합 마크다운 리포트 함께 회신.\n\n중간 진행도 (다운로드 완료/로드 완료/50 chunk 몇% 진행)도 15분 간격으로 보고 부탁.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 16:41:42",
+      "updated_at": "2026-04-11 16:41:42",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }
