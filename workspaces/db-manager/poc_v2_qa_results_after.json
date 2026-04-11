@@ -1,0 +1,332 @@
+{
+  "searches": {
+    "Q1": {
+      "query": "V1000 서보 전원 결선도",
+      "filter": "(category IN ('5_inverter','1_robot')) AND (mfr='Yaskawa' OR content ILIKE '%V1000%')",
+      "embed_ms": 1794.2,
+      "search_ms": 437.6,
+      "hits": [
+        {
+          "file_id": "5_inverter_c6f52f93cca5",
+          "chunk_id": "0416_3384",
+          "mfr": "Yaskawa",
+          "model": "V1000",
+          "lang": "ko",
+          "section_path": [
+            "E.3 파라미터의 설정내용"
+          ],
+          "preview": "색인, 1 = . 기호, 1 = . +1 단자 . . . . . . . . . . . . . . . . . . . . ., 1 = . . 49. +2 단자 . . . . . . . . . . . . . . . . . . . . ., 1 = . . 49. +V 단자 . . . . . . . . . . . . . . . . . . . . ., 1 = . . 5",
+          "figs": 0,
+          "similarity": 0.5498
+        },
+        {
+          "file_id": "5_inverter_c6f52f93cca5",
+          "chunk_id": "0418_3561",
+          "mfr": "Yaskawa",
+          "model": "V1000",
+          "lang": "ko",
+          "section_path": [
+            "E.3 파라미터의 설정내용"
+          ],
+          "preview": "전압 . 모터 2 의 베이스, 10 = . 전압 . 모터 2 의 베이스, 11 = . 전압 . 모터 2 의 베이스, 12 = . 전압 . 모터 2 의 베이스, 13 = . 전압 . 모터 2 의 베이스, 14 = . 전압 . 모터 2 의 베이스, 15 = . 전압 . 모터 2 의 베이스, 16 = . 전압 . 모터 2 의 베이스, 17 = . 전압 . 모터 ",
+          "figs": 0,
+          "similarity": 0.5464
+        },
+        {
+          "file_id": "5_inverter_c6f52f93cca5",
+          "chunk_id": "0050_0288",
+          "mfr": "Yaskawa",
+          "model": "V1000",
+          "lang": "ko",
+          "section_path": [
+            "표 3.3 전선 사이즈와 체결 토크 ( 삼상 200 V 급 )"
+          ],
+          "preview": "0008 0010, 단자기호 = R/L1, S/L2, T/L3, U/T1, V/T2, W/T3, -, +1, +2, B1, B2. 0008 0010, 단자나사 사이즈 = M4. 0008 0010, 체결 토크 N  m (lb.in.) = 1.2 ～ 1.5 (10.6 ～ 13.3). 0008 0010, 접속가능 전선 사이즈 mm 2 (AWG) = 2.0 ～ ",
+          "figs": 0,
+          "similarity": 0.5431
+        },
+        {
+          "file_id": "5_inverter_c6f52f93cca5",
+          "chunk_id": "0050_0289",
+          "mfr": "Yaskawa",
+          "model": "V1000",
+          "lang": "ko",
+          "section_path": [
+            "표 3.3 전선 사이즈와 체결 토크 ( 삼상 200 V 급 )"
+          ],
+          "preview": "0008 0010, 체결 토크 N  m (lb.in.) = 1.2 ～ 1.5 (10.6 ～ 13.3). 0008 0010, 접속가능 전선 사이즈 mm 2 (AWG) = 2.0 ～ 5.5 (14 ～ 10). 0008 0010, 권장 전선 사이즈 mm 2 (AWG) = 3.5 (12). 0008 0010, 선종류 = 49 페이지 ( 주 1) 참조. 0012,",
+          "figs": 0,
+          "similarity": 0.5326
+        },
+        {
+          "file_id": "5_inverter_c6f52f93cca5",
+          "chunk_id": "0049_0284",
+          "mfr": "Yaskawa",
+          "model": "V1000",
+          "lang": "ko",
+          "section_path": [
+            " 단상 200 V 급"
+          ],
+          "preview": "0010, 접속가능 전선사이즈 mm 2 (AWG) = 2.0 ～ 5.5 (14 ～ 10). 0010, 권장 전선 사이즈 mm 2 (AWG) = 3.5 (12). 0010, 선종류 = 49 페이지 ( 주 1) 참조. 0010, 단자기호 = -, +1, +2, B1, B2,. 0010, 단자나사 사이즈 = M4. 0010, 체결토크 N  m (lb.in.) ",
+          "figs": 0,
+          "similarity": 0.5307
+        }
+      ]
+    },
+    "Q2": {
+      "query": "에러코드 E401 원인과 복구 방법",
+      "filter": "content ~* 'E\\s*401|에러\\s*401|E401'",
+      "embed_ms": 106.7,
+      "search_ms": 92.7,
+      "hits": []
+    },
+    "Q3": {
+      "query": "Mitsubishi CR 컨트롤러 초기 셋업 절차",
+      "filter": "category='1_robot' AND mfr='Mitsubishi' AND doctype ILIKE '%setup%'",
+      "embed_ms": 114.4,
+      "search_ms": 32.6,
+      "hits": [
+        {
+          "file_id": "1_robot_c7fe37c1ed98",
+          "chunk_id": "0069_0137",
+          "mfr": "Mitsubishi",
+          "model": "BFP-A8601-D",
+          "lang": "ko",
+          "doctype": "setupguide",
+          "section_path": [
+            "5.4  보수부품"
+          ],
+          "preview": "1, 형식 주1) = . 1, 수량 = 1. 1, 적용개수 = 컨트롤러 전면 아래. 1, 구입처 = 미쓰비시전기 시스템 서비스㈜. CR3D-700 시리즈, 품명 = CR3D-700 시리즈. CR3D-700 시리즈, 형식 주1) = CR3D-700 시리즈. CR3D-700 시리즈, 수량 = CR3D-700 시리즈. CR3D-700 시리즈, 적용개수 = CR3D-700 시리즈. CR3D-700 시리즈, 구입처 = CR3D-700 시리즈. 1, 품명 = 팬(40각). 1, 형식 주1) = . 1, 수량 = 5. 1, 적용개수 = 앰프 유",
+          "fig0_path": null,
+          "fig0_vlm": null,
+          "similarity": 0.6499
+        },
+        {
+          "file_id": "1_robot_c7fe37c1ed98",
+          "chunk_id": "0069_0136",
+          "mfr": "Mitsubishi",
+          "model": "BFP-A8601-D",
+          "lang": "ko",
+          "doctype": "setupguide",
+          "section_path": [
+            "5.4  보수부품"
+          ],
+          "preview": "CR1D-700 시리즈, 수량 = CR1D-700 시리즈. CR1D-700 시리즈, 적용개수 = CR1D-700 시리즈. CR1D-700 시리즈, 구입처 = CR1D-700 시리즈. 1, 품명 = 필터. 1, 형식 주1) = . 1, 수량 = 1. 1, 적용개수 = 컨트롤러 전면 아래. 1, 구입처 = 미쓰비시전기 시스템 서비스㈜. CR2D-700 시리즈, 품명 = CR2D-700 시리즈. CR2D-700 시리즈, 형식 주1) = CR2D-700 시리즈. CR2D-700 시리즈, 수량 = CR2D-700 시리즈. CR2D-700 시",
+          "fig0_path": null,
+          "fig0_vlm": null,
+          "similarity": 0.6314
+        },
+        {
+          "file_id": "1_robot_c7fe37c1ed98",
+          "chunk_id": "0016_0041",
+          "mfr": "Mitsubishi",
+          "model": "BFP-A8601-D",
+          "lang": "ko",
+          "doctype": "setupguide",
+          "section_path": [
+            "2.2  설치"
+          ],
+          "preview": "- 2.2.1  개봉 요령\n\n공장출하 시의 컨트롤러는, 부속품과 함께 종이박스 포장으로 되어 있습니다. 박스를 열고 인출하여 주십시오.\n\n로봇 컨트롤러의 운반요령을 나타냅니다.\n\n- (1) CR2D-700 시리즈 컨트롤러의 운반\n- 1)  컨트롤러 측면 하부의 공간에 손을 넣어 들어올려 운반하여 주십시오. 스위치, 커넥터를 건들이지 않도록 주의하여 주십시오.\n- (2) CR2D-700  시리즈  컨트롤러의 운반\n\n컨트롤러의 운반은 그림2-2에 나타낸 것처럼 반드시 2인 작업으로 실시하여 주십시오.\n\n- (3) CR3D-700 시리즈",
+          "fig0_path": "manual_images/1_robot/1_robot_c7fe37c1ed98/page_0016_fig_016_129.png",
+          "fig0_vlm": "이 그림은 산업 장비의 안전 조치를 나타내는 안전 표시입니다. 그림에는 주의 표시가 있으며, 그 아래에는 사람이 손가락을 위로 올리고 있는 모습이 그려져 있습니다. 이는 장비를 조작할 때 손가락을 위로 올리는 것이 중요하다는 것을 강조합니다. 이는 장비의 안전을 위해 손가락이 손상되지 않도록 하는 안전 조치를 나타냅니다.",
+          "similarity": 0.6279
+        },
+        {
+          "file_id": "1_robot_c7fe37c1ed98",
+          "chunk_id": "0069_0141",
+          "mfr": "Mitsubishi",
+          "model": "BFP-A8601-D",
+          "lang": "ko",
+          "doctype": "setupguide",
+          "section_path": [
+            "5.4  보수부품"
+          ],
+          "preview": "CR2D-700 시리즈, 적용개소 = CR2D-700 시리즈. CR2D-700 시리즈, 구입처 = CR2D-700 시리즈. 1, 품명 = 퓨즈. 1, 형식 = LM32. 1, 수량 = . 1, 적용개소 = . 1, 구입처 = 미쓰비시전기 시스템 서비스㈜. 2, 품명 = . 2, 형식 = LM16. 2, 수량 = . 2, 적용개소 = . 2, 구입처 = 미쓰비시전기 시스템 서비스㈜. 3, 품명 = . 3, 형식 = MF60NRF-1.6A. 3, 수량 = . 3, 적용개소 = 컨트롤러 내 (핸드용 유리관 퓨즈). 3, 구입처 = 미쓰비",
+          "fig0_path": null,
+          "fig0_vlm": null,
+          "similarity": 0.6224
+        },
+        {
+          "file_id": "1_robot_c7fe37c1ed98",
+          "chunk_id": "0007_0014",
+          "mfr": "Mitsubishi",
+          "model": "BFP-A8601-D",
+          "lang": "ko",
+          "doctype": "setupguide",
+          "section_path": [
+            "목  차"
+          ],
+          "preview": "2.1,  = 제품확인…………………………………………………………………………………………... 2.1, 페이지 = 2-7. 2.2,  = 설치………………………………………………………………………………………………... 2.2, 페이지 = 2-8. ,  = 2.2.1 개봉요령…………………………………………………………………………………... , 페이지 = 2-8. ,  = 2.2.2 운반요령…………………………………………………………………………………... , 페이지 = 2-8. ,  = (1) CR1D-700 시리즈 컨트롤러의 운반………………………………",
+          "fig0_path": null,
+          "fig0_vlm": null,
+          "similarity": 0.6195
+        }
+      ]
+    },
+    "Q4": {
+      "query": "pick and place 로봇 최대 가반중량",
+      "filter": "category='1_robot' AND doctype ILIKE '%spec%'",
+      "embed_ms": 123.7,
+      "search_ms": 111.4,
+      "hits": [
+        {
+          "file_id": "1_robot_54fdb56329f0",
+          "chunk_id": "0016_0025",
+          "mfr": "ABB",
+          "model": "IRB360",
+          "lang": "en",
+          "preview": "Depending on robot version an end effector of max weight 1 to 8 kg including payload, can be mounted on the robot mounting flange. See Load diagrams on page22 . Other equipment, such as a hose, can be mounted on the upper and lower arm, max weight 300g/m. See Hose set mounted on the manipulator arms",
+          "figs": 0,
+          "tbls": 0,
+          "similarity": 0.7323
+        },
+        {
+          "file_id": "1_robot_54fdb56329f0",
+          "chunk_id": "0029_0043",
+          "mfr": "ABB",
+          "model": "IRB360",
+          "lang": "en",
+          "preview": "The robot is tuned for the Vacuum system or medium sized hose (options). If one of these options is used no extra load should be defined. If neither the vacuum system nor the medium sized hose is chosen:\n\n- and both M1 and M2 are less than 175 g each, the robot can run with full performance and no e",
+          "figs": 0,
+          "tbls": 0,
+          "similarity": 0.7262
+        },
+        {
+          "file_id": "1_robot_54fdb56329f0",
+          "chunk_id": "0025_0037",
+          "mfr": "ABB",
+          "model": "IRB360",
+          "lang": "en",
+          "preview": "tooldata, Description = Weight of the gripper (kg). The center of gravity of the gripper (mm). The moment of inertia of the gripper (kgm 2 ). No value or wrong value may damage the robot. For more information see Technical reference manual - RAPID Instructions, Functions and Data types. loaddata, De",
+          "figs": 3,
+          "tbls": 2,
+          "similarity": 0.6845
+        },
+        {
+          "file_id": "1_robot_54fdb56329f0",
+          "chunk_id": "0018_0029",
+          "mfr": "ABB",
+          "model": "IRB360",
+          "lang": "en",
+          "preview": "Robot version IRB 360-1/800, IRB 360-1/1130, IRB 360-1/1600, IRB 360-3/1130\n\nFx, Max. load in operation = ±330 N. Fy, Max. load in operation = ±260 N. Fz, Max. load in operation = -1500 ±170 N\n\nMx, Max. load in operation = ±200 Nm. My, Max. load in operation = ±230 Nm. Mz, Max. load in operation = ±",
+          "figs": 1,
+          "tbls": 4,
+          "similarity": 0.6662
+        },
+        {
+          "file_id": "1_robot_54fdb56329f0",
+          "chunk_id": "0023_0034",
+          "mfr": "ABB",
+          "model": "IRB360",
+          "lang": "en",
+          "preview": "Z, Description = See the above diagram and the coordinate system in Product specifica- tion - Controller IRC5 with FlexPendant .. L, Description = Distance in X-Y plane from Z-axis to the mass center of gravity of the load.. tooldata, Description = Weight of the gripper (kg). The center of gravity o",
+          "figs": 2,
+          "tbls": 1,
+          "similarity": 0.6655
+        }
+      ]
+    },
+    "Q5": {
+      "query": "CC-Link 국번 설정 방법",
+      "filter": "content ILIKE '%CC-Link%' OR content ILIKE '%CCLink%'",
+      "embed_ms": 108.3,
+      "search_ms": 186.2,
+      "hits": [
+        {
+          "file_id": "1_robot_3c1dcc39da41",
+          "chunk_id": "0039_0163",
+          "mfr": "Mitsubishi",
+          "model": "BFP-A8615",
+          "lang": "ko",
+          "doctype": "cclinkinterface",
+          "preview": "표 7-1 CC-Link 인터페이스 카드용의 파라미터 일람\n\nCCINFO, 기능과 조작 = CC-Link의 국번, 점유국수, 확장 사이클릭 설정을 설정합니다. (요소1=국번 :1~64) (요소2=점유국수 :1~4국을 점유한다 (요소3=확장 사이클릭 설정 :1/2/4/8배 설정을 한다. CCINFO, 설정 값 = 1,1,1. CCSPD, 기능과 조작 = CC-Link의 전송속도를 설정합니다. (0:156k/1:625k/2:2.5M/3:5M/4:10M). CCSPD, 설정 값 = 4 (*1). CCFIX, 기능과 조작 = 리모트 I/O",
+          "fig0_vlm": null,
+          "inline_refs": [
+            "7-1"
+          ],
+          "similarity": 0.7557
+        },
+        {
+          "file_id": "1_robot_3c1dcc39da41",
+          "chunk_id": "0018_0100",
+          "mfr": "Mitsubishi",
+          "model": "BFP-A8615",
+          "lang": "ko",
+          "doctype": "cclinkinterface",
+          "preview": "(4) CC-Link Ver.1  또는  파라미터 [CCFIX]가 '0'인 경우……………국번에 의한 분할\n\n0(마스터), 점유국수. = -. 0(마스터), 확장 사이클릭. = . 0(마스터), 리모트 신호.입력 = -. 0(마스터), 리모트 신호.출력 = -. 0(마스터), 리모트 레지스터.입력 = -. 0(마스터), 리모트 레지스터.출력 = -. 1, 점유국수. = 지정된 국번부터 지정된 점유국수 만큼의 할당으로 됩니다.. 1, 확장 사이클릭. = -. 1, 리모트 신호.입력 = 6000~6031. 1, 리모트 신호.출력 = 60",
+          "fig0_vlm": null,
+          "inline_refs": [],
+          "similarity": 0.7075
+        },
+        {
+          "file_id": "1_robot_3c1dcc39da41",
+          "chunk_id": "0015_0047",
+          "mfr": "Mitsubishi",
+          "model": "BFP-A8615",
+          "lang": "ko",
+          "doctype": "cclinkinterface",
+          "preview": "(1) CC-Link Ver.2  또는 파라미터[CCFIX]가 '1'인 경우......국번에 따라 영향없이 6000번부터 할당\n\n0(마스터), 점유국수.점유국수 = -. 0(마스터), 확장.사이클릭 = -. 0(마스터), 리모트 신호.입력 = -. 0(마스터), 리모트 신호.출력 = -. 0(마스터), 리모트 레지스터.입력 = -. 0(마스터), 리모트 레지스터.출력 = -. 1~64, 점유국수.점유국수 = 1국. 1~64, 확장.사이클릭 = 1배. 1~64, 리모트 신호.입력 = 6000~6031. 1~64, 리모트 신호.출력 =",
+          "fig0_vlm": null,
+          "inline_refs": [],
+          "similarity": 0.6942
+        },
+        {
+          "file_id": "1_robot_3c1dcc39da41",
+          "chunk_id": "0015_0056",
+          "mfr": "Mitsubishi",
+          "model": "BFP-A8615",
+          "lang": "ko",
+          "doctype": "cclinkinterface",
+          "preview": "(2) CC-Link Ver.1  또는 파라미터 [CCFIX]가 '1'인 경우  국번에 의한 영향이 없도록 6000번부터 분할\n\n0(마스터), 점유국수.점유국수 = -. 0(마스터), 확장 사이클릭.확장 사이클릭 = -. 0(마스터), 리모트 신호.입력 = -. 0(마스터), 리모트 신호.출력 = -. 0(마스터), 리모트 레지스터.입력 = -. 0(마스터), 리모트 레지스터.출력 = -. 1~64, 점유국수.점유국수 = 1국. 1~64, 확장 사이클릭.확장 사이클릭 = 1배 만. 1~64, 리모트 신호.입력 = 6000~6031.",
+          "fig0_vlm": null,
+          "inline_refs": [],
+          "similarity": 0.6902
+        },
+        {
+          "file_id": "1_robot_3c1dcc39da41",
+          "chunk_id": "0013_0042",
+          "mfr": "Mitsubishi",
+          "model": "BFP-A8615",
+          "lang": "ko",
+          "doctype": "cclinkinterface",
+          "preview": "(0:156k/ 1:625k/ 2:2.5M/ 3:5M/ 4:10M). CCCLR, 기능과 조작 = 데이터 링크 이상이 발생한 경우에, 입력신호를 유지할지를 또는 클리어 할 것인지를 지정합니다. 1: 유지한다. 0: 클리어 한다.. CCFIX, 기능과 조작 = CC-Link 신호번호를 고정할 것인지 하지 않을 것인지를 설정합니다. 0: 지정된 국번의 신호번호를 사용한다. (예) 3국으로 설정한 경우 입출력 신호번호=6064번~/레지스터 번호=6008번~ 1: 국번호에 관계없이, 신호번호는 6000번부터 사용한다. (예) 3국으로 설정",
+          "fig0_vlm": null,
+          "inline_refs": [
+            "3-3"
+          ],
+          "similarity": 0.6899
+        }
+      ]
+    }
+  },
+  "stats": {
+    "V1_category": [
+      {
+        "category": "1_robot",
+        "chunks": 3559,
+        "fig_refs": 4019,
+        "tbl_refs": 4029
+      },
+      {
+        "category": "2_sensor",
+        "chunks": 193,
+        "fig_refs": 95,
+        "tbl_refs": 191
+      },
+      {
+        "category": "5_inverter",
+        "chunks": 3838,
+        "fig_refs": 1502,
+        "tbl_refs": 7658
+      }
+    ],
+    "V2_missing_storage": {
+      "chunks_with_missing_storage": 0
+    },
+    "V3_vlm_coverage": {
+      "with_vlm": 5616,
+      "total_figs": 5616,
+      "pct": 100.0
+    }
+  }
+}
