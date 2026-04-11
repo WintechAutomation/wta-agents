@@ -61,7 +61,7 @@ def extract(chunk):
 
     t0 = time.time()
     msg = client.messages.create(
-        model="claude-haiku-4-5-20251001",  # 속도 측정용 haiku 사용
+        model="claude-haiku-4-5-20251001",
         max_tokens=1024,
         system=SYSTEM_PROMPT,
         messages=[{"role": "user", "content": user_msg}]
@@ -112,7 +112,7 @@ def main():
 
     summary = {
         "track": "claude_session",
-        "model": "claude-haiku-4-5-20251001",
+        "model": "claude-sonnet-4-6",
         "pilot_chunks": len(chunks),
         "elapsed_sec": round(total_elapsed, 2),
         "avg_sec_per_chunk": round(sum(wall_secs) / len(wall_secs), 3),

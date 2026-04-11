@@ -36,3 +36,5 @@
 {"ts": "2026-04-11 16:57:36", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "<@U0AP5B0F71C> 이미지 처럼 날짜 부분은 이슈내용 줄 오른쪽 끝에 나오게하고. 담당자 이름 옆에 소속부서를나타나게해.\n이슈등록 할때 이름 검색하면 소속부서가 자동조회해서 나타나게 하되 부서지정을 사용자가 바꿀수있도록.", "files": [{"name": "image.png", "type": "png", "saved_path": "C:\\MES\\wta-agents\\slack_chatlog\\C0AS56XLT29_files\\20260411_165736_image.png"}]}
 {"ts": "2026-04-11 16:59:31", "user_id": "U0APHKH0613", "username": "심경기", "text": "<@U0A7S89M5S7>확인 했습니다"}
 {"ts": "2026-04-11 16:59:51", "user_id": "U0APHKH0613", "username": "심경기", "text": "<@U0A7S89M5S7> 여기 아직 교육중이라 중간중간 볼게요 ㅋㅋ"}
+{"ts": "2026-04-11 17:00:03", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "응 괜찮아"}
+{"ts": "2026-04-11 17:06:39", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "<@U0AP5B0F71C> 담당자 조회시 mes 에서 부서정보는 안가져오는가본데"}
