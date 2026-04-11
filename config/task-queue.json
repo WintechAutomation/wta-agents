@@ -4247,6 +4247,42 @@
       "updated_at": "2026-04-11 15:45:18",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-crafter-c07830",
+      "agent": "crafter",
+      "task": "부서장이 진행상황 보고 요청. 현재 Phase6 4모델 벤치마크 리포트는 수신 완료했고 부서장 승인 대기 중인 상태. 지금 진행 중인 작업(벤치마크 후속/설계 문서/기타 작업큐)이",
+      "message": "부서장이 진행상황 보고 요청. 현재 Phase6 4모델 벤치마크 리포트는 수신 완료했고 부서장 승인 대기 중인 상태. 지금 진행 중인 작업(벤치마크 후속/설계 문서/기타 작업큐)이 있다면 한 줄 요약으로 즉시 보고 부탁. 없으면 \"대기 중\" 회신.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 16:30:30",
+      "updated_at": "2026-04-11 16:30:30",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-docs-agent-0f2dd2",
+      "agent": "docs-agent",
+      "task": "[긴급/부서장 요청] Phase6 GraphRAG LLM 모델 벤치마크 테스트 결과를 HTML 리포트로 정리 필요.",
+      "message": "[긴급/부서장 요청] Phase6 GraphRAG LLM 모델 벤치마크 테스트 결과를 HTML 리포트로 정리 필요.\n\n**데이터 출처**: crafter가 실행한 4모델 파일럿 (50 chunk 동일 프롬프트, v1 온톨로지)\n- 실행 환경: Ollama on GB10, num_ctx=4096, think=false, temperature=0\n- 결과 파일: workspaces/crafter/ 또는 dashboard 내 phase6_pilot_{ollama,deepseek_r1_14b,qwen_coder_14b,mistral_small_24b}_result.json\n\n**성능 비교표 (crafter 보고 원본 데이터)**:\n\n| 항목 | qwen3.5:9b | deepseek-r1:14b | qwen2.5-coder:14b | mistral-small:24b |\n|---|---|---|---|---|\n| 평균 tok/s | 32.9 | 21.2 | 21.4 | 13.3 |\n| chunk당 avg | 10.3s | 10.9s | 10.3s | 17.3s |\n| chunk당 min/max | 1.2/40.8 | 1.0/39.1 | 0.9/62.8 | 1.4/72.3 |\n| 50 chunk 총 | 514s | 546s | 517s | 862s |\n| 285k 직렬(h) | 815 | 865 | 820 | 1367 |\n| 285k 병렬8(h/일) | 102h (4.3일) | 108h | 103h | 171h (7.1일) |\n| 엔티티 수 | 349 | 156 | 168 | 193 |\n| 관계 수 | 312 | 97 | 103 | 95 |\n| avg ents/chunk | 7.0 | 3.1 | 3.4 | 3.9 |\n| avg rels/chunk | 6.2 | 1.9 | 2.1 | 1.9 |\n\n**품질 샘플 (동일 PDF 3건 교차 비교)**:\n\n1) Fastech_CAT_CommManual_KO.pdf\n- qwen3.5:9b: 9ent/8rel (파스텍/Ezi-IO EtherCAT AD/Slave Controller/아날로그입력 + 3~4개)\n- deepseek-r1:14b: 3/2 (파스텍, Ezi-IO, Slave Controller만)\n- qwen2.5-coder:14b: 2/1 (파스텍, Ezi-IO만 - 가장 빈약)\n- mistral-small:24b: 2/1 (파스텍, Ezi-IO만)\n\n2) ACS_ACS_SetupGuide_KO.pdf (PROTECT/UNPROTECT 섹션)\n- qwen3.5:9b: 39ent/41rel (Process: PROTECT & UNPROTECT/PROTECT/UNPROTECT, Tool: SPiiPlus MMI/Communication Viewer/ACS Controller, HAS_SUBPROCESS/USES_TOOL 관계 정확)\n- deepseek-r1:14b: 6/8 (ACS Controller를 Component로 오분류)\n- qwen2.5-coder:14b: 8/4 (분류 정확하나 관계 부족)\n- mistral-small:24b: 4/2 (엔티티 최소)\n\n3) EtherCAT_PNOZ_Safety_KO.pdf\n- qwen3.5:9b: 12/10 (Customer EtherCAT_PNOZ_Safety 오분류, Tool: PASvisu/PMIvisu/PSEN/PIT)\n- 나머지 3모델: 모두 11/10으로 유사, Product로 정확 분류\n\n**품질 이슈**:\n- qwen3.5:9b: Legal Notices/Header 등 문서 섹션을 Issue로 오분류 (전처리 필터로 해결 가능)\n- deepseek-r1:14b: 일부 Tool을 Component로 오분류, 엔티티 수 절반\n- qwen2.5-coder:14b: 한국어 자연어 엔티티 density 낮음 (코드 특화 모델 한계)\n- mistral-small:24b: 속도 최하, 품질은 14B급과 유사\n\n**최종 추천**: qwen3.5:9b\n- 속도 1위 (32.9 tok/s, 차점 대비 54% 빠름)\n- 엔티티 추출량 1위 (349개, 차점 대비 2배)\n- 관계 추출량 1위 (312개, 차점 대비 3배)\n- 285k 병렬8 기준 102h(4.3일) 최단\n- 약점은 chunk 전처리 필터로 해결 가능\n\n**차순위 대안**: deepseek-r1:14b (보수적 추출, 속도 차이 크지 않음)\n\n**요청사항**:\n1. 위 내용 전체를 HTML 리포트로 깔끔하게 정리 (비교표 그래프/차트 포함하면 더 좋음)\n2. 카테고리: 성능/품질/추천/결론 구조화\n3. 제목: \"Phase6 GraphRAG LLM 모델 벤치마크 결과 (2026-04-11)\"\n4. 완료 후 dashboard/uploads에 업로드하고 Cloudflare URL(agent.mes-wta.com) 회신\n5. 저장 경로: reports/MAX/phase6-benchmark-2026-04-11.html\n\n급한 건이니 10분 내 작업 부탁드립니다.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 16:33:40",
+      "updated_at": "2026-04-11 16:33:40",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-crafter-b00d0a",
+      "agent": "crafter",
+      "task": "[부서장 질의] qwen3.5:9b 위 체급 모델로 더 고성능/고품질 옵션 있는지 확인 요청.",
+      "message": "[부서장 질의] qwen3.5:9b 위 체급 모델로 더 고성능/고품질 옵션 있는지 확인 요청.\n\n검토 필요:\n1. qwen3.5 시리즈에 14B/32B/72B 같은 상위 체급이 있는지 (온라인 정보 확인)\n2. 이전에 언급됐던 Qwen3.5-35B-A3B (MoE, active 3B) - GB10에서 속도 유리할 수 있음, 파일럿 실행 가능한지\n3. 기타 후보: Qwen2.5-72B-Instruct, Llama-3.3-70B 등 GB10에서 돌릴 수 있는 70B급\n\n요청:\n- 현재 Ollama에 설치된 qwen3.5 계열 목록 (ollama list | grep -i qwen3.5)\n- 9B 초과 체급 후보 3~4개 리스트업\n- 각 후보의 예상 tok/s 추정 (14B = 21.2, 24B = 13.3 기준 선형 스케일링)\n- 다운로드 및 50 chunk 파일럿 가능 여부\n\n빠른 회신 부탁. 실제 테스트는 부서장 추가 지시 후 진행.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 16:39:29",
+      "updated_at": "2026-04-11 16:39:29",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }

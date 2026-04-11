@@ -1,0 +1,22 @@
+[slack-bot] 16:26:13 [라우팅] agents.json 로드 완료: 18개 포트, 14개 채널, 3개 prefix
+[slack-bot] 16:26:13 봇 User ID: U0AP5B0F71C
+[slack-bot] 16:26:14 WTA 슬랙 봇 프로세스 시작 \u2014 PID 78480 \u2014 2026-04-11 16:26:14 KST
+[slack-bot] 16:26:14 WTA 슬랙 봇 시작 (P2P 직접 통신)...
+[slack-bot] 16:26:14 채널 캐시 갱신: 46개
+[slack-bot] 16:26:14 Socket Mode 연결 시작... (시도 #1)
+[slack-bot] 16:26:14 P2P HTTP 서버 시작 (포트 5612)
+[slack-bot] 16:26:15 A new session has been established (session id: 83dbb7e9-bcb8-4dde-84aa-a43773f8061a)
+[slack-bot] 16:26:15 Bolt app is running!
+[slack-bot] 16:26:15 Starting to receive messages from a new connection (session id: 83dbb7e9-bcb8-4dde-84aa-a43773f8061a)
+[slack-bot] 16:26:52 [슬랙 발신] #cs-csagent ← cs-agent: 완료했습니다.
+
+- 댓글 우측에 휴지통 버튼 추가 (본인 댓글만, 호버 시 표시)
+- 댓글 입력 필드 → 줄
+[slack-bot] 16:26:52 [CS세션] 답변 기록: slack-cs-csagent-unknown-20260411-162652 #cs-csagent (128자, 첨부:0건)
+[slack-bot] 16:29:18 [파일다운] 저장 완료: image.png (16125B) → C:\MES\wta-agents\uploads\slack\cs-csagent\2026-04-11\162918_image.png
+[slack-bot] 16:29:19 [수신] #cs-csagent 조한종: <@U0AP5B0F71C> 이게 구현된거 맞냐?  삭제버튼도 없고 1줄밖에 댓글입력안되는디? → cs-agent
+[slack-bot] 16:29:19 [CS세션] 질문 기록: slack-cs-csagent-조한종-20260411-162919 #cs-csagent 조한종: <@U0AP5B0F71C> 이게 구현된거 맞냐?  삭제버튼도 없고 1줄밖에 댓글입력안되는디?
+[slack-bot] 16:29:19 직접 전송 완료 → cs-agent:5602
+[slack-bot] 16:29:19 MES 서비스 계정 로그인 성공
+[slack-bot] 16:29:19 [파일→MES] 프로젝트 조회 실패: 'list' object has no attribute 'get'
+[slack-bot] 16:30:02 [

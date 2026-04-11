@@ -29193,3 +29193,14 @@ Supabase를 거치지 않고 **PostgreSQL
 2026-04-11 16:26:14,621 INFO 채널 캐시 갱신: 46개
 2026-04-11 16:26:14,630 INFO Socket Mode 연결 시작... (시도 #1)
 2026-04-11 16:26:14,681 INFO P2P HTTP 서버 시작 (포트 5612)
+2026-04-11 16:26:52,463 INFO [슬랙 발신] #cs-csagent ← cs-agent: 완료했습니다.
+
+- 댓글 우측에 휴지통 버튼 추가 (본인 댓글만, 호버 시 표시)
+- 댓글 입력 필드 → 줄
+2026-04-11 16:26:52,507 INFO [CS세션] 답변 기록: slack-cs-csagent-unknown-20260411-162652 #cs-csagent (128자, 첨부:0건)
+2026-04-11 16:29:18,806 INFO [파일다운] 저장 완료: image.png (16125B) → C:\MES\wta-agents\uploads\slack\cs-csagent\2026-04-11\162918_image.png
+2026-04-11 16:29:19,005 INFO [수신] #cs-csagent 조한종: <@U0AP5B0F71C> 이게 구현된거 맞냐?  삭제버튼도 없고 1줄밖에 댓글입력안되는디? → cs-agent
+2026-04-11 16:29:19,070 INFO [CS세션] 질문 기록: slack-cs-csagent-조한종-20260411-162919 #cs-csagent 조한종: <@U0AP5B0F71C> 이게 구현된거 맞냐?  삭제버튼도 없고 1줄밖에 댓글입력안되는디?
+2026-04-11 16:29:19,095 INFO 직접 전송 완료 → cs-agent:5602
+2026-04-11 16:29:19,640 INFO MES 서비스 계정 로그인 성공
+2026-04-11 16:29:19,723 WARNING [파일→MES] 프로젝트 조회 실패: 'list' object has no attribute 'get'
