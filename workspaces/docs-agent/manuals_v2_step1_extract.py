@@ -7,9 +7,9 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
 import pdfplumber
 
-SRC = r'C:\MES\wta-agents\data\manuals'
-OUT = r'C:\MES\wta-agents\workspaces\docs-agent\manuals_v2_extract.jsonl'
-CKPT = r'C:\MES\wta-agents\workspaces\docs-agent\manuals_v2_extract.ckpt'
+SRC = r'C:\MES\wta-agents\data\manuals\1_robot'
+OUT = r'C:\MES\wta-agents\workspaces\docs-agent\manuals_v2_1robot_extract.jsonl'
+CKPT = r'C:\MES\wta-agents\workspaces\docs-agent\manuals_v2_1robot_extract.ckpt'
 
 def collect():
     items = []
@@ -20,11 +20,14 @@ def collect():
                 items.append((cat, os.path.join(root, f), f))
     return items
 
-def md5_head(path, nbytes=1024*1024):
+def md5_full(path):
     try:
         h = hashlib.md5()
         with open(path,'rb') as fp:
-            h.update(fp.read(nbytes))
+            while True:
+                chunk = fp.read(1024*1024)
+                if not chunk: break
+                h.update(chunk)
         return h.hexdigest()
     except Exception:
         return ''
@@ -76,7 +79,7 @@ def process(item):
         'filename': fname,
         'size': size,
         'pages': npages,
-        'md5_head': md5_head(path),
+        'md5': md5_full(path),
         'text': text[:8000],  # 앞 8KB만 저장
         'status': status,
         'reason': reason,

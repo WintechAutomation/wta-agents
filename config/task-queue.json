@@ -4679,6 +4679,42 @@
       "updated_at": "2026-04-11 21:18:38",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-docs-agent-3c5906",
+      "agent": "docs-agent",
+      "task": "[범위 축소] 부서장 지시: 우선 1_robot 폴더만 확인. 중복성 자료도 제외.",
+      "message": "[범위 축소] 부서장 지시: 우선 1_robot 폴더만 확인. 중복성 자료도 제외.\n\n- 대상: C:\\MES\\wta-agents\\data\\manuals\\1_robot (221건)\n- 작업:\n  1) 텍스트 추출 (Step 1)\n  2) 필요 시 OCR (Step 2)\n  3) 중복 감지 (파일 해시 + 내용 유사도) → 중복은 _filtered/duplicate로\n  4) 네 세션(sonnet)이 직접 판독 → 제조사/모델/DocType/Lang 판정\n  5) data/manuals-v2/1_robot/ 아래로 리네임 분류\n- 2_sensor~8_etc는 1_robot 완료 후 부서장 승인 받고 진행\n- 진행 상황은 50건 단위로 보고 (너무 잦으면 부담)",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 21:22:13",
+      "updated_at": "2026-04-11 21:22:13",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-dev-agent-352310",
+      "agent": "dev-agent",
+      "task": "[긴급 확인] 부서장 문의: cs-wta.com 웹페이지 견적서관리 쪽 데이터가 사라졌는지 확인 요청.",
+      "message": "[긴급 확인] 부서장 문의: cs-wta.com 웹페이지 견적서관리 쪽 데이터가 사라졌는지 확인 요청.\n\n- 프론트엔드 견적서관리 페이지 로드 여부\n- 백엔드 API 응답 (데이터 존재 유무)\n- DB 쪽 레코드 카운트\n- 최근 배포/수정으로 영향 있었는지\n\n확인 후 바로 보고 부탁해.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 21:25:01",
+      "updated_at": "2026-04-11 21:25:01",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-admin-agent-2b7196",
+      "agent": "admin-agent",
+      "task": "[Ollama 이상] 재점검 요청.",
+      "message": "[Ollama 이상] 재점검 요청.\n\n- HTTP 000은 연결 자체 실패 (타임아웃/거부)\n- 182.224.6.147:11434 핑/포트 확인\n- 1~2분 후 재시도 (일시적 가능)\n- 지속 실패 시: 호스트 서버 상태, ollama 프로세스, 방화벽 확인\n- 해당 서버 임베딩(Qwen3-Embedding-8B) + GraphRAG qwen3.5:35b-a3b 확정 모델이라 영향 큼\n\n결과 바로 보고.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 21:28:30",
+      "updated_at": "2026-04-11 21:28:30",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }
