@@ -38,3 +38,18 @@
 [07:59:08] [1_robot_c5a220711bc5] load n=408 avg=238.4 med=234 lang=ja
 [07:59:08] [1_robot_c5a220711bc5] post  n=410 avg=237.2 med=234 in_target=58% max=1000
 [07:59:08] [1_robot_c5a220711bc5] embed start n=410
+[08:00:29] [1_robot_c5a220711bc5] embed done 81.1s failed=0
+[08:00:30] [1_robot_c5a220711bc5] write OK elapsed=81.9s
+[08:00:30] [1_robot_c7fe37c1ed98] load n=395 avg=27.1 med=13 lang=ko
+[08:00:30] [1_robot_c7fe37c1ed98] post  n=146 avg=228.8 med=243 in_target=55% max=968
+[08:00:30] [1_robot_c7fe37c1ed98] embed start n=146
+[08:00:58] [1_robot_c7fe37c1ed98] embed done 27.8s failed=0
+[08:00:58] [1_robot_c7fe37c1ed98] write OK elapsed=28.6s
+[08:00:58] [2_sensor_2e6136a51564] load n=175 avg=76.5 med=18 lang=ko
+[08:00:59] [2_sensor_2e6136a51564] post  n=193 avg=223.7 med=258 in_target=70% max=737
+[08:00:59] [2_sensor_2e6136a51564] embed start n=193
+[08:01:35] [2_sensor_2e6136a51564] embed done 35.6s failed=0
+[08:01:35] [2_sensor_2e6136a51564] write OK elapsed=36.4s
+[08:01:37] [5_inverter_c6f52f93cca5] load n=3610 avg=86.7 med=18 lang=ko
+[08:01:48] [5_inverter_c6f52f93cca5] post  n=3838 avg=220.2 med=251 in_target=76% max=998
+[08:01:48] [5_inverter_c6f52f93cca5] embed start n=3838

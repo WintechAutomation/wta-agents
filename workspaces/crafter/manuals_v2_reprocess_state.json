@@ -2,8 +2,8 @@
   "task_id": "manuals_v2_reprocess_poc10",
   "status": "running",
   "total": 10,
-  "completed": 6,
-  "current": "1_robot_c5a220711bc5",
+  "completed": 9,
+  "current": "5_inverter_c6f52f93cca5",
   "items": [
     {
       "id": "1_robot_0b0c3108c6c9",
@@ -139,8 +139,8 @@
     },
     {
       "id": "1_robot_c5a220711bc5",
-      "status": "running",
-      "step": "embed",
+      "status": "done",
+      "step": "done",
       "before": {
         "n": 408,
         "avg_tokens": 238.4,
@@ -169,20 +169,116 @@
         "target_min": 150,
         "target_max": 300,
         "in_target_range": 238
-      }
+      },
+      "elapsed_sec": 81.9,
+      "embed_failed": 0
     },
     {
       "id": "1_robot_c7fe37c1ed98",
-      "status": "pending"
+      "status": "done",
+      "step": "done",
+      "before": {
+        "n": 395,
+        "avg_tokens": 27.1,
+        "median_tokens": 13,
+        "p10": 4,
+        "p90": 51,
+        "min_tokens": 2,
+        "max_tokens": 782,
+        "under_min": 348,
+        "over_hard": 0,
+        "target_min": 150,
+        "target_max": 300,
+        "in_target_range": 9
+      },
+      "lang": "ko",
+      "after": {
+        "n": 146,
+        "avg_tokens": 228.8,
+        "median_tokens": 243,
+        "p10": 78,
+        "p90": 359,
+        "min_tokens": 30,
+        "max_tokens": 968,
+        "under_min": 2,
+        "over_hard": 0,
+        "target_min": 150,
+        "target_max": 300,
+        "in_target_range": 81
+      },
+      "elapsed_sec": 28.6,
+      "embed_failed": 0
     },
     {
       "id": "2_sensor_2e6136a51564",
-      "status": "pending"
+      "status": "done",
+      "step": "done",
+      "before": {
+        "n": 175,
+        "avg_tokens": 76.5,
+        "median_tokens": 18,
+        "p10": 4,
+        "p90": 163,
+        "min_tokens": 2,
+        "max_tokens": 1417,
+        "under_min": 111,
+        "over_hard": 1,
+        "target_min": 150,
+        "target_max": 300,
+        "in_target_range": 6
+      },
+      "lang": "ko",
+      "after": {
+        "n": 193,
+        "avg_tokens": 223.7,
+        "median_tokens": 258,
+        "p10": 71,
+        "p90": 289,
+        "min_tokens": 18,
+        "max_tokens": 737,
+        "under_min": 3,
+        "over_hard": 0,
+        "target_min": 150,
+        "target_max": 300,
+        "in_target_range": 136
+      },
+      "elapsed_sec": 36.4,
+      "embed_failed": 0
     },
     {
       "id": "5_inverter_c6f52f93cca5",
-      "status": "pending"
+      "status": "running",
+      "step": "embed",
+      "before": {
+        "n": 3610,
+        "avg_tokens": 86.7,
+        "median_tokens": 18,
+        "p10": 4,
+        "p90": 71,
+        "min_tokens": 2,
+        "max_tokens": 25263,
+        "under_min": 2920,
+        "over_hard": 75,
+        "target_min": 150,
+        "target_max": 300,
+        "in_target_range": 52
+      },
+      "lang": "ko",
+      "after": {
+        "n": 3838,
+        "avg_tokens": 220.2,
+        "median_tokens": 251,
+        "p10": 87,
+        "p90": 288,
+        "min_tokens": 12,
+        "max_tokens": 998,
+        "under_min": 26,
+        "over_hard": 0,
+        "target_min": 150,
+        "target_max": 300,
+        "in_target_range": 2939
+      }
     }
   ],
-  "last_update": "2026-04-12T07:59:08+09:00"
+  "last_update": "2026-04-12T08:01:48+09:00"
 }

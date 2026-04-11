@@ -2,20 +2,6 @@
   "file_id": "1_robot_c5a220711bc5",
   "lang": "ja",
   "before": {
-    "n": 1229,
-    "avg_tokens": 11.5,
-    "median_tokens": 4,
-    "p10": 2,
-    "p90": 13,
-    "min_tokens": 2,
-    "max_tokens": 518,
-    "under_min": 1172,
-    "over_hard": 0,
-    "target_min": 150,
-    "target_max": 300,
-    "in_target_range": 19
-  },
-  "after": {
     "n": 408,
     "avg_tokens": 238.4,
     "median_tokens": 234,
@@ -29,6 +15,20 @@
     "target_max": 300,
     "in_target_range": 238
   },
-  "elapsed_sec": 10.5,
-  "embed_failed": 408
+  "after": {
+    "n": 410,
+    "avg_tokens": 237.2,
+    "median_tokens": 234,
+    "p10": 67,
+    "p90": 334,
+    "min_tokens": 1,
+    "max_tokens": 1000,
+    "under_min": 4,
+    "over_hard": 0,
+    "target_min": 150,
+    "target_max": 300,
+    "in_target_range": 238
+  },
+  "elapsed_sec": 81.9,
+  "embed_failed": 0
 }
