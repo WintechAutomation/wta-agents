@@ -1,0 +1,138 @@
+﻿old_filename,new_filename,manufacturer,model,doctype,language,category_valid,notes
+ABB_ABB_CommManual_KO.pdf,ABB_PCIe_CommManual_KO.pdf,ABB,PCIe,CommManual,KO,true,
+ABB_ABB_InstallGuide_EN.pdf,ABB_Unknown_UserManual_JA.pdf,ABB,,UserManual,JA,true,model 미식별
+ABB_ABB_InstallGuide_EN_2.pdf,ABB_G3-C00M-USR00_InstallGuide_EN.pdf,ABB,G3-C00M-USR00,InstallGuide,EN,true,
+ABB_ABB_InstallGuide_EN_3.pdf,ABB_PCIe-PoE354at-PoE352at_CommManual_EN.pdf,ABB,PCIe-PoE354at/PoE352at,CommManual,EN,true,
+ABB_ABB_InstallGuide_EN_4.pdf,ABB_PCIe-PoE354at-PCIe-_InstallGuide_EN.pdf,ABB,PCIe-PoE354at/PCIe-,InstallGuide,EN,false,
+ABB_ABB_InstallGuide_EN_5.pdf,ABB_AREA_InstallGuide_EN.pdf,ABB,AREA,InstallGuide,EN,true,
+ABB_ABB_InstallGuide_EN_6.pdf,ABB_G3-C00M-USR00_InstallGuide_EN_v2.pdf,ABB,G3-C00M-USR00,InstallGuide,EN,true,
+ABB_ABB_MaintenanceManual_EN.pdf,ABB_DEUTSCH_InstallGuide_EN.pdf,ABB,DEUTSCH,InstallGuide,EN,true,
+ABB_ABB_ParameterManual_EN.pdf,ABB_EURESYS_ParameterManual_EN.pdf,ABB,EURESYS,ParameterManual,EN,false,
+ABB_ABB_SetupGuide_EN.pdf,ABB_Unknown_ParameterManual_EN.pdf,ABB,,ParameterManual,EN,true,model 미식별
+ABB_ABB_UserManual_EN.pdf,ABB_OC-Y4CM-MUSR0_UserManual_EN.pdf,ABB,OC-Y4CM-MUSR0,UserManual,EN,true,
+ABB_DALSA-G_InstallGuide_EN.pdf,ABB_DALSA-G_InstallGuide_EN.pdf,ABB,DALSA-G,InstallGuide,EN,true,
+ABB_MX4_Manual_KO.pdf,ABB_MX4_CommManual_KO.pdf,ABB,MX4,CommManual,KO,true,
+ABB_MX4_UserManual_EN.pdf,ABB_MX4_UserManual_EN.pdf,ABB,MX4,UserManual,EN,true,
+ABB_PCI_InstallGuide_EN.pdf,ABB_PCI_CommManual_EN.pdf,ABB,PCI,CommManual,EN,true,
+ABB_PCI_InstallGuide_EN_2.pdf,ABB_PCI_InstallGuide_EN.pdf,ABB,PCI,InstallGuide,EN,false,
+ABB_SENSICK_MaintenanceManual_EN.pdf,ABB_SENSICK_InstallGuide_EN.pdf,ABB,SENSICK,InstallGuide,EN,true,
+ABB_Unknown_InstallGuide_EN.pdf,ABB_AREA_InstallGuide_EN_v2.pdf,ABB,AREA,InstallGuide,EN,true,
+ABB_Unknown_ParameterManual_EN.pdf,ABB_EURESYS_ParameterManual_EN_v2.pdf,ABB,EURESYS,ParameterManual,EN,false,
+ABB_Unknown_SetupGuide_EN.pdf,ABB_Unknown_ParameterManual_EN_v2.pdf,ABB,,ParameterManual,EN,true,model 미식별
+ABB_Unknown_UserManual_EN.pdf,ABB_G3-C00M-USR00_InstallGuide_EN_v3.pdf,ABB,G3-C00M-USR00,InstallGuide,EN,true,
+Autonics_PR12-4DN_InstallGuide_KO.pdf,Autonics_PR12-4DN_UserManual_KO.pdf,Autonics,PR12-4DN,UserManual,KO,true,
+Keyence_GT2_CommManual_KO.pdf,Keyence_GT2_CommManual_KO.pdf,Keyence,GT2,CommManual,KO,true,
+Keyence_GT2_Manual_KO.pdf,Keyence_GT2_CommManual_KO_v2.pdf,Keyence,GT2,CommManual,KO,true,
+Keyence_IL-030_CommManual_KO.pdf,Keyence_IL-030_CommManual_KO.pdf,Keyence,IL-030,CommManual,KO,true,
+Keyence_IL-030_Manual_KO.pdf,Keyence_IL-030_CommManual_KO_v2.pdf,Keyence,IL-030,CommManual,KO,true,
+Keyence_KEYENCE_Manual_KO.pdf,Keyence_G87KO_UserManual_KO.pdf,Keyence,G87KO,UserManual,KO,true,
+Keyence_KEYENCE_UserManual_KO.pdf,Keyence_G87KO_UserManual_KO_v2.pdf,Keyence,G87KO,UserManual,KO,true,
+Keyence_Unknown_CommManual_KO.pdf,Keyence_CMOS_UserManual_KO.pdf,Keyence,CMOS,UserManual,KO,true,
+Keyence_Unknown_Manual_KO.pdf,Keyence_D05KO_UserManual_KO.pdf,Keyence,D05KO,UserManual,KO,true,
+Keyence_Unknown_UserManual_KO.pdf,Keyence_CMOS_UserManual_KO_v2.pdf,Keyence,CMOS,UserManual,KO,true,
+Keyence_Unknown_UserManual_KO_2.pdf,Keyence_D05KO_UserManual_KO_v2.pdf,Keyence,D05KO,UserManual,KO,true,
+LS_HR10A-7P_InstallGuide_EN.pdf,LSIS_HR10A-7P_InstallGuide_EN.pdf,LSIS,HR10A-7P,InstallGuide,EN,false,
+LS_LK-H1W-MANUAL_InstallGuide_EN.pdf,LSIS_LK-H1W-MANUAL_InstallGuide_EN.pdf,LSIS,LK-H1W-MANUAL,InstallGuide,EN,true,
+LS_LK-H1W-MANUAL_OperationManual_EN.pdf,LSIS_LK-H1W-MANUAL_InstallGuide_EN_v2.pdf,LSIS,LK-H1W-MANUAL,InstallGuide,EN,true,
+LS_NLS-FM305X-2X_SetupGuide_EN.pdf,LSIS_NLS-FM305X-2X_SetupGuide_EN.pdf,LSIS,NLS-FM305X-2X,SetupGuide,EN,true,
+LS_PR12-4DN_InstallGuide_KO.pdf,Autonics_PR12-4DN_UserManual_KO_v2.pdf,Autonics,PR12-4DN,UserManual,KO,true,
+LS_UD34944B_UserManual_EN.pdf,Hikrobot_UD34944B_UserManual_EN.pdf,Hikrobot,UD34944B,UserManual,EN,true,
+LS_Unknown_CommManual_KO.pdf,LSIS_TIME_CommManual_KO.pdf,LSIS,TIME,CommManual,KO,true,
+LS_Unknown_InstallGuide_EN.pdf,LSIS_AL-71831_UserManual_EN.pdf,LSIS,AL-71831,UserManual,EN,true,
+LS_Unknown_MaintenanceManual_EN.pdf,LSIS_M100_CommManual_EN.pdf,LSIS,M100,CommManual,EN,true,
+LS_Unknown_Manual_EN.pdf,LSIS_VISION_Manual_EN.pdf,LSIS,VISION,Manual,EN,true,
+LS_Unknown_Safety_EN.pdf,LSIS_VISION_Manual_EN_v2.pdf,LSIS,VISION,Manual,EN,true,
+LS_Unknown_UserManual_EN.pdf,LSIS_ELIIXA_UserManual_EN.pdf,LSIS,ELIIXA,UserManual,EN,true,
+Panasonic_FX-100_SetupGuide_KO.pdf,Panasonic_FX-100_MaintenanceManual_KO.pdf,Panasonic,FX-100,MaintenanceManual,KO,true,
+Panasonic_HG-C_Manual_KO.pdf,Panasonic_HG-C_SetupGuide_KO.pdf,Panasonic,HG-C,SetupGuide,KO,true,
+Panasonic_Unknown_MaintenanceManual_KO.pdf,Panasonic_SF4D_CommManual_KO.pdf,Panasonic,SF4D,CommManual,KO,true,
+Panasonic_Unknown_MaintenanceManual_KO_2.pdf,Panasonic_FX-500_SetupGuide_KO.pdf,Panasonic,FX-500,SetupGuide,KO,true,
+Panasonic_Unknown_Manual_KO.pdf,Panasonic_SF4D_Manual_KO.pdf,Panasonic,SF4D,Manual,KO,true,
+Panasonic_Unknown_Safety_KO.pdf,Panasonic_SF4D_CommManual_KO_v2.pdf,Panasonic,SF4D,CommManual,KO,true,
+SICK_CQ4_InstallGuide_EN.pdf,SICK_CQ4_InstallGuide_EN.pdf,SICK,CQ4,InstallGuide,EN,true,
+SICK_SICK_InstallGuide_EN.pdf,SICK_CHoose_InstallGuide_EN.pdf,SICK,CHoose,InstallGuide,EN,true,
+SICK_SICK_MaintenanceManual_EN.pdf,SICK_HS_8M-ITL_UserManual_JA.pdf,SICK,HS_8M/ITL,UserManual,JA,true,
+SICK_SICK_MaintenanceManual_KO.pdf,SICK_EN-IEC_InstallGuide_KO.pdf,SICK,EN/IEC,InstallGuide,KO,true,
+SICK_SICK_Manual_EN.pdf,SICK_UM30_InstallGuide_EN.pdf,SICK,UM30,InstallGuide,EN,true,
+SICK_SICK_Manual_KO.pdf,SICK_CQ35-25NNP-KW1_Manual_KO.pdf,SICK,CQ35-25NNP-KW1,Manual,KO,false,
+SICK_UM30_Manual_EN.pdf,SICK_UM30_InstallGuide_EN_v2.pdf,SICK,UM30,InstallGuide,EN,true,
+SICK_Unknown_MaintenanceManual_KO.pdf,SICK_EN-IEC_InstallGuide_KO_v2.pdf,SICK,EN/IEC,InstallGuide,KO,true,
+SICK_Unknown_Manual_KO.pdf,SICK_CQ35-25NNP-KW1_Manual_KO_v2.pdf,SICK,CQ35-25NNP-KW1,Manual,KO,false,
+Unknown_AL-69545-AF_Manual_KO.pdf,Unknown_AL-69545-AF_SetupGuide_KO.pdf,,AL-69545-AF,SetupGuide,KO,true,manufacturer 미식별
+Unknown_AW00015119000_InstallGuide_EN.pdf,Basler_AW00015119000_CommManual_EN.pdf,Basler,AW00015119000,CommManual,EN,true,
+Unknown_AW00015119000_UserManual_EN.pdf,Basler_AW00015119000_CommManual_EN_v2.pdf,Basler,AW00015119000,CommManual,EN,true,
+Unknown_AW00089316000_InstallGuide_EN.pdf,Basler_AW00089316000_CommManual_EN.pdf,Basler,AW00089316000,CommManual,EN,false,suggest: actuator/drive
+Unknown_AW00089316000_UserManual_EN.pdf,Basler_AW00089316000_CommManual_EN_v2.pdf,Basler,AW00089316000,CommManual,EN,false,suggest: actuator/drive
+Unknown_AW00130804000_InstallGuide_EN.pdf,Basler_AW00130804000_CommManual_EN.pdf,Basler,AW00130804000,CommManual,EN,false,suggest: actuator/drive
+Unknown_DA-S_Manual_KO.pdf,Unknown_DA-S_SetupGuide_KO.pdf,,DA-S,SetupGuide,KO,false,manufacturer 미식별
+Unknown_DF-20_MaintenanceManual_KO.pdf,Unknown_DF-20_Manual_KO.pdf,,DF-20,Manual,KO,true,manufacturer 미식별
+Unknown_DF-20_Manual_KO.pdf,Unknown_DF-20_Manual_KO_v2.pdf,,DF-20,Manual,KO,true,manufacturer 미식별
+Unknown_DF-20_Manual_KO_2.pdf,Unknown_DF-20_Manual_KO_v3.pdf,,DF-20,Manual,KO,true,manufacturer 미식별
+Unknown_DF-20_Manual_KO_3.pdf,Unknown_DF-20_Manual_KO_v4.pdf,,DF-20,Manual,KO,true,manufacturer 미식별
+Unknown_EX-10_Manual_KO.pdf,Unknown_EX-10_Manual_KO.pdf,,EX-10,Manual,KO,true,manufacturer 미식별
+Unknown_FOQ-0527-101_Manual_KO.pdf,Unknown_FOQ-0527-101_Manual_KO.pdf,,FOQ-0527-101,Manual,KO,true,manufacturer 미식별
+Unknown_FX-100_Manual_KO.pdf,Panasonic_FX-100_MaintenanceManual_KO_v2.pdf,Panasonic,FX-100,MaintenanceManual,KO,true,
+Unknown_FX-300_Manual_KO.pdf,Unknown_FX-300_SetupGuide_KO.pdf,,FX-300,SetupGuide,KO,true,manufacturer 미식별
+Unknown_FX-300_WiringGuide_KO.pdf,Unknown_FX-300_SetupGuide_KO_v2.pdf,,FX-300,SetupGuide,KO,true,manufacturer 미식별
+Unknown_GFS4400_Manual_KO.pdf,Datalogic_GFS4400_CommManual_KO.pdf,Datalogic,GFS4400,CommManual,KO,true,
+Unknown_GFS4500_ParameterManual_EN.pdf,Datalogic_GFS4500_CommManual_EN.pdf,Datalogic,GFS4500,CommManual,EN,false,
+Unknown_GS-M_Manual_KO.pdf,Unknown_GS-M_Manual_KO.pdf,,GS-M,Manual,KO,true,manufacturer 미식별
+Unknown_GX-F_Manual_KO.pdf,Unknown_GX-F_Manual_KO.pdf,,GX-F,Manual,KO,true,manufacturer 미식별
+Unknown_GX-F_WiringGuide_KO.pdf,Unknown_GX-F_Manual_KO_v2.pdf,,GX-F,Manual,KO,true,manufacturer 미식별
+Unknown_HL-G1_MaintenanceManual_KO.pdf,Unknown_HL-G1_CommManual_KO.pdf,,HL-G1,CommManual,KO,true,manufacturer 미식별
+Unknown_HL-G1_Manual_KO.pdf,Unknown_HL-G1_CommManual_KO_v2.pdf,,HL-G1,CommManual,KO,true,manufacturer 미식별
+Unknown_HR10A-7P_InstallGuide_EN.pdf,Unknown_HR10A-7P_InstallGuide_EN.pdf,,HR10A-7P,InstallGuide,EN,false,manufacturer 미식별
+Unknown_LK-G_Manual_KO.pdf,Unknown_LK-G_Manual_KO.pdf,,LK-G,Manual,KO,true,manufacturer 미식별
+Unknown_LK-G_UserManual_KO.pdf,Unknown_LK-G_Manual_KO_v2.pdf,,LK-G,Manual,KO,true,manufacturer 미식별
+Unknown_LR-T_Manual_KO.pdf,Unknown_LR-T_SetupGuide_KO.pdf,,LR-T,SetupGuide,KO,true,manufacturer 미식별
+Unknown_LR-X250_Manual_KO.pdf,Unknown_LR-X250_UserManual_KO.pdf,,LR-X250,UserManual,KO,true,manufacturer 미식별
+Unknown_LR-X250_Manual_KO_2.pdf,Unknown_LR-X250_UserManual_KO_v2.pdf,,LR-X250,UserManual,KO,true,manufacturer 미식별
+Unknown_LR-X250_UserManual_KO.pdf,Unknown_LR-X250_UserManual_KO_v3.pdf,,LR-X250,UserManual,KO,true,manufacturer 미식별
+Unknown_LR-X250_UserManual_KO_2.pdf,Unknown_LR-X250_UserManual_KO_v4.pdf,,LR-X250,UserManual,KO,true,manufacturer 미식별
+Unknown_LR-X_MaintenanceManual_KO.pdf,Unknown_LR-X_SetupGuide_KO.pdf,,LR-X,SetupGuide,KO,true,manufacturer 미식별
+Unknown_LR-X_Manual_KO.pdf,Unknown_LR-X_SetupGuide_KO_v2.pdf,,LR-X,SetupGuide,KO,true,manufacturer 미식별
+Unknown_LR-ZB250AN_Manual_KO.pdf,Unknown_LR-ZB250AN_SetupGuide_KO.pdf,,LR-ZB250AN,SetupGuide,KO,true,manufacturer 미식별
+Unknown_LV-N_Manual_KO.pdf,Unknown_LV-N_UserManual_KO.pdf,,LV-N,UserManual,KO,true,manufacturer 미식별
+Unknown_LV-N_Manual_KO_2.pdf,Unknown_LV-N_UserManual_KO_v2.pdf,,LV-N,UserManual,KO,true,manufacturer 미식별
+Unknown_LV-N_Manual_KO_3.pdf,Unknown_LV-N_UserManual_KO_v3.pdf,,LV-N,UserManual,KO,true,manufacturer 미식별
+Unknown_LV-N_WiringGuide_KO.pdf,Unknown_LV-N_UserManual_KO_v4.pdf,,LV-N,UserManual,KO,true,manufacturer 미식별
+Unknown_MD-X_Manual_KO.pdf,Unknown_MD-X_Manual_KO.pdf,,MD-X,Manual,KO,true,manufacturer 미식별
+Unknown_ML-LP_Manual_KO.pdf,Unknown_ML-LP_UserManual_KO.pdf,,ML-LP,UserManual,KO,true,manufacturer 미식별
+Unknown_ML-LP_UserManual_KO.pdf,Unknown_ML-LP_UserManual_KO_v2.pdf,,ML-LP,UserManual,KO,true,manufacturer 미식별
+Unknown_PR12-4DN_InstallGuide_KO.pdf,Autonics_PR12-4DN_UserManual_KO_v3.pdf,Autonics,PR12-4DN,UserManual,KO,true,
+Unknown_SERIES_Manual_KO.pdf,Unknown_SERIES_SetupGuide_KO.pdf,,SERIES,SetupGuide,KO,true,manufacturer 미식별
+Unknown_SERIES_WiringGuide_KO.pdf,Unknown_SERIES_SetupGuide_KO_v2.pdf,,SERIES,SetupGuide,KO,true,manufacturer 미식별
+Unknown_STC-SB_Manual_EN_2.pdf,Unknown_STC-SB_CommManual_JA.pdf,,STC-SB,CommManual,JA,true,manufacturer 미식별
+Unknown_TM-310_Manual_KO.pdf,Unknown_TM-310_Manual_KO.pdf,,TM-310,Manual,KO,true,manufacturer 미식별
+Unknown_Unknown_MaintenanceManual_EN.pdf,Unknown_M100_CommManual_EN.pdf,,M100,CommManual,EN,true,manufacturer 미식별
+Unknown_Unknown_MaintenanceManual_KO.pdf,Unknown_CLARiTYTM_CommManual_KO.pdf,,CLARiTYTM,CommManual,KO,true,manufacturer 미식별
+Unknown_Unknown_MaintenanceManual_KO_2.pdf,Unknown_Unknown_MaintenanceManual_KO.pdf,,,MaintenanceManual,KO,true,manufacturer 미식별; model 미식별
+Unknown_Unknown_MaintenanceManual_KO_3.pdf,Unknown_MTBF_CommManual_KO.pdf,,MTBF,CommManual,KO,true,manufacturer 미식별
+Unknown_Unknown_Manual_EN.pdf,Computar_MPW2_Manual_EN.pdf,Computar,MPW2,Manual,EN,true,
+Unknown_Unknown_Manual_EN_2.pdf,Unknown_DIN2_Manual_EN.pdf,,DIN2,Manual,EN,false,manufacturer 미식별
+Unknown_Unknown_Manual_EN_3.pdf,Unknown_DIN2_Manual_EN_v2.pdf,,DIN2,Manual,EN,false,manufacturer 미식별
+Unknown_Unknown_Manual_KO.pdf,Unknown_E3Z-L_Manual_KO.pdf,,E3Z-L,Manual,KO,true,manufacturer 미식별
+Unknown_Unknown_Manual_KO_10.pdf,Unknown_CLARiTYTM_CommManual_KO_v2.pdf,,CLARiTYTM,CommManual,KO,true,manufacturer 미식별
+Unknown_Unknown_Manual_KO_11.pdf,Unknown_TIME_CommManual_KO.pdf,,TIME,CommManual,KO,true,manufacturer 미식별
+Unknown_Unknown_Manual_KO_12.pdf,Unknown_Unknown_Manual_KO.pdf,,,Manual,KO,true,manufacturer 미식별; model 미식별
+Unknown_Unknown_Manual_KO_13.pdf,Unknown_LK-G_SetupGuide_KO.pdf,,LK-G,SetupGuide,KO,false,manufacturer 미식별
+Unknown_Unknown_Manual_KO_14.pdf,Unknown_Unknown_Manual_KO_v2.pdf,,,Manual,KO,true,manufacturer 미식별; model 미식별
+Unknown_Unknown_Manual_KO_15.pdf,Unknown_LK-G_SetupGuide_KO_v2.pdf,,LK-G,SetupGuide,KO,false,manufacturer 미식별
+Unknown_Unknown_Manual_KO_16.pdf,Unknown_Unknown_Manual_EN.pdf,,,Manual,EN,true,manufacturer 미식별; model 미식별
+Unknown_Unknown_Manual_KO_17.pdf,Unknown_IOVIS-TECH-MANUAL-2014_SetupGuide_KO.pdf,,IOVIS-TECH-MANUAL-2014,SetupGuide,KO,true,manufacturer 미식별
+Unknown_Unknown_Manual_KO_18.pdf,Unknown_IOVIS-TECH-MANUAL-2014_SetupGuide_KO_v2.pdf,,IOVIS-TECH-MANUAL-2014,SetupGuide,KO,false,manufacturer 미식별
+Unknown_Unknown_Manual_KO_19.pdf,Unknown_Unknown_Manual_KO_v3.pdf,,,Manual,KO,true,manufacturer 미식별; model 미식별
+Unknown_Unknown_Manual_KO_2.pdf,Unknown_Unknown_Manual_EN_v2.pdf,,,Manual,EN,true,manufacturer 미식별; model 미식별
+Unknown_Unknown_Manual_KO_3.pdf,Unknown_SERIES_Catalog_KO.pdf,,SERIES,Catalog,KO,true,manufacturer 미식별
+Unknown_Unknown_Manual_KO_4.pdf,Unknown_IOVIS-TECH-MANUAL-2014_SetupGuide_KO_v3.pdf,,IOVIS-TECH-MANUAL-2014,SetupGuide,KO,true,manufacturer 미식별
+Unknown_Unknown_Manual_KO_5.pdf,Unknown_Unknown_MaintenanceManual_KO_v2.pdf,,,MaintenanceManual,KO,true,manufacturer 미식별; model 미식별
+Unknown_Unknown_Manual_KO_6.pdf,Unknown_IOVIS-TECH-MANUAL-2014_SetupGuide_KO_v4.pdf,,IOVIS-TECH-MANUAL-2014,SetupGuide,KO,false,manufacturer 미식별
+Unknown_Unknown_Manual_KO_7.pdf,Panasonic_FX-500_SetupGuide_KO_v2.pdf,Panasonic,FX-500,SetupGuide,KO,true,
+Unknown_Unknown_Manual_KO_8.pdf,Unknown_Unknown_Manual_KO_v4.pdf,,,Manual,KO,true,manufacturer 미식별; model 미식별
+Unknown_Unknown_Manual_KO_9.pdf,Unknown_MTBF_CommManual_KO_v2.pdf,,MTBF,CommManual,KO,true,manufacturer 미식별
+Unknown_VERSION_MaintenanceManual_KO.pdf,Unknown_VERSION_Manual_KO.pdf,,VERSION,Manual,KO,true,manufacturer 미식별
+Unknown_VERSION_Manual_KO.pdf,Unknown_VERSION_Manual_KO_v2.pdf,,VERSION,Manual,KO,true,manufacturer 미식별
+Unknown_VJ1620HR_CommManual_KO.pdf,Unknown_VJ1620HR_CommManual_KO.pdf,,VJ1620HR,CommManual,KO,false,manufacturer 미식별
+Unknown_VJ1620HR_Manual_KO.pdf,Unknown_VJ1620HR_CommManual_KO_v2.pdf,,VJ1620HR,CommManual,KO,false,manufacturer 미식별
+Unknown_VJ7330_InstallGuide_KO.pdf,Unknown_VJ7330_InstallGuide_KO.pdf,,VJ7330,InstallGuide,KO,true,manufacturer 미식별
+Unknown_XENON-1900SD_Manual_KO.pdf,Unknown_XENON-1900SD_Manual_KO.pdf,,XENON-1900SD,Manual,KO,false,manufacturer 미식별

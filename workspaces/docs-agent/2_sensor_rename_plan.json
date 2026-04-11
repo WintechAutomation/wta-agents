@@ -1,0 +1,1372 @@
+[
+  {
+    "old_filename": "ABB_ABB_CommManual_KO.pdf",
+    "new_filename": "ABB_PCIe_CommManual_KO.pdf",
+    "manufacturer": "ABB",
+    "model": "PCIe",
+    "doctype": "CommManual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": ""
+  },
+  {
+    "old_filename": "ABB_ABB_InstallGuide_EN.pdf",
+    "new_filename": "ABB_Unknown_UserManual_JA.pdf",
+    "manufacturer": "ABB",
+    "model": "",
+    "doctype": "UserManual",
+    "language": "JA",
+    "category_valid": "true",
+    "notes": "model 미식별"
+  },
+  {
+    "old_filename": "ABB_ABB_InstallGuide_EN_2.pdf",
+    "new_filename": "ABB_G3-C00M-USR00_InstallGuide_EN.pdf",
+    "manufacturer": "ABB",
+    "model": "G3-C00M-USR00",
+    "doctype": "InstallGuide",
+    "language": "EN",
+    "category_valid": "true",
+    "notes": ""
+  },
+  {
+    "old_filename": "ABB_ABB_InstallGuide_EN_3.pdf",
+    "new_filename": "ABB_PCIe-PoE354at-PoE352at_CommManual_EN.pdf",
+    "manufacturer": "ABB",
+    "model": "PCIe-PoE354at/PoE352at",
+    "doctype": "CommManual",
+    "language": "EN",
+    "category_valid": "true",
+    "notes": ""
+  },
+  {
+    "old_filename": "ABB_ABB_InstallGuide_EN_4.pdf",
+    "new_filename": "ABB_PCIe-PoE354at-PCIe-_InstallGuide_EN.pdf",
+    "manufacturer": "ABB",
+    "model": "PCIe-PoE354at/PCIe-",
+    "doctype": "InstallGuide",
+    "language": "EN",
+    "category_valid": "false",
+    "notes": ""
+  },
+  {
+    "old_filename": "ABB_ABB_InstallGuide_EN_5.pdf",
+    "new_filename": "ABB_AREA_InstallGuide_EN.pdf",
+    "manufacturer": "ABB",
+    "model": "AREA",
+    "doctype": "InstallGuide",
+    "language": "EN",
+    "category_valid": "true",
+    "notes": ""
+  },
+  {
+    "old_filename": "ABB_ABB_InstallGuide_EN_6.pdf",
+    "new_filename": "ABB_G3-C00M-USR00_InstallGuide_EN_v2.pdf",
+    "manufacturer": "ABB",
+    "model": "G3-C00M-USR00",
+    "doctype": "InstallGuide",
+    "language": "EN",
+    "category_valid": "true",
+    "notes": ""
+  },
+  {
+    "old_filename": "ABB_ABB_MaintenanceManual_EN.pdf",
+    "new_filename": "ABB_DEUTSCH_InstallGuide_EN.pdf",
+    "manufacturer": "ABB",
+    "model": "DEUTSCH",
+    "doctype": "InstallGuide",
+    "language": "EN",
+    "category_valid": "true",
+    "notes": ""
+  },
+  {
+    "old_filename": "ABB_ABB_ParameterManual_EN.pdf",
+    "new_filename": "ABB_EURESYS_ParameterManual_EN.pdf",
+    "manufacturer": "ABB",
+    "model": "EURESYS",
+    "doctype": "ParameterManual",
+    "language": "EN",
+    "category_valid": "false",
+    "notes": ""
+  },
+  {
+    "old_filename": "ABB_ABB_SetupGuide_EN.pdf",
+    "new_filename": "ABB_Unknown_ParameterManual_EN.pdf",
+    "manufacturer": "ABB",
+    "model": "",
+    "doctype": "ParameterManual",
+    "language": "EN",
+    "category_valid": "true",
+    "notes": "model 미식별"
+  },
+  {
+    "old_filename": "ABB_ABB_UserManual_EN.pdf",
+    "new_filename": "ABB_OC-Y4CM-MUSR0_UserManual_EN.pdf",
+    "manufacturer": "ABB",
+    "model": "OC-Y4CM-MUSR0",
+    "doctype": "UserManual",
+    "language": "EN",
+    "category_valid": "true",
+    "notes": ""
+  },
+  {
+    "old_filename": "ABB_DALSA-G_InstallGuide_EN.pdf",
+    "new_filename": "ABB_DALSA-G_InstallGuide_EN.pdf",
+    "manufacturer": "ABB",
+    "model": "DALSA-G",
+    "doctype": "InstallGuide",
+    "language": "EN",
+    "category_valid": "true",
+    "notes": ""
+  },
+  {
+    "old_filename": "ABB_MX4_Manual_KO.pdf",
+    "new_filename": "ABB_MX4_CommManual_KO.pdf",
+    "manufacturer": "ABB",
+    "model": "MX4",
+    "doctype": "CommManual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": ""
+  },
+  {
+    "old_filename": "ABB_MX4_UserManual_EN.pdf",
+    "new_filename": "ABB_MX4_UserManual_EN.pdf",
+    "manufacturer": "ABB",
+    "model": "MX4",
+    "doctype": "UserManual",
+    "language": "EN",
+    "category_valid": "true",
+    "notes": ""
+  },
+  {
+    "old_filename": "ABB_PCI_InstallGuide_EN.pdf",
+    "new_filename": "ABB_PCI_CommManual_EN.pdf",
+    "manufacturer": "ABB",
+    "model": "PCI",
+    "doctype": "CommManual",
+    "language": "EN",
+    "category_valid": "true",
+    "notes": ""
+  },
+  {
+    "old_filename": "ABB_PCI_InstallGuide_EN_2.pdf",
+    "new_filename": "ABB_PCI_InstallGuide_EN.pdf",
+    "manufacturer": "ABB",
+    "model": "PCI",
+    "doctype": "InstallGuide",
+    "language": "EN",
+    "category_valid": "false",
+    "notes": ""
+  },
+  {
+    "old_filename": "ABB_SENSICK_MaintenanceManual_EN.pdf",
+    "new_filename": "ABB_SENSICK_InstallGuide_EN.pdf",
+    "manufacturer": "ABB",
+    "model": "SENSICK",
+    "doctype": "InstallGuide",
+    "language": "EN",
+    "category_valid": "true",
+    "notes": ""
+  },
+  {
+    "old_filename": "ABB_Unknown_InstallGuide_EN.pdf",
+    "new_filename": "ABB_AREA_InstallGuide_EN_v2.pdf",
+    "manufacturer": "ABB",
+    "model": "AREA",
+    "doctype": "InstallGuide",
+    "language": "EN",
+    "category_valid": "true",
+    "notes": ""
+  },
+  {
+    "old_filename": "ABB_Unknown_ParameterManual_EN.pdf",
+    "new_filename": "ABB_EURESYS_ParameterManual_EN_v2.pdf",
+    "manufacturer": "ABB",
+    "model": "EURESYS",
+    "doctype": "ParameterManual",
+    "language": "EN",
+    "category_valid": "false",
+    "notes": ""
+  },
+  {
+    "old_filename": "ABB_Unknown_SetupGuide_EN.pdf",
+    "new_filename": "ABB_Unknown_ParameterManual_EN_v2.pdf",
+    "manufacturer": "ABB",
+    "model": "",
+    "doctype": "ParameterManual",
+    "language": "EN",
+    "category_valid": "true",
+    "notes": "model 미식별"
+  },
+  {
+    "old_filename": "ABB_Unknown_UserManual_EN.pdf",
+    "new_filename": "ABB_G3-C00M-USR00_InstallGuide_EN_v3.pdf",
+    "manufacturer": "ABB",
+    "model": "G3-C00M-USR00",
+    "doctype": "InstallGuide",
+    "language": "EN",
+    "category_valid": "true",
+    "notes": ""
+  },
+  {
+    "old_filename": "Autonics_PR12-4DN_InstallGuide_KO.pdf",
+    "new_filename": "Autonics_PR12-4DN_UserManual_KO.pdf",
+    "manufacturer": "Autonics",
+    "model": "PR12-4DN",
+    "doctype": "UserManual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": ""
+  },
+  {
+    "old_filename": "Keyence_GT2_CommManual_KO.pdf",
+    "new_filename": "Keyence_GT2_CommManual_KO.pdf",
+    "manufacturer": "Keyence",
+    "model": "GT2",
+    "doctype": "CommManual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": ""
+  },
+  {
+    "old_filename": "Keyence_GT2_Manual_KO.pdf",
+    "new_filename": "Keyence_GT2_CommManual_KO_v2.pdf",
+    "manufacturer": "Keyence",
+    "model": "GT2",
+    "doctype": "CommManual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": ""
+  },
+  {
+    "old_filename": "Keyence_IL-030_CommManual_KO.pdf",
+    "new_filename": "Keyence_IL-030_CommManual_KO.pdf",
+    "manufacturer": "Keyence",
+    "model": "IL-030",
+    "doctype": "CommManual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": ""
+  },
+  {
+    "old_filename": "Keyence_IL-030_Manual_KO.pdf",
+    "new_filename": "Keyence_IL-030_CommManual_KO_v2.pdf",
+    "manufacturer": "Keyence",
+    "model": "IL-030",
+    "doctype": "CommManual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": ""
+  },
+  {
+    "old_filename": "Keyence_KEYENCE_Manual_KO.pdf",
+    "new_filename": "Keyence_G87KO_UserManual_KO.pdf",
+    "manufacturer": "Keyence",
+    "model": "G87KO",
+    "doctype": "UserManual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": ""
+  },
+  {
+    "old_filename": "Keyence_KEYENCE_UserManual_KO.pdf",
+    "new_filename": "Keyence_G87KO_UserManual_KO_v2.pdf",
+    "manufacturer": "Keyence",
+    "model": "G87KO",
+    "doctype": "UserManual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": ""
+  },
+  {
+    "old_filename": "Keyence_Unknown_CommManual_KO.pdf",
+    "new_filename": "Keyence_CMOS_UserManual_KO.pdf",
+    "manufacturer": "Keyence",
+    "model": "CMOS",
+    "doctype": "UserManual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": ""
+  },
+  {
+    "old_filename": "Keyence_Unknown_Manual_KO.pdf",
+    "new_filename": "Keyence_D05KO_UserManual_KO.pdf",
+    "manufacturer": "Keyence",
+    "model": "D05KO",
+    "doctype": "UserManual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": ""
+  },
+  {
+    "old_filename": "Keyence_Unknown_UserManual_KO.pdf",
+    "new_filename": "Keyence_CMOS_UserManual_KO_v2.pdf",
+    "manufacturer": "Keyence",
+    "model": "CMOS",
+    "doctype": "UserManual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": ""
+  },
+  {
+    "old_filename": "Keyence_Unknown_UserManual_KO_2.pdf",
+    "new_filename": "Keyence_D05KO_UserManual_KO_v2.pdf",
+    "manufacturer": "Keyence",
+    "model": "D05KO",
+    "doctype": "UserManual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": ""
+  },
+  {
+    "old_filename": "LS_HR10A-7P_InstallGuide_EN.pdf",
+    "new_filename": "LSIS_HR10A-7P_InstallGuide_EN.pdf",
+    "manufacturer": "LSIS",
+    "model": "HR10A-7P",
+    "doctype": "InstallGuide",
+    "language": "EN",
+    "category_valid": "false",
+    "notes": ""
+  },
+  {
+    "old_filename": "LS_LK-H1W-MANUAL_InstallGuide_EN.pdf",
+    "new_filename": "LSIS_LK-H1W-MANUAL_InstallGuide_EN.pdf",
+    "manufacturer": "LSIS",
+    "model": "LK-H1W-MANUAL",
+    "doctype": "InstallGuide",
+    "language": "EN",
+    "category_valid": "true",
+    "notes": ""
+  },
+  {
+    "old_filename": "LS_LK-H1W-MANUAL_OperationManual_EN.pdf",
+    "new_filename": "LSIS_LK-H1W-MANUAL_InstallGuide_EN_v2.pdf",
+    "manufacturer": "LSIS",
+    "model": "LK-H1W-MANUAL",
+    "doctype": "InstallGuide",
+    "language": "EN",
+    "category_valid": "true",
+    "notes": ""
+  },
+  {
+    "old_filename": "LS_NLS-FM305X-2X_SetupGuide_EN.pdf",
+    "new_filename": "LSIS_NLS-FM305X-2X_SetupGuide_EN.pdf",
+    "manufacturer": "LSIS",
+    "model": "NLS-FM305X-2X",
+    "doctype": "SetupGuide",
+    "language": "EN",
+    "category_valid": "true",
+    "notes": ""
+  },
+  {
+    "old_filename": "LS_PR12-4DN_InstallGuide_KO.pdf",
+    "new_filename": "Autonics_PR12-4DN_UserManual_KO_v2.pdf",
+    "manufacturer": "Autonics",
+    "model": "PR12-4DN",
+    "doctype": "UserManual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": ""
+  },
+  {
+    "old_filename": "LS_UD34944B_UserManual_EN.pdf",
+    "new_filename": "Hikrobot_UD34944B_UserManual_EN.pdf",
+    "manufacturer": "Hikrobot",
+    "model": "UD34944B",
+    "doctype": "UserManual",
+    "language": "EN",
+    "category_valid": "true",
+    "notes": ""
+  },
+  {
+    "old_filename": "LS_Unknown_CommManual_KO.pdf",
+    "new_filename": "LSIS_TIME_CommManual_KO.pdf",
+    "manufacturer": "LSIS",
+    "model": "TIME",
+    "doctype": "CommManual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": ""
+  },
+  {
+    "old_filename": "LS_Unknown_InstallGuide_EN.pdf",
+    "new_filename": "LSIS_AL-71831_UserManual_EN.pdf",
+    "manufacturer": "LSIS",
+    "model": "AL-71831",
+    "doctype": "UserManual",
+    "language": "EN",
+    "category_valid": "true",
+    "notes": ""
+  },
+  {
+    "old_filename": "LS_Unknown_MaintenanceManual_EN.pdf",
+    "new_filename": "LSIS_M100_CommManual_EN.pdf",
+    "manufacturer": "LSIS",
+    "model": "M100",
+    "doctype": "CommManual",
+    "language": "EN",
+    "category_valid": "true",
+    "notes": ""
+  },
+  {
+    "old_filename": "LS_Unknown_Manual_EN.pdf",
+    "new_filename": "LSIS_VISION_Manual_EN.pdf",
+    "manufacturer": "LSIS",
+    "model": "VISION",
+    "doctype": "Manual",
+    "language": "EN",
+    "category_valid": "true",
+    "notes": ""
+  },
+  {
+    "old_filename": "LS_Unknown_Safety_EN.pdf",
+    "new_filename": "LSIS_VISION_Manual_EN_v2.pdf",
+    "manufacturer": "LSIS",
+    "model": "VISION",
+    "doctype": "Manual",
+    "language": "EN",
+    "category_valid": "true",
+    "notes": ""
+  },
+  {
+    "old_filename": "LS_Unknown_UserManual_EN.pdf",
+    "new_filename": "LSIS_ELIIXA_UserManual_EN.pdf",
+    "manufacturer": "LSIS",
+    "model": "ELIIXA",
+    "doctype": "UserManual",
+    "language": "EN",
+    "category_valid": "true",
+    "notes": ""
+  },
+  {
+    "old_filename": "Panasonic_FX-100_SetupGuide_KO.pdf",
+    "new_filename": "Panasonic_FX-100_MaintenanceManual_KO.pdf",
+    "manufacturer": "Panasonic",
+    "model": "FX-100",
+    "doctype": "MaintenanceManual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": ""
+  },
+  {
+    "old_filename": "Panasonic_HG-C_Manual_KO.pdf",
+    "new_filename": "Panasonic_HG-C_SetupGuide_KO.pdf",
+    "manufacturer": "Panasonic",
+    "model": "HG-C",
+    "doctype": "SetupGuide",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": ""
+  },
+  {
+    "old_filename": "Panasonic_Unknown_MaintenanceManual_KO.pdf",
+    "new_filename": "Panasonic_SF4D_CommManual_KO.pdf",
+    "manufacturer": "Panasonic",
+    "model": "SF4D",
+    "doctype": "CommManual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": ""
+  },
+  {
+    "old_filename": "Panasonic_Unknown_MaintenanceManual_KO_2.pdf",
+    "new_filename": "Panasonic_FX-500_SetupGuide_KO.pdf",
+    "manufacturer": "Panasonic",
+    "model": "FX-500",
+    "doctype": "SetupGuide",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": ""
+  },
+  {
+    "old_filename": "Panasonic_Unknown_Manual_KO.pdf",
+    "new_filename": "Panasonic_SF4D_Manual_KO.pdf",
+    "manufacturer": "Panasonic",
+    "model": "SF4D",
+    "doctype": "Manual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": ""
+  },
+  {
+    "old_filename": "Panasonic_Unknown_Safety_KO.pdf",
+    "new_filename": "Panasonic_SF4D_CommManual_KO_v2.pdf",
+    "manufacturer": "Panasonic",
+    "model": "SF4D",
+    "doctype": "CommManual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": ""
+  },
+  {
+    "old_filename": "SICK_CQ4_InstallGuide_EN.pdf",
+    "new_filename": "SICK_CQ4_InstallGuide_EN.pdf",
+    "manufacturer": "SICK",
+    "model": "CQ4",
+    "doctype": "InstallGuide",
+    "language": "EN",
+    "category_valid": "true",
+    "notes": ""
+  },
+  {
+    "old_filename": "SICK_SICK_InstallGuide_EN.pdf",
+    "new_filename": "SICK_CHoose_InstallGuide_EN.pdf",
+    "manufacturer": "SICK",
+    "model": "CHoose",
+    "doctype": "InstallGuide",
+    "language": "EN",
+    "category_valid": "true",
+    "notes": ""
+  },
+  {
+    "old_filename": "SICK_SICK_MaintenanceManual_EN.pdf",
+    "new_filename": "SICK_HS_8M-ITL_UserManual_JA.pdf",
+    "manufacturer": "SICK",
+    "model": "HS_8M/ITL",
+    "doctype": "UserManual",
+    "language": "JA",
+    "category_valid": "true",
+    "notes": ""
+  },
+  {
+    "old_filename": "SICK_SICK_MaintenanceManual_KO.pdf",
+    "new_filename": "SICK_EN-IEC_InstallGuide_KO.pdf",
+    "manufacturer": "SICK",
+    "model": "EN/IEC",
+    "doctype": "InstallGuide",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": ""
+  },
+  {
+    "old_filename": "SICK_SICK_Manual_EN.pdf",
+    "new_filename": "SICK_UM30_InstallGuide_EN.pdf",
+    "manufacturer": "SICK",
+    "model": "UM30",
+    "doctype": "InstallGuide",
+    "language": "EN",
+    "category_valid": "true",
+    "notes": ""
+  },
+  {
+    "old_filename": "SICK_SICK_Manual_KO.pdf",
+    "new_filename": "SICK_CQ35-25NNP-KW1_Manual_KO.pdf",
+    "manufacturer": "SICK",
+    "model": "CQ35-25NNP-KW1",
+    "doctype": "Manual",
+    "language": "KO",
+    "category_valid": "false",
+    "notes": ""
+  },
+  {
+    "old_filename": "SICK_UM30_Manual_EN.pdf",
+    "new_filename": "SICK_UM30_InstallGuide_EN_v2.pdf",
+    "manufacturer": "SICK",
+    "model": "UM30",
+    "doctype": "InstallGuide",
+    "language": "EN",
+    "category_valid": "true",
+    "notes": ""
+  },
+  {
+    "old_filename": "SICK_Unknown_MaintenanceManual_KO.pdf",
+    "new_filename": "SICK_EN-IEC_InstallGuide_KO_v2.pdf",
+    "manufacturer": "SICK",
+    "model": "EN/IEC",
+    "doctype": "InstallGuide",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": ""
+  },
+  {
+    "old_filename": "SICK_Unknown_Manual_KO.pdf",
+    "new_filename": "SICK_CQ35-25NNP-KW1_Manual_KO_v2.pdf",
+    "manufacturer": "SICK",
+    "model": "CQ35-25NNP-KW1",
+    "doctype": "Manual",
+    "language": "KO",
+    "category_valid": "false",
+    "notes": ""
+  },
+  {
+    "old_filename": "Unknown_AL-69545-AF_Manual_KO.pdf",
+    "new_filename": "Unknown_AL-69545-AF_SetupGuide_KO.pdf",
+    "manufacturer": "",
+    "model": "AL-69545-AF",
+    "doctype": "SetupGuide",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": "manufacturer 미식별"
+  },
+  {
+    "old_filename": "Unknown_AW00015119000_InstallGuide_EN.pdf",
+    "new_filename": "Basler_AW00015119000_CommManual_EN.pdf",
+    "manufacturer": "Basler",
+    "model": "AW00015119000",
+    "doctype": "CommManual",
+    "language": "EN",
+    "category_valid": "true",
+    "notes": ""
+  },
+  {
+    "old_filename": "Unknown_AW00015119000_UserManual_EN.pdf",
+    "new_filename": "Basler_AW00015119000_CommManual_EN_v2.pdf",
+    "manufacturer": "Basler",
+    "model": "AW00015119000",
+    "doctype": "CommManual",
+    "language": "EN",
+    "category_valid": "true",
+    "notes": ""
+  },
+  {
+    "old_filename": "Unknown_AW00089316000_InstallGuide_EN.pdf",
+    "new_filename": "Basler_AW00089316000_CommManual_EN.pdf",
+    "manufacturer": "Basler",
+    "model": "AW00089316000",
+    "doctype": "CommManual",
+    "language": "EN",
+    "category_valid": "false",
+    "notes": "suggest: actuator/drive"
+  },
+  {
+    "old_filename": "Unknown_AW00089316000_UserManual_EN.pdf",
+    "new_filename": "Basler_AW00089316000_CommManual_EN_v2.pdf",
+    "manufacturer": "Basler",
+    "model": "AW00089316000",
+    "doctype": "CommManual",
+    "language": "EN",
+    "category_valid": "false",
+    "notes": "suggest: actuator/drive"
+  },
+  {
+    "old_filename": "Unknown_AW00130804000_InstallGuide_EN.pdf",
+    "new_filename": "Basler_AW00130804000_CommManual_EN.pdf",
+    "manufacturer": "Basler",
+    "model": "AW00130804000",
+    "doctype": "CommManual",
+    "language": "EN",
+    "category_valid": "false",
+    "notes": "suggest: actuator/drive"
+  },
+  {
+    "old_filename": "Unknown_DA-S_Manual_KO.pdf",
+    "new_filename": "Unknown_DA-S_SetupGuide_KO.pdf",
+    "manufacturer": "",
+    "model": "DA-S",
+    "doctype": "SetupGuide",
+    "language": "KO",
+    "category_valid": "false",
+    "notes": "manufacturer 미식별"
+  },
+  {
+    "old_filename": "Unknown_DF-20_MaintenanceManual_KO.pdf",
+    "new_filename": "Unknown_DF-20_Manual_KO.pdf",
+    "manufacturer": "",
+    "model": "DF-20",
+    "doctype": "Manual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": "manufacturer 미식별"
+  },
+  {
+    "old_filename": "Unknown_DF-20_Manual_KO.pdf",
+    "new_filename": "Unknown_DF-20_Manual_KO_v2.pdf",
+    "manufacturer": "",
+    "model": "DF-20",
+    "doctype": "Manual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": "manufacturer 미식별"
+  },
+  {
+    "old_filename": "Unknown_DF-20_Manual_KO_2.pdf",
+    "new_filename": "Unknown_DF-20_Manual_KO_v3.pdf",
+    "manufacturer": "",
+    "model": "DF-20",
+    "doctype": "Manual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": "manufacturer 미식별"
+  },
+  {
+    "old_filename": "Unknown_DF-20_Manual_KO_3.pdf",
+    "new_filename": "Unknown_DF-20_Manual_KO_v4.pdf",
+    "manufacturer": "",
+    "model": "DF-20",
+    "doctype": "Manual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": "manufacturer 미식별"
+  },
+  {
+    "old_filename": "Unknown_EX-10_Manual_KO.pdf",
+    "new_filename": "Unknown_EX-10_Manual_KO.pdf",
+    "manufacturer": "",
+    "model": "EX-10",
+    "doctype": "Manual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": "manufacturer 미식별"
+  },
+  {
+    "old_filename": "Unknown_FOQ-0527-101_Manual_KO.pdf",
+    "new_filename": "Unknown_FOQ-0527-101_Manual_KO.pdf",
+    "manufacturer": "",
+    "model": "FOQ-0527-101",
+    "doctype": "Manual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": "manufacturer 미식별"
+  },
+  {
+    "old_filename": "Unknown_FX-100_Manual_KO.pdf",
+    "new_filename": "Panasonic_FX-100_MaintenanceManual_KO_v2.pdf",
+    "manufacturer": "Panasonic",
+    "model": "FX-100",
+    "doctype": "MaintenanceManual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": ""
+  },
+  {
+    "old_filename": "Unknown_FX-300_Manual_KO.pdf",
+    "new_filename": "Unknown_FX-300_SetupGuide_KO.pdf",
+    "manufacturer": "",
+    "model": "FX-300",
+    "doctype": "SetupGuide",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": "manufacturer 미식별"
+  },
+  {
+    "old_filename": "Unknown_FX-300_WiringGuide_KO.pdf",
+    "new_filename": "Unknown_FX-300_SetupGuide_KO_v2.pdf",
+    "manufacturer": "",
+    "model": "FX-300",
+    "doctype": "SetupGuide",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": "manufacturer 미식별"
+  },
+  {
+    "old_filename": "Unknown_GFS4400_Manual_KO.pdf",
+    "new_filename": "Datalogic_GFS4400_CommManual_KO.pdf",
+    "manufacturer": "Datalogic",
+    "model": "GFS4400",
+    "doctype": "CommManual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": ""
+  },
+  {
+    "old_filename": "Unknown_GFS4500_ParameterManual_EN.pdf",
+    "new_filename": "Datalogic_GFS4500_CommManual_EN.pdf",
+    "manufacturer": "Datalogic",
+    "model": "GFS4500",
+    "doctype": "CommManual",
+    "language": "EN",
+    "category_valid": "false",
+    "notes": ""
+  },
+  {
+    "old_filename": "Unknown_GS-M_Manual_KO.pdf",
+    "new_filename": "Unknown_GS-M_Manual_KO.pdf",
+    "manufacturer": "",
+    "model": "GS-M",
+    "doctype": "Manual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": "manufacturer 미식별"
+  },
+  {
+    "old_filename": "Unknown_GX-F_Manual_KO.pdf",
+    "new_filename": "Unknown_GX-F_Manual_KO.pdf",
+    "manufacturer": "",
+    "model": "GX-F",
+    "doctype": "Manual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": "manufacturer 미식별"
+  },
+  {
+    "old_filename": "Unknown_GX-F_WiringGuide_KO.pdf",
+    "new_filename": "Unknown_GX-F_Manual_KO_v2.pdf",
+    "manufacturer": "",
+    "model": "GX-F",
+    "doctype": "Manual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": "manufacturer 미식별"
+  },
+  {
+    "old_filename": "Unknown_HL-G1_MaintenanceManual_KO.pdf",
+    "new_filename": "Unknown_HL-G1_CommManual_KO.pdf",
+    "manufacturer": "",
+    "model": "HL-G1",
+    "doctype": "CommManual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": "manufacturer 미식별"
+  },
+  {
+    "old_filename": "Unknown_HL-G1_Manual_KO.pdf",
+    "new_filename": "Unknown_HL-G1_CommManual_KO_v2.pdf",
+    "manufacturer": "",
+    "model": "HL-G1",
+    "doctype": "CommManual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": "manufacturer 미식별"
+  },
+  {
+    "old_filename": "Unknown_HR10A-7P_InstallGuide_EN.pdf",
+    "new_filename": "Unknown_HR10A-7P_InstallGuide_EN.pdf",
+    "manufacturer": "",
+    "model": "HR10A-7P",
+    "doctype": "InstallGuide",
+    "language": "EN",
+    "category_valid": "false",
+    "notes": "manufacturer 미식별"
+  },
+  {
+    "old_filename": "Unknown_LK-G_Manual_KO.pdf",
+    "new_filename": "Unknown_LK-G_Manual_KO.pdf",
+    "manufacturer": "",
+    "model": "LK-G",
+    "doctype": "Manual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": "manufacturer 미식별"
+  },
+  {
+    "old_filename": "Unknown_LK-G_UserManual_KO.pdf",
+    "new_filename": "Unknown_LK-G_Manual_KO_v2.pdf",
+    "manufacturer": "",
+    "model": "LK-G",
+    "doctype": "Manual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": "manufacturer 미식별"
+  },
+  {
+    "old_filename": "Unknown_LR-T_Manual_KO.pdf",
+    "new_filename": "Unknown_LR-T_SetupGuide_KO.pdf",
+    "manufacturer": "",
+    "model": "LR-T",
+    "doctype": "SetupGuide",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": "manufacturer 미식별"
+  },
+  {
+    "old_filename": "Unknown_LR-X250_Manual_KO.pdf",
+    "new_filename": "Unknown_LR-X250_UserManual_KO.pdf",
+    "manufacturer": "",
+    "model": "LR-X250",
+    "doctype": "UserManual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": "manufacturer 미식별"
+  },
+  {
+    "old_filename": "Unknown_LR-X250_Manual_KO_2.pdf",
+    "new_filename": "Unknown_LR-X250_UserManual_KO_v2.pdf",
+    "manufacturer": "",
+    "model": "LR-X250",
+    "doctype": "UserManual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": "manufacturer 미식별"
+  },
+  {
+    "old_filename": "Unknown_LR-X250_UserManual_KO.pdf",
+    "new_filename": "Unknown_LR-X250_UserManual_KO_v3.pdf",
+    "manufacturer": "",
+    "model": "LR-X250",
+    "doctype": "UserManual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": "manufacturer 미식별"
+  },
+  {
+    "old_filename": "Unknown_LR-X250_UserManual_KO_2.pdf",
+    "new_filename": "Unknown_LR-X250_UserManual_KO_v4.pdf",
+    "manufacturer": "",
+    "model": "LR-X250",
+    "doctype": "UserManual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": "manufacturer 미식별"
+  },
+  {
+    "old_filename": "Unknown_LR-X_MaintenanceManual_KO.pdf",
+    "new_filename": "Unknown_LR-X_SetupGuide_KO.pdf",
+    "manufacturer": "",
+    "model": "LR-X",
+    "doctype": "SetupGuide",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": "manufacturer 미식별"
+  },
+  {
+    "old_filename": "Unknown_LR-X_Manual_KO.pdf",
+    "new_filename": "Unknown_LR-X_SetupGuide_KO_v2.pdf",
+    "manufacturer": "",
+    "model": "LR-X",
+    "doctype": "SetupGuide",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": "manufacturer 미식별"
+  },
+  {
+    "old_filename": "Unknown_LR-ZB250AN_Manual_KO.pdf",
+    "new_filename": "Unknown_LR-ZB250AN_SetupGuide_KO.pdf",
+    "manufacturer": "",
+    "model": "LR-ZB250AN",
+    "doctype": "SetupGuide",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": "manufacturer 미식별"
+  },
+  {
+    "old_filename": "Unknown_LV-N_Manual_KO.pdf",
+    "new_filename": "Unknown_LV-N_UserManual_KO.pdf",
+    "manufacturer": "",
+    "model": "LV-N",
+    "doctype": "UserManual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": "manufacturer 미식별"
+  },
+  {
+    "old_filename": "Unknown_LV-N_Manual_KO_2.pdf",
+    "new_filename": "Unknown_LV-N_UserManual_KO_v2.pdf",
+    "manufacturer": "",
+    "model": "LV-N",
+    "doctype": "UserManual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": "manufacturer 미식별"
+  },
+  {
+    "old_filename": "Unknown_LV-N_Manual_KO_3.pdf",
+    "new_filename": "Unknown_LV-N_UserManual_KO_v3.pdf",
+    "manufacturer": "",
+    "model": "LV-N",
+    "doctype": "UserManual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": "manufacturer 미식별"
+  },
+  {
+    "old_filename": "Unknown_LV-N_WiringGuide_KO.pdf",
+    "new_filename": "Unknown_LV-N_UserManual_KO_v4.pdf",
+    "manufacturer": "",
+    "model": "LV-N",
+    "doctype": "UserManual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": "manufacturer 미식별"
+  },
+  {
+    "old_filename": "Unknown_MD-X_Manual_KO.pdf",
+    "new_filename": "Unknown_MD-X_Manual_KO.pdf",
+    "manufacturer": "",
+    "model": "MD-X",
+    "doctype": "Manual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": "manufacturer 미식별"
+  },
+  {
+    "old_filename": "Unknown_ML-LP_Manual_KO.pdf",
+    "new_filename": "Unknown_ML-LP_UserManual_KO.pdf",
+    "manufacturer": "",
+    "model": "ML-LP",
+    "doctype": "UserManual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": "manufacturer 미식별"
+  },
+  {
+    "old_filename": "Unknown_ML-LP_UserManual_KO.pdf",
+    "new_filename": "Unknown_ML-LP_UserManual_KO_v2.pdf",
+    "manufacturer": "",
+    "model": "ML-LP",
+    "doctype": "UserManual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": "manufacturer 미식별"
+  },
+  {
+    "old_filename": "Unknown_PR12-4DN_InstallGuide_KO.pdf",
+    "new_filename": "Autonics_PR12-4DN_UserManual_KO_v3.pdf",
+    "manufacturer": "Autonics",
+    "model": "PR12-4DN",
+    "doctype": "UserManual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": ""
+  },
+  {
+    "old_filename": "Unknown_SERIES_Manual_KO.pdf",
+    "new_filename": "Unknown_SERIES_SetupGuide_KO.pdf",
+    "manufacturer": "",
+    "model": "SERIES",
+    "doctype": "SetupGuide",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": "manufacturer 미식별"
+  },
+  {
+    "old_filename": "Unknown_SERIES_WiringGuide_KO.pdf",
+    "new_filename": "Unknown_SERIES_SetupGuide_KO_v2.pdf",
+    "manufacturer": "",
+    "model": "SERIES",
+    "doctype": "SetupGuide",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": "manufacturer 미식별"
+  },
+  {
+    "old_filename": "Unknown_STC-SB_Manual_EN_2.pdf",
+    "new_filename": "Unknown_STC-SB_CommManual_JA.pdf",
+    "manufacturer": "",
+    "model": "STC-SB",
+    "doctype": "CommManual",
+    "language": "JA",
+    "category_valid": "true",
+    "notes": "manufacturer 미식별"
+  },
+  {
+    "old_filename": "Unknown_TM-310_Manual_KO.pdf",
+    "new_filename": "Unknown_TM-310_Manual_KO.pdf",
+    "manufacturer": "",
+    "model": "TM-310",
+    "doctype": "Manual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": "manufacturer 미식별"
+  },
+  {
+    "old_filename": "Unknown_Unknown_MaintenanceManual_EN.pdf",
+    "new_filename": "Unknown_M100_CommManual_EN.pdf",
+    "manufacturer": "",
+    "model": "M100",
+    "doctype": "CommManual",
+    "language": "EN",
+    "category_valid": "true",
+    "notes": "manufacturer 미식별"
+  },
+  {
+    "old_filename": "Unknown_Unknown_MaintenanceManual_KO.pdf",
+    "new_filename": "Unknown_CLARiTYTM_CommManual_KO.pdf",
+    "manufacturer": "",
+    "model": "CLARiTYTM",
+    "doctype": "CommManual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": "manufacturer 미식별"
+  },
+  {
+    "old_filename": "Unknown_Unknown_MaintenanceManual_KO_2.pdf",
+    "new_filename": "Unknown_Unknown_MaintenanceManual_KO.pdf",
+    "manufacturer": "",
+    "model": "",
+    "doctype": "MaintenanceManual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": "manufacturer 미식별; model 미식별"
+  },
+  {
+    "old_filename": "Unknown_Unknown_MaintenanceManual_KO_3.pdf",
+    "new_filename": "Unknown_MTBF_CommManual_KO.pdf",
+    "manufacturer": "",
+    "model": "MTBF",
+    "doctype": "CommManual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": "manufacturer 미식별"
+  },
+  {
+    "old_filename": "Unknown_Unknown_Manual_EN.pdf",
+    "new_filename": "Computar_MPW2_Manual_EN.pdf",
+    "manufacturer": "Computar",
+    "model": "MPW2",
+    "doctype": "Manual",
+    "language": "EN",
+    "category_valid": "true",
+    "notes": ""
+  },
+  {
+    "old_filename": "Unknown_Unknown_Manual_EN_2.pdf",
+    "new_filename": "Unknown_DIN2_Manual_EN.pdf",
+    "manufacturer": "",
+    "model": "DIN2",
+    "doctype": "Manual",
+    "language": "EN",
+    "category_valid": "false",
+    "notes": "manufacturer 미식별"
+  },
+  {
+    "old_filename": "Unknown_Unknown_Manual_EN_3.pdf",
+    "new_filename": "Unknown_DIN2_Manual_EN_v2.pdf",
+    "manufacturer": "",
+    "model": "DIN2",
+    "doctype": "Manual",
+    "language": "EN",
+    "category_valid": "false",
+    "notes": "manufacturer 미식별"
+  },
+  {
+    "old_filename": "Unknown_Unknown_Manual_KO.pdf",
+    "new_filename": "Unknown_E3Z-L_Manual_KO.pdf",
+    "manufacturer": "",
+    "model": "E3Z-L",
+    "doctype": "Manual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": "manufacturer 미식별"
+  },
+  {
+    "old_filename": "Unknown_Unknown_Manual_KO_10.pdf",
+    "new_filename": "Unknown_CLARiTYTM_CommManual_KO_v2.pdf",
+    "manufacturer": "",
+    "model": "CLARiTYTM",
+    "doctype": "CommManual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": "manufacturer 미식별"
+  },
+  {
+    "old_filename": "Unknown_Unknown_Manual_KO_11.pdf",
+    "new_filename": "Unknown_TIME_CommManual_KO.pdf",
+    "manufacturer": "",
+    "model": "TIME",
+    "doctype": "CommManual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": "manufacturer 미식별"
+  },
+  {
+    "old_filename": "Unknown_Unknown_Manual_KO_12.pdf",
+    "new_filename": "Unknown_Unknown_Manual_KO.pdf",
+    "manufacturer": "",
+    "model": "",
+    "doctype": "Manual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": "manufacturer 미식별; model 미식별"
+  },
+  {
+    "old_filename": "Unknown_Unknown_Manual_KO_13.pdf",
+    "new_filename": "Unknown_LK-G_SetupGuide_KO.pdf",
+    "manufacturer": "",
+    "model": "LK-G",
+    "doctype": "SetupGuide",
+    "language": "KO",
+    "category_valid": "false",
+    "notes": "manufacturer 미식별"
+  },
+  {
+    "old_filename": "Unknown_Unknown_Manual_KO_14.pdf",
+    "new_filename": "Unknown_Unknown_Manual_KO_v2.pdf",
+    "manufacturer": "",
+    "model": "",
+    "doctype": "Manual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": "manufacturer 미식별; model 미식별"
+  },
+  {
+    "old_filename": "Unknown_Unknown_Manual_KO_15.pdf",
+    "new_filename": "Unknown_LK-G_SetupGuide_KO_v2.pdf",
+    "manufacturer": "",
+    "model": "LK-G",
+    "doctype": "SetupGuide",
+    "language": "KO",
+    "category_valid": "false",
+    "notes": "manufacturer 미식별"
+  },
+  {
+    "old_filename": "Unknown_Unknown_Manual_KO_16.pdf",
+    "new_filename": "Unknown_Unknown_Manual_EN.pdf",
+    "manufacturer": "",
+    "model": "",
+    "doctype": "Manual",
+    "language": "EN",
+    "category_valid": "true",
+    "notes": "manufacturer 미식별; model 미식별"
+  },
+  {
+    "old_filename": "Unknown_Unknown_Manual_KO_17.pdf",
+    "new_filename": "Unknown_IOVIS-TECH-MANUAL-2014_SetupGuide_KO.pdf",
+    "manufacturer": "",
+    "model": "IOVIS-TECH-MANUAL-2014",
+    "doctype": "SetupGuide",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": "manufacturer 미식별"
+  },
+  {
+    "old_filename": "Unknown_Unknown_Manual_KO_18.pdf",
+    "new_filename": "Unknown_IOVIS-TECH-MANUAL-2014_SetupGuide_KO_v2.pdf",
+    "manufacturer": "",
+    "model": "IOVIS-TECH-MANUAL-2014",
+    "doctype": "SetupGuide",
+    "language": "KO",
+    "category_valid": "false",
+    "notes": "manufacturer 미식별"
+  },
+  {
+    "old_filename": "Unknown_Unknown_Manual_KO_19.pdf",
+    "new_filename": "Unknown_Unknown_Manual_KO_v3.pdf",
+    "manufacturer": "",
+    "model": "",
+    "doctype": "Manual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": "manufacturer 미식별; model 미식별"
+  },
+  {
+    "old_filename": "Unknown_Unknown_Manual_KO_2.pdf",
+    "new_filename": "Unknown_Unknown_Manual_EN_v2.pdf",
+    "manufacturer": "",
+    "model": "",
+    "doctype": "Manual",
+    "language": "EN",
+    "category_valid": "true",
+    "notes": "manufacturer 미식별; model 미식별"
+  },
+  {
+    "old_filename": "Unknown_Unknown_Manual_KO_3.pdf",
+    "new_filename": "Unknown_SERIES_Catalog_KO.pdf",
+    "manufacturer": "",
+    "model": "SERIES",
+    "doctype": "Catalog",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": "manufacturer 미식별"
+  },
+  {
+    "old_filename": "Unknown_Unknown_Manual_KO_4.pdf",
+    "new_filename": "Unknown_IOVIS-TECH-MANUAL-2014_SetupGuide_KO_v3.pdf",
+    "manufacturer": "",
+    "model": "IOVIS-TECH-MANUAL-2014",
+    "doctype": "SetupGuide",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": "manufacturer 미식별"
+  },
+  {
+    "old_filename": "Unknown_Unknown_Manual_KO_5.pdf",
+    "new_filename": "Unknown_Unknown_MaintenanceManual_KO_v2.pdf",
+    "manufacturer": "",
+    "model": "",
+    "doctype": "MaintenanceManual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": "manufacturer 미식별; model 미식별"
+  },
+  {
+    "old_filename": "Unknown_Unknown_Manual_KO_6.pdf",
+    "new_filename": "Unknown_IOVIS-TECH-MANUAL-2014_SetupGuide_KO_v4.pdf",
+    "manufacturer": "",
+    "model": "IOVIS-TECH-MANUAL-2014",
+    "doctype": "SetupGuide",
+    "language": "KO",
+    "category_valid": "false",
+    "notes": "manufacturer 미식별"
+  },
+  {
+    "old_filename": "Unknown_Unknown_Manual_KO_7.pdf",
+    "new_filename": "Panasonic_FX-500_SetupGuide_KO_v2.pdf",
+    "manufacturer": "Panasonic",
+    "model": "FX-500",
+    "doctype": "SetupGuide",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": ""
+  },
+  {
+    "old_filename": "Unknown_Unknown_Manual_KO_8.pdf",
+    "new_filename": "Unknown_Unknown_Manual_KO_v4.pdf",
+    "manufacturer": "",
+    "model": "",
+    "doctype": "Manual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": "manufacturer 미식별; model 미식별"
+  },
+  {
+    "old_filename": "Unknown_Unknown_Manual_KO_9.pdf",
+    "new_filename": "Unknown_MTBF_CommManual_KO_v2.pdf",
+    "manufacturer": "",
+    "model": "MTBF",
+    "doctype": "CommManual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": "manufacturer 미식별"
+  },
+  {
+    "old_filename": "Unknown_VERSION_MaintenanceManual_KO.pdf",
+    "new_filename": "Unknown_VERSION_Manual_KO.pdf",
+    "manufacturer": "",
+    "model": "VERSION",
+    "doctype": "Manual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": "manufacturer 미식별"
+  },
+  {
+    "old_filename": "Unknown_VERSION_Manual_KO.pdf",
+    "new_filename": "Unknown_VERSION_Manual_KO_v2.pdf",
+    "manufacturer": "",
+    "model": "VERSION",
+    "doctype": "Manual",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": "manufacturer 미식별"
+  },
+  {
+    "old_filename": "Unknown_VJ1620HR_CommManual_KO.pdf",
+    "new_filename": "Unknown_VJ1620HR_CommManual_KO.pdf",
+    "manufacturer": "",
+    "model": "VJ1620HR",
+    "doctype": "CommManual",
+    "language": "KO",
+    "category_valid": "false",
+    "notes": "manufacturer 미식별"
+  },
+  {
+    "old_filename": "Unknown_VJ1620HR_Manual_KO.pdf",
+    "new_filename": "Unknown_VJ1620HR_CommManual_KO_v2.pdf",
+    "manufacturer": "",
+    "model": "VJ1620HR",
+    "doctype": "CommManual",
+    "language": "KO",
+    "category_valid": "false",
+    "notes": "manufacturer 미식별"
+  },
+  {
+    "old_filename": "Unknown_VJ7330_InstallGuide_KO.pdf",
+    "new_filename": "Unknown_VJ7330_InstallGuide_KO.pdf",
+    "manufacturer": "",
+    "model": "VJ7330",
+    "doctype": "InstallGuide",
+    "language": "KO",
+    "category_valid": "true",
+    "notes": "manufacturer 미식별"
+  },
+  {
+    "old_filename": "Unknown_XENON-1900SD_Manual_KO.pdf",
+    "new_filename": "Unknown_XENON-1900SD_Manual_KO.pdf",
+    "manufacturer": "",
+    "model": "XENON-1900SD",
+    "doctype": "Manual",
+    "language": "KO",
+    "category_valid": "false",
+    "notes": "manufacturer 미식별"
+  }
+]

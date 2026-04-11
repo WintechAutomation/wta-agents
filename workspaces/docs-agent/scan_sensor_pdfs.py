@@ -67,6 +67,30 @@ SENSOR_KEYWORDS = [
     'measurement', 'detector', 'optical', 'image processing', 'machine vision',
 ]
 
+# 모델 접두어 기반 제조사 추정 (본문/파일명에서 제조사 미식별 시)
+MODEL_PREFIX_MFR = [
+    # Keyence
+    (re.compile(r'^(AL|CA|CV|DL|DF|EM|FD|FS|FU|GT2|HL-G|IA|IB|IG|IL|IM|IV|IX|KV|LJ|LK|LR-[TXZ]|LS-|LT|LV|MD-X|MK|ML|MR|NA|NR|OP|PJ|PN|PS|PZ|SJ|SL|SR|ST-|TM|UD|VF|VT|XG|XT|GL-R)', re.I), 'Keyence'),
+    # Panasonic (SUNX)
+    (re.compile(r'^(CX-|EX-|FT-|FX-|GA-|GS-|GU-|GX-|HG-|LA-|LG-|LX-|NX-|PM-|RX-|SU-|UX-|EZ-|CN-|ER-)', re.I), 'Panasonic'),
+    # Omron
+    (re.compile(r'^(E3[A-Z]|E2[A-Z]|F3S|F39|V400|V530|Z4[A-Z])', re.I), 'Omron'),
+    # Videojet
+    (re.compile(r'^(VJ|CLARiTY)', re.I), 'Videojet'),
+    # Honeywell
+    (re.compile(r'^XENON', re.I), 'Honeywell'),
+    # Cognex (IS/ISXX/DM/InSight)
+    (re.compile(r'^(IS|DM|AW000)', re.I), 'Cognex'),
+]
+
+def infer_mfr_by_model(model):
+    if not model:
+        return ''
+    for pat, mfr in MODEL_PREFIX_MFR:
+        if pat.match(model):
+            return mfr
+    return ''
+
 NON_SENSOR_HINTS = {
     'drive': 'actuator/drive',
     'servo': 'actuator/motion',
@@ -197,6 +221,11 @@ def analyze(filename):
     doctype = detect_doctype(text, filename)
     lang = detect_language(text)
     model = detect_model(text, mfr, filename)
+    # 모델 접두어로 제조사 추정
+    if not mfr:
+        inferred = infer_mfr_by_model(model)
+        if inferred:
+            mfr = inferred
     valid, sug = check_sensor_category(text)
 
     # new filename 생성
@@ -211,9 +240,11 @@ def analyze(filename):
 
     notes = []
     if not mfr:
-        notes.append('manufacturer 미식별')
+        notes.append('manufacturer unidentified')
+    elif not detect_manufacturer(text, filename):
+        notes.append(f'mfr inferred from model prefix')
     if not model:
-        notes.append('model 미식별')
+        notes.append('model unidentified')
     if sug:
         notes.append(sug)
 
