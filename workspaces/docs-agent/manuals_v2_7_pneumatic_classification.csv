@@ -1,0 +1,66 @@
+﻿idx,status,category,old_filename,new_filename,mfr,model,doctype,lang,size,pages,md5
+1,ok,7_pneumatic,01머리말.pdf,Unknown_Unknown_MaintenanceManual_KO.pdf,Unknown,Unknown,MaintenanceManual,KO,28256,2,73d4f300487fe4a6ecb79db350c84aac
+2,ok,7_pneumatic,01개봉.pdf,Phoenix_Unknown_MaintenanceManual_KO.pdf,Phoenix,Unknown,MaintenanceManual,KO,79759,2,7270fbb06c577dda722cc5edd901f6b2
+3,ok,7_pneumatic,08응용예.pdf,Unknown_Unknown_WiringGuide_KO.pdf,Unknown,Unknown,WiringGuide,KO,351758,16,a2e9d75e3b9e507dc79a55b1f1aa8aab
+4,ok,7_pneumatic,02설치.pdf,Unknown_Unknown_Manual_KO.pdf,Unknown,Unknown,Manual,KO,345759,10,0786eda066e2fd474d12a923a8c09148
+5,ok,7_pneumatic,09게인조정.pdf,Unknown_Unknown_ParameterManual_KO.pdf,Unknown,Unknown,ParameterManual,KO,273055,8,9c16400c349a122db4491e97bd649a16
+6,ok,7_pneumatic,11보수점검과 트러블슈트.pdf,Unknown_Unknown_Troubleshooting_KO.pdf,Unknown,Unknown,Troubleshooting,KO,264450,6,bf1f525bc1bee424c2c4c9e10e996932
+7,ok,7_pneumatic,00표지.pdf,Unknown_Unknown_MaintenanceManual_KO_v2.pdf,Unknown,Unknown,MaintenanceManual,KO,301687,10,a3c64a79da7a27f480fb7c9acb1185f0
+8,ok,7_pneumatic,10알람.pdf,Unknown_Unknown_Troubleshooting_KO_v2.pdf,Unknown,Unknown,Troubleshooting,KO,227225,6,7a8ffe2a51db5132beac04cabe540981
+9,ocr,7_pneumatic,04_RS4 SERIES GEARED MOTOR.pdf,Unknown_RS4_Manual_EN.pdf,Unknown,RS4,Manual,EN,535447,1,bec037f4cb76a73004bf14e732fef27e
+10,ok,7_pneumatic,12통신기능.pdf,Unknown_Unknown_ParameterManual_KO_v2.pdf,Unknown,Unknown,ParameterManual,KO,330572,10,7de22c242b706466a3925db9235a4626
+11,ok,7_pneumatic,13액츄에이터 사양.pdf,Unknown_Unknown_ParameterManual_KO_v3.pdf,Unknown,Unknown,ParameterManual,KO,210063,6,e21293c6fe8b461523776d316134e5bc
+12,ok,7_pneumatic,11.DB.17.001_ELMON_rail_41-322___41-822_Betriebsanleitung_Rev_10_DE_EN_FR_02.pdf,Unknown_DB_Manual_EN.pdf,Unknown,DB,Manual,EN,1044726,36,d8e4b404e305d98d22010196bf367f8a
+13,ok,7_pneumatic,06프로그램.pdf,Unknown_Unknown_SetupGuide_KO.pdf,Unknown,Unknown,SetupGuide,KO,438400,18,5fee47fee79af0e7b4f0dbf1d5527eb1
+14,ok,7_pneumatic,07 파라메터의 설정.pdf,Unknown_Unknown_SetupGuide_KO_v2.pdf,Unknown,Unknown,SetupGuide,KO,786594,32,33d0d9f81bce423127c0cf2b6bbb7883
+15,ok,7_pneumatic,03시스템구성과 배선.pdf,Unknown_Unknown_MaintenanceManual_KO_v3.pdf,Unknown,Unknown,MaintenanceManual,KO,599429,24,a8e3028f1e8d8886c232aac3cf7374ee
+16,ok,7_pneumatic,04시운전.pdf,Unknown_Unknown_ParameterManual_KO_v4.pdf,Unknown,Unknown,ParameterManual,KO,738613,32,ee26dc3bc40096650936b2f4aefc7da2
+17,ok,7_pneumatic,Back-UPS Pro_BR550GI_APC.pdf,Unknown_Back-UPS_MaintenanceManual_KO.pdf,Unknown,Back-UPS,MaintenanceManual,KO,124034,3,48567a58ad7735effd574ac9da714000
+18,ocr,7_pneumatic,BX1600MI-GR_DATASHEET_KR_ko-KR.pdf,Unknown_BX1600MI-GR_Datasheet_EN.pdf,Unknown,BX1600MI-GR,Datasheet,EN,117488,0,62d65b55709b31abb5f5069155980811
+19,ok,7_pneumatic,14드라이버 사양.pdf,Unknown_Unknown_Catalog_KO.pdf,Unknown,Unknown,Catalog,KO,232318,4,584500bdef994515e909dfa187510c20
+20,ocr,7_pneumatic,BR550GI EALN-7PTMAJ_R0_EN.pdf,Unknown_BR550GI_Manual_EN.pdf,Unknown,BR550GI,Manual,EN,203344,0,d34d2f71cbfc2b86eb1885aceba8c198
+21,ocr,7_pneumatic,Diagram_PNOZ_S3_E_Stop.pdf,Unknown_Diagram_Manual_EN.pdf,Unknown,Diagram,Manual,EN,122672,0,febc73b197892574800fddc9e5d874ce
+22,ocr,7_pneumatic,Diagram_PNOZ_S3_PSEN_CS2.1p.pdf,Unknown_Diagram_Manual_EN_v2.pdf,Unknown,Diagram,Manual,EN,140464,0,9db785701832cedf705cb2354f431752
+23,ocr,7_pneumatic,BK500_KO.pdf,Unknown_BK500_Manual_EN.pdf,Unknown,BK500,Manual,EN,784832,0,8191cbcf7ad8ac6cef040f62c52f3f8f
+24,ok,7_pneumatic,KIN.BNT.RS-232.pdf,Unknown_KIN_Manual_EN.pdf,Unknown,KIN,Manual,EN,16917,1,496610cccca22129625a52839408d336
+25,ocr,7_pneumatic,BR550GI - EALN-7PTMAJ_R0_KO.pdf,Unknown_BR550GI_Manual_EN_v2.pdf,Unknown,BR550GI,Manual,EN,519504,0,b2ed3fd6666b7829ba69c9814da675ec
+26,ocr,7_pneumatic,AN_PNOZs3_L-Curtain_op4F-s_1002208-EN-02.pdf,Unknown_AN_Manual_EN.pdf,Unknown,AN,Manual,EN,737168,0,f2dab8d483421e41248fddd2814db3ca
+27,ok,7_pneumatic,KING SERIES PROTOCOL.pdf,Unknown_KING_SetupGuide_EN.pdf,Unknown,KING,SetupGuide,EN,6288,1,28e8a9fe22a3abe8392afe66d2a35fde
+28,ok,7_pneumatic,05IO의사용방법.pdf,Unknown_IO_MaintenanceManual_KO.pdf,Unknown,IO,MaintenanceManual,KO,799672,38,3ee1c551f24bdaa0536e4fb8c4f0ec30
+29,ok,7_pneumatic,CP_DC_UPS_24V_20A_10A_en.pdf,Unknown_CP_Catalog_EN.pdf,Unknown,CP,Catalog,EN,243467,5,c3d870c5d1ae1f177ebcfe0cfcc062f5
+30,ok,7_pneumatic,APC_MSDS_EU_EN.pdf,Schneider_MSDS_Datasheet_EN.pdf,Schneider,MSDS,Datasheet,EN,508680,11,9f4260abe41da131855b8e2d54c2667d
+31,ok,7_pneumatic,BE700KR 700VA.pdf,Schneider_BE700KR_WiringGuide_KO.pdf,Schneider,BE700KR,WiringGuide,KO,389346,2,f262b9a0e8cec0658b943daf6e1e3cf4
+32,ocr,7_pneumatic,Fly_PNOZmulti_2_success_story_1005135-KO-01.pdf,Unknown_Fly_Manual_EN.pdf,Unknown,Fly,Manual,EN,1046720,0,42dcd5e5ccdf358e2de191846342a3fc
+33,ocr,7_pneumatic,LRS-100-SPEC.PDF,Unknown_LRS-100-SPEC_Manual_EN.PDF,Unknown,LRS-100-SPEC,Manual,EN,702608,0,a02d63d8a54f0940b793223f7e293a80
+34,ok,7_pneumatic,EALN-7PTMAJ_R0_KO.pdf,Unknown_EALN-7PTMAJ_Manual_KO.pdf,Unknown,EALN-7PTMAJ,Manual,KO,518984,8,4cfc9d08d1e4b6122c38d307b62a0901
+35,ocr,7_pneumatic,Pilz PNOZ S3 메뉴얼.pdf,Unknown_Pilz_Manual_EN.pdf,Unknown,Pilz,Manual,EN,1297536,0,75e1c9e7ee87b9f996b3c4371bc89b7c
+36,ocr,7_pneumatic,Pilz multi2 메뉴얼.pdf,Unknown_Pilz_Manual_EN_v2.pdf,Unknown,Pilz,Manual,EN,1306912,0,16fd9e002bf8b0bf2ac55104733fb489
+37,ok,7_pneumatic,LR4_사양_DC+Type+(En).pdf,Unknown_LR4_WiringGuide_JA.pdf,Unknown,LR4,WiringGuide,JA,1391839,15,1ef3044afd22d5ddb8888f861433443d
+38,ok,7_pneumatic,Schneider Electric_BackUPS_BX950MI-GR.pdf,Schneider_Schneider_Datasheet_KO.pdf,Schneider,Schneider,Datasheet,KO,432999,5,7ee755ccf98ecacd17c4322dc7bb0aeb
+39,ocr,7_pneumatic,UP30S Series.pdf,Yaskawa_UP30S_Manual_EN.pdf,Yaskawa,UP30S,Manual,EN,801738,2,a78d75529c872cb7968f658cff1866e4
+40,ok,7_pneumatic,IS_CPDCUPS24VxxA.pdf,Cognex_IS_Manual_EN.pdf,Cognex,IS,Manual,EN,4881343,4,30ca5120e92f2f0904fbda85211217ed
+41,ocr,7_pneumatic,#3 CHINT_LV Brief Catalog_KOR.pdf,Unknown_CHINT_Catalog_EN.pdf,Unknown,CHINT,Catalog,EN,5348016,0,673ac60b9aff7e24f9020f790fd73f24
+42,ocr,7_pneumatic,S9R50G.pdf,Unknown_S9R50G_Manual_EN.pdf,Unknown,S9R50G,Manual,EN,775682,2,e3376d3879fef797afbef36d70e96af3
+43,ocr,7_pneumatic,UP75S Series.pdf,Yaskawa_UP75S_Manual_EN.pdf,Yaskawa,UP75S,Manual,EN,783965,2,3c33e32d2c592f1b6611f3dacbffce17
+44,ocr,7_pneumatic,BLDC Controller (XBD Type) Manua_KR-복사.pdf,Unknown_BLDC_Manual_EN.pdf,Unknown,BLDC,Manual,EN,6975913,30,d84e8d62aa94e16b176795748b2afdc2
+45,ocr,7_pneumatic,PNOZmulti+configurator+사용자+메뉴얼-2 (1).pdf,Keyence_PNOZmulti_Manual_EN.pdf,Keyence,PNOZmulti,Manual,EN,2859920,0,1671ec282c90329ce285e0eb1211d54c
+46,ok,7_pneumatic,SMB-55E.pdf,Unknown_SMB-55E_MaintenanceManual_EN.pdf,Unknown,SMB-55E,MaintenanceManual,EN,2139218,259,a24ce6e2199e30f18fadc093e822216c
+47,ok,7_pneumatic,VFS2000_Valve.pdf,Keyence_VFS2000_StandardSpec_EN.pdf,Keyence,VFS2000,StandardSpec,EN,1339684,15,c1328ed16e1538a94a70ca9e56d81273
+48,ocr,7_pneumatic,[Pilz Korea] Licence_오토콘시스템.pdf,Unknown_Pilz_Manual_EN_v3.pdf,Unknown,Pilz,Manual,EN,291344,0,5852368ed411dd988e4a75143652f90b
+49,ocr,7_pneumatic,SS 표준 TYPE.pdf,Unknown_SS_Manual_EN.pdf,Unknown,SS,Manual,EN,824173,9,2cf4120f98e2829ec96b6a060548d163
+50,ocr,7_pneumatic,[7] Sol Valve (VNB211A-15A-2DZ).pdf,Unknown_Sol_Manual_EN.pdf,Unknown,Sol,Manual,EN,980064,0,f51ece581b70418baf4b67e1718d81a3
+51,ok,7_pneumatic,XBA SERIES.pdf,Unknown_XBA_Manual_KO.pdf,Unknown,XBA,Manual,KO,4329729,23,958248715f42f1ccb379b2394769fb68
+52,ocr,7_pneumatic,CC995K.pdf,Unknown_CC995K_CCLinkInterface_KO.pdf,Unknown,CC995K,CCLinkInterface,KO,12490309,68,d786a82734a83dddf507d6b66871d340
+53,ocr,7_pneumatic,와고_SMPS_베이스라인.pdf,Unknown_SMPS_Manual_EN.pdf,Unknown,SMPS,Manual,EN,1810224,0,5a79ffdb3215e20c28359b85fc947531
+54,ok,7_pneumatic,석션 어시스트밸브(ZP2V).pdf,Unknown_ZP2V_Manual_KO.pdf,Unknown,ZP2V,Manual,KO,11023168,10,7d2b3c4644a4aa1616f9a1b18ab16a0c
+55,ocr,7_pneumatic,NV_400-800_LV-HV_UM.pdf,Unknown_NV_Manual_EN.pdf,Unknown,NV,Manual,EN,3250001,12,68b4fcfd2d7908c63ce75b3efa40551d
+56,ok,7_pneumatic,VT307.pdf,Keyence_VT307_StandardSpec_EN.pdf,Keyence,VT307,StandardSpec,EN,1273097,12,9897cf40d4b44ff1b5b91c8ea8b30692
+57,ok,7_pneumatic,VXD-A_EU.pdf,Unknown_VXD-A_StandardSpec_EN.pdf,Unknown,VXD-A,StandardSpec,EN,3188838,48,1f76f8f722e0f7a8633ab8d6ad126603
+58,ocr,7_pneumatic,[8] Sol Valve (VX220MG).pdf,Unknown_Sol_Manual_EN_v2.pdf,Unknown,Sol,Manual,EN,5658912,0,ea0b6ec6ba3bc24b75a09b83c033b8f5
+59,ocr,7_pneumatic,Pilz 컨트롤러 카달로그 - 국문.pdf,Unknown_Pilz_Manual_EN_v4.pdf,Unknown,Pilz,Manual,EN,10881968,0,c036be16f3cd044023cae9f49519fb19
+60,ok,7_pneumatic,LR4_사용+설명서+(한국어).pdf,Unknown_LR4_MaintenanceManual_KO.pdf,Unknown,LR4,MaintenanceManual,KO,1411725,1,79a0aa8bc991a0cc45647d9fbde709a9
+61,ocr,7_pneumatic,LCE_카다로그.pdf,Unknown_LCE_MaintenanceManual_KO.pdf,Unknown,LCE,MaintenanceManual,KO,3658770,6,c02e9e38cdabdce5c754cb1ea7f79272
+62,ok,7_pneumatic,LR5 사용설명서.pdf,Unknown_LR5_MaintenanceManual_KO.pdf,Unknown,LR5,MaintenanceManual,KO,1411725,1,bf1afeee41c5fa933d52231e03122fc2
+63,ocr,7_pneumatic,CLS.pdf,Unknown_CLS_Manual_EN.pdf,Unknown,CLS,Manual,EN,13965344,0,44ecdc9f4ceee85b177948317fd7385c
+64,ocr,7_pneumatic,[6] Sol Valve (VF3000 Series).pdf,Unknown_Sol_Manual_EN_v3.pdf,Unknown,Sol,Manual,EN,14596672,0,1cd972b884afe0c7c44d5cb1812ee247
+65,ocr,7_pneumatic,Safect 종합 카다로그 K-ver.04.pdf,Unknown_Safect_Manual_EN.pdf,Unknown,Safect,Manual,EN,75760688,0,8339a6c4528c9f2a1b12023bdd5d596e

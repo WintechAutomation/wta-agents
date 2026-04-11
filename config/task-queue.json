@@ -4763,6 +4763,42 @@
       "updated_at": "2026-04-11 21:58:30",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-docs-agent-c59479",
+      "agent": "docs-agent",
+      "task": "[중요 요구사항] 부서장 우려: 매뉴얼 본문과 첨부 이미지(그림/도면/회로도)의 관계성을 잃지 않는 것이 가장 중요.",
+      "message": "[중요 요구사항] 부서장 우려: 매뉴얼 본문과 첨부 이미지(그림/도면/회로도)의 관계성을 잃지 않는 것이 가장 중요.\n\n파싱/청킹/저장 단계에서 텍스트-이미지 연결을 어떻게 보존할지 구체적 설계 필요:\n\n1) **이미지 추출**: Docling이 PDF에서 이미지/그림/표를 어떻게 뽑고, 페이지/위치 메타데이터를 같이 남기는지\n2) **캡션 연결**: \"그림 3.2\", \"Fig. 5\", \"표 2-1\" 같은 참조가 본문에 있을 때 이미지와 자동 매칭하는 방식\n3) **청크 단위 연결**: 청크에 이미지 URI/경로/bbox 같이 저장해서 검색 시 함께 반환\n4) **이미지 저장**: Supabase Storage 업로드 vs 로컬 경로 유지\n5) **멀티모달 임베딩**: 이미지 자체를 벡터화할지 (Jina CLIP v2, Qwen2.5-VL 등) vs 캡션만 벡터화\n6) **검색 시 반환**: RAG 응답에 관련 이미지 같이 보여주는 방식 (LLM에 이미지 설명 프롬프트 / 프론트에 링크 렌더)\n7) **GraphRAG 엔티티**: 그림/도면을 별도 엔티티로 추가할지 (예: \"모터 결선도\" 노드)\n\nresearch-agent에도 동일 우려 전달 중. 너는 Docling 기능 관점에서 구체적 구현 방안 회신 부탁해. 15~20분.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 22:01:43",
+      "updated_at": "2026-04-11 22:01:43",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-research-agent-fd035b",
+      "agent": "research-agent",
+      "task": "[리서치 추가 항목] 부서장 핵심 우려: 매뉴얼 본문과 첨부 이미지(그림/도면/회로도)의 관계성 보존이 가장 중요.",
+      "message": "[리서치 추가 항목] 부서장 핵심 우려: 매뉴얼 본문과 첨부 이미지(그림/도면/회로도)의 관계성 보존이 가장 중요.\n\n기존 리서치에 다음 항목 꼭 추가:\n\nA) **텍스트-이미지 alignment 베스트 프랙티스** (2025~2026 RAG 동향)\n   - \"Figure/그림/Fig.\" 참조 본문 ↔ 이미지 자동 매칭 알고리즘\n   - 페이지 bbox 기반 proximity matching\n   - caption detection (Donut, Nougat 등)\n\nB) **멀티모달 RAG 현황**\n   - CLIP 계열: Jina-CLIP-v2, NV-CLIP, SigLIP, ColPali\n   - VLM 계열: Qwen2.5-VL, InternVL2.5, LLaVA-OV, Molmo\n   - 산업 도면/회로도/테이블 인식 품질 비교\n   - 한글 매뉴얼 대응 모델\n\nC) **ColPali / ColQwen2** (document retrieval 신흥 접근)\n   - 페이지 이미지 전체를 multi-vector 인코딩\n   - 텍스트 추출 없이 시각-언어 검색 직접 수행\n   - 장단점, 산업 매뉴얼 적용성\n\nD) **이미지 메타데이터 저장 스키마 권장**\n   - 청크-이미지 N:M 관계 테이블 설계\n   - bbox/page/caption/type(figure/table/schematic) 필드\n\nE) **Docling 이미지 처리 기능** 구체\n   - picture 객체 추출 범위\n   - layout model이 회로도/도면을 얼마나 잘 감지\n   - 한계점\n\n응답은 A~E 각 3~5줄 핵심 요약 + 참고 URL. 기존 1~6 항목과 함께 통합 보고. 시간 우선.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 22:01:55",
+      "updated_at": "2026-04-11 22:01:55",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-research-agent-5ecd8f",
+      "agent": "research-agent",
+      "task": "[진행 확인] 부서장이 조사 결과 대기 중. 지금 어느 항목까지 진행됐어? 완료된 부분부터라도 먼저 보내도 돼. 15분 내 중간 결과 회신 부탁.",
+      "message": "[진행 확인] 부서장이 조사 결과 대기 중. 지금 어느 항목까지 진행됐어? 완료된 부분부터라도 먼저 보내도 돼. 15분 내 중간 결과 회신 부탁.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 22:05:19",
+      "updated_at": "2026-04-11 22:05:19",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }
