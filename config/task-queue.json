@@ -4049,24 +4049,24 @@
       "agent": "dev-agent",
       "task": "[MES] 협력업체정보 NaN 버그 수정 (생산관리 > 협력업체정보)",
       "message": "",
-      "status": "pending",
+      "status": "done",
       "priority": "high",
       "created_at": "2026-04-11 10:59:25",
-      "updated_at": "2026-04-11 10:59:25",
+      "updated_at": "2026-04-11 11:17:27",
       "last_report_at": null,
-      "completed_at": null
+      "completed_at": "2026-04-11 11:17:27"
     },
     {
       "id": "tq-dev-agent-808e91",
       "agent": "dev-agent",
       "task": "[MES] 라우트 미등록 8건 페이지 구현 (스케줄러/POP/메일/챗봇/라벨프린터/NAS/ERP관리/알림설정)",
       "message": "",
-      "status": "pending",
+      "status": "done",
       "priority": "medium",
       "created_at": "2026-04-11 10:59:26",
-      "updated_at": "2026-04-11 10:59:26",
+      "updated_at": "2026-04-11 11:17:27",
       "last_report_at": null,
-      "completed_at": null
+      "completed_at": "2026-04-11 11:17:27"
     },
     {
       "id": "tq-db-manager-1bd446",
@@ -4097,12 +4097,12 @@
       "agent": "docs-agent",
       "task": "[경상연구개발 재작성] #1 장비물류 + #5 호닝형상검사기 - 개발보고서+연구일지 각 2종, Confluence 원본 그대로, 이미지 포함",
       "message": "",
-      "status": "pending",
+      "status": "done",
       "priority": "high",
       "created_at": "2026-04-11 11:05:14",
-      "updated_at": "2026-04-11 11:05:14",
+      "updated_at": "2026-04-11 11:16:21",
       "last_report_at": null,
-      "completed_at": null
+      "completed_at": "2026-04-11 11:16:21"
     },
     {
       "id": "tq-dev-agent-63013f",
@@ -4113,6 +4113,18 @@
       "priority": "medium",
       "created_at": "2026-04-11 11:09:29",
       "updated_at": "2026-04-11 11:09:29",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-qa-agent-e85c7e",
+      "agent": "qa-agent",
+      "task": "[MES 검증 요청]",
+      "message": "[MES 검증 요청]\n\ndev-agent 수정 완료:\n\n1) 협력업체정보 NaN 버그 수정\n   - URL: /production/partner-management (MES 프론트엔드)\n   - 통계 카드 4종 NaN 방어 2중화\n   - 검증: 통계 카드 수치가 NaN 없이 정상 숫자 표시되는지\n\n2) 스케줄러 관리 서브라우트 탭 전환 버그 수정\n   - URL 4개: /system/scheduler-management, /scheduler-management/..., 등\n   - useLocation/useNavigate로 URL ↔ 탭 동기화\n   - 검증: 각 서브라우트 URL 직접 접근 시 해당 탭이 활성화되는지\n\nMES 외부 접속: https://mes-wta.com\n결과 MAX에게 보고.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 11:17:22",
+      "updated_at": "2026-04-11 11:17:22",
       "last_report_at": null,
       "completed_at": null
     }
