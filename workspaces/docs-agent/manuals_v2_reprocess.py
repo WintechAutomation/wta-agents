@@ -30,6 +30,8 @@ from chunk_postprocess import postprocess, stats  # noqa
 WORK_ROOT = Path(r'C:\MES\wta-agents\workspaces\docs-agent\v2_poc')
 CRAFTER_OUT = Path(r'C:\MES\wta-agents\workspaces\crafter')
 LOG_PATH = CRAFTER_OUT / 'manuals_v2_reprocess.log'
+STATE_PATH = CRAFTER_OUT / 'manuals_v2_reprocess_state.json'
+TASK_ID = 'manuals_v2_reprocess_poc10'
 
 QWEN_URL = 'http://182.224.6.147:11434/api/embed'
 QWEN_MODEL = 'qwen3-embedding:8b'
@@ -44,6 +46,63 @@ def log(msg: str):
     print(line)
     with open(LOG_PATH, 'a', encoding='utf-8') as f:
         f.write(line + '\n')
+
+
+def _now_iso() -> str:
+    from datetime import datetime, timezone, timedelta
+    kst = timezone(timedelta(hours=9))
+    return datetime.now(kst).isoformat(timespec='seconds')
+
+
+def load_state() -> dict | None:
+    if STATE_PATH.exists():
+        try:
+            return json.loads(STATE_PATH.read_text(encoding='utf-8'))
+        except Exception:
+            return None
+    return None
+
+
+def save_state(state: dict):
+    state['last_update'] = _now_iso()
+    tmp = STATE_PATH.with_suffix('.json.tmp')
+    tmp.write_text(json.dumps(state, ensure_ascii=False, indent=2), encoding='utf-8')
+    tmp.replace(STATE_PATH)
+
+
+def init_state(file_ids: list[str]) -> dict:
+    """기존 state 있으면 재사용, 없으면 새로 생성."""
+    prev = load_state()
+    if prev and prev.get('task_id') == TASK_ID:
+        # 누락된 item 보강
+        existing_ids = {it['id'] for it in prev.get('items', [])}
+        for fid in file_ids:
+            if fid not in existing_ids:
+                prev.setdefault('items', []).append({'id': fid, 'status': 'pending'})
+        prev['total'] = len(prev.get('items', []))
+        prev['status'] = 'running'
+        save_state(prev)
+        return prev
+    state = {
+        'task_id': TASK_ID,
+        'status': 'running',
+        'total': len(file_ids),
+        'completed': 0,
+        'current': None,
+        'items': [{'id': fid, 'status': 'pending'} for fid in file_ids],
+        'last_update': _now_iso(),
+    }
+    save_state(state)
+    return state
+
+
+def update_item(state: dict, file_id: str, **fields):
+    for it in state['items']:
+        if it['id'] == file_id:
+            it.update(fields)
+            break
+    state['completed'] = sum(1 for it in state['items'] if it.get('status') == 'done')
+    save_state(state)
 
 
 def load_chunks(path: Path) -> list[dict]:
@@ -117,21 +176,27 @@ def write_chunks(path: Path, processed: list[dict], vectors: list, file_id: str)
             f.write(json.dumps(row, ensure_ascii=False) + '\n')
 
 
-def reprocess_file(file_id: str) -> dict:
+def reprocess_file(file_id: str, state: dict) -> dict:
     path = WORK_ROOT / file_id / 'chunks.jsonl'
     if not path.exists():
         log(f'[{file_id}] SKIP — chunks.jsonl 없음')
+        update_item(state, file_id, status='error', step='missing')
         return {'file_id': file_id, 'error': 'not found'}
+
+    state['current'] = file_id
+    update_item(state, file_id, status='running', step='load')
 
     t0 = time.time()
     raw = load_chunks(path)
     b = stats(raw)
     lang = raw[0].get('lang', 'en') if raw else 'en'
     log(f'[{file_id}] load n={b["n"]} avg={b["avg_tokens"]} med={b["median_tokens"]} lang={lang}')
+    update_item(state, file_id, status='running', step='post', before=b, lang=lang)
 
     processed = postprocess(raw, lang=lang)
     a = stats(processed)
     log(f'[{file_id}] post  n={a["n"]} avg={a["avg_tokens"]} med={a["median_tokens"]} in_target={a["in_target_range"]*100//max(1,a["n"])}% max={a["max_tokens"]}')
+    update_item(state, file_id, status='running', step='embed', after=a)
 
     # 임베딩
     if SKIP_EMBED:
@@ -144,6 +209,7 @@ def reprocess_file(file_id: str) -> dict:
         failed = sum(1 for v in vectors if v is None)
         log(f'[{file_id}] embed done {time.time()-t_emb:.1f}s failed={failed}')
 
+    update_item(state, file_id, status='running', step='write')
     write_chunks(path, processed, vectors, file_id)
     elapsed = time.time() - t0
     log(f'[{file_id}] write OK elapsed={elapsed:.1f}s')
@@ -160,28 +226,45 @@ def reprocess_file(file_id: str) -> dict:
     rpt_path = CRAFTER_OUT / f'chunk_postprocess_batch_{file_id}.json'
     with open(rpt_path, 'w', encoding='utf-8') as f:
         json.dump(report, f, ensure_ascii=False, indent=2)
+
+    update_item(state, file_id, status='done', step='done',
+                elapsed_sec=round(elapsed, 1),
+                embed_failed=report['embed_failed'])
     return report
 
 
 def main():
     CRAFTER_OUT.mkdir(parents=True, exist_ok=True)
-    LOG_PATH.write_text(f'=== manuals_v2_reprocess start {time.strftime("%Y-%m-%d %H:%M:%S")} ===\n', encoding='utf-8')
+    # 로그는 append (재개 시 히스토리 보존)
+    with open(LOG_PATH, 'a', encoding='utf-8') as f:
+        f.write(f'=== manuals_v2_reprocess start {time.strftime("%Y-%m-%d %H:%M:%S")} ===\n')
 
     if len(sys.argv) > 1:
         file_ids = sys.argv[1:]
     else:
         file_ids = sorted(p.parent.name for p in WORK_ROOT.glob('*/chunks.jsonl'))
 
-    log(f'targets: {len(file_ids)}건')
+    state = init_state(file_ids)
+
+    # 이미 done 상태 건너뛰기 (재개)
+    done_ids = {it['id'] for it in state['items'] if it.get('status') == 'done'}
+    targets = [fid for fid in file_ids if fid not in done_ids]
+    log(f'targets: total={len(file_ids)} resume skip={len(done_ids)} run={len(targets)}')
+
     reports = []
-    for fid in file_ids:
+    for fid in targets:
         try:
-            reports.append(reprocess_file(fid))
+            reports.append(reprocess_file(fid, state))
         except Exception as e:
             import traceback
             traceback.print_exc()
             log(f'[{fid}] ERROR {e}')
+            update_item(state, fid, status='error', error=str(e))
             reports.append({'file_id': fid, 'error': str(e)})
+
+    state['status'] = 'done' if state['completed'] == state['total'] else 'partial'
+    state['current'] = None
+    save_state(state)
 
     # 종합 요약
     summary_path = CRAFTER_OUT / 'chunk_postprocess_poc_summary.json'

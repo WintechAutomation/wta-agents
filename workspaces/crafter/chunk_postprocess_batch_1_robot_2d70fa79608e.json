@@ -16,64 +16,19 @@
     "in_target_range": 3
   },
   "after": {
-    "n": 5,
-    "avg_tokens": 471.2,
-    "median_tokens": 614,
+    "n": 12,
+    "avg_tokens": 196.6,
+    "median_tokens": 260,
     "p10": 48,
-    "p90": 737,
-    "min_tokens": 48,
-    "max_tokens": 737,
+    "p90": 292,
+    "min_tokens": 45,
+    "max_tokens": 293,
     "under_min": 0,
     "over_hard": 0,
     "target_min": 150,
     "target_max": 300,
-    "in_target_range": 0
+    "in_target_range": 8
   },
-  "sample_after": [
-    {
-      "idx": 0,
-      "tokens": 614,
-      "section_path": [
-        "► 수신데이터 사양"
-      ],
-      "page_start": 1,
-      "content_preview": "1 선두Ｃ 0X43, Data = . 1 선두Ｃ 0X43, 의미 = . 1 선두Ｃ 0X43, Data 종류 = . 2,3,4,5 D000 -9999˜+9999, Data = Data Data. 2,3,4,5 D000 -9999˜+9999, 의미 = . 2,3,4,5 D"
-    },
-    {
-      "idx": 1,
-      "tokens": 737,
-      "section_path": [
-        "송신데티터 사양"
-      ],
-      "page_start": 1,
-      "content_preview": "1 선두Ｒ 0X52, Data = . 1 선두Ｒ 0X52, 의미 = . 1 선두Ｒ 0X52, Data 종류 = . 2,3,4,5 Data D000 -9999˜+9999, Data = Data. 2,3,4,5 Data D000 -9999˜+9999, 의미 = . 2,3,"
-    },
-    {
-      "idx": 2,
-      "tokens": 626,
-      "section_path": [
-        "► 파라미터"
-      ],
-      "page_start": 1,
-      "content_preview": "파라미터 번호, 1 = 의미 설정범위(단위). 파라미터 번호, 2 = 초기치. 파라미터 번호, 3 = . RS130, 1 = 데이터 비트 길이. RS130, 2 = 7:7bit、8:8bit. RS130, 3 = 8. RS131 스톱 비트수, 1 = 0: 1bit、1:1"
-    },
-    {
-      "idx": 3,
-      "tokens": 331,
-      "section_path": [
-        "2) 케이블 배선"
-      ],
-      "page_start": 2,
-      "content_preview": "기능, 1 = PIN NO.. 기능, 2 = <CABLE 색상 >. 기능, 3 = 실드. 기능, 4 = <CABLE. 기능, 5 = PIN NO. 색상 >. 기능, 6 = 기능. SD, 1 = 3. SD, 2 = 흰색. SD, 3 = . SD, 4 = 흰색. SD, 5"
-    },
-    {
-      "idx": 4,
-      "tokens": 48,
-      "section_path": [
-        "3) 로봇의 송신 데이터 의미 및 사용 용도 예"
-      ],
-      "page_start": 3,
-      "content_preview": "로봇과의 통신 상에서 사용하지 않는 캐릭터는 빈칸없이 모두 규정치 + 혹은 0를 송신 할 것."
-    }
-  ]
+  "elapsed_sec": 2.2,
+  "embed_failed": 0
 }

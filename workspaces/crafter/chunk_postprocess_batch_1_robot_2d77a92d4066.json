@@ -16,109 +16,19 @@
     "in_target_range": 1
   },
   "after": {
-    "n": 81,
-    "avg_tokens": 737.0,
-    "median_tokens": 964,
-    "p10": 302,
-    "p90": 998,
-    "min_tokens": 48,
-    "max_tokens": 1000,
-    "under_min": 0,
+    "n": 233,
+    "avg_tokens": 257.0,
+    "median_tokens": 273,
+    "p10": 206,
+    "p90": 283,
+    "min_tokens": 16,
+    "max_tokens": 303,
+    "under_min": 3,
     "over_hard": 0,
     "target_min": 150,
     "target_max": 300,
-    "in_target_range": 3
+    "in_target_range": 218
   },
-  "sample_after": [
-    {
-      "idx": 0,
-      "tokens": 358,
-      "section_path": [
-        "Troubleshooting"
-      ],
-      "page_start": 3,
-      "content_preview": "CAUTION, 1 = All teaching work must be carried out by an operator who has received special training. (This also applies to maintenance work with the p"
-    },
-    {
-      "idx": 1,
-      "tokens": 567,
-      "section_path": [
-        "Troubleshooting"
-      ],
-      "page_start": 4,
-      "content_preview": "CAUTION, 1 = Use the robot within the environment given in the specifications. Failure to do so could lead to a drop or reliability or faults. (Temper"
-    },
-    {
-      "idx": 2,
-      "tokens": 141,
-      "section_path": [
-        "CAUTION"
-      ],
-      "page_start": 5,
-      "content_preview": "Do not stop the robot or apply emergency stop by turning the robot  controller's main power OFF. If the robot controller main power is turned OFF duri"
-    },
-    {
-      "idx": 3,
-      "tokens": 271,
-      "section_path": [
-        "Revision history"
-      ],
-      "page_start": 7,
-      "content_preview": "2008-05-14, Specifications No. = BFP-A8662. 2008-05-14, Details of revisions = First print. 2008-07-04, Specifications No. = BFP-A8662-A. 2008-07-04, "
-    },
-    {
-      "idx": 4,
-      "tokens": 134,
-      "section_path": [
-        "■Introduction"
-      ],
-      "page_start": 8,
-      "content_preview": "- ・ No part of this manual may be reproduced by any means or in any form, without prior consent from Mitsubishi.\n- ・ The contents of this manual are s"
-    },
-    {
-      "idx": 5,
-      "tokens": 80,
-      "section_path": [
-        "Appendix"
-      ],
-      "page_start": 9,
-      "content_preview": "1 Error list ........................................................................................................................................."
-    },
-    {
-      "idx": 6,
-      "tokens": 252,
-      "section_path": [
-        "1 Error list"
-      ],
-      "page_start": 10,
-      "content_preview": "When an error occurs, a 5-digit error No. (example: \"C0010\") will appear at the STATUS NUMBER display on the operation panel at the front of the contr"
-    },
-    {
-      "idx": 7,
-      "tokens": 801,
-      "section_path": [
-        "1 Error list"
-      ],
-      "page_start": 10,
-      "content_preview": "Table 1-1 ： Error list\n\nH0001, Error cause and measures = Error message. H0001, Error cause and measures = Fail safe error (SRVOFF). H0001, Error caus"
-    },
-    {
-      "idx": 8,
-      "tokens": 987,
-      "section_path": [
-        "1 Error list"
-      ],
-      "page_start": 11,
-      "content_preview": "C0012, Error cause and measures = Error message. C0012, Error cause and measures = Initialize (error log). C0012, Error cause and measures = Cause. C0"
-    },
-    {
-      "idx": 9,
-      "tokens": 559,
-      "section_path": [
-        "1 Error list"
-      ],
-      "page_start": 11,
-      "content_preview": "C0023, Error cause and measures = Add memory was detached/attached. C0023, Error cause and measures = Cause. C0023, Error cause and measures = Add mem"
-    }
-  ]
+  "elapsed_sec": 48.6,
+  "embed_failed": 0
 }

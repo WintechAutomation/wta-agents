@@ -1,0 +1,188 @@
+{
+  "task_id": "manuals_v2_reprocess_poc10",
+  "status": "running",
+  "total": 10,
+  "completed": 6,
+  "current": "1_robot_c5a220711bc5",
+  "items": [
+    {
+      "id": "1_robot_0b0c3108c6c9",
+      "status": "done",
+      "step": "done",
+      "elapsed_sec": 241.1,
+      "embed_failed": 0,
+      "note": "1차 실행 07:46-07:50, 체크포인트 추가 전 완료"
+    },
+    {
+      "id": "1_robot_2d70fa79608e",
+      "status": "done",
+      "step": "done",
+      "elapsed_sec": 2.2,
+      "embed_failed": 0,
+      "note": "1차 실행 07:50, 체크포인트 추가 전 완료"
+    },
+    {
+      "id": "1_robot_2d77a92d4066",
+      "status": "done",
+      "step": "done",
+      "elapsed_sec": 48.6,
+      "embed_failed": 0,
+      "note": "1차 실행 07:50-07:51, 체크포인트 추가 전 완료"
+    },
+    {
+      "id": "1_robot_314928a33268",
+      "status": "done",
+      "step": "done",
+      "before": {
+        "n": 3927,
+        "avg_tokens": 23.9,
+        "median_tokens": 7,
+        "p10": 2,
+        "p90": 39,
+        "min_tokens": 2,
+        "max_tokens": 1668,
+        "under_min": 3538,
+        "over_hard": 6,
+        "target_min": 150,
+        "target_max": 300,
+        "in_target_range": 42
+      },
+      "lang": "ko",
+      "after": {
+        "n": 1272,
+        "avg_tokens": 232.4,
+        "median_tokens": 250,
+        "p10": 82,
+        "p90": 322,
+        "min_tokens": 5,
+        "max_tokens": 999,
+        "under_min": 11,
+        "over_hard": 0,
+        "target_min": 150,
+        "target_max": 300,
+        "in_target_range": 786
+      },
+      "elapsed_sec": 257.8,
+      "embed_failed": 0
+    },
+    {
+      "id": "1_robot_3c1dcc39da41",
+      "status": "done",
+      "step": "done",
+      "before": {
+        "n": 205,
+        "avg_tokens": 72.7,
+        "median_tokens": 18,
+        "p10": 5,
+        "p90": 168,
+        "min_tokens": 2,
+        "max_tokens": 1412,
+        "under_min": 153,
+        "over_hard": 2,
+        "target_min": 150,
+        "target_max": 300,
+        "in_target_range": 7
+      },
+      "lang": "ko",
+      "after": {
+        "n": 238,
+        "avg_tokens": 225.8,
+        "median_tokens": 276,
+        "p10": 76,
+        "p90": 295,
+        "min_tokens": 18,
+        "max_tokens": 411,
+        "under_min": 3,
+        "over_hard": 0,
+        "target_min": 150,
+        "target_max": 300,
+        "in_target_range": 174
+      },
+      "elapsed_sec": 45.1,
+      "embed_failed": 0
+    },
+    {
+      "id": "1_robot_54fdb56329f0",
+      "status": "done",
+      "step": "done",
+      "before": {
+        "n": 159,
+        "avg_tokens": 42.5,
+        "median_tokens": 20,
+        "p10": 5,
+        "p90": 92,
+        "min_tokens": 2,
+        "max_tokens": 769,
+        "under_min": 114,
+        "over_hard": 0,
+        "target_min": 150,
+        "target_max": 300,
+        "in_target_range": 8
+      },
+      "lang": "en",
+      "after": {
+        "n": 76,
+        "avg_tokens": 173.2,
+        "median_tokens": 185,
+        "p10": 63,
+        "p90": 276,
+        "min_tokens": 40,
+        "max_tokens": 298,
+        "under_min": 0,
+        "over_hard": 0,
+        "target_min": 150,
+        "target_max": 300,
+        "in_target_range": 46
+      },
+      "elapsed_sec": 13.3,
+      "embed_failed": 0
+    },
+    {
+      "id": "1_robot_c5a220711bc5",
+      "status": "running",
+      "step": "embed",
+      "before": {
+        "n": 408,
+        "avg_tokens": 238.4,
+        "median_tokens": 234,
+        "p10": 67,
+        "p90": 329,
+        "min_tokens": 1,
+        "max_tokens": 1395,
+        "under_min": 3,
+        "over_hard": 2,
+        "target_min": 150,
+        "target_max": 300,
+        "in_target_range": 238
+      },
+      "lang": "ja",
+      "after": {
+        "n": 410,
+        "avg_tokens": 237.2,
+        "median_tokens": 234,
+        "p10": 67,
+        "p90": 334,
+        "min_tokens": 1,
+        "max_tokens": 1000,
+        "under_min": 4,
+        "over_hard": 0,
+        "target_min": 150,
+        "target_max": 300,
+        "in_target_range": 238
+      }
+    },
+    {
+      "id": "1_robot_c7fe37c1ed98",
+      "status": "pending"
+    },
+    {
+      "id": "2_sensor_2e6136a51564",
+      "status": "pending"
+    },
+    {
+      "id": "5_inverter_c6f52f93cca5",
+      "status": "pending"
+    }
+  ],
+  "last_update": "2026-04-12T07:59:08+09:00"
+}

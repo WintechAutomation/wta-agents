@@ -16,109 +16,19 @@
     "in_target_range": 8
   },
   "after": {
-    "n": 63,
-    "avg_tokens": 208.7,
-    "median_tokens": 171,
+    "n": 76,
+    "avg_tokens": 173.2,
+    "median_tokens": 185,
     "p10": 63,
-    "p90": 435,
-    "min_tokens": 42,
-    "max_tokens": 997,
+    "p90": 276,
+    "min_tokens": 40,
+    "max_tokens": 298,
     "under_min": 0,
     "over_hard": 0,
     "target_min": 150,
     "target_max": 300,
-    "in_target_range": 26
+    "in_target_range": 46
   },
-  "sample_after": [
-    {
-      "idx": 0,
-      "tokens": 69,
-      "section_path": [
-        "Product specification IRB 360"
-      ],
-      "page_start": 2,
-      "content_preview": "Trace back information: Workspace R19B 6-09 version a2 Checked in 2019-05-31 Skribenta version 5.3.012\n\n© Copyright 2004-2019 ABB. All rights reserved"
-    },
-    {
-      "idx": 1,
-      "tokens": 170,
-      "section_path": [
-        "Document ID: 3HAC029963-001 Revision: V"
-      ],
-      "page_start": 4,
-      "content_preview": "The information in this manual is subject to change without notice and should not be construed as a commitment by ABB. ABB assumes no responsibility f"
-    },
-    {
-      "idx": 2,
-      "tokens": 997,
-      "section_path": [
-        "Table of contents"
-      ],
-      "page_start": 5,
-      "content_preview": ", Overview of this specification ...........................................................................................................Structure "
-    },
-    {
-      "idx": 3,
-      "tokens": 617,
-      "section_path": [
-        "Table of contents"
-      ],
-      "page_start": 5,
-      "content_preview": ", Overview of this specification ...........................................................................................................Structure "
-    },
-    {
-      "idx": 4,
-      "tokens": 124,
-      "section_path": [
-        "Table of contents"
-      ],
-      "page_start": 6,
-      "content_preview": "This page is intentionally left blank\n\nIt describes the performance of the manipulator or a complete family of manipulators in terms of:\n\n- The struct"
-    },
-    {
-      "idx": 5,
-      "tokens": 262,
-      "section_path": [
-        "It is intended for:"
-      ],
-      "page_start": 7,
-      "content_preview": "Product specification - Controller IRC5 IRC5 with main computer DSQC1000., Document ID = 3HAC047400-001. Product specification - Controller software I"
-    },
-    {
-      "idx": 6,
-      "tokens": 409,
-      "section_path": [
-        "Continued"
-      ],
-      "page_start": 8,
-      "content_preview": "D, Description = New variant added. E, Description = General corrections. F, Description = Text for Standards updated. G, Description = Information re"
-    },
-    {
-      "idx": 7,
-      "tokens": 198,
-      "section_path": [
-        "1.1.1 Introduction to structure"
-      ],
-      "page_start": 9,
-      "content_preview": "The IRB 360 is ABB Robotics' latest generation of high performance industrial robots. Based on the famous IRB 340 robot family in a modular design. It"
-    },
-    {
-      "idx": 8,
-      "tokens": 190,
-      "section_path": [
-        "Additional functionality"
-      ],
-      "page_start": 9,
-      "content_preview": "For additional functionality, the robot can be equipped with optional software for application support - communication features - network communicatio"
-    },
-    {
-      "idx": 9,
-      "tokens": 63,
-      "section_path": [
-        "Stainless Wash Down Robots"
-      ],
-      "page_start": 10,
-      "content_preview": "- Strongly alkaline: Topaz MD4 (3%)\n- Strongly alkaline with chloride: Topaz CL2 (3%)\n- Strongly acid (for removing calcium oxide): Topaz AC3 (3%)\n- A"
-    }
-  ]
+  "elapsed_sec": 13.3,
+  "embed_failed": 0
 }

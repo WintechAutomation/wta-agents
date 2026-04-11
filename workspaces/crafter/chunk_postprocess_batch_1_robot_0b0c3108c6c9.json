@@ -16,107 +16,19 @@
     "in_target_range": 22
   },
   "after": {
-    "n": 428,
-    "avg_tokens": 694.0,
-    "median_tokens": 974,
-    "p10": 67,
-    "p90": 998,
+    "n": 1172,
+    "avg_tokens": 254.1,
+    "median_tokens": 276,
+    "p10": 180,
+    "p90": 289,
     "min_tokens": 10,
-    "max_tokens": 1000,
-    "under_min": 19,
+    "max_tokens": 345,
+    "under_min": 28,
     "over_hard": 0,
     "target_min": 150,
     "target_max": 300,
-    "in_target_range": 44
+    "in_target_range": 1069
   },
-  "sample_after": [
-    {
-      "idx": 0,
-      "tokens": 84,
-      "section_path": [],
-      "page_start": 1,
-      "content_preview": "AC100V  30W-200W,  AC200V  30W-25kW\n\nSANMOTION  R  ADVANCED MODEL Made in Japan\n\n15A ・ 30A ・ 50A ・ 10A ・ 150A ・ 30A Amp.capacity\n\nFlange size\n\nRated o"
-    },
-    {
-      "idx": 1,
-      "tokens": 288,
-      "section_path": [
-        "Servo motor"
-      ],
-      "page_start": 2,
-      "content_preview": "mm sq. ・ mm sq. ・ mm sq. ・ mm sq. ・ mm sq. ・ 120 mm sq. ・ mm sq. ・ mm sq. ・ 220 mm sq.\n\nW ・ W ・ W ・ W ・ W ・ 20 W ・ W ・ W ・ W ・ 50W ・ W ・ W ・ W ・ kW ・ "
-    },
-    {
-      "idx": 2,
-      "tokens": 909,
-      "section_path": [
-        "Servo motor"
-      ],
-      "page_start": 3,
-      "content_preview": "Index, 1 = Index. Features, 1 = ････････････････････････････････ P . 3. SANMOTION R ADVANCED MODEL Made in Japan, 1 = SANMOTION R ADVANCED MODEL Made "
-    },
-    {
-      "idx": 3,
-      "tokens": 202,
-      "section_path": [
-        "Downsized Servo Motors"
-      ],
-      "page_start": 4,
-      "content_preview": "R2 Series Servo Motors are downsized by as much as  30%  in  length  and  25%  in  volume  from  our conventional product, while still achieving high "
-    },
-    {
-      "idx": 4,
-      "tokens": 50,
-      "section_path": [
-        "High Resolution"
-      ],
-      "page_start": 5,
-      "content_preview": "Support for encoders up to 17 bit (131,072 divisions) is available for high resolution control. An optional 20 bit encoder (1,048,576 divisions) is al"
-    },
-    {
-      "idx": 5,
-      "tokens": 137,
-      "section_path": [
-        "Now Available with EtherCAT Interface"
-      ],
-      "page_start": 6,
-      "content_preview": "EtherCAT is a 100Mbps high-speed fieldbus system, which helps shorten Takt time. It is compatible with Ethernet, and its high versatility enables the "
-    },
-    {
-      "idx": 6,
-      "tokens": 110,
-      "section_path": [
-        "Safety Model newly added to lineup"
-      ],
-      "page_start": 6,
-      "content_preview": "Since this new model safely shuts down motor torque, safety systems are more easily installed on the equipment. This safety function is defined in the"
-    },
-    {
-      "idx": 7,
-      "tokens": 276,
-      "section_path": [
-        "Water Proof and Dust Proof"
-      ],
-      "page_start": 6,
-      "content_preview": "All models of R Advanced Servo Motors have high IP65 waterproof and dustproof ratings, and variants rated IP67 are available for models other than R S"
-    },
-    {
-      "idx": 8,
-      "tokens": 998,
-      "section_path": [
-        "R2 Servo Motor 100V System Small Capacity, Medium Inertia"
-      ],
-      "page_start": 10,
-      "content_preview": ", Holding Brake.Holding Brake = . , and approved = No. , Model No..Battery backup method absolute encoder （ PA035C ） = R2EA04003FXP00. , Model No..Abs"
-    },
-    {
-      "idx": 9,
-      "tokens": 968,
-      "section_path": [
-        "R2 Servo Motor 100V System Small Capacity, Medium Inertia"
-      ],
-      "page_start": 10,
-      "content_preview": ", Page.Specifications = P.25. , Page.Dimensions = P.48. , Holding Brake.Holding Brake = . , and approved = No. , Model No..Battery backup method absol"
-    }
-  ]
+  "elapsed_sec": 241.1,
+  "embed_failed": 0
 }
