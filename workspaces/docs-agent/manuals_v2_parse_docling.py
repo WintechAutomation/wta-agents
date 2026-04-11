@@ -39,6 +39,17 @@ WORK_ROOT = Path(r'C:\MES\wta-agents\workspaces\docs-agent\v2_poc')
 QWEN_URL = 'http://182.224.6.147:11434/api/embed'
 QWEN_MODEL = 'qwen3-embedding:8b'
 EMBED_DIM = 2000  # MRL 슬라이싱
+VLM_URL = 'http://182.224.6.147:11434/api/generate'
+VLM_MODEL = 'qwen2.5vl:7b'
+
+# db-manager 헬퍼 import
+sys.path.insert(0, r'C:\MES\wta-agents\workspaces\db-manager')
+try:
+    from storage_upload_helper import build_object_path, upload_manual_image
+    STORAGE_READY = True
+except Exception as _e:
+    print(f'  [warn] storage helper import 실패: {_e}')
+    STORAGE_READY = False
 
 # ============ 유틸 ============
 def md5_file(path):
@@ -90,9 +101,9 @@ def parse_pdf(pdf_path, out_dir):
     return doc
 
 # ============ 이미지 export ============
-def export_images(doc, img_dir, Image):
+def export_images(doc, img_dir, Image, category=None, file_id=None, requests=None):
     img_dir.mkdir(parents=True, exist_ok=True)
-    figures = []  # [{figure_id, caption, page, bbox, image_path, thumb_path}]
+    figures = []  # [{figure_id, caption, page, bbox, storage_path, image_url, thumb_url, vlm_description}]
 
     # Docling의 iterate_items로 PictureItem 순회
     for idx, (item, level) in enumerate(doc.iterate_items()):
@@ -117,27 +128,71 @@ def export_images(doc, img_dir, Image):
         # PIL 이미지 저장
         try:
             pil_img = item.get_image(doc=doc)
-            if pil_img is not None:
-                pil_img.save(img_path, 'PNG')
-                # 썸네일 256px
-                thumb = pil_img.copy()
-                thumb.thumbnail((256, 256))
-                thumb.save(thumb_path, 'PNG')
+            if pil_img is None:
+                continue
+            pil_img.save(img_path, 'PNG')
+            thumb = pil_img.copy()
+            thumb.thumbnail((256, 256))
+            thumb.save(thumb_path, 'PNG')
         except Exception as e:
             print(f'    이미지 추출 실패 {figure_id}: {e}')
             continue
+
+        # Storage 업로드
+        storage_path = None
+        thumb_storage_path = None
+        image_url = None
+        thumb_url = None
+        if STORAGE_READY and category and file_id:
+            try:
+                storage_path = build_object_path(category, file_id, page_no, figure_id)
+                image_url = upload_manual_image(str(img_path), storage_path)
+                thumb_storage_path = build_object_path(category, file_id, page_no, figure_id, thumb=True)
+                thumb_url = upload_manual_image(str(thumb_path), thumb_storage_path)
+            except Exception as e:
+                print(f'    업로드 실패 {figure_id}: {e}')
+
+        # Qwen2.5-VL 캡션 생성
+        vlm_description = None
+        if requests is not None:
+            try:
+                vlm_description = generate_vlm_caption(img_path, requests)
+            except Exception as e:
+                print(f'    VLM 실패 {figure_id}: {e}')
 
         figures.append({
             'figure_id': figure_id,
             'caption': caption,
             'page': page_no,
             'bbox': bbox,
-            'image_path': str(img_path),
-            'thumb_path': str(thumb_path),
-            'image_url': None,  # Supabase 업로드 후 채움
-            'vlm_description': None,  # Qwen2.5-VL 확장 시 채움
+            'storage_path': storage_path,
+            'thumb_storage_path': thumb_storage_path,
+            'image_url': image_url,
+            'thumb_url': thumb_url,
+            'vlm_description': vlm_description,
         })
     return figures
+
+
+def generate_vlm_caption(img_path, requests):
+    """Qwen2.5-VL로 이미지 설명 생성 (한글, 3~5문장)"""
+    import base64
+    with open(img_path, 'rb') as f:
+        b64 = base64.b64encode(f.read()).decode('ascii')
+    prompt = (
+        '이 이미지는 산업 장비 매뉴얼에서 추출된 그림/회로도/도면입니다. '
+        '핵심 구성요소, 배선/연결 관계, 그리고 이 그림이 설명하는 내용을 한국어 3~5문장으로 요약하세요. '
+        '장식적 표현 없이 기술적 사실만 기술합니다.'
+    )
+    r = requests.post(VLM_URL, json={
+        'model': VLM_MODEL,
+        'prompt': prompt,
+        'images': [b64],
+        'stream': False,
+        'options': {'temperature': 0.1, 'num_predict': 300},
+    }, timeout=180)
+    r.raise_for_status()
+    return (r.json().get('response') or '').strip() or None
 
 def export_tables(doc):
     tables = []
@@ -262,12 +317,14 @@ def process_pdf(pdf_path):
     except Exception as e:
         print(f'  doc json export 실패: {e}')
 
-    figures = export_images(doc, img_dir, Image)
+    figures = export_images(doc, img_dir, Image, category=category, file_id=file_id, requests=requests)
     print(f'  figures: {len(figures)}')
     tables = export_tables(doc)
     print(f'  tables: {len(tables)}')
 
     chunks = chunk_document(doc, HierarchicalChunker)
+    # 노이즈 청크 필터 (2단어 미만)
+    chunks = [c for c in chunks if (c.get('content') or '').strip() and len((c['content'] or '').split()) >= 2]
     chunks = match_figures_to_chunks(chunks, figures, tables)
     print(f'  chunks: {len(chunks)}')
 
@@ -289,8 +346,8 @@ def process_pdf(pdf_path):
                 'category': category,
                 'mfr': meta['mfr'],
                 'model': meta['model'],
-                'doctype': meta['dt'],
-                'lang': meta['lang'],
+                'doctype': meta['dt'].lower(),
+                'lang': meta['lang'].lower(),
                 'section_path': ch['section_path'],
                 'page_start': ch['page_start'],
                 'page_end': ch['page_end'],

@@ -4919,6 +4919,30 @@
       "updated_at": "2026-04-11 22:35:59",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-db-manager-7df07a",
+      "agent": "db-manager",
+      "task": "[DDL 실행 승인] 부서장 GO. `workspaces/db-manager/manual_documents_v2.sql` 즉시 실행해줘.",
+      "message": "[DDL 실행 승인] 부서장 GO. `workspaces/db-manager/manual_documents_v2.sql` 즉시 실행해줘.\n\n1. manual.documents_v2 테이블 + 인덱스(HNSW, GIN 등) 생성\n2. vector 버킷 public read 재확인 (기존 유지면 OK)\n3. docs-agent에 업로드 service key/헬퍼 경로 공유\n4. JSONL bulk loader 준비 완료\n5. PoC 10건 적재 대기\n\n완료 즉시 보고.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 22:43:01",
+      "updated_at": "2026-04-11 22:43:01",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-docs-agent-3c258f",
+      "agent": "docs-agent",
+      "task": "[PoC 착수 승인] 부서장 GO.",
+      "message": "[PoC 착수 승인] 부서장 GO.\n\n1. PoC 10건 리스트 확정 (앞서 선정한 목록 그대로)\n2. db-manager DDL 실행 중 — 완료 신호 받고 적재\n3. 실행 절차:\n   - manuals_v2_parse_docling.py로 10건 순차 처리\n   - 이미지 추출 + 썸네일 + `vector/manual_images/{category}/{file_id}/...` 업로드\n   - 캡션 + 본문 cross-ref 매칭\n   - HierarchicalChunker 512토큰/64오버랩\n   - Qwen3-Embedding-8B 벡터화\n   - JSONL 생성 후 db-manager에 넘김 (bulk loader)\n4. Qwen2.5-VL-7B 아직 다운로드 중 — 완료 전이면 vlm_description 필드 빈값으로 진행, 완료 후 별도 배치로 채우기\n5. Qwen3-Reranker-4B는 PoC 적재 완료 후 검색 검증 단계에서 사용\n\n**진행 보고 주기**\n- 파일 1건 완료마다 짧게 (file_id, chunks, images, elapsed)\n- 10건 전부 완료 시 통합 리포트 + 검증 쿼리 5개 결과\n- 문제 발생 시 즉시 보고\n\n착수 바로 해줘.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 22:43:19",
+      "updated_at": "2026-04-11 22:43:19",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }
