@@ -1,9 +1,9 @@
 {
   "task_id": "manuals_v2_reprocess_poc10",
-  "status": "running",
+  "status": "done",
   "total": 10,
-  "completed": 9,
-  "current": "5_inverter_c6f52f93cca5",
+  "completed": 10,
+  "current": null,
   "items": [
     {
       "id": "1_robot_0b0c3108c6c9",
@@ -247,8 +247,8 @@
     },
     {
       "id": "5_inverter_c6f52f93cca5",
-      "status": "running",
-      "step": "embed",
+      "status": "done",
+      "step": "done",
       "before": {
         "n": 3610,
         "avg_tokens": 86.7,
@@ -277,8 +277,10 @@
         "target_min": 150,
         "target_max": 300,
         "in_target_range": 2939
-      }
+      },
+      "elapsed_sec": 721.5,
+      "embed_failed": 0
     }
   ],
-  "last_update": "2026-04-12T08:01:48+09:00"
+  "last_update": "2026-04-12T08:13:36+09:00"
 }

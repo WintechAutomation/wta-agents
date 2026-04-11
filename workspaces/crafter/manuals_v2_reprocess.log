@@ -53,3 +53,6 @@
 [08:01:37] [5_inverter_c6f52f93cca5] load n=3610 avg=86.7 med=18 lang=ko
 [08:01:48] [5_inverter_c6f52f93cca5] post  n=3838 avg=220.2 med=251 in_target=76% max=998
 [08:01:48] [5_inverter_c6f52f93cca5] embed start n=3838
+[08:13:32] [5_inverter_c6f52f93cca5] embed done 704.2s failed=0
+[08:13:36] [5_inverter_c6f52f93cca5] write OK elapsed=721.5s
+[08:13:36] === DONE total chunks 8879→6173 ===

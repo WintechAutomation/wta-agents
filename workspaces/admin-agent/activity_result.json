@@ -1,0 +1,789 @@
+{
+  "MAX": {
+    "agent_id": "MAX",
+    "status": "🟡 대기",
+    "summary": [
+      "🟡 대기 | 포트 5600 열림",
+      "로그 없음",
+      "백그라운드 프로세스 1개"
+    ],
+    "detail": {
+      "port": 5600,
+      "port_alive": true,
+      "recent_logs": [],
+      "state_files": [
+        {
+          "file": "imap-monitor-state.json",
+          "mtime": "2026-04-12 08:15:14",
+          "mtime_ts": 1775949314.16195,
+          "last_update": null
+        }
+      ],
+      "background_processes": [
+        {
+          "pid": "49476",
+          "cmd": "\"C:\\Program Files\\ConEmu\\ConEmu64.exe\" -Title MES-Servers -Max -runlist -new_console:d:\"C:\\MES\\backend\":t:\"Backend(8100)"
+        }
+      ],
+      "checked_at": "2026-04-12 08:15:17"
+    }
+  },
+  "db-manager": {
+    "agent_id": "db-manager",
+    "status": "🟡 대기",
+    "summary": [
+      "🟡 대기 | 포트 5601 열림",
+      "마지막 로그: 2026-04-09 05:31:55 (269001초 전)",
+      "백그라운드 없음"
+    ],
+    "detail": {
+      "port": 5601,
+      "port_alive": true,
+      "recent_logs": [
+        {
+          "file": "model-compare.log",
+          "mtime": "2026-04-09 05:31:55",
+          "mtime_ts": 1775680315.8209403,
+          "size_kb": 7.4
+        },
+        {
+          "file": "manual-graphrag-test.log",
+          "mtime": "2026-04-09 04:06:47",
+          "mtime_ts": 1775675207.8406303,
+          "size_kb": 907.6
+        },
+        {
+          "file": "cm-graphrag-graph.log",
+          "mtime": "2026-04-09 02:54:59",
+          "mtime_ts": 1775670899.9407418,
+          "size_kb": 38.2
+        },
+        {
+          "file": "cm-graphrag.log",
+          "mtime": "2026-04-09 02:54:59",
+          "mtime_ts": 1775670899.9407418,
+          "size_kb": 92.7
+        },
+        {
+          "file": "cm-graphrag-embed.log",
+          "mtime": "2026-04-08 21:04:14",
+          "mtime_ts": 1775649854.9479606,
+          "size_kb": 54.4
+        }
+      ],
+      "state_files": [
+        {
+          "file": "manual-graphrag-progress.json",
+          "mtime": "2026-04-09 04:06:47",
+          "mtime_ts": 1775675207.8406303,
+          "last_update": null
+        },
+        {
+          "file": "cm-graphrag-progress.json",
+          "mtime": "2026-04-09 02:54:59",
+          "mtime_ts": 1775670899.9407418,
+          "last_update": null
+        },
+        {
+          "file": "parts-parse-progress.json",
+          "mtime": "2026-04-05 00:32:47",
+          "mtime_ts": 1775316767.9688065,
+          "last_update": null
+        },
+        {
+          "file": "um-extract-part2-progress.json",
+          "mtime": "2026-04-04 18:15:31",
+          "mtime_ts": 1775294131.9018388,
+          "last_update": null
+        },
+        {
+          "file": "cm-extract-part2-progress.json",
+          "mtime": "2026-04-04 15:39:06",
+          "mtime_ts": 1775284746.4782636,
+          "last_update": null
+        }
+      ],
+      "background_processes": [],
+      "checked_at": "2026-04-12 08:15:17"
+    }
+  },
+  "cs-agent": {
+    "agent_id": "cs-agent",
+    "status": "🟡 대기",
+    "summary": [
+      "🟡 대기 | 포트 5602 열림",
+      "마지막 로그: 2026-03-27 16:03:17 (1354320초 전)",
+      "백그라운드 없음"
+    ],
+    "detail": {
+      "port": 5602,
+      "port_alive": true,
+      "recent_logs": [
+        {
+          "file": "session.log",
+          "mtime": "2026-03-27 16:03:17",
+          "mtime_ts": 1774594997.5227926,
+          "size_kb": 0.1
+        },
+        {
+          "file": "channel-cs-agent.log",
+          "mtime": "2026-03-27 16:02:02",
+          "mtime_ts": 1774594922.4922667,
+          "size_kb": 0.3
+        },
+        {
+          "file": "loop.log",
+          "mtime": "2026-03-27 15:07:00",
+          "mtime_ts": 1774591620.901887,
+          "size_kb": 4.0
+        }
+      ],
+      "state_files": [],
+      "background_processes": [],
+      "checked_at": "2026-04-12 08:15:17"
+    }
+  },
+  "sales-agent": {
+    "agent_id": "sales-agent",
+    "status": "🟡 대기",
+    "summary": [
+      "🟡 대기 | 포트 5603 열림",
+      "마지막 로그: 2026-03-28 06:13:22 (1303315초 전)",
+      "백그라운드 없음"
+    ],
+    "detail": {
+      "port": 5603,
+      "port_alive": true,
+      "recent_logs": [
+        {
+          "file": "session.log",
+          "mtime": "2026-03-28 06:13:22",
+          "mtime_ts": 1774646002.2483113,
+          "size_kb": 0.1
+        },
+        {
+          "file": "channel-sales-agent.log",
+          "mtime": "2026-03-27 16:02:01",
+          "mtime_ts": 1774594921.3311796,
+          "size_kb": 0.3
+        },
+        {
+          "file": "loop.log",
+          "mtime": "2026-03-27 15:07:00",
+          "mtime_ts": 1774591620.901887,
+          "size_kb": 3.7
+        }
+      ],
+      "state_files": [],
+      "background_processes": [],
+      "checked_at": "2026-04-12 08:15:18"
+    }
+  },
+  "design-agent": {
+    "agent_id": "design-agent",
+    "status": "🟡 대기",
+    "summary": [
+      "🟡 대기 | 포트 5615 열림",
+      "마지막 로그: 2026-03-27 16:02:03 (1354395초 전)",
+      "백그라운드 없음"
+    ],
+    "detail": {
+      "port": 5615,
+      "port_alive": true,
+      "recent_logs": [
+        {
+          "file": "channel-design-agent.log",
+          "mtime": "2026-03-27 16:02:03",
+          "mtime_ts": 1774594923.1195874,
+          "size_kb": 0.3
+        }
+      ],
+      "state_files": [],
+      "background_processes": [],
+      "checked_at": "2026-04-12 08:15:18"
+    }
+  },
+  "dev-agent": {
+    "agent_id": "dev-agent",
+    "status": "🟡 대기",
+    "summary": [
+      "🟡 대기 | 포트 5606 열림",
+      "마지막 로그: 2026-04-11 17:53:58 (51680초 전)",
+      "백그라운드 없음"
+    ],
+    "detail": {
+      "port": 5606,
+      "port_alive": true,
+      "recent_logs": [
+        {
+          "file": "mes-backend.log",
+          "mtime": "2026-04-11 17:53:58",
+          "mtime_ts": 1775897638.3017442,
+          "size_kb": 3.2
+        },
+        {
+          "file": "frontend-restart.log",
+          "mtime": "2026-04-06 02:59:13",
+          "mtime_ts": 1775411953.7671628,
+          "size_kb": 0.6
+        },
+        {
+          "file": "embed-worker-B.log",
+          "mtime": "2026-04-05 14:20:11",
+          "mtime_ts": 1775366411.9635162,
+          "size_kb": 11.6
+        },
+        {
+          "file": "embed-parts.log",
+          "mtime": "2026-04-05 14:19:09",
+          "mtime_ts": 1775366349.5932274,
+          "size_kb": 184.8
+        },
+        {
+          "file": "embed-worker-C.log",
+          "mtime": "2026-04-05 13:44:29",
+          "mtime_ts": 1775364269.1625788,
+          "size_kb": 1.0
+        }
+      ],
+      "state_files": [],
+      "background_processes": [],
+      "checked_at": "2026-04-12 08:15:18"
+    }
+  },
+  "admin-agent": {
+    "agent_id": "admin-agent",
+    "status": "🟡 대기",
+    "summary": [
+      "🟡 대기 | 포트 5607 열림",
+      "마지막 로그: 2026-04-10 10:13:17 (165720초 전)",
+      "백그라운드 프로세스 1개"
+    ],
+    "detail": {
+      "port": 5607,
+      "port_alive": true,
+      "recent_logs": [
+        {
+          "file": "backend-restart.log",
+          "mtime": "2026-04-10 10:13:17",
+          "mtime_ts": 1775783597.8911338,
+          "size_kb": 53.6
+        },
+        {
+          "file": "wmes-backend.log",
+          "mtime": "2026-03-31 17:35:41",
+          "mtime_ts": 1774946141.7334526,
+          "size_kb": 1.9
+        },
+        {
+          "file": "wmes-frontend.log",
+          "mtime": "2026-03-30 23:33:29",
+          "mtime_ts": 1774881209.353366,
+          "size_kb": 0.5
+        },
+        {
+          "file": "channel-admin-agent.log",
+          "mtime": "2026-03-27 16:02:08",
+          "mtime_ts": 1774594928.463872,
+          "size_kb": 0.3
+        },
+        {
+          "file": "session.log",
+          "mtime": "2026-03-27 16:01:59",
+          "mtime_ts": 1774594919.269379,
+          "size_kb": 0.0
+        }
+      ],
+      "state_files": [
+        {
+          "file": "imap-monitor-state.json",
+          "mtime": "2026-04-12 08:15:14",
+          "mtime_ts": 1775949314.16195,
+          "last_update": null
+        }
+      ],
+      "background_processes": [
+        {
+          "pid": "71168",
+          "cmd": "C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python311\\python.exe C:/MES/wta-agents/workspaces/admin-agent/check"
+        }
+      ],
+      "checked_at": "2026-04-12 08:15:19"
+    }
+  },
+  "crafter": {
+    "agent_id": "crafter",
+    "status": "🟢 활성",
+    "summary": [
+      "🟢 활성 | 포트 5608 열림",
+      "마지막 로그: 2026-04-12 08:13:36 (102초 전)",
+      "백그라운드 프로세스 5개"
+    ],
+    "detail": {
+      "port": 5608,
+      "port_alive": true,
+      "recent_logs": [
+        {
+          "file": "manuals_v2_reprocess.log",
+          "mtime": "2026-04-12 08:13:36",
+          "mtime_ts": 1775949216.8594818,
+          "size_kb": 3.7
+        },
+        {
+          "file": "phase6_pilot_ollama.log",
+          "mtime": "2026-04-11 15:37:41",
+          "mtime_ts": 1775889461.7570677,
+          "size_kb": 5.4
+        },
+        {
+          "file": "phase6_pilot_qwen.log",
+          "mtime": "2026-04-11 14:25:35",
+          "mtime_ts": 1775885135.000098,
+          "size_kb": 0.0
+        },
+        {
+          "file": "phase6_pilot.log",
+          "mtime": "2026-04-11 13:32:07",
+          "mtime_ts": 1775881927.7831388,
+          "size_kb": 2.8
+        },
+        {
+          "file": "tunnel.log",
+          "mtime": "2026-04-03 09:53:54",
+          "mtime_ts": 1775177634.6385949,
+          "size_kb": 3.9
+        }
+      ],
+      "state_files": [
+        {
+          "file": "manuals_v2_reprocess_state.json",
+          "mtime": "2026-04-12 08:13:36",
+          "mtime_ts": 1775949216.857443,
+          "last_update": "2026-04-12T08:13:36+09:00"
+        }
+      ],
+      "background_processes": [
+        {
+          "pid": "8756",
+          "cmd": "\"C:\\Program Files\\nodejs\\\\node.exe\"  \"C:\\Program Files\\nodejs\\\\node_modules\\npm\\bin\\npx-cli.js\" \"@playwright/mcp@latest\""
+        },
+        {
+          "pid": "96512",
+          "cmd": "\"node\"   \"C:\\Users\\Administrator\\AppData\\Local\\npm-cache\\_npx\\9833c18b2d85bc59\\node_modules\\.bin\\\\..\\@playwright\\mcp\\cli"
+        },
+        {
+          "pid": "86836",
+          "cmd": "\"C:\\Program Files\\nodejs\\\\node.exe\"  \"C:\\Program Files\\nodejs\\\\node_modules\\npm\\bin\\npx-cli.js\" \"@playwright/mcp@latest\""
+        },
+        {
+          "pid": "69760",
+          "cmd": "\"node\"   \"C:\\Users\\Administrator\\AppData\\Local\\npm-cache\\_npx\\9833c18b2d85bc59\\node_modules\\.bin\\\\..\\@playwright\\mcp\\cli"
+        },
+        {
+          "pid": "49476",
+          "cmd": "\"C:\\Program Files\\ConEmu\\ConEmu64.exe\" -Title MES-Servers -Max -runlist -new_console:d:\"C:\\MES\\backend\":t:\"Backend(8100)"
+        }
+      ],
+      "checked_at": "2026-04-12 08:15:19"
+    }
+  },
+  "nc-manager": {
+    "agent_id": "nc-manager",
+    "status": "🟡 대기",
+    "summary": [
+      "🟡 대기 | 포트 5609 열림",
+      "마지막 로그: 2026-03-27 16:39:47 (1352132초 전)",
+      "백그라운드 없음"
+    ],
+    "detail": {
+      "port": 5609,
+      "port_alive": true,
+      "recent_logs": [
+        {
+          "file": "channel-nc-manager.log",
+          "mtime": "2026-03-27 16:39:47",
+          "mtime_ts": 1774597187.1142201,
+          "size_kb": 1.3
+        },
+        {
+          "file": "loop.log",
+          "mtime": "2026-03-27 15:07:00",
+          "mtime_ts": 1774591620.8878853,
+          "size_kb": 3.9
+        },
+        {
+          "file": "session.log",
+          "mtime": "2026-03-27 15:02:00",
+          "mtime_ts": 1774591320.3976629,
+          "size_kb": 0.0
+        }
+      ],
+      "state_files": [],
+      "background_processes": [],
+      "checked_at": "2026-04-12 08:15:19"
+    }
+  },
+  "qa-agent": {
+    "agent_id": "qa-agent",
+    "status": "🟡 대기",
+    "summary": [
+      "🟡 대기 | 포트 5610 열림",
+      "마지막 로그: 2026-03-27 16:02:14 (1354384초 전)",
+      "백그라운드 없음"
+    ],
+    "detail": {
+      "port": 5610,
+      "port_alive": true,
+      "recent_logs": [
+        {
+          "file": "channel-qa-agent.log",
+          "mtime": "2026-03-27 16:02:14",
+          "mtime_ts": 1774594934.635447,
+          "size_kb": 0.3
+        },
+        {
+          "file": "session.log",
+          "mtime": "2026-03-27 16:02:05",
+          "mtime_ts": 1774594925.223539,
+          "size_kb": 0.0
+        },
+        {
+          "file": "loop.log",
+          "mtime": "2026-03-27 15:07:00",
+          "mtime_ts": 1774591620.9600117,
+          "size_kb": 0.7
+        }
+      ],
+      "state_files": [],
+      "background_processes": [],
+      "checked_at": "2026-04-12 08:15:19"
+    }
+  },
+  "issue-manager": {
+    "agent_id": "issue-manager",
+    "status": "🟡 대기",
+    "summary": [
+      "🟡 대기 | 포트 5611 열림",
+      "마지막 로그: 2026-03-27 16:02:12 (1354386초 전)",
+      "백그라운드 없음"
+    ],
+    "detail": {
+      "port": 5611,
+      "port_alive": true,
+      "recent_logs": [
+        {
+          "file": "channel-issue-manager.log",
+          "mtime": "2026-03-27 16:02:12",
+          "mtime_ts": 1774594932.923561,
+          "size_kb": 0.3
+        },
+        {
+          "file": "session.log",
+          "mtime": "2026-03-27 16:02:03",
+          "mtime_ts": 1774594923.3219972,
+          "size_kb": 0.0
+        },
+        {
+          "file": "loop.log",
+          "mtime": "2026-03-27 15:07:00",
+          "mtime_ts": 1774591620.9505682,
+          "size_kb": 1.1
+        }
+      ],
+      "state_files": [],
+      "background_processes": [],
+      "checked_at": "2026-04-12 08:15:20"
+    }
+  },
+  "slack-bot": {
+    "agent_id": "slack-bot",
+    "status": "🟡 대기",
+    "summary": [
+      "🟡 대기 | 포트 5612 열림",
+      "마지막 로그: 2026-04-12 07:26:36 (2924초 전)",
+      "백그라운드 프로세스 1개"
+    ],
+    "detail": {
+      "port": 5612,
+      "port_alive": true,
+      "recent_logs": [
+        {
+          "file": "slack-bot-error.log",
+          "mtime": "2026-04-12 07:26:36",
+          "mtime_ts": 1775946396.0353794,
+          "size_kb": 33.7
+        },
+        {
+          "file": "slack-bot.log",
+          "mtime": "2026-04-12 01:01:39",
+          "mtime_ts": 1775923299.8362422,
+          "size_kb": 3249.2
+        },
+        {
+          "file": "slack-bot-out.log",
+          "mtime": "2026-04-11 16:26:12",
+          "mtime_ts": 1775892372.770195,
+          "size_kb": 0.0
+        },
+        {
+          "file": "slack-bot-stderr.log",
+          "mtime": "2026-04-06 02:35:21",
+          "mtime_ts": 1775410521.2434137,
+          "size_kb": 8.2
+        },
+        {
+          "file": "slack-bot-err.log",
+          "mtime": "2026-04-04 07:28:30",
+          "mtime_ts": 1775255310.4315472,
+          "size_kb": 0.5
+        }
+      ],
+      "state_files": [],
+      "background_processes": [
+        {
+          "pid": "78480",
+          "cmd": "\"C:\\Python314\\python.exe\" scripts/slack-bot.py"
+        }
+      ],
+      "checked_at": "2026-04-12 08:15:22"
+    }
+  },
+  "schedule-agent": {
+    "agent_id": "schedule-agent",
+    "status": "🟡 대기",
+    "summary": [
+      "🟡 대기 | 포트 5613 열림",
+      "마지막 로그: 2026-03-29 16:16:31 (1180731초 전)",
+      "백그라운드 없음"
+    ],
+    "detail": {
+      "port": 5613,
+      "port_alive": true,
+      "recent_logs": [
+        {
+          "file": "session.log",
+          "mtime": "2026-03-29 16:16:31",
+          "mtime_ts": 1774768591.4546616,
+          "size_kb": 0.1
+        },
+        {
+          "file": "loop.log",
+          "mtime": "2026-03-29 16:16:31",
+          "mtime_ts": 1774768591.4434123,
+          "size_kb": 4.0
+        }
+      ],
+      "state_files": [],
+      "background_processes": [],
+      "checked_at": "2026-04-12 08:15:22"
+    }
+  },
+  "docs-agent": {
+    "agent_id": "docs-agent",
+    "status": "🟡 대기",
+    "summary": [
+      "🟡 대기 | 포트 5614 열림",
+      "마지막 로그: 2026-04-12 04:19:04 (14177초 전)",
+      "백그라운드 없음"
+    ],
+    "detail": {
+      "port": 5614,
+      "port_alive": true,
+      "recent_logs": [
+        {
+          "file": "poc_resume.log",
+          "mtime": "2026-04-12 04:19:04",
+          "mtime_ts": 1775935144.9497783,
+          "size_kb": 0.7
+        },
+        {
+          "file": "poc_run3.log",
+          "mtime": "2026-04-12 01:39:57",
+          "mtime_ts": 1775925597.7991245,
+          "size_kb": 1.9
+        },
+        {
+          "file": "poc_run2.log",
+          "mtime": "2026-04-11 23:06:06",
+          "mtime_ts": 1775916366.6325438,
+          "size_kb": 1.4
+        },
+        {
+          "file": "poc_run.log",
+          "mtime": "2026-04-11 22:57:47",
+          "mtime_ts": 1775915867.9553535,
+          "size_kb": 2.4
+        },
+        {
+          "file": "manuals_v2_pipeline_batch2.log",
+          "mtime": "2026-04-11 22:31:58",
+          "mtime_ts": 1775914318.2378564,
+          "size_kb": 0.4
+        }
+      ],
+      "state_files": [],
+      "background_processes": [],
+      "checked_at": "2026-04-12 08:15:23"
+    }
+  },
+  "control-agent": {
+    "agent_id": "control-agent",
+    "status": "🟡 대기",
+    "summary": [
+      "🟡 대기 | 포트 5616 열림",
+      "로그 없음",
+      "백그라운드 없음"
+    ],
+    "detail": {
+      "port": 5616,
+      "port_alive": true,
+      "recent_logs": [],
+      "state_files": [],
+      "background_processes": [],
+      "checked_at": "2026-04-12 08:15:23"
+    }
+  },
+  "purchase-agent": {
+    "agent_id": "purchase-agent",
+    "status": "🟡 대기",
+    "summary": [
+      "🟡 대기 | 포트 5617 열림",
+      "로그 없음",
+      "백그라운드 없음"
+    ],
+    "detail": {
+      "port": 5617,
+      "port_alive": true,
+      "recent_logs": [],
+      "state_files": [],
+      "background_processes": [],
+      "checked_at": "2026-04-12 08:15:23"
+    }
+  },
+  "research-agent": {
+    "agent_id": "research-agent",
+    "status": "🟡 대기",
+    "summary": [
+      "🟡 대기 | 포트 5618 열림",
+      "마지막 로그: 2026-04-09 05:32:10 (268993초 전)",
+      "백그라운드 없음"
+    ],
+    "detail": {
+      "port": 5618,
+      "port_alive": true,
+      "recent_logs": [
+        {
+          "file": "cm-graphrag.log",
+          "mtime": "2026-04-09 05:32:10",
+          "mtime_ts": 1775680330.0494862,
+          "size_kb": 2853.5
+        },
+        {
+          "file": "cm-graphrag-test.log",
+          "mtime": "2026-04-08 21:57:07",
+          "mtime_ts": 1775653027.7948747,
+          "size_kb": 15.8
+        },
+        {
+          "file": "um-embed-part2.log",
+          "mtime": "2026-04-08 21:23:22",
+          "mtime_ts": 1775651002.9496458,
+          "size_kb": 4.9
+        },
+        {
+          "file": "parallel-35b-a3b.log",
+          "mtime": "2026-04-06 23:23:43",
+          "mtime_ts": 1775485423.4085357,
+          "size_kb": 0.0
+        },
+        {
+          "file": "parse-run.log",
+          "mtime": "2026-04-04 22:44:45",
+          "mtime_ts": 1775310285.419061,
+          "size_kb": 62.3
+        }
+      ],
+      "state_files": [
+        {
+          "file": "cm-graphrag-progress.json",
+          "mtime": "2026-04-09 05:32:10",
+          "mtime_ts": 1775680330.0494862,
+          "last_update": null
+        },
+        {
+          "file": "um-extract-part2-progress.json",
+          "mtime": "2026-04-08 21:32:28",
+          "mtime_ts": 1775651548.4848957,
+          "last_update": null
+        },
+        {
+          "file": "final-extract-progress.json",
+          "mtime": "2026-04-05 18:29:48",
+          "mtime_ts": 1775381388.2975745,
+          "last_update": null
+        },
+        {
+          "file": "research-extract-progress.json",
+          "mtime": "2026-04-05 18:21:47",
+          "mtime_ts": 1775380907.5012743,
+          "last_update": null
+        },
+        {
+          "file": "research-html-progress.json",
+          "mtime": "2026-04-05 18:21:47",
+          "mtime_ts": 1775380907.4866955,
+          "last_update": null
+        },
+        {
+          "file": "parts-parse-progress.json",
+          "mtime": "2026-04-05 08:28:44",
+          "mtime_ts": 1775345324.8289535,
+          "last_update": null
+        },
+        {
+          "file": "gcssetup-extract-progress.json",
+          "mtime": "2026-04-04 18:15:44",
+          "mtime_ts": 1775294144.6602476,
+          "last_update": null
+        },
+        {
+          "file": "issue-extract-progress.json",
+          "mtime": "2026-04-04 17:00:55",
+          "mtime_ts": 1775289655.8745272,
+          "last_update": null
+        },
+        {
+          "file": "um-extract-part1-progress.json",
+          "mtime": "2026-04-04 16:43:39",
+          "mtime_ts": 1775288619.2883623,
+          "last_update": null
+        },
+        {
+          "file": "cm-extract-part1-progress.json",
+          "mtime": "2026-04-04 14:49:11",
+          "mtime_ts": 1775281751.5788336,
+          "last_update": null
+        }
+      ],
+      "background_processes": [],
+      "checked_at": "2026-04-12 08:15:23"
+    }
+  },
+  "llm-agent": {
+    "agent_id": "llm-agent",
+    "status": "🔴 비활성",
+    "summary": [
+      "🔴 비활성 | 포트 5620 닫힘",
+      "로그 없음",
+      "백그라운드 없음"
+    ],
+    "detail": {
+      "port": 5620,
+      "port_alive": false,
+      "recent_logs": [],
+      "state_files": [],
+      "background_processes": [],
+      "checked_at": "2026-04-12 08:15:26"
+    }
+  }
+}
