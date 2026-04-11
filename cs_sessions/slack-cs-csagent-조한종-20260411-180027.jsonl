@@ -1,0 +1,2 @@
+{"session_id": "slack-cs-csagent-조한종-20260411-180027", "timestamp": "2026-04-11T18:00:32.621522+09:00", "channel": "cs-csagent", "user": "조한종", "question_source": "slack", "language": "ko", "query": "장비 / 고객정보 섹션에 장비 시리얼번호는 왜 mes 에서 못가져온거지?", "full_response": "네, 확인해보겠습니다. 잠시만요.", "status": "responded"}
+{"type": "feedback", "value": "positive", "ts": "2026-04-11T18:00:38.006290+09:00", "user": "U0A7S89M5S7", "session_id": "slack-cs-csagent-조한종-20260411-180027"}
