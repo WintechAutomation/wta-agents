@@ -169,26 +169,26 @@
               - columnheader "파일" [ref=e169]
               - columnheader "관리" [ref=e170]
           - rowgroup [ref=e171]:
-            - row "대기 일반 23-00-70-0 Left, Right Gripper 낱개 단가입니다 사용시 2개가 한세트. P02300700 PVD 로딩/언로딩 ₩85,000 - 1" [ref=e172]:
+            - row "대기 일반 23-00-70-0 Left, Right Gripper test remark updated P02300700 PVD 로딩/언로딩 ₩85,000 - 2" [ref=e172]:
               - cell "대기" [ref=e173]:
                 - generic [ref=e174]: 대기
               - cell "일반" [ref=e175]:
                 - generic [ref=e176]: 일반
               - cell "23-00-70-0" [ref=e177]
-              - cell "Left, Right Gripper 낱개 단가입니다 사용시 2개가 한세트." [ref=e178] [cursor=pointer]:
+              - cell "Left, Right Gripper test remark updated" [ref=e178] [cursor=pointer]:
                 - generic [ref=e179]: Left, Right Gripper
-                - generic [ref=e180]: 낱개 단가입니다 사용시 2개가 한세트.
+                - generic [ref=e180]: test remark updated
               - cell "P02300700" [ref=e181]
               - cell "PVD 로딩/언로딩" [ref=e182]
               - cell "₩85,000" [ref=e183]
               - cell "-" [ref=e184]
-              - cell "1" [ref=e185]:
+              - cell "2" [ref=e185]:
                 - generic "이미지" [ref=e187]:
                   - img [ref=e188]
-                  - text: "1"
+                  - text: "2"
               - cell [ref=e192]:
                 - generic [ref=e193]:
-                  - button "편집" [active] [ref=e194]:
+                  - button "편집" [ref=e194]:
                     - img [ref=e195]
                   - button "삭제" [ref=e198]:
                     - img [ref=e199]
@@ -566,28 +566,29 @@
             - button [ref=e650]:
               - img [ref=e651]
           - generic [ref=e654]:
-            - generic [ref=e655]:
-              - generic [ref=e656]:
-                - generic [ref=e657]: 상태
-                - combobox [ref=e658]:
+            - generic [ref=e655]: "API error (422): {\"detail\":[{\"type\":\"missing\",\"loc\":[\"body\",\"payload\"],\"msg\":\"Field required\",\"input\":null}]}"
+            - generic [ref=e656]:
+              - generic [ref=e657]:
+                - generic [ref=e658]: 상태
+                - combobox [ref=e659]:
                   - option "대기" [selected]
                   - option "승인"
                   - option "반려"
-              - generic [ref=e659]:
-                - generic [ref=e660]: 구분
-                - generic [ref=e661]:
-                  - generic [ref=e662] [cursor=pointer]:
-                    - radio "일반" [checked] [ref=e663]
+              - generic [ref=e660]:
+                - generic [ref=e661]: 구분
+                - generic [ref=e662]:
+                  - generic [ref=e663] [cursor=pointer]:
+                    - radio "일반" [checked] [ref=e664]
                     - text: 일반
-                  - generic [ref=e664] [cursor=pointer]:
-                    - radio "소모품" [ref=e665]
+                  - generic [ref=e665] [cursor=pointer]:
+                    - radio "소모품" [ref=e666]
                     - text: 소모품
-                  - generic [ref=e666] [cursor=pointer]:
-                    - radio "Spare" [ref=e667]
+                  - generic [ref=e667] [cursor=pointer]:
+                    - radio "Spare" [ref=e668]
                     - text: Spare
-              - generic [ref=e668]:
-                - generic [ref=e669]: 장비모델
-                - combobox [ref=e670]:
+              - generic [ref=e669]:
+                - generic [ref=e670]: 장비모델
+                - combobox [ref=e671]:
                   - option "미지정"
                   - option "공통"
                   - option "호닝형상검사기"
@@ -614,48 +615,51 @@
                   - option "연삭기핸들러"
                   - option "라벨부착기"
                   - option "양면연삭설비"
-              - generic [ref=e671]:
-                - generic [ref=e672]: 품명 *
-                - textbox [ref=e673]: Left, Right Gripper
-              - generic [ref=e674]:
-                - generic [ref=e675]: ERP 품목코드
-                - textbox [ref=e676]: 23-00-70-0
-              - generic [ref=e677]:
-                - generic [ref=e678]: 판매형번
-                - textbox [ref=e679]: P02300700
-              - generic [ref=e680]:
-                - generic [ref=e681]: 단가 (원)
-                - spinbutton [ref=e682]: "85000"
-              - generic [ref=e683]:
-                - generic [ref=e684]: 제조사
-                - textbox [ref=e685]
-              - generic [ref=e686]:
-                - generic [ref=e687]: 비고
-                - textbox [ref=e688]: 낱개 단가입니다 사용시 2개가 한세트.
-            - generic [ref=e689]:
-              - generic [ref=e690]:
-                - generic [ref=e691]:
-                  - generic [ref=e692]: 제품 이미지
-                  - generic [ref=e693] [cursor=pointer]:
-                    - img [ref=e694]
+              - generic [ref=e672]:
+                - generic [ref=e673]: 품명 *
+                - textbox [ref=e674]: Left, Right Gripper
+              - generic [ref=e675]:
+                - generic [ref=e676]: ERP 품목코드
+                - textbox [ref=e677]: 23-00-70-0
+              - generic [ref=e678]:
+                - generic [ref=e679]: 판매형번
+                - textbox [ref=e680]: P02300700
+              - generic [ref=e681]:
+                - generic [ref=e682]: 단가 (원)
+                - spinbutton [ref=e683]: "85000"
+              - generic [ref=e684]:
+                - generic [ref=e685]: 제조사
+                - textbox [ref=e686]
+              - generic [ref=e687]:
+                - generic [ref=e688]: 비고
+                - textbox [ref=e689]: test remark updated
+            - generic [ref=e690]:
+              - generic [ref=e691]:
+                - generic [ref=e692]:
+                  - generic [ref=e693]: 제품 이미지
+                  - generic [ref=e694] [cursor=pointer]:
+                    - img [ref=e695]
                     - text: 업로드
-                - button [ref=e699]:
-                  - img [ref=e700]
-              - generic [ref=e703]:
-                - generic [ref=e704]:
-                  - generic [ref=e705]: 도면 (PDF/DWG/DXF)
-                  - generic [ref=e706] [cursor=pointer]:
-                    - img [ref=e707]
+                - generic [ref=e698]:
+                  - button [ref=e700]:
+                    - img [ref=e701]
+                  - button [ref=e705]:
+                    - img [ref=e706]
+              - generic [ref=e709]:
+                - generic [ref=e710]:
+                  - generic [ref=e711]: 도면 (PDF/DWG/DXF)
+                  - generic [ref=e712] [cursor=pointer]:
+                    - img [ref=e713]
                     - text: 업로드
-                - generic [ref=e711]: 등록된 파일 없음
-              - generic [ref=e712]:
-                - generic [ref=e713]:
-                  - generic [ref=e714]: 조립 SOP / 점검표
-                  - generic [ref=e715] [cursor=pointer]:
-                    - img [ref=e716]
+                - generic [ref=e717]: 등록된 파일 없음
+              - generic [ref=e718]:
+                - generic [ref=e719]:
+                  - generic [ref=e720]: 조립 SOP / 점검표
+                  - generic [ref=e721] [cursor=pointer]:
+                    - img [ref=e722]
                     - text: 업로드
-                - generic [ref=e720]: 등록된 파일 없음
-          - generic [ref=e721]:
-            - button "닫기" [ref=e722]
-            - button "저장" [ref=e723]
+                - generic [ref=e726]: 등록된 파일 없음
+          - generic [ref=e727]:
+            - button "닫기" [ref=e728]
+            - button "저장" [ref=e729]
 ```

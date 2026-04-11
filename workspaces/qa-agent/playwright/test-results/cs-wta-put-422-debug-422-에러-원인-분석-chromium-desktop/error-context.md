@@ -1,0 +1,665 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - generic [ref=e5]:
+      - img "WTA" [ref=e6]
+      - generic [ref=e7]: CS Agent
+    - navigation [ref=e8]:
+      - link "Dashboard" [ref=e10] [cursor=pointer]:
+        - /url: /
+        - img [ref=e11]
+        - text: Dashboard
+      - link "CS History" [ref=e17] [cursor=pointer]:
+        - /url: /cs
+        - img [ref=e18]
+        - text: CS History
+      - link "Work Schedule" [ref=e22] [cursor=pointer]:
+        - /url: /schedule
+        - img [ref=e23]
+        - text: Work Schedule
+      - link "Equipment" [ref=e26] [cursor=pointer]:
+        - /url: /equipment
+        - img [ref=e27]
+        - text: Equipment
+      - link "Equipment Setup" [ref=e31] [cursor=pointer]:
+        - /url: /setup
+        - img [ref=e32]
+        - text: Equipment Setup
+      - generic [ref=e34]:
+        - link "Inventory" [ref=e35] [cursor=pointer]:
+          - /url: /inventory
+          - img [ref=e36]
+          - text: Inventory
+        - generic [ref=e40]:
+          - button "Stock Status" [ref=e41]:
+            - img [ref=e42]
+            - text: Stock Status
+          - button "Parts Requests" [ref=e46]:
+            - img [ref=e47]
+            - text: Parts Requests
+          - button "Parts Master" [ref=e50]:
+            - img [ref=e51]
+            - text: Parts Master
+      - generic [ref=e53]:
+        - link "Parts Sales" [ref=e54] [cursor=pointer]:
+          - /url: /sales
+          - img [ref=e55]
+          - text: Parts Sales
+        - generic [ref=e59]:
+          - button "Sales List" [ref=e60]:
+            - img [ref=e61]
+            - text: Sales List
+          - button "Sales Materials" [ref=e65]:
+            - img [ref=e66]
+            - text: Sales Materials
+      - link "Quotations" [ref=e71] [cursor=pointer]:
+        - /url: /quotes
+        - img [ref=e72]
+        - text: Quotations
+      - link "AI Chat" [ref=e76] [cursor=pointer]:
+        - /url: /chat
+        - img [ref=e77]
+        - text: AI Chat
+      - link "Label Printing" [ref=e80] [cursor=pointer]:
+        - /url: /labels
+        - img [ref=e81]
+        - text: Label Printing
+      - link "Gallery" [ref=e86] [cursor=pointer]:
+        - /url: /gallery
+        - img [ref=e87]
+        - text: Gallery
+      - generic [ref=e91]:
+        - link "Settings" [ref=e92] [cursor=pointer]:
+          - /url: /settings
+          - img [ref=e93]
+          - text: Settings
+        - generic [ref=e95]:
+          - button "Label Printer Settings" [ref=e96]:
+            - img [ref=e97]
+            - text: Label Printer Settings
+          - button "Branch Management" [ref=e101]:
+            - img [ref=e102]
+            - text: Branch Management
+    - generic [ref=e106]:
+      - generic [ref=e107]:
+        - img [ref=e109]
+        - generic [ref=e112]:
+          - paragraph [ref=e113]: Administrator
+          - paragraph [ref=e114]: HQ
+      - button "Logout" [ref=e115]:
+        - img [ref=e116]
+        - text: Logout
+  - generic [ref=e119]:
+    - banner [ref=e120]:
+      - generic [ref=e121]:
+        - button "Toggle dark mode" [ref=e122]:
+          - img [ref=e123]
+        - button "Language" [ref=e126]:
+          - img [ref=e127]
+          - generic [ref=e130]: English
+        - generic [ref=e132]: Administrator
+    - main [ref=e133]:
+      - generic [ref=e134]:
+        - generic [ref=e135]:
+          - generic [ref=e136]:
+            - heading "판매자재관리" [level=1] [ref=e137]
+            - paragraph [ref=e138]: 총 287건
+          - generic [ref=e139]:
+            - button "장비모델 관리" [ref=e140]:
+              - img [ref=e141]
+              - text: 장비모델 관리
+            - button "신규 등록" [ref=e144]:
+              - img [ref=e145]
+              - text: 신규 등록
+        - generic [ref=e147]:
+          - generic [ref=e148]:
+            - img [ref=e149]
+            - textbox "품명 / ERP품목코드 / 판매형번 / 제조사" [ref=e152]
+          - combobox [ref=e153]:
+            - 'option "상태: 전체" [selected]'
+            - 'option "상태: 대기"'
+            - 'option "상태: 승인"'
+            - 'option "상태: 반려"'
+          - combobox [ref=e154]:
+            - 'option "구분: 전체" [selected]'
+            - 'option "구분: 소모품"'
+            - 'option "구분: Spare"'
+            - 'option "구분: 일반"'
+          - combobox [ref=e155]:
+            - 'option "장비모델: 전체" [selected]'
+            - option "공통"
+            - option "호닝형상검사기"
+            - option "검사기-F1"
+            - option "검사기"
+            - option "프레스-2CV"
+            - option "프레스핸들러"
+            - option "검사기-F2"
+            - option "프레스-EV"
+            - option "소결취출기"
+            - option "PVD-L"
+            - option "PVD 로딩"
+            - option "PVD 로딩/언로딩"
+            - option "PVD-UL"
+            - option "PVD 언로딩"
+            - option "포장기"
+            - option "포장핸들러"
+            - option "CVD"
+            - option "CVD 로딩"
+            - option "CVD 언로딩"
+            - option "CVD 로딩/언로딩"
+            - option "마스크자동기"
+            - option "양면연삭핸들러"
+            - option "연삭기핸들러"
+            - option "라벨부착기"
+            - option "양면연삭설비"
+          - button "검색" [ref=e156]
+        - table [ref=e158]:
+          - rowgroup [ref=e159]:
+            - row "상태 구분 ERP품목코드 품명 판매형번 장비모델 단가 제조사 파일 관리" [ref=e160]:
+              - columnheader "상태" [ref=e161]
+              - columnheader "구분" [ref=e162]
+              - columnheader "ERP품목코드" [ref=e163]
+              - columnheader "품명" [ref=e164]
+              - columnheader "판매형번" [ref=e165]
+              - columnheader "장비모델" [ref=e166]
+              - columnheader "단가" [ref=e167]
+              - columnheader "제조사" [ref=e168]
+              - columnheader "파일" [ref=e169]
+              - columnheader "관리" [ref=e170]
+          - rowgroup [ref=e171]:
+            - row "대기 일반 23-00-70-0 Left, Right Gripper test remark updated P02300700 PVD 로딩/언로딩 ₩85,000 - 2" [ref=e172]:
+              - cell "대기" [ref=e173]:
+                - generic [ref=e174]: 대기
+              - cell "일반" [ref=e175]:
+                - generic [ref=e176]: 일반
+              - cell "23-00-70-0" [ref=e177]
+              - cell "Left, Right Gripper test remark updated" [ref=e178] [cursor=pointer]:
+                - generic [ref=e179]: Left, Right Gripper
+                - generic [ref=e180]: test remark updated
+              - cell "P02300700" [ref=e181]
+              - cell "PVD 로딩/언로딩" [ref=e182]
+              - cell "₩85,000" [ref=e183]
+              - cell "-" [ref=e184]
+              - cell "2" [ref=e185]:
+                - generic "이미지" [ref=e187]:
+                  - img [ref=e188]
+                  - text: "2"
+              - cell [ref=e192]:
+                - generic [ref=e193]:
+                  - button "편집" [ref=e194]:
+                    - img [ref=e195]
+                  - button "삭제" [ref=e198]:
+                    - img [ref=e199]
+            - row "대기 일반 99-46-24-0 Spacer Brush P09946240 PVD 로딩/언로딩 ₩90,000 -" [ref=e202]:
+              - cell "대기" [ref=e203]:
+                - generic [ref=e204]: 대기
+              - cell "일반" [ref=e205]:
+                - generic [ref=e206]: 일반
+              - cell "99-46-24-0" [ref=e207]
+              - cell "Spacer Brush" [ref=e208] [cursor=pointer]:
+                - generic [ref=e209]: Spacer Brush
+              - cell "P09946240" [ref=e210]
+              - cell "PVD 로딩/언로딩" [ref=e211]
+              - cell "₩90,000" [ref=e212]
+              - cell "-" [ref=e213]
+              - cell [ref=e214]
+              - cell [ref=e215]:
+                - generic [ref=e216]:
+                  - button "편집" [ref=e217]:
+                    - img [ref=e218]
+                  - button "삭제" [ref=e221]:
+                    - img [ref=e222]
+            - row "대기 일반 26-00-35-0 Skewer Top Grip Peek P02600350 PVD 로딩/언로딩 ₩45,000 -" [ref=e225]:
+              - cell "대기" [ref=e226]:
+                - generic [ref=e227]: 대기
+              - cell "일반" [ref=e228]:
+                - generic [ref=e229]: 일반
+              - cell "26-00-35-0" [ref=e230]
+              - cell "Skewer Top Grip Peek" [ref=e231] [cursor=pointer]:
+                - generic [ref=e232]: Skewer Top Grip Peek
+              - cell "P02600350" [ref=e233]
+              - cell "PVD 로딩/언로딩" [ref=e234]
+              - cell "₩45,000" [ref=e235]
+              - cell "-" [ref=e236]
+              - cell [ref=e237]
+              - cell [ref=e238]:
+                - generic [ref=e239]:
+                  - button "편집" [ref=e240]:
+                    - img [ref=e241]
+                  - button "삭제" [ref=e244]:
+                    - img [ref=e245]
+            - row "대기 일반 26-00-55-0 Skewer Bot Grip Peek1 P02600550 PVD 로딩/언로딩 ₩45,000 -" [ref=e248]:
+              - cell "대기" [ref=e249]:
+                - generic [ref=e250]: 대기
+              - cell "일반" [ref=e251]:
+                - generic [ref=e252]: 일반
+              - cell "26-00-55-0" [ref=e253]
+              - cell "Skewer Bot Grip Peek1" [ref=e254] [cursor=pointer]:
+                - generic [ref=e255]: Skewer Bot Grip Peek1
+              - cell "P02600550" [ref=e256]
+              - cell "PVD 로딩/언로딩" [ref=e257]
+              - cell "₩45,000" [ref=e258]
+              - cell "-" [ref=e259]
+              - cell [ref=e260]
+              - cell [ref=e261]:
+                - generic [ref=e262]:
+                  - button "편집" [ref=e263]:
+                    - img [ref=e264]
+                  - button "삭제" [ref=e267]:
+                    - img [ref=e268]
+            - row "대기 일반 26-00-56-0 Skewer Bot Grip Peek2 P02600560 PVD 로딩/언로딩 ₩45,000 -" [ref=e271]:
+              - cell "대기" [ref=e272]:
+                - generic [ref=e273]: 대기
+              - cell "일반" [ref=e274]:
+                - generic [ref=e275]: 일반
+              - cell "26-00-56-0" [ref=e276]
+              - cell "Skewer Bot Grip Peek2" [ref=e277] [cursor=pointer]:
+                - generic [ref=e278]: Skewer Bot Grip Peek2
+              - cell "P02600560" [ref=e279]
+              - cell "PVD 로딩/언로딩" [ref=e280]
+              - cell "₩45,000" [ref=e281]
+              - cell "-" [ref=e282]
+              - cell [ref=e283]
+              - cell [ref=e284]:
+                - generic [ref=e285]:
+                  - button "편집" [ref=e286]:
+                    - img [ref=e287]
+                  - button "삭제" [ref=e290]:
+                    - img [ref=e291]
+            - row "대기 일반 23-02-48-1 Stock Plate P02302481 PVD 로딩/언로딩 ₩68,000 -" [ref=e294]:
+              - cell "대기" [ref=e295]:
+                - generic [ref=e296]: 대기
+              - cell "일반" [ref=e297]:
+                - generic [ref=e298]: 일반
+              - cell "23-02-48-1" [ref=e299]
+              - cell "Stock Plate" [ref=e300] [cursor=pointer]:
+                - generic [ref=e301]: Stock Plate
+              - cell "P02302481" [ref=e302]
+              - cell "PVD 로딩/언로딩" [ref=e303]
+              - cell "₩68,000" [ref=e304]
+              - cell "-" [ref=e305]
+              - cell [ref=e306]
+              - cell [ref=e307]:
+                - generic [ref=e308]:
+                  - button "편집" [ref=e309]:
+                    - img [ref=e310]
+                  - button "삭제" [ref=e313]:
+                    - img [ref=e314]
+            - row "대기 일반 92-00-58-1 Spacer Wing P09200581 PVD 로딩/언로딩 ₩13,000 -" [ref=e317]:
+              - cell "대기" [ref=e318]:
+                - generic [ref=e319]: 대기
+              - cell "일반" [ref=e320]:
+                - generic [ref=e321]: 일반
+              - cell "92-00-58-1" [ref=e322]
+              - cell "Spacer Wing" [ref=e323] [cursor=pointer]:
+                - generic [ref=e324]: Spacer Wing
+              - cell "P09200581" [ref=e325]
+              - cell "PVD 로딩/언로딩" [ref=e326]
+              - cell "₩13,000" [ref=e327]
+              - cell "-" [ref=e328]
+              - cell [ref=e329]
+              - cell [ref=e330]:
+                - generic [ref=e331]:
+                  - button "편집" [ref=e332]:
+                    - img [ref=e333]
+                  - button "삭제" [ref=e336]:
+                    - img [ref=e337]
+            - row "대기 일반 50-01-07-0 Gripper Pin Holder (0.8파이) P05001070 공통 ₩26,000 -" [ref=e340]:
+              - cell "대기" [ref=e341]:
+                - generic [ref=e342]: 대기
+              - cell "일반" [ref=e343]:
+                - generic [ref=e344]: 일반
+              - cell "50-01-07-0" [ref=e345]
+              - cell "Gripper Pin Holder (0.8파이)" [ref=e346] [cursor=pointer]:
+                - generic [ref=e347]: Gripper Pin Holder (0.8파이)
+              - cell "P05001070" [ref=e348]
+              - cell "공통" [ref=e349]
+              - cell "₩26,000" [ref=e350]
+              - cell "-" [ref=e351]
+              - cell [ref=e352]
+              - cell [ref=e353]:
+                - generic [ref=e354]:
+                  - button "편집" [ref=e355]:
+                    - img [ref=e356]
+                  - button "삭제" [ref=e359]:
+                    - img [ref=e360]
+            - row "대기 일반 50-01-05-0 Gripper Pin Holder (1.0파이) P05001050 공통 ₩26,000 -" [ref=e363]:
+              - cell "대기" [ref=e364]:
+                - generic [ref=e365]: 대기
+              - cell "일반" [ref=e366]:
+                - generic [ref=e367]: 일반
+              - cell "50-01-05-0" [ref=e368]
+              - cell "Gripper Pin Holder (1.0파이)" [ref=e369] [cursor=pointer]:
+                - generic [ref=e370]: Gripper Pin Holder (1.0파이)
+              - cell "P05001050" [ref=e371]
+              - cell "공통" [ref=e372]
+              - cell "₩26,000" [ref=e373]
+              - cell "-" [ref=e374]
+              - cell [ref=e375]
+              - cell [ref=e376]:
+                - generic [ref=e377]:
+                  - button "편집" [ref=e378]:
+                    - img [ref=e379]
+                  - button "삭제" [ref=e382]:
+                    - img [ref=e383]
+            - row "대기 일반 07-70-19-0 Cleaning Brush P00770190 프레스핸들러 ₩35,000 -" [ref=e386]:
+              - cell "대기" [ref=e387]:
+                - generic [ref=e388]: 대기
+              - cell "일반" [ref=e389]:
+                - generic [ref=e390]: 일반
+              - cell "07-70-19-0" [ref=e391]
+              - cell "Cleaning Brush" [ref=e392] [cursor=pointer]:
+                - generic [ref=e393]: Cleaning Brush
+              - cell "P00770190" [ref=e394]
+              - cell "프레스핸들러" [ref=e395]
+              - cell "₩35,000" [ref=e396]
+              - cell "-" [ref=e397]
+              - cell [ref=e398]
+              - cell [ref=e399]:
+                - generic [ref=e400]:
+                  - button "편집" [ref=e401]:
+                    - img [ref=e402]
+                  - button "삭제" [ref=e405]:
+                    - img [ref=e406]
+            - row "대기 일반 89-00-11-4 Skew Gripper P08900114 PVD 로딩/언로딩 ₩38,000 -" [ref=e409]:
+              - cell "대기" [ref=e410]:
+                - generic [ref=e411]: 대기
+              - cell "일반" [ref=e412]:
+                - generic [ref=e413]: 일반
+              - cell "89-00-11-4" [ref=e414]
+              - cell "Skew Gripper" [ref=e415] [cursor=pointer]:
+                - generic [ref=e416]: Skew Gripper
+              - cell "P08900114" [ref=e417]
+              - cell "PVD 로딩/언로딩" [ref=e418]
+              - cell "₩38,000" [ref=e419]
+              - cell "-" [ref=e420]
+              - cell [ref=e421]
+              - cell [ref=e422]:
+                - generic [ref=e423]:
+                  - button "편집" [ref=e424]:
+                    - img [ref=e425]
+                  - button "삭제" [ref=e428]:
+                    - img [ref=e429]
+            - row "대기 일반 U50-S03-A18 PISCO 2Jaw Gripper 1.0mm / 소형 세트품목 A05003180 공통 ₩320,000 -" [ref=e432]:
+              - cell "대기" [ref=e433]:
+                - generic [ref=e434]: 대기
+              - cell "일반" [ref=e435]:
+                - generic [ref=e436]: 일반
+              - cell "U50-S03-A18" [ref=e437]
+              - cell "PISCO 2Jaw Gripper 1.0mm / 소형 세트품목" [ref=e438] [cursor=pointer]:
+                - generic [ref=e439]: PISCO 2Jaw Gripper 1.0mm / 소형
+                - generic [ref=e440]: 세트품목
+              - cell "A05003180" [ref=e441]
+              - cell "공통" [ref=e442]
+              - cell "₩320,000" [ref=e443]
+              - cell "-" [ref=e444]
+              - cell [ref=e445]
+              - cell [ref=e446]:
+                - generic [ref=e447]:
+                  - button "편집" [ref=e448]:
+                    - img [ref=e449]
+                  - button "삭제" [ref=e452]:
+                    - img [ref=e453]
+            - row "대기 일반 U50-S03-A00 PISCO 2Jaw Grip Tool 그리퍼 핀, 캡 제외 A05003000 공통 ₩300,000 -" [ref=e456]:
+              - cell "대기" [ref=e457]:
+                - generic [ref=e458]: 대기
+              - cell "일반" [ref=e459]:
+                - generic [ref=e460]: 일반
+              - cell "U50-S03-A00" [ref=e461]
+              - cell "PISCO 2Jaw Grip Tool 그리퍼 핀, 캡 제외" [ref=e462] [cursor=pointer]:
+                - generic [ref=e463]: PISCO 2Jaw Grip Tool
+                - generic [ref=e464]: 그리퍼 핀, 캡 제외
+              - cell "A05003000" [ref=e465]
+              - cell "공통" [ref=e466]
+              - cell "₩300,000" [ref=e467]
+              - cell "-" [ref=e468]
+              - cell [ref=e469]
+              - cell [ref=e470]:
+                - generic [ref=e471]:
+                  - button "편집" [ref=e472]:
+                    - img [ref=e473]
+                  - button "삭제" [ref=e476]:
+                    - img [ref=e477]
+            - row "대기 일반 50-01-03-0 Gripper Pin Holder (1.2파이) P05001030 공통 ₩26,000 -" [ref=e480]:
+              - cell "대기" [ref=e481]:
+                - generic [ref=e482]: 대기
+              - cell "일반" [ref=e483]:
+                - generic [ref=e484]: 일반
+              - cell "50-01-03-0" [ref=e485]
+              - cell "Gripper Pin Holder (1.2파이)" [ref=e486] [cursor=pointer]:
+                - generic [ref=e487]: Gripper Pin Holder (1.2파이)
+              - cell "P05001030" [ref=e488]
+              - cell "공통" [ref=e489]
+              - cell "₩26,000" [ref=e490]
+              - cell "-" [ref=e491]
+              - cell [ref=e492]
+              - cell [ref=e493]:
+                - generic [ref=e494]:
+                  - button "편집" [ref=e495]:
+                    - img [ref=e496]
+                  - button "삭제" [ref=e499]:
+                    - img [ref=e500]
+            - row "대기 일반 50-02-42-0 MGT Marking Gripper-1 P05002420 포장기 ₩75,000 -" [ref=e503]:
+              - cell "대기" [ref=e504]:
+                - generic [ref=e505]: 대기
+              - cell "일반" [ref=e506]:
+                - generic [ref=e507]: 일반
+              - cell "50-02-42-0" [ref=e508]
+              - cell "MGT Marking Gripper-1" [ref=e509] [cursor=pointer]:
+                - generic [ref=e510]: MGT Marking Gripper-1
+              - cell "P05002420" [ref=e511]
+              - cell "포장기" [ref=e512]
+              - cell "₩75,000" [ref=e513]
+              - cell "-" [ref=e514]
+              - cell [ref=e515]
+              - cell [ref=e516]:
+                - generic [ref=e517]:
+                  - button "편집" [ref=e518]:
+                    - img [ref=e519]
+                  - button "삭제" [ref=e522]:
+                    - img [ref=e523]
+            - row "대기 일반 50-02-43-0 MGT Marking Gripper-2 P05002430 포장기 ₩50,000 -" [ref=e526]:
+              - cell "대기" [ref=e527]:
+                - generic [ref=e528]: 대기
+              - cell "일반" [ref=e529]:
+                - generic [ref=e530]: 일반
+              - cell "50-02-43-0" [ref=e531]
+              - cell "MGT Marking Gripper-2" [ref=e532] [cursor=pointer]:
+                - generic [ref=e533]: MGT Marking Gripper-2
+              - cell "P05002430" [ref=e534]
+              - cell "포장기" [ref=e535]
+              - cell "₩50,000" [ref=e536]
+              - cell "-" [ref=e537]
+              - cell [ref=e538]
+              - cell [ref=e539]:
+                - generic [ref=e540]:
+                  - button "편집" [ref=e541]:
+                    - img [ref=e542]
+                  - button "삭제" [ref=e545]:
+                    - img [ref=e546]
+            - row "대기 일반 50-02-09-0 2 Jaw Gripper (언그립 폭 5.0mm, 그립 폭 1.0mm) P05002090 포장기 ₩75,000 -" [ref=e549]:
+              - cell "대기" [ref=e550]:
+                - generic [ref=e551]: 대기
+              - cell "일반" [ref=e552]:
+                - generic [ref=e553]: 일반
+              - cell "50-02-09-0" [ref=e554]
+              - cell "2 Jaw Gripper (언그립 폭 5.0mm, 그립 폭 1.0mm)" [ref=e555] [cursor=pointer]:
+                - generic [ref=e556]: 2 Jaw Gripper (언그립 폭 5.0mm, 그립 폭 1.0mm)
+              - cell "P05002090" [ref=e557]
+              - cell "포장기" [ref=e558]
+              - cell "₩75,000" [ref=e559]
+              - cell "-" [ref=e560]
+              - cell [ref=e561]
+              - cell [ref=e562]:
+                - generic [ref=e563]:
+                  - button "편집" [ref=e564]:
+                    - img [ref=e565]
+                  - button "삭제" [ref=e568]:
+                    - img [ref=e569]
+            - row "대기 일반 14-00-010-1 Deburring Brush P14000101 프레스핸들러 ₩65,000 -" [ref=e572]:
+              - cell "대기" [ref=e573]:
+                - generic [ref=e574]: 대기
+              - cell "일반" [ref=e575]:
+                - generic [ref=e576]: 일반
+              - cell "14-00-010-1" [ref=e577]
+              - cell "Deburring Brush" [ref=e578] [cursor=pointer]:
+                - generic [ref=e579]: Deburring Brush
+              - cell "P14000101" [ref=e580]
+              - cell "프레스핸들러" [ref=e581]
+              - cell "₩65,000" [ref=e582]
+              - cell "-" [ref=e583]
+              - cell [ref=e584]
+              - cell [ref=e585]:
+                - generic [ref=e586]:
+                  - button "편집" [ref=e587]:
+                    - img [ref=e588]
+                  - button "삭제" [ref=e591]:
+                    - img [ref=e592]
+            - row "대기 일반 50-01-01-0 Gripper Holder (3-Jaw) P05001010 공통 ₩90,000 -" [ref=e595]:
+              - cell "대기" [ref=e596]:
+                - generic [ref=e597]: 대기
+              - cell "일반" [ref=e598]:
+                - generic [ref=e599]: 일반
+              - cell "50-01-01-0" [ref=e600]
+              - cell "Gripper Holder (3-Jaw)" [ref=e601] [cursor=pointer]:
+                - generic [ref=e602]: Gripper Holder (3-Jaw)
+              - cell "P05001010" [ref=e603]
+              - cell "공통" [ref=e604]
+              - cell "₩90,000" [ref=e605]
+              - cell "-" [ref=e606]
+              - cell [ref=e607]
+              - cell [ref=e608]:
+                - generic [ref=e609]:
+                  - button "편집" [ref=e610]:
+                    - img [ref=e611]
+                  - button "삭제" [ref=e614]:
+                    - img [ref=e615]
+            - row "대기 일반 50-04-71-0 Vacuum Gripper (1구) P05004710 공통 ₩30,000 -" [ref=e618]:
+              - cell "대기" [ref=e619]:
+                - generic [ref=e620]: 대기
+              - cell "일반" [ref=e621]:
+                - generic [ref=e622]: 일반
+              - cell "50-04-71-0" [ref=e623]
+              - cell "Vacuum Gripper (1구)" [ref=e624] [cursor=pointer]:
+                - generic [ref=e625]: Vacuum Gripper (1구)
+              - cell "P05004710" [ref=e626]
+              - cell "공통" [ref=e627]
+              - cell "₩30,000" [ref=e628]
+              - cell "-" [ref=e629]
+              - cell [ref=e630]
+              - cell [ref=e631]:
+                - generic [ref=e632]:
+                  - button "편집" [ref=e633]:
+                    - img [ref=e634]
+                  - button "삭제" [ref=e637]:
+                    - img [ref=e638]
+        - generic [ref=e641]:
+          - generic [ref=e642]: 1 / 15 페이지
+          - generic [ref=e643]:
+            - button "이전" [disabled] [ref=e644]
+            - button "다음" [ref=e645]
+        - generic [ref=e647]:
+          - generic [ref=e648]:
+            - heading "판매자재 편집" [level=2] [ref=e649]
+            - button [ref=e650]:
+              - img [ref=e651]
+          - generic [ref=e654]:
+            - generic [ref=e655]: "API error (422): {\"detail\":[{\"type\":\"missing\",\"loc\":[\"body\",\"payload\"],\"msg\":\"Field required\",\"input\":null}]}"
+            - generic [ref=e656]:
+              - generic [ref=e657]:
+                - generic [ref=e658]: 상태
+                - combobox [ref=e659]:
+                  - option "대기" [selected]
+                  - option "승인"
+                  - option "반려"
+              - generic [ref=e660]:
+                - generic [ref=e661]: 구분
+                - generic [ref=e662]:
+                  - generic [ref=e663] [cursor=pointer]:
+                    - radio "일반" [checked] [ref=e664]
+                    - text: 일반
+                  - generic [ref=e665] [cursor=pointer]:
+                    - radio "소모품" [ref=e666]
+                    - text: 소모품
+                  - generic [ref=e667] [cursor=pointer]:
+                    - radio "Spare" [ref=e668]
+                    - text: Spare
+              - generic [ref=e669]:
+                - generic [ref=e670]: 장비모델
+                - combobox [ref=e671]:
+                  - option "미지정"
+                  - option "공통"
+                  - option "호닝형상검사기"
+                  - option "검사기-F1"
+                  - option "검사기"
+                  - option "프레스-2CV"
+                  - option "프레스핸들러"
+                  - option "검사기-F2"
+                  - option "프레스-EV"
+                  - option "소결취출기"
+                  - option "PVD-L"
+                  - option "PVD 로딩"
+                  - option "PVD 로딩/언로딩" [selected]
+                  - option "PVD-UL"
+                  - option "PVD 언로딩"
+                  - option "포장기"
+                  - option "포장핸들러"
+                  - option "CVD"
+                  - option "CVD 로딩"
+                  - option "CVD 언로딩"
+                  - option "CVD 로딩/언로딩"
+                  - option "마스크자동기"
+                  - option "양면연삭핸들러"
+                  - option "연삭기핸들러"
+                  - option "라벨부착기"
+                  - option "양면연삭설비"
+              - generic [ref=e672]:
+                - generic [ref=e673]: 품명 *
+                - textbox [ref=e674]: Left, Right Gripper
+              - generic [ref=e675]:
+                - generic [ref=e676]: ERP 품목코드
+                - textbox [ref=e677]: 23-00-70-0
+              - generic [ref=e678]:
+                - generic [ref=e679]: 판매형번
+                - textbox [ref=e680]: P02300700
+              - generic [ref=e681]:
+                - generic [ref=e682]: 단가 (원)
+                - spinbutton [ref=e683]: "85000"
+              - generic [ref=e684]:
+                - generic [ref=e685]: 제조사
+                - textbox [ref=e686]
+              - generic [ref=e687]:
+                - generic [ref=e688]: 비고
+                - textbox [ref=e689]: test remark updated
+            - generic [ref=e690]:
+              - generic [ref=e691]:
+                - generic [ref=e692]:
+                  - generic [ref=e693]: 제품 이미지
+                  - generic [ref=e694] [cursor=pointer]:
+                    - img [ref=e695]
+                    - text: 업로드
+                - generic [ref=e698]:
+                  - button [ref=e700]:
+                    - img [ref=e701]
+                  - button [ref=e705]:
+                    - img [ref=e706]
+              - generic [ref=e709]:
+                - generic [ref=e710]:
+                  - generic [ref=e711]: 도면 (PDF/DWG/DXF)
+                  - generic [ref=e712] [cursor=pointer]:
+                    - img [ref=e713]
+                    - text: 업로드
+                - generic [ref=e717]: 등록된 파일 없음
+              - generic [ref=e718]:
+                - generic [ref=e719]:
+                  - generic [ref=e720]: 조립 SOP / 점검표
+                  - generic [ref=e721] [cursor=pointer]:
+                    - img [ref=e722]
+                    - text: 업로드
+                - generic [ref=e726]: 등록된 파일 없음
+          - generic [ref=e727]:
+            - button "닫기" [ref=e728]
+            - button "저장" [ref=e729]
+```

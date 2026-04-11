@@ -4073,10 +4073,46 @@
       "agent": "db-manager",
       "task": "[MES] ERP MCA210Q GetProjectPurchaseOrders() TODO 마감 (erp_purchase_repo.go:210)",
       "message": "",
-      "status": "pending",
+      "status": "done",
       "priority": "high",
       "created_at": "2026-04-11 10:59:28",
-      "updated_at": "2026-04-11 10:59:28",
+      "updated_at": "2026-04-11 11:06:51",
+      "last_report_at": null,
+      "completed_at": "2026-04-11 11:06:51"
+    },
+    {
+      "id": "tq-docs-agent-6cd1dc",
+      "agent": "docs-agent",
+      "task": "[경상연구개발 재작성 지시] 부서장 지시.",
+      "message": "[경상연구개발 재작성 지시] 부서장 지시.\n\n대상 과제 2건:\n1. 연구개발 #1 — 장비 무인화운영을 위한 장비 물류 개발\n2. 연구개발 #5 — 정밀 광학계 기반 호닝형상검사기의 신뢰성 확보 기술 연구\n\n작성 산출물 (각 과제별):\n- 개발보고서\n- 연구일지\n\n원본 소스:\n- reports/MAX/경상연구개발/참고문서-원본/1-장비물류/ (Confluence 추출본)\n- reports/MAX/경상연구개발/참고문서-원본/5-호닝신뢰성/ (Confluence 추출본)\n- 이미지: reports/MAX/경상연구개발/참고문서-이미지/1-장비물류/, 5-호닝신뢰성/\n\n작성 원칙 (부서장 지시 그대로):\n- Confluence에서 조회·추출한 정보를 \"가능한 그대로\" 사용 (요약/재해석 최소화)\n- 문맥상 문제가 있는 부분만 점검·교정\n- 이미지 반드시 삽입 (본문 연관 위치에)\n\n산출 위치:\n- reports/MAX/경상연구개발/재작성-v2/1-장비물류/{개발보고서.md, 연구일지.md}\n- reports/MAX/경상연구개발/재작성-v2/5-호닝신뢰성/{개발보고서.md, 연구일지.md}\n\n완료 시 HTML 변환 후 dashboard/uploads 업로드 → Cloudflare URL로 MAX에게 보고.\n작업 분량 크면 research-agent와 분담 가능 (#1 docs / #5 research).",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 11:05:10",
+      "updated_at": "2026-04-11 11:05:10",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-docs-agent-1a3626",
+      "agent": "docs-agent",
+      "task": "[경상연구개발 재작성] #1 장비물류 + #5 호닝형상검사기 - 개발보고서+연구일지 각 2종, Confluence 원본 그대로, 이미지 포함",
+      "message": "",
+      "status": "pending",
+      "priority": "high",
+      "created_at": "2026-04-11 11:05:14",
+      "updated_at": "2026-04-11 11:05:14",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-dev-agent-63013f",
+      "agent": "dev-agent",
+      "task": "[cs-wta.com 배포 실패 확인 - 즉시 재배포]",
+      "message": "[cs-wta.com 배포 실패 확인 - 즉시 재배포]\n\nqa-agent 재검증: 캐시 문제 아님. EC2가 실제로 구 버전을 서빙 중.\n\n증거:\n1. 서버 서빙 중: index-B_sSXmQv.js (구 버전)\n2. dev-agent 배포 주장: index-M5Uk4sI5.js (신 버전) — 매칭 안 됨\n3. PUT 422 body: `{\"detail\":[{\"type\":\"missing\",\"loc\":[\"body\",\"payload\"],\"msg\":\"Field required\"}]}` → 구 JS가 payload 필드 없이 PUT 호출 (신 백엔드 multipart 필수와 불일치)\n4. 레거시 \"먼저 저장하면...\" 안내문도 여전히 렌더링\n\n조치:\n1. EC2 실제 서빙 파일 확인: `ls -la /var/www/csagent/assets/index-*.js`\n2. `index.html`이 참조하는 JS 파일명 확인 — M5Uk4sI5 참조 맞는지\n3. 빌드 산출물 → /var/www 복사 실제 완료 확인 (rsync/scp 실패 여부, 권한 문제)\n4. nginx 재로드: `sudo systemctl reload nginx` 또는 `sudo nginx -s reload`\n5. 브라우저 가상 요청으로 index.html + JS MD5 검증\n6. 본인이 직접 curl로 index.html → assets/index-*.js 다운로드해서 신규 코드 포함 확인 후 보고\n\nNaN 버그 수정 전에 이거 먼저 해결 필요. 실배포 실패는 프론트엔드 완성도 체크 규칙 위반.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 11:09:29",
+      "updated_at": "2026-04-11 11:09:29",
       "last_report_at": null,
       "completed_at": null
     }
