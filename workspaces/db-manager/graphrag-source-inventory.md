@@ -1,0 +1,159 @@
+# GraphRAG 원본 자료 인벤토리 (전수 파악)
+생성: 2026-04-11 17:50 KST
+작성: db-manager
+
+## 1. 데이터 소스 개요
+
+| 항목 | 값 |
+|------|---|
+| 총 pgvector 임베딩 chunk | 288,566 |
+| 임베딩된 distinct 파일 | 2,707 |
+| 원본 파일 (디스크) | 2,105 개 |
+| 원본 파일 총 용량 | 8.27 GB |
+| 원본 경로 | `C:\MES\wta-agents\data\manuals` |
+
+## 2. 테이블별 상세
+
+### 2-1. manual.documents (외부 제조사 매뉴얼)
+| 항목 | 값 |
+|------|---|
+| 총 chunk | 218,280 |
+| distinct 파일 | 1,046 |
+| text chunks | 161,474 |
+| table chunks | 41,622 |
+| image_caption chunks | 15,184 |
+| pdf_url 매핑 | 285/1046 |
+
+**카테고리 분포**
+| 카테고리 | 파일 수 | chunks |
+|---------|---------|--------|
+| 4_servo | 374 | 85,831 |
+| 1_robot | 218 | 60,941 |
+| 3_hmi | 222 | 31,314 |
+| 8_etc | 74 | 19,503 |
+| 2_sensor | 124 | 14,410 |
+| 6_plc | 25 | 6,112 |
+| 7_pneumatic | 6 | 162 |
+| 5_inverter | 3 | 7 |
+
+**제조사 분포 (Top 15)**
+| 제조사 | 파일 수 | chunks |
+|--------|---------|--------|
+| Mitsubishi | 126 | 60,103 |
+| LS | 187 | 56,704 |
+| Unknown | 408 | 43,853 |
+| Panasonic | 56 | 17,394 |
+| Yaskawa | 39 | 15,001 |
+| Fastech | 48 | 6,323 |
+| ACS | 18 | 4,350 |
+| ABB | 29 | 3,330 |
+| WTA | 15 | 1,980 |
+| Beckhoff | 8 | 1,921 |
+| Cognex | 6 | 1,212 |
+| Samsung | 14 | 709 |
+| Sanyo | 2 | 703 |
+| IntervalZero | 3 | 684 |
+| Siemens | 8 | 648 |
+
+**언어 분포**
+| 언어 | 파일 수 | chunks |
+|------|---------|--------|
+| Korean | 660 | 117,000 |
+| English | 386 | 101,280 |
+
+### 2-2. manual.wta_documents (사내 기술 문서)
+| 항목 | 값 |
+|------|---|
+| 총 chunk | 66,968 |
+| distinct 파일 | 1,661 |
+| text chunks | 33,427 |
+| table chunks | 33,541 |
+| image_caption chunks | 0 |
+
+**카테고리 분포**
+| 카테고리 | 파일 수 | chunks | 설명 |
+|---------|---------|--------|------|
+| PVD | 332 | 64,026 | PVD 장비 관련 사내 기술 문서 |
+| Confluence_CM | 750 | 1,195 | Confluence 제어제작(CM) 문서 |
+| Confluence_UM | 574 | 922 | Confluence 사용자매뉴얼(UM) 문서 |
+| (empty) | 5 | 825 | 카테고리 미지정 |
+
+### 2-3. csagent.vector_embeddings (CS 고객 응대 이력)
+| 항목 | 값 |
+|------|---|
+| 총 chunk | 3,318 |
+| source_type | cs_history (100%) |
+| 비고 | 매뉴얼 아님. CS 이력 1건 = 1 chunk 형태로 임베딩 |
+
+## 3. 원본 파일 (디스크 저장)
+
+경로: `C:/MES/wta-agents/data/manuals/`
+총: **2,105개 파일, 8.27 GB**
+
+| 카테고리 | 파일 수 | 크기 (MB) | 주요 확장자 |
+|---------|---------|-----------|-----------|
+| 1_robot | 221 | 954 | .pdf=218, .docx=3 |
+| 2_sensor | 122 | 336 | .pdf=120, .docx=2 |
+| 3_hmi | 61 | 808 | .pdf=58, .ppt=1, .docx=1, .doc=1 |
+| 4_servo | 320 | 2,289 | .pdf=304, .docx=7, .xlsx=5, .doc=4 |
+| 5_inverter | 17 | 589 | .pdf=17 |
+| 6_plc | 87 | 640 | .pdf=79, .doc=4, .docx=2, .ppt=1 |
+| 7_pneumatic | 66 | 202 | .pdf=65, .ppt=1 |
+| 8_etc | 1,211 | 2,654 | .pdf=1004, .xls=63, .doc=63, .ppt=33 |
+
+## 4. 학습 가능성 분석
+
+### 4-1. 파일 유형 분포 (원본)
+| 확장자 | 파일 수 | 비율 |
+|--------|---------|-----|
+| .pdf | 1,865 | 88.6% |
+| .doc | 72 | 3.4% |
+| .xls | 64 | 3.0% |
+| .ppt | 36 | 1.7% |
+| .docx | 35 | 1.7% |
+| .xlsx | 20 | 1.0% |
+| .pptx | 11 | 0.5% |
+| .hwp | 2 | 0.1% |
+
+### 4-2. pgvector 커버리지
+- **manual.documents**: 1,046 파일 vectorized (원본 디스크 2,105개 중 약 50%)
+- **임베딩되지 않은 원본**: 약 1,059개 (8_etc에 집중된 doc/xls/ppt 포함)
+- **text/table 비율**: text 161,474 : table 41,622 : image_caption 15,184 (약 74% text)
+
+### 4-3. GraphRAG 학습 적합도 판단
+| 데이터 | 학습 적합도 | 이유 |
+|--------|-----------|------|
+| manual.documents (제조사 매뉴얼) | ⭐⭐⭐⭐⭐ | 구조화된 기술 문서, 엔티티 풍부 (제조사·모델·파라미터) |
+| manual.wta_documents (PVD) | ⭐⭐⭐⭐ | 사내 운영 노하우, 장비·공정 엔티티 포함 |
+| manual.wta_documents (Confluence CM/UM) | ⭐⭐⭐ | 프로세스 문서, 엔티티는 적지만 context 풍부 |
+| csagent.vector_embeddings | ⭐⭐⭐ | 이슈-증상-조치 관계 명확, CS 별도 그래프 권장 |
+
+### 4-4. 재청킹 필요성 (초기 판단)
+- **현재 text chunks 평균 572자** (p75=800, p95=1,055) — GraphRAG에는 과분할
+- **table chunks 평균 1,505자** — 적정
+- 제안: text chunks를 1,500~2,000자 단위로 재청킹 권장 (section_title 유지)
+- metadata.heading 필드 보존되어 있음 → 재청킹 시 context 재구성 가능
+
+## 5. 원본 파일 접근성
+
+| 항목 | 상태 |
+|------|-----|
+| 원본 PDF 저장 | ✓ `C:/MES/wta-agents/data/manuals/` 1,865 PDF 보관 |
+| Supabase Storage | pdf_url 22/1,046 (2% 매핑, 대부분 미설정) |
+| 재청킹 가능 | ✓ 원본 디스크 접근 가능 |
+| 권한 | db-manager, crafter 로컬 읽기 가능 |
+
+## 6. 권고사항
+
+1. **원본 디스크 재파싱 권장**: pgvector에 누락된 약 1,059개 파일 포함 학습 필요
+2. **재청킹 전략**: text는 1,500~2,000자, table/image_caption은 현재 유지
+3. **metadata.heading 활용**: section context 보존으로 엔티티 추출 품질 향상
+4. **CS 이력 별도 처리**: csagent는 매뉴얼과 그래프 스키마 분리
+5. **학습 우선순위**:
+   - 1순위: manual.documents (제조사 매뉴얼, 218K chunk) 
+   - 2순위: manual.wta_documents PVD (사내 운영 지식)
+   - 3순위: Confluence CM/UM (프로세스)
+   - 별도: csagent CS 이력
+
+---
+*상세 파일 목록: `graphrag-source-inventory.json` (파일별 chunk/char/category 전수)*

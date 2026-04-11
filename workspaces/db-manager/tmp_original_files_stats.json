@@ -1,0 +1,83 @@
+{
+  "base_path": "C:\\MES\\wta-agents\\data\\manuals",
+  "total_files": 2105,
+  "total_size_gb": 8.27,
+  "by_category": {
+    "1_robot": {
+      "files": 221,
+      "size_mb": 954.3,
+      "extensions": {
+        ".pdf": 218,
+        ".docx": 3
+      }
+    },
+    "2_sensor": {
+      "files": 122,
+      "size_mb": 336.1,
+      "extensions": {
+        ".pdf": 120,
+        ".docx": 2
+      }
+    },
+    "3_hmi": {
+      "files": 61,
+      "size_mb": 807.9,
+      "extensions": {
+        ".pdf": 58,
+        ".ppt": 1,
+        ".docx": 1,
+        ".doc": 1
+      }
+    },
+    "4_servo": {
+      "files": 320,
+      "size_mb": 2288.8,
+      "extensions": {
+        ".pdf": 304,
+        ".docx": 7,
+        ".xlsx": 5,
+        ".doc": 4
+      }
+    },
+    "5_inverter": {
+      "files": 17,
+      "size_mb": 589.4,
+      "extensions": {
+        ".pdf": 17
+      }
+    },
+    "6_plc": {
+      "files": 87,
+      "size_mb": 640.0,
+      "extensions": {
+        ".pdf": 79,
+        ".doc": 4,
+        ".docx": 2,
+        ".ppt": 1,
+        ".xls": 1
+      }
+    },
+    "7_pneumatic": {
+      "files": 66,
+      "size_mb": 202.4,
+      "extensions": {
+        ".pdf": 65,
+        ".ppt": 1
+      }
+    },
+    "8_etc": {
+      "files": 1211,
+      "size_mb": 2653.9,
+      "extensions": {
+        ".pdf": 1004,
+        ".xls": 63,
+        ".doc": 63,
+        ".ppt": 33,
+        ".docx": 20,
+        ".xlsx": 15,
+        ".pptx": 11,
+        ".hwp": 2
+      }
+    }
+  }
+}

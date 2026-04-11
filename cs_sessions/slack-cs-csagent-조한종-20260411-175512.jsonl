@@ -1,0 +1,2 @@
+{"session_id": "slack-cs-csagent-조한종-20260411-175512", "timestamp": "2026-04-11T17:57:01.990873+09:00", "channel": "cs-csagent", "user": "조한종", "question_source": "slack", "language": "ko", "query": "이슈목록 맨위에 이슈추가버튼을 배치해.", "full_response": "이슈 추가 버튼을 이슈 목록 **맨 위**로 재배치 배포 완료 (해시 -oaW1nUJ).\n\n- 위치: 이슈사항 섹션 제목 바로 아래, 이슈 카드 목록 위\n- 스타일: 전체너비 점선 버튼 유지\n- Ctrl+Shift+R로 새로고침해주세요.", "status": "responded"}
+{"type": "feedback", "value": "positive", "ts": "2026-04-11T17:57:30.590535+09:00", "user": "U0A7S89M5S7", "session_id": "slack-cs-csagent-조한종-20260411-175512"}

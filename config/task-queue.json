@@ -4559,6 +4559,30 @@
       "updated_at": "2026-04-11 17:49:13",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-db-manager-316e4f",
+      "agent": "db-manager",
+      "task": "[청킹 전략 재수립 분석] GraphRAG(qwen3.5:35b-a3b) 추출용 청킹 전략을 재설계 중. db-manager는 **현재 청킹의 실태 분석**을 담당해주세요.",
+      "message": "[청킹 전략 재수립 분석] GraphRAG(qwen3.5:35b-a3b) 추출용 청킹 전략을 재설계 중. db-manager는 **현재 청킹의 실태 분석**을 담당해주세요.\n\n**분석 항목**:\n\n1. **현재 청크 통계** (manual.documents + manual.wta_documents 모두)\n   - 총 chunk 수 / distinct 파일 수 (이미 있음)\n   - **chunk당 평균 토큰 수** (또는 문자 수)\n   - chunk 길이 분포 (min/p25/median/p75/max)\n   - 파일당 평균 chunk 수\n\n2. **청크 경계 분석** (샘플 20개 PDF)\n   - 섹션 중간에서 잘린 빈도\n   - 테이블이 여러 chunk로 쪼개진 경우\n   - 문장 중간 끊김 여부\n   - 앞뒤 chunk 간 의미 연속성\n\n3. **메타데이터 활용도**\n   - source_file, page_number, section_title 등 사용 가능한 메타 필드\n   - GraphRAG 추출 시 context로 쓸 수 있는 정보\n\n4. **대표 PDF 3건**에 대해 \"현재 청크 분할 상태\" 샘플 출력:\n   - Fastech_CAT_CommManual_KO.pdf\n   - ACS_ACS_SetupGuide_KO.pdf\n   - 임의 1건\n\n**보고 포맷**: 마크다운 표 + 샘플 3건 inline text. 20분 내 회신.\n\n**목적**: \"기존 청크를 그대로 GraphRAG에 쓸 수 있는가\" vs \"재청킹 필요한가\" 판단 근거 마련.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 17:50:11",
+      "updated_at": "2026-04-11 17:50:11",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-db-manager-7e82d1",
+      "agent": "db-manager",
+      "task": "[청킹 분석 보류 - 선행 작업 변경]",
+      "message": "[청킹 분석 보류 - 선행 작업 변경]\n\n부서장이 \"먼저 학습할 데이터 원본 자료들을 제대로 알고있는것부터 시작\"이라고 지적. 청킹 전략 분석은 잠시 보류하고, **원본 자료 전수 파악**부터 해주세요.\n\n**요청 1: 원본 데이터 전수 목록**\n1. **manual.documents** (218,280 chunk / 1,040 파일)\n   - 파일 목록: 파일명, 파일 유형(PDF/DOCX/HTML), 크기, 등록일, source path\n   - 파일별 chunk 수\n   - 카테고리/태그/제조사 분류가 있다면 포함\n\n2. **manual.wta_documents** (66,968 chunk / 1,661 파일)\n   - 동일 항목\n   - wta 사내 문서 vs 외부 매뉴얼 구분\n\n3. **csagent.vector_embeddings** (3,318 chunk)\n   - source_type / source_id 분포 (어디서 온 데이터인지)\n\n**요청 2: 원본 파일 저장 경로 확인**\n- 실제 원본 PDF 파일이 저장된 물리 경로 (S3 또는 로컬)\n- 원본 보관 여부 (재청킹 가능한지)\n- 접근 권한\n\n**요청 3: 학습 가능성 분석**\n- 전체 파일 중 (a) 제조사 매뉴얼 (b) WTA 사내 기술문서 (c) 기타 분포\n- 언어 분포 (한국어/영어/일본어/중국어)\n- 이미지/도면 비율 (추출 실패 위험)\n\n**보고 포맷**:\n- 마크다운 요약 + CSV 또는 JSON 파일 첨부 (workspaces/db-manager/graphrag-source-inventory.md/json)\n- Cloudflare URL로 보고\n\n**목표**: 부서장이 \"내가 무슨 데이터를 학습시키는지\" 정확히 파악할 수 있도록 투명하게 정리. 15~20분 내 회신 부탁.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 17:50:37",
+      "updated_at": "2026-04-11 17:50:37",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }

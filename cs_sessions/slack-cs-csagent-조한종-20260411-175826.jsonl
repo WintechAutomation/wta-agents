@@ -1,0 +1,2 @@
+{"session_id": "slack-cs-csagent-조한종-20260411-175826", "timestamp": "2026-04-11T17:59:09.029274+09:00", "channel": "cs-csagent", "user": "조한종", "question_source": "slack", "language": "ko", "query": "<@U0AP5B0F71C> 작업지시로 판단되면 작업들어가기전에 대답부터 하고 작업을 진행해 그러고 완료되면 다시 대답하고.", "full_response": "네, 지시 명심하겠습니다. 앞으로 작업 지시 수신 시 **착수 전 1차 답변** → 작업 → **완료 후 2차 답변** 순서로 진행하겠습니다. 방금 메모리에 등록해 재발 방지하겠습니다.", "status": "responded"}
+{"type": "feedback", "value": "positive", "ts": "2026-04-11T17:59:11.818803+09:00", "user": "U0A7S89M5S7", "session_id": "slack-cs-csagent-조한종-20260411-175826"}
