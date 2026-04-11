@@ -1,2 +1,5 @@
 precheck OK 3/3
 --- [8/10] Cognex_IS5000_QuickStart_KO.pdf (cat=2_sensor) ---
+  {'file_id': '2_sensor_2e6136a51564', 'chunks': 175, 'figures': 41, 'tables': 32}
+  elapsed: 304.6s  vlm_err=0  upload_err=0  (total: 5.1 min)
+--- [9/10] Mitsubishi_BFP-A8586-D_MaintenanceManual_KO.pdf (cat=1_robot) ---
