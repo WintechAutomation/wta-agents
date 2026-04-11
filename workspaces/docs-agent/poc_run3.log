@@ -11,3 +11,7 @@
   {'file_id': '1_robot_3c1dcc39da41', 'chunks': 205, 'figures': 67, 'tables': 41}
   elapsed: 483.3s  vlm_err=0  upload_err=0  (total: 13.6 min)
 --- [4/10] Mitsubishi_BFP-A8601-D_SetupGuide_KO.pdf ---
+  mfr=Mitsubishi model=BFP-A8601-D dt=SetupGuide lang=KO
+  {'file_id': '1_robot_c7fe37c1ed98', 'chunks': 395, 'figures': 94, 'tables': 14}
+  elapsed: 634.4s  vlm_err=0  upload_err=0  (total: 24.1 min)
+--- [5/10] ABB_IRB360_ProductSpec_EN.pdf ---
