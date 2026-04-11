@@ -4871,6 +4871,54 @@
       "updated_at": "2026-04-11 22:28:08",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-docs-agent-ccd938",
+      "agent": "docs-agent",
+      "task": "[PoC 범위 변경] 부서장 지시: 샘플 3건 → **PDF 파일 10건 검증**으로 확대.",
+      "message": "[PoC 범위 변경] 부서장 지시: 샘플 3건 → **PDF 파일 10건 검증**으로 확대.\n\n### PoC 요건\n- 대상: 1_robot/ 기준 **대표 10건 선정** (다양성 확보)\n  - 대형 Mitsubishi 매뉴얼 2~3건 (표/그림 많음)\n  - Yaskawa 1~2건 (영문)\n  - LS/ABB/Cognex/Sanyo 각 1건 (소형/다양성)\n  - CID 바이너리 1건 (OCR 테스트)\n  - 한글/영문/일문 포함 언어 다양성\n- 파이프라인 end-to-end 검증:\n  1. Docling 파싱 (picture/table/section 추출)\n  2. 이미지 추출 + 썸네일 생성 + `vector/manual_images/...` 업로드\n  3. 캡션 + 본문 cross-ref 매칭\n  4. Qwen2.5-VL-7B 이미지 설명 생성 (admin이 pull 중, 완료 후 가능)\n  5. HierarchicalChunker 512토큰/64오버랩\n  6. Qwen3-Embedding-8B 벡터화 (2000dim)\n  7. `manual.documents_v2` INSERT\n  8. 검색 샘플 쿼리 3~5개로 품질 확인\n  9. Qwen3-Reranker-4B 재순위화 (vLLM 준비되면)\n  10. LightRAG 엔티티 추출 (선택, 가능하면)\n\n### 검증 지표\n- 청크 수 / 이미지 수 / 캡션 매칭률 / 누락 페이지 / 처리 시간 / 에러\n- 대표 쿼리 결과 5개 (예: \"서보 결선도\", \"에러코드 E401\", \"RV-7F 파라미터\")\n\n### 일정\n- db-manager가 테이블/버킷 준비 완료 대기\n- Qwen2.5-VL-7B 다운로드 완료 대기 (admin 25% 진행 중)\n- Qwen3-Reranker-4B는 1차 검증 이후 단계적 투입 OK\n- 우선 선정 10건 리스트부터 부서장에게 보고\n\n10건 리스트 10분 내 회신 부탁. 확정 후 PoC 실행.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 22:32:12",
+      "updated_at": "2026-04-11 22:32:12",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-db-manager-8a6b0c",
+      "agent": "db-manager",
+      "task": "[PoC 범위 확정 — PDF 10건] 부서장 지시: 샘플 3건 → 10건으로 확대.",
+      "message": "[PoC 범위 확정 — PDF 10건] 부서장 지시: 샘플 3건 → 10건으로 확대.\n\n테이블/버킷 준비는 계획대로 진행해도 돼 (DDL 실행 허가 대기 상태). docs-agent가 10건 리스트 선정 중.\n\n부서장 최종 승인 대기 중이라 실제 DDL 실행은 OK 사인 받고 나서 하자. 준비 단계만 먼저.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 22:32:20",
+      "updated_at": "2026-04-11 22:32:20",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-docs-agent-eeee17",
+      "agent": "docs-agent",
+      "task": "[진행 확인] 부서장 질문: 파일 분류 작업 전부 끝났는지? 4_servo(315) + 8_etc(1,076) 배치2 상태 알려줘. 완료 여부 + 남은 시간. 즉시 회신.",
+      "message": "[진행 확인] 부서장 질문: 파일 분류 작업 전부 끝났는지? 4_servo(315) + 8_etc(1,076) 배치2 상태 알려줘. 완료 여부 + 남은 시간. 즉시 회신.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 22:32:33",
+      "updated_at": "2026-04-11 22:32:33",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-docs-agent-4866cb",
+      "agent": "docs-agent",
+      "task": "[순서 조정] 부서장 지시 확정:",
+      "message": "[순서 조정] 부서장 지시 확정:\n\n1. **4_servo (315건) 분류 완료까지만 진행** (3~5분 남음)\n2. **8_etc (1,076건) 분류는 일시 보류** — PoC 끝난 뒤 진행\n3. 4_servo 완료 → 즉시 **PoC 10건 착수**\n4. PoC 완료/검증 OK → 8_etc 분류 재개\n\n순서:\n- 4_servo 완료 보고 → PoC 10건 리스트 부서장 최종 승인 확인 → db-manager DDL 실행 승인 확인 → PoC 실행\n- PoC 처리 중 8_etc 건드리지 말 것 (리소스 경합 방지)\n\n현재 상태 업데이트해줘: 4_servo 완료까지 몇 분? 8_etc 중단 가능?",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 22:35:59",
+      "updated_at": "2026-04-11 22:35:59",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }
