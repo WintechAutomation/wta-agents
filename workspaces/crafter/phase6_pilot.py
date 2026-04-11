@@ -21,9 +21,9 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
 
 from openai import OpenAI
 
-# vLLM OpenAI-compatible 엔드포인트 (gemma-4-31b-it on GB10)
+# vLLM OpenAI-compatible 엔드포인트 (Qwen2.5-32B-Instruct on GB10)
 VLLM_BASE_URL = "http://182.224.6.147:8000/v1"
-MODEL = "google/gemma-4-31b-it"
+MODEL = "Qwen/Qwen2.5-32B-Instruct"
 client = OpenAI(base_url=VLLM_BASE_URL, api_key="dummy")
 
 # 로컬 vLLM → 비용 $0, 토큰 카운트만 참고용
