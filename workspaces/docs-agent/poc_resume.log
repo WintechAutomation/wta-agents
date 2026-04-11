@@ -6,3 +6,7 @@ precheck OK 3/3
   {'file_id': '1_robot_314928a33268', 'chunks': 3927, 'figures': 382, 'tables': 185}
   elapsed: 2988.1s  vlm_err=0  upload_err=0  (total: 54.9 min)
 --- [10/10] Yaskawa_V1000_TechnicalManual_KO.pdf (cat=5_inverter) ---
+  {'file_id': '5_inverter_c6f52f93cca5', 'chunks': 3610, 'figures': 306, 'tables': 744}
+  elapsed: 3928.5s  vlm_err=0  upload_err=0  (total: 120.4 min)
+
+=== DONE total 120.4 min ===
