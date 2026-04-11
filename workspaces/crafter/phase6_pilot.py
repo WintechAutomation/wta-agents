@@ -19,16 +19,16 @@ from pathlib import Path
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
 
-from dotenv import load_dotenv
-import anthropic
+from openai import OpenAI
 
-load_dotenv("C:/MES/wta-agents/.env")
-client = anthropic.Anthropic()
-MODEL = "claude-haiku-4-5-20251001"
+# vLLM OpenAI-compatible 엔드포인트 (gemma-4-31b-it on GB10)
+VLLM_BASE_URL = "http://182.224.6.147:8000/v1"
+MODEL = "google/gemma-4-31b-it"
+client = OpenAI(base_url=VLLM_BASE_URL, api_key="dummy")
 
-# Haiku 4.5 가격 (USD per token)
-PRICE_IN = 1.00 / 1_000_000    # $1.00/1M input
-PRICE_OUT = 5.00 / 1_000_000   # $5.00/1M output
+# 로컬 vLLM → 비용 $0, 토큰 카운트만 참고용
+PRICE_IN = 0.0
+PRICE_OUT = 0.0
 
 SYSTEM_PROMPT = """당신은 제조업 기술 문서에서 지식 그래프 엔티티와 관계를 추출하는 전문가입니다.
 
@@ -73,16 +73,18 @@ def extract_chunk(content: str, source_file: str, page: int) -> dict:
         f"---\n{content}\n---\n"
         "순수 JSON만 출력:"
     )
-    resp = client.messages.create(
+    resp = client.chat.completions.create(
         model=MODEL,
-        max_tokens=4096,
+        max_tokens=2048,
+        temperature=0.0,
         messages=[
-            {"role": "user", "content": SYSTEM_PROMPT + "\n\n" + user_prompt}
+            {"role": "system", "content": SYSTEM_PROMPT},
+            {"role": "user", "content": user_prompt},
         ],
     )
-    raw = resp.content[0].text
-    in_tok = resp.usage.input_tokens
-    out_tok = resp.usage.output_tokens
+    raw = resp.choices[0].message.content or ""
+    in_tok = resp.usage.prompt_tokens
+    out_tok = resp.usage.completion_tokens
     cost = in_tok * PRICE_IN + out_tok * PRICE_OUT
 
     ents, rels = [], []
@@ -123,9 +125,9 @@ def main():
     t0 = time.time()
 
     for i, c in enumerate(chunks, 1):
-        content = c.get("content", "")
-        src = c.get("source_file", "")
-        page = c.get("page_number", 0)
+        content = c.get("content", "") or ""
+        src = c.get("source_file", "") or ""
+        page = c.get("page_number") or 0
         if not content:
             continue
         try:
