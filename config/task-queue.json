@@ -4715,6 +4715,18 @@
       "updated_at": "2026-04-11 21:28:30",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-docs-agent-3ed6e3",
+      "agent": "docs-agent",
+      "task": "[진행 승인 + 질문] 부서장 승인: 2_sensor~8_etc 동일 파이프라인 진행 OK.",
+      "message": "[진행 승인 + 질문] 부서장 승인: 2_sensor~8_etc 동일 파이프라인 진행 OK.\n\n질문: 분류 시 파일 내용을 어느 정도 파악하는지 구체적으로 알려줘.\n- 1파일당 몇 자/몇 페이지 읽는지 (전체? 앞 N자?)\n- 판독에 쓰는 필드 (제조사/모델 식별 근거 구체적 위치: 표지/본문/헤더?)\n- OCR 필요 CID 바이너리는 어떻게 처리?\n- 분류 정확도 자체 판단 (confident/uncertain 구분 하는지)\n- RAG 임베딩 용도로 본문을 이해했다고 볼 수 있는 수준인지, 아니면 메타데이터만 추출하는 수준인지\n\n부서장에게 정확히 전달해야 해서 과장 없이.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 21:44:44",
+      "updated_at": "2026-04-11 21:44:44",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }
