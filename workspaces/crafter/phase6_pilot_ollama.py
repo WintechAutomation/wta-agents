@@ -15,7 +15,8 @@ from pathlib import Path
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
 
 OLLAMA_URL = "http://182.224.6.147:11434/api/chat"
-MODEL = "qwen3.5:9b"
+MODEL = os.environ.get("PILOT_MODEL", "qwen3.5:9b")
+OUT_SUFFIX = os.environ.get("PILOT_SUFFIX", "ollama")
 
 SYSTEM_PROMPT = """당신은 제조업 기술 문서에서 지식 그래프 엔티티와 관계를 추출하는 전문가입니다.
 
@@ -53,7 +54,7 @@ def extract_chunk(content: str, source_file: str, page: int) -> dict:
         "model": MODEL,
         "think": False,
         "stream": False,
-        "options": {"temperature": 0.0, "num_predict": 2048},
+        "options": {"temperature": 0.0, "num_predict": 2048, "num_ctx": 4096},
         "messages": [
             {"role": "system", "content": SYSTEM_PROMPT},
             {"role": "user", "content": user_prompt},
@@ -99,7 +100,7 @@ def extract_chunk(content: str, source_file: str, page: int) -> dict:
 
 def main():
     in_path = Path("C:/MES/wta-agents/workspaces/crafter/phase6_pilot_50.json")
-    out_path = Path("C:/MES/wta-agents/workspaces/crafter/phase6_pilot_ollama_result.json")
+    out_path = Path(f"C:/MES/wta-agents/workspaces/crafter/phase6_pilot_{OUT_SUFFIX}_result.json")
 
     chunks = json.loads(in_path.read_text(encoding="utf-8"))
     print(f"[PILOT A] Ollama {MODEL}, 입력 {len(chunks)} chunks")
@@ -159,7 +160,7 @@ def main():
     avg_tok_s = tot_out / tot_wall if tot_wall > 0 else 0
 
     summary = {
-        "track": "A",
+        "track": OUT_SUFFIX,
         "model": MODEL,
         "endpoint": OLLAMA_URL,
         "pilot_chunks": len(results),

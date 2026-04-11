@@ -1,0 +1,25 @@
+{
+  "summary": {
+    "track": "deepseek_r1_14b",
+    "model": "deepseek-r1:14b",
+    "endpoint": "http://182.224.6.147:11434/api/chat",
+    "pilot_chunks": 0,
+    "elapsed_sec": 29.6,
+    "avg_sec_per_chunk": 0,
+    "min_sec_per_chunk": 0,
+    "max_sec_per_chunk": 0,
+    "avg_tok_per_s": 0,
+    "total_entities": 0,
+    "total_relations": 0,
+    "avg_entities_per_chunk": 0,
+    "avg_relations_per_chunk": 0,
+    "total_input_tokens": 0,
+    "total_output_tokens": 0,
+    "projected_full_run": {
+      "target_chunks": 285248,
+      "estimated_hours_serial": 0.0,
+      "estimated_hours_parallel8": 0.0
+    }
+  },
+  "results": []
+}

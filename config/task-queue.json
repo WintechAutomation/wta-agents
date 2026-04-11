@@ -4235,6 +4235,18 @@
       "updated_at": "2026-04-11 15:25:48",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-crafter-eda318",
+      "agent": "crafter",
+      "task": "[Phase6 모델 비교 파일럿 확장 - 3개 추가]",
+      "message": "[Phase6 모델 비교 파일럿 확장 - 3개 추가]\n\n부서장 지시: 순차적으로 다 테스트. 목표는 \"최고 성능 + 최대 속도\".\n\n**Track B**: deepseek-r1:14b\n**Track C**: qwen2.5-coder:14b\n**Track D**: mistral-small3:7b (또는 mistral-small:24b 양자화 확인)\n\n**실행 원칙**\n- 각 Track 동일 50 chunk (phase6_pilot_50.json) 사용 → 공정 비교\n- 각 Track 동일 프롬프트/라벨 체계 v1 유지\n- 순차 실행 (GPU 리소스 경합 방지)\n- 각 Track 끝나면 `ollama stop <model>`로 언로드 후 다음 pull\n\n**각 Track 작업**\n1. `ollama pull <model>`\n2. phase6_pilot.py MODEL 상수 교체 (OpenAI 호환 base_url=http://localhost:11434/v1)\n3. 파일럿 50 chunk 실행\n4. 결과 JSON 저장 (phase6_pilot_results_<track>.json)\n5. 다음 Track으로 이동\n\n**최종 비교 리포트** (네 모델: qwen3.5:9b / deepseek-r1:14b / qwen2.5-coder:14b / mistral-small3:7b)\n\n| 항목 | 각 모델별 |\n|------|----------|\n| 평균 tok/s | |\n| chunk당 avg/min/max 시간 | |\n| 50 chunk 총 시간 | |\n| 285k 전체 환산 (직렬/병렬8) | |\n| 엔티티 수 | |\n| 관계 수 | |\n| 품질 샘플 3건 (동일 PDF 기준) | |\n| 품질 이슈(오분류 등) | |\n| 한 줄 평 | |\n\n**최종 추천**: 성능×속도 종합 점수로 1개 모델 선정 제안\n\n각 Track 완료 시 중간 보고 없이 진행 → 4개 모두 끝나면 최종 비교 리포트 1회 보고.\n(시간 절약 목적)\n\n예상 총 소요: 각 Track pull 3~5분 + 파일럿 8~15분 = Track당 15~20분 × 3 = 45~60분\n\n착수 부탁. 질문 있으면 즉시.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 15:45:18",
+      "updated_at": "2026-04-11 15:45:18",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }
