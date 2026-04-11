@@ -25461,3 +25461,8 @@
 {"agent_id": "cs-agent", "tool_name": "mcp__agent-channel__wait_for_channel", "timestamp": "2026-04-11 09:09:26"}
 {"agent_id": "control-agent", "tool_name": "Bash", "timestamp": "2026-04-11 09:09:36"}
 {"agent_id": "control-agent", "tool_name": "mcp__agent-channel__send_message", "timestamp": "2026-04-11 09:09:50"}
+{"agent_id": "cs-agent", "tool_name": "mcp__agent-channel__wait_for_channel", "timestamp": "2026-04-11 09:11:32"}
+{"agent_id": "cs-agent", "tool_name": "mcp__agent-channel__wait_for_channel", "timestamp": "2026-04-11 09:13:37"}
+{"agent_id": "cs-agent", "tool_name": "mcp__agent-channel__wait_for_channel", "timestamp": "2026-04-11 09:15:43"}
+{"agent_id": "cs-agent", "tool_name": "mcp__agent-channel__wait_for_channel", "timestamp": "2026-04-11 09:17:50"}
+{"agent_id": "cs-agent", "tool_name": "mcp__agent-channel__wait_for_channel", "timestamp": "2026-04-11 09:19:56"}
