@@ -91,28 +91,74 @@ _TABLE_HTML_RE = re.compile(r'<table[\s>]', re.I)
 
 
 def _looks_like_table(content: str) -> bool:
+    """HTML <table>, | 라인(md), Docling kv 직렬화 패턴 감지."""
     if not content:
         return False
     if _TABLE_HTML_RE.search(content):
         return True
-    # fallback: | 라인이 3개 이상 연속
+    # | fallback: 2라인 이상 + 각 라인 | 2개 이상 + | 개수 일치
     lines = content.splitlines()
-    streak = 0
-    for ln in lines:
-        if ln.count('|') >= 2:
-            streak += 1
-            if streak >= 3:
-                return True
-        else:
-            streak = 0
+    cand = [ln for ln in lines if ln.count('|') >= 2]
+    if len(cand) >= 2:
+        counts = {ln.count('|') for ln in cand}
+        if len(counts) == 1:
+            return True
+        streak = 0
+        for ln in lines:
+            if ln.count('|') >= 2:
+                streak += 1
+                if streak >= 3:
+                    return True
+            else:
+                streak = 0
+    # Docling kv 직렬화 감지: '= ' 다수 + '. ' 행 구분자 다수 + ',' 다수
+    eq = content.count('= ')
+    dot = content.count('. ')
+    if eq >= 5 and dot >= 3 and content.count(',') >= eq:
+        return True
     return False
+
+
+def _is_kv_table(content: str) -> bool:
+    """Docling kv 직렬화 테이블 여부."""
+    if _TABLE_HTML_RE.search(content or ''):
+        return False
+    eq = content.count('= ')
+    dot = content.count('. ')
+    return eq >= 5 and dot >= 3 and content.count(',') >= eq
 
 
 _TR_RE = re.compile(r'<tr[\s>][\s\S]*?</tr>', re.I)
 
 
+def _split_kv_table(content: str, target_max: int = TARGET_MAX) -> list[str]:
+    """Docling kv 직렬화 테이블을 행(`. `) 단위로 분할, TARGET_MAX로 packing."""
+    # '. ' 경계로 행 분리 (마지막 '.' 유지)
+    rows = re.split(r'(?<=\. )', content)
+    rows = [r for r in rows if r.strip()]
+    if len(rows) <= 1:
+        return [content]
+    out: list[str] = []
+    cur = ''
+    cur_tok = 0
+    for r in rows:
+        rt = count_tokens(r)
+        if cur_tok + rt <= target_max or not cur:
+            cur += r
+            cur_tok += rt
+        else:
+            out.append(cur)
+            cur = r
+            cur_tok = rt
+    if cur:
+        out.append(cur)
+    return out if len(out) >= 2 else [content]
+
+
 def _split_table_content(content: str, row_split: int = TABLE_ROW_SPLIT) -> list[str]:
-    """테이블 청크를 row_split 행 단위로 나눔. HTML 우선, fallback은 | 라인 단위."""
+    """테이블 청크 분할. HTML <tr> 우선 → | 라인 → kv 직렬화."""
+    if _is_kv_table(content):
+        return _split_kv_table(content, TARGET_MAX)
     m = re.search(r'<table[\s>][\s\S]*?</table>', content, re.I)
     if m:
         table_html = m.group(0)
@@ -358,6 +404,18 @@ def _step_split_tables(chunks: list[dict]) -> list[dict]:
         if not _looks_like_table(content):
             out.append(c)
             continue
+        # kv 테이블은 TARGET_MAX 기준으로 항상 분할 시도
+        if _is_kv_table(content) and c['tokens'] > TARGET_MAX:
+            pieces = _split_kv_table(content, TARGET_MAX)
+            if len(pieces) >= 2:
+                for i, p in enumerate(pieces):
+                    sub = dict(c)
+                    sub['content'] = p
+                    sub['tokens'] = count_tokens(p)
+                    sub['_split_from'] = c.get('chunk_idx')
+                    sub['_split_part'] = i
+                    out.append(sub)
+                continue
         if c['tokens'] <= MAX_HARD:
             out.append(c)
             continue
@@ -420,14 +478,30 @@ def _step_reindex(chunks: list[dict]) -> list[dict]:
 
 
 # ============ 공개 API ============
+def _is_already_healthy(chunks: list[dict]) -> bool:
+    """원본이 이미 건강한지 판단: avg ≥ TARGET_MIN AND under_min < 10%."""
+    if not chunks:
+        return True
+    toks = [c.get('tokens') or 0 for c in chunks]
+    n = len(toks)
+    avg = sum(toks) / n
+    under = sum(1 for t in toks if t < MIN_CHUNK_TOKENS)
+    return avg >= TARGET_MIN and (under / n) < 0.10
+
+
 def postprocess(chunks: list[dict], lang: str = 'en') -> list[dict]:
-    """전체 후처리 파이프라인."""
+    """전체 후처리 파이프라인.
+
+    already_healthy(원본이 양호)면 병합 스킵하고 분할만 수행.
+    """
     if not chunks:
         return chunks
     chunks = [dict(c) for c in chunks]
     chunks = _step_count_tokens(chunks)
-    chunks = _step_promote_empty_sections(chunks)
-    chunks = _step_merge_adjacent(chunks)
+    healthy = _is_already_healthy(chunks)
+    if not healthy:
+        chunks = _step_promote_empty_sections(chunks)
+        chunks = _step_merge_adjacent(chunks)
     chunks = _step_split_tables(chunks)
     chunks = _step_split_oversize(chunks)
     chunks = _step_final_filter(chunks)
