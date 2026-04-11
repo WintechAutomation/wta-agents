@@ -1,0 +1,158 @@
+{
+  "manual_docs_count": {
+    "columns": [
+      "total_chunks",
+      "distinct_files"
+    ],
+    "rows": [
+      [
+        "218280",
+        "1040"
+      ]
+    ],
+    "count": 1
+  },
+  "wta_docs_count": {
+    "columns": [
+      "total_chunks",
+      "distinct_files"
+    ],
+    "rows": [
+      [
+        "66968",
+        "1661"
+      ]
+    ],
+    "count": 1
+  },
+  "manual_docs_cols": {
+    "columns": [
+      "column_name",
+      "data_type"
+    ],
+    "rows": [
+      [
+        "id",
+        "integer"
+      ],
+      [
+        "source_file",
+        "text"
+      ],
+      [
+        "file_hash",
+        "text"
+      ],
+      [
+        "category",
+        "text"
+      ],
+      [
+        "chunk_index",
+        "integer"
+      ],
+      [
+        "chunk_type",
+        "text"
+      ],
+      [
+        "page_number",
+        "integer"
+      ],
+      [
+        "content",
+        "text"
+      ],
+      [
+        "image_url",
+        "text"
+      ],
+      [
+        "metadata",
+        "jsonb"
+      ],
+      [
+        "created_at",
+        "timestamp with time zone"
+      ],
+      [
+        "updated_at",
+        "timestamp with time zone"
+      ],
+      [
+        "pdf_url",
+        "text"
+      ],
+      [
+        "embedding",
+        "USER-DEFINED"
+      ]
+    ],
+    "count": 14
+  },
+  "wta_docs_cols": {
+    "columns": [
+      "column_name",
+      "data_type"
+    ],
+    "rows": [
+      [
+        "id",
+        "integer"
+      ],
+      [
+        "source_file",
+        "text"
+      ],
+      [
+        "file_hash",
+        "text"
+      ],
+      [
+        "category",
+        "text"
+      ],
+      [
+        "chunk_index",
+        "integer"
+      ],
+      [
+        "chunk_type",
+        "text"
+      ],
+      [
+        "page_number",
+        "integer"
+      ],
+      [
+        "content",
+        "text"
+      ],
+      [
+        "image_url",
+        "text"
+      ],
+      [
+        "metadata",
+        "jsonb"
+      ],
+      [
+        "created_at",
+        "timestamp with time zone"
+      ],
+      [
+        "updated_at",
+        "timestamp with time zone"
+      ],
+      [
+        "pdf_url",
+        "text"
+      ],
+      [
+        "embedding",
+        "USER-DEFINED"
+      ]
+    ],
+    "count": 14
+  }
+}
