@@ -25466,3 +25466,5 @@
 {"agent_id": "cs-agent", "tool_name": "mcp__agent-channel__wait_for_channel", "timestamp": "2026-04-11 09:15:43"}
 {"agent_id": "cs-agent", "tool_name": "mcp__agent-channel__wait_for_channel", "timestamp": "2026-04-11 09:17:50"}
 {"agent_id": "cs-agent", "tool_name": "mcp__agent-channel__wait_for_channel", "timestamp": "2026-04-11 09:19:56"}
+{"agent_id": "control-agent", "tool_name": "mcp__agent-channel__send_message", "timestamp": "2026-04-11 09:50:18"}
+{"agent_id": "control-agent", "tool_name": "mcp__agent-channel__send_message", "timestamp": "2026-04-11 09:51:24"}
