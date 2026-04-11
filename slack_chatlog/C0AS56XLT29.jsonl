@@ -26,3 +26,13 @@
 {"ts": "2026-04-11 16:46:33", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "<@U0AP5B0F71C> ........ 대강대강 하지말고 검증해서 답변하지?"}
 {"ts": "2026-04-11 16:46:47", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "경기야 그 레포팅은 혹시뭐 생각해둔 형태가 있니?"}
 {"ts": "2026-04-11 16:47:12", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "<@U0APHKH0613> 경기야 그 레포팅은 혹시뭐 생각해둔 형태가 있니?"}
+{"ts": "2026-04-11 16:50:03", "user_id": "U0APHKH0613", "username": "심경기", "text": "<@U0A7S89M5S7>메일로 중간 보고 할수 있게 체크리스트 진행상황, 이슈사항만 정리되서 나오면 될것같아요"}
+{"ts": "2026-04-11 16:51:24", "user_id": "U0APHKH0613", "username": "심경기", "text": "<@U0A7S89M5S7> 그리고 이슈사항에 입력할때 관련 부서 입력도 있으면 좋을것 같습니다"}
+{"ts": "2026-04-11 16:52:07", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "<@U0AP5B0F71C> 메일로 중간 보고 할수 있게 프로젝트의 셋업 체크리스트 진행상황, 이슈사항 보고서 정리 견본만들어봐 (html- wta slide 양식참조)"}
+{"ts": "2026-04-11 16:53:38", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "<@U0APHKH0613> 부서는 담당자 지정되면 연동되게 하는건 어떤가\n알겠지만 부서만 지정해선 전달력이 부족함"}
+{"ts": "2026-04-11 16:54:38", "user_id": "U0APHKH0613", "username": "심경기", "text": "네네 그래도 되죠"}
+{"ts": "2026-04-11 16:55:52", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "그 부서는 요기쯤", "files": [{"name": "image.png", "type": "png", "saved_path": "C:\\MES\\wta-agents\\slack_chatlog\\C0AS56XLT29_files\\20260411_165552_image.png"}]}
+{"ts": "2026-04-11 16:56:01", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "날짜위로 올리고 이름옆에 부서."}
+{"ts": "2026-04-11 16:57:36", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "<@U0AP5B0F71C> 이미지 처럼 날짜 부분은 이슈내용 줄 오른쪽 끝에 나오게하고. 담당자 이름 옆에 소속부서를나타나게해.\n이슈등록 할때 이름 검색하면 소속부서가 자동조회해서 나타나게 하되 부서지정을 사용자가 바꿀수있도록.", "files": [{"name": "image.png", "type": "png", "saved_path": "C:\\MES\\wta-agents\\slack_chatlog\\C0AS56XLT29_files\\20260411_165736_image.png"}]}
+{"ts": "2026-04-11 16:59:31", "user_id": "U0APHKH0613", "username": "심경기", "text": "<@U0A7S89M5S7>확인 했습니다"}
+{"ts": "2026-04-11 16:59:51", "user_id": "U0APHKH0613", "username": "심경기", "text": "<@U0A7S89M5S7> 여기 아직 교육중이라 중간중간 볼게요 ㅋㅋ"}

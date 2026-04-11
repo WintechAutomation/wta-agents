@@ -4295,6 +4295,30 @@
       "updated_at": "2026-04-11 16:41:42",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-db-manager-505d8a",
+      "agent": "db-manager",
+      "task": "[부서장 지시] Phase6 GraphRAG 벤치마크에 Claude Code 세션(본인 세션) 결과도 추가해서 비교 필요.",
+      "message": "[부서장 지시] Phase6 GraphRAG 벤치마크에 Claude Code 세션(본인 세션) 결과도 추가해서 비교 필요.\n\n**목적**: 로컬 LLM(qwen3.5:9b/35b-a3b/27b, deepseek-r1:14b 등)과 **Claude Code 세션 직접 추출**의 속도·품질 비교.\n\n**동일 조건으로 실행**:\n- 대상: 동일 50 chunk (crafter가 사용한 파일럿 데이터셋과 동일)\n  - 파일 위치 확인: crafter 워크스페이스 phase6_pilot_*.json 또는 workspaces/crafter/phase6_pilot_chunks.json (crafter에게 chunk 리스트 요청)\n- 동일 v1 온톨로지 프롬프트 (crafter에게 프롬프트 요청)\n- 라벨: Component/Process/Issue/Equipment/Tool/Product/Resolution\n- 관계 유형: HAS_SUBPROCESS/USES_TOOL 등 기존 스키마 유지\n\n**측정 항목** (크래프터 리포트와 동일 포맷):\n1. 50 chunk 총 실행 시간 (sec)\n2. chunk당 평균/최소/최대 시간\n3. 엔티티 총 수 / 관계 총 수\n4. chunk당 평균 엔티티/관계\n5. 품질 샘플 (Fastech_CAT_CommManual_KO.pdf / ACS_ACS_SetupGuide_KO.pdf / EtherCAT_PNOZ_Safety_KO.pdf 3건 교차)\n\n**주의**:\n- Claude Code 세션에서 직접 처리하므로 tok/s 대신 \"chunk/min\"으로 환산 가능\n- 본인이 tool 호출로 추출 → JSON으로 저장 → 결과 집계\n- 285k chunk 환산은 실측치 기반 선형 스케일링\n\n**저장**: workspaces/db-manager/phase6_pilot_claude_direct_result.json\n**보고**: 완료 시 MAX에게 통합 비교용 데이터 회신 (마크다운 표)\n\n**크래프터 데이터 연동**: 먼저 crafter에게 50 chunk 원본 + v1 프롬프트 요청 후 시작. 파일 경로 공유받으면 바로 동일 조건 보장됩니다.\n\n급건이니 바로 착수해주세요.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 16:54:57",
+      "updated_at": "2026-04-11 16:54:57",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-crafter-1d5f33",
+      "agent": "crafter",
+      "task": "[동일 데이터셋 공유 요청] db-manager가 Claude Code 세션 직접 추출로 벤치마크에 참여 예정.",
+      "message": "[동일 데이터셋 공유 요청] db-manager가 Claude Code 세션 직접 추출로 벤치마크에 참여 예정.\n\ndb-manager에게 공유 필요:\n1. 50 chunk 원본 데이터 경로 (workspaces/crafter/phase6_pilot_chunks.json 또는 해당 파일)\n2. v1 온톨로지 프롬프트 (라벨/관계 정의 포함)\n3. 결과 JSON 포맷 스키마 (비교 통합을 위해 동일 구조 필요)\n\n준비되는 대로 db-manager에게 직접 send_message로 파일 경로/프롬프트 전달 부탁. (Track F 27b 벤치마크는 그대로 계속 진행)",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 16:55:08",
+      "updated_at": "2026-04-11 16:55:08",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }
