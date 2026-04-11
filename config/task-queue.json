@@ -5063,6 +5063,30 @@
       "updated_at": "2026-04-12 08:24:33",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-crafter-694433",
+      "agent": "crafter",
+      "task": "[Redis 관련 작업 중단]",
+      "message": "[Redis 관련 작업 중단]\n\n부서장 지시: Redis 방향 보류. 현재 소켓 MCP가 큐 형태로 순차 처리되는 구조라 유실 없음으로 판단. Redis 도입은 overengineering 리스크.\n\n**중단 조치**\n1. wta_redis 컨테이너 기동 금지\n2. MCP agent-channel 코드 수정 금지\n3. Phase 0 준비 작업 전면 중단\n4. 설계안 파일(workspaces/crafter/mcp_ack_design.md)과 compose 초안(wta_redis_compose.draft.yml)은 **보관** — 향후 재검토 가능\n\n**대체 우선순위**\n- 진짜 원인은 MAX 도구 호출 누락 (인프라 아님)\n- MAX가 \"X에게 지시\" 문장만 출력하고 실제 send_message 툴콜 빠뜨리는 케이스\n- 이건 인프라로 해결 불가, MAX 행동 규율로만 해결 가능\n- memory에 \"MAX 도구 호출 엄수 규칙\" 저장 완료\n\n**다음 작업**\n현재 진행 중인 manuals-v2 재처리는 db-manager 재적재 완료, qa after 측정도 완료. 다음 단계는 Phase 3 (GraphRAG 엔티티 추출 + Neo4j 적재) 예정이지만 오늘 밤은 여기까지.\n\n메인 세션 대기 상태로 복귀. 수고했습니다.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-12 08:32:35",
+      "updated_at": "2026-04-12 08:32:35",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-qa-agent-7ef752",
+      "agent": "qa-agent",
+      "task": "[긴급] 부서장이 after 측정 리포트 URL 안 열린다고 함.",
+      "message": "[긴급] 부서장이 after 측정 리포트 URL 안 열린다고 함.\nhttps://agent.mes-wta.com/uploads/6a00f7fc-416e-4c52-a038-4ccca8483bee.html → 404\n\n확인 요청:\n1. 파일이 실제로 dashboard/uploads/ 경로에 업로드됐는지\n2. 업로드 경로가 agent.mes-wta.com/uploads 와 매핑되는지\n3. 안 됐으면 재업로드 (agent.mes-wta.com/api/files/* 경로로 업로드 권장 — 현재 인증/정적서빙 설정이 그쪽으로 되어있을 수 있음)\n4. 재업로드 후 작동 확인된 URL 즉시 회신\n\n작동 확인된 URL만 부서장에게 전달합니다.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-12 08:33:50",
+      "updated_at": "2026-04-12 08:33:50",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }
