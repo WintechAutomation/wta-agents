@@ -3,3 +3,6 @@ precheck OK 3/3
   {'file_id': '2_sensor_2e6136a51564', 'chunks': 175, 'figures': 41, 'tables': 32}
   elapsed: 304.6s  vlm_err=0  upload_err=0  (total: 5.1 min)
 --- [9/10] Mitsubishi_BFP-A8586-D_MaintenanceManual_KO.pdf (cat=1_robot) ---
+  {'file_id': '1_robot_314928a33268', 'chunks': 3927, 'figures': 382, 'tables': 185}
+  elapsed: 2988.1s  vlm_err=0  upload_err=0  (total: 54.9 min)
+--- [10/10] Yaskawa_V1000_TechnicalManual_KO.pdf (cat=5_inverter) ---
