@@ -4427,6 +4427,102 @@
       "updated_at": "2026-04-11 17:19:04",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-dev-agent-351462",
+      "agent": "dev-agent",
+      "task": "[홀드] 일단 조사만 하고 코드 수정은 **착수 금지**. MAX가 부서장에게 라우팅 확인 중입니다. crafter가 이미 코드 위치/범위 분석(daouoffice_handler.",
+      "message": "[홀드] 일단 조사만 하고 코드 수정은 **착수 금지**. MAX가 부서장에게 라우팅 확인 중입니다. crafter가 이미 코드 위치/범위 분석(daouoffice_handler.go L120~142 UPDATE SQL 누락) 완료했으니 중복 조사 불필요. 결과 공유:\n\n- 파일: backend/internal/handler/daouoffice_handler.go\n- 문제: UPDATE/INSERT SQL에 department_code/department_name/position_code/position_name 4개 필드 누락\n- DaouUser 구조체에는 이미 필드 수신됨 (internal/daouoffice/client.go)\n- 수정 범위: UPDATE SQL 확장 + INSERT SQL 확장 + backfill 트리거\n- DB 스키마 변경 없음\n\n부서장 답변 받는 대로 착수 여부 통보하겠습니다.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 17:30:10",
+      "updated_at": "2026-04-11 17:30:10",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-dev-agent-6cf437",
+      "agent": "dev-agent",
+      "task": "[부서장 지시] 다우오피스 동기화 수정 건을 **dev-agent가 진행**하도록 부서장이 직접 결정했습니다. 홀드 해제, 착수 승인.",
+      "message": "[부서장 지시] 다우오피스 동기화 수정 건을 **dev-agent가 진행**하도록 부서장이 직접 결정했습니다. 홀드 해제, 착수 승인.\n\n**작업 범위** (crafter scoping 결과 그대로 적용):\n1. `backend/internal/handler/daouoffice_handler.go` UPDATE SQL 확장 (L127~129)\n   - department_code, department_name, position_code, position_name 4개 필드 추가\n2. 동일 파일 INSERT SQL 확장 (L169~175)\n   - 동일 4개 필드 추가\n3. daou_sync_date / daou_sync_status=\"completed\" 갱신 로직 양 경로 추가\n4. 빌드 → 백엔드 재시작\n5. 동기화 엔드포인트 트리거 (POST /api/daouoffice/sync 또는 유사)\n6. 검증: hjcho / ghkim / mwjung 3명 department_name 채워졌는지 확인\n7. cs-agent에 완료 통보 + MAX 완료 보고\n\n**참고**:\n- DB 스키마 변경 없음 (auth_user에 해당 컬럼 이미 존재, system_repo SELECT에서 사용 중)\n- DaouUser 구조체에 필드 이미 수신됨\n- 위험도 낮음\n\n**주의사항**:\n- 백엔드 재시작 시 기존 세션 끊기지 않게 gracefully 처리\n- 빌드 실패 시 즉시 중단/보고\n\n소요 예상 30분. 완료 후 MAX에 보고 부탁드립니다.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 17:31:24",
+      "updated_at": "2026-04-11 17:31:24",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-dev-agent-d3b5db",
+      "agent": "dev-agent",
+      "task": "[긴급/부서장 요청] 30분은 너무 길다. **10~15분 내 완료** 목표로 진행. 코드 수정은 단순 4필드 추가이니 빠르게 처리:",
+      "message": "[긴급/부서장 요청] 30분은 너무 길다. **10~15분 내 완료** 목표로 진행. 코드 수정은 단순 4필드 추가이니 빠르게 처리:\n\n1. UPDATE/INSERT SQL 4필드 추가 (5분)\n2. go build (2분)\n3. 백엔드 재시작 (1분)\n4. 동기화 트리거 + 3명 검증 (3분)\n\n총 10~12분 목표. 실시간 진행도 부서장에게 공유되니 각 단계 완료 시 MAX에 즉시 보고.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 17:31:41",
+      "updated_at": "2026-04-11 17:31:41",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-crafter-e101e5",
+      "agent": "crafter",
+      "task": "[부서장 지시] Phase6 qwen3.5:27b 벤치마크 **즉시 중단**.",
+      "message": "[부서장 지시] Phase6 qwen3.5:27b 벤치마크 **즉시 중단**. \n\n중단 사유:\n- chunk당 64초 (dense 27B라 9b 대비 6.2배 느림)\n- 285k 병렬8 환산 ~633시간 (26일) — 35b-a3b(127h)/haiku(33h) 대비 경쟁력 없음\n- 속도·품질 모두 MoE(35b-a3b)에 열세 확정\n\n**즉시 처리**:\n1. qwen3.5:27b 프로세스 kill (PID 89188 또는 해당)\n2. 미완료 상태로 결과 JSON 저장 (부분 결과도 보관)\n3. GPU 메모리 unload 확인\n4. MAX에 중단 완료 보고\n\n이후 27b 제외하고 6모델 최종 리포트로 확정됩니다. docs-agent에게 v3 업데이트는 MAX가 별도 지시할 예정.\n\n다우 동기화 건은 dev-agent가 처리 중이니 crafter는 중단 후 대기.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 17:34:05",
+      "updated_at": "2026-04-11 17:34:05",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-dev-agent-f86614",
+      "agent": "dev-agent",
+      "task": "[부서장 요청 — cs-wta.com 홈페이지] 다우오피스 동기화 작업과 별도로 추가 작업 부탁드립니다. (동기화 먼저 끝내고 이어서 진행)",
+      "message": "[부서장 요청 — cs-wta.com 홈페이지] 다우오피스 동기화 작업과 별도로 추가 작업 부탁드립니다. (동기화 먼저 끝내고 이어서 진행)\n\n**작업 범위**: cs-wta.com 사용자 계정 관리 기능 추가\n\n**1. 설정 메뉴 하위에 계정 관리 페이지 신규 추가**\n- 경로: /settings/users (또는 유사)\n- 기능: 전체 사용자 계정 CRUD (생성/조회/수정/삭제/권한 변경)\n- 기존 설정 메뉴 구조 파악 후 하위 항목으로 추가\n- 관리자 권한만 접근 가능하도록 라우트 가드\n\n**2. 우측 상단 사용자 이름 영역에 설정 아이콘 추가**\n- 로그인 후 우측 상단에 이름 표시되는 위치 확인\n- 이름 옆 또는 드롭다운에 \"⚙️ 설정\" 또는 \"프로필\" 아이콘 추가\n- 클릭 시 본인 프로필 수정 페이지 이동 (/profile 또는 /my-account)\n\n**3. 본인 프로필 수정 페이지**\n- 이름/이메일/전화번호 등 기본 정보 수정\n- **비밀번호 변경** (현재 비밀번호 확인 → 새 비밀번호 입력 → 확인)\n- 저장 성공/실패 토스트 표시\n\n**기술 스펙**:\n- cs-wta.com 프론트엔드 (React + TypeScript)\n- 기존 페이지 구조/라우트/스타일 규칙 준수\n- 백엔드 API는 기존 것 활용, 없으면 추가 구현 필요 (있는지 먼저 확인)\n- 빌드 성공 확인 후 EC2 배포 (/home/ubuntu/csagent/frontend/dist, nginx reload)\n- 자동 배포 허용 (cs-wta.com 정책)\n\n**순서**:\n1. 현재 다우오피스 동기화 수정 완료 (최우선)\n2. 위 계정 관리 3개 작업 착수\n3. 각 단계 완료 시 slack 또는 MAX에 진행 보고\n\n완성 보고 전 qa-agent Playwright 검증 필수입니다.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 17:37:22",
+      "updated_at": "2026-04-11 17:37:22",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-dev-agent-98f4da",
+      "agent": "dev-agent",
+      "task": "[hjcho 부서 수정 — 부서장 본인 확인] 부서장(조한종/hjcho)의 소속 부서는 **생산관리팀**입니다. 직급은 팀장(이미 매핑됨).",
+      "message": "[hjcho 부서 수정 — 부서장 본인 확인] 부서장(조한종/hjcho)의 소속 부서는 **생산관리팀**입니다. 직급은 팀장(이미 매핑됨).\n\n처리 방법 2가지:\n1. **즉시 수동 수정** (가장 빠름): auth_user SET department_name='생산관리팀', department_code='(있으면 적절한 코드)' WHERE username='hjcho' 또는 email 기준 업데이트. MES DB 직접 업데이트.\n2. **다우 API 재조사**: 다우 부서원 API가 hjcho를 왜 누락하는지 분석 후 매핑 로직 개선 (시간 소요)\n\n우선 1번으로 즉시 부서 채워넣고, 2번은 나중에 분석. 완료 후 /api/users에서 hjcho 부서/직급 확인 스크린샷 또는 확인 회신 부탁.\n\n동시에 cs-wta.com 계정 관리 기능 작업도 착수해주세요 (병렬 가능).",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 17:39:12",
+      "updated_at": "2026-04-11 17:39:12",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-db-manager-2a10cf",
+      "agent": "db-manager",
+      "task": "[긴급/부서장 요청] MES 다우오피스 동기화 누락자 29명 리스트 조회 필요.",
+      "message": "[긴급/부서장 요청] MES 다우오피스 동기화 누락자 29명 리스트 조회 필요.\n\n**배경**: dev-agent가 다우 부서/직급 동기화 수정 완료. MES 활성 79명 중 50명 갱신 성공, **29명 미반영**. 이 29명 리스트 필요.\n\n**조회 조건**:\n- auth_user에서 is_active=true\n- AND (department_name IS NULL OR department_name='')\n- 또는 daou_sync_status가 completed 아닌 경우\n\n**출력 컬럼**:\n- id, username, first_name(+last_name), email, department_name, position_name, daou_sync_status, last_login, date_joined\n\n**정렬**: date_joined 내림차순 (최근 등록자 먼저)\n\n**보고 포맷**: 마크다운 표로 MAX에 회신 (부서장 전달용)\n\ndb-query.py 사용. 즉시 실행 부탁드립니다.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 17:39:24",
+      "updated_at": "2026-04-11 17:39:24",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-cs-agent-c31896",
+      "agent": "cs-agent",
+      "task": "[완료 통보] 다우오피스 → auth_user 부서/직급 동기화 이슈 수정 완료되었습니다.",
+      "message": "[완료 통보] 다우오피스 → auth_user 부서/직급 동기화 이슈 수정 완료되었습니다.\n\n**수정 내역** (dev-agent 처리):\n- daouoffice_handler.go UPDATE/INSERT SQL에 department_code/name, position_code/name 4필드 + sync_date/status 추가\n- 신규 백필 엔드포인트: POST /api/daouoffice/sync-departments\n- 백엔드 재시작 완료\n\n**결과**:\n- MES 활성 79명 중 50명 부서/직급 갱신 완료\n- 검증: ghkim(김근형/기계설계팀/사원), mwjung(문선우/기구설계HAM팀/과장) ✅\n- 잔여 29명 (다우에 없는 23명 + email 불일치 6명)은 별도 처리 예정\n\n관련 요청이 있었다면 이제 정상 확인 가능합니다.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 17:39:39",
+      "updated_at": "2026-04-11 17:39:39",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }

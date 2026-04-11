@@ -178,3 +178,64 @@ https://agent.mes-wta.com/cs-agent/setup-
 
 - 스킬 파일
 [slack-bot] 17:18:40 [CS세션] 답변 기록: slack-cs-csagent-조한종-20260411-164329 #cs-csagent (445자, 첨부:0건)
+[slack-bot] 17:23:35 [수신] #cs-csagent 조한종: <@U0AP5B0F71C> mes 부서정보 업데이트 완료? → cs-agent
+[slack-bot] 17:23:35 [CS세션] 질문 기록: slack-cs-csagent-조한종-20260411-164329 #cs-csagent 조한종: <@U0AP5B0F71C> mes 부서정보 업데이트 완료?
+[slack-bot] 17:23:35 직접 전송 완료 → cs-agent:5602
+[slack-bot] 17:24:02 [슬랙 발신] #cs-csagent ← cs-agent: 아직 업데이트 전입니다. 방금 재확인: 79명 전원 department_name 여전히 공란.
+
+- 담당: 
+[slack-bot] 17:24:03 [CS세션] 답변 기록: slack-cs-csagent-조한종-20260411-164329 #cs-csagent (175자, 첨부:0건)
+[slack-bot] 17:24:59 [수신] #cs-csagent 심경기: <@U0A7S89M5S7> ppt 변환 생각보다 잘되는데요 ㅋㅋ → cs-agent
+[slack-bot] 17:24:59 [CS세션] 질문 기록: slack-cs-csagent-심경기-20260411-171712 #cs-csagent 심경기: <@U0A7S89M5S7> ppt 변환 생각보다 잘되는데요 ㅋㅋ
+[slack-bot] 17:24:59 직접 전송 완료 → cs-agent:5602
+[slack-bot] 17:27:03 [수신] #cs-csagent 조한종: 뭐 내용은 그래도 다 빼주니까 조금 손보거나, ㅎ → cs-agent
+[slack-bot] 17:27:03 [CS세션] 질문 기록: slack-cs-csagent-조한종-20260411-164329 #cs-csagent 조한종: 뭐 내용은 그래도 다 빼주니까 조금 손보거나, ㅎ
+[slack-bot] 17:27:03 직접 전송 완료 → cs-agent:5602
+[slack-bot] 17:27:12 [수신] #cs-csagent 조한종: 나는 그냥 웹 가지고 보고드리기도 햇음 .ㅋ → cs-agent
+[slack-bot] 17:27:12 [CS세션] 질문 기록: slack-cs-csagent-조한종-20260411-164329 #cs-csagent 조한종: 나는 그냥 웹 가지고 보고드리기도 햇음 .ㅋ
+[slack-bot] 17:27:12 직접 전송 완료 → cs-agent:5602
+[slack-bot] 17:27:39 [수신] #cs-csagent 조한종: 넌 근데 왜 제어설계니? ㅋㅋㅋ → cs-agent
+[slack-bot] 17:27:39 [CS세션] 질문 기록: slack-cs-csagent-조한종-20260411-164329 #cs-csagent 조한종: 넌 근데 왜 제어설계니? ㅋㅋㅋ
+[slack-bot] 17:27:39 직접 전송 완료 → cs-agent:5602
+[slack-bot] 17:27:54 [슬랙 발신] #cs-csagent ← cs-agent: ㅋㅋ 보고서 샘플 담당자로 심경기 차장을 넣으면서 자동으로 제어설계팀이 같이 붙은 거라 그래요. 제가 제어설
+[slack-bot] 17:27:54 [CS세션] 답변 기록: slack-cs-csagent-조한종-20260411-164329 #cs-csagent (108자, 첨부:0건)
+[slack-bot] 17:28:34 [수신] #cs-csagent 조한종: ㅋㅋ 뭐 갑자기 끼어들어 너한테 한말아니야 .ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ → cs-agent
+[slack-bot] 17:28:34 [CS세션] 질문 기록: slack-cs-csagent-조한종-20260411-164329 #cs-csagent 조한종: ㅋㅋ 뭐 갑자기 끼어들어 너한테 한말아니야 .ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ
+[slack-bot] 17:28:34 직접 전송 완료 → cs-agent:5602
+[slack-bot] 17:28:39 [슬랙 발신] #cs-csagent ← cs-agent: ㅋㅋ 죄송합니다, 앞으로는 대화 맥락 먼저 확인하고 끼어들겠습니다.
+[slack-bot] 17:28:39 [CS세션] 답변 기록: slack-cs-csagent-조한종-20260411-164329 #cs-csagent (37자, 첨부:0건)
+[slack-bot] 17:28:45 [피드백] bad ← U0A7S89M5S7 (cs-agent)
+[slack-bot] 17:28:45 [CS세션] 세션 유지: slack-cs-csagent-조한종-20260411-164329 (부족함 피드백 \u2014 추가 질문 가능)
+[slack-bot] 17:28:48 [피드백] bad ← U0A7S89M5S7 (cs-agent)
+[slack-bot] 17:28:48 [CS세션] 세션 유지: slack-cs-csagent-조한종-20260411-164329 (부족함 피드백 \u2014 추가 질문 가능)
+[slack-bot] 17:29:24 [수신] #cs-csagent 조한종: 크래프터 바쁘면 dev 한테 요청해서 진행해 → cs-agent
+[slack-bot] 17:29:24 [CS세션] 질문 기록: slack-cs-csagent-조한종-20260411-164329 #cs-csagent 조한종: 크래프터 바쁘면 dev 한테 요청해서 진행해
+[slack-bot] 17:29:24 직접 전송 완료 → cs-agent:5602
+[slack-bot] 17:29:50 [슬랙 발신] #cs-csagent ← cs-agent: 네, 바로 dev-agent에 재위임했습니다. 완료되는 대로 보고드리겠습니다.
+[slack-bot] 17:29:50 [CS세션] 답변 기록: slack-cs-csagent-조한종-20260411-164329 #cs-csagent (43자, 첨부:0건)
+[slack-bot] 17:29:52 [수신] #cs-csagent 심경기: <@U0A7S89M5S7>저 계정도 중국으로 되어있어요 ㅋㅋㅋ 펑마이에 제 정보 사용하는것같아요 → cs-agent
+[slack-bot] 17:29:52 Failed to run listener function (error: 'utf-8' codec can't decode byte 0x98 in position 1057442: invalid start byte)
+Traceback (most recent call last):
+  File "C:\Python314\Lib\site-packages\slack_bolt\listener\thread_runner.py", line 120, in run_ack_function_asynchronously
+    listener.run_ack_function(request=request, response=response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\site-packages\slack_bolt\listener\custom_listener.py", line 53, in run_ack_function
+    return self.ack_function(
+           ~~~~~~~~~~~~~~~~~^
+        **build_required_kwargs(
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+        )
+        ^
+    )
+    ^
+  File "C:\MES\wta-agents\scripts\slack-bot.py", line 2092, in handle_slack_message
+    log_to_dashboard("slack-bot", target_agent, content, "chat")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\MES\wta-agents\scripts\slack-bot.py", line 214, in log_to_dashboard
+    logs = json.load(f)
+  File "C:\Python314\Lib\json\__init__.py", line 298, in load
+    return loads(fp.read(),
+                 ~~~~~~~^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x98 in position 1057442: invalid start byte
