@@ -4787,6 +4787,18 @@
       "updated_at": "2026-04-12 01:04:38",
       "last_report_at": null,
       "completed_at": "2026-04-12 01:04:38"
+    },
+    {
+      "id": "tq-docs-agent-e59855",
+      "agent": "docs-agent",
+      "task": "[긴급 지시 — 부서장 명령]",
+      "message": "[긴급 지시 — 부서장 명령]\n\n**파일 8 (Cognex IS5000 KO) 진행 중단 + 원인 조사**\n\n### 즉시 조치\n1. 현재 파일 9 (BFP-A8586-D) 진행 **중단** (부서장이 직접 지시)\n2. 파일 10 대기 중인 것도 **중단**\n3. 추가 처리 하지 말 것\n\n### 조사 항목 — 파일 8 Cognex IS5000 KO 이상 원인\n1. **조기 종료 11.2s의 정체**\n - 오케스트레이터 로그 전문 (file_id, 시작/종료 타임스탬프, 반환값, 예외)\n - Docling 파싱 단계까지 갔는지, 아니면 VLM/Upload 단계에서 실패했는지\n - exit 코드 및 에러 로그\n\n2. **1_robot_314928a33268 폴더 내용물 정체**\n - document.json 메타(source_path, total_pages, 생성시각)\n - images/ 내 실제 파일명/생성시각 (진짜 Cognex 파일인지, 아니면 파일 9 BFP-A8586-D 재사용인지)\n - chunks.jsonl 존재 여부\n\n3. **file_id 생성 로직 버그 추적**\n - manuals_v2_parse_docling.py의 file_id 산출 함수 확인\n - Cognex 파일의 원 경로/해시 vs BFP-A8586-D의 경로/해시\n - 충돌/재사용 메커니즘 정확히 파악\n\n4. **데이터 오염 확인**\n - 314928a33268 file_id로 DB에 이미 적재된 rows 있는지 (db-manager 확인 요청)\n - 있다면 어떤 내용인지 (Cognex? BFP-A8586-D? 섞였는지?)\n\n### 보고 형식\n원인 + 재현 조건 + 영향 범위 + 복구 방안 4가지를 순서대로.\n\n### 중요\n- 부서장이 \"원인 찾고 가자\" 입장이니 급하게 덮지 말고 정확히 분석\n- 조사 결과 나올 때까지 PoC 재개 보류\n- 궁금한 점은 MAX에게 바로 질문 (부서장에게 직접 X)",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-12 02:06:53",
+      "updated_at": "2026-04-12 02:06:53",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }
