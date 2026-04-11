@@ -5051,6 +5051,30 @@
       "updated_at": "2026-04-12 00:10:39",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-docs-agent-5b37f9",
+      "agent": "docs-agent",
+      "task": "[PoC 재개] 부서장 승인. 10건 전체 풀 파이프라인 실행.",
+      "message": "[PoC 재개] 부서장 승인. 10건 전체 풀 파이프라인 실행.\n\n**검증된 모델 (전부 Ollama 로드 OK)**\n- qwen2.5vl:7b (VLM) ✅ — 이미지 28×28px 이상 조건\n- qwen3-embedding:8b (4096d → 2000 MRL 슬라이싱) ✅\n- qwen3.5:35b-a3b (GraphRAG, 엔티티 추출) ✅\n- **dengcao/Qwen3-Reranker-4B:Q8_0** ✅ — 방금 pull 완료\n\n**reranker 사용 주의**\n- 점수 직접 반환 X, 텍스트 생성형이라 `<think>` 포함 응답\n- Qwen3-Reranker 공식 프롬프트 형식 적용 + yes/no 또는 숫자 score 파싱 로직 구현 필요\n- 참고: https://huggingface.co/Qwen/Qwen3-Reranker-4B\n- PoC 1차 검증 단계에서는 reranker 없이 BM25+Dense RRF로 먼저 검증해도 OK. 리랭커는 2차 품질 비교에 추가\n\n**실행 지침**\n1. 중단 전 보존된 2건(Yaskawa RS232C, BFP-A8662) 재활용 가능하면 재활용, 아니면 10건 전부 다시\n2. manuals_v2_parse_docling.py에서 V2_VLM=1 (VLM 호출 ON)\n3. 이미지 최소 크기 28×28px 가드 추가 (더 작은 이미지는 스킵 + 로그)\n4. keep_alive=10m 설정해서 모델 유휴 언로드 최소화\n5. Docling 파싱 → 이미지 추출 + vlm_description 생성 → 캡션 매칭 → 512 토큰 청킹 → Qwen3-Emb8B 벡터화 → JSONL 생성 → db-manager 적재\n6. 파일 1건 완료마다 짧게 진행 보고\n7. 10건 완료 시 통합 리포트 + 검증 쿼리 5개 실행 결과 + reranker 파싱 로직 초안\n\ndb-manager와 연계해서 적재까지 진행. 착수 보고 부탁.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-12 00:20:35",
+      "updated_at": "2026-04-12 00:20:35",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-db-manager-42aae6",
+      "agent": "db-manager",
+      "task": "[PoC 적재 대기 해제] 부서장 승인으로 PoC 10건 재개. docs-agent가 JSONL 생성해서 넘기면 bulk loader로 적재 시작. 첫 파일은 --dry-run으로",
+      "message": "[PoC 적재 대기 해제] 부서장 승인으로 PoC 10건 재개. docs-agent가 JSONL 생성해서 넘기면 bulk loader로 적재 시작. 첫 파일은 --dry-run으로 스키마 검증 후 실적재. 10건 완료 후 검수 리포트(청크수/토큰분포/이미지 매칭율/임베딩 차원 검증) 부탁.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-12 00:20:40",
+      "updated_at": "2026-04-12 00:20:40",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }

@@ -130,6 +130,10 @@ def export_images(doc, img_dir, Image, category=None, file_id=None, requests=Non
             pil_img = item.get_image(doc=doc)
             if pil_img is None:
                 continue
+            # 최소 크기 가드 (VLM 28x28 요구)
+            if pil_img.width < 28 or pil_img.height < 28:
+                print(f'    skip tiny image {figure_id} ({pil_img.width}x{pil_img.height})')
+                continue
             pil_img.save(img_path, 'PNG')
             thumb = pil_img.copy()
             thumb.thumbnail((256, 256))
@@ -152,9 +156,9 @@ def export_images(doc, img_dir, Image, category=None, file_id=None, requests=Non
             except Exception as e:
                 print(f'    업로드 실패 {figure_id}: {e}')
 
-        # Qwen2.5-VL 캡션 생성 (PoC에서는 환경변수로 스킵 — 서버 과부하 대응)
+        # Qwen2.5-VL 캡션 생성
         vlm_description = None
-        if os.environ.get('V2_VLM','0') == '1' and requests is not None:
+        if os.environ.get('V2_VLM','1') == '1' and requests is not None:
             try:
                 vlm_description = generate_vlm_caption(img_path, requests)
             except Exception as e:
@@ -189,6 +193,7 @@ def generate_vlm_caption(img_path, requests):
         'prompt': prompt,
         'images': [b64],
         'stream': False,
+        'keep_alive': '10m',
         'options': {'temperature': 0.1, 'num_predict': 300},
     }, timeout=180)
     r.raise_for_status()
@@ -278,7 +283,7 @@ def embed_texts(texts, requests):
     out = []
     for t in texts:
         try:
-            r = requests.post(QWEN_URL, json={'model': QWEN_MODEL, 'input': t}, timeout=120)
+            r = requests.post(QWEN_URL, json={'model': QWEN_MODEL, 'input': t, 'keep_alive': '10m'}, timeout=120)
             r.raise_for_status()
             vec = r.json()['embeddings'][0]
             out.append(vec[:EMBED_DIM])
