@@ -1,7 +1,7 @@
 {
   "summary": {
     "track": "claude_session",
-    "model": "claude-sonnet-4-6",
+    "model": "claude-haiku-4-5-20251001",
     "pilot_chunks": 50,
     "elapsed_sec": 131.85,
     "avg_sec_per_chunk": 2.637,

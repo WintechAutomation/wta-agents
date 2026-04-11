@@ -4343,6 +4343,90 @@
       "updated_at": "2026-04-11 17:08:36",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-dev-agent-e064f9",
+      "agent": "dev-agent",
+      "task": "[라우팅 정정] MAX가 crafter로 재위임 처리합니다. dev-agent는 이 건 무시하고 원래 작업 계속 진행해주세요. cs-agent에 통보는 MAX가 직접 처리합니다.",
+      "message": "[라우팅 정정] MAX가 crafter로 재위임 처리합니다. dev-agent는 이 건 무시하고 원래 작업 계속 진행해주세요. cs-agent에 통보는 MAX가 직접 처리합니다.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 17:10:34",
+      "updated_at": "2026-04-11 17:10:34",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-crafter-c7f004",
+      "agent": "crafter",
+      "task": "[재위임] cs-agent가 dev-agent에 보낸 \"다우오피스 → auth_user 부서/직급 동기화 수정 요청\"을 crafter에 재배정합니다. (MES Go 백엔드 동기화 ",
+      "message": "[재위임] cs-agent가 dev-agent에 보낸 \"다우오피스 → auth_user 부서/직급 동기화 수정 요청\"을 crafter에 재배정합니다. (MES Go 백엔드 동기화 로직 → crafter 담당)\n\ncs-agent에게 원본 요청 내용 확인 후 착수 부탁드립니다. 현재 Phase6 27b 벤치마크 진행 중이면 그것 먼저 끝내고 순차 처리해도 됩니다.\n\n진행 전 MAX에 예상 작업 범위/소요 먼저 보고 부탁드립니다.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 17:10:46",
+      "updated_at": "2026-04-11 17:10:46",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-cs-agent-d7f1f0",
+      "agent": "cs-agent",
+      "task": "[라우팅 안내] \"다우오피스 → auth_user 부서/직급 동기화 수정\" 요청은 MES Go 백엔드 작업이므로 **crafter** 담당입니다. dev-agent는 프론트엔드 담",
+      "message": "[라우팅 안내] \"다우오피스 → auth_user 부서/직급 동기화 수정\" 요청은 MES Go 백엔드 작업이므로 **crafter** 담당입니다. dev-agent는 프론트엔드 담당.\n\nMAX가 crafter에 재위임 완료했습니다. 다음부터 MES 백엔드(Go) 관련 요청은 crafter로 직접 보내주세요.\n\n참고:\n- 프론트엔드(React/TS) → dev-agent\n- 백엔드(Go/Gin/DB sync) → crafter\n- MES DB 조회 → db-manager",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 17:10:54",
+      "updated_at": "2026-04-11 17:10:54",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-db-manager-fe6fd5",
+      "agent": "db-manager",
+      "task": "임베딩 현황 보고 수신 확인. 부서장은 현재 벤치마크 작업에 집중하고 있으니 별도 전달하지 않고 MAX가 기록만 유지합니다. GraphRAG 야간 적재 스케줄은 벤치마크 최종 모델",
+      "message": "임베딩 현황 보고 수신 확인. 부서장은 현재 벤치마크 작업에 집중하고 있으니 별도 전달하지 않고 MAX가 기록만 유지합니다. GraphRAG 야간 적재 스케줄은 벤치마크 최종 모델 선정 후 같이 진행합니다.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 17:14:15",
+      "updated_at": "2026-04-11 17:14:15",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-docs-agent-bea87d",
+      "agent": "docs-agent",
+      "task": "[리포트 업데이트] Phase6 GraphRAG 벤치마크 HTML 리포트에 신규 모델 3개 추가 필요.",
+      "message": "[리포트 업데이트] Phase6 GraphRAG 벤치마크 HTML 리포트에 신규 모델 3개 추가 필요.\n\n**기존 HTML**: reports/MAX/phase6-benchmark-2026-04-11.html\n**업로드 URL**: https://agent.mes-wta.com/api/files/41729f08-4d8f-423c-8525-f99cbb506435/phase6-benchmark.html\n\n**추가할 모델 데이터**:\n\n### 1) qwen3.5:35b-a3b (MoE, crafter 실행)\n- 총 시간: 506.9s\n- chunk당 평균: 10.14s\n- chunk/min: 5.9\n- 엔티티: 227 (avg 4.54/chunk)\n- 관계: 221 (avg 4.42/chunk)\n- tok/s: 50.2 (MoE 효과, 현재까지 로컬 LLM 최고속)\n\n### 2) claude-sonnet-4-6 (db-manager 실행, Claude Code 세션 직접)\n- 총 시간: 226.8s\n- chunk당 평균: 4.54s\n- min/max: 1.37/9.96s\n- chunk/min: 13.2\n- 엔티티: 212 (avg 4.24/chunk)\n- 관계: 176 (avg 3.52/chunk)\n- 285k 환산: ~359시간 (순차), ~57시간 (병렬)\n- 품질: Fastech 3~4/2, ACS 8/7 (PROTECT/UNPROTECT 정확), EtherCAT_PNOZ 11/10\n\n### 3) claude-haiku-4-5 (db-manager 실행)\n- 총 시간: 131.9s (Sonnet 대비 -41.9% ⚡)\n- chunk당 평균: 2.64s\n- min/max: 1.23/5.10s\n- 엔티티: 206 (avg 4.12/chunk, Sonnet 대비 -2.8%)\n- 관계: 106 (avg 2.12/chunk, Sonnet 대비 -39.8% ⚠️)\n- 285k 환산: ~33시간 (병렬)\n- 품질: Fastech 4/2, ACS 8/6, EtherCAT_PNOZ 0/0\n\n**통합 7모델 비교표 (현재까지)**:\n\n| 모델 | 총시간(s) | chunk/min | 엔티티 | 관계 | avg ent/chunk | avg rel/chunk | 비고 |\n|---|---|---|---|---|---|---|---|\n| **claude-haiku-4-5** | 131.9 | 22.7 | 206 | 106 | 4.12 | 2.12 | API 1위 속도 |\n| **claude-sonnet-4-6** | 226.8 | 13.2 | 212 | 176 | 4.24 | 3.52 | 품질 균형 |\n| **qwen3.5:35b-a3b** | 506.9 | 5.9 | 227 | 221 | 4.54 | 4.42 | MoE, 로컬 1위 |\n| qwen3.5:9b | 514.1 | 5.8 | 349 | 312 | 6.98 | 6.24 | 엔티티량 1위 |\n| qwen2.5-coder:14b | 517.3 | 5.8 | 168 | 103 | 3.36 | 2.06 | |\n| deepseek-r1:14b | 546.1 | 5.5 | 156 | 97 | 3.12 | 1.94 | |\n| mistral-small:24b | 862.3 | 3.5 | 193 | 95 | 3.86 | 1.90 | 최하위 |\n\n**요청사항**:\n1. 기존 HTML 리포트에 3개 모델 추가 (표/차트 모두 업데이트)\n2. Chart.js 차트 4종 모두 7모델 반영 (속도/엔티티·관계/285k 시간/chunk당 평균)\n3. 새 섹션 추가: \"Claude API vs 로컬 LLM 비교 분석\"\n4. 추천 섹션 업데이트:\n   - 속도 최우선: claude-haiku-4-5 (33시간)\n   - 품질·속도 균형: claude-sonnet-4-6 (57시간, 관계 품질 우수)\n   - 로컬 LLM 1위: qwen3.5:35b-a3b (MoE)\n   - 대용량 엔티티: qwen3.5:9b\n5. ⚠️ qwen3.5:27b는 아직 crafter 실행 중 → \"진행 중\" 표시\n6. 제목: \"Phase6 GraphRAG LLM 벤치마크 결과 v2 (Claude API + 로컬 LLM, 7모델)\"\n7. 저장: reports/MAX/phase6-benchmark-2026-04-11-v2.html\n8. 완료 후 dashboard/uploads 업로드하고 Cloudflare URL 회신\n\n급건입니다. 10분 내 부탁드립니다.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 17:17:15",
+      "updated_at": "2026-04-11 17:17:15",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-db-manager-651a94",
+      "agent": "db-manager",
+      "task": "[우선순위 지시]",
+      "message": "[우선순위 지시]\n\n1. **GraphRAG 야간 적재 계획**: Phase6 벤치마크 최종 모델 선정 후 진행 (현재 crafter qwen3.5:27b 진행 중, 그 이후 부서장 선정). **대기**.\n\n2. **ERP 데이터 추출 (MCA210T/MAD111T)**: ERP 직접 접속 금지 원칙 유지. MES 백엔드 API 사용. API 이슈는 crafter에게 수정 요청 필요 → MAX가 crafter 현재 작업(27b 벤치+다우오피스 동기화) 끝나면 큐잉. **대기**.\n\n3. **CS 매뉴얼 조회 5건** (파나소닉 A6B Pr4.39 / 파스텍 E-004 / 미쓰비시 H1043 등): **즉시 병렬 진행**. manual.documents + manual.wta_documents 벡터검색으로 결과를 cs-agent에 회신.\n\n4. qwen3.5:35b, gemma4:31b 로딩 테스트: 이미 crafter가 35b-a3b 완료했고 27b 진행 중. db-manager는 진행 불필요. **취소**.\n\n**즉시 실행**: CS 매뉴얼 조회 5건만 병렬 진행.\n나머지는 대기 또는 취소.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 17:17:34",
+      "updated_at": "2026-04-11 17:17:34",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-crafter-877a14",
+      "agent": "crafter",
+      "task": "[승인] 다우오피스 동기화 수정 건 진행 승인합니다. 위험도 낮고 DB 스키마 변경 없으니 Phase6 27b 벤치마크 종료 후 바로 착수하세요.",
+      "message": "[승인] 다우오피스 동기화 수정 건 진행 승인합니다. 위험도 낮고 DB 스키마 변경 없으니 Phase6 27b 벤치마크 종료 후 바로 착수하세요.\n\n검증 샘플 3명(hjcho/ghkim/mwjung) + 결과 cs-agent 통보 + MAX 완료 보고 필수.\n\nPhase6 27b 진행도 50~60분 소요는 너무 긴데, chunk당 70초면 예상치(10~15분)와 큰 차이. 다만 동일 조건 유지가 중요하니 끝까지 실행해주세요. 진행률 15분마다 보고 부탁.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-11 17:19:04",
+      "updated_at": "2026-04-11 17:19:04",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }

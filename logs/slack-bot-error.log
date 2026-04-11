@@ -133,3 +133,15 @@
 [slack-bot] 16:59:51 [수신] #cs-csagent 심경기: <@U0A7S89M5S7> 여기 아직 교육중이라 중간중간 볼게요 ㅋㅋ → cs-agent
 [slack-bot] 16:59:51 [CS세션] 질문 기록: slack-cs-csagent-심경기-20260411-165003 #cs-csagent 심경기: <@U0A7S89M5S7> 여기 아직 교육중이라 중간중간 볼게요 ㅋㅋ
 [slack-bot] 16:59:51 직접 전송 완료 → cs-agent:5602
+[slack-bot] 17:00:03 [수신] #cs-csagent 조한종: 응 괜찮아 → cs-agent
+[slack-bot] 17:00:03 [CS세션] 질문 기록: slack-cs-csagent-조한종-20260411-164329 #cs-csagent 조한종: 응 괜찮아
+[slack-bot] 17:00:03 직접 전송 완료 → cs-agent:5602
+[slack-bot] 17:03:39 [슬랙 발신] #cs-csagent ← cs-agent: 이슈사항 UI 수정 배포 완료 (JS 해시: Dg7z5bQ9) \u2014 Ctrl+Shift+R로 새로고침 부탁드립
+[slack-bot] 17:03:39 [CS세션] 답변 기록: slack-cs-csagent-조한종-20260411-164329 #cs-csagent (192자, 첨부:0건)
+[slack-bot] 17:06:39 [수신] #cs-csagent 조한종: <@U0AP5B0F71C> 담당자 조회시 mes 에서 부서정보는 안가져오는가본데 → cs-agent
+[slack-bot] 17:06:39 [CS세션] 질문 기록: slack-cs-csagent-조한종-20260411-164329 #cs-csagent 조한종: <@U0AP5B0F71C> 담당자 조회시 mes 에서 부서정보는 안가져오는가본데
+[slack-bot] 17:06:39 직접 전송 완료 → cs-agent:5602
+[slack-bot] 17:08:05 [슬랙 발신] #cs-csagent ← cs-agent: 확인해봤습니다.
+
+원인: MES `public.auth_user.department_name` 컬럼은 존재하
+[slack-bot] 17:08:05 [CS세션] 답변 기록: slack-cs-csagent-조한종-20260411-164329 #cs-csagent (459자, 첨부:0건)

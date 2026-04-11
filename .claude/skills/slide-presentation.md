@@ -71,14 +71,67 @@ page_bg:         #E8E8E8   — 페이지 배경 (body)
 - `s-title`: padding-left: calc(2em + 25px) (삼각형 회피 + 우측 여백), 검정(#000000), 25px, bold, margin-top: 11px
 - `s-body`: padding: 48px 40px 16px 40px, flex:1, overflow:hidden
 
-### PPT 다운로드 버튼 (필수 — 모든 슬라이드에 항상 포함)
+### 상단 버튼 바 (필수 — 모든 슬라이드 HTML에 항상 포함)
+
+두 버튼: **PPT 변환** / **PDF 저장**
+- PPT는 반드시 API 사용(`/api/convert/html-to-pptx-v2`). 사전 생성·하드코딩 금지.
+- PDF도 API 사용(`/api/convert/html-to-pdf`).
+- 현재 보고 있는 HTML 파일 자신을 서버에 업로드 → 변환 결과 다운로드.
+
 ```html
 <div class="ppt-bar">
-  <a class="ppt-btn" href="https://mes-wta.com/api/export/{{파일명}}-pptx" download>
-    📥 PPT 다운로드
-  </a>
+  <button class="ppt-btn" onclick="convertSlide('pptx')">📥 PPT 변환</button>
+  <button class="ppt-btn pdf" onclick="convertSlide('pdf')">📄 PDF 저장</button>
 </div>
+
+<script>
+async function convertSlide(kind){
+  const btn = event.currentTarget;
+  const origText = btn.textContent;
+  btn.disabled = true;
+  btn.textContent = kind === 'pptx' ? '변환 중...' : '저장 중...';
+  try {
+    // 현재 페이지의 HTML 원본을 fetch → multipart upload
+    const htmlResp = await fetch(location.href);
+    const htmlText = await htmlResp.text();
+    const blob = new Blob([htmlText], { type: 'text/html' });
+
+    const rawName = (location.pathname.split('/').pop() || 'slide').replace(/\.html$/i,'');
+    const filename = rawName + '.html';
+
+    const form = new FormData();
+    form.append('html_file', blob, filename);
+
+    const endpoint = kind === 'pptx'
+      ? 'https://agent.mes-wta.com/api/convert/html-to-pptx-v2'
+      : 'https://agent.mes-wta.com/api/convert/html-to-pdf';
+
+    const res = await fetch(endpoint, { method: 'POST', body: form });
+    if (!res.ok) {
+      const err = await res.text();
+      alert('변환 실패: ' + err.slice(0, 200));
+      return;
+    }
+    const outBlob = await res.blob();
+    const url = URL.createObjectURL(outBlob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = rawName + (kind === 'pptx' ? '.pptx' : '.pdf');
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    URL.revokeObjectURL(url);
+  } catch (e) {
+    alert('오류: ' + e.message);
+  } finally {
+    btn.disabled = false;
+    btn.textContent = origText;
+  }
+}
+</script>
 ```
+
+관련 CSS(ppt-bar, ppt-btn)는 §5에 정의되어 있으며 `.ppt-btn.pdf { background:#1565C0 }` 같은 variant를 추가해 색 구분한다.
 
 ## 5. CSS 템플릿
 
@@ -156,10 +209,13 @@ tr:hover td{background:#fafafa}
 .vs-col.bad{background:#FFF5F5;border-right:1px solid #e0e0e0}
 .vs-col.good{background:#F0FFF0}
 
-/* PPT 다운로드 버튼 */
-.ppt-bar{max-width:1100px;margin:0 auto;padding:12px 20px 0;display:flex;justify-content:flex-end}
+/* 상단 버튼 바 (PPT 변환 / PDF 저장) */
+.ppt-bar{max-width:1100px;margin:0 auto;padding:12px 20px 0;display:flex;justify-content:flex-end;gap:8px}
 .ppt-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 18px;background:#CC0000;color:#fff;border:none;border-radius:6px;font-size:14px;font-weight:600;cursor:pointer;text-decoration:none;font-family:inherit}
 .ppt-btn:hover{background:#a00}
+.ppt-btn.pdf{background:#1565C0}
+.ppt-btn.pdf:hover{background:#0d4a94}
+.ppt-btn:disabled{opacity:0.6;cursor:not-allowed}
 
 .footer{text-align:center;padding:24px;color:#999;font-size:11px}
 @media print{.slide{break-inside:avoid;page-break-inside:avoid;box-shadow:none}.ppt-bar{display:none}}
