@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>manuals-v2 PoC10 파이프라인 검증 보고서 — 54fdb (ABB IRB360)</title>
+<style>
+  :root { --bg: #f8f9fa; --card: #fff; --border: #dee2e6; --primary: #2563eb; --success: #16a34a; --warn: #d97706; --text: #1e293b; --muted: #64748b; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: 'Pretendard','Malgun Gothic',sans-serif; background:var(--bg); color:var(--text); line-height:1.6; padding:24px; max-width:960px; margin:auto; }
+  h1 { font-size:1.5rem; margin-bottom:4px; }
+  .subtitle { color:var(--muted); font-size:0.9rem; margin-bottom:24px; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:8px; padding:20px; margin-bottom:16px; }
+  .card h2 { font-size:1.1rem; margin-bottom:12px; color:var(--primary); }
+  .badge { display:inline-block; padding:2px 8px; border-radius:4px; font-size:0.8rem; font-weight:600; }
+  .badge-ok { background:#dcfce7; color:var(--success); }
+  .badge-warn { background:#fef3c7; color:var(--warn); }
+  table { width:100%; border-collapse:collapse; font-size:0.9rem; }
+  th,td { padding:6px 10px; border-bottom:1px solid var(--border); text-align:left; }
+  th { background:#f1f5f9; font-weight:600; }
+  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  .stat { text-align:center; padding:12px; }
+  .stat .num { font-size:2rem; font-weight:700; color:var(--primary); }
+  .stat .label { font-size:0.8rem; color:var(--muted); }
+  .steps { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:16px; }
+  .step { padding:6px 12px; border-radius:6px; font-size:0.85rem; font-weight:600; }
+  .step-done { background:#dcfce7; color:var(--success); }
+  .footer { text-align:center; color:var(--muted); font-size:0.8rem; margin-top:24px; }
+</style>
+</head>
+<body>
+
+<h1>manuals-v2 PoC10 파이프라인 검증 보고서</h1>
+<p class="subtitle">대상: <strong>1_robot_54fdb56329f0</strong> (ABB IRB360 Product Specification) &mdash; 2026-04-12 14:19 KST</p>
+
+<!-- 파이프라인 단계 -->
+<div class="card">
+  <h2>파이프라인 진행 현황</h2>
+  <div class="steps">
+    <span class="step step-done">Step 0 원문수집 ✓</span>
+    <span class="step step-done">Step 1 Docling 파싱 ✓</span>
+    <span class="step step-done">Step 2 512-토큰 청킹 ✓</span>
+    <span class="step step-done">Step 3 메타데이터 ✓</span>
+    <span class="step step-done">Step 4 임베딩 (2000d) ✓</span>
+    <span class="step step-done">Step 5A pgvector 적재 ✓</span>
+    <span class="step step-done">Step 5B GraphRAG Neo4j ✓</span>
+    <span class="step step-done">Step 6 검증 ✓</span>
+    <span class="step step-done">Step 7 보고 ✓</span>
+  </div>
+</div>
+
+<!-- 핵심 수치 -->
+<div class="card">
+  <h2>핵심 수치</h2>
+  <div class="grid2">
+    <div>
+      <div class="stat"><div class="num">76</div><div class="label">pgvector 청크</div></div>
+    </div>
+    <div>
+      <div class="stat"><div class="num">139</div><div class="label">Neo4j 노드</div></div>
+    </div>
+    <div>
+      <div class="stat"><div class="num">2,036</div><div class="label">Neo4j 관계</div></div>
+    </div>
+    <div>
+      <div class="stat"><div class="num">7 / 7</div><div class="label">엔티티 타입 / 관계 타입</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- Step 5A: pgvector 검증 -->
+<div class="card">
+  <h2>Step 5A — pgvector (manual.documents_v2)</h2>
+  <table>
+    <tr><th>항목</th><th>결과</th><th>판정</th></tr>
+    <tr><td>행 수</td><td>76</td><td><span class="badge badge-ok">PASS</span></td></tr>
+    <tr><td>임베딩 차원</td><td>2,000 (qwen3-embedding:8b MRL)</td><td><span class="badge badge-ok">PASS</span></td></tr>
+    <tr><td>NULL 임베딩</td><td>0 / 76</td><td><span class="badge badge-ok">PASS</span></td></tr>
+    <tr><td>언어</td><td>en (단일)</td><td><span class="badge badge-ok">PASS</span></td></tr>
+    <tr><td>카테고리 / 제조사 / 모델</td><td>1_robot / ABB / IRB360</td><td><span class="badge badge-ok">PASS</span></td></tr>
+    <tr><td>문서유형</td><td>productspec</td><td><span class="badge badge-ok">PASS</span></td></tr>
+    <tr><td>토큰 통계</td><td>평균 173, 최소 40, 최대 298</td><td><span class="badge badge-ok">PASS</span></td></tr>
+    <tr><td>figure_refs 보유</td><td>42 / 76 (55%)</td><td><span class="badge badge-ok">PASS</span></td></tr>
+    <tr><td>FTS 검색 (robot)</td><td>정상 작동</td><td><span class="badge badge-ok">PASS</span></td></tr>
+  </table>
+
+  <h3 style="margin-top:16px; font-size:0.95rem;">인덱스 현황</h3>
+  <table>
+    <tr><th>인덱스</th><th>유형</th></tr>
+    <tr><td>documents_v2_embedding_hnsw_idx</td><td>HNSW (벡터 검색)</td></tr>
+    <tr><td>documents_v2_content_tsv_gin_idx</td><td>GIN (전문 검색)</td></tr>
+    <tr><td>documents_v2_category_mfr_idx</td><td>B-tree (필터)</td></tr>
+    <tr><td>documents_v2_doctype_lang_idx</td><td>B-tree (필터)</td></tr>
+    <tr><td>documents_v2_figure_refs_gin_idx</td><td>GIN (이미지 참조)</td></tr>
+    <tr><td>documents_v2_table_refs_gin_idx</td><td>GIN (테이블 참조)</td></tr>
+    <tr><td>documents_v2_source_hash_idx</td><td>B-tree (중복 방지)</td></tr>
+    <tr><td>documents_v2_file_chunk_uniq</td><td>UNIQUE (file_id, chunk_id)</td></tr>
+  </table>
+</div>
+
+<!-- Step 5B: GraphRAG 검증 -->
+<div class="card">
+  <h2>Step 5B — GraphRAG (Neo4j, ManualsV2_PoC10_ISSUE)</h2>
+  <table>
+    <tr><th>항목</th><th>결과</th><th>판정</th></tr>
+    <tr><td>라벨</td><td>ManualsV2_PoC10_ISSUE</td><td><span class="badge badge-ok">PASS</span></td></tr>
+    <tr><td>54fdb 노드 수</td><td>139</td><td><span class="badge badge-ok">PASS</span></td></tr>
+    <tr><td>전체 노드 (라벨 내)</td><td>767</td><td><span class="badge badge-ok">PASS</span></td></tr>
+    <tr><td>전체 관계 (라벨 내)</td><td>9,728</td><td><span class="badge badge-ok">PASS</span></td></tr>
+    <tr><td>LLM 모델</td><td>qwen3.5:35b-a3b (think:False)</td><td><span class="badge badge-ok">PASS</span></td></tr>
+    <tr><td>ID Prefix</td><td>mv2i_</td><td><span class="badge badge-ok">PASS</span></td></tr>
+    <tr><td>처리 시간</td><td>~52분 (79 윈도우, 800자 청킹)</td><td><span class="badge badge-ok">PASS</span></td></tr>
+  </table>
+
+  <h3 style="margin-top:16px; font-size:0.95rem;">엔티티 타입 분포 (54fdb)</h3>
+  <table>
+    <tr><th>타입</th><th>건수</th><th>비율</th></tr>
+    <tr><td>Manual</td><td>43</td><td>30.9%</td></tr>
+    <tr><td>Component</td><td>31</td><td>22.3%</td></tr>
+    <tr><td>Equipment</td><td>25</td><td>18.0%</td></tr>
+    <tr><td>Process</td><td>18</td><td>12.9%</td></tr>
+    <tr><td>Issue</td><td>12</td><td>8.6%</td></tr>
+    <tr><td>Person</td><td>6</td><td>4.3%</td></tr>
+    <tr><td>Customer</td><td>4</td><td>2.9%</td></tr>
+  </table>
+
+  <h3 style="margin-top:16px; font-size:0.95rem;">관계 타입 분포 (54fdb)</h3>
+  <table>
+    <tr><th>타입</th><th>건수</th></tr>
+    <tr><td>USES_COMPONENT</td><td>846</td></tr>
+    <tr><td>INVOLVED_IN</td><td>497</td></tr>
+    <tr><td>DOCUMENTS</td><td>309</td></tr>
+    <tr><td>HAS_ISSUE</td><td>214</td></tr>
+    <tr><td>HAS_SUBPROCESS</td><td>152</td></tr>
+    <tr><td>OWNS</td><td>11</td></tr>
+    <tr><td>MAINTAINS</td><td>7</td></tr>
+  </table>
+
+  <h3 style="margin-top:16px; font-size:0.95rem;">샘플 엔티티</h3>
+  <table>
+    <tr><th>이름</th><th>타입</th></tr>
+    <tr><td>IRB 360-1(3)/1130</td><td>Equipment</td></tr>
+    <tr><td>IRC5</td><td>Equipment</td></tr>
+    <tr><td>robot frame</td><td>Component</td></tr>
+    <tr><td>ABB Robotics</td><td>Customer</td></tr>
+    <tr><td>Technical reference manual - RAPID Instructions</td><td>Manual</td></tr>
+  </table>
+</div>
+
+<!-- 실행 이력 -->
+<div class="card">
+  <h2>실행 이력</h2>
+  <table>
+    <tr><th>단계</th><th>실행자</th><th>시각</th><th>비고</th></tr>
+    <tr><td>Step 0~3</td><td>crafter / docs-agent</td><td>~2026-04-11</td><td>기존 산출물 재사용</td></tr>
+    <tr><td>Step 4 (임베딩)</td><td>crafter</td><td>2026-04-11</td><td>qwen3-embedding:8b, 2000d MRL</td></tr>
+    <tr><td>Step 5A (pgvector)</td><td>crafter</td><td>2026-04-11</td><td>76행 UPSERT, HNSW+GIN 인덱스</td></tr>
+    <tr><td>Step 5B (GraphRAG)</td><td>issue-manager</td><td>2026-04-12 13:23~14:15</td><td>graphrag_poc10_pipeline.py 실행</td></tr>
+    <tr><td>Step 6 (검증)</td><td>issue-manager</td><td>2026-04-12 14:19</td><td>Neo4j + pgvector 쿼리 검증</td></tr>
+    <tr><td>Step 7 (보고)</td><td>issue-manager</td><td>2026-04-12 14:19</td><td>본 보고서</td></tr>
+  </table>
+</div>
+
+<!-- 결론 -->
+<div class="card">
+  <h2>결론</h2>
+  <p><strong>1_robot_54fdb56329f0 (ABB IRB360)</strong> 파이프라인 Step 0~7 전 단계 완료.</p>
+  <ul style="margin-top:8px; padding-left:20px;">
+    <li>pgvector: 76청크, 2000d 임베딩, HNSW+GIN 인덱스 정상, FTS 동작 확인</li>
+    <li>GraphRAG: 139노드(7타입), 2,036관계(7타입), ManualsV2_PoC10_ISSUE 라벨 적용</li>
+    <li>cm-graphrag-pipeline.py 패턴 준수 (800자 청킹, extract_entities, MERGE 적재)</li>
+    <li>체크포인트: graphrag_poc10_issue_progress.json + .log 2파일 구조</li>
+  </ul>
+</div>
+
+<div class="footer">
+  🚨 issue-manager &mdash; manuals-v2 PoC10 파이프라인 검증 보고서 &mdash; 2026-04-12
+</div>
+
+</body>
+</html>
