@@ -1,0 +1,6 @@
+total=122, has_text=81, no_text(ocr_risk)=41
+  AS_70768_LV-N_SG_469KO_KK_KR_1056_2.pdf pages=0
+  DS_Xtium-CL MX4_kor_151211.pdf pages=0
+  AS_131472_GS_UM_D05KO_KK_KR_2023_1.pdf pages=0
+  DF Series HW 매뉴얼-V2VERSION.pdf pages=0
+  DF Series SW 매뉴얼.pdf pages=0

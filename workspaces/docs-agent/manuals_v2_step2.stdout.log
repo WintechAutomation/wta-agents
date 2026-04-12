@@ -1,0 +1,6 @@
+[2026-04-12 10:03:17] === Step2 시작 — 대상 693건 (category=ALL) ===
+[2026-04-12 10:03:17] >> [1_robot] BASIC-INSTRUCTION-LIST.PDF (md5=b504598a, pages=12)
+
+[1_robot_b504598a2b38] BASIC-INSTRUCTION-LIST.PDF
+  mfr=Unknown model=Unknown dt=Manual lang=EN
+Loading weights:   0%|          | 0/770 [00:00<?, ?it/s]Loading weights:  65%|██████▍   | 498/770 [00:00<00:00, 4977.69it/s]Loading weights: 100%|██████████| 770/770 [00:00<00:00, 5636.31it/s]
