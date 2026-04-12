@@ -49,8 +49,8 @@ REPO = Path("C:/MES/wta-agents")
 POC_DIR = REPO / "reports" / "manuals-v2" / "poc"
 REPORTS = REPO / "reports" / "manuals-v2"
 WORK_DIR = REPORTS / "work"
-STATE_PATH = WORK_DIR / "graphrag_poc10_state.json"
-LOG_PATH = WORK_DIR / "graphrag_poc10.log"
+STATE_PATH = WORK_DIR / "graphrag_poc10_issue_state.json"
+LOG_PATH = WORK_DIR / "graphrag_poc10_issue.log"
 REPROCESS_STATE = REPORTS / "legacy" / "manuals_v2_reprocess_state.json"
 NEO4J_ENV = REPO / "workspaces" / "research-agent" / "neo4j-poc.env"
 
@@ -61,17 +61,22 @@ OLLAMA_BASE = "http://182.224.6.147:11434"
 EXTRACT_MODEL = "qwen3.5:35b-a3b"
 WINDOW_SIZE = 2000
 NEO4J_URI = "bolt://localhost:7688"
-LABEL_PREFIX = "ManualV2_PoC10_ISSUE"
+TEAM_LABEL = "ManualsV2_PoC10_ISSUE"      # MAX 지정 — qa-agent는 _QA
+BASE_LABEL = "ManualsV2Entity"            # 스킬 M10 — 공용 manuals-v2 라벨
 ID_PREFIX = "mv2i"
+TEAM_NAME = "issue-manager"
 
+# cm-graphrag-pipeline 기본 10/11 + 확정판 Step 5B Figure/Table/Diagram 추가
 VALID_NODE_TYPES = {
     "Customer", "Equipment", "Product", "Component", "Process",
     "Issue", "Resolution", "Person", "Tool", "Manual",
+    "Figure", "Table", "Diagram",
 }
 VALID_REL_TYPES = {
     "OWNS", "HAS_ISSUE", "SIMILAR_TO", "RESOLVED_BY",
     "INVOLVES_COMPONENT", "USES_COMPONENT", "INVOLVED_IN",
     "HAS_SUBPROCESS", "USES_TOOL", "MAINTAINS", "DOCUMENTS",
+    "BELONGS_TO", "REFERENCES", "DEPICTS",
 }
 
 KST = timezone(timedelta(hours=9))
@@ -111,7 +116,9 @@ def load_state() -> dict:
         return json.loads(STATE_PATH.read_text(encoding="utf-8"))
     return {
         "task_id": "tq-issue-manager-d3fe53",
-        "label": LABEL_PREFIX,
+        "team": TEAM_NAME,
+        "team_label": TEAM_LABEL,
+        "base_label": BASE_LABEL,
         "model": EXTRACT_MODEL,
         "window_size": WINDOW_SIZE,
         "created_at": now_kst(),
@@ -183,8 +190,8 @@ def build_windows(chunks: list[dict], size: int) -> list[dict]:
 # ── LLM 엔티티 추출 ─────────────────────────────────────────────────────
 EXTRACT_PROMPT = """다음 기술 문서에서 엔티티와 관계를 추출하세요.
 
-엔티티 타입: Equipment(장비), Component(부품), Process(공정/작업), Issue(문제/이슈), Person(담당자), Customer(고객사), Manual(매뉴얼), Product(제품), Resolution(조치), Tool(공구)
-관계 타입: OWNS, HAS_ISSUE, SIMILAR_TO, RESOLVED_BY, INVOLVES_COMPONENT, USES_COMPONENT, INVOLVED_IN, HAS_SUBPROCESS, USES_TOOL, MAINTAINS, DOCUMENTS
+엔티티 타입: Equipment(장비), Component(부품), Process(공정/작업), Issue(문제/이슈), Person(담당자), Customer(고객사), Manual(매뉴얼), Product(제품), Resolution(조치), Tool(공구), Figure(그림), Table(표), Diagram(도식)
+관계 타입: OWNS, HAS_ISSUE, SIMILAR_TO, RESOLVED_BY, INVOLVES_COMPONENT, USES_COMPONENT, INVOLVED_IN, HAS_SUBPROCESS, USES_TOOL, MAINTAINS, DOCUMENTS, BELONGS_TO, REFERENCES, DEPICTS
 
 JSON 형식으로만 응답하세요:
 {
@@ -256,12 +263,14 @@ def load_to_neo4j(driver, file_id: str, window_idx: int, lang: str,
                 "_source_id": file_id,
                 "_run_id": run_id,
                 "_corpus": "manuals_v2",
+                "source": "manuals_v2",          # 스킬 M10 alias
+                "_team": TEAM_NAME,
                 "_lang": lang,
                 "_window_idx": window_idx,
             })
             try:
                 s.run(
-                    f"MERGE (n:{LABEL_PREFIX}:{etype} {{_id: $_id}}) "
+                    f"MERGE (n:{BASE_LABEL}:{TEAM_LABEL}:{etype} {{_id: $_id}}) "
                     f"SET n += $props, n.name = $name",
                     _id=sid, props=props, name=ent.get("name") or orig_id,
                 )
@@ -277,11 +286,11 @@ def load_to_neo4j(driver, file_id: str, window_idx: int, lang: str,
                 continue
             try:
                 s.run(
-                    f"MATCH (a:{LABEL_PREFIX} {{_id: $src}}), "
-                    f"(b:{LABEL_PREFIX} {{_id: $tgt}}) "
+                    f"MATCH (a:{TEAM_LABEL} {{_id: $src}}), "
+                    f"(b:{TEAM_LABEL} {{_id: $tgt}}) "
                     f"MERGE (a)-[r:{rtype}]->(b) "
-                    f"SET r._run_id=$rid",
-                    src=src, tgt=tgt, rid=run_id,
+                    f"SET r._run_id=$rid, r._team=$team, r._source_id=$fid",
+                    src=src, tgt=tgt, rid=run_id, team=TEAM_NAME, fid=file_id,
                 )
                 rel_count += 1
             except Exception as exc:
@@ -291,8 +300,8 @@ def load_to_neo4j(driver, file_id: str, window_idx: int, lang: str,
 
 
 def count_label(driver, file_id: str | None = None) -> dict:
-    q_nodes = f"MATCH (n:{LABEL_PREFIX}) RETURN count(n) AS c"
-    q_rels = (f"MATCH (a:{LABEL_PREFIX})-[r]->(b:{LABEL_PREFIX}) "
+    q_nodes = f"MATCH (n:{TEAM_LABEL}) RETURN count(n) AS c"
+    q_rels = (f"MATCH (a:{TEAM_LABEL})-[r]->(b:{TEAM_LABEL}) "
               f"RETURN count(r) AS c")
     out: dict = {}
     with driver.session() as s:
@@ -300,7 +309,7 @@ def count_label(driver, file_id: str | None = None) -> dict:
         out["total_rels"] = s.run(q_rels).single()["c"]
         if file_id:
             out["file_nodes"] = s.run(
-                f"MATCH (n:{LABEL_PREFIX}) WHERE n._source_id=$fid RETURN count(n) AS c",
+                f"MATCH (n:{TEAM_LABEL}) WHERE n._source_id=$fid RETURN count(n) AS c",
                 fid=file_id,
             ).single()["c"]
     return out
@@ -316,7 +325,10 @@ def main() -> None:
                         help="1000청크 초과 파일 제외")
     args = parser.parse_args()
 
-    log.info(f"=== graphrag_poc10_pipeline start model={EXTRACT_MODEL} label={LABEL_PREFIX} ===")
+    log.info(
+        f"=== graphrag_poc10_pipeline start model={EXTRACT_MODEL} "
+        f"base={BASE_LABEL} team={TEAM_LABEL} ==="
+    )
     dry_targets = args.dry
     targets = args.only or dry_targets or load_poc10_ids()
 
