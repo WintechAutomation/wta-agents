@@ -4858,8 +4858,8 @@
       "status": "in_progress",
       "priority": "high",
       "created_at": "2026-04-12 10:19:24",
-      "updated_at": "2026-04-12 11:59:42",
-      "last_report_at": "2026-04-12 11:59:42",
+      "updated_at": "2026-04-12 12:26:54",
+      "last_report_at": "2026-04-12 12:26:54",
       "completed_at": null
     },
     {
@@ -5099,6 +5099,55 @@
       "priority": "medium",
       "created_at": "2026-04-12 11:58:21",
       "updated_at": "2026-04-12 11:58:21",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-issue-manager-9bbb0c",
+      "agent": "issue-manager",
+      "task": "[방향 전면 변경 — 전체 파이프라인 1건 테스트] 부서장 지시. 기존 GraphRAG 교차검증 작업 즉시 중단.\n\n새 임무: manuals-v2 스킬(SKILL.md) 대로 파이",
+      "message": "[방향 전면 변경 — 전체 파이프라인 1건 테스트] 부서장 지시. 기존 GraphRAG 교차검증 작업 즉시 중단.\n\n새 임무: manuals-v2 스킬(SKILL.md) 대로 파이프라인 전체(Step0~Step7)를 1건에 대해 끝까지 수행.\n\n대상: PoC 중 가장 작은 파일 1건 (예: 1_robot_2d70fa79608e, 12 chunks)\n\n수행 범위 (스킬 Step0~Step7 전체):\n- Step1: 이미 추출 완료된 파일 사용 (reports/manuals-v2/extract/)\n- Step2: Docling 파싱 + 512청킹 (manuals_v2_step2_parse.py)\n- Step3: 청크 재처리 (필요 시에만, 스킬 N9 참조)\n- Step4: Qwen3-Embedding-8B 임베딩 (2000dim MRL 슬라이싱)\n- Step5A: pgvector 적재 (manual.documents_v2)\n- Step5B: Neo4j GraphRAG (cm-graphrag 패턴 + think:false + num_predict:1200)\n- Step6: 자체 검증 (MRR 허들, 필터 표준 v1.0)\n- Step7: Cloudflare URL 보고\n\n조건:\n- 스킬 MUST/MUST NOT 전부 준수\n- 산출물 전부 reports/manuals-v2/ 하위\n- 체크포인트 + 로그 2파일 구조\n- 기존 GraphRAG 노드 삭제 후 깨끗한 상태에서 시작\n\n완료 시: 1건에 대한 전 단계 산출물 + 검증 결과 + 3줄 요약 + Cloudflare URL로 report_complete.\n\n질문 있으면 먼저 올려. 없으면 바로 착수.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-12 12:20:56",
+      "updated_at": "2026-04-12 12:20:56",
+      "last_report_at": null,
+      "completed_at": null,
+      "requested_by": "MAX"
+    },
+    {
+      "id": "tq-issue-manager-5bb2b0",
+      "agent": "issue-manager",
+      "task": "[방향 전면 변경 — 전체 파이프라인 1건 테스트] 부서장 지시. 기존 GraphRAG 교차검증 작업 즉시 중단.",
+      "message": "[방향 전면 변경 — 전체 파이프라인 1건 테스트] 부서장 지시. 기존 GraphRAG 교차검증 작업 즉시 중단.\n\n새 임무: manuals-v2 스킬(SKILL.md) 대로 파이프라인 전체(Step0~Step7)를 1건에 대해 끝까지 수행.\n\n대상: PoC 중 가장 작은 파일 1건 (예: 1_robot_2d70fa79608e, 12 chunks)\n\n수행 범위 (스킬 Step0~Step7 전체):\n- Step1: 이미 추출 완료된 파일 사용 (reports/manuals-v2/extract/)\n- Step2: Docling 파싱 + 512청킹 (manuals_v2_step2_parse.py)\n- Step3: 청크 재처리 (필요 시에만, 스킬 N9 참조)\n- Step4: Qwen3-Embedding-8B 임베딩 (2000dim MRL 슬라이싱)\n- Step5A: pgvector 적재 (manual.documents_v2)\n- Step5B: Neo4j GraphRAG (cm-graphrag 패턴 + think:false + num_predict:1200)\n- Step6: 자체 검증 (MRR 허들, 필터 표준 v1.0)\n- Step7: Cloudflare URL 보고\n\n조건:\n- 스킬 MUST/MUST NOT 전부 준수\n- 산출물 전부 reports/manuals-v2/ 하위\n- 체크포인트 + 로그 2파일 구조\n- 기존 GraphRAG 노드 삭제 후 깨끗한 상태에서 시작\n\n완료 시: 1건에 대한 전 단계 산출물 + 검증 결과 + 3줄 요약 + Cloudflare URL로 report_complete.\n\n질문 있으면 먼저 올려. 없으면 바로 착수.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-12 12:20:59",
+      "updated_at": "2026-04-12 12:20:59",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-qa-agent-88e72b",
+      "agent": "qa-agent",
+      "task": "[전체 대기] 부서장 지시로 방향 전면 변경. GraphRAG 교차검증 작업 종료.",
+      "message": "[전체 대기] 부서장 지시로 방향 전면 변경. GraphRAG 교차검증 작업 종료.\n\n기존 생성한 ManualsV2_PoC10_QA 노드 Cypher로 삭제해두고, 다음 지시까지 대기. 향후 할당량 기반으로 전체 파이프라인 독립 수행 방식으로 전환 예정.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-12 12:21:02",
+      "updated_at": "2026-04-12 12:21:02",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-issue-manager-e9020b",
+      "agent": "issue-manager",
+      "task": "[tq-issue-manager-d3fe53] 승인.",
+      "message": "[tq-issue-manager-d3fe53] 승인.\n\n1) 대상 변경: 54fdb (ABB IRB360, 76 chunks) OK\n2) 기존 산출물 활용: Step0~3 기존 결과 사용 OK. Step4(임베딩)부터 시작.\n3) Step4 → Step5A(pgvector) → Step5B(GraphRAG) → Step6(검증) → Step7(보고) 순으로 끝까지.\n\n바로 착수.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-12 12:27:04",
+      "updated_at": "2026-04-12 12:27:04",
       "last_report_at": null,
       "completed_at": null
     }
