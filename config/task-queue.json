@@ -5296,6 +5296,56 @@
       "updated_at": "2026-04-12 09:45:59",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-qa-agent-c1b8e7",
+      "agent": "qa-agent",
+      "task": "[지시 — B안 승인] 부서장 승인. 목차/TOC 류 저품질 Top-1 제외 필터 적용 후 MRR 재산출.\n\n작업:\n1) '목차/TOC/Table of Contents/차례/색인'",
+      "message": "[지시 — B안 승인] 부서장 승인. 목차/TOC 류 저품질 Top-1 제외 필터 적용 후 MRR 재산출.\n\n작업:\n1) '목차/TOC/Table of Contents/차례/색인' 등 저품질 청크 식별 규칙 정의 (패턴/토큰수/구조 기준)\n2) 필터 적용해서 before/after 양쪽 MRR 재산출\n3) 재산출 결과 + 필터 규칙을 평가 표준으로 문서화 (향후 전 카테고리 재사용 가능하게)\n4) reports/manuals-v2-qa-after.html 업데이트 (재산출 MRR 반영)\n\n결과: 3줄 요약 + 재산출 MRR 수치 + 규칙 문서 경로. 완료 시 task_id 에코 + msg_type=\"report_complete\".",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-12 09:51:15",
+      "updated_at": "2026-04-12 09:51:15",
+      "last_report_at": null,
+      "completed_at": null,
+      "requested_by": "MAX"
+    },
+    {
+      "id": "tq-qa-agent-376ce2",
+      "agent": "qa-agent",
+      "task": "[지시 — B안 승인] 부서장 승인. 목차/TOC 류 저품질 Top-1 제외 필터 적용 후 MRR 재산출.",
+      "message": "[지시 — B안 승인] 부서장 승인. 목차/TOC 류 저품질 Top-1 제외 필터 적용 후 MRR 재산출.\n\n작업:\n1) '목차/TOC/Table of Contents/차례/색인' 등 저품질 청크 식별 규칙 정의 (패턴/토큰수/구조 기준)\n2) 필터 적용해서 before/after 양쪽 MRR 재산출\n3) 재산출 결과 + 필터 규칙을 평가 표준으로 문서화 (향후 전 카테고리 재사용 가능하게)\n4) reports/manuals-v2-qa-after.html 업데이트 (재산출 MRR 반영)\n\n결과: 3줄 요약 + 재산출 MRR 수치 + 규칙 문서 경로. 완료 시 task_id 에코 + msg_type=\"report_complete\".",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-12 09:51:17",
+      "updated_at": "2026-04-12 09:51:17",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-docs-agent-5bc692",
+      "agent": "docs-agent",
+      "task": "[지시 — 8_etc 제외, 7개 카테고리로 파이프라인 진행] 부서장 승인. 8_etc는 추후 별도 지시.\n\n대상: 1_robot · 2_sensor · 3_hmi · 4_serv",
+      "message": "[지시 — 8_etc 제외, 7개 카테고리로 파이프라인 진행] 부서장 승인. 8_etc는 추후 별도 지시.\n\n대상: 1_robot · 2_sensor · 3_hmi · 4_servo · 5_inverter · 6_plc · 7_pneumatic (7개 카테고리, Step1 완료분)\n\n진행 단계:\n1) Docling 파싱 + 512 청킹 — manuals_v2_parse_docling.py 실행, 체크포인트 기반 재개 구조 필수\n2) Qwen3-Emb-8B 임베딩 (EMBED_DIM=2000 슬라이싱 규칙 준수)\n3) LightRAG + pgvector 인덱싱\n4) 각 단계 state.json + log 파일 의무 생성 (체크포인트 재개 가능 구조)\n\n보고 규칙:\n- 배치 파일 체크포인트 기반, 3줄 요약만\n- 인라인 덤프 금지\n- 단계 전환 시 report_progress + task_id\n- 완료 시 report_complete + task_id + 산출물 URL\n\nqa-agent는 검증 필터 표준(mrr-eval-filter-standard.md) 준비 완료 상태이므로, 인덱싱 완료 후 바로 검증 진행 가능.\n\n우선 Step1 재개(파싱)부터 착수하고 진행 상황 알려줘.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-12 09:58:00",
+      "updated_at": "2026-04-12 09:58:00",
+      "last_report_at": null,
+      "completed_at": null,
+      "requested_by": "MAX"
+    },
+    {
+      "id": "tq-docs-agent-1a965a",
+      "agent": "docs-agent",
+      "task": "[지시 — 8_etc 제외, 7개 카테고리로 파이프라인 진행] 부서장 승인. 8_etc는 추후 별도 지시.",
+      "message": "[지시 — 8_etc 제외, 7개 카테고리로 파이프라인 진행] 부서장 승인. 8_etc는 추후 별도 지시.\n\n대상: 1_robot · 2_sensor · 3_hmi · 4_servo · 5_inverter · 6_plc · 7_pneumatic (7개 카테고리, Step1 완료분)\n\n진행 단계:\n1) Docling 파싱 + 512 청킹 — manuals_v2_parse_docling.py 실행, 체크포인트 기반 재개 구조 필수\n2) Qwen3-Emb-8B 임베딩 (EMBED_DIM=2000 슬라이싱 규칙 준수)\n3) LightRAG + pgvector 인덱싱\n4) 각 단계 state.json + log 파일 의무 생성 (체크포인트 재개 가능 구조)\n\n보고 규칙:\n- 배치 파일 체크포인트 기반, 3줄 요약만\n- 인라인 덤프 금지\n- 단계 전환 시 report_progress + task_id\n- 완료 시 report_complete + task_id + 산출물 URL\n\nqa-agent는 검증 필터 표준(mrr-eval-filter-standard.md) 준비 완료 상태이므로, 인덱싱 완료 후 바로 검증 진행 가능.\n\n우선 Step1 재개(파싱)부터 착수하고 진행 상황 알려줘.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-12 09:58:02",
+      "updated_at": "2026-04-12 09:58:02",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }
