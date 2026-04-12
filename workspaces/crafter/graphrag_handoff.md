@@ -7,7 +7,9 @@
 ---
 
 ## 0. 한 줄 요약
-manuals-v2 PoC 10건 재처리(청크 후처리 + Qwen3 임베딩 재생성)는 2026-04-12 07:46~08:13 KST 완료. 8,879→6,173 청크. embed_failed=0. 다음 단계는 GraphRAG(LightRAG/Neo4j) 인덱싱 → 검색 비교 → 부서장 보고. 인프라 변경 없음.
+manuals-v2 PoC 10건 재처리(청크 후처리 + Qwen3 임베딩 재생성)는 2026-04-12 07:46~08:13 KST 완료. 8,879→6,173 청크. embed_failed=0. 다음 단계는 **기존 Neo4j(bolt://localhost:7688) 직접 방식 GraphRAG 인덱싱** (LightRAG 미도입, 1,553노드 PoC에 manuals-v2 누적) → 검색 비교 → 부서장 보고. 인프라 변경 없음.
+
+> **확정판 기준 단일 진실 소스**: `reports/manuals-v2/pipeline-overview.md`. 본 인수문서와 차이가 있으면 pipeline-overview.md 우선.
 
 > 주: MAX 지시문에는 "08:25~26 재파싱"이라 기재됐으나 실제 로그상 재파싱 종료 시각은 08:13:36 KST 입니다(`reports/manuals-v2/legacy/manuals_v2_reprocess.log`). 시각 차이는 메모 오기 추정.
 
@@ -25,9 +27,9 @@ manuals-v2 PoC 10건 재처리(청크 후처리 + Qwen3 임베딩 재생성)는 
 | Qwen3-Embedding-8B 인프라 | http://182.224.6.147:11434 (외부 GPU, 별도 운영, 본인 변경 권한 없음) |
 | pgvector 스키마 통일 | manual.documents / manual.wta_documents / csagent.vector_embeddings 모두 2000차원 |
 | MCP agent-channel msg_type 개선 | `scripts/mcp-agent-channel.ts` + `dashboard/app.py` (8/8 항목 점검 완료, MAX 보고됨) |
-| LightRAG/Neo4j 인덱싱 | **미착수** — issue-manager 인수 후 진행 |
+| GraphRAG/Neo4j 인덱싱 | **미착수** — issue-manager 인수 후 진행 |
 
-본 인수인계 대상: **재처리(완료) + LightRAG/Neo4j(미착수)** 두 블록.
+본 인수인계 대상: **재처리(완료) + GraphRAG/Neo4j(미착수)** 두 블록.
 
 ---
 
@@ -35,7 +37,7 @@ manuals-v2 PoC 10건 재처리(청크 후처리 + Qwen3 임베딩 재생성)는 
 | # | 상태 | 작업 | 비고 |
 |---|------|------|------|
 | 1 | 완료 | PoC 10건 재처리(청크 후처리 + 임베딩) | state.json status=done |
-| 2 | 대기 | LightRAG로 PoC 10건 그래프 인덱싱 | research-agent의 `poc-index.py` 패턴 참고 |
+| 2 | 대기 | 기존 Neo4j 직접 방식으로 PoC 10건 그래프 인덱싱 | qwen3.5:35b-a3b 엔티티 추출 + /api/graphrag/* 재활용. **LightRAG 미도입** |
 | 3 | 대기 | Neo4j 적재 결과 검증(노드/엣지 카운트, 샘플 쿼리) | bolt://localhost:7688 |
 | 4 | 대기 | 하이브리드 검색 비교(벡터 only vs LightRAG) | 대시보드 비교 페이지 기존 구현 활용 |
 | 5 | 대기 | manuals-v2 GraphRAG 결과 보고서 작성 | reports/manuals-v2/ 하위 HTML, Cloudflare URL로 보고 |
@@ -92,7 +94,7 @@ crafter가 본 문서 작성 시점에 다음을 이동:
 ### 3.5 임시 파일/캐시/로그
 - 재처리 로그: `reports/manuals-v2/legacy/manuals_v2_reprocess.log` (append)
 - 재처리 상태: `reports/manuals-v2/legacy/manuals_v2_reprocess_state.json`
-- LightRAG 인덱스 캐시(신규 생성 예정): `reports/manuals-v2/lightrag_cache/`
+- (LightRAG 미도입 — `lightrag_cache/` 폴더 사용 금지)
 - Neo4j 데이터: 외부 컨테이너(bolt://localhost:7688), DB 파일 직접 접근 금지
 
 ---
@@ -173,16 +175,15 @@ with GraphDatabase.driver(URI, auth=(USER, PWD)) as drv, drv.session() as s:
 PY
 ```
 
-### 6.2 LightRAG 인덱싱 패턴(참조)
-- 참조 구현: `C:/MES/wta-agents/workspaces/research-agent/poc-index.py` (포장혼입검사 7페이지 PoC)
-- 핵심 import:
-  ```python
-  from lightrag import LightRAG
-  from lightrag.utils import EmbeddingFunc
-  ```
-- 임베딩 함수는 Qwen3-Embedding-8B를 EmbeddingFunc로 래핑(2000dim)
-- LLM 함수는 부서장 승인 모델(현재 sonnet 권장, opus 절약 정책)
-- **인덱싱 출력 캐시**: `reports/manuals-v2/lightrag_cache/`로 지정
+### 6.2 GraphRAG 인덱싱 (확정판 — LightRAG 미도입)
+- **방식**: 기존 Neo4j(bolt://localhost:7688) 직접 Cypher INSERT
+- **재활용 자산**:
+  - `dashboard/app.py` `/api/graphrag/*` 엔드포인트 (nodes / labels / search / expand / cypher)
+  - 대시보드 지식그래프 페이지 (@neo4j-nvl/react), 1,553노드 PoC
+- **엔티티 추출 LLM**: `qwen3.5:35b-a3b` (Ollama 로컬, 182.224.6.147:11434)
+- **참조 구현**: `workspaces/research-agent/poc-index.py` — Ollama 호출 구조만 참고. **LightRAG 라이브러리 사용 금지** (`from lightrag import LightRAG` 같은 import 추가하지 말 것)
+- **manuals-v2 노드 구분**: 라벨 확장(`:ManualsV2Entity`) 또는 속성 `source='manuals_v2'`로 기존 PoC 노드와 분리
+- **노드/관계**: `Figure`/`Table`/`Diagram` 별도 엔티티 + `(Figure)-[:BELONGS_TO]->(Section)` / `(Chunk)-[:REFERENCES]->(Figure)` / `(Figure)-[:DEPICTS]->(Component)`
 
 ### 6.3 Neo4j 재시작 (admin-agent 위임)
 - 컨테이너 재시작 직접 금지 → `send_message(to="admin-agent", message="neo4j(localhost:7688) 재시작 요청. 사유: ...", msg_type="request")`
@@ -258,8 +259,8 @@ A. 목표 150~300 tokens(`chunk_postprocess.py` 내 `target_min/target_max`). Po
 ### Q4. embed_failed > 0이면?
 A. PoC 10건은 모두 0. 발생 시 (a) 청크 텍스트 확인(특수문자/공백) (b) 임베딩 서버 응답 코드 확인 (c) 청크별 재시도는 현재 미구현 → 해당 file_id state를 `pending`으로 되돌리고 재실행. 반복 실패 시 MAX 보고.
 
-### Q5. LightRAG 인덱싱 결과를 어디에 적재하나?
-A. Neo4j(bolt://localhost:7688) — 그래프 노드/엣지. 임베딩 캐시는 `reports/manuals-v2/lightrag_cache/` (gitignored). **manual_v1(기존 운영)과 분리** 위해 별도 레이블/네임스페이스 사용(예: `:ManualsV2Entity`). 기존 GraphRAG PoC(1,553노드)와 충돌 금지.
+### Q5. GraphRAG 인덱싱 결과를 어디에 적재하나?
+A. 기존 Neo4j(bolt://localhost:7688)에 직접 적재. **LightRAG 라이브러리 사용 금지** — 이미 `/api/graphrag/*` 엔드포인트 + 대시보드 지식그래프 페이지(@neo4j-nvl/react, 1,553노드 PoC)가 구축되어 있어 그대로 확장. manuals-v2 노드는 라벨 확장(`:ManualsV2Entity`) 또는 속성 `source='manuals_v2'`로 기존 PoC와 구분. 엔티티 추출은 Ollama `qwen3.5:35b-a3b`.
 
 ### Q6. 부서장 보고 형식?
 A. (a) HTML 종합 보고서 → `reports/manuals-v2/` 하위 (b) `dashboard/uploads/` 업로드 → `https://agent.mes-wta.com/...` Cloudflare URL 생성 (c) MAX 경유 보고. **로컬 경로 직접 보고 금지**(memory: feedback_cloudflare_url_report.md). 본문은 3줄 요약 + URL.

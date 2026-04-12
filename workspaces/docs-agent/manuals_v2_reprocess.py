@@ -27,7 +27,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 
 from chunk_postprocess import postprocess, stats  # noqa
 
-WORK_ROOT = Path(r'C:\MES\wta-agents\workspaces\docs-agent\v2_poc')
+WORK_ROOT = Path(r'C:\MES\wta-agents\reports\manuals-v2\poc')  # 정정 2026-04-12: workspaces/docs-agent/v2_poc → reports/manuals-v2/poc 이관 반영
 # 산출물 경로 정정 (2026-04-12 부서장 지시): workspaces/는 .py만 유지, 부피 파일은 reports/(gitignored)
 REPORTS_OUT = Path(r'C:\MES\wta-agents\reports\manuals-v2\legacy')
 REPORTS_OUT.mkdir(parents=True, exist_ok=True)
