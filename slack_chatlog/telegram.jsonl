@@ -978,3 +978,6 @@
 {"ts": "2026-04-12 19:48:45", "direction": "outbound", "user": "MAX", "text": "👑 issue-manager도 응답 왔습니다.\n\n🚨 issue-manager: Step5B 81.5% (75/92 윈도우), 10~15분 내 완료 예상\n🔬 qa-agent: Step4 23% (64/273 윈도우), ~22:30 완료 예상\n\nissue-manager가 먼저 끝나면 바로 보고드리겠습니다."}
 {"ts": "2026-04-12 19:49:11", "direction": "inbound", "user": "boss", "text": "지금 진행하는게 파일 하나씩 하고잇는거냐?"}
 {"ts": "2026-04-12 19:49:27", "direction": "outbound", "user": "MAX", "text": "👑 네, 지금은 v1.1 스킬 검증 단계라서 각 팀 파일 1개씩 진행 중입니다.\n\n• issue-manager: 54fdb 1건 (완료 임박)\n• qa-agent: 18a2fd 1건 (23% 진행)\n\n두 팀 결과가 동일한 양식/품질로 나오는지 확인한 후, 승인되면 건수 할당해서 693건 본격 진행할 계획입니다."}
+{"ts": "2026-04-12 21:05:17", "direction": "inbound", "user": "boss", "text": "아직도 미완료?"}
+{"ts": "2026-04-12 21:05:43", "direction": "outbound", "user": "MAX", "text": "👑 issue-manager는 완료됐습니다 (605노드/352관계).\n\nqa-agent만 남았습니다. 앞서 23%(64/273) → 지금 상태 확인 요청했습니다. 800자 윈도우 273개라 시간이 걸리고 있습니다. 답변 오는 대로 바로 알려드리겠습니다."}
+{"ts": "2026-04-12 21:06:16", "direction": "outbound", "user": "MAX", "text": "👑 qa-agent 현황:\n• Step4: 61% (166/273 윈도우)\n• 누적: 엔티티 741개, 관계 1,010개 (v1.0의 0건→1,010건)\n• 완료 예상: 22:35 KST (잔여 ~90분 + Step5~7)\n\nissue-manager는 이미 완료 상태입니다. qa-agent만 남았는데 파일 크기가 커서 (90청크→273윈도우) 시간이 걸리고 있습니다."}
