@@ -316,13 +316,15 @@ def call_llm(text: str) -> dict:
     def _do_post():
         return req.post(LLM_URL, json=payload, timeout=LLM_TIMEOUT)
 
-    with ThreadPoolExecutor(max_workers=1) as ex:
-        fut = ex.submit(_do_post)
-        try:
-            resp = fut.result(timeout=WALL_TIMEOUT)
-        except FutTimeoutError:
-            fut.cancel()
-            raise TimeoutError(f'LLM wall-clock timeout after {WALL_TIMEOUT}s')
+    ex = ThreadPoolExecutor(max_workers=1)
+    fut = ex.submit(_do_post)
+    try:
+        resp = fut.result(timeout=WALL_TIMEOUT)
+    except FutTimeoutError:
+        ex.shutdown(wait=False)  # don't block waiting for hung thread
+        raise TimeoutError(f'LLM wall-clock timeout after {WALL_TIMEOUT}s')
+    finally:
+        ex.shutdown(wait=False)
     resp.raise_for_status()
     raw = resp.json().get('response', '')
 
