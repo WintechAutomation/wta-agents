@@ -27,3 +27,9 @@
 2026-04-13 07:13:49,790 INFO 직접 전송 완료 → control-agent:5616
 2026-04-13 08:10:47,331 INFO [수신] #밥먹기 조한종: 오늘 연차 입니다. → sales-agent
 2026-04-13 08:10:47,363 INFO 직접 전송 완료 → sales-agent:5603
+2026-04-13 08:37:27,369 INFO [수신] #docs 김근형: • MCA210T/MAD111T 발주이력: 40건 (여러 프로젝트 혼재) → docs-agent
+2026-04-13 08:37:27,790 INFO 직접 전송 완료 → docs-agent:5614
+2026-04-13 08:37:44,205 INFO [응답시간] docs-agent #docs: 16초
+2026-04-13 08:37:44,205 INFO [슬랙 발신] #docs ← docs-agent: 김근형님, MCA210T/MAD111T 발주이력 40건 확인했습니다. 혹시 이 데이터로 정리 문서나 매뉴얼 
+2026-04-13 08:39:04,375 INFO [수신] #docs 김근형: 일단 지금 <https://agent.mes-wta.com/ERP_현재고_구매진행_전체> 이거 안들어가짐
+Failed to load resour → docs-agent

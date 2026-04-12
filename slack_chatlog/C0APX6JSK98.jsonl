@@ -387,3 +387,5 @@
 {"ts": "2026-04-10 13:54:06", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "WRRDRL130-S48W\nWSSL125X102-S24W\nWBFL130X86-S24G\nWCDRL150-S48W\nWCRDRL130-S24W 이것들은 cs 재고항목에서 제거"}
 {"ts": "2026-04-10 13:55:42", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "WCDRL150-S24W 이항목도 제거"}
 {"ts": "2026-04-10 14:32:16", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "SIO-20P 프로젝트 중복 확인"}
+{"ts": "2026-04-13 08:37:26", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "• MCA210T/MAD111T 발주이력: 40건 (여러 프로젝트 혼재)"}
+{"ts": "2026-04-13 08:39:04", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "일단 지금 <https://agent.mes-wta.com/ERP_현재고_구매진행_전체> 이거 안들어가짐\nFailed to load resource: the server responded with a status of 404 ()"}
