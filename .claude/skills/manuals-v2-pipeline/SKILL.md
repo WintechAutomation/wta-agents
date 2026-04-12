@@ -451,10 +451,10 @@ A. 안 됨. 시스템 영역 → admin-agent에 위임 (`send_message(to="admin-
 A. db-manager 담당. 일반적으로 `embedding`에 IVFFlat 또는 HNSW (pgvector). `(file_id, chunk_id)` UNIQUE, `category`, `lang` BTREE. 본 스킬 작성 시점에는 미생성 상태일 수 있음 — db-manager에 확인 후 생성 요청.
 
 ### Q10. manuals-v2 노드와 기존 PoC(1,553노드)가 섞이지 않게 하려면?
-A. 모든 manuals-v2 노드/관계에 라벨 `:ManualsV2Entity` 또는 속성 `source='manuals_v2'` 부여. 검색/expand 시 필터링. Cypher 예:
+A. §5B-1 라벨 규칙 준수: `:ManualsV2Entity:{Type}` (예: `:ManualsV2Entity:Equipment`). 속성 `_run_id`, `_team`, `_file_id`로 필터링. Cypher 예:
 ```cypher
-MERGE (e:Entity:ManualsV2Entity {name:$name})
-  ON CREATE SET e.source='manuals_v2', e.file_id=$file_id, e.created_at=datetime()
+MERGE (e:ManualsV2Entity:Equipment {_id: $id})
+  ON CREATE SET e.name=$name, e._file_id=$file_id, e._run_id=$run_id, e._team=$team
 ```
 
 ### Q11. 임베딩 서버 다운 시?
