@@ -359,12 +359,16 @@ def neo4j_merge(file_id: str, run_id: str, entities: list, relations: list) -> t
             props['_file_id'] = file_id
             props['_team'] = TEAM
             props['_id'] = eid
-            s.run(
-                f'MERGE (n:ManualsV2Entity:{etype} {{_id: $_id}}) SET n += $props, n.name = $name',
-                _id=eid, props=props, name=ent.get('name', eid),
-            )
-            eid_set.add(eid)
-            node_count += 1
+            try:
+                s.run(
+                    f'MERGE (n:ManualsV2Entity:{etype} {{_id: $_id}}) SET n += $props, n.name = $name',
+                    _id=eid, props=props, name=ent.get('name', eid),
+                )
+                eid_set.add(eid)
+                node_count += 1
+            except Exception:
+                # Constraint violation (duplicate name) — skip this entity
+                pass
         for rel in relations:
             rtype = rel.get('type', '')
             if rtype not in VALID_REL_TYPES:
@@ -373,12 +377,15 @@ def neo4j_merge(file_id: str, run_id: str, entities: list, relations: list) -> t
             tgt = rel.get('target', '')
             if src not in eid_set or tgt not in eid_set:
                 continue
-            s.run(
-                f'MATCH (a:ManualsV2Entity {{_id:$src}}), (b:ManualsV2Entity {{_id:$tgt}}) '
-                f'MERGE (a)-[:{rtype}]->(b)',
-                src=src, tgt=tgt,
-            )
-            rel_count += 1
+            try:
+                s.run(
+                    f'MATCH (a:ManualsV2Entity {{_id:$src}}), (b:ManualsV2Entity {{_id:$tgt}}) '
+                    f'MERGE (a)-[:{rtype}]->(b)',
+                    src=src, tgt=tgt,
+                )
+                rel_count += 1
+            except Exception:
+                pass
     driver.close()
     return node_count, rel_count
 
