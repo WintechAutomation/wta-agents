@@ -5352,6 +5352,69 @@
       "updated_at": "2026-04-12 16:19:52",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-docs-agent-fa674f",
+      "agent": "docs-agent",
+      "task": "[SKILL.md v1.1 검증 요청] 피드백 반영하여 보완했습니다. 확인 부탁드립니다.\n\n반영 내용 요약:\n1) 윈도우: 800자 + 200오버랩 (docs 권장 채택)\n2) 프",
+      "message": "[SKILL.md v1.1 검증 요청] 피드백 반영하여 보완했습니다. 확인 부탁드립니다.\n\n반영 내용 요약:\n1) 윈도우: 800자 + 200오버랩 (docs 권장 채택)\n2) 프롬프트: cm-graphrag 대체 → MANUALS_V2_EXTRACT_PROMPT (§5B-4, 엔티티 12종/관계 12종)\n3) 엔티티: Equipment/Component/Parameter/Alarm/Process/Section/Figure/Table/Diagram/Specification/Manual/SafetyRule (docs 제안 10종 + Section/Diagram 추가 = 12종)\n4) 라벨: `:ManualsV2Entity:{Type}` 단일, _run_id/_team 속성 구분\n5) LLM: num_predict=4096, temperature=0, think=False 통일\n6) MRR: 카테고리별 10건+, MRR≥0.60 허들, queryset JSONL 표준\n7) M16~M20 / N11~N13 강제 규칙 추가\n\n검증 포인트:\n- 위 6개 표준화 항목(윈도우/프롬프트/라벨/MRR/JSON/state) 충족 여부\n- 두 팀이 동일 file_id에 대해 재현 가능한 결과를 낼 수 있는지\n\nCloudflare: https://agent.mes-wta.com/api/files/76d62cb4-9669-4a03-8cdd-b1e781808366/manuals-v2-pipeline-skill-v1.1.md",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-12 18:10:20",
+      "updated_at": "2026-04-12 18:10:20",
+      "last_report_at": null,
+      "completed_at": null,
+      "requested_by": "crafter"
+    },
+    {
+      "id": "tq-issue-manager-58d4c3",
+      "agent": "issue-manager",
+      "task": "[manuals-v2 v1.1 재검증] 1_robot_54fdb56329f0 Step0-7",
+      "message": "SKILL.md v1.1 재검증: 1_robot_54fdb56329f0 (76 chunks) 전체 파이프라인 재실행",
+      "status": "pending",
+      "priority": "high",
+      "created_at": "2026-04-12 18:17:16",
+      "updated_at": "2026-04-12 18:17:16",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-qa-agent-e1e03d",
+      "agent": "qa-agent",
+      "task": "[manuals-v2 v1.1 재검증] 1_robot_18a2fd5fb603 Step0-7",
+      "message": "SKILL.md v1.1 재검증: 1_robot_18a2fd5fb603 (90 chunks) 전체 파이프라인 재실행",
+      "status": "pending",
+      "priority": "high",
+      "created_at": "2026-04-12 18:17:18",
+      "updated_at": "2026-04-12 18:17:18",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-issue-manager-e52927",
+      "agent": "issue-manager",
+      "task": "[task:tq-issue-manager-58d4c3] SKILL.md v1.1 재검증 — 54fdb 전체 파이프라인 재실행\n\nSKILL.md가 v1.1로 업데이트됐다. 기존 54",
+      "message": "[task:tq-issue-manager-58d4c3] SKILL.md v1.1 재검증 — 54fdb 전체 파이프라인 재실행\n\nSKILL.md가 v1.1로 업데이트됐다. 기존 54fdb 결과를 삭제하고 v1.1 기준으로 Step0~7 전체 재실행.\n\n■ 반드시 먼저 할 것: .claude/skills/manuals-v2-pipeline/SKILL.md 다시 읽을 것 (v1.1 변경사항 숙지)\n\n■ v1.1 핵심 변경:\n  - 전용 프롬프트: MANUALS_V2_EXTRACT_PROMPT 사용 (cm-graphrag 프롬프트 사용 금지)\n  - 엔티티 12종 / 관계 12종 (v1.0의 10종/11종 아님)\n  - 윈도우: 800자 + 200 오버랩\n  - Neo4j 라벨: :ManualsV2Entity:{Type} (팀별 라벨 금지, ManualsV2_PoC10_ISSUE 사용 금지)\n  - LLM: num_predict=4096, temp=0, think=false\n  - MRR: 쿼리셋 표준 (카테고리별 10건+)\n  - JSON 보고서 스키마 통일\n\n■ 기존 데이터 정리:\n  - Neo4j: 기존 ManualsV2_PoC10_ISSUE 라벨 노드 삭제\n  - pgvector: file_id='1_robot_54fdb56329f0' 기존 행 삭제 후 재적재\n\n■ 대상: 1_robot_54fdb56329f0 (76청크)\n■ 보고서: JSON(reports/manuals-v2/poc_report_54fdb_v11.json) + HTML(dashboard/uploads/)\n■ 완료 후: msg_type=report_complete, task_id=tq-issue-manager-58d4c3",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-12 18:17:38",
+      "updated_at": "2026-04-12 18:17:38",
+      "last_report_at": null,
+      "completed_at": null,
+      "requested_by": "MAX"
+    },
+    {
+      "id": "tq-qa-agent-53b485",
+      "agent": "qa-agent",
+      "task": "[task:tq-qa-agent-e1e03d] SKILL.md v1.1 재검증 — 18a2fd 전체 파이프라인 재실행\n\nSKILL.md가 v1.1로 업데이트됐다. 기존 18a2fd",
+      "message": "[task:tq-qa-agent-e1e03d] SKILL.md v1.1 재검증 — 18a2fd 전체 파이프라인 재실행\n\nSKILL.md가 v1.1로 업데이트됐다. 기존 18a2fd 결과를 삭제하고 v1.1 기준으로 Step0~7 전체 재실행.\n\n■ 반드시 먼저 할 것: .claude/skills/manuals-v2-pipeline/SKILL.md 다시 읽을 것 (v1.1 변경사항 숙지)\n\n■ v1.1 핵심 변경:\n  - 전용 프롬프트: MANUALS_V2_EXTRACT_PROMPT 사용 (cm-graphrag 프롬프트 사용 금지)\n  - 엔티티 12종 / 관계 12종 (v1.0의 10종/11종 아님)\n  - 윈도우: 800자 + 200 오버랩\n  - Neo4j 라벨: :ManualsV2Entity:{Type} (팀별 라벨 금지, ManualsV2_PoC_1_robo 사용 금지)\n  - LLM: num_predict=4096, temp=0, think=false\n  - MRR: 쿼리셋 표준 (카테고리별 10건+)\n  - JSON 보고서 스키마 통일\n\n■ 기존 데이터 정리:\n  - Neo4j: 기존 ManualsV2_PoC_18a2fd 또는 ManualsV2_PoC_1_robo 라벨 노드 삭제\n  - pgvector: file_id='1_robot_18a2fd5fb603' 기존 행 삭제 후 재적재\n\n■ 대상: 1_robot_18a2fd5fb603 (90청크)\n■ 보고서: JSON(reports/manuals-v2/poc_report_18a2fd_v11.json) + HTML(dashboard/uploads/)\n■ 완료 후: msg_type=report_complete, task_id=tq-qa-agent-e1e03d",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-12 18:17:46",
+      "updated_at": "2026-04-12 18:17:46",
+      "last_report_at": null,
+      "completed_at": null,
+      "requested_by": "MAX"
     }
   ]
 }

@@ -968,3 +968,6 @@
 {"ts": "2026-04-12 16:19:31", "direction": "inbound", "user": "boss", "text": "아직도 미 완료?"}
 {"ts": "2026-04-12 16:20:09", "direction": "outbound", "user": "MAX", "text": "👑 crafter, docs-agent 둘 다 온라인 상태입니다. 지금 진행 현황 확인 요청했습니다. 답변 오는 대로 바로 알려드리겠습니다."}
 {"ts": "2026-04-12 16:20:17", "direction": "outbound", "user": "MAX", "text": "👑 현황:\n• docs-agent → crafter에게 피드백 5건 전달 완료 (관계 0건 원인, 엔티티/관계 스키마, 윈도우 표준화, MRR 쿼리셋, Neo4j 라벨)\n• crafter가 전용 프롬프트 + SKILL.md 업데이트 작업 중\n• docs-agent는 보완본 도착하면 즉시 검증 예정\n\ncrafter 작업 완료 대기 중입니다."}
+{"ts": "2026-04-12 18:15:38", "direction": "outbound", "user": "MAX", "text": "👑 crafter + docs-agent 협의 완료\n\n🔧 crafter: SKILL.md v1.1 보완 완료\n📝 docs-agent: 6/6 표준화 항목 검증 PASS, 승인 권고\n\nv1.1 주요 변경:\n• 전용 프롬프트 신설 (매뉴얼 특화, 기존 cm-graphrag 프롬프트 대체)\n• 엔티티 12종 / 관계 12종 온톨로지 확정\n• 윈도우 800자+200오버랩 표준화\n• Neo4j 라벨 통일 (:ManualsV2Entity, 팀별 라벨 금지)\n• LLM 파라미터 고정 (num_predict=4096, temp=0, think=false)\n• MRR 쿼리셋 규격 (카테고리별 10건+)\n• JSON 보고서 스키마 통일\n\n→ 이제 건수만 할당하면 어떤 에이전트든 동일 결과를 내는 구조입니다.\n\nv1.1 승인하시면 issue-manager, qa-agent로 재검증 후 본격 진행하겠습니다."}
+{"ts": "2026-04-12 18:16:53", "direction": "inbound", "user": "boss", "text": "재검증 진행해"}
+{"ts": "2026-04-12 18:17:02", "direction": "outbound", "user": "MAX", "text": "👑 알겠습니다. issue-manager, qa-agent 동일 파일로 v1.1 재검증 시작합니다."}
