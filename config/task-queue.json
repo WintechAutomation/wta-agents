@@ -2305,18 +2305,6 @@
       "completed_at": "2026-04-12 01:03:10"
     },
     {
-      "id": "tq-cs-agent-b06191",
-      "agent": "cs-agent",
-      "task": "부서장 지시사항 전달 (중요):",
-      "message": "부서장 지시사항 전달 (중요):\n\ncs-wta.com AI 채팅 페이지를 ChatGPT/Claude/Gemini 스타일로 전면 재구성해주세요.\n\n핵심 요구사항:\n1. **사이드바 대화 이력** — 왼쪽에 이전 대화 세션 목록 (ChatGPT처럼)\n2. **새 채팅 버튼** — 사이드바 상단에 \"새 채팅\" 버튼\n3. **대화창** — 메인 영역에 채팅 메시지 표시 (user/assistant 구분)\n4. **입력창** — 하단 고정, 전송 버튼\n5. **세션 관리** — 새 채팅 누르면 새 세션, 사이드바에서 이전 세션 클릭하면 해당 대화 이력 로드\n\n기준: ChatGPT, Claude, Gemini의 채팅 UI/UX를 그대로 따라서 구현\n- 현재 만들다가 문제가 많은 상태이니, 기존 코드 정리하고 위 기준으로 깔끔하게 재구현\n- 세션 ID 기반으로 대화 이력 저장/로드\n- 스트리밍 응답 지원 유지\n\n현재 채팅 페이지 코드를 먼저 분석하고, 재구현 계획을 세운 후 작업 진행해주세요.",
-      "status": "done",
-      "priority": "medium",
-      "created_at": "2026-04-09 11:09:45",
-      "updated_at": "2026-04-11 12:03:37",
-      "last_report_at": null,
-      "completed_at": "2026-04-11 12:03:37"
-    },
-    {
       "id": "tq-crafter-e17b8d",
       "agent": "crafter",
       "task": "대시보드 CS 질의응답 파이프라인 표시를 업데이트해주세요.",
@@ -2327,18 +2315,6 @@
       "updated_at": "2026-04-12 01:06:00",
       "last_report_at": null,
       "completed_at": "2026-04-12 01:06:00"
-    },
-    {
-      "id": "tq-cs-agent-81a45e",
-      "agent": "cs-agent",
-      "task": "채팅 페이지 재구성 확인했습니다. 부서장 승인 완료 — 바로 배포 진행해주세요.",
-      "message": "채팅 페이지 재구성 확인했습니다. 부서장 승인 완료 — 바로 배포 진행해주세요.\n\n빌드 후 cs-wta.com에 배포하고 결과 보고 바랍니다.",
-      "status": "done",
-      "priority": "medium",
-      "created_at": "2026-04-09 11:17:26",
-      "updated_at": "2026-04-11 12:03:37",
-      "last_report_at": null,
-      "completed_at": "2026-04-11 12:03:37"
     },
     {
       "id": "tq-cs-agent-e1b04f",
@@ -5114,18 +5090,6 @@
       "last_report_at": null,
       "completed_at": null,
       "requested_by": "MAX"
-    },
-    {
-      "id": "tq-issue-manager-5bb2b0",
-      "agent": "issue-manager",
-      "task": "[방향 전면 변경 — 전체 파이프라인 1건 테스트] 부서장 지시. 기존 GraphRAG 교차검증 작업 즉시 중단.",
-      "message": "[방향 전면 변경 — 전체 파이프라인 1건 테스트] 부서장 지시. 기존 GraphRAG 교차검증 작업 즉시 중단.\n\n새 임무: manuals-v2 스킬(SKILL.md) 대로 파이프라인 전체(Step0~Step7)를 1건에 대해 끝까지 수행.\n\n대상: PoC 중 가장 작은 파일 1건 (예: 1_robot_2d70fa79608e, 12 chunks)\n\n수행 범위 (스킬 Step0~Step7 전체):\n- Step1: 이미 추출 완료된 파일 사용 (reports/manuals-v2/extract/)\n- Step2: Docling 파싱 + 512청킹 (manuals_v2_step2_parse.py)\n- Step3: 청크 재처리 (필요 시에만, 스킬 N9 참조)\n- Step4: Qwen3-Embedding-8B 임베딩 (2000dim MRL 슬라이싱)\n- Step5A: pgvector 적재 (manual.documents_v2)\n- Step5B: Neo4j GraphRAG (cm-graphrag 패턴 + think:false + num_predict:1200)\n- Step6: 자체 검증 (MRR 허들, 필터 표준 v1.0)\n- Step7: Cloudflare URL 보고\n\n조건:\n- 스킬 MUST/MUST NOT 전부 준수\n- 산출물 전부 reports/manuals-v2/ 하위\n- 체크포인트 + 로그 2파일 구조\n- 기존 GraphRAG 노드 삭제 후 깨끗한 상태에서 시작\n\n완료 시: 1건에 대한 전 단계 산출물 + 검증 결과 + 3줄 요약 + Cloudflare URL로 report_complete.\n\n질문 있으면 먼저 올려. 없으면 바로 착수.",
-      "status": "pending",
-      "priority": "medium",
-      "created_at": "2026-04-12 12:20:59",
-      "updated_at": "2026-04-12 12:20:59",
-      "last_report_at": null,
-      "completed_at": null
     },
     {
       "id": "tq-qa-agent-88e72b",
