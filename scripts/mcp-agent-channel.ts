@@ -684,18 +684,44 @@ function startHttpServer(): void {
   log(`HTTP 서버 시작 (포트 ${MY_PORT})`)
 }
 
+// ── msg_type 허용값 (B+, 2026-04-12) ──
+const ALLOWED_MSG_TYPES = new Set([
+  'report_complete',
+  'report_progress',
+  'report_blocked',
+  'reply',
+  'request',
+])
+
 // 대시보드에 메시지 로깅 (fire-and-forget)
-function logToDashboard(to: string, message: string): void {
+function logToDashboard(
+  to: string,
+  message: string,
+  msgType: string = 'reply',
+  taskId?: string,
+): void {
+  const body: Record<string, unknown> = {
+    from: AGENT_ID,
+    to,
+    content: message,
+    msg_type: msgType,
+  }
+  if (taskId) body.task_id = taskId
   fetch(`${DASHBOARD_URL}/api/send`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ from: AGENT_ID, to, content: message }),
+    body: JSON.stringify(body),
     signal: AbortSignal.timeout(2000),
   }).catch(() => {})
 }
 
 // ── 메시지 전송 (오프라인 시 큐 저장) ──
-async function sendMessage(to: string, message: string): Promise<string> {
+async function sendMessage(
+  to: string,
+  message: string,
+  msgType: string = 'reply',
+  taskId?: string,
+): Promise<string> {
   const targets =
     to === 'all'
       ? Object.keys(AGENT_PORTS).filter((id) => id !== AGENT_ID)
@@ -742,6 +768,8 @@ async function sendMessage(to: string, message: string): Promise<string> {
               to: target,
               content: message,
               ts: new Date().toISOString(),
+              msg_type: msgType,
+              ...(taskId ? { task_id: taskId } : {}),
             }),
             signal: AbortSignal.timeout(useRelay ? 30000 : 3000),
           })
@@ -764,7 +792,7 @@ async function sendMessage(to: string, message: string): Promise<string> {
     }),
   )
 
-  logToDashboard(to, message)
+  logToDashboard(to, message, msgType, taskId)
   return results.join('\n')
 }
 
@@ -794,7 +822,9 @@ mcp.setRequestHandler(ListToolsRequestSchema, async () => {
       name: 'send_message',
       description:
         '에이전트 또는 슬랙에 메시지를 전송합니다. 오프라인 시 큐에 저장되어 온라인 시 자동 전달됩니다. ' +
-        '슬랙 회신: to="slack-bot", message="slack:#채널명 내용"',
+        '슬랙 회신: to="slack-bot", message="slack:#채널명 내용". ' +
+        'msg_type 규칙(2026-04-12): report_complete/report_progress/report_blocked(task_id 필수), ' +
+        'reply(기본), request(새 작업 지시).',
       inputSchema: {
         type: 'object' as const,
         properties: {
@@ -806,6 +836,22 @@ mcp.setRequestHandler(ListToolsRequestSchema, async () => {
               'admin-agent, crafter, issue-manager, qa-agent, slack-bot, all)',
           },
           message: { type: 'string', description: '전송할 내용' },
+          msg_type: {
+            type: 'string',
+            enum: [
+              'report_complete',
+              'report_progress',
+              'report_blocked',
+              'reply',
+              'request',
+            ],
+            description:
+              '메시지 타입. report_complete/progress/blocked는 task_id 필수. 기본값 reply.',
+          },
+          task_id: {
+            type: 'string',
+            description: '작업큐 task_id. report_* 유형일 때 필수.',
+          },
         },
         required: ['to', 'message'],
       },
@@ -863,9 +909,25 @@ mcp.setRequestHandler(CallToolRequestSchema, async (req) => {
   try {
     switch (req.params.name) {
       case 'send_message': {
-        const { to, message } = req.params.arguments as {
+        const {
+          to,
+          message,
+          msg_type: msgType = 'reply',
+          task_id: taskId,
+        } = req.params.arguments as {
           to: string
           message: string
+          msg_type?: string
+          task_id?: string
+        }
+
+        if (!ALLOWED_MSG_TYPES.has(msgType)) {
+          throw new Error(
+            `잘못된 msg_type=${msgType}. 허용값: ${[...ALLOWED_MSG_TYPES].sort().join(', ')}`,
+          )
+        }
+        if (msgType.startsWith('report_') && !taskId) {
+          throw new Error(`msg_type=${msgType}에는 task_id가 필수입니다.`)
         }
 
         // 웹채팅 응답 라우팅
@@ -914,7 +976,7 @@ mcp.setRequestHandler(CallToolRequestSchema, async (req) => {
           }
         }
 
-        const result = await sendMessage(to, message)
+        const result = await sendMessage(to, message, msgType, taskId)
         return { content: [{ type: 'text', text: result }] }
       }
 
