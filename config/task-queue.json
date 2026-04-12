@@ -5181,12 +5181,12 @@
       "agent": "qa-agent",
       "task": "[manuals-v2 Full Pipeline Test] 1_robot_18a2fd5fb603 Step0-7",
       "message": "manuals-v2 SKILL verification: 1_robot_18a2fd5fb603 (90 chunks) full pipeline Step0-7",
-      "status": "in_progress",
+      "status": "done",
       "priority": "high",
       "created_at": "2026-04-12 14:51:49",
-      "updated_at": "2026-04-12 14:52:21",
-      "last_report_at": "2026-04-12 14:52:21",
-      "completed_at": null
+      "updated_at": "2026-04-12 15:02:52",
+      "last_report_at": "2026-04-12 15:02:43",
+      "completed_at": "2026-04-12 15:02:52"
     },
     {
       "id": "tq-qa-agent-f48dfa",
@@ -5200,18 +5200,6 @@
       "last_report_at": null,
       "completed_at": null,
       "requested_by": "MAX"
-    },
-    {
-      "id": "tq-qa-agent-f4b7a2",
-      "agent": "qa-agent",
-      "task": "[task:tq-qa-agent-943812] manuals-v2 전체 파이프라인 1건 테스트",
-      "message": "[task:tq-qa-agent-943812] manuals-v2 전체 파이프라인 1건 테스트\n\n부서장 지시: issue-manager가 54fdb로 검증한 것과 동일하게, qa-agent도 유사 파일 1건으로 SKILL 파이프라인 Step0~7 전체를 단독 실행하라.\n\n■ 대상 파일: 1_robot_18a2fd5fb603 (90 chunks)\n■ 스킬 파일: .claude/skills/manuals-v2-pipeline/SKILL.md (반드시 먼저 읽을 것)\n■ 참조 스크립트: workspaces/db-manager/cm-graphrag-pipeline.py (GraphRAG 엔티티 추출 패턴)\n\n■ 실행 순서 (Step0~7):\n  Step0: chunks.jsonl 검증 (reports/manuals-v2/poc/1_robot_18a2fd5fb603/chunks.jsonl)\n  Step1: Qwen3-Embedding-8B 임베딩 (2000dim MRL 슬라이싱, Ollama 182.224.6.147:11434)\n  Step2: manual.documents_v2 INSERT (pgvector)\n  Step3: HNSW + GIN 인덱스 확인\n  Step4: GraphRAG 엔티티 추출 (qwen3.5:35b-a3b, think:false, num_predict:1200, json_repair)\n  Step5: Neo4j MERGE (bolt://localhost:7688, 직접 Cypher)\n  Step6: MRR 검증 (≥0.60, TOC/목차 청크 제외)\n  Step7: HTML 보고서 → dashboard/uploads/ → Cloudflare URL 보고\n\n■ 핵심 규칙:\n  - LightRAG 절대 사용 금지 (N1)\n  - Neo4j 노드 라벨: ManualsV2_PoC_{file_id 앞6자} (예: ManualsV2_PoC_18a2fd)\n  - 산출물 경로: reports/manuals-v2/ 하위\n  - think:false 필수 (qwen3.5:35b-a3b는 thinking 모델)\n  - num_predict: 1200 (600이면 JSON 잘림)\n  - json_repair 라이브러리로 truncated JSON 복구\n  - 엔티티 타입 10개, 관계 타입 11개 (cm-graphrag-pipeline.py 원본 그대로)\n\n■ 보고:\n  - 완료 시: msg_type=report_complete, task_id=tq-qa-agent-943812\n  - Cloudflare URL: https://agent.mes-wta.com/api/files/{파일명}\n  - issue-manager 결과(https://agent.mes-wta.com/api/files/report_54fdb_pipeline.html)와 동일 구조의 보고서\n\n착수 확인 후 바로 진행.",
-      "status": "pending",
-      "priority": "medium",
-      "created_at": "2026-04-12 14:52:16",
-      "updated_at": "2026-04-12 14:52:16",
-      "last_report_at": null,
-      "completed_at": null
     }
   ]
 }
