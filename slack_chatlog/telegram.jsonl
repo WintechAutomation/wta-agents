@@ -948,3 +948,6 @@
 {"ts": "2026-04-12 14:25:08", "direction": "outbound", "user": "MAX", "text": "👑 죄송합니다. URL 경로가 잘못됐습니다. 정정:\n\nhttps://agent.mes-wta.com/v2/uploads/report_54fdb_pipeline.html\n\n/v2/uploads/ 경로가 맞습니다. issue-manager에 URL 규칙 재지시하겠습니다."}
 {"ts": "2026-04-12 14:34:39", "direction": "inbound", "user": "boss", "text": "맥스 저게 맞아? 저경로가 ?"}
 {"ts": "2026-04-12 14:35:24", "direction": "outbound", "user": "MAX", "text": "👑 죄송합니다. /v2/uploads/ 경로가 대시보드 SPA에 잡혀서 실제 파일이 안 열립니다.\n\n정확한 URL:\nhttps://agent.mes-wta.com/api/files/report_54fdb_pipeline.html\n\n이 경로로 확인해주세요. 9,466바이트 정상 HTML 확인했습니다."}
+{"ts": "2026-04-12 14:46:44", "direction": "inbound", "user": "boss", "text": "ㅇㅋ확인햇음 ."}
+{"ts": "2026-04-12 14:46:55", "direction": "outbound", "user": "MAX", "text": "👑 확인 감사합니다. 리포트 괜찮으면 에이전트 할당량 분배해서 693건 진행할까요?"}
+{"ts": "2026-04-12 14:47:17", "direction": "inbound", "user": "boss", "text": "동일한 스킬로 유사한 파일을 qa 가 진행해 봐야지"}
