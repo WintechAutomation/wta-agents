@@ -314,7 +314,7 @@ def call_llm(text: str) -> dict:
 
     deadline = time.time() + LLM_TIMEOUT
     parts: list[str] = []
-    with req.post(LLM_URL, json=payload, stream=True, timeout=60) as r:
+    with req.post(LLM_URL, json=payload, stream=True, timeout=120) as r:
         r.raise_for_status()
         for line in r.iter_lines():
             if time.time() > deadline:
