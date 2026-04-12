@@ -111,15 +111,16 @@ def extract_entities(text: str, title: str) -> dict:
                 'prompt': prompt,
                 'stream': False,
                 'think': False,         # 추가: qwen3.5 사고모드 비활성화
-                'options': {'num_predict': 600, 'temperature': 0.1},
+                'options': {'num_predict': 1200, 'temperature': 0.1},
             },
-            timeout=90,
+            timeout=120,
         )
         if r.status_code == 200:
             raw = r.json().get('response', '').strip()
             match = re.search(r'\{.*\}', raw, re.DOTALL)
             if match:
-                return json.loads(match.group())
+                from json_repair import repair_json
+                return json.loads(repair_json(match.group()))
     except Exception as e:
         log.warning(f'엔티티 추출 오류 [{title[:30]}]: {e}')
     return {'entities': [], 'relations': []}

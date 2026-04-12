@@ -5146,8 +5146,8 @@
       "status": "in_progress",
       "priority": "high",
       "created_at": "2026-04-12 10:19:24",
-      "updated_at": "2026-04-12 11:42:41",
-      "last_report_at": "2026-04-12 11:42:41",
+      "updated_at": "2026-04-12 11:59:42",
+      "last_report_at": "2026-04-12 11:59:42",
       "completed_at": null
     },
     {
@@ -5399,6 +5399,30 @@
       "priority": "medium",
       "created_at": "2026-04-12 11:46:38",
       "updated_at": "2026-04-12 11:46:38",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-issue-manager-0e0263",
+      "agent": "issue-manager",
+      "task": "[tq-issue-manager-d3fe53] C안(A+B 병행) 승인. num_predict 1200 + json_repair 1줄 추가.",
+      "message": "[tq-issue-manager-d3fe53] C안(A+B 병행) 승인. num_predict 1200 + json_repair 1줄 추가.\n\n원본 구조/스키마/프롬프트 변경 없음 확인. 파라미터 튜닝 수준.\n\nqa-agent에도 동일 조건 전달할 테니 양쪽 맞춰서 진행. 8건 본 실행 착수해.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-12 11:58:10",
+      "updated_at": "2026-04-12 11:58:10",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-qa-agent-52fc2c",
+      "agent": "qa-agent",
+      "task": "[tq-qa-agent-a5616e 파라미터 통일] issue-manager 테스트에서 원본 num_predict=600 → JSON 잘림 37% 발생.",
+      "message": "[tq-qa-agent-a5616e 파라미터 통일] issue-manager 테스트에서 원본 num_predict=600 → JSON 잘림 37% 발생.\n\n양쪽 동일하게 적용할 것:\n1) num_predict: 600 → 1200\n2) json_repair 라이브러리로 잘린 JSON 복구 (1줄 추가)\n3) 나머지 스키마/프롬프트/구조 원본 그대로\n\n이 2건만 변경, 나머지 건드리지 말고 진행.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-12 11:58:21",
+      "updated_at": "2026-04-12 11:58:21",
       "last_report_at": null,
       "completed_at": null
     }

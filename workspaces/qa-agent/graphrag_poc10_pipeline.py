@@ -12,6 +12,7 @@ import sys, json, re, time, logging, argparse
 from pathlib import Path
 
 import requests
+import json_repair
 
 sys.stdout.reconfigure(encoding='utf-8', errors='replace')
 
@@ -124,7 +125,7 @@ def extract_entities(text: str, title: str) -> dict:
                 'prompt': prompt,
                 'think': False,   # qwen3.5:35b-a3b 모델 호환성 픽스 (thinking 모드 비활성화)
                 'stream': False,
-                'options': {'num_predict': 2000, 'temperature': 0.1},
+                'options': {'num_predict': 1200, 'temperature': 0.1},
             },
             timeout=90,
         )
@@ -132,7 +133,7 @@ def extract_entities(text: str, title: str) -> dict:
             raw = r.json().get('response', '').strip()
             match = re.search(r'\{.*\}', raw, re.DOTALL)
             if match:
-                return json.loads(match.group())
+                return json_repair.loads(match.group())
     except Exception as e:
         log.warning(f'엔티티 추출 오류 [{title[:30]}]: {e}')
     return {'entities': [], 'relations': []}
