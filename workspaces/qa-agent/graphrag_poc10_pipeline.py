@@ -200,6 +200,7 @@ JSON 형식으로만 응답하세요 (다른 텍스트 없이):
 def extract_entities(text: str, source_id: str, lang: str) -> dict:
     if len(text.strip()) < 30:
         return {'entities': [], 'relations': []}
+    # /no_think: qwen3.5 thinking 모드 비활성화 (M2 모델 필수, thinking 시 토큰 고갈)
     prompt = EXTRACT_PROMPT + f"[출처: {source_id}, 언어: {lang}]\n\n{text}"
     try:
         r = requests.post(
@@ -207,16 +208,32 @@ def extract_entities(text: str, source_id: str, lang: str) -> dict:
             json={
                 'model': EXTRACT_MODEL,
                 'prompt': prompt,
+                'think': False,   # qwen3.5 thinking 모드 비활성화 (최상위 파라미터)
                 'stream': False,
-                'options': {'num_predict': 8192, 'temperature': 0},
+                'options': {'num_predict': 4096, 'temperature': 0},
             },
-            timeout=300,
+            timeout=180,
         )
         if r.status_code == 200:
             raw = r.json().get('response', '').strip()
+            # 코드블록 제거
+            raw = re.sub(r'^```json\s*', '', raw)
+            raw = re.sub(r'\s*```$', '', raw)
             m = re.search(r'\{.*\}', raw, re.DOTALL)
             if m:
-                return json.loads(m.group())
+                try:
+                    return json.loads(m.group())
+                except json.JSONDecodeError:
+                    # 절단된 JSON: entities만 부분 파싱 시도
+                    ent_m = re.findall(
+                        r'\{"id"\s*:\s*"([^"]+)"\s*,\s*"name"\s*:\s*"([^"]+)"\s*,\s*"type"\s*:\s*"([^"]+)"',
+                        raw,
+                    )
+                    entities = [{'id': e[0], 'name': e[1], 'type': e[2], 'properties': {}}
+                                for e in ent_m if e[2] in VALID_NODE_TYPES]
+                    if entities:
+                        log.debug(f'부분 파싱 성공: {len(entities)}개 엔티티')
+                        return {'entities': entities, 'relations': []}
     except Exception as e:
         log.warning(f'엔티티 추출 오류 [{source_id}]: {e}')
     return {'entities': [], 'relations': []}

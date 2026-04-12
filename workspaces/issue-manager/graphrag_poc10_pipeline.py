@@ -214,9 +214,10 @@ def extract_entities(text: str, title: str) -> dict:
                 "model": EXTRACT_MODEL,
                 "prompt": prompt,
                 "stream": False,
-                "options": {"num_predict": 800, "temperature": 0.0},
+                "think": False,   # qwen3.5:35b-a3b 사고모드 비활성화 (num_predict 절약, 재현성↑)
+                "options": {"num_predict": 2048, "temperature": 0.0},
             },
-            timeout=180,
+            timeout=300,
         )
         if r.status_code != 200:
             log.warning(f"LLM HTTP {r.status_code}")
