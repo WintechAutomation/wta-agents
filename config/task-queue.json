@@ -5141,10 +5141,22 @@
       "agent": "crafter",
       "task": "[task:tq-crafter-7285f7 승계 — B+ 전면 전환] 부서장 지시 확정.",
       "message": "[task:tq-crafter-7285f7 승계 — B+ 전면 전환] 부서장 지시 확정.\n\n**방침:** 키워드 정규식(B 임시방편) 걷어내고 send_message 도구에 `msg_type` 파라미터를 정식으로 추가한다. 대시보드는 `msg_type` 기반으로 명시적 분기. 에이전트 전원에게 강제 지침.\n\n## 구현 범위\n\n### 1. MCP 도구 시그니처 확장\n`scripts/mcp-agent-channel.py`:\n```python\ndef send_message(\n    to: str,\n    message: str,\n    msg_type: str = \"reply\",       # 필수 사용 유도\n    task_id: str | None = None,\n) -> str:\n```\n- 허용 값: `report_complete`, `report_progress`, `report_blocked`, `reply`, `request`\n- 잘못된 값이면 MCP tool에서 ValueError → 에이전트에게 즉시 실패 피드백\n- 하위호환: 기본값 `reply` (지정 없으면 단순 답변으로 취급)\n\n### 2. 대시보드 /api/send 훅 재작성\n`dashboard/app.py`:\n- 수신 body에 `msg_type`, `task_id` 필드 추가\n- **기존 B안 정규식/키워드 매칭 훅 제거**\n- msg_type 기반 분기:\n  - `report_complete` + task_id → 해당 task status=done, completed_at, last_report_at 갱신\n  - `report_progress` + task_id → status=in_progress, last_report_at 갱신\n  - `report_blocked` + task_id → status=blocked, 부서장 알림(MAX에게 자동 forward)\n  - `reply` → 로그만\n  - `request` → 새 task-queue 항목 생성 (to 에이전트 앞으로)\n- task_id 검증: 존재하지 않으면 경고 로그, 메시지 전달은 계속\n\n### 3. 에이전트 강제 지침\n`wta-agents/CLAUDE.md` (전역)에 섹션 신설:\n```\n## send_message msg_type 규칙 (필수, 2026-04-12)\n\n모든 send_message 호출 시 msg_type 파라미터 명시 의무:\n- report_complete: 받은 작업을 완료했을 때 (task_id 필수)\n- report_progress: 진행 중간 보고 (task_id 필수)\n- report_blocked: 막힘/승인 대기 (task_id 필수)\n- reply: 단순 답변/질의 (task_id 불필요)\n- request: 다른 팀원에게 작업 요청 (새 task 자동 생성)\n\nMAX 위임 메시지는 자동으로 task_id를 포함한다.\n팀원은 완료 보고 시 수신한 task_id를 그대로 echo.\n```\n\n각 팀원 CLAUDE.md(workspaces/{agent}/CLAUDE.md)에도 동일 규칙 1줄 링크 삽입.\n\n### 4. 배포/재시작 순서\n16개 에이전트가 새 MCP 스키마를 인식하도록 순차 재시작 필요. 재시작 순서 및 롤아웃 스크립트는 구현 완료 후 MAX와 협의.\n\n## 우선순위/단계\n1. MCP 코드 + 대시보드 코드 먼저 수정 (기존 동작은 유지: msg_type 미지정 시 reply로 폴백)\n2. 에이전트 재시작은 MAX가 schedule\n3. 재시작 후 각 팀원이 msg_type 올바르게 사용하는지 24시간 모니터링\n4. 검증 완료 후 \"msg_type 미지정 시 warning 로그\" 추가\n\n## B 임시 훅 처리\n아래 제거 확정:\n- `_TASK_TAG_RE`, `_DONE_KEYWORD_RE`, `_auto_mark_task_done` 함수\n이유: 부서장 방침 — 덧붙이기 최소화, msg_type 하나로 확실하게.\n\n## 보고\n구현 완료 시 다음 형식으로 보고:\n```\nsend_message(\n  to=\"MAX\",\n  message=\"[task:tq-crafter-7285f7] B+ 구현 완료. 배포 대기.\",\n  msg_type=\"report_complete\",\n  task_id=\"tq-crafter-7285f7\",\n)\n```\n→ 보고 메시지 자체가 새 규칙을 따라서 셀프 검증.\n\n착수.",
-      "status": "pending",
+      "status": "done",
       "priority": "medium",
       "created_at": "2026-04-12 09:07:40",
-      "updated_at": "2026-04-12 09:07:40",
+      "updated_at": "2026-04-12 09:10:17",
+      "last_report_at": null,
+      "completed_at": "2026-04-12 09:10:17"
+    },
+    {
+      "id": "tq-admin-agent-6b8232",
+      "agent": "admin-agent",
+      "task": "[핑] 재시작 후 msg_type 파라미터 스키마 인식 테스트. 수신되면 짧게 ack 부탁합니다. (reply 타입)",
+      "message": "[핑] 재시작 후 msg_type 파라미터 스키마 인식 테스트. 수신되면 짧게 ack 부탁합니다. (reply 타입)",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-12 09:17:06",
+      "updated_at": "2026-04-12 09:17:06",
       "last_report_at": null,
       "completed_at": null
     }
