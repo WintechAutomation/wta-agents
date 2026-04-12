@@ -544,10 +544,12 @@ def api_upload():
     return jsonify({"ok": True, "id": msg["id"], "file": msg["file"]})
 
 
-@app.route("/api/files/<filename>")
+@app.route("/api/files/<path:filename>")
 def api_download(filename):
-    """업로드된 파일 다운로드"""
-    safe = secure_filename(filename)
+    """업로드된 파일 다운로드 (한글 파일명 지원)"""
+    safe = os.path.basename(filename)
+    if not safe or ".." in safe or "/" in safe or "\\" in safe:
+        return jsonify({"ok": False, "error": "invalid filename"}), 400
     is_html = safe.lower().endswith(".html")
     return send_from_directory(UPLOAD_DIR, safe, as_attachment=not is_html)
 

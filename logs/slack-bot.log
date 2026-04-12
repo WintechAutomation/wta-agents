@@ -33,3 +33,16 @@
 2026-04-13 08:37:44,205 INFO [슬랙 발신] #docs ← docs-agent: 김근형님, MCA210T/MAD111T 발주이력 40건 확인했습니다. 혹시 이 데이터로 정리 문서나 매뉴얼 
 2026-04-13 08:39:04,375 INFO [수신] #docs 김근형: 일단 지금 <https://agent.mes-wta.com/ERP_현재고_구매진행_전체> 이거 안들어가짐
 Failed to load resour → docs-agent
+2026-04-13 08:39:04,759 INFO 직접 전송 완료 → docs-agent:5614
+2026-04-13 08:40:33,394 INFO [응답시간] docs-agent #docs: 1분 28초
+2026-04-13 08:40:33,394 INFO [슬랙 발신] #docs ← docs-agent: 김근형님, 확인했습니다. 한글 파일명이 포함된 URL이 서버에서 404로 응답되는 문제가 있습니다. 파일 자
+2026-04-13 08:41:29,056 INFO [수신] #docs 김근형: ERP_현재고_구매진행_전체.html 서버에 있는거 안들어가짐.. → docs-agent
+2026-04-13 08:41:29,483 INFO 직접 전송 완료 → docs-agent:5614
+2026-04-13 08:48:12,092 INFO [응답시간] docs-agent #docs: 6분 42초
+2026-04-13 08:48:12,092 INFO [슬랙 발신] #docs ← docs-agent: 김근형님, 서버 이슈 수정 완료되었습니다. 아래 링크로 다시 접속해보세요.
+
+https://agent.mes
+2026-04-13 08:49:51,459 INFO [파일다운] 저장 완료: image.png (42558B) → C:\MES\wta-agents\uploads\slack\docs\2026-04-13\084950_image.png
+2026-04-13 08:49:51,957 INFO [수신] #docs 김근형: cs 파트 정리한 자료를 줘야하는거 아냐? → docs-agent
+2026-04-13 08:49:52,377 INFO 직접 전송 완료 → docs-agent:5614
+2026-04-13 08:49:52,994 INFO MES 서비스 계정 로그인 성공

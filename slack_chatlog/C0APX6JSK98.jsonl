@@ -389,3 +389,5 @@
 {"ts": "2026-04-10 14:32:16", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "SIO-20P 프로젝트 중복 확인"}
 {"ts": "2026-04-13 08:37:26", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "• MCA210T/MAD111T 발주이력: 40건 (여러 프로젝트 혼재)"}
 {"ts": "2026-04-13 08:39:04", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "일단 지금 <https://agent.mes-wta.com/ERP_현재고_구매진행_전체> 이거 안들어가짐\nFailed to load resource: the server responded with a status of 404 ()"}
+{"ts": "2026-04-13 08:41:29", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "ERP_현재고_구매진행_전체.html 서버에 있는거 안들어가짐.."}
+{"ts": "2026-04-13 08:49:49", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "cs 파트 정리한 자료를 줘야하는거 아냐?", "files": [{"name": "image.png", "type": "png", "saved_path": "C:\\MES\\wta-agents\\slack_chatlog\\C0APX6JSK98_files\\20260413_084949_image.png"}]}
