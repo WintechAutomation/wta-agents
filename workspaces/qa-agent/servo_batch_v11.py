@@ -301,6 +301,7 @@ def build_windows(chunks: list[dict]) -> list[dict]:
 # ── LLM call ──────────────────────────────────────────────────────────────────
 def call_llm(text: str) -> dict:
     import requests as req
+    from concurrent.futures import ThreadPoolExecutor, TimeoutError as FutTimeoutError
     try:
         from json_repair import repair_json
         HAS_REPAIR = True
@@ -310,7 +311,18 @@ def call_llm(text: str) -> dict:
     prompt = MANUALS_V2_EXTRACT_PROMPT + text
     payload = dict(LLM_PARAMS)
     payload['prompt'] = prompt
-    resp = req.post(LLM_URL, json=payload, timeout=LLM_TIMEOUT)
+
+    WALL_TIMEOUT = LLM_TIMEOUT + 60  # hard wall-clock timeout
+    def _do_post():
+        return req.post(LLM_URL, json=payload, timeout=LLM_TIMEOUT)
+
+    with ThreadPoolExecutor(max_workers=1) as ex:
+        fut = ex.submit(_do_post)
+        try:
+            resp = fut.result(timeout=WALL_TIMEOUT)
+        except FutTimeoutError:
+            fut.cancel()
+            raise TimeoutError(f'LLM wall-clock timeout after {WALL_TIMEOUT}s')
     resp.raise_for_status()
     raw = resp.json().get('response', '')
 
