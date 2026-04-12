@@ -347,6 +347,9 @@ def process_file(driver, file_id: str, state: dict, args) -> dict:
         if args.dry_run:
             log.info('  --dry-run: 첫 윈도우만 처리')
             break
+        if args.max_windows and win_done >= args.max_windows:
+            log.info(f'  --max-windows={args.max_windows} 도달, 다음 파일로')
+            break
 
     return {
         'status':       'done',
@@ -361,9 +364,10 @@ def process_file(driver, file_id: str, state: dict, args) -> dict:
 # ── 메인 ───────────────────────────────────────────────────────────
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument('--file-id',   help='단일 file_id만 처리')
-    ap.add_argument('--dry-run',   action='store_true', help='첫 윈도우만 처리 (검증용)')
+    ap.add_argument('--file-id',     help='단일 file_id만 처리')
+    ap.add_argument('--dry-run',     action='store_true', help='첫 윈도우만 처리 (검증용)')
     ap.add_argument('--retry-error', action='store_true', help='error 상태 재시도')
+    ap.add_argument('--max-windows', type=int, default=0, help='파일당 최대 윈도우 수 (0=제한 없음, PoC 교차검증용 샘플링)')
     args = ap.parse_args()
 
     state = load_state()

@@ -5146,8 +5146,8 @@
       "status": "in_progress",
       "priority": "high",
       "created_at": "2026-04-12 10:19:24",
-      "updated_at": "2026-04-12 10:34:04",
-      "last_report_at": "2026-04-12 10:34:04",
+      "updated_at": "2026-04-12 11:26:15",
+      "last_report_at": "2026-04-12 11:26:15",
       "completed_at": null
     },
     {
@@ -5312,6 +5312,31 @@
       "priority": "medium",
       "created_at": "2026-04-12 10:34:16",
       "updated_at": "2026-04-12 10:34:16",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-crafter-6ce902",
+      "agent": "crafter",
+      "task": "[긴급 점검 요청] 부서장 지시. GraphRAG PoC10 교차검증 속도 이슈 점검.\n\n현상:\n- issue-manager: 2건(88 chunks, 31 windows) 처리에",
+      "message": "[긴급 점검 요청] 부서장 지시. GraphRAG PoC10 교차검증 속도 이슈 점검.\n\n현상:\n- issue-manager: 2건(88 chunks, 31 windows) 처리에 24분 (49초/윈도우). PoC10 전체 ~38시간 예상\n- qa-agent: \"~70초/파일, 전체 ~12분\"이라 보고 — 동일 입력인데 예상 차이 극심\n\n점검 포인트:\n1) 양쪽 스크립트의 윈도우 생성 로직 차이 — 2000자 묶음 방식이 동일한지\n2) qwen3.5:35b-a3b 호출 파라미터 차이 (think:true/false, temperature, batch vs sequential)\n3) qa-agent가 실제 LLM 호출을 제대로 하고 있는지 (스킵/캐시 사용 가능성)\n4) issue-manager의 49초/윈도우가 정상인지 — Ollama 서버(182.224.6.147:11434) 응답 시간 직접 벤치마크\n5) 10시간 걸리는 게 정상인지 최적화 여지 있는지\n\n조치:\n- 양쪽 스크립트(workspaces/issue-manager/graphrag_poc10_pipeline.py, workspaces/qa-agent/graphrag_poc10_pipeline.py) 비교 분석\n- Ollama 단건 호출 벤치마크 (1 window → 엔티티 추출 시간 측정)\n- 원인 분석 후 3줄 요약 + 권고안\n\n부서장 대기 중이므로 최대한 빠르게. 10분 이내.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-12 11:29:04",
+      "updated_at": "2026-04-12 11:29:04",
+      "last_report_at": null,
+      "completed_at": null,
+      "requested_by": "MAX"
+    },
+    {
+      "id": "tq-crafter-eee696",
+      "agent": "crafter",
+      "task": "[긴급 점검 요청] 부서장 지시. GraphRAG PoC10 교차검증 속도 이슈 점검.",
+      "message": "[긴급 점검 요청] 부서장 지시. GraphRAG PoC10 교차검증 속도 이슈 점검.\n\n현상:\n- issue-manager: 2건(88 chunks, 31 windows) 처리에 24분 (49초/윈도우). PoC10 전체 ~38시간 예상\n- qa-agent: \"~70초/파일, 전체 ~12분\"이라 보고 — 동일 입력인데 예상 차이 극심\n\n점검 포인트:\n1) 양쪽 스크립트의 윈도우 생성 로직 차이 — 2000자 묶음 방식이 동일한지\n2) qwen3.5:35b-a3b 호출 파라미터 차이 (think:true/false, temperature, batch vs sequential)\n3) qa-agent가 실제 LLM 호출을 제대로 하고 있는지 (스킵/캐시 사용 가능성)\n4) issue-manager의 49초/윈도우가 정상인지 — Ollama 서버(182.224.6.147:11434) 응답 시간 직접 벤치마크\n5) 10시간 걸리는 게 정상인지 최적화 여지 있는지\n\n조치:\n- 양쪽 스크립트(workspaces/issue-manager/graphrag_poc10_pipeline.py, workspaces/qa-agent/graphrag_poc10_pipeline.py) 비교 분석\n- Ollama 단건 호출 벤치마크 (1 window → 엔티티 추출 시간 측정)\n- 원인 분석 후 3줄 요약 + 권고안\n\n부서장 대기 중이므로 최대한 빠르게. 10분 이내.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-12 11:29:06",
+      "updated_at": "2026-04-12 11:29:06",
       "last_report_at": null,
       "completed_at": null
     }
