@@ -5240,18 +5240,6 @@
       "requested_by": "MAX"
     },
     {
-      "id": "tq-issue-manager-963f40",
-      "agent": "issue-manager",
-      "task": "[task:tq-issue-manager-741382] manuals-v2 파이프라인 결과 표준 레포팅 재제출 요청",
-      "message": "[task:tq-issue-manager-741382] manuals-v2 파이프라인 결과 표준 레포팅 재제출 요청\n\n네가 실행한 54fdb (ABB IRB360, 76청크) Step0~7 결과를 아래 표준 JSON 템플릿에 맞춰 재제출해줘.\n\n템플릿: https://agent.mes-wta.com/api/files/poc_report_template.json\n\n이 JSON을 다운받아서, 네 실행 결과 수치로 채워서 제출해.\n파일명: reports/manuals-v2/poc_report_54fdb.json\n\n필수 항목 (빠짐없이):\n- target: file_id, category, mfr, model, total_chunks\n- steps: Step0~7 각각 수치 (특히 Step4 엔티티수+관계수, Step5 Neo4j 노드수+관계수)\n- entity_distribution: 10종 타입별 건수 (cm-graphrag-pipeline.py 기준)\n- relation_distribution: 11종 타입별 건수\n- neo4j_label: 사용한 라벨명\n- mrr: 쿼리별 rank, RR, 전체 MRR (TOC 제외)\n- skill_checklist: M1~M15, N1~N10 각각 true/false\n- timing: Step별 소요시간\n- issues: 실행 중 발생한 문제점\n\nDB/Neo4j에서 실제 수치 조회해서 정확히 채워. 추정치 금지.\n완료 후 send_message(to=\"MAX\", msg_type=\"report_complete\", task_id=\"tq-issue-manager-741382\")로 보고.",
-      "status": "pending",
-      "priority": "medium",
-      "created_at": "2026-04-12 15:16:03",
-      "updated_at": "2026-04-12 15:16:03",
-      "last_report_at": null,
-      "completed_at": null
-    },
-    {
       "id": "tq-qa-agent-fbacc4",
       "agent": "qa-agent",
       "task": "[task:tq-qa-agent-943812] manuals-v2 파이프라인 결과 표준 레포팅 재제출 요청\n\n네가 실행한 18a2fd (90청크) Step0~7 결과를 아래 표준 ",
@@ -5265,18 +5253,6 @@
       "requested_by": "MAX"
     },
     {
-      "id": "tq-qa-agent-73f47a",
-      "agent": "qa-agent",
-      "task": "[task:tq-qa-agent-943812] manuals-v2 파이프라인 결과 표준 레포팅 재제출 요청",
-      "message": "[task:tq-qa-agent-943812] manuals-v2 파이프라인 결과 표준 레포팅 재제출 요청\n\n네가 실행한 18a2fd (90청크) Step0~7 결과를 아래 표준 JSON 템플릿에 맞춰 재제출해줘.\n\n템플릿: https://agent.mes-wta.com/api/files/poc_report_template.json\n\n이 JSON을 다운받아서, 네 실행 결과 수치로 채워서 제출해.\n파일명: reports/manuals-v2/poc_report_18a2fd.json\n\n필수 항목 (빠짐없이):\n- target: file_id, category, mfr, model, total_chunks\n- steps: Step0~7 각각 수치 (특히 Step4 엔티티수+관계수, Step5 Neo4j 노드수+관계수)\n- entity_distribution: 10종 타입별 건수 (cm-graphrag-pipeline.py 기준)\n- relation_distribution: 11종 타입별 건수\n- neo4j_label: 사용한 라벨명\n- mrr: 쿼리별 rank, RR, 전체 MRR (TOC 제외)\n- skill_checklist: M1~M15, N1~N10 각각 true/false\n- timing: Step별 소요시간\n- issues: 실행 중 발생한 문제점 (특히 관계 0건 원인 확인 필수)\n\nDB/Neo4j에서 실제 수치 조회해서 정확히 채워. 추정치 금지.\n⚠️ 관계 0건 문제: 네 보고서에 Neo4j 관계가 0건인데, 원인을 파악해서 issues에 명시해.\n완료 후 send_message(to=\"MAX\", msg_type=\"report_complete\", task_id=\"tq-qa-agent-943812\")로 보고.",
-      "status": "pending",
-      "priority": "medium",
-      "created_at": "2026-04-12 15:16:09",
-      "updated_at": "2026-04-12 15:16:09",
-      "last_report_at": null,
-      "completed_at": null
-    },
-    {
       "id": "tq-docs-agent-704d4f",
       "agent": "docs-agent",
       "task": "[task:manuals-v2-report-template] 두 팀 표준 JSON 제출 완료 — 비교 분석 보고서 작성해줘\n\n제출된 파일:\n1. reports/manuals-v2/",
@@ -5288,18 +5264,6 @@
       "last_report_at": null,
       "completed_at": null,
       "requested_by": "MAX"
-    },
-    {
-      "id": "tq-docs-agent-2c3ad7",
-      "agent": "docs-agent",
-      "task": "[task:manuals-v2-report-template] 두 팀 표준 JSON 제출 완료 — 비교 분석 보고서 작성해줘",
-      "message": "[task:manuals-v2-report-template] 두 팀 표준 JSON 제출 완료 — 비교 분석 보고서 작성해줘\n\n제출된 파일:\n1. reports/manuals-v2/poc_report_54fdb.json (issue-manager, 76청크)\n2. reports/manuals-v2/poc_report_18a2fd.json (qa-agent, 90청크)\n\n두 파일을 읽고, 비교 분석 HTML 보고서를 만들어줘.\n\n포함할 내용:\n- 두 팀 수치 나란히 비교 (청크수, 임베딩, DB INSERT, Neo4j 노드/관계, MRR)\n- 엔티티/관계 타입 분포 비교\n- SKILL.md 준수 여부 비교 (M1~M15, N1~N10)\n- 발견된 문제점 정리 (qa-agent 관계 0건, issue-manager MRR 미측정 등)\n- 종합 판정 + 개선 권고\n\n보고서 파일: dashboard/uploads/poc_comparison_report.html\n완료 후 Cloudflare URL(https://agent.mes-wta.com/api/files/poc_comparison_report.html)로 MAX에게 보고.",
-      "status": "pending",
-      "priority": "medium",
-      "created_at": "2026-04-12 15:25:16",
-      "updated_at": "2026-04-12 15:25:16",
-      "last_report_at": null,
-      "completed_at": null
     },
     {
       "id": "tq-crafter-01d34f",
@@ -5338,18 +5302,6 @@
       "last_report_at": null,
       "completed_at": null,
       "requested_by": "MAX"
-    },
-    {
-      "id": "tq-docs-agent-d649b9",
-      "agent": "docs-agent",
-      "task": "부서장 지시: crafter가 파이프라인 보완을 담당하고, docs-agent는 평가/검증 역할.",
-      "message": "부서장 지시: crafter가 파이프라인 보완을 담당하고, docs-agent는 평가/검증 역할.\n\ncrafter가 연락할 거야. 네가 만든 비교 보고서(poc_comparison_report.html)와 표준 템플릿(poc_report_template.json) 기반으로 어떤 부분이 문제인지 crafter한테 공유해줘.\n\n특히:\n- 관계 0건 원인 분석\n- 엔티티/관계 타입 스키마 차이점\n- SKILL.md에서 불명확했던 항목들\n- 두 팀이 동일 결과를 내려면 뭘 표준화해야 하는지\n\ncrafter가 보완한 SKILL.md가 나오면, 다시 평가해서 충분한지 검증해줘.",
-      "status": "pending",
-      "priority": "medium",
-      "created_at": "2026-04-12 15:31:27",
-      "updated_at": "2026-04-12 15:31:27",
-      "last_report_at": null,
-      "completed_at": null
     },
     {
       "id": "tq-docs-agent-e7358c",
