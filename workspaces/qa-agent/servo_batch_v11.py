@@ -301,7 +301,6 @@ def build_windows(chunks: list[dict]) -> list[dict]:
 # ── LLM call ──────────────────────────────────────────────────────────────────
 def call_llm(text: str) -> dict:
     import requests as req
-    from concurrent.futures import ThreadPoolExecutor, TimeoutError as FutTimeoutError
     try:
         from json_repair import repair_json
         HAS_REPAIR = True
@@ -311,22 +310,25 @@ def call_llm(text: str) -> dict:
     prompt = MANUALS_V2_EXTRACT_PROMPT + text
     payload = dict(LLM_PARAMS)
     payload['prompt'] = prompt
+    payload['stream'] = True  # streaming for reliable wall-clock timeout
 
-    WALL_TIMEOUT = LLM_TIMEOUT + 60  # hard wall-clock timeout
-    def _do_post():
-        return req.post(LLM_URL, json=payload, timeout=LLM_TIMEOUT)
-
-    ex = ThreadPoolExecutor(max_workers=1)
-    fut = ex.submit(_do_post)
-    try:
-        resp = fut.result(timeout=WALL_TIMEOUT)
-    except FutTimeoutError:
-        ex.shutdown(wait=False)  # don't block waiting for hung thread
-        raise TimeoutError(f'LLM wall-clock timeout after {WALL_TIMEOUT}s')
-    finally:
-        ex.shutdown(wait=False)
-    resp.raise_for_status()
-    raw = resp.json().get('response', '')
+    deadline = time.time() + LLM_TIMEOUT
+    parts: list[str] = []
+    with req.post(LLM_URL, json=payload, stream=True, timeout=60) as r:
+        r.raise_for_status()
+        for line in r.iter_lines():
+            if time.time() > deadline:
+                raise TimeoutError(f'LLM deadline exceeded after {LLM_TIMEOUT}s')
+            if not line:
+                continue
+            try:
+                chunk = json.loads(line)
+            except Exception:
+                continue
+            parts.append(chunk.get('response', ''))
+            if chunk.get('done'):
+                break
+    raw = ''.join(parts)
 
     raw = re.sub(r'```json\s*', '', raw)
     raw = re.sub(r'```\s*', '', raw)
