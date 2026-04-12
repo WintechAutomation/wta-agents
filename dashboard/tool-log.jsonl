@@ -28529,3 +28529,10 @@
 {"agent_id": "crafter", "tool_name": "mcp__agent-channel__send_message", "timestamp": "2026-04-12 19:48:45"}
 {"agent_id": "qa-agent", "tool_name": "Bash", "timestamp": "2026-04-12 19:49:54"}
 {"agent_id": "qa-agent", "tool_name": "Bash", "timestamp": "2026-04-12 19:50:08"}
+{"agent_id": "issue-manager", "tool_name": "Bash", "timestamp": "2026-04-12 20:10:42"}
+{"agent_id": "issue-manager", "tool_name": "Bash", "timestamp": "2026-04-12 20:11:04"}
+{"agent_id": "issue-manager", "tool_name": "Bash", "timestamp": "2026-04-12 20:11:12"}
+{"agent_id": "issue-manager", "tool_name": "Write", "timestamp": "2026-04-12 20:12:40"}
+{"agent_id": "issue-manager", "tool_name": "Write", "timestamp": "2026-04-12 20:13:46"}
+{"agent_id": "issue-manager", "tool_name": "Bash", "timestamp": "2026-04-12 20:13:55"}
+{"agent_id": "issue-manager", "tool_name": "mcp__agent-channel__send_message", "timestamp": "2026-04-12 20:14:06"}
