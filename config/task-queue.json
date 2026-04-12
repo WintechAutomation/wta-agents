@@ -5580,18 +5580,6 @@
       "requested_by": "MAX"
     },
     {
-      "id": "tq-admin-agent-27674a",
-      "agent": "admin-agent",
-      "task": "issue-manager가 아직 qwen3-embedding:8b 타임아웃 보고. deepseek-r1:32b가 모델 목록에 여전히 존재한다고 함.",
-      "message": "issue-manager가 아직 qwen3-embedding:8b 타임아웃 보고. deepseek-r1:32b가 모델 목록에 여전히 존재한다고 함.\n\n확인 필요:\n1. ollama ps로 현재 GPU 점유 모델 확인\n2. deepseek-r1:32b가 아직 로드 상태면 강제 언로드\n3. qwen3-embedding:8b 테스트 호출 (짧은 텍스트로 정상 응답 확인)\n4. 정상 확인 후 MAX에 즉시 보고",
-      "status": "pending",
-      "priority": "medium",
-      "created_at": "2026-04-13 00:15:58",
-      "updated_at": "2026-04-13 00:15:58",
-      "last_report_at": null,
-      "completed_at": null
-    },
-    {
       "id": "tq-issue-manager-29ac34",
       "agent": "issue-manager",
       "task": "[task:tq-issue-manager-e1a851] Ollama 정상화 확인됨. qwen3-embedding:8b GPU 로드 완료. 배치 즉시 재개해.",
