@@ -1,0 +1,29 @@
+{
+  "analysis_date": "2026-04-12",
+  "finding": {
+    "cause_of_decrease": "의도된 청크 병합(과분할 해소). Before ≤50토큰 비율 88.5% → After 3.14%. 짧은 청크 병합으로 10,215→7,590행으로 감소.",
+    "crafter_reparsing_confirmed": true,
+    "reparsing_timestamp_utc": "2026-04-11 23:25~26 UTC (KST 08:25~26)",
+    "token_improvement": "중앙값 10→~220 (22배), 201~500토큰 비율 1.7%→66.76%",
+    "is_data_loss": false,
+    "is_intentional_merge": true,
+    "mrr_drop_cause": "Before Q3 Top-1=목차(저품질)가 RR=1.0 과대평가. After 재파싱 후 목차 청크 병합→더 실질적 섹션이 Top-3로 RR=0.33. Before MRR 0.67은 과대평가, After 0.53이 더 정확.",
+    "action_needed": "MRR 허들 기준 재검토 또는 쿼리셋 보정 필요. 수동점수 기준 품질은 4.0→4.5 향상으로 허들 통과."
+  },
+  "category_breakdown": {
+    "1_robot_before": 6430,
+    "1_robot_after": 3559,
+    "1_robot_delta": "-44.6% (병합 집중)",
+    "2_sensor_before": 175,
+    "2_sensor_after": 193,
+    "2_sensor_delta": "+10.3%",
+    "5_inverter_before": 3610,
+    "5_inverter_after": 3838,
+    "5_inverter_delta": "+6.3%"
+  },
+  "evidence": [
+    "reports/manuals-v2-qa-after.html — 코퍼스 변화표 및 Q3 분석",
+    "reports/manuals-v2-qa-before.html",
+    "workspaces/qa-agent/graphrag_validation_after.json"
+  ]
+}

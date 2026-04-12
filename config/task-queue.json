@@ -5221,6 +5221,81 @@
       "updated_at": "2026-04-12 09:39:11",
       "last_report_at": null,
       "completed_at": "2026-04-12 09:39:11"
+    },
+    {
+      "id": "tq-docs-agent-e2cad9",
+      "agent": "docs-agent",
+      "task": "[GraphRAG/manuals-v2 현황 보고 요청] 부서장이 이어서 진행하자고 함. 현재까지 진행 상태를 3줄 요약으로 보고해줘:\n\n1) 파이프라인 단계별 완료 상태 (분류 /",
+      "message": "[GraphRAG/manuals-v2 현황 보고 요청] 부서장이 이어서 진행하자고 함. 현재까지 진행 상태를 3줄 요약으로 보고해줘:\n\n1) 파이프라인 단계별 완료 상태 (분류 / 파싱 / 청킹 / 임베딩 / 인덱싱 / 검증)\n2) 현재 중단 지점 또는 다음 즉시 실행할 단계\n3) 막힌 이슈 있으면 명시\n\n인라인 덤프 금지, 3줄 요약 + state.json 경로 포함. 체크포인트/로그 파일 경로도 함께.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-12 09:41:01",
+      "updated_at": "2026-04-12 09:41:01",
+      "last_report_at": null,
+      "completed_at": null,
+      "requested_by": "MAX"
+    },
+    {
+      "id": "tq-docs-agent-91ac3b",
+      "agent": "docs-agent",
+      "task": "[GraphRAG/manuals-v2 현황 보고 요청] 부서장이 이어서 진행하자고 함. 현재까지 진행 상태를 3줄 요약으로 보고해줘:",
+      "message": "[GraphRAG/manuals-v2 현황 보고 요청] 부서장이 이어서 진행하자고 함. 현재까지 진행 상태를 3줄 요약으로 보고해줘:\n\n1) 파이프라인 단계별 완료 상태 (분류 / 파싱 / 청킹 / 임베딩 / 인덱싱 / 검증)\n2) 현재 중단 지점 또는 다음 즉시 실행할 단계\n3) 막힌 이슈 있으면 명시\n\n인라인 덤프 금지, 3줄 요약 + state.json 경로 포함. 체크포인트/로그 파일 경로도 함께.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-12 09:41:04",
+      "updated_at": "2026-04-12 09:41:04",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-qa-agent-644bfa",
+      "agent": "qa-agent",
+      "task": "[GraphRAG/manuals-v2 검증 현황 보고] 부서장이 이어서 진행하자고 함. manuals-v2 검증(B안) 현재 상태 3줄로:\n1) before/after 리포트 생성",
+      "message": "[GraphRAG/manuals-v2 검증 현황 보고] 부서장이 이어서 진행하자고 함. manuals-v2 검증(B안) 현재 상태 3줄로:\n1) before/after 리포트 생성 상태 (reports/manuals-v2/ 확인)\n2) 품질 판정 완료 건수 / 대기 건수\n3) docs-agent 결과물 수신 대기 중이면 무엇을 기다리는지\n\n인라인 덤프 금지.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-12 09:41:05",
+      "updated_at": "2026-04-12 09:41:05",
+      "last_report_at": null,
+      "completed_at": null,
+      "requested_by": "MAX"
+    },
+    {
+      "id": "tq-qa-agent-6cc630",
+      "agent": "qa-agent",
+      "task": "[GraphRAG/manuals-v2 검증 현황 보고] 부서장이 이어서 진행하자고 함. manuals-v2 검증(B안) 현재 상태 3줄로:",
+      "message": "[GraphRAG/manuals-v2 검증 현황 보고] 부서장이 이어서 진행하자고 함. manuals-v2 검증(B안) 현재 상태 3줄로:\n1) before/after 리포트 생성 상태 (reports/manuals-v2/ 확인)\n2) 품질 판정 완료 건수 / 대기 건수\n3) docs-agent 결과물 수신 대기 중이면 무엇을 기다리는지\n\n인라인 덤프 금지.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-12 09:41:07",
+      "updated_at": "2026-04-12 09:41:07",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-qa-agent-fa20b5",
+      "agent": "qa-agent",
+      "task": "[지시 — after 데이터셋 감소 원인 확인] 부서장 지시로 최우선 작업.\n\n항목:\n1) after 7,590행 vs before 10,215행 = 2,625행(-26%) 감소 ",
+      "message": "[지시 — after 데이터셋 감소 원인 확인] 부서장 지시로 최우선 작업.\n\n항목:\n1) after 7,590행 vs before 10,215행 = 2,625행(-26%) 감소 원인 분석\n2) crafter 재파싱 결과가 실제로 반영된 것인지 확인 (타임스탬프/파일 해시/청크 구조 비교)\n3) 감소분이 의도된 것인지(중복 제거/품질 필터) vs 누락인지(파싱 실패) 판별\n4) MRR 허들(≥0.60) 미달(0.53)과의 연관성 분석 — 데이터 감소가 원인인지\n\n결과: 3줄 요약 + 근거 파일/경로 + 조치 필요 여부. 인라인 덤프 금지.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-12 09:45:57",
+      "updated_at": "2026-04-12 09:45:57",
+      "last_report_at": null,
+      "completed_at": null,
+      "requested_by": "MAX"
+    },
+    {
+      "id": "tq-qa-agent-ab2688",
+      "agent": "qa-agent",
+      "task": "[지시 — after 데이터셋 감소 원인 확인] 부서장 지시로 최우선 작업.",
+      "message": "[지시 — after 데이터셋 감소 원인 확인] 부서장 지시로 최우선 작업.\n\n항목:\n1) after 7,590행 vs before 10,215행 = 2,625행(-26%) 감소 원인 분석\n2) crafter 재파싱 결과가 실제로 반영된 것인지 확인 (타임스탬프/파일 해시/청크 구조 비교)\n3) 감소분이 의도된 것인지(중복 제거/품질 필터) vs 누락인지(파싱 실패) 판별\n4) MRR 허들(≥0.60) 미달(0.53)과의 연관성 분석 — 데이터 감소가 원인인지\n\n결과: 3줄 요약 + 근거 파일/경로 + 조치 필요 여부. 인라인 덤프 금지.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-12 09:45:59",
+      "updated_at": "2026-04-12 09:45:59",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }
