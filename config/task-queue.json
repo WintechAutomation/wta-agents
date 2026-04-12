@@ -5184,9 +5184,9 @@
       "status": "done",
       "priority": "high",
       "created_at": "2026-04-12 14:51:49",
-      "updated_at": "2026-04-12 15:02:52",
-      "last_report_at": "2026-04-12 15:02:43",
-      "completed_at": "2026-04-12 15:02:52"
+      "updated_at": "2026-04-12 15:24:59",
+      "last_report_at": "2026-04-12 15:24:59",
+      "completed_at": "2026-04-12 15:24:59"
     },
     {
       "id": "tq-qa-agent-f48dfa",
@@ -5273,6 +5273,31 @@
       "priority": "medium",
       "created_at": "2026-04-12 15:16:09",
       "updated_at": "2026-04-12 15:16:09",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-docs-agent-704d4f",
+      "agent": "docs-agent",
+      "task": "[task:manuals-v2-report-template] 두 팀 표준 JSON 제출 완료 — 비교 분석 보고서 작성해줘\n\n제출된 파일:\n1. reports/manuals-v2/",
+      "message": "[task:manuals-v2-report-template] 두 팀 표준 JSON 제출 완료 — 비교 분석 보고서 작성해줘\n\n제출된 파일:\n1. reports/manuals-v2/poc_report_54fdb.json (issue-manager, 76청크)\n2. reports/manuals-v2/poc_report_18a2fd.json (qa-agent, 90청크)\n\n두 파일을 읽고, 비교 분석 HTML 보고서를 만들어줘.\n\n포함할 내용:\n- 두 팀 수치 나란히 비교 (청크수, 임베딩, DB INSERT, Neo4j 노드/관계, MRR)\n- 엔티티/관계 타입 분포 비교\n- SKILL.md 준수 여부 비교 (M1~M15, N1~N10)\n- 발견된 문제점 정리 (qa-agent 관계 0건, issue-manager MRR 미측정 등)\n- 종합 판정 + 개선 권고\n\n보고서 파일: dashboard/uploads/poc_comparison_report.html\n완료 후 Cloudflare URL(https://agent.mes-wta.com/api/files/poc_comparison_report.html)로 MAX에게 보고.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-12 15:25:14",
+      "updated_at": "2026-04-12 15:25:14",
+      "last_report_at": null,
+      "completed_at": null,
+      "requested_by": "MAX"
+    },
+    {
+      "id": "tq-docs-agent-2c3ad7",
+      "agent": "docs-agent",
+      "task": "[task:manuals-v2-report-template] 두 팀 표준 JSON 제출 완료 — 비교 분석 보고서 작성해줘",
+      "message": "[task:manuals-v2-report-template] 두 팀 표준 JSON 제출 완료 — 비교 분석 보고서 작성해줘\n\n제출된 파일:\n1. reports/manuals-v2/poc_report_54fdb.json (issue-manager, 76청크)\n2. reports/manuals-v2/poc_report_18a2fd.json (qa-agent, 90청크)\n\n두 파일을 읽고, 비교 분석 HTML 보고서를 만들어줘.\n\n포함할 내용:\n- 두 팀 수치 나란히 비교 (청크수, 임베딩, DB INSERT, Neo4j 노드/관계, MRR)\n- 엔티티/관계 타입 분포 비교\n- SKILL.md 준수 여부 비교 (M1~M15, N1~N10)\n- 발견된 문제점 정리 (qa-agent 관계 0건, issue-manager MRR 미측정 등)\n- 종합 판정 + 개선 권고\n\n보고서 파일: dashboard/uploads/poc_comparison_report.html\n완료 후 Cloudflare URL(https://agent.mes-wta.com/api/files/poc_comparison_report.html)로 MAX에게 보고.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-12 15:25:16",
+      "updated_at": "2026-04-12 15:25:16",
       "last_report_at": null,
       "completed_at": null
     }
