@@ -50,7 +50,20 @@ LLM_PARAMS     = {
 LLM_TIMEOUT    = 300
 NEO4J_URI      = 'bolt://localhost:7688'
 NEO4J_USER     = 'neo4j'
-NEO4J_PASS     = 'password'
+_NEO4J_ENV     = Path(r'C:\MES\wta-agents\workspaces\research-agent\neo4j-poc.env')
+
+
+def _read_neo4j_pass() -> str:
+    try:
+        for line in _NEO4J_ENV.read_text(encoding='utf-8').splitlines():
+            if line.startswith('NEO4J_AUTH=neo4j/'):
+                return line.split('/', 1)[1].strip()
+    except Exception:
+        pass
+    return 'WtaPoc2026!Graph'
+
+
+NEO4J_PASS     = _read_neo4j_pass()
 TEAM           = 'qa-agent'
 RUN_ID         = f'run-{datetime.now(KST).strftime("%Y%m%d-%H%M%S")}'
 
