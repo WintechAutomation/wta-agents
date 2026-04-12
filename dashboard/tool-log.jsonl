@@ -28342,3 +28342,8 @@
 {"agent_id": "admin-agent", "tool_name": "Edit", "timestamp": "2026-04-12 13:58:37"}
 {"agent_id": "admin-agent", "tool_name": "Bash", "timestamp": "2026-04-12 13:58:49"}
 {"agent_id": "admin-agent", "tool_name": "mcp__agent-channel__send_message", "timestamp": "2026-04-12 13:58:58"}
+{"agent_id": "issue-manager", "tool_name": "Bash", "timestamp": "2026-04-12 14:15:39"}
+{"agent_id": "issue-manager", "tool_name": "Bash", "timestamp": "2026-04-12 14:15:51"}
+{"agent_id": "issue-manager", "tool_name": "Bash", "timestamp": "2026-04-12 14:18:01"}
+{"agent_id": "issue-manager", "tool_name": "Bash", "timestamp": "2026-04-12 14:19:33"}
+{"agent_id": "issue-manager", "tool_name": "Bash", "timestamp": "2026-04-12 14:19:51"}
