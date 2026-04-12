@@ -460,16 +460,16 @@ def run_step2(file_info: dict) -> bool:
         result = subprocess.run(
             [PY, script, src_path],
             capture_output=True, text=True, encoding='utf-8', errors='replace',
-            timeout=600
+            timeout=1800  # 30분
         )
         if result.returncode == 0 or chunks_path.exists():
             log.info(f"Step2 완료: {file_info['file_id']}")
             return True
         else:
-            log.warning(f"Step2 실패(rc={result.returncode}): {result.stderr[-200:]}")
+            log.warning(f"Step2 실패(rc={result.returncode}): {result.stderr[-300:]}")
             return False
     except subprocess.TimeoutExpired:
-        log.warning(f"Step2 타임아웃(10분): {file_info['file_id']}")
+        log.warning(f"Step2 타임아웃(30분): {file_info['file_id']}")
         return chunks_path.exists()
     except Exception as e:
         log.error(f"Step2 예외: {file_info['file_id']} → {e}")

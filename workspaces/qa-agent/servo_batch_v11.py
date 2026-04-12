@@ -14,7 +14,7 @@ task_id: tq-qa-agent-acbf75
 State: reports/manuals-v2/state/servo_batch_qa_state.json
 Log:   reports/manuals-v2/state/servo_batch_qa.log
 """
-import os, sys, json, re, time, hashlib, traceback, importlib.util
+import os, sys, json, re, time, hashlib, traceback
 from pathlib import Path
 from datetime import datetime, timezone, timedelta
 
@@ -33,10 +33,6 @@ BATCH_HTML  = WORK_ROOT / 'dashboard' / 'uploads' / 'batch_report_qa_servo.html'
 
 STATE_DIR.mkdir(parents=True, exist_ok=True)
 EVAL_DIR.mkdir(parents=True, exist_ok=True)
-
-# ── Docling parse helper import ────────────────────────────────────────────────
-PARSE_SCRIPT = WORK_ROOT / 'workspaces' / 'docs-agent' / 'manuals_v2_parse_docling.py'
-sys.path.insert(0, str(PARSE_SCRIPT.parent))
 
 # ── SKILL v1.1 constants ──────────────────────────────────────────────────────
 WINDOW_SIZE    = 800
@@ -232,20 +228,25 @@ def get_db():
 
 
 # ── Embedding ─────────────────────────────────────────────────────────────────
-def embed_texts(texts: list[str], batch_size=16) -> list[list[float] | None]:
+def embed_texts(texts: list[str], batch_size=8) -> list[list[float] | None]:
+    """Embed texts with retry. batch_size=8 reduces per-request load."""
     import requests as req
     results = [None] * len(texts)
     for i in range(0, len(texts), batch_size):
         batch = texts[i:i + batch_size]
-        try:
-            resp = req.post(EMBED_URL, json={'model': EMBED_MODEL, 'input': batch}, timeout=120)
-            resp.raise_for_status()
-            vecs = resp.json().get('embeddings', [])
-            for j, vec in enumerate(vecs):
-                if vec and len(vec) >= EMBED_DIM:
-                    results[i + j] = vec[:EMBED_DIM]
-        except Exception as e:
-            log(f'  EMBED_ERR batch {i}: {e}')
+        for attempt in range(3):
+            try:
+                resp = req.post(EMBED_URL, json={'model': EMBED_MODEL, 'input': batch}, timeout=300)
+                resp.raise_for_status()
+                vecs = resp.json().get('embeddings', [])
+                for j, vec in enumerate(vecs):
+                    if vec and len(vec) >= EMBED_DIM:
+                        results[i + j] = vec[:EMBED_DIM]
+                break
+            except Exception as e:
+                log(f'  EMBED_ERR batch {i} attempt {attempt+1}: {e}')
+                if attempt < 2:
+                    time.sleep(5)
     return results
 
 
@@ -369,73 +370,230 @@ def neo4j_merge(file_id: str, run_id: str, entities: list, relations: list) -> t
     return node_count, rel_count
 
 
+# ── Docling helpers (inline — no sys.stdout redirect) ─────────────────────────
+_INLINE_REF_RE = re.compile(r'(?:그림|Figure|Fig\.?|표|Table)\s*([\d\-\.]+)', re.I)
+
+def _extract_inline_refs(text: str) -> list[str]:
+    refs = set()
+    for m in _INLINE_REF_RE.finditer(text or ''):
+        refs.add(m.group(1))
+    return sorted(refs)
+
+
+def _lazy_docling():
+    from docling.document_converter import DocumentConverter, PdfFormatOption
+    from docling.datamodel.pipeline_options import PdfPipelineOptions
+    from docling.datamodel.base_models import InputFormat
+    from docling_core.transforms.chunker.hierarchical_chunker import HierarchicalChunker
+    from PIL import Image
+    return DocumentConverter, PdfFormatOption, PdfPipelineOptions, InputFormat, HierarchicalChunker, Image
+
+
+def _parse_pdf(pdf_path: Path, out_dir: Path):
+    DocumentConverter, PdfFormatOption, PdfPipelineOptions, InputFormat, _, _ = _lazy_docling()
+    pipeline_options = PdfPipelineOptions(
+        generate_picture_images=True,
+        images_scale=2.0,
+        do_ocr=True,
+        do_table_structure=True,
+    )
+    pipeline_options.table_structure_options.do_cell_matching = True
+    converter = DocumentConverter(
+        format_options={InputFormat.PDF: PdfFormatOption(pipeline_options=pipeline_options)}
+    )
+    t0 = time.time()
+    result = converter.convert(str(pdf_path))
+    doc = result.document
+    log(f'  Docling 파싱 완료: {time.time()-t0:.1f}s')
+    return doc
+
+
+def _export_images(doc, img_dir: Path, file_id: str) -> list[dict]:
+    _, _, _, _, _, Image = _lazy_docling()
+    img_dir.mkdir(parents=True, exist_ok=True)
+    figures = []
+    for idx, (item, _level) in enumerate(doc.iterate_items()):
+        if item.__class__.__name__ != 'PictureItem':
+            continue
+        page_no = getattr(item.prov[0], 'page_no', 0) if item.prov else 0
+        bbox = None
+        if item.prov and hasattr(item.prov[0], 'bbox'):
+            b = item.prov[0].bbox
+            bbox = {'l': b.l, 't': b.t, 'r': b.r, 'b': b.b}
+        caption = ''
+        try:
+            caption = item.caption_text(doc=doc) or ''
+        except Exception:
+            caption = getattr(item, 'caption', '') or ''
+        figure_id = f'fig_{page_no:03d}_{idx:03d}'
+        img_path = img_dir / f'{figure_id}.png'
+        thumb_path = img_dir / f'{figure_id}_thumb.png'
+        try:
+            pil_img = item.get_image(doc=doc)
+            if pil_img is None or pil_img.width < 28 or pil_img.height < 28:
+                continue
+            pil_img.save(img_path, 'PNG')
+            thumb = pil_img.copy()
+            thumb.thumbnail((256, 256))
+            thumb.save(thumb_path, 'PNG')
+        except Exception as e:
+            log(f'    이미지 추출 실패 {figure_id}: {e}')
+            continue
+        figures.append({
+            'figure_id': figure_id,
+            'caption': caption,
+            'page': page_no,
+            'bbox': bbox,
+        })
+    return figures
+
+
+def _export_tables(doc) -> list[dict]:
+    tables = []
+    for idx, (item, _level) in enumerate(doc.iterate_items()):
+        if item.__class__.__name__ != 'TableItem':
+            continue
+        page_no = getattr(item.prov[0], 'page_no', 0) if item.prov else 0
+        html = ''
+        try:
+            html = item.export_to_html(doc=doc)
+        except Exception:
+            pass
+        tables.append({'table_id': f'tbl_{page_no:03d}_{idx:03d}', 'page': page_no, 'html': html})
+    return tables
+
+
+def _chunk_document(doc) -> list[dict]:
+    _, _, _, _, HierarchicalChunker, _ = _lazy_docling()
+    chunker = HierarchicalChunker()
+    chunks = list(chunker.chunk(doc))
+    out = []
+    for i, ch in enumerate(chunks):
+        text = ch.text if hasattr(ch, 'text') else str(ch)
+        meta = ch.meta if hasattr(ch, 'meta') else None
+        section_path = []
+        page_start = page_end = None
+        try:
+            section_path = list(meta.headings or []) if meta else []
+        except Exception:
+            pass
+        try:
+            doc_items = meta.doc_items if meta else []
+            pages = set()
+            for di in doc_items:
+                for p in getattr(di, 'prov', []) or []:
+                    if hasattr(p, 'page_no'):
+                        pages.add(p.page_no)
+            if pages:
+                page_start = min(pages)
+                page_end = max(pages)
+        except Exception:
+            pass
+        out.append({
+            'chunk_idx': i,
+            'content': text,
+            'section_path': section_path,
+            'page_start': page_start,
+            'page_end': page_end,
+            'tokens': len(text.split()),
+        })
+    return out
+
+
+def _match_figures_to_chunks(chunks: list[dict], figures: list[dict], tables: list[dict]) -> list[dict]:
+    by_page_fig: dict[int, list] = {}
+    for f in figures:
+        by_page_fig.setdefault(f['page'], []).append(f)
+    by_page_tbl: dict[int, list] = {}
+    for t in tables:
+        by_page_tbl.setdefault(t['page'], []).append(t)
+    for ch in chunks:
+        ps, pe = ch.get('page_start'), ch.get('page_end')
+        fig_refs, tbl_refs = [], []
+        if ps is not None and pe is not None:
+            for pg in range(ps, pe + 1):
+                fig_refs.extend(by_page_fig.get(pg, []))
+                tbl_refs.extend(by_page_tbl.get(pg, []))
+        ch['figure_refs'] = fig_refs
+        ch['table_refs'] = tbl_refs
+        ch['inline_refs'] = _extract_inline_refs(ch['content'])
+    return chunks
+
+
 # ── Docling parse (custom file_id) ─────────────────────────────────────────────
 def parse_to_chunks(fi: dict) -> list[dict]:
-    """Parse a PDF/DOCX and return chunk list. Saves chunks.jsonl in poc/{file_id}/."""
+    """Parse a PDF/DOCX and return chunk list. Saves chunks.jsonl in poc/{file_id}/.
+    Two-phase: (1) Docling parse → chunks.jsonl (embedding=null),
+               (2) embed → update chunks.jsonl.
+    Resumable: skips Docling if chunks.jsonl already exists.
+    """
     file_id = fi['file_id']
     src = Path(fi['src'])
     out_dir = POC_ROOT / file_id
     out_dir.mkdir(parents=True, exist_ok=True)
     chunks_path = out_dir / 'chunks.jsonl'
 
-    if chunks_path.exists() and chunks_path.stat().st_size > 100:
-        log(f'  [{file_id}] chunks.jsonl 기존 재사용')
-        chunks = []
-        with open(chunks_path, encoding='utf-8') as f:
-            for ln in f:
-                try:
-                    chunks.append(json.loads(ln))
-                except Exception:
-                    pass
-        return chunks
+    # ── Phase 1: Docling parsing ──────────────────────────────────────────────
+    if not (chunks_path.exists() and chunks_path.stat().st_size > 100):
+        doc = _parse_pdf(src, out_dir)
+        figures = _export_images(doc, out_dir / 'images', file_id)
+        tables = _export_tables(doc)
+        raw_chunks = _chunk_document(doc)
+        raw_chunks = [c for c in raw_chunks
+                      if (c.get('content') or '').strip() and
+                      len((c['content'] or '').split()) >= 2]
+        raw_chunks = _match_figures_to_chunks(raw_chunks, figures, tables)
+        log(f'  [{file_id}] chunks={len(raw_chunks)}, figures={len(figures)}, tables={len(tables)}')
 
-    # Import Docling helpers from parse_docling.py
-    spec = importlib.util.spec_from_file_location('manuals_v2_parse_docling', PARSE_SCRIPT)
-    mod = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(mod)
+        # Save immediately WITHOUT embeddings (crash-safe)
+        with open(chunks_path, 'w', encoding='utf-8') as f:
+            for i, ch in enumerate(raw_chunks):
+                row = {
+                    'file_id': file_id,
+                    'chunk_id': f'{(ch.get("page_start") or 0):04d}_{i:04d}',
+                    'category': '4_servo',
+                    'mfr': fi.get('mfr', 'Unknown'),
+                    'model': fi.get('model', 'Unknown'),
+                    'doctype': fi.get('doctype', 'manual').lower(),
+                    'lang': fi.get('lang', 'EN').lower(),
+                    'section_path': ch.get('section_path', []),
+                    'page_start': ch.get('page_start'),
+                    'page_end': ch.get('page_end'),
+                    'content': ch['content'],
+                    'tokens': ch.get('tokens', 0),
+                    'embedding': None,
+                    'figure_refs': ch.get('figure_refs', []),
+                    'table_refs': ch.get('table_refs', []),
+                    'inline_refs': ch.get('inline_refs', []),
+                }
+                f.write(json.dumps(row, ensure_ascii=False) + '\n')
+        log(f'  [{file_id}] chunks.jsonl 저장 (embedding=null)')
+    else:
+        log(f'  [{file_id}] chunks.jsonl 기존 재사용 (Phase1 스킵)')
 
-    # Parse
-    doc = mod.parse_pdf(src, out_dir)
-    figures = mod.export_images(doc, out_dir / 'images',
-                                __import__('PIL').Image,
-                                category='4_servo', file_id=file_id,
-                                requests=__import__('requests'))
-    tables = mod.export_tables(doc)
-    raw_chunks = mod.chunk_document(doc, mod.lazy_imports()[4])  # HierarchicalChunker
-    raw_chunks = [c for c in raw_chunks
-                  if (c.get('content') or '').strip() and
-                  len((c['content'] or '').split()) >= 2]
-    raw_chunks = mod.match_figures_to_chunks(raw_chunks, figures, tables)
-    log(f'  [{file_id}] chunks={len(raw_chunks)}, figures={len(figures)}, tables={len(tables)}')
-
-    # Embed
-    texts = [c['content'] for c in raw_chunks]
-    vectors = embed_texts(texts)
-
-    # Write chunks.jsonl
+    # ── Phase 2: Load & embed if any embedding is missing ────────────────────
     chunks = []
-    with open(chunks_path, 'w', encoding='utf-8') as f:
-        for i, ch in enumerate(raw_chunks):
-            row = {
-                'file_id': file_id,
-                'chunk_id': f'{(ch.get("page_start") or 0):04d}_{i:04d}',
-                'category': '4_servo',
-                'mfr': fi.get('mfr', 'Unknown'),
-                'model': fi.get('model', 'Unknown'),
-                'doctype': fi.get('doctype', 'manual').lower(),
-                'lang': fi.get('lang', 'EN').lower(),
-                'section_path': ch.get('section_path', []),
-                'page_start': ch.get('page_start'),
-                'page_end': ch.get('page_end'),
-                'content': ch['content'],
-                'tokens': ch.get('tokens', 0),
-                'embedding': vectors[i],
-                'figure_refs': ch.get('figure_refs', []),
-                'table_refs': ch.get('table_refs', []),
-                'inline_refs': ch.get('inline_refs', []),
-            }
-            chunks.append(row)
-            f.write(json.dumps(row, ensure_ascii=False) + '\n')
+    with open(chunks_path, encoding='utf-8') as f:
+        for ln in f:
+            try:
+                chunks.append(json.loads(ln))
+            except Exception:
+                pass
+
+    missing_idx = [i for i, ch in enumerate(chunks) if ch.get('embedding') is None]
+    if missing_idx:
+        log(f'  [{file_id}] 임베딩 {len(missing_idx)}/{len(chunks)} 건 처리 중...')
+        texts = [chunks[i]['content'] for i in missing_idx]
+        vectors = embed_texts(texts)
+        for k, i in enumerate(missing_idx):
+            chunks[i]['embedding'] = vectors[k]
+        # Rewrite chunks.jsonl with embeddings
+        with open(chunks_path, 'w', encoding='utf-8') as f:
+            for ch in chunks:
+                f.write(json.dumps(ch, ensure_ascii=False) + '\n')
+        embedded = sum(1 for ch in chunks if ch.get('embedding') is not None)
+        log(f'  [{file_id}] 임베딩 완료: {embedded}/{len(chunks)}')
+
     return chunks
 
 

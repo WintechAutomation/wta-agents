@@ -5450,8 +5450,8 @@
       "status": "blocked",
       "priority": "high",
       "created_at": "2026-04-12 23:21:00",
-      "updated_at": "2026-04-12 23:42:40",
-      "last_report_at": "2026-04-12 23:42:40",
+      "updated_at": "2026-04-13 00:15:48",
+      "last_report_at": "2026-04-13 00:15:48",
       "completed_at": null
     },
     {
@@ -5462,8 +5462,8 @@
       "status": "in_progress",
       "priority": "high",
       "created_at": "2026-04-12 23:21:02",
-      "updated_at": "2026-04-12 23:33:35",
-      "last_report_at": "2026-04-12 23:33:35",
+      "updated_at": "2026-04-13 00:16:47",
+      "last_report_at": "2026-04-13 00:16:47",
       "completed_at": null
     },
     {
@@ -5563,6 +5563,31 @@
       "priority": "medium",
       "created_at": "2026-04-13 00:08:49",
       "updated_at": "2026-04-13 00:08:49",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-admin-agent-fadf10",
+      "agent": "admin-agent",
+      "task": "issue-manager가 아직 qwen3-embedding:8b 타임아웃 보고. deepseek-r1:32b가 모델 목록에 여전히 존재한다고 함.\n\n확인 필요:\n1. ollama",
+      "message": "issue-manager가 아직 qwen3-embedding:8b 타임아웃 보고. deepseek-r1:32b가 모델 목록에 여전히 존재한다고 함.\n\n확인 필요:\n1. ollama ps로 현재 GPU 점유 모델 확인\n2. deepseek-r1:32b가 아직 로드 상태면 강제 언로드\n3. qwen3-embedding:8b 테스트 호출 (짧은 텍스트로 정상 응답 확인)\n4. 정상 확인 후 MAX에 즉시 보고",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-13 00:15:55",
+      "updated_at": "2026-04-13 00:15:55",
+      "last_report_at": null,
+      "completed_at": null,
+      "requested_by": "MAX"
+    },
+    {
+      "id": "tq-admin-agent-27674a",
+      "agent": "admin-agent",
+      "task": "issue-manager가 아직 qwen3-embedding:8b 타임아웃 보고. deepseek-r1:32b가 모델 목록에 여전히 존재한다고 함.",
+      "message": "issue-manager가 아직 qwen3-embedding:8b 타임아웃 보고. deepseek-r1:32b가 모델 목록에 여전히 존재한다고 함.\n\n확인 필요:\n1. ollama ps로 현재 GPU 점유 모델 확인\n2. deepseek-r1:32b가 아직 로드 상태면 강제 언로드\n3. qwen3-embedding:8b 테스트 호출 (짧은 텍스트로 정상 응답 확인)\n4. 정상 확인 후 MAX에 즉시 보고",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-13 00:15:58",
+      "updated_at": "2026-04-13 00:15:58",
       "last_report_at": null,
       "completed_at": null
     }
