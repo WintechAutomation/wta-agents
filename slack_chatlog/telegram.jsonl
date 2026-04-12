@@ -926,3 +926,5 @@
 {"ts": "2026-04-12 12:21:07", "direction": "outbound", "user": "MAX", "text": "👑 확인. issue-manager에 전체 파이프라인 1건 테스트 지시했습니다.\n\n대상: 1_robot_2d70 (12 chunks, 가장 작은 파일)\n범위: Step1~Step7 전체 — 파싱→임베딩→pgvector→GraphRAG→검증→보고\n조건: 스킬(SKILL.md) MUST/MUST NOT 전부 준수\n\nqa-agent는 교차검증 종료, 노드 정리 후 대기.\n\nissue-manager 결과 나오면 바로 보고드리겠습니다."}
 {"ts": "2026-04-12 12:21:15", "direction": "inbound", "user": "boss", "text": "스킬부터 검증을 확실히 해야 에이전트를 늘려서 진행하지 ."}
 {"ts": "2026-04-12 12:21:48", "direction": "outbound", "user": "MAX", "text": "👑 맞습니다. 스킬 1건 검증 통과 → 에이전트 수 늘려서 할당량 배분. 순서가 중요합니다.\n\nissue-manager 1건 테스트로:\n1) 스킬대로 따라하면 실제로 전 단계가 돌아가는지\n2) 막히는 구간이나 누락된 안내가 없는지\n3) 산출물이 기대 품질에 맞는지\n\n검증되면 그때 스킬 확정 + N개 에이전트 투입. 결과 기다리겠습니다."}
+{"ts": "2026-04-12 12:36:39", "direction": "inbound", "user": "boss", "text": "아직도 안됫어?"}
+{"ts": "2026-04-12 12:37:01", "direction": "outbound", "user": "MAX", "text": "👑 issue-manager에 즉시 상태 확인 보냈습니다."}
