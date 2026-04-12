@@ -1,8 +1,0 @@
-[2026-04-12 09:59:39] === Step2 시작 — 대상 58건 (category=3_hmi) ===
-[2026-04-12 09:59:53] === Step2 시작 — 대상 58건 (category=3_hmi) ===
-[2026-04-12 09:59:53] >> [3_hmi] Beijer Electronics company presentation June 20 2017.pdf (md5=4b2399c1, pages=31)
-[2026-04-12 10:02:56]    OK chunks=27 figures=65 tables=0 elapsed=183.1s
-[2026-04-12 10:02:56] --limit 1 도달 → 종료
-[2026-04-12 10:02:56] === Step2 종료 — done=1 error=0 skipped=0 (이번 세션 처리=1) ===
-[2026-04-12 10:03:17] === Step2 시작 — 대상 693건 (category=ALL) ===
-[2026-04-12 10:03:17] >> [1_robot] BASIC-INSTRUCTION-LIST.PDF (md5=b504598a, pages=12)

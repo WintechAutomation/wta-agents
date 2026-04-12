@@ -34,11 +34,14 @@ except Exception:
 os.environ.setdefault('V2_EMBED', '0')
 os.environ.setdefault('V2_VLM', '0')
 
-WORKSPACE = Path(r'C:\MES\wta-agents\workspaces\docs-agent')
-STATE_PATH = WORKSPACE / 'manuals_v2_step2_state.json'
-LOG_PATH = WORKSPACE / 'manuals_v2_step2.log'
+SCRIPT_DIR = Path(r'C:\MES\wta-agents\workspaces\docs-agent')
+REPORTS_ROOT = Path(r'C:\MES\wta-agents\reports\manuals-v2')
+EXTRACT_DIR = REPORTS_ROOT / 'extract'
+STATE_DIR = REPORTS_ROOT / 'state'
+STATE_PATH = STATE_DIR / 'manuals_v2_step2_state.json'
+LOG_PATH = STATE_DIR / 'manuals_v2_step2.log'
 
-# 카테고리명 ↔ extract.jsonl 파일명
+# 카테고리명 ↔ extract.jsonl 파일명 (reports/manuals-v2/extract/ 기준)
 CATEGORIES = {
     '1_robot':     'manuals_v2_1robot_extract.jsonl',
     '2_sensor':    'manuals_v2_2_sensor_extract.jsonl',
@@ -94,7 +97,7 @@ def load_targets(only_category=None):
     for cat, jl in CATEGORIES.items():
         if only_category and cat != only_category:
             continue
-        p = WORKSPACE / jl
+        p = EXTRACT_DIR / jl
         if not p.exists():
             log(f'WARN extract 누락: {jl}')
             continue
@@ -128,8 +131,11 @@ def main():
     ap.add_argument('--retry-error', action='store_true', help='이전에 error로 끝난 항목 재시도')
     args = ap.parse_args()
 
+    # state/log 디렉토리 확보
+    STATE_DIR.mkdir(parents=True, exist_ok=True)
+
     # 지연 import (Docling 무거움)
-    sys.path.insert(0, str(WORKSPACE))
+    sys.path.insert(0, str(SCRIPT_DIR))
     from manuals_v2_parse_docling import process_pdf
 
     state = load_state()

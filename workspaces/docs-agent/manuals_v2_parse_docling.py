@@ -35,7 +35,7 @@ def lazy_imports():
     return (DocumentConverter, PdfFormatOption, PdfPipelineOptions,
             InputFormat, HierarchicalChunker, Image, requests)
 
-WORK_ROOT = Path(r'C:\MES\wta-agents\workspaces\docs-agent\v2_poc')
+WORK_ROOT = Path(r'C:\MES\wta-agents\reports\manuals-v2\poc')
 QWEN_URL = 'http://182.224.6.147:11434/api/embed'
 QWEN_MODEL = 'qwen3-embedding:8b'
 EMBED_DIM = 2000  # MRL 슬라이싱

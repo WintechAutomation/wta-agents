@@ -1,4 +1,0 @@
-keys: ['src_category', 'src_path', 'filename', 'size', 'pages', 'md5', 'text', 'status']
-content len: 0
-filename: aca series cl tap & trigger 설정 매뉴얼(2040-180km,2000-340km).pdf
-pages: 8

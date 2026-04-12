@@ -28,9 +28,11 @@ sys.path.insert(0, str(Path(__file__).parent))
 from chunk_postprocess import postprocess, stats  # noqa
 
 WORK_ROOT = Path(r'C:\MES\wta-agents\workspaces\docs-agent\v2_poc')
-CRAFTER_OUT = Path(r'C:\MES\wta-agents\workspaces\crafter')
-LOG_PATH = CRAFTER_OUT / 'manuals_v2_reprocess.log'
-STATE_PATH = CRAFTER_OUT / 'manuals_v2_reprocess_state.json'
+# 산출물 경로 정정 (2026-04-12 부서장 지시): workspaces/는 .py만 유지, 부피 파일은 reports/(gitignored)
+REPORTS_OUT = Path(r'C:\MES\wta-agents\reports\manuals-v2\legacy')
+REPORTS_OUT.mkdir(parents=True, exist_ok=True)
+LOG_PATH = REPORTS_OUT / 'manuals_v2_reprocess.log'
+STATE_PATH = REPORTS_OUT / 'manuals_v2_reprocess_state.json'
 TASK_ID = 'manuals_v2_reprocess_poc10'
 
 QWEN_URL = 'http://182.224.6.147:11434/api/embed'

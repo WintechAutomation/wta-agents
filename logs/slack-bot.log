@@ -29615,3 +29615,8 @@ v32에서는 `enableRangeSelection={true
 2026-04-12 10:08:31,963 INFO [수신] #제어-조한종 조한종: 완성해서보고해 → control-agent
 2026-04-12 10:08:32,420 INFO 직접 전송 완료 → control-agent:5616
 2026-04-12 10:08:40,825 INFO [응답시간] control-agent #제어-조한종: 8초
+2026-04-12 10:08:40,825 INFO [슬랙 발신] #제어-조한종 ← control-agent: 바로 직접 수정하겠습니다!
+2026-04-12 10:11:36,330 INFO [슬랙 발신] #제어-조한종 ← control-agent: 완료했습니다.
+
+**수정 내용** (AG-Grid v32 다운그레이드):
+- 셀 영역 복붙: `enableR

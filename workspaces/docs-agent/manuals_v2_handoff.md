@@ -7,11 +7,63 @@
 
 ---
 
-## 1. 현재 상태 (2026-04-12 10:05 기준)
+## 0. 경로 대전제 (부서장 지시 2026-04-12)
 
-- **단계**: Step2 (Docling 파싱 + 512 청킹) 배치 실행 직후 긴급 정지
-- **처리 진행**: 1 / 693 (done=1, error=0, skipped=0)
-- **중단 시점 파일**: `[1_robot] BASIC-INSTRUCTION-LIST.PDF` (md5=b504598a…) — 미기록 상태이므로 재개 시 자동으로 다시 시도됨
+**용량 이유로 `workspaces/`는 경량 파일(.py 스크립트·handoff.md)만 유지**하고, **모든 데이터·산출물·체크포인트·로그는 gitignored인 `reports/manuals-v2/` 아래**에 둔다. qa-agent도 이 규칙을 그대로 따를 것.
+
+```
+workspaces/docs-agent/                        ← 코드만 유지 (git 커밋 대상)
+  ├── manuals_v2_step2_parse.py               # Step2 배치 러너
+  ├── manuals_v2_parse_docling.py             # 단일 PDF 처리
+  ├── manuals_v2_step1_extract.py             # Step1 추출기
+  ├── manuals_v2_pipeline.py                  # Step1 배치 러너
+  ├── manuals_v2_1robot_classify.py           # 1_robot 전용 분류기
+  ├── manuals_v2_1robot_dedup.py              # dedup
+  ├── manuals_v2_reprocess.py                 # 재처리 도구
+  └── manuals_v2_handoff.md                   # 이 문서
+
+reports/manuals-v2/                           ← 데이터·산출물 (gitignored)
+  ├── extract/        # Step1 산출 jsonl (8개)
+  │   ├── manuals_v2_1robot_extract.jsonl
+  │   ├── manuals_v2_2_sensor_extract.jsonl
+  │   ├── manuals_v2_3_hmi_extract.jsonl
+  │   ├── manuals_v2_4_servo_extract.jsonl
+  │   ├── manuals_v2_5_inverter_extract.jsonl
+  │   ├── manuals_v2_6_plc_extract.jsonl
+  │   ├── manuals_v2_7_pneumatic_extract.jsonl
+  │   └── manuals_v2_extract.jsonl
+  ├── classify/       # 카테고리별 분류 CSV (7개)
+  ├── state/          # 체크포인트·로그
+  │   ├── manuals_v2_step2_state.json
+  │   ├── manuals_v2_step2.log
+  │   ├── manuals_v2_step2.stdout.log
+  │   ├── manuals_v2_1robot_extract.ckpt
+  │   ├── manuals_v2_extract.ckpt
+  │   ├── manuals_v2_pipeline_batch1.log
+  │   └── manuals_v2_pipeline_batch2.log
+  ├── poc/            # Docling 파싱 산출물 (file_id별 디렉토리)
+  │   └── {file_id}/
+  │       ├── document.json
+  │       ├── chunks.jsonl
+  │       └── images/*.png
+  └── legacy/         # 과거 sensor/1robot 작업 파일, summary 스냅샷 등
+```
+
+**스크립트 내부 경로 상수**(이미 업데이트 완료):
+- `manuals_v2_step2_parse.py` → `REPORTS_ROOT = C:\MES\wta-agents\reports\manuals-v2`
+- `manuals_v2_parse_docling.py` → `WORK_ROOT = C:\MES\wta-agents\reports\manuals-v2\poc`
+
+qa-agent가 Step3/4 스크립트를 만들 때도 같은 규칙 사용 (데이터 저장은 `reports/manuals-v2/` 하위, 코드는 `workspaces/docs-agent/`).
+
+---
+
+## 1. 현재 상태 (2026-04-12 10:17 기준)
+
+- **단계**: Step2 (Docling 파싱 + 512 청킹) 실행 중 정지
+- **처리 진행**: 5 / 693 (done=5, error=0, skipped=1 — 3_hmi 5건 완료)
+- **직전 처리 파일**: `[3_hmi] Allen-Bradley .pdf` (md5=37313ce4) 처리 직후 stop
+- **미기록 파일**: 없음 (마지막 OK 후 정상 정지)
+- 참고: 초기 `1_robot BASIC-INSTRUCTION-LIST.PDF`는 중단으로 state 미기록 → 재개 시 자동 재시도 예정
 - **Step1(extract) 결과**: 7개 카테고리 status=ok 합계 693건 (8_etc 제외, 부서장 지시)
 
 | 카테고리 | total | status=ok |
@@ -25,13 +77,14 @@
 | 7_pneumatic | 65 | 41 |
 | **합계** | **863** | **693** |
 
-### 체크포인트/로그 경로
+### 체크포인트/로그 경로 (reports/manuals-v2/ 기준)
 
 ```
-C:\MES\wta-agents\workspaces\docs-agent\manuals_v2_step2_state.json   # 상태 (md5 단위)
-C:\MES\wta-agents\workspaces\docs-agent\manuals_v2_step2.log          # 타임스탬프 로그
-C:\MES\wta-agents\workspaces\docs-agent\manuals_v2_step2.stdout.log   # 프로세스 stdout/stderr
-C:\MES\wta-agents\workspaces\docs-agent\v2_poc\{file_id}\chunks.jsonl # 단위 산출물
+C:\MES\wta-agents\reports\manuals-v2\state\manuals_v2_step2_state.json   # 상태 (md5 단위)
+C:\MES\wta-agents\reports\manuals-v2\state\manuals_v2_step2.log          # 타임스탬프 로그
+C:\MES\wta-agents\reports\manuals-v2\state\manuals_v2_step2.stdout.log   # stdout/stderr
+C:\MES\wta-agents\reports\manuals-v2\poc\{file_id}\chunks.jsonl          # 단위 산출물
+C:\MES\wta-agents\reports\manuals-v2\extract\manuals_v2_{cat}_extract.jsonl  # Step1 입력
 ```
 
 `state.json` 구조:
@@ -145,8 +198,8 @@ python mrr_eval_filter.py --standard reports/mrr-eval-filter-standard.md
 ```bash
 # 1) 중단: Ctrl+C 또는 TaskStop
 # 2) 상태 점검
-cat workspaces/docs-agent/manuals_v2_step2_state.json | python -m json.tool | head -20
-tail -20 workspaces/docs-agent/manuals_v2_step2.log
+cat reports/manuals-v2/state/manuals_v2_step2_state.json | python -m json.tool | head -20
+tail -20 reports/manuals-v2/state/manuals_v2_step2.log
 
 # 3) 재개 (같은 명령 그대로)
 python workspaces/docs-agent/manuals_v2_step2_parse.py
@@ -165,16 +218,16 @@ python workspaces/docs-agent/manuals_v2_step2_parse.py
 
 복구:
 ```bash
-cd C:/MES/wta-agents/workspaces/docs-agent
+cd C:/MES/wta-agents/reports/manuals-v2/state
 
 # 1) 손상본 백업
-copy manuals_v2_step2_state.json manuals_v2_step2_state.json.broken
+cp manuals_v2_step2_state.json manuals_v2_step2_state.json.broken
 
 # 2) log에서 done 리스트 복원
 grep "   OK chunks=" manuals_v2_step2.log
 
-# 3) v2_poc/ 디렉토리 실제 산출물로 done 판정
-ls v2_poc/ | wc -l
+# 3) poc/ 디렉토리 실제 산출물로 done 판정
+ls ../poc/ | wc -l
 
 # 4) 둘이 일치하면 v2_poc 디렉토리명(file_id)을 키로 state 재구성 스크립트 작성
 #    (카테고리_md5앞12자리 형식에서 md5 prefix 복원 가능 — 단, 유일하지 않을 수 있으므로
@@ -187,29 +240,29 @@ ls v2_poc/ | wc -l
 ## 2-4. 산출물 검증 커맨드
 
 ```bash
-cd C:/MES/wta-agents/workspaces/docs-agent
+cd C:/MES/wta-agents/reports/manuals-v2
 
-# 1) v2_poc 디렉토리 수 = 완료 파일 수
-ls v2_poc/ | wc -l
+# 1) poc 디렉토리 수 = 완료 파일 수
+ls poc/ | wc -l
 
 # 2) 개별 파일 chunks.jsonl 행 수 / 샘플
-wc -l v2_poc/3_hmi_4b2399c17ac5/chunks.jsonl
-head -1 v2_poc/3_hmi_4b2399c17ac5/chunks.jsonl | python -m json.tool
+wc -l poc/3_hmi_4b2399c17ac5/chunks.jsonl
+head -1 poc/3_hmi_4b2399c17ac5/chunks.jsonl | python -m json.tool
 
 # 3) state.json totals
-python -c "import json; s=json.load(open('manuals_v2_step2_state.json',encoding='utf-8')); print(s['totals']); print('files:',len(s['files']))"
+python -c "import json; s=json.load(open('state/manuals_v2_step2_state.json',encoding='utf-8')); print(s['totals']); print('files:',len(s['files']))"
 
 # 4) 카테고리별 done 집계
-python -c "import json,collections; s=json.load(open('manuals_v2_step2_state.json',encoding='utf-8')); c=collections.Counter(v['category'] for v in s['files'].values() if v.get('status')=='done'); print(dict(c))"
+python -c "import json,collections; s=json.load(open('state/manuals_v2_step2_state.json',encoding='utf-8')); c=collections.Counter(v['category'] for v in s['files'].values() if v.get('status')=='done'); print(dict(c))"
 
 # 5) error만 뽑기
-python -c "import json; s=json.load(open('manuals_v2_step2_state.json',encoding='utf-8')); [print(v['filename'],'|',v.get('error')) for v in s['files'].values() if v.get('status')=='error']"
+python -c "import json; s=json.load(open('state/manuals_v2_step2_state.json',encoding='utf-8')); [print(v['filename'],'|',v.get('error')) for v in s['files'].values() if v.get('status')=='error']"
 
 # 6) chunks.jsonl 필수 필드 검증
 python -c "
 import json,glob
 bad=0
-for p in glob.glob('v2_poc/*/chunks.jsonl'):
+for p in glob.glob('poc/*/chunks.jsonl'):
     for ln in open(p,encoding='utf-8'):
         d=json.loads(ln)
         for k in ('file_id','chunk_id','category','content','page_start'):
@@ -254,24 +307,42 @@ Step5  검증            qa-agent mrr-eval-filter-standard  ⏳ 대기
 ## 4. 주요 스크립트 경로
 
 ```
+# 코드 (workspaces/docs-agent/)
 workspaces/docs-agent/
-├── manuals_v2_step1_extract.py          # Step1: 카테고리별 PDF 텍스트 추출 + OCR 판정
+├── manuals_v2_step1_extract.py          # Step1: PDF 텍스트 추출 + OCR 판정
 ├── manuals_v2_pipeline.py                # Step1 배치 러너 (카테고리 루프)
-├── manuals_v2_{category}_extract.jsonl   # Step1 결과 (7개)
-├── manuals_v2_{category}_classification.csv
-├── manuals_v2_summary.json               # Step1 통계 스냅샷
-│
 ├── manuals_v2_parse_docling.py           # Step2 단일 PDF 처리 (Docling+HierarchicalChunker+선택 임베딩/VLM)
 ├── manuals_v2_step2_parse.py             # Step2 배치 러너 (재개 가능)
-├── manuals_v2_step2_state.json           # Step2 상태
-├── manuals_v2_step2.log                  # Step2 로그
-│
-├── v2_poc/{file_id}/
-│   ├── document.json                     # Docling export
-│   ├── chunks.jsonl                      # 청크 + (선택적) embedding
-│   └── images/*.png, *_thumb.png         # 그림/표 이미지 (V2_VLM=1 시 캡션 포함)
-│
-└── (Step3/Step4는 미구현 — qa-agent가 작성 예정)
+├── manuals_v2_1robot_classify.py         # 1_robot 전용 분류기
+├── manuals_v2_1robot_dedup.py            # dedup
+├── manuals_v2_reprocess.py               # 재처리 유틸
+└── manuals_v2_handoff.md                 # 이 문서
+
+# 데이터·산출물 (reports/manuals-v2/, gitignored)
+reports/manuals-v2/
+├── extract/
+│   ├── manuals_v2_{category}_extract.jsonl  # Step1 결과 (7개 + legacy 1개)
+│   └── manuals_v2_extract.jsonl             # 초기 통합본
+├── classify/
+│   └── manuals_v2_{category}_classification.csv
+├── state/
+│   ├── manuals_v2_step2_state.json          # Step2 상태
+│   ├── manuals_v2_step2.log                 # Step2 로그
+│   ├── manuals_v2_step2.stdout.log          # 프로세스 stdout
+│   ├── manuals_v2_1robot_extract.ckpt       # Step1 체크포인트
+│   ├── manuals_v2_extract.ckpt
+│   └── manuals_v2_pipeline_batch{1,2}.log
+├── poc/{file_id}/
+│   ├── document.json                        # Docling export
+│   ├── chunks.jsonl                         # 청크 + (선택적) embedding
+│   └── images/*.png, *_thumb.png            # 그림/표 이미지
+├── legacy/
+│   ├── manuals_v2_summary.json              # Step1 통계 스냅샷
+│   ├── manuals_v2_1robot_{unique,duplicates}.jsonl
+│   ├── manuals_v2_reprocess_{state.json,log}
+│   ├── chunk_postprocess_*.json
+│   └── 2_sensor_*.{json,csv,txt}            # 과거 sensor 파이프라인
+└── (Step3/Step4는 미구현 — qa-agent가 작성 예정, 같은 규칙 적용)
 ```
 
 ### 참조 문서
@@ -314,14 +385,14 @@ workspaces/docs-agent/
 **Q2. Qwen 서버가 죽어 있으면?**
 → Step2는 `V2_EMBED=0` 기본이라 영향 없습니다. Step3 임베딩 단계에서만 필요하며, 실행 전 `curl http://182.224.6.147:11434/api/tags`로 `qwen3-embedding:8b` 존재 확인 필수.
 
-**Q3. `v2_poc/{file_id}` 폴더를 지우면?**
+**Q3. `reports/manuals-v2/poc/{file_id}` 폴더를 지우면?**
 → `state.json`은 `done`으로 남아있어 해당 파일은 재처리되지 않습니다. 강제 재처리하려면 `state.json`에서 해당 md5 항목 삭제 후 재실행하세요.
 
 **Q4. 중간에 프로세스가 죽었는지 확인하려면?**
 → `manuals_v2_step2.log`의 마지막 타임스탬프와 `manuals_v2_step2_state.json`의 `updated_at`을 비교. 5분 이상 진행이 없으면 중단된 것으로 간주 가능. TaskList로 `b57b0lazn` 같은 background task ID를 확인해도 됩니다.
 
 **Q5. Step3 임베딩 배치는 어떻게 시작하나요?**
-→ 아직 미구현입니다. `manuals_v2_parse_docling.embed_texts()`를 재사용해 `v2_poc/*/chunks.jsonl`을 순회하며 `embedding` 필드를 채우는 `manuals_v2_step3_embed.py`를 새로 작성하는 것이 가장 빠릅니다. state.json/log 2파일 구조는 Step2와 동일하게 유지하세요(부서장 체크포인트 규칙).
+→ 아직 미구현입니다. `manuals_v2_parse_docling.embed_texts()`를 재사용해 `reports/manuals-v2/poc/*/chunks.jsonl`을 순회하며 `embedding` 필드를 채우는 `manuals_v2_step3_embed.py`를 `workspaces/docs-agent/`에 작성하세요. state/log는 `reports/manuals-v2/state/manuals_v2_step3_state.json` + `manuals_v2_step3.log`로 통일. 부서장 체크포인트 규칙(state.json+log 2파일 재개 가능 구조) 준수.
 
 **Q6. 보고 형식은?**
 → `feedback_graphrag_reporting.md` 준수: MAX에 3줄 요약 + state/log 경로, 인라인 덤프 금지. 단계 전환 시 `report_progress`, 완료 시 `report_complete` + `task_id`.
@@ -337,14 +408,18 @@ workspaces/docs-agent/
 
 **읽기+쓰기 허용 (manuals-v2 파이프라인 작업 범위)**
 ```
+# 실행 파일 (docs-agent 워크스페이스 고정)
 workspaces/docs-agent/manuals_v2_*.py
 workspaces/docs-agent/manuals_v2_step*_state.json
 workspaces/docs-agent/manuals_v2_step*.log
 workspaces/docs-agent/manuals_v2_step*.stdout.log
-workspaces/docs-agent/v2_poc/                # 산출물 디렉토리 전체
+workspaces/docs-agent/v2_poc/                # 파이프라인 중간 산출물 (코드 생성물)
 workspaces/docs-agent/manuals_v2_*_extract.jsonl
 workspaces/docs-agent/manuals_v2_*_classification.csv
 workspaces/docs-agent/manuals_v2_summary.json
+
+# 산출물 영역 (부서장 보고/분석물 — 전부 여기)
+reports/manuals-v2/                          # qa-agent가 생성/관리
 ```
 
 **읽기 전용 (참조용, 수정 금지)**
@@ -355,25 +430,45 @@ workspaces/docs-agent/manuals_v2_handoff.md  # 이 문서
 workspaces/docs-agent/CLAUDE.md              # docs-agent 설정
 ```
 
-### qa-agent 자체 산출물 경로
-qa-agent가 만드는 검증 리포트, 쿼리셋, MRR 결과 JSON 등은 **반드시** 본인 워크스페이스에 생성:
-```
-workspaces/qa-agent/manuals_v2_eval_*.py       # 검증 러너
-workspaces/qa-agent/manuals_v2_queryset.jsonl  # 쿼리셋
-workspaces/qa-agent/manuals_v2_mrr_result.json # 결과
-workspaces/qa-agent/manuals_v2_eval.log        # 실행 로그
-```
-docs-agent 파이프라인 경로(`workspaces/docs-agent/`)에 검증용 산출물 섞지 말 것.
+### 산출물 전면 집중화 — `reports/manuals-v2/` (부서장 지시 2026-04-12, 용량 이슈)
 
-### 공용 최종 산출물 (부서장 보고용)
+`workspaces/`는 git 커밋 대상이므로, 데이터·산출물·체크포인트·로그·중간 산출물·분석 결과·리포트 HTML은 **모두** gitignored인 `reports/manuals-v2/` 아래에 둘 것. qa-agent 자체 산출물도 `workspaces/qa-agent/`가 아닌 `reports/manuals-v2/`에 쌓는다.
+
+기 생성 디렉토리 (이동 완료):
 ```
-reports/manuals-v2/                           # 디렉토리는 qa-agent가 생성
-  ├── step2_summary_YYYYMMDD.html             # Step2 완료 리포트
-  ├── step3_embedding_summary_YYYYMMDD.html   # Step3 완료 리포트
-  ├── mrr_eval_report_YYYYMMDD.html           # 최종 검증 리포트
-  └── mrr_eval_queryset.jsonl                 # 공개 쿼리셋 스냅샷
+reports/manuals-v2/
+  ├── extract/     # Step1 출력 jsonl
+  ├── classify/    # 카테고리 분류 CSV
+  ├── state/       # state.json, ckpt, log
+  ├── poc/         # Docling 파싱 산출물 (file_id 디렉토리)
+  └── legacy/      # 과거 작업물
 ```
-Cloudflare URL로 보고 시 `agent.mes-wta.com/{파일명(확장자 제외)}` 형식.
+
+qa-agent가 추가로 사용할 권장 하위 디렉토리:
+```
+reports/manuals-v2/
+  ├── pipeline/                                # 단계 완료 리포트
+  │   ├── step2_summary_YYYYMMDD.html
+  │   ├── step2_state_snapshot_YYYYMMDD.json   # 보고 시점 state 스냅샷
+  │   ├── step3_embedding_summary_YYYYMMDD.html
+  │   └── step4_index_summary_YYYYMMDD.html
+  ├── qa/                                      # 검증 산출물
+  │   ├── queryset_YYYYMMDD.jsonl
+  │   ├── mrr_eval_report_YYYYMMDD.html
+  │   ├── mrr_eval_raw_YYYYMMDD.json
+  │   └── failure_cases_YYYYMMDD.md
+  ├── ocr/                                     # OCR 품질 분석
+  │   ├── low_quality_list_YYYYMMDD.csv
+  │   └── reprocess_plan_YYYYMMDD.md
+  └── issues/                                  # 오류/경고 집계
+      └── color_space_errors_YYYYMMDD.log
+```
+
+**핵심 규칙**
+- `workspaces/docs-agent/`에는 **.py 스크립트와 handoff.md만** 둔다. 데이터는 절대 금지.
+- 파이프라인 스크립트(`manuals_v2_parse_docling.py`·`manuals_v2_step2_parse.py`)의 경로 상수는 이미 `reports/manuals-v2/`로 업데이트됨.
+- Step3/4를 새로 작성할 때도 동일 규칙: 코드는 `workspaces/docs-agent/`, state·log·산출물은 `reports/manuals-v2/state/` 혹은 `reports/manuals-v2/{subdir}/`.
+- Cloudflare URL: `agent.mes-wta.com/manuals-v2/{상대경로}` (디렉토리 라우팅은 admin-agent 확인).
 
 ### 임시 파일 / 캐시 위치
 
