@@ -966,3 +966,5 @@
 {"ts": "2026-04-12 15:33:08", "direction": "inbound", "user": "boss", "text": "알겟지 이제 건수 할당해서 각에이전트한테 주면 무조건 따라서시행하는 스킬로 만들어져야만해. 명심해"}
 {"ts": "2026-04-12 15:33:18", "direction": "outbound", "user": "MAX", "text": "👑 명심하겠습니다. 건수만 할당하면 어떤 에이전트든 동일한 결과를 내는 완전 표준화된 스킬이 목표입니다. crafter+docs 협의 결과 나오면 그 기준으로 검증하겠습니다."}
 {"ts": "2026-04-12 16:19:31", "direction": "inbound", "user": "boss", "text": "아직도 미 완료?"}
+{"ts": "2026-04-12 16:20:09", "direction": "outbound", "user": "MAX", "text": "👑 crafter, docs-agent 둘 다 온라인 상태입니다. 지금 진행 현황 확인 요청했습니다. 답변 오는 대로 바로 알려드리겠습니다."}
+{"ts": "2026-04-12 16:20:17", "direction": "outbound", "user": "MAX", "text": "👑 현황:\n• docs-agent → crafter에게 피드백 5건 전달 완료 (관계 0건 원인, 엔티티/관계 스키마, 윈도우 표준화, MRR 쿼리셋, Neo4j 라벨)\n• crafter가 전용 프롬프트 + SKILL.md 업데이트 작업 중\n• docs-agent는 보완본 도착하면 즉시 검증 예정\n\ncrafter 작업 완료 대기 중입니다."}
