@@ -1,197 +1,92 @@
 """
-manuals-v2 PoC10 GraphRAG 파이프라인 (issue-manager 운영)
+manuals-v2 PoC10 GraphRAG 파이프라인 (issue-manager)
+원본: workspaces/db-manager/cm-graphrag-pipeline.py (Phase4_CM 383건)
+변경: 레이블 Phase4_CM → ManualsV2_PoC10_ISSUE, 입력 Confluence→chunks.jsonl, think:False 추가
 
-목적
-    reports/manuals-v2/poc/{file_id}/chunks.jsonl 의 사전 청크된 텍스트를
-    qwen3.5:35b-a3b 로 엔티티/관계 추출 → Neo4j(bolt://localhost:7688) 에
-    :ManualV2_PoC10_ISSUE 레이블로 MERGE 적재. 기존 Phase* PoC 노드와 완전 분리.
-
-참조 파이프라인
-    workspaces/db-manager/cm-graphrag-pipeline.py  (Phase4_CM 패턴)
-    workspaces/db-manager/manual-graphrag-test.py  (Phase5_Manual 패턴)
-
-실행
-    python graphrag_poc10_pipeline.py --dry 1_robot_2d70fa79608e 1_robot_54fdb56329f0
-    python graphrag_poc10_pipeline.py --only 1_robot_2d70fa79608e 1_robot_54fdb56329f0
-    python graphrag_poc10_pipeline.py                         # PoC10 전체, 작은 순
-    python graphrag_poc10_pipeline.py --max-windows 20        # 파일당 윈도우 상한
-
-교차검증 고정 조건 (qa-agent 와 동일)
-    - 입력    : reports/manuals-v2/poc/{file_id}/chunks.jsonl (PoC10)
-    - LLM     : qwen3.5:35b-a3b, temperature=0
-    - 윈도우  : 2000자 (concat 후 2000자 슬라이딩, overlap 0)
-    - 스키마  : 10 node type / 11 rel type (cm-graphrag-pipeline 그대로)
-    - 속성    : _id, _source_id, _run_id, _corpus='manuals_v2', _lang
-    - 레이블  : ManualV2_PoC10_ISSUE  (qa-agent는 ManualV2_PoC10_QA)
-
-체크포인트
-    reports/manuals-v2/work/graphrag_poc10_state.json  (file_id × window_idx)
-    reports/manuals-v2/work/graphrag_poc10.log
+실행:
+  python graphrag_poc10_pipeline.py                    # PoC10 전체 (graph-only)
+  python graphrag_poc10_pipeline.py --test 2           # 첫 2건만
+  python graphrag_poc10_pipeline.py --dry              # LLM/Neo4j 없이 건수만 확인
 """
-from __future__ import annotations
-
-import argparse
-import hashlib
-import json
-import logging
-import re
-import sys
-import time
-from datetime import datetime, timezone, timedelta
+import sys, os, json, re, time, hashlib, logging, argparse
 from pathlib import Path
 
 import requests
 
-sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+sys.stdout.reconfigure(encoding='utf-8', errors='replace')
 
-# ── 경로 ────────────────────────────────────────────────────────────────
-REPO = Path("C:/MES/wta-agents")
-POC_DIR = REPO / "reports" / "manuals-v2" / "poc"
-REPORTS = REPO / "reports" / "manuals-v2"
-WORK_DIR = REPORTS / "work"
-STATE_PATH = WORK_DIR / "graphrag_poc10_issue_state.json"
-LOG_PATH = WORK_DIR / "graphrag_poc10_issue.log"
-REPROCESS_STATE = REPORTS / "legacy" / "manuals_v2_reprocess_state.json"
-NEO4J_ENV = REPO / "workspaces" / "research-agent" / "neo4j-poc.env"
+# ── 설정 (cm-graphrag-pipeline.py 원본 그대로, 경로만 변경) ──────────────
+POC_DIR       = Path('C:/MES/wta-agents/reports/manuals-v2/poc')
+PROGRESS_FILE = Path('C:/MES/wta-agents/reports/manuals-v2/work/graphrag_poc10_issue_progress.json')
+REPROCESS_STATE = Path('C:/MES/wta-agents/reports/manuals-v2/legacy/manuals_v2_reprocess_state.json')
 
-WORK_DIR.mkdir(parents=True, exist_ok=True)
+OLLAMA_BASE   = 'http://182.224.6.147:11434'
+EXTRACT_MODEL = 'qwen3.5:35b-a3b'                     # 원본 동일
+CHUNK_SIZE    = 800                                    # 원본 동일
+CHUNK_OVERLAP = 100                                    # 원본 동일
 
-# ── 모델/서버 ───────────────────────────────────────────────────────────
-OLLAMA_BASE = "http://182.224.6.147:11434"
-EXTRACT_MODEL = "qwen3.5:35b-a3b"
-WINDOW_SIZE = 2000
-NEO4J_URI = "bolt://localhost:7688"
-TEAM_LABEL = "ManualsV2_PoC10_ISSUE"      # MAX 지정 — qa-agent는 _QA
-BASE_LABEL = "ManualsV2Entity"            # 스킬 M10 — 공용 manuals-v2 라벨
-ID_PREFIX = "mv2i"
-TEAM_NAME = "issue-manager"
+# ── 변경점: 레이블 / ID prefix ──────────────────────────────────────────
+LABEL         = 'ManualsV2_PoC10_ISSUE'                # 원본: Phase4_CM
+ID_PREFIX     = 'mv2i'                                 # 원본: cm4
 
-# cm-graphrag-pipeline 기본 10/11 + 확정판 Step 5B Figure/Table/Diagram 추가
-VALID_NODE_TYPES = {
-    "Customer", "Equipment", "Product", "Component", "Process",
-    "Issue", "Resolution", "Person", "Tool", "Manual",
-    "Figure", "Table", "Diagram",
-}
-VALID_REL_TYPES = {
-    "OWNS", "HAS_ISSUE", "SIMILAR_TO", "RESOLVED_BY",
-    "INVOLVES_COMPONENT", "USES_COMPONENT", "INVOLVED_IN",
-    "HAS_SUBPROCESS", "USES_TOOL", "MAINTAINS", "DOCUMENTS",
-    "BELONGS_TO", "REFERENCES", "DEPICTS",
-}
+NEO4J_ENV = Path('C:/MES/wta-agents/workspaces/research-agent/neo4j-poc.env')
+NEO4J_PASS = ''
+for line in NEO4J_ENV.read_text(encoding='utf-8').splitlines():
+    if line.startswith('NEO4J_AUTH=neo4j/'):
+        NEO4J_PASS = line.split('/', 1)[1].strip()
+        break
 
-KST = timezone(timedelta(hours=9))
+# ── 원본 그대로: 노드/관계 타입 ──────────────────────────────────────────
+VALID_NODE_TYPES = {'Customer','Equipment','Product','Component','Process',
+                    'Issue','Resolution','Person','Tool','Manual'}
+VALID_REL_TYPES  = {'OWNS','HAS_ISSUE','SIMILAR_TO','RESOLVED_BY',
+                    'INVOLVES_COMPONENT','USES_COMPONENT','INVOLVED_IN',
+                    'HAS_SUBPROCESS','USES_TOOL','MAINTAINS','DOCUMENTS'}
 
-# ── 로깅 ────────────────────────────────────────────────────────────────
 logging.basicConfig(
     level=logging.INFO,
-    format="[graphrag-poc10] %(asctime)s %(message)s",
-    datefmt="%H:%M:%S",
+    format='[mv2-graphrag] %(asctime)s %(message)s',
+    datefmt='%H:%M:%S',
     handlers=[
         logging.StreamHandler(sys.stdout),
-        logging.FileHandler(LOG_PATH, encoding="utf-8"),
-    ],
+        logging.FileHandler('C:/MES/wta-agents/reports/manuals-v2/work/graphrag_poc10_issue.log',
+                            encoding='utf-8'),
+    ]
 )
-log = logging.getLogger("graphrag-poc10")
+log = logging.getLogger('mv2-graphrag')
+
+# ── 진행 상태 (원본 그대로) ──────────────────────────────────────────────
+def load_progress(path: Path) -> dict:
+    if path.exists():
+        with open(path, encoding='utf-8') as f:
+            return json.load(f)
+    return {'graph_done': [], 'failed': []}
+
+def save_progress(prog: dict, path: Path):
+    with open(path, 'w', encoding='utf-8') as f:
+        json.dump(prog, f, ensure_ascii=False, indent=2)
 
 
-# ── 유틸 ────────────────────────────────────────────────────────────────
-def now_kst() -> str:
-    return datetime.now(KST).strftime("%Y-%m-%d %H:%M:%S")
+# ── 유틸: 텍스트 청킹 (원본 그대로) ─────────────────────────────────────
+def chunk_text(text: str) -> list[str]:
+    text = text.strip()
+    if not text:
+        return []
+    chunks, start = [], 0
+    while start < len(text):
+        end = start + CHUNK_SIZE
+        chunks.append(text[start:end])
+        if end >= len(text):
+            break
+        start = end - CHUNK_OVERLAP
+    return chunks
 
 
-def load_neo4j_password() -> str:
-    for raw in NEO4J_ENV.read_text(encoding="utf-8").splitlines():
-        if raw.startswith("NEO4J_AUTH=neo4j/"):
-            return raw.split("/", 1)[1].strip()
-    raise RuntimeError("NEO4J_AUTH missing")
-
-
-def load_poc10_ids() -> list[str]:
-    data = json.loads(REPROCESS_STATE.read_text(encoding="utf-8"))
-    return [it["id"] for it in data.get("items", [])]
-
-
-def load_state() -> dict:
-    if STATE_PATH.exists():
-        return json.loads(STATE_PATH.read_text(encoding="utf-8"))
-    return {
-        "task_id": "tq-issue-manager-d3fe53",
-        "team": TEAM_NAME,
-        "team_label": TEAM_LABEL,
-        "base_label": BASE_LABEL,
-        "model": EXTRACT_MODEL,
-        "window_size": WINDOW_SIZE,
-        "created_at": now_kst(),
-        "items": {},
-    }
-
-
-def save_state(state: dict) -> None:
-    state["last_update"] = now_kst()
-    STATE_PATH.write_text(json.dumps(state, ensure_ascii=False, indent=2), encoding="utf-8")
-
-
-def safe_id(raw: str) -> str:
-    return re.sub(r"[^a-zA-Z0-9_]", "_", raw)[:80]
-
-
-# ── chunks.jsonl 로더 + 윈도우 생성 ───────────────────────────────────────
-def read_chunks(file_id: str) -> tuple[str, list[dict]]:
-    path = POC_DIR / file_id / "chunks.jsonl"
-    if not path.exists():
-        raise FileNotFoundError(path)
-    items: list[dict] = []
-    with path.open(encoding="utf-8") as fp:
-        for line in fp:
-            obj = json.loads(line)
-            text = (obj.get("content") or obj.get("text") or "").strip()
-            if not text:
-                continue
-            items.append({
-                "chunk_id": obj.get("chunk_id", ""),
-                "lang": obj.get("lang", "unknown"),
-                "section_path": obj.get("section_path", ""),
-                "text": text,
-            })
-    langs = [it["lang"] for it in items if it["lang"]]
-    lang = max(set(langs), key=langs.count) if langs else "unknown"
-    return lang, items
-
-
-def build_windows(chunks: list[dict], size: int) -> list[dict]:
-    """청크 순서대로 이어 붙여 2000자 윈도우로 분할"""
-    windows: list[dict] = []
-    buf: list[str] = []
-    buf_ids: list[str] = []
-    buf_len = 0
-    for ch in chunks:
-        text = ch["text"]
-        if buf_len + len(text) + 2 > size and buf:
-            windows.append({
-                "idx": len(windows),
-                "text": "\n\n".join(buf)[:size],
-                "chunk_ids": buf_ids.copy(),
-            })
-            buf.clear()
-            buf_ids.clear()
-            buf_len = 0
-        buf.append(text)
-        buf_ids.append(ch["chunk_id"])
-        buf_len += len(text) + 2
-    if buf:
-        windows.append({
-            "idx": len(windows),
-            "text": "\n\n".join(buf)[:size],
-            "chunk_ids": buf_ids.copy(),
-        })
-    return windows
-
-
-# ── LLM 엔티티 추출 ─────────────────────────────────────────────────────
+# ── 엔티티/관계 추출 (원본 그대로 + think:False 버그픽스) ───────────────
 EXTRACT_PROMPT = """다음 기술 문서에서 엔티티와 관계를 추출하세요.
 
-엔티티 타입: Equipment(장비), Component(부품), Process(공정/작업), Issue(문제/이슈), Person(담당자), Customer(고객사), Manual(매뉴얼), Product(제품), Resolution(조치), Tool(공구), Figure(그림), Table(표), Diagram(도식)
-관계 타입: OWNS, HAS_ISSUE, SIMILAR_TO, RESOLVED_BY, INVOLVES_COMPONENT, USES_COMPONENT, INVOLVED_IN, HAS_SUBPROCESS, USES_TOOL, MAINTAINS, DOCUMENTS, BELONGS_TO, REFERENCES, DEPICTS
+엔티티 타입: Equipment(장비), Component(부품), Process(공정/작업), Issue(문제/이슈), Person(담당자), Customer(고객사), Manual(매뉴얼)
+관계 타입: OWNS(보유), HAS_ISSUE(문제발생), USES_COMPONENT(부품사용), INVOLVED_IN(관련), HAS_SUBPROCESS(하위공정), MAINTAINS(유지보수), DOCUMENTS(문서화)
 
 JSON 형식으로만 응답하세요:
 {
@@ -202,234 +97,191 @@ JSON 형식으로만 응답하세요:
 문서:
 """
 
-
 def extract_entities(text: str, title: str) -> dict:
+    """LLM으로 엔티티/관계 추출 (원본 동일, think:False 추가)"""
     if len(text) < 50:
-        return {"entities": [], "relations": []}
-    prompt = EXTRACT_PROMPT + f"제목: {title}\n\n{text[:WINDOW_SIZE]}"
+        return {'entities': [], 'relations': []}
+    truncated = text[:2000]
+    prompt = EXTRACT_PROMPT + f"제목: {title}\n\n{truncated}"
     try:
         r = requests.post(
-            f"{OLLAMA_BASE}/api/generate",
+            f'{OLLAMA_BASE}/api/generate',
             json={
-                "model": EXTRACT_MODEL,
-                "prompt": prompt,
-                "stream": False,
-                "think": False,   # qwen3.5:35b-a3b 사고모드 비활성화 (num_predict 절약, 재현성↑)
-                "options": {"num_predict": 2048, "temperature": 0.0},
+                'model': EXTRACT_MODEL,
+                'prompt': prompt,
+                'stream': False,
+                'think': False,         # 추가: qwen3.5 사고모드 비활성화
+                'options': {'num_predict': 600, 'temperature': 0.1},
             },
-            timeout=300,
+            timeout=90,
         )
-        if r.status_code != 200:
-            log.warning(f"LLM HTTP {r.status_code}")
-            return {"entities": [], "relations": []}
-        raw = r.json().get("response", "").strip()
-        match = re.search(r"\{.*\}", raw, re.DOTALL)
-        if not match:
-            return {"entities": [], "relations": []}
-        return json.loads(match.group())
-    except Exception as exc:
-        log.warning(f"extract error [{title[:30]}]: {exc}")
-        return {"entities": [], "relations": []}
+        if r.status_code == 200:
+            raw = r.json().get('response', '').strip()
+            match = re.search(r'\{.*\}', raw, re.DOTALL)
+            if match:
+                return json.loads(match.group())
+    except Exception as e:
+        log.warning(f'엔티티 추출 오류 [{title[:30]}]: {e}')
+    return {'entities': [], 'relations': []}
 
 
-# ── Neo4j 적재 ──────────────────────────────────────────────────────────
-def load_to_neo4j(driver, file_id: str, window_idx: int, lang: str,
-                  run_id: str, extracted: dict) -> tuple[int, int]:
-    entities = extracted.get("entities") or []
-    relations = extracted.get("relations") or []
+# ── Neo4j 적재 (원본 그대로, 레이블/ID만 변경) ──────────────────────────
+def load_to_neo4j(driver, file_id: str, title: str, extracted: dict):
+    """ManualsV2_PoC10_ISSUE 라벨로 Neo4j 병합 적재"""
+    entities = extracted.get('entities', [])
+    relations = extracted.get('relations', [])
     if not entities:
         return 0, 0
 
-    id_map: dict[str, str] = {}
-    node_count = 0
-    rel_count = 0
-    fid_key = safe_id(file_id)
+    id_map = {}
+    node_count, rel_count = 0, 0
 
     with driver.session() as s:
         for ent in entities:
-            etype = (ent.get("type") or "").strip()
-            if etype not in VALID_NODE_TYPES:
+            ent_type = ent.get('type', '')
+            if ent_type not in VALID_NODE_TYPES:
                 continue
-            orig_id = (ent.get("id") or "").strip()
+            orig_id = ent.get('id', '')
             if not orig_id:
                 continue
-            sid = f"{ID_PREFIX}_{fid_key}_{safe_id(orig_id)}"
-            id_map[orig_id] = sid
-            props = {
-                k: v for k, v in (ent.get("properties") or {}).items()
-                if v not in (None, "")
-            }
-            props.update({
-                "_id": sid,
-                "_source_id": file_id,
-                "_run_id": run_id,
-                "_corpus": "manuals_v2",
-                "source": "manuals_v2",          # 스킬 M10 alias
-                "_team": TEAM_NAME,
-                "_lang": lang,
-                "_window_idx": window_idx,
-            })
+            safe_id = f"{ID_PREFIX}_{file_id}_{re.sub(r'[^a-zA-Z0-9_]','_', orig_id)}"
+            id_map[orig_id] = safe_id
+            props = {k: v for k, v in (ent.get('properties') or {}).items()
+                     if v is not None and v != ''}
+            props.update({'_id': safe_id, '_source_id': file_id, '_corpus': 'manuals_v2'})
             try:
                 s.run(
-                    f"MERGE (n:{BASE_LABEL}:{TEAM_LABEL}:{etype} {{_id: $_id}}) "
+                    f"MERGE (n:{LABEL}:{ent_type} {{_id: $_id}}) "
                     f"SET n += $props, n.name = $name",
-                    _id=sid, props=props, name=ent.get("name") or orig_id,
+                    _id=safe_id, props=props, name=ent.get('name', orig_id)
                 )
                 node_count += 1
-            except Exception as exc:
-                log.debug(f"node merge fail: {exc}")
+            except Exception as e:
+                log.debug(f'노드 생성 오류: {e}')
 
         for rel in relations:
-            src = id_map.get((rel.get("source") or "").strip())
-            tgt = id_map.get((rel.get("target") or "").strip())
-            rtype = (rel.get("type") or "").strip()
+            src = id_map.get(rel.get('source', ''))
+            tgt = id_map.get(rel.get('target', ''))
+            rtype = rel.get('type', '')
             if not src or not tgt or rtype not in VALID_REL_TYPES:
                 continue
             try:
                 s.run(
-                    f"MATCH (a:{TEAM_LABEL} {{_id: $src}}), "
-                    f"(b:{TEAM_LABEL} {{_id: $tgt}}) "
-                    f"MERGE (a)-[r:{rtype}]->(b) "
-                    f"SET r._run_id=$rid, r._team=$team, r._source_id=$fid",
-                    src=src, tgt=tgt, rid=run_id, team=TEAM_NAME, fid=file_id,
+                    f"MATCH (a:{LABEL} {{_id: $src}}), (b:{LABEL} {{_id: $tgt}}) "
+                    f"MERGE (a)-[r:{rtype}]->(b)",
+                    src=src, tgt=tgt
                 )
                 rel_count += 1
-            except Exception as exc:
-                log.debug(f"rel merge fail: {exc}")
+            except Exception as e:
+                log.debug(f'관계 생성 오류: {e}')
 
     return node_count, rel_count
 
 
-def count_label(driver, file_id: str | None = None) -> dict:
-    q_nodes = f"MATCH (n:{TEAM_LABEL}) RETURN count(n) AS c"
-    q_rels = (f"MATCH (a:{TEAM_LABEL})-[r]->(b:{TEAM_LABEL}) "
-              f"RETURN count(r) AS c")
-    out: dict = {}
-    with driver.session() as s:
-        out["total_nodes"] = s.run(q_nodes).single()["c"]
-        out["total_rels"] = s.run(q_rels).single()["c"]
-        if file_id:
-            out["file_nodes"] = s.run(
-                f"MATCH (n:{TEAM_LABEL}) WHERE n._source_id=$fid RETURN count(n) AS c",
-                fid=file_id,
-            ).single()["c"]
-    return out
-
-
-# ── 메인 ────────────────────────────────────────────────────────────────
-def main() -> None:
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--only", nargs="*", help="특정 file_id만")
-    parser.add_argument("--dry", nargs="*", help="인덱싱 없이 윈도우 생성만")
-    parser.add_argument("--max-windows", type=int, default=None)
-    parser.add_argument("--skip-huge", action="store_true",
-                        help="1000청크 초과 파일 제외")
-    args = parser.parse_args()
-
-    log.info(
-        f"=== graphrag_poc10_pipeline start model={EXTRACT_MODEL} "
-        f"base={BASE_LABEL} team={TEAM_LABEL} ==="
-    )
-    dry_targets = args.dry
-    targets = args.only or dry_targets or load_poc10_ids()
-
-    inventory: list[tuple[str, int, int, str]] = []
-    for fid in targets:
-        try:
-            lang, chunks = read_chunks(fid)
-        except FileNotFoundError:
-            log.warning(f"SKIP {fid}: chunks.jsonl missing")
+# ── 입력 로더 (변경점: Confluence→chunks.jsonl) ──────────────────────────
+def load_poc10_targets() -> list[dict]:
+    """PoC10 file_id + 텍스트 로드. 원본의 page_dir/page-text.txt 대신 chunks.jsonl 사용"""
+    state = json.loads(REPROCESS_STATE.read_text(encoding='utf-8'))
+    targets = []
+    for item in state.get('items', []):
+        fid = item['id']
+        chunks_path = POC_DIR / fid / 'chunks.jsonl'
+        if not chunks_path.exists():
+            log.warning(f'SKIP {fid}: chunks.jsonl 없음')
             continue
-        wins = build_windows(chunks, WINDOW_SIZE)
-        if args.skip_huge and len(chunks) > 1000:
-            log.info(f"SKIP {fid}: {len(chunks)} chunks (>1000)")
-            continue
-        if args.max_windows:
-            wins = wins[: args.max_windows]
-        inventory.append((fid, len(chunks), len(wins), lang))
-    inventory.sort(key=lambda x: x[1])
-
-    log.info(f"queue: {len(inventory)} file_ids")
-    for fid, nc, nw, lang in inventory:
-        log.info(f"  {fid}  chunks={nc}  windows={nw}  lang={lang}")
-
-    if dry_targets is not None:
-        log.info("dry run, no LLM/Neo4j")
-        return
-
-    # 연결
-    from neo4j import GraphDatabase
-    pw = load_neo4j_password()
-    driver = GraphDatabase.driver(NEO4J_URI, auth=("neo4j", pw))
-    driver.verify_connectivity()
-    log.info(f"neo4j pre-state: {count_label(driver)}")
-
-    run_id = f"run-{datetime.now(KST).strftime('%Y%m%d-%H%M%S')}"
-    state = load_state()
-    state["run_id"] = run_id
-    save_state(state)
-
-    for fid, n_chunks, n_windows, lang in inventory:
-        item = state["items"].setdefault(fid, {
-            "status": "pending", "done_windows": [], "nodes": 0, "rels": 0,
+        texts = []
+        with chunks_path.open(encoding='utf-8') as f:
+            for line in f:
+                obj = json.loads(line)
+                c = (obj.get('content') or obj.get('text') or '').strip()
+                if c:
+                    texts.append(c)
+        full_text = '\n\n'.join(texts)
+        targets.append({
+            'file_id': fid,
+            'title': f"{fid} ({item.get('lang', obj.get('lang', 'unknown'))})",
+            'text': full_text,
+            'n_chunks': len(texts),
         })
-        if item["status"] == "done":
-            log.info(f"SKIP {fid}: already done")
-            continue
-        item["status"] = "running"
-        item["n_chunks"] = n_chunks
-        item["n_windows"] = n_windows
-        item["lang"] = lang
-        item.setdefault("started_at", now_kst())
-        save_state(state)
-
-        lang2, chunks = read_chunks(fid)
-        windows = build_windows(chunks, WINDOW_SIZE)
-        if args.max_windows:
-            windows = windows[: args.max_windows]
-
-        t0 = time.time()
-        done_set = set(item.get("done_windows", []))
-        nodes_sum = item.get("nodes", 0)
-        rels_sum = item.get("rels", 0)
-        title = f"{fid} ({lang})"
-        for win in windows:
-            if win["idx"] in done_set:
-                continue
-            extracted = extract_entities(win["text"], title)
-            n, r = load_to_neo4j(driver, fid, win["idx"], lang, run_id, extracted)
-            nodes_sum += n
-            rels_sum += r
-            done_set.add(win["idx"])
-            item["done_windows"] = sorted(done_set)
-            item["nodes"] = nodes_sum
-            item["rels"] = rels_sum
-            save_state(state)
-            if win["idx"] % 5 == 0 or win["idx"] == len(windows) - 1:
-                log.info(
-                    f"  {fid} win {win['idx']+1}/{len(windows)} "
-                    f"nodes+={n} rels+={r} total={nodes_sum}/{rels_sum}"
-                )
-
-        item.update(
-            status="done",
-            elapsed_sec=round(time.time() - t0, 1),
-            ended_at=now_kst(),
-        )
-        save_state(state)
-        log.info(
-            f"DONE {fid} elapsed={item['elapsed_sec']}s "
-            f"nodes={nodes_sum} rels={rels_sum}"
-        )
-
-    state["status"] = "done" if all(
-        v["status"] == "done" for v in state["items"].values()
-    ) else "partial"
-    save_state(state)
-    log.info(f"neo4j post-state: {count_label(driver)}")
-    log.info(f"=== graphrag_poc10_pipeline end status={state['status']} ===")
-    driver.close()
+    # 작은 것부터
+    targets.sort(key=lambda t: t['n_chunks'])
+    return targets
 
 
-if __name__ == "__main__":
-    main()
+# ── 메인 (원본 구조 유지, 입력부만 변경) ────────────────────────────────
+parser = argparse.ArgumentParser()
+parser.add_argument('--test', type=int, default=0, help='처음 N건만 처리')
+parser.add_argument('--dry', action='store_true', help='LLM/Neo4j 없이 건수만')
+args = parser.parse_args()
+
+targets = load_poc10_targets()
+if args.test > 0:
+    targets = targets[:args.test]
+    log.info(f'테스트 모드: {len(targets)}건')
+
+log.info(f'PoC10 대상: {len(targets)}건')
+for t in targets:
+    # 원본 cm-graphrag의 chunk_text로 800자 청킹 → 각 청크에 extract_entities
+    chunks = chunk_text(t['text'])
+    log.info(f"  {t['file_id']}  원본청크={t['n_chunks']}  텍스트={len(t['text']):,}자  윈도우(800)={len(chunks)}")
+
+if args.dry:
+    log.info('dry run, exit')
+    sys.exit(0)
+
+# Neo4j 연결
+from neo4j import GraphDatabase
+driver = GraphDatabase.driver('bolt://localhost:7688', auth=('neo4j', NEO4J_PASS))
+driver.verify_connectivity()
+log.info('Neo4j 연결 완료')
+
+# 진행 상태
+prog = load_progress(PROGRESS_FILE)
+graph_done_set = set(prog.get('graph_done', []))
+
+total = len(targets)
+total_nodes = 0
+total_rels = 0
+
+log.info(f'처리 시작: {total}건 (그래프완료:{len(graph_done_set)})')
+
+for i, t in enumerate(targets):
+    file_id = t['file_id']
+    title = t['title']
+    full_text = t['text']
+
+    if file_id in graph_done_set:
+        log.info(f'[{i+1}/{total}] {file_id} — 이미 완료, 건너뜀')
+        continue
+
+    log.info(f'[{i+1}/{total}] {file_id} — {title}')
+
+    # 원본 패턴 그대로: full_text → chunk_text(800자) → 각 청크에 extract → load_to_neo4j
+    chunks = chunk_text(full_text)
+    file_nodes = 0
+    file_rels = 0
+    t0 = time.time()
+
+    for ci, chunk in enumerate(chunks):
+        extracted = extract_entities(chunk, title)
+        nc, rc = load_to_neo4j(driver, file_id, title, extracted)
+        file_nodes += nc
+        file_rels += rc
+        if ci % 10 == 0 or ci == len(chunks) - 1:
+            log.info(f'  chunk {ci+1}/{len(chunks)} nodes+={nc} rels+={rc} subtotal={file_nodes}/{file_rels}')
+
+    elapsed = round(time.time() - t0, 1)
+    total_nodes += file_nodes
+    total_rels += file_rels
+    log.info(f'  DONE {file_id} elapsed={elapsed}s nodes={file_nodes} rels={file_rels}')
+
+    graph_done_set.add(file_id)
+    prog['graph_done'] = sorted(graph_done_set)
+    save_progress(prog, PROGRESS_FILE)
+
+# 최종 통계
+with driver.session() as s:
+    final_nodes = s.run(f"MATCH (n:{LABEL}) RETURN count(n) AS c").single()['c']
+    final_rels = s.run(f"MATCH (a:{LABEL})-[r]->(b:{LABEL}) RETURN count(r) AS c").single()['c']
+log.info(f'=== 최종: 노드={final_nodes} 관계={final_rels} (MERGE 건수: {total_nodes}/{total_rels}) ===')
+driver.close()
