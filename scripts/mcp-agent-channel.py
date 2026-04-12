@@ -280,14 +280,42 @@ def wait_for_message(max_wait: int = 60) -> str:
     return "(대기 시간 초과, 수신 메시지 없음. 다시 wait_for_message를 호출하세요.)"
 
 
+_ALLOWED_MSG_TYPES = {
+    "report_complete",
+    "report_progress",
+    "report_blocked",
+    "reply",
+    "request",
+}
+
+
 @mcp.tool()
-def send_message(to: str, message: str) -> str:
+def send_message(
+    to: str,
+    message: str,
+    msg_type: str = "reply",
+    task_id: str | None = None,
+) -> str:
     """에이전트 또는 슬랙에 메시지를 전송합니다.
 
     Args:
         to: 수신자. 에이전트ID(MAX, nc-manager 등) 또는 "slack"(담당 슬랙 채널로 전송)
         message: 전송할 내용
+        msg_type: 메시지 타입 (필수 명시 권장).
+            - report_complete: 받은 작업을 완료했을 때 (task_id 필수)
+            - report_progress: 진행 중간 보고 (task_id 필수)
+            - report_blocked: 막힘/승인 대기 (task_id 필수)
+            - reply: 단순 답변/질의 (task_id 불필요, 기본값)
+            - request: 다른 팀원에게 작업 요청 (새 task 자동 생성)
+        task_id: 작업큐 task_id. report_* 유형일 때 필수.
     """
+    if msg_type not in _ALLOWED_MSG_TYPES:
+        raise ValueError(
+            f"잘못된 msg_type={msg_type}. 허용값: {sorted(_ALLOWED_MSG_TYPES)}"
+        )
+    if msg_type.startswith("report_") and not task_id:
+        raise ValueError(f"msg_type={msg_type}에는 task_id가 필수입니다.")
+
     # 웹채팅 응답 라우팅
     if to.startswith("web-chat:"):
         request_id = to.split(":", 1)[1]
@@ -313,13 +341,17 @@ def send_message(to: str, message: str) -> str:
             return "슬랙 채널 미설정"
     else:
         # 대시보드를 통해 에이전트에 전송
-        result = _http_post(f"{DASHBOARD_URL}/api/send", {
+        payload = {
             "from": AGENT_ID,
             "to": to,
             "content": message,
-        })
+            "msg_type": msg_type,
+        }
+        if task_id:
+            payload["task_id"] = task_id
+        result = _http_post(f"{DASHBOARD_URL}/api/send", payload)
         if result:
-            return f"전송 완료 → {to} (id: {result.get('id', '?')})"
+            return f"전송 완료 → {to} (id: {result.get('id', '?')}, type: {msg_type})"
         return f"전송 실패 → {to}"
 
 

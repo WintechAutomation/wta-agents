@@ -336,6 +336,103 @@ def api_stats_agents():
 # 에이전트별 수신 대기 메시지 큐
 agent_inbox = {}  # {agent_id: [msg, msg, ...]}
 
+# 작업큐 msg_type 분기 훅 (B+, 2026-04-12)
+_ALLOWED_MSG_TYPES = {
+    "report_complete",
+    "report_progress",
+    "report_blocked",
+    "reply",
+    "request",
+}
+
+
+def _dispatch_task_by_msg_type(msg: dict):
+    """msg_type + task_id 기반으로 작업큐 상태를 명시적으로 갱신.
+
+    - report_complete: status=done, completed_at 기록
+    - report_progress: status=in_progress, last_report_at 갱신
+    - report_blocked: status=blocked, MAX 자동 forward
+    - reply: 로그만
+    - request: 수신자(to) 앞으로 새 task 생성
+    """
+    try:
+        msg_type = (msg.get("msg_type") or "reply").strip()
+        if msg_type not in _ALLOWED_MSG_TYPES:
+            print(f"[msg-type] unknown msg_type={msg_type!r} from={msg.get('from')}")
+            return
+        task_id = msg.get("task_id")
+        sender = msg.get("from")
+        receiver = msg.get("to")
+        content = msg.get("content", "") or ""
+
+        if msg_type == "reply":
+            return
+
+        if msg_type == "request":
+            # 수신자 앞으로 새 task 생성
+            tasks = _load_tasks()
+            now = now_kst()
+            new_task = {
+                "id": f"tq-{receiver}-{uuid.uuid4().hex[:6]}",
+                "agent": receiver,
+                "task": content[:100],
+                "message": content,
+                "status": "pending",
+                "priority": "medium",
+                "created_at": now,
+                "updated_at": now,
+                "last_report_at": None,
+                "completed_at": None,
+                "requested_by": sender,
+            }
+            tasks.append(new_task)
+            _save_tasks(tasks)
+            print(f"[msg-type] request → new task {new_task['id']} for {receiver} from {sender}")
+            return
+
+        # report_* 계열
+        if not task_id:
+            print(f"[msg-type] {msg_type} without task_id from={sender}")
+            return
+
+        tasks = _load_tasks()
+        matched = False
+        for t in tasks:
+            if t.get("id") == task_id:
+                now = now_kst()
+                t["updated_at"] = now
+                t["last_report_at"] = now
+                if msg_type == "report_complete":
+                    t["status"] = "done"
+                    t["completed_at"] = now
+                elif msg_type == "report_progress":
+                    t["status"] = "in_progress"
+                elif msg_type == "report_blocked":
+                    t["status"] = "blocked"
+                matched = True
+                break
+
+        if matched:
+            _save_tasks(tasks)
+            print(f"[msg-type] {msg_type} task={task_id} from={sender}")
+        else:
+            print(f"[msg-type] {msg_type} task_id={task_id} NOT FOUND (from={sender})")
+
+        # blocked → MAX 자동 forward
+        if msg_type == "report_blocked" and sender != "MAX":
+            fwd = {
+                "id": 0,
+                "from": "system",
+                "to": "MAX",
+                "content": f"[blocked] {sender} → task={task_id}\n{content[:500]}",
+                "type": "chat",
+                "msg_type": "reply",
+                "time": now_kst(),
+            }
+            agent_inbox.setdefault("MAX", []).append(fwd)
+    except Exception as e:
+        print(f"[msg-type] error: {e}")
+
 
 @app.route("/api/send", methods=["POST"])
 def api_send():
@@ -355,6 +452,8 @@ def api_send():
         "to": data.get("to", "all"),
         "content": data.get("content", ""),
         "type": data.get("type", "chat"),
+        "msg_type": data.get("msg_type", "reply"),
+        "task_id": data.get("task_id"),
         "time": now_kst(),
     }
 
@@ -362,6 +461,9 @@ def api_send():
     if len(message_history) > MAX_HISTORY:
         message_history.pop(0)
     save_log(msg)
+
+    # 작업큐 msg_type 분기 훅 (B+)
+    _dispatch_task_by_msg_type(msg)
 
     # 대상 에이전트 inbox에 추가
     target = msg["to"]

@@ -390,3 +390,7 @@ UnicodeDecodeError: 'utf-8' codec can't decode byte 0x98 in position 1057442: in
 [slack-bot] 07:26:35 Stopped receiving messages from a connection (session id: 23e1dfab-c3c3-4df8-8e6f-e19dc3203d4a)
 [slack-bot] 07:26:35 Connected to a new endpoint...
 [slack-bot] 07:26:36 Starting to receive messages from a new connection (session id: 5d0460a3-1e52-4903-8d81-2943b1a8477a)
+[slack-bot] 08:40:59 [수신] #제어-조한종 조한종: ag-grid 제대로적용된건지 확인해 화면에 그리드가 아예 안나옴 → control-agent
+[slack-bot] 08:41:00 직접 전송 완료 → control-agent:5616
+[slack-bot] 08:42:59 [응답시간] control-agent #제어-조한종: 1분 59초
+[slack-bot] 08:42:59 [슬랙 발신] #제어-조한종 ← control-agent: 원인 찾았습니다. AG-Grid v33부터 모듈을 명시적으로 등록해야 그리드가 렌더링됩니다. v32까지는 C

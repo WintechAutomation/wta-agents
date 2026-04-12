@@ -18,6 +18,30 @@ WTA 전사 멀티에이전트 시스템. Claude Code 기반, 텔레그램 통신
 3. 해당 에이전트에게 send_message로 위임
 4. 결과 검토 후 부서장에게 보고
 
+### send_message msg_type 규칙 (필수, 2026-04-12, B+)
+모든 `send_message` 호출 시 `msg_type` 파라미터 명시 의무:
+
+| msg_type | 용도 | task_id | 대시보드 동작 |
+|----------|------|---------|--------------|
+| `report_complete` | 받은 작업을 완료했을 때 | 필수 | 해당 task status=done, completed_at 기록 |
+| `report_progress` | 진행 중간 보고 | 필수 | status=in_progress, last_report_at 갱신 |
+| `report_blocked` | 막힘/승인 대기 | 필수 | status=blocked, MAX 자동 forward |
+| `reply` | 단순 답변/질의 (기본값) | 불필요 | 로그만 |
+| `request` | 다른 팀원에게 작업 요청 | 불필요 | 수신자 앞으로 새 task 자동 생성 |
+
+- MAX는 위임 시 작업큐에 task 등록 후, send_message는 `msg_type="request"` 또는 사전 등록된 task_id 포함 메시지로 보낸다
+- 팀원은 완료 보고 시 수신한 task_id를 `task_id` 파라미터에 그대로 echo + `msg_type="report_complete"`
+- 잘못된 msg_type은 MCP tool에서 ValueError → 즉시 실패 피드백
+- 예:
+  ```
+  send_message(
+      to="MAX",
+      message="[task:tq-crafter-7285f7] 재처리 10/10 완료",
+      msg_type="report_complete",
+      task_id="tq-crafter-7285f7",
+  )
+  ```
+
 ### 에이전트 참조 규칙 (전체 16개)
 | 키워드 | 에이전트 | 이모지 |
 |--------|---------|--------|

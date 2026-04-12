@@ -5093,22 +5093,58 @@
       "agent": "crafter",
       "task": "[작업큐 시스템 개선 — 부서장 승인]",
       "message": "[작업큐 시스템 개선 — 부서장 승인]\n\n2건 동시 지시. 우선순위 보통.\n\n## 1. 대시보드 API status 필터 버그 수정\n`/api/task-queue?agent=X&status=pending` 요청 시 pending만 반환되어야 하는데 현재 done 포함 전체가 반환됨.\n\n- 파일: `dashboard/app.py`\n- 엔드포인트: task-queue list\n- 조치: status 쿼리 파라미터를 실제 WHERE 조건에 반영\n- 검증: `curl \"http://localhost:5555/api/task-queue?agent=crafter&status=pending\"` 결과가 실제 pending만 포함하는지 확인\n\n## 2. 작업큐 자동 done 처리 훅\n팀원이 send_message로 완료 보고해도 task-queue가 자동 done 처리되지 않아 MAX가 수동 PUT 누락 시 pending 누적.\n\n설계 옵션 중 택 1 후 구현:\n- **A**: 대시보드 메시지 수신부에서 `[완료]`, `완료 보고`, `done` 등 키워드 감지 시 해당 에이전트의 가장 최근 in_progress/pending 작업을 자동 done\n- **B**: 팀원 send_message에 task_id 명시 규약 (예: `[task:tq-crafter-xxx] 완료`) → 정확히 매칭 done\n- **C**: MAX 세션 Stop hook에서 최근 완료 언급 감지 → done (MAX 전용 규율 강제)\n\n부서장 의도: **자동소거**이므로 A 또는 B가 맞음. B는 안정적이지만 에이전트 프롬프트 수정 필요. A는 프롬프트 변경 없이 가능하나 오탐 위험.\n\ncrafter가 A/B 중 추천안 + 구현 난이도 먼저 회신. 승인 후 착수.\n\n## 참고\n방금 쌓여있던 pending 9건(실제는 전부 오늘 manuals-v2 흐름 중 완료된 건)은 MAX가 수동 done 처리 완료.\n전체 104건 중 95건은 이미 done 상태인데 API 필터가 작동 안 해서 섞여 보였음 — 1번 수정하면 해결.",
-      "status": "pending",
+      "status": "done",
       "priority": "medium",
       "created_at": "2026-04-12 08:50:32",
-      "updated_at": "2026-04-12 08:50:32",
+      "updated_at": "2026-04-12 09:05:25",
       "last_report_at": null,
-      "completed_at": null
+      "completed_at": "2026-04-12 09:05:25"
     },
     {
       "id": "tq-crafter-7285f7",
       "agent": "crafter",
       "task": "[taskqueue system fix] 1) API status filter bug 2) auto-done hook design/impl (A/B pick + reply). boss approved.",
       "message": "",
-      "status": "pending",
+      "status": "done",
       "priority": "medium",
       "created_at": "2026-04-12 08:50:45",
-      "updated_at": "2026-04-12 08:50:45",
+      "updated_at": "2026-04-12 09:04:47",
+      "last_report_at": "2026-04-12 09:04:47",
+      "completed_at": "2026-04-12 09:04:47"
+    },
+    {
+      "id": "tq-crafter-afc97b",
+      "agent": "crafter",
+      "task": "[작업큐 개선 — 부서장 승인, 둘다 진행]",
+      "message": "[작업큐 개선 — 부서장 승인, 둘다 진행]\n\n1. 대시보드 재시작 완료. API 필터 검증 OK (pending 2건만 정상 반환).\n\n2. B안(task_id 명시 규약) **착수 승인**. 구현 시작.\n\n구현 범위 재확인:\n- dashboard/app.py `/api/send` 훅 20줄 추가 (정규식 `\\[task:(tq-[a-z-]+-[a-f0-9]+)\\]` + 완료 키워드 매칭 → status=done)\n- wta-agents CLAUDE.md 또는 각 팀원 CLAUDE.md에 1줄 규칙 추가 (\"수신 메시지에 [task:...] 태그 포함 시 완료 보고에 동일 태그 echo\")\n- MAX 프롬프트/CLAUDE.md에 \"위임 시 task_id prepend\" 규칙 추가\n\n완료 후 done 보고 — 보고 메시지에 `[task:tq-crafter-7285f7]` 태그 포함해서 자동 done 훅 자체도 검증할 것.",
+      "status": "done",
+      "priority": "medium",
+      "created_at": "2026-04-12 09:02:37",
+      "updated_at": "2026-04-12 09:05:26",
+      "last_report_at": null,
+      "completed_at": "2026-04-12 09:05:26"
+    },
+    {
+      "id": "tq-crafter-e85d55",
+      "agent": "crafter",
+      "task": "[task:tq-crafter-7285f7] B안 훅 검증 테스트 메시지.",
+      "message": "[task:tq-crafter-7285f7] B안 훅 검증 테스트 메시지.\n\n대시보드 재시작 완료. 이 메시지가 api_send 훅을 통과하면서 `[task:tq-crafter-7285f7]` + \"완료\" 감지 → 자동 done 처리돼야 함.\n\n부가 안내: 부서장이 B안 직후 B+ 업그레이드 제안하심. send_message에 `msg_type` 파라미터(`report_complete`/`report_progress`/`report_blocked`/`reply`/`request`) 명시해서 키워드 파싱 없이 명시적 타입 전달 방식. 아직 승인 대기 중. 승인 내려오면 B→B+ 확장 예정이니 염두.\n\n일단 B 검증부터 진행. 테스트 후 결과는 MAX가 직접 curl로 확인.",
+      "status": "done",
+      "priority": "medium",
+      "created_at": "2026-04-12 09:04:50",
+      "updated_at": "2026-04-12 09:05:26",
+      "last_report_at": null,
+      "completed_at": "2026-04-12 09:05:26"
+    },
+    {
+      "id": "tq-crafter-ce3ba0",
+      "agent": "crafter",
+      "task": "[task:tq-crafter-7285f7 승계 — B+ 전면 전환] 부서장 지시 확정.",
+      "message": "[task:tq-crafter-7285f7 승계 — B+ 전면 전환] 부서장 지시 확정.\n\n**방침:** 키워드 정규식(B 임시방편) 걷어내고 send_message 도구에 `msg_type` 파라미터를 정식으로 추가한다. 대시보드는 `msg_type` 기반으로 명시적 분기. 에이전트 전원에게 강제 지침.\n\n## 구현 범위\n\n### 1. MCP 도구 시그니처 확장\n`scripts/mcp-agent-channel.py`:\n```python\ndef send_message(\n    to: str,\n    message: str,\n    msg_type: str = \"reply\",       # 필수 사용 유도\n    task_id: str | None = None,\n) -> str:\n```\n- 허용 값: `report_complete`, `report_progress`, `report_blocked`, `reply`, `request`\n- 잘못된 값이면 MCP tool에서 ValueError → 에이전트에게 즉시 실패 피드백\n- 하위호환: 기본값 `reply` (지정 없으면 단순 답변으로 취급)\n\n### 2. 대시보드 /api/send 훅 재작성\n`dashboard/app.py`:\n- 수신 body에 `msg_type`, `task_id` 필드 추가\n- **기존 B안 정규식/키워드 매칭 훅 제거**\n- msg_type 기반 분기:\n  - `report_complete` + task_id → 해당 task status=done, completed_at, last_report_at 갱신\n  - `report_progress` + task_id → status=in_progress, last_report_at 갱신\n  - `report_blocked` + task_id → status=blocked, 부서장 알림(MAX에게 자동 forward)\n  - `reply` → 로그만\n  - `request` → 새 task-queue 항목 생성 (to 에이전트 앞으로)\n- task_id 검증: 존재하지 않으면 경고 로그, 메시지 전달은 계속\n\n### 3. 에이전트 강제 지침\n`wta-agents/CLAUDE.md` (전역)에 섹션 신설:\n```\n## send_message msg_type 규칙 (필수, 2026-04-12)\n\n모든 send_message 호출 시 msg_type 파라미터 명시 의무:\n- report_complete: 받은 작업을 완료했을 때 (task_id 필수)\n- report_progress: 진행 중간 보고 (task_id 필수)\n- report_blocked: 막힘/승인 대기 (task_id 필수)\n- reply: 단순 답변/질의 (task_id 불필요)\n- request: 다른 팀원에게 작업 요청 (새 task 자동 생성)\n\nMAX 위임 메시지는 자동으로 task_id를 포함한다.\n팀원은 완료 보고 시 수신한 task_id를 그대로 echo.\n```\n\n각 팀원 CLAUDE.md(workspaces/{agent}/CLAUDE.md)에도 동일 규칙 1줄 링크 삽입.\n\n### 4. 배포/재시작 순서\n16개 에이전트가 새 MCP 스키마를 인식하도록 순차 재시작 필요. 재시작 순서 및 롤아웃 스크립트는 구현 완료 후 MAX와 협의.\n\n## 우선순위/단계\n1. MCP 코드 + 대시보드 코드 먼저 수정 (기존 동작은 유지: msg_type 미지정 시 reply로 폴백)\n2. 에이전트 재시작은 MAX가 schedule\n3. 재시작 후 각 팀원이 msg_type 올바르게 사용하는지 24시간 모니터링\n4. 검증 완료 후 \"msg_type 미지정 시 warning 로그\" 추가\n\n## B 임시 훅 처리\n아래 제거 확정:\n- `_TASK_TAG_RE`, `_DONE_KEYWORD_RE`, `_auto_mark_task_done` 함수\n이유: 부서장 방침 — 덧붙이기 최소화, msg_type 하나로 확실하게.\n\n## 보고\n구현 완료 시 다음 형식으로 보고:\n```\nsend_message(\n  to=\"MAX\",\n  message=\"[task:tq-crafter-7285f7] B+ 구현 완료. 배포 대기.\",\n  msg_type=\"report_complete\",\n  task_id=\"tq-crafter-7285f7\",\n)\n```\n→ 보고 메시지 자체가 새 규칙을 따라서 셀프 검증.\n\n착수.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-12 09:07:40",
+      "updated_at": "2026-04-12 09:07:40",
       "last_report_at": null,
       "completed_at": null
     }
