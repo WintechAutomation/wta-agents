@@ -5,11 +5,17 @@ LLM: qwen3.5:35b-a3b / 엔티티 10타입+11관계 / 윈도우 2000자
 체크포인트: reports/manuals-v2/work/graphrag_poc10_qa_state.json
 """
 
-import json, re, sys, time, logging, argparse
+import json, re, sys, time, logging, argparse, os
 from pathlib import Path
 from datetime import datetime, timezone, timedelta
 
 import requests
+
+# Windows 콘솔 한글/특수문자 인코딩 보정
+if sys.stdout.encoding and sys.stdout.encoding.lower() not in ('utf-8', 'utf8'):
+    sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+if sys.stderr.encoding and sys.stderr.encoding.lower() not in ('utf-8', 'utf8'):
+    sys.stderr.reconfigure(encoding='utf-8', errors='replace')
 
 # ── 경로 상수 ──────────────────────────────────────────────────────
 POC_ROOT     = Path(r'C:\MES\wta-agents\reports\manuals-v2\poc')
@@ -202,9 +208,9 @@ def extract_entities(text: str, source_id: str, lang: str) -> dict:
                 'model': EXTRACT_MODEL,
                 'prompt': prompt,
                 'stream': False,
-                'options': {'num_predict': 800, 'temperature': 0},
+                'options': {'num_predict': 8192, 'temperature': 0},
             },
-            timeout=120,
+            timeout=300,
         )
         if r.status_code == 200:
             raw = r.json().get('response', '').strip()
