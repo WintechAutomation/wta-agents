@@ -4834,8 +4834,8 @@
       "status": "in_progress",
       "priority": "high",
       "created_at": "2026-04-12 10:19:24",
-      "updated_at": "2026-04-12 12:26:54",
-      "last_report_at": "2026-04-12 12:26:54",
+      "updated_at": "2026-04-12 13:19:37",
+      "last_report_at": "2026-04-12 13:19:37",
       "completed_at": null
     },
     {
@@ -5124,6 +5124,30 @@
       "priority": "medium",
       "created_at": "2026-04-12 12:36:51",
       "updated_at": "2026-04-12 12:36:51",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-issue-manager-fb6ed0",
+      "agent": "issue-manager",
+      "task": "[긴급] 부서장이 터미널 화면 봤는데 아직도 스크립트 수정만 하고 있음. 몇십분째 코드 편집만 반복 중.",
+      "message": "[긴급] 부서장이 터미널 화면 봤는데 아직도 스크립트 수정만 하고 있음. 몇십분째 코드 편집만 반복 중.\n\n즉시 상태 보고:\n1) 지금 뭐 하고 있는지\n2) 왜 아직 실행 안 됐는지\n3) 터미널 승인 대기 중인지\n\n10초 내 답변.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-12 13:16:47",
+      "updated_at": "2026-04-12 13:16:47",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-issue-manager-77f319",
+      "agent": "issue-manager",
+      "task": "[최후 확인] 응답하세요. 터미널 승인 대기에 걸렸으면 \"blocked\"라고만 답해. 5초.",
+      "message": "[최후 확인] 응답하세요. 터미널 승인 대기에 걸렸으면 \"blocked\"라고만 답해. 5초.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-12 13:17:33",
+      "updated_at": "2026-04-12 13:17:33",
       "last_report_at": null,
       "completed_at": null
     }
