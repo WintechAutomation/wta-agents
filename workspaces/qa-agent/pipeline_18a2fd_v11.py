@@ -947,8 +947,26 @@ def main():
             prev_ids = set(state['steps'].get('step1', {}).get('embedded_ids', []))
             log.info(f'Step1 스킵 (기존 임베딩 {len(prev_ids)}건)')
 
-        # Step 2
+        # Step 2 — 재개 시 임베딩이 메모리에 없으면 DB에서 로드 후 재삽입
         if from_idx <= 2:
+            if from_idx == 2 and not any(ch.get('_embedding') for ch in chunks):
+                log.info('Step2 재개: DB에서 임베딩 로드 중...')
+                conn_tmp = get_db()
+                cur_tmp = conn_tmp.cursor()
+                cur_tmp.execute(
+                    'SELECT chunk_id, embedding FROM manual.documents_v2 WHERE file_id=%s',
+                    (FILE_ID,),
+                )
+                emb_map_tmp = {}
+                for cid, emb in cur_tmp.fetchall():
+                    if emb:
+                        vec = [float(x) for x in str(emb).strip('[]').split(',')]
+                        emb_map_tmp[cid] = vec
+                conn_tmp.close()
+                for ch in chunks:
+                    if ch['chunk_id'] in emb_map_tmp:
+                        ch['_embedding'] = emb_map_tmp[ch['chunk_id']]
+                log.info(f'   임베딩 로드: {len(emb_map_tmp)}건')
             step2(state, chunks)
 
         # Step 3
