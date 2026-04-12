@@ -378,7 +378,9 @@ def load_state(file_list: list) -> dict:
         'last_update': now_kst(),
         'items': [
             {
-                'file_id': f['file_id'], 'filename': f['filename'],
+                'file_id': f['file_id'],            # poc 디렉토리용 (md5[:12])
+                'file_id_alloc': f.get('file_id_alloc', f['file_id']),  # 할당 추적용
+                'filename': f['filename'],
                 'mfr': f['mfr'], 'model': f['model'], 'pages': f.get('pages', 0),
                 'step2': 'pending', 'embed': 'pending',
                 'pgvector': 'pending', 'graphrag': 'pending',
@@ -402,6 +404,8 @@ def build_file_list() -> list:
     my_md5s = {f['md5']: f for f in my_files}
 
     # extract.jsonl에서 src_path 매핑 (중복 file_id 시 첫 번째만)
+    # 주의: parse_docling은 file_id = f'{category}_{md5[:12]}' 를 사용.
+    # 할당 파일의 file_id (전체 md5)와 다르므로 별도 보관.
     mapping = {}
     with open(EXTRACT_JSONL, encoding='utf-8') as f:
         for line in f:
@@ -409,10 +413,12 @@ def build_file_list() -> list:
             md5 = rec.get('md5')
             if md5 in my_md5s and rec.get('status') == 'ok':
                 af = my_md5s[md5]
-                fid = af['file_id']
-                if fid not in mapping:
-                    mapping[fid] = {
-                        'file_id': fid,
+                fid_alloc = af['file_id']        # 전체 md5 file_id
+                fid_poc = f'4_servo_{md5[:12]}'  # parse_docling이 생성하는 실제 file_id
+                if fid_alloc not in mapping:
+                    mapping[fid_alloc] = {
+                        'file_id': fid_poc,      # poc 디렉토리 및 DB 적재에 사용
+                        'file_id_alloc': fid_alloc,  # 할당 추적용
                         'src_path': rec.get('src_path', ''),
                         'filename': rec.get('filename', ''),
                         'mfr': af.get('mfr', ''),
@@ -421,37 +427,50 @@ def build_file_list() -> list:
                         'lang': af.get('lang', ''),
                         'pages': int(af.get('pages', 0)),
                         'md5': md5,
+                        'category': '4_servo',
                     }
 
     # 할당 순서 유지
     result = []
     for f in my_files:
-        fid = f['file_id']
-        if fid in mapping:
-            result.append(mapping[fid])
+        fid_alloc = f['file_id']
+        if fid_alloc in mapping:
+            result.append(mapping[fid_alloc])
         else:
-            log.warning(f'src_path 없음: {fid}')
+            log.warning(f'src_path 없음: {fid_alloc}')
 
     return result
 
 
 # ── Step 2: Docling 파싱 ─────────────────────────────────────────────────
 def run_step2(file_info: dict) -> bool:
-    """manuals_v2_parse_docling.process_pdf 호출, poc/{file_id}/ 생성"""
+    """subprocess로 manuals_v2_parse_docling.py 호출, poc/{file_id}/ 생성"""
+    import subprocess
     poc_dir = POC_DIR / file_info['file_id']
     chunks_path = poc_dir / 'chunks.jsonl'
     if chunks_path.exists():
         log.info(f"Step2 이미 완료: {file_info['file_id']}")
         return True
 
-    sys.path.insert(0, str(Path('C:/MES/wta-agents/workspaces/docs-agent')))
+    PY = r'C:\Users\Administrator\AppData\Local\Programs\Python\Python311\python.exe'
+    script = r'C:\MES\wta-agents\workspaces\docs-agent\manuals_v2_parse_docling.py'
+    src_path = file_info['src_path']
+
     try:
-        import manuals_v2_parse_docling as parser
-        result = parser.process_pdf(file_info['src_path'])
-        success = result.get('status') == 'ok'
-        if not success:
-            log.warning(f"Step2 실패: {file_info['file_id']} → {result.get('error','')}")
-        return success
+        result = subprocess.run(
+            [PY, script, src_path],
+            capture_output=True, text=True, encoding='utf-8', errors='replace',
+            timeout=600
+        )
+        if result.returncode == 0 or chunks_path.exists():
+            log.info(f"Step2 완료: {file_info['file_id']}")
+            return True
+        else:
+            log.warning(f"Step2 실패(rc={result.returncode}): {result.stderr[-200:]}")
+            return False
+    except subprocess.TimeoutExpired:
+        log.warning(f"Step2 타임아웃(10분): {file_info['file_id']}")
+        return chunks_path.exists()
     except Exception as e:
         log.error(f"Step2 예외: {file_info['file_id']} → {e}")
         return False
