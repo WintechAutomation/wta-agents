@@ -2450,18 +2450,6 @@
       "requested_by": "MAX"
     },
     {
-      "id": "tq-admin-agent-16f0cc",
-      "agent": "admin-agent",
-      "task": "긴급 — deepseek-r1:32b 3번째 재로드. trading_agent가 계속 로드시킴.",
-      "message": "긴급 — deepseek-r1:32b 3번째 재로드. trading_agent가 계속 로드시킴.\n\n1. 즉시 언로드: curl http://182.224.6.147:11434/api/generate -d '{\"model\":\"deepseek-r1:32b\",\"keep_alive\":0}'\n2. 근본 대책 검토: trading_agent.py(PID 1857911)를 kill하거나, Ollama 설정으로 deepseek-r1:32b 로드 차단할 방법이 있는지 확인\n3. OLLAMA_MAX_LOADED_MODELS=3으로 올려서 3개 동시 로드 가능하게 하는 것도 검토\n\n매번 수동 언로드는 한계가 있다. 배치가 수시간 걸리는데 계속 블로킹됨.",
-      "status": "pending",
-      "priority": "medium",
-      "created_at": "2026-04-13 03:09:54",
-      "updated_at": "2026-04-13 03:09:54",
-      "last_report_at": null,
-      "completed_at": null
-    },
-    {
       "id": "tq-issue-manager-820b84",
       "agent": "issue-manager",
       "task": "[task:tq-issue-manager-e1a851] Ollama 근본 대책 완료. MAX_LOADED_MODELS=3으로 확장, 이제 deepseek 재로드돼도 블로킹 없음. ",
