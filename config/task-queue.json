@@ -1513,18 +1513,6 @@
       "completed_at": "2026-04-12 01:03:44"
     },
     {
-      "id": "tq-dev-agent-df4e2c",
-      "agent": "dev-agent",
-      "task": "cs-wta.com 라벨 디자인 기능 수정 요청 (부서장 지시).",
-      "message": "cs-wta.com 라벨 디자인 기능 수정 요청 (부서장 지시).\n\n위치: 설정 → 라벨 프린터설정 → 템플릿관리 → 라벨 디자인\n\n현재: 텍스트 객체에 너비 설정이 없어서 긴 텍스트가 한 줄로 나감\n변경: 텍스트 객체에 너비(width) 속성을 설정할 수 있게 하고, 설정된 너비를 초과하는 텍스트는 자동 줄바꿈 처리\n\n구현 포인트:\n1. 텍스트 객체 속성 패널에 \"너비\" 입력 필드 추가\n2. 너비 미설정 시 기존처럼 한 줄 (하위 호환)\n3. 너비 설정 시 해당 너비에서 자동 줄바꿈 (word-wrap)\n4. 라벨 미리보기 및 실제 인쇄 시 모두 적용\n\n완료 후 보고해줘.",
-      "status": "done",
-      "priority": "medium",
-      "created_at": "2026-04-08 23:05:24",
-      "updated_at": "2026-04-11 10:43:53",
-      "last_report_at": null,
-      "completed_at": "2026-04-11 10:43:53"
-    },
-    {
       "id": "tq-crafter-cf10a0",
       "agent": "crafter",
       "task": "추가 피드백: 메인 패널 상단 제목 글자를 배경 대비색으로 변경해줘. 다크 배경에서 잘 보이도록 밝은 색(white 또는 slate-100)으로. 모든 페이지 제목에 적용.",
@@ -1571,18 +1559,6 @@
       "updated_at": "2026-04-12 01:05:53",
       "last_report_at": null,
       "completed_at": "2026-04-12 01:05:53"
-    },
-    {
-      "id": "tq-dev-agent-774f77",
-      "agent": "dev-agent",
-      "task": "cs-wta.com 배포 진행해줘. 라벨 디자인 텍스트 너비/줄바꿈 기능 빌드 완료 확인됐으니 프로덕션 배포.",
-      "message": "cs-wta.com 배포 진행해줘. 라벨 디자인 텍스트 너비/줄바꿈 기능 빌드 완료 확인됐으니 프로덕션 배포.",
-      "status": "done",
-      "priority": "medium",
-      "created_at": "2026-04-08 23:11:52",
-      "updated_at": "2026-04-11 10:43:56",
-      "last_report_at": null,
-      "completed_at": "2026-04-11 10:43:56"
     },
     {
       "id": "tq-crafter-68151c",
@@ -1703,18 +1679,6 @@
       "updated_at": "2026-04-12 01:02:24",
       "last_report_at": null,
       "completed_at": "2026-04-12 01:02:24"
-    },
-    {
-      "id": "tq-dev-agent-cbc06c",
-      "agent": "dev-agent",
-      "task": "통신 테스트: crafter, db-manager, sales-agent 에게 각각 \"통신 라인 테스트\" 메시지를 보내줘. send_message 3번 실행.",
-      "message": "통신 테스트: crafter, db-manager, sales-agent 에게 각각 \"통신 라인 테스트\" 메시지를 보내줘. send_message 3번 실행.",
-      "status": "done",
-      "priority": "medium",
-      "created_at": "2026-04-09 00:01:57",
-      "updated_at": "2026-04-11 10:43:58",
-      "last_report_at": null,
-      "completed_at": "2026-04-11 10:43:58"
     },
     {
       "id": "tq-crafter-c007af",
@@ -2701,54 +2665,6 @@
       "completed_at": "2026-04-11 11:56:45"
     },
     {
-      "id": "tq-dev-agent-a1c3af",
-      "agent": "dev-agent",
-      "task": "cs-wta.com 공개 CS 등록 페이지 구현 요청:",
-      "message": "cs-wta.com 공개 CS 등록 페이지 구현 요청:\n\n기준 페이지: https://cs-wta.com/cs/new (기존 CS 등록 페이지)\n- 이 페이지의 필드 구성을 그대로 살려서 공개용 새 페이지로 만들기\n- 기존 /cs/new 페이지와 겹치면 안 됨 (별도 경로)\n- 경로: /public/cs-register (또는 적절한 경로)\n- 로그인 불필요, 계정 없는 지원인력(SW개발자, 비전팀 등)이 사용\n- 필드는 기존 /cs/new와 동일하게 유지\n- 제출 → 기존 cs_history 테이블에 저장, 접수번호 표시\n\n백엔드:\n- POST /api/v1/public/cs-submit (인증 없음, rate-limit 권장)\n- 기존 cs_history 테이블에 insert (status='접수', cs_receiver='공개등록')\n\n프론트엔드:\n- App.tsx에 인증 불필요 경로로 추가\n- 기존 /cs/new 컴포넌트와 충돌 없이 별도 컴포넌트로 구현\n\n코드 위치: C:\\MES\\csagent\\\n구현 완료 후 빌드 + 배포까지 진행해주세요.",
-      "status": "done",
-      "priority": "medium",
-      "created_at": "2026-04-09 19:23:58",
-      "updated_at": "2026-04-11 10:44:00",
-      "last_report_at": null,
-      "completed_at": "2026-04-11 10:44:00"
-    },
-    {
-      "id": "tq-dev-agent-59eebb",
-      "agent": "dev-agent",
-      "task": "공개 CS 등록 페이지 작업 취소해주세요. cs-agent가 이미 구현+배포 완료했습니다. 중복 작업 불필요합니다.",
-      "message": "공개 CS 등록 페이지 작업 취소해주세요. cs-agent가 이미 구현+배포 완료했습니다. 중복 작업 불필요합니다.",
-      "status": "done",
-      "priority": "medium",
-      "created_at": "2026-04-09 19:29:54",
-      "updated_at": "2026-04-11 10:44:02",
-      "last_report_at": null,
-      "completed_at": "2026-04-11 10:44:02"
-    },
-    {
-      "id": "tq-dev-agent-679bd5",
-      "agent": "dev-agent",
-      "task": "MES 백엔드에 ERP MCA210T (발주진행현황) 테이블 조회 API를 추가해줘.",
-      "message": "MES 백엔드에 ERP MCA210T (발주진행현황) 테이블 조회 API를 추가해줘.\n\n**요구사항:**\n1. ERP SQL Server (192.168.1.201:1433, 읽기전용)의 MCA210T 테이블 전체 필드 조회 API\n2. 엔드포인트: GET /api/erp/mca210t (또는 적절한 RESTful 경로)\n3. MCA210T 테이블의 모든 필드 정보를 반환\n4. 기존 MES 백엔드의 ERP 연결 패턴을 따를 것 (mirae. 스키마)\n5. 페이징/필터 지원 권장\n6. ERP는 READ-ONLY — SELECT만 허용\n\n**참고:**\n- db-manager가 ERP 직접 접속이 차단되어 MES 백엔드 API가 필요한 상황\n- 이 API를 통해 db-manager 등 다른 에이전트들이 발주진행현황 데이터를 조회할 수 있게 됨\n\n부서장 승인 완료된 건이니 바로 진행해줘.",
-      "status": "done",
-      "priority": "medium",
-      "created_at": "2026-04-09 19:49:36",
-      "updated_at": "2026-04-11 10:44:04",
-      "last_report_at": null,
-      "completed_at": "2026-04-11 10:44:04"
-    },
-    {
-      "id": "tq-dev-agent-db6356",
-      "agent": "dev-agent",
-      "task": "아까 보낸 MCA210T API 건은 취소해줘. db-manager가 진행하기로 했어.",
-      "message": "아까 보낸 MCA210T API 건은 취소해줘. db-manager가 진행하기로 했어.",
-      "status": "done",
-      "priority": "medium",
-      "created_at": "2026-04-09 19:50:23",
-      "updated_at": "2026-04-11 10:44:06",
-      "last_report_at": null,
-      "completed_at": "2026-04-11 10:44:06"
-    },
-    {
       "id": "tq-db-manager-31a883",
       "agent": "db-manager",
       "task": "MES 백엔드에 ERP MCA210T (발주진행현황) 테이블 조회 API를 추가해줘.",
@@ -2819,18 +2735,6 @@
       "updated_at": "2026-04-12 01:02:10",
       "last_report_at": null,
       "completed_at": "2026-04-12 01:02:10"
-    },
-    {
-      "id": "tq-dev-agent-2fe55b",
-      "agent": "dev-agent",
-      "task": "일일 업무보고 요청 (2026-04-09)",
-      "message": "일일 업무보고 요청 (2026-04-09)\nreports/daily-reports/2026-04-09/dev-agent.md 에 작성해줘.\n포맷:\n# 일일 업무보고 — dev-agent\n날짜: 2026-04-09\n## 처리 작업\n## 특이사항\n## 내일 예정",
-      "status": "done",
-      "priority": "medium",
-      "created_at": "2026-04-09 22:00:23",
-      "updated_at": "2026-04-11 10:44:08",
-      "last_report_at": null,
-      "completed_at": "2026-04-11 10:44:08"
     },
     {
       "id": "tq-admin-agent-4a336b",
@@ -3097,222 +3001,6 @@
       "completed_at": "2026-04-12 01:03:49"
     },
     {
-      "id": "tq-dev-agent-73f93a",
-      "agent": "dev-agent",
-      "task": "부서장 지시: cs-wta.com 재고 메뉴에서 ERP 검색 시 검색 범위 확장 필요.",
-      "message": "부서장 지시: cs-wta.com 재고 메뉴에서 ERP 검색 시 검색 범위 확장 필요.\n\n**현재:** 품목코드, 품목명만 검색됨\n**변경:** 판매코드(SO_NO 또는 관련 필드)도 함께 검색되도록 추가\n\ncs-wta.com 재고등록 페이지의 ERP 품목 검색 기능을 확인하고 수정해줘.\n프론트엔드 검색 필터 + 백엔드 API 쿼리 양쪽 모두 확인.\n\n완료 후 빌드/배포까지 진행해줘.",
-      "status": "done",
-      "priority": "medium",
-      "created_at": "2026-04-10 12:54:19",
-      "updated_at": "2026-04-11 10:44:10",
-      "last_report_at": null,
-      "completed_at": "2026-04-11 10:44:10"
-    },
-    {
-      "id": "tq-dev-agent-db880d",
-      "agent": "dev-agent",
-      "task": "부서장 지시: cs-wta.com 재고 메뉴의 \"실사변경\" 기능에서 재고품목 삭제 기능 추가해줘.",
-      "message": "부서장 지시: cs-wta.com 재고 메뉴의 \"실사변경\" 기능에서 재고품목 삭제 기능 추가해줘.\n\n현재는 실사변경에서 수량 변경만 가능한 것으로 보이는데, 품목 자체를 삭제할 수 있도록 해줘.\n- 삭제 버튼/아이콘 추가\n- 삭제 확인 다이얼로그\n- 백엔드 DELETE API 추가 (없으면)\n\n완료 후 빌드/배포까지 진행해줘.",
-      "status": "done",
-      "priority": "medium",
-      "created_at": "2026-04-10 13:04:26",
-      "updated_at": "2026-04-11 10:44:12",
-      "last_report_at": null,
-      "completed_at": "2026-04-11 10:44:12"
-    },
-    {
-      "id": "tq-dev-agent-a27396",
-      "agent": "dev-agent",
-      "task": "부서장 지시: cs-wta.com 라벨출력 페이지에서 \"재고라벨\" 템플릿을 선택해서 출력할 수 있도록 해줘.",
-      "message": "부서장 지시: cs-wta.com 라벨출력 페이지에서 \"재고라벨\" 템플릿을 선택해서 출력할 수 있도록 해줘.\n\n라벨출력 페이지에 라벨 템플릿 선택 기능이 있을 텐데, \"재고라벨\" 템플릿이 선택 가능하고 출력되도록 구현해줘.\n기존 라벨 템플릿 구조를 확인해서 맞춰서 진행.\n\n완료 후 빌드/배포까지.",
-      "status": "done",
-      "priority": "medium",
-      "created_at": "2026-04-10 13:08:41",
-      "updated_at": "2026-04-11 10:44:14",
-      "last_report_at": null,
-      "completed_at": "2026-04-11 10:44:14"
-    },
-    {
-      "id": "tq-dev-agent-408336",
-      "agent": "dev-agent",
-      "task": "부서장 지시: cs-wta.com 재고등록 페이지의 수량 입력필드 UX 개선.",
-      "message": "부서장 지시: cs-wta.com 재고등록 페이지의 수량 입력필드 UX 개선.\n\n**현재 문제:**\n- 수량 필드 기본값이 \"0\"으로 되어 있어서 숫자 입력 시 \"01\", \"02\" 형태로 들어감\n- 사용자가 수동으로 0을 지워야 함\n\n**개선 방안:**\n1. 기본값을 빈 문자열(\"\")로 변경, placeholder에 \"0\" 표시\n2. 또는 포커스 시 자동 전체선택 (onFocus에서 e.target.select())\n3. 또는 타입 숫자 필드 처리 개선\n\n재고등록 모달 + 실사변경 폼 양쪽 모두 동일하게 수정해줘.\n완료 후 빌드/배포까지.",
-      "status": "done",
-      "priority": "medium",
-      "created_at": "2026-04-10 13:17:55",
-      "updated_at": "2026-04-11 10:44:16",
-      "last_report_at": null,
-      "completed_at": "2026-04-11 10:44:16"
-    },
-    {
-      "id": "tq-dev-agent-02ecba",
-      "agent": "dev-agent",
-      "task": "부서장 지시: cs-wta.com 부품 마스터 목록 카드 레이아웃 변경.",
-      "message": "부서장 지시: cs-wta.com 부품 마스터 목록 카드 레이아웃 변경.\n\n**현재:**\n- 상단: 품목명 (예: \"DTP7H-D 정션박스\") — 검정/큰 글씨\n- 하단: 품목코드 (예: \"DTP-CUD-JB\") — 파란색/작은 글씨\n\n**변경:**\n- 상단: 품목코드를 제일 위에 (크게)\n- 하단: 품목명을 그 아래에\n\n부품 마스터 탭의 카드 목록 컴포넌트 찾아서 수정. 완료 후 빌드/배포.",
-      "status": "done",
-      "priority": "medium",
-      "created_at": "2026-04-10 13:19:27",
-      "updated_at": "2026-04-11 10:44:18",
-      "last_report_at": null,
-      "completed_at": "2026-04-11 10:44:18"
-    },
-    {
-      "id": "tq-dev-agent-4ef1a4",
-      "agent": "dev-agent",
-      "task": "부서장 지시: cs-wta.com 재고 구분 명칭 변경.",
-      "message": "부서장 지시: cs-wta.com 재고 구분 명칭 변경.\n\n**변경:** \"양품\" → \"B급\"\n\n재고등록, 실사변경, 재고목록, 라벨 등 \"양품\"이라는 구분명이 표시되는 모든 곳을 \"B급\"으로 변경.\n- 프론트엔드 하드코딩 텍스트\n- i18n locale 파일 (ko/en/zh/ja)\n- 컬럼명 표시\n- 백엔드 API 응답 필드명은 그대로 유지 (good_qty 등), 표시 레이블만 변경\n\ncs-wta.com 전체에서 일관되게 \"B급\"으로 통일. 완료 후 빌드/배포.",
-      "status": "done",
-      "priority": "medium",
-      "created_at": "2026-04-10 13:52:22",
-      "updated_at": "2026-04-11 10:44:20",
-      "last_report_at": null,
-      "completed_at": "2026-04-11 10:44:20"
-    },
-    {
-      "id": "tq-dev-agent-b16f54",
-      "agent": "dev-agent",
-      "task": "긴급 수정: cs-wta.com 수량 입력 필드 전체선택 이슈.",
-      "message": "긴급 수정: cs-wta.com 수량 입력 필드 전체선택 이슈.\n\n**부서장 재지적:**\n- 필드에 \"0\"이 떠있는 상태에서 다른 숫자 입력하면 \"40\" 또는 \"04\"가 되는 문제\n- 조금 전에 onFocus 전체선택 추가했는데 제대로 동작 안 함\n\n**원인 추정:**\n- 모바일에서 onFocus 시 select() 호출이 무시되거나\n- React controlled input에서 setTimeout 없이 바로 select() 호출 시 타이밍 이슈\n- inputMode=\"decimal\"과 충돌 가능성\n\n**해결:**\n1. onFocus에서 `setTimeout(() => e.target.select(), 0)` 으로 변경\n2. 또는 onClick에서도 select() 호출 추가\n3. 모바일에서 확실히 블럭 선택되도록 확인\n4. 혹시 더 확실한 방법은 기본값을 숫자 0 대신 빈 문자열 \"\" 로 두고 placeholder만 \"0\" 표시하는 방식\n\n실사변경 + 재고등록 모달 양쪽 전부 확인해서 반드시 블럭선택되도록 수정. 모바일/데스크톱 둘 다 테스트하고 배포.",
-      "status": "done",
-      "priority": "medium",
-      "created_at": "2026-04-10 14:01:06",
-      "updated_at": "2026-04-11 10:44:22",
-      "last_report_at": null,
-      "completed_at": "2026-04-11 10:44:22"
-    },
-    {
-      "id": "tq-dev-agent-649ce8",
-      "agent": "dev-agent",
-      "task": "부서장 지시: cs-wta.com 실사변경 UI 위치 수정.",
-      "message": "부서장 지시: cs-wta.com 실사변경 UI 위치 수정.\n\n**현재:** 실사변경 버튼 클릭 시 변경 창이 화면 맨 위에 뜸\n**변경:** 해당 리스트 카드 바로 아래에 펼쳐지도록 (또는 인라인으로)\n\n즉, 모달이 아니라 클릭한 카드 아래에 아코디언/인라인 폼으로 펼쳐지는 형태.\n사용자가 어느 카드를 수정 중인지 명확하게 보이도록.\n\n카드별로 실사변경 폼이 바로 아래 나타나는 구조로 수정. 완료 후 빌드/배포.",
-      "status": "done",
-      "priority": "medium",
-      "created_at": "2026-04-10 14:02:52",
-      "updated_at": "2026-04-11 10:44:25",
-      "last_report_at": null,
-      "completed_at": "2026-04-11 10:44:25"
-    },
-    {
-      "id": "tq-dev-agent-841759",
-      "agent": "dev-agent",
-      "task": "추가 지시: cs-wta.com ERP 검색 결과 테이블 컬럼 순서 변경.",
-      "message": "추가 지시: cs-wta.com ERP 검색 결과 테이블 컬럼 순서 변경.\n\n**현재:** 품목명 → 품목코드 (순서)\n**변경:** 품목코드 → 품목명 (순서)\n\n부품 마스터 탭의 ERP 품목 검색 결과 테이블과 재고등록 모달 내 ERP 검색 결과 양쪽 모두 순서 변경.\n품목코드가 먼저, 품목명이 그 다음에 나오도록.\n\n실사변경 인라인 펼치기 작업과 같이 묶어서 배포해줘.",
-      "status": "done",
-      "priority": "medium",
-      "created_at": "2026-04-10 14:04:55",
-      "updated_at": "2026-04-11 10:44:27",
-      "last_report_at": null,
-      "completed_at": "2026-04-11 10:44:27"
-    },
-    {
-      "id": "tq-dev-agent-4e3074",
-      "agent": "dev-agent",
-      "task": "부서장 지시: cs-wta.com 라벨출력 페이지에서 \"위치\" 필드를 \"판매코드\"로 변경해줘.",
-      "message": "부서장 지시: cs-wta.com 라벨출력 페이지에서 \"위치\" 필드를 \"판매코드\"로 변경해줘.\n\n라벨출력 페이지의 입력 필드 중 \"위치\" 라벨을 \"판매코드\"로 변경.\n- 입력 필드 라벨 변경\n- i18n 키도 해당 locale 파일 수정 (ko/en/zh/ja)\n- 라벨 출력 시 표시 텍스트도 동일하게 변경\n\n완료 후 빌드/배포.",
-      "status": "done",
-      "priority": "medium",
-      "created_at": "2026-04-10 14:09:24",
-      "updated_at": "2026-04-11 10:44:29",
-      "last_report_at": null,
-      "completed_at": "2026-04-11 10:44:29"
-    },
-    {
-      "id": "tq-dev-agent-5719e6",
-      "agent": "dev-agent",
-      "task": "부서장 추가 지시: 라벨출력 데이터 키(연동코드)도 LOCATION → SALE_CODE로 변경해줘.",
-      "message": "부서장 추가 지시: 라벨출력 데이터 키(연동코드)도 LOCATION → SALE_CODE로 변경해줘.\n\n조금 전 템플릿 호환성 때문에 LOCATION 데이터 키를 유지했는데, 부서장이 연동코드까지 같이 바꾸라고 함.\n\n변경 작업:\n1. 프론트엔드: LOCATION → SALE_CODE (데이터 키)\n2. 라벨 템플릿 DB에 저장된 토큰도 LOCATION → SALE_CODE로 업데이트 필요 (csagent.label_template 확인)\n3. 기존 템플릿과의 하위호환: LOCATION 토큰이 있는 템플릿은 SALE_CODE로 마이그레이션하거나, 둘 다 인식하도록 처리\n\n백엔드/DB 확인해서 진행하고 빌드/배포.",
-      "status": "done",
-      "priority": "medium",
-      "created_at": "2026-04-10 14:12:02",
-      "updated_at": "2026-04-11 10:44:31",
-      "last_report_at": null,
-      "completed_at": "2026-04-11 10:44:31"
-    },
-    {
-      "id": "tq-dev-agent-755d5b",
-      "agent": "dev-agent",
-      "task": "부서장 지시: cs-wta.com 갤러리 기능 확장 — 이미지뿐만 아니라 일반 파일도 업로드 가능하도록 자료실 형태로 사용.",
-      "message": "부서장 지시: cs-wta.com 갤러리 기능 확장 — 이미지뿐만 아니라 일반 파일도 업로드 가능하도록 자료실 형태로 사용.\n\n**요구사항:**\n1. 업로드 파일 확장자 제한 해제 (또는 whitelist 확대)\n   - 이미지: jpg/png/gif/webp (기존)\n   - 문서: pdf/docx/xlsx/pptx/txt/md\n   - 압축: zip/rar/7z\n   - 기타 일반 파일\n2. 파일 타입별 썸네일/아이콘 표시\n   - 이미지는 기존 썸네일\n   - 문서/압축/기타는 아이콘으로 (pdf 아이콘, excel 아이콘 등)\n3. 파일 목록 UI\n   - 이미지는 그리드 뷰 (기존)\n   - 문서/파일은 리스트 뷰 옵션 추가\n   - 파일명, 크기, 업로드일, 업로드자 표시\n4. 다운로드 기능\n5. 삭제 권한 체크 유지\n6. 메뉴명 \"갤러리\" → \"자료실\" 또는 갤러리 탭 내에서 \"이미지/문서\" 탭 분리 검토\n\n백엔드 업로드 API + 스토리지 경로 + 프론트엔드 UI 전부 확인해서 구현.\n완료 후 빌드/배포.",
-      "status": "done",
-      "priority": "medium",
-      "created_at": "2026-04-10 14:23:08",
-      "updated_at": "2026-04-11 10:44:33",
-      "last_report_at": null,
-      "completed_at": "2026-04-11 10:44:33"
-    },
-    {
-      "id": "tq-dev-agent-da6650",
-      "agent": "dev-agent",
-      "task": "부서장 지적: cs-wta.com 라벨출력 문제.",
-      "message": "부서장 지적: cs-wta.com 라벨출력 문제.\n\n**문제:** 40mm x 20mm 라벨 사이즈인데 브라우저 프린트 기능 사용 시 용지 크기 문제로 프린터가 진행 안 됨.\n\n**원인 추정:**\n- CSS @page 규칙에 라벨 사이즈가 제대로 설정되지 않음\n- 기본 A4 용지로 인식돼서 프린터가 일반 용지를 찾고 있음\n- @media print 스타일 누락 가능\n\n**해결 방안:**\n1. 인쇄용 CSS @page 규칙 추가: `@page { size: 40mm 20mm; margin: 0; }`\n2. @media print 에서 body/html 크기도 40x20mm로 강제\n3. 라벨 사이즈를 드롭다운/설정에서 선택 가능하게 (40x20, 50x30 등 사전 정의)\n4. 브라우저 프린트 다이얼로그에서도 \"실제 크기\" 옵션 자동 선택되도록\n\n라벨출력 페이지 CSS/print 스타일 확인하고 수정해줘. 40x20mm 라벨용 프린터에서 정상 출력되도록.\n완료 후 빌드/배포.",
-      "status": "done",
-      "priority": "medium",
-      "created_at": "2026-04-10 14:44:44",
-      "updated_at": "2026-04-11 10:44:35",
-      "last_report_at": null,
-      "completed_at": "2026-04-11 10:44:35"
-    },
-    {
-      "id": "tq-dev-agent-c088a4",
-      "agent": "dev-agent",
-      "task": "부서장 지시: cs-wta.com 재고 리스트 데스크톱 레이아웃 개선.",
-      "message": "부서장 지시: cs-wta.com 재고 리스트 데스크톱 레이아웃 개선.\n\n**요구사항:**\n1. 품목코드/품목명/규격 3개를 하나의 컬럼에 3줄로 표시\n   ```\n   [품목코드]\n   [품목명]\n   [규격]\n   ```\n2. 그 외 컬럼들(판매코드, 창고/법인, 위치, 재고수량, B급, 불량, 단위, 단가, 재고금액, 사진, 관리)은 잘 조율해서 배치\n3. \"관리\" 컬럼의 \"실사변경\" 버튼이 세로로 글자가 쌓이지 않도록 충분한 너비 확보 (또는 아이콘 버튼으로 변경)\n4. 가로 스크롤 최소화\n5. 전체적으로 읽기 편하게 정렬\n\n모바일 카드 뷰는 건드리지 말고 데스크톱 테이블만 수정.\n첨부한 스크린샷 참고해서 개선해줘. 완료 후 빌드/배포.",
-      "status": "done",
-      "priority": "medium",
-      "created_at": "2026-04-10 14:49:15",
-      "updated_at": "2026-04-11 10:44:37",
-      "last_report_at": null,
-      "completed_at": "2026-04-11 10:44:37"
-    },
-    {
-      "id": "tq-dev-agent-cdc919",
-      "agent": "dev-agent",
-      "task": "부서장 지시: cs-wta.com 재고 QR 코드 데이터 구성 변경.",
-      "message": "부서장 지시: cs-wta.com 재고 QR 코드 데이터 구성 변경.\n\n**변경:** QR 코드 데이터를 \"판매코드+품목코드\" 형태로 구성\n\n재고 리스트의 QR코드 버튼 클릭 시 생성되는 QR 데이터에 판매코드와 품목코드가 함께 포함되도록 수정.\n- 포맷 예시: \"B007076:DTP-CUD-JB\" 또는 \"B007076-DTP-CUD-JB\" (구분자는 적절히)\n- 또는 JSON 형태 `{\"sale\":\"B007076\",\"item\":\"DTP-CUD-JB\"}`\n\n현재 QR 데이터 구성 확인 후 판매코드+품목코드로 변경. 완료 후 빌드/배포.",
-      "status": "done",
-      "priority": "medium",
-      "created_at": "2026-04-10 14:53:55",
-      "updated_at": "2026-04-11 10:44:39",
-      "last_report_at": null,
-      "completed_at": "2026-04-11 10:44:39"
-    },
-    {
-      "id": "tq-dev-agent-484a20",
-      "agent": "dev-agent",
-      "task": "부서장 추가 지시: 재고 리스트 데스크톱 테이블 품목정보 컬럼에서 품목코드가 가장 크고 진하게 나와야 함.",
-      "message": "부서장 추가 지시: 재고 리스트 데스크톱 테이블 품목정보 컬럼에서 품목코드가 가장 크고 진하게 나와야 함.\n\n조금 전 설정:\n- 품목코드: 작은 글씨/회색 (font-mono) ← 잘못됨\n- 품목명: medium/진한 회색\n- 규격: 작은 글씨/회색\n\n**변경:**\n- 품목코드: **가장 큰 글씨 + 굵게(bold) + 진한 색(black/gray-900)** (가장 눈에 띄게)\n- 품목명: 중간 크기, 회색\n- 규격: 작은 글씨, 더 연한 회색\n\n부품 마스터 카드 레이아웃과 동일하게, 품목코드가 메인 식별자로 보이게.\n\nQR 데이터 변경과 같이 묶어서 배포.",
-      "status": "done",
-      "priority": "medium",
-      "created_at": "2026-04-10 14:54:41",
-      "updated_at": "2026-04-11 10:44:41",
-      "last_report_at": null,
-      "completed_at": "2026-04-11 10:44:41"
-    },
-    {
-      "id": "tq-dev-agent-7e3cfd",
-      "agent": "dev-agent",
-      "task": "추가 지시: 재고 등록 모달에 \"창고/법인\" 지정 필드 + \"위치\" 지정 필드 누락되어 있음. 추가해줘.",
-      "message": "추가 지시: 재고 등록 모달에 \"창고/법인\" 지정 필드 + \"위치\" 지정 필드 누락되어 있음. 추가해줘.\n\n**현재 문제:**\n- 재고 리스트에 창고/법인, 위치 컬럼은 있는데\n- 재고등록 모달에는 해당 입력 필드가 없어서 신규 등록 시 값을 못 넣음\n\n**변경:**\n1. 재고등록 모달에 \"창고/법인\" 선택 드롭다운 추가\n   - 기존 법인 목록(본사/일본 모리야/주주 펑마이 등) 사용\n2. \"위치\" 입력 필드 추가 (텍스트 입력)\n3. 백엔드 API가 해당 필드 저장 지원하는지 확인, 없으면 추가\n\nQR 데이터 변경 + 품목코드 폰트 + 창고/위치 필드 3건 같이 묶어서 배포해줘.",
-      "status": "done",
-      "priority": "medium",
-      "created_at": "2026-04-10 14:55:00",
-      "updated_at": "2026-04-11 10:44:43",
-      "last_report_at": null,
-      "completed_at": "2026-04-11 10:44:43"
-    },
-    {
-      "id": "tq-dev-agent-9b5a3a",
-      "agent": "dev-agent",
-      "task": "추가 지시: 재고 리스트의 QR 아이콘 클릭 동작 변경.",
-      "message": "추가 지시: 재고 리스트의 QR 아이콘 클릭 동작 변경.\n\n**현재:** QR 아이콘 클릭 → QR 코드 표시\n**변경:**\n1. QR 아이콘 클릭 → 해당 품목 데이터로 라벨 미리보기 표시 (재고라벨 템플릿 사용)\n2. 미리보기에서 \"라벨 인쇄\" 버튼 클릭 → 바로 프린트 실행\n3. 품목 데이터(품목코드, 품목명, 판매코드, 규격, QR 등)가 자동으로 라벨 템플릿에 바인딩되어야 함\n\n즉, 재고 리스트에서 각 품목의 라벨을 한 번의 클릭으로 미리보기→인쇄할 수 있도록.\n\nQR 데이터 변경, 품목코드 폰트, 창고/위치 필드 추가에 이것도 같이 묶어서 배포해줘 (총 4건).",
-      "status": "done",
-      "priority": "medium",
-      "created_at": "2026-04-10 14:55:57",
-      "updated_at": "2026-04-11 10:44:45",
-      "last_report_at": null,
-      "completed_at": "2026-04-11 10:44:45"
-    },
-    {
       "id": "tq-admin-agent-473bfd",
       "agent": "admin-agent",
       "task": "[긴급] 부서장 슈퍼베이스(Supabase) 로그인 시 \"Kong Error: Invalid authentication credentials\" 에러 발생.",
@@ -3323,30 +3011,6 @@
       "updated_at": "2026-04-12 01:03:49",
       "last_report_at": null,
       "completed_at": "2026-04-12 01:03:49"
-    },
-    {
-      "id": "tq-dev-agent-1ec2a4",
-      "agent": "dev-agent",
-      "task": "[cs-wta.com 재고 페이지 수정 요청]",
-      "message": "[cs-wta.com 재고 페이지 수정 요청]\n\n1) 관리 열에 **전체 필드 수정 버튼** 추가\n   - 재고 등록 이후 품목코드/품목명/규격/판매코드/위치/창고/수량/단위 등 모든 필드를 수정할 수 있는 \"편집\" 버튼\n   - 아이콘: Edit (lucide-react `Edit` 또는 `Settings2`) 권장\n   - 클릭 시 재고등록 모달과 동일한 폼을 기존 값 채워서 오픈, PATCH /api/v1/inventory/stock/{id}로 저장\n   - i18n 키 추가 (ko/en/zh/ja): inventory.editItem, inventory.editItemTitle 등\n\n2) **실사변경 아이콘 변경**\n   - 현재 Pencil(✏️) → 실사(재고 실제 수량 대조)의 의미에 맞게 변경\n   - 권장: `ClipboardCheck` 또는 `PackageCheck`, `Scale` (lucide-react)\n   - Pencil은 \"편집\"(전체 수정)에 양보\n\n모바일/데스크톱 모두 반영, 빌드 성공 후 배포. 완료 시 DB 확인 필요 사항 포함해 보고.",
-      "status": "done",
-      "priority": "medium",
-      "created_at": "2026-04-10 17:06:14",
-      "updated_at": "2026-04-11 10:44:47",
-      "last_report_at": null,
-      "completed_at": "2026-04-11 10:44:47"
-    },
-    {
-      "id": "tq-dev-agent-815032",
-      "agent": "dev-agent",
-      "task": "[cs-wta.com 재고 편집 모달 보완]",
-      "message": "[cs-wta.com 재고 편집 모달 보완]\n\nEditStockModal(재고 품목 전체 수정)에 **사진 업로드 필드가 빠져 있음**. 부서장 지적.\n\n요청:\n1. AddStockForm(재고등록) 모달과 동일한 사진 업로드 UI를 EditStockModal에도 추가\n2. 기존 등록된 이미지가 있으면 썸네일로 표시하고 교체/삭제 가능하게\n3. 다중 이미지 지원 여부는 재고등록 모달과 동일하게 맞추기\n4. 저장 시 기존 업로드 API 재사용 (multipart/form-data or Supabase Storage)\n\n빌드/EC2 배포/nginx reload 후 완료 보고.",
-      "status": "done",
-      "priority": "medium",
-      "created_at": "2026-04-10 18:08:52",
-      "updated_at": "2026-04-11 10:44:49",
-      "last_report_at": null,
-      "completed_at": "2026-04-11 10:44:49"
     },
     {
       "id": "tq-purchase-agent-eade25",
@@ -3361,18 +3025,6 @@
       "completed_at": null
     },
     {
-      "id": "tq-dev-agent-35a750",
-      "agent": "dev-agent",
-      "task": "[cs-wta.com 신규 페이지 개발] 판매자재관리",
-      "message": "[cs-wta.com 신규 페이지 개발] 판매자재관리\n\n**메뉴 위치**: 부품판매 → 판매자재관리 (세부메뉴로 추가)\n\n**데이터 소스 (부서장 제공 CSV, 약 310행)**:\n파일: `C:\\MES\\wta-agents\\data\\uploads\\beef1cc6-8119-4a65-8c9e-5e6320b35b9a\\판매자재관리_20260410.csv`\n또는: https://agent.mes-wta.com/api/files/beef1cc6-8119-4a65-8c9e-5e6320b35b9a\n\n**CSV 컬럼 (16개)**:\n1. *ID (고유ID)\n2. 상태 (대기/승인/반려 등)\n3. ERP 품목코드\n4. 품명\n5. 판매형번\n6. 단가\n7. 비고 (긴 텍스트, 줄바꿈 포함)\n8. 제조사\n9. 장비모델구분 (공통/프레스핸들러/PVD 로딩·언로딩/포장기 등)\n10. 제품이미지 (파일명 CSV, 콤마 구분 복수)\n11. 도면(dwg) (파일명 CSV)\n12. 조립SOP & 점검표 (파일명)\n13. 등록일\n14. 등록자 (이름 + 이메일)\n15. 수정일\n16. 수정자\n\n**요구 사항**:\n1. **DB 스키마 설계**\n   - 테이블명: `sales_material_master` (혹은 csagent 네임스페이스 규칙 따름)\n   - CSV 컬럼 매핑 + 파일 첨부 JSONB 배열 (image_urls, drawing_urls, sop_urls)\n   - 상태 CHECK 제약 (대기/승인/반려)\n   - ⚠️ DB 스키마 생성은 MAX 승인 필요 (설계안 먼저 제시)\n\n2. **백엔드 API (FastAPI)**\n   - GET /api/v1/sales-material — 목록 (페이지/검색/상태·장비모델 필터)\n   - GET /api/v1/sales-material/{id}\n   - POST / PUT / DELETE\n   - POST /api/v1/sales-material/import — CSV 임포트 (첨부파일은 추후)\n   - 파일 업로드/삭제 엔드포인트 (이미지/도면/SOP)\n\n3. **프론트엔드 페이지**\n   - 네비: 부품판매 (기존) → 판매자재관리 (신규)\n   - 리스트: 카드/테이블 토글, 검색(품명/품번/판매형번), 장비모델구분·상태 필터\n   - 상세: 이미지 갤러리, 도면(dwg) 다운로드, SOP 다운로드\n   - 등록/수정: 모달 또는 페이지 (모든 필드 + 멀티 파일 업로드)\n   - CSV 임포트 버튼 (관리자)\n   - 모바일 대응, i18n (ko/en/zh/ja)\n\n4. **초기 데이터 임포트**\n   - 위 CSV 310행 DB 적재 (파일 참조는 경로만, 실제 파일은 추후 업로드)\n\n**진행 순서**:\n1. CSV 전체 분석 → 필드/제약 정리 → **DB 스키마 설계안 MAX에 제출**\n2. 승인 후 백엔드 → 프론트엔드 → 임포트 → 배포 → 보고\n\n먼저 1단계 설계안 제출해줘.",
-      "status": "done",
-      "priority": "medium",
-      "created_at": "2026-04-10 18:49:52",
-      "updated_at": "2026-04-11 10:44:51",
-      "last_report_at": null,
-      "completed_at": "2026-04-11 10:44:51"
-    },
-    {
       "id": "tq-crafter-c0c9a5",
       "agent": "crafter",
       "task": "[부서장 지시] cs-agent CS 질문 처리 파이프라인 점검 및 GraphRAG 완성",
@@ -3383,30 +3035,6 @@
       "updated_at": "2026-04-12 01:06:05",
       "last_report_at": null,
       "completed_at": "2026-04-12 01:06:05"
-    },
-    {
-      "id": "tq-dev-agent-791a51",
-      "agent": "dev-agent",
-      "task": "[판매자재관리 스키마 추가 지시] 부서장 지시",
-      "message": "[판매자재관리 스키마 추가 지시] 부서장 지시\n\n판매자재에 **소모품 / Spare 구분 필드 추가**.\n\n추가 컬럼 제안:\n```sql\nmaterial_type VARCHAR(20) NOT NULL DEFAULT '일반'\n    CHECK (material_type IN ('소모품', 'Spare', '일반'))\n```\n또는 소모품/Spare만 쓰는 경우:\n```sql\nmaterial_type VARCHAR(20) CHECK (material_type IN ('소모품', 'Spare'))\n```\n\n**질문**:\n1. \"소모품 / Spare\" 외에 \"일반\" 또는 \"기타\" 같은 기본값이 필요한가? (CSV에는 구분 없음)\n2. 필드 영문명: `material_type` 괜찮은가?\n3. 리스트 필터/검색에 이 구분도 노출 (추가 필터 드롭다운)\n4. 등록/수정 모달에 라디오버튼 또는 드롭다운 추가\n\n이 추가 반영한 최종 스키마안으로 수정 제출해줘. 아직 생성하지 말고 설계 업데이트만.",
-      "status": "done",
-      "priority": "medium",
-      "created_at": "2026-04-10 18:52:07",
-      "updated_at": "2026-04-11 10:44:54",
-      "last_report_at": null,
-      "completed_at": "2026-04-11 10:44:54"
-    },
-    {
-      "id": "tq-dev-agent-fbaf49",
-      "agent": "dev-agent",
-      "task": "[판매자재관리 최종 확정 — 진행하세요]",
-      "message": "[판매자재관리 최종 확정 — 진행하세요]\n\n부서장 답변 반영:\n\n1. **equipment_type**: MES 시스템설정 > **제조시스템설정** 페이지에 모델 정보 있음\n   - MES DB(PostgreSQL localhost:55432)에서 해당 테이블 조회 후 연계\n   - 테이블명 알 수 없으면 db-manager에 조회 요청 (시스템설정/제조시스템 관련 테이블)\n   - 하드코딩 CHECK 제약 대신 참조 테이블 또는 마스터 조회로 대체\n   - MES API 엔드포인트 있으면 그것 사용 우선\n\n2. **S3 경로 (확정)**:\n   - `material/image/`\n   - `material/drawings/`\n   - `material/sop/`\n   - ⚠️ **legacy_id 경로 제거**. legacy_id는 DB 컬럼으론 유지(다우오피스 Works 이미지 다운로드 마이그레이션용)지만 파일 경로에는 포함하지 않음.\n   - 파일명은 `{uuid}_{원본파일명}` 또는 적절한 유니크 네이밍\n\n3. **권한 확정**: 로그인 사용자 CRUD, 삭제는 관리자만\n4. **CSV 287행**: 전부 `material_type='일반'`, `status='대기'`로 임포트 후 사후 분류\n\n**진행 순서**\n1. MES 제조시스템설정 테이블 확인 (db-manager 조회 또는 MES 백엔드 코드 확인)\n2. 스키마 최종 확정 (equipment_type 참조 방식 결정) → SQL 실행\n3. 백엔드 FastAPI 구현 (CRUD + 파일 업로드 + CSV 임포트)\n4. 프론트엔드 (부품판매 → 판매자재관리 세부메뉴, 리스트/상세/등록·수정 모달, i18n 4언어)\n5. CSV 287행 임포트\n6. 빌드/EC2 배포/nginx reload\n7. 완료 보고 (DB 생성 전/후 사항 구분)\n\n진행 중 병목(MES 테이블 못 찾음 등) 있으면 즉시 MAX에 보고.",
-      "status": "done",
-      "priority": "medium",
-      "created_at": "2026-04-10 19:02:43",
-      "updated_at": "2026-04-11 10:44:56",
-      "last_report_at": null,
-      "completed_at": "2026-04-11 10:44:56"
     },
     {
       "id": "tq-crafter-1dca45",
@@ -3421,18 +3049,6 @@
       "completed_at": "2026-04-12 01:06:05"
     },
     {
-      "id": "tq-dev-agent-47aa1c",
-      "agent": "dev-agent",
-      "task": "[판매자재관리 equipment_type 확정 — 부서장 결정]",
-      "message": "[판매자재관리 equipment_type 확정 — 부서장 결정]\n\n**방침**\n- MES 실시간 연동/주기 동기화 **포기**\n- cs-wta.com에서 독립적으로 CRUD 가능한 **equipment_models 테이블**을 자체 관리\n- **초기 seed 데이터는 현재 MES의 api_equipmentmodel 내용으로 1회 구축**\n\n**작업**\n1. `csagent.equipment_models` 테이블 신규 생성\n   ```sql\n   CREATE TABLE csagent.equipment_models (\n       id BIGSERIAL PRIMARY KEY,\n       name VARCHAR(100) UNIQUE NOT NULL,\n       code VARCHAR(50),\n       description TEXT,\n       is_active BOOLEAN NOT NULL DEFAULT TRUE,\n       sort_order INT NOT NULL DEFAULT 0,\n       created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),\n       updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()\n   );\n   CREATE INDEX idx_equipment_models_active ON csagent.equipment_models(is_active, sort_order);\n   ```\n\n2. **초기 seed**: MES의 `public.api_equipmentmodel`에서 현재 데이터 export → csagent.equipment_models로 1회 import\n   - db-manager에 MES 테이블 데이터 조회 요청 (SELECT id, name, code, description, type, is_active FROM public.api_equipmentmodel WHERE is_active=true)\n   - 결과를 cs-wta.com DB에 INSERT\n   - 이후에는 각자 독립\n\n3. **sales_material_master.equipment_type** 컬럼 방식\n   - 권장: `equipment_type` 컬럼은 `VARCHAR(100)` free-form (FK 대신 name 저장 — 텍스트 매칭 단순화). 이유: 모델명 변경/삭제 시 sales_material 기존 데이터 깨지지 않음.\n   - 또는 FK로 `equipment_model_id BIGINT REFERENCES csagent.equipment_models(id)` + ON DELETE SET NULL\n   - **결정**: FK 방식 권장. name은 조인으로 표시. 삭제 시 SET NULL로 고아 레코드 유지.\n\n4. **관리 페이지 추가**: 시스템 설정 또는 부품판매 하위에 \"장비모델 관리\" 페이지 (목록/등록/수정/활성화 토글/정렬). 권한: 관리자만.\n\n5. **CSV 287행 임포트 시**: CSV의 \"장비모델구분\" 값(공통/PVD 로딩/언로딩 등)과 seed한 MES 모델명의 매칭률이 낮을 수 있음.\n   - 매칭 안 되는 값은 자동으로 equipment_models에 신규 추가 (is_active=true)하거나, \"미분류\" 기본값으로 임시 저장.\n   - 매칭 결과 로그 MAX에 제출.\n\n**진행 순서**\n1. db-manager에 MES api_equipmentmodel 데이터 export 요청 (5분)\n2. csagent.equipment_models 테이블 생성 + seed 삽입\n3. sales_material_master 테이블 생성 (equipment_model_id FK)\n4. 백엔드 API (판매자재 CRUD + 장비모델 CRUD + CSV 임포트 + 파일 업로드)\n5. 프론트 (부품판매 → 판매자재관리 세부메뉴 + 장비모델 관리 페이지)\n6. CSV 287행 임포트 + 매칭 결과 보고\n7. 빌드/배포/보고\n\n병목 있으면 즉시 MAX 보고.",
-      "status": "done",
-      "priority": "medium",
-      "created_at": "2026-04-10 19:20:10",
-      "updated_at": "2026-04-11 10:44:58",
-      "last_report_at": null,
-      "completed_at": "2026-04-11 10:44:58"
-    },
-    {
       "id": "tq-qa-agent-71a17d",
       "agent": "qa-agent",
       "task": "[Playwright 검증 요청] cs-wta.com 판매자재관리 신규 페이지",
@@ -3443,30 +3059,6 @@
       "updated_at": "2026-04-12 01:02:25",
       "last_report_at": null,
       "completed_at": "2026-04-12 01:02:25"
-    },
-    {
-      "id": "tq-dev-agent-579cbb",
-      "agent": "dev-agent",
-      "task": "[긴급 수정] cs-wta.com 모바일 네비 메뉴 누락",
-      "message": "[긴급 수정] cs-wta.com 모바일 네비 메뉴 누락\n\n부서장 지적: **모바일에서 \"판매자재관리\" 메뉴가 안 보임**.\n\n**확인 필요**\n1. 사이드바(데스크톱)와 모바일 햄버거/드로어 메뉴가 별도 컴포넌트로 분리돼 있는지 확인\n2. \"부품 판매 > 판매 현황 / 판매자재관리\" children이 모바일 메뉴에도 노출되는지\n3. 기존 \"부품 판매\" 단일 메뉴만 있고 하위 확장이 모바일에서 안 되는 구조라면 확장 가능하도록 수정\n4. 모바일 뷰(bottom nav 또는 drawer) 구성 전체 점검 — 다른 메뉴도 동일한 누락 가능성\n\n**작업**\n- 모바일 메뉴 컴포넌트에 신규 경로 반영\n- 하위 메뉴 확장 UI (아코디언 또는 클릭 시 서브메뉴 표시)\n- 반응형 BP 기준으로 데스크톱/모바일 동일한 라우트 노출\n- i18n 키 동일 사용\n\n**배포**\n- 빌드 → EC2 반영 → nginx reload\n- 완료 후 Playwright로 모바일 뷰포트(iPhone 12, Galaxy S20) 스크린샷 2장 첨부해 보고\n\n긴급. 바로 진행.",
-      "status": "done",
-      "priority": "medium",
-      "created_at": "2026-04-10 19:42:33",
-      "updated_at": "2026-04-11 10:45:00",
-      "last_report_at": null,
-      "completed_at": "2026-04-11 10:45:00"
-    },
-    {
-      "id": "tq-dev-agent-2136dd",
-      "agent": "dev-agent",
-      "task": "[긴급 버그] cs-wta.com 판매자재관리 API 500",
-      "message": "[긴급 버그] cs-wta.com 판매자재관리 API 500\n\nqa-agent Playwright 검증 결과:\n\n**❌ 크리티컬**: `GET /api/v1/sales-material?page=1&limit=20` **500 에러** → 데이터 0건 로드 (실제 DB에는 287건)\n   - 페이지는 정상 렌더링되나 리스트 비어있음\n   - 콘솔/네트워크 500 에러\n   - 즉시 원인 파악 + 수정 (백엔드 로그 확인)\n\n**⚠️ 기획 확인 필요** (qa-agent 지적)\n1. 파일 업로드: 현재 \"저장 후 업로드(2-step)\" 구현. 기획은 등록 모달에서 1회 저장이 자연스러움 — 단일 흐름으로 변경 검토 (신규 등록 시 tempId/transaction 방식)\n2. material_type: **라디오 버튼(소모품/Spare/일반)** 합의였는데 드롭다운으로 구현됨 → 라디오로 수정\n\n**기타 QA 결과**\n- ✅ 메뉴, 검색 입력, 필터 드롭다운 3종, 페이지네이션, 모바일 반응형, 등록 모달 노출, 장비모델 관리 모달, i18n 다국어 정상\n- ⚠️ 상세/편집 모달은 데이터 없어 미검증\n\n**작업 순서**\n1. 500 에러 즉시 수정 → cs-backend 로그 첨부해서 원인 보고\n2. material_type 드롭다운 → 라디오 변경\n3. 파일 업로드 단일 흐름(옵션)\n4. qa-agent 재검증 요청을 위해 수정 완료 보고 시 변경 요약 포함\n\n모바일 메뉴 누락 건과 병렬 진행. 500 에러가 최우선.",
-      "status": "done",
-      "priority": "medium",
-      "created_at": "2026-04-10 19:43:47",
-      "updated_at": "2026-04-11 10:45:02",
-      "last_report_at": null,
-      "completed_at": "2026-04-11 10:45:02"
     },
     {
       "id": "tq-db-manager-46d2c7",
@@ -3503,18 +3095,6 @@
       "updated_at": "2026-04-12 01:06:06",
       "last_report_at": null,
       "completed_at": "2026-04-12 01:06:06"
-    },
-    {
-      "id": "tq-dev-agent-c979d0",
-      "agent": "dev-agent",
-      "task": "[일일 업무보고 요청] 2026-04-10",
-      "message": "[일일 업무보고 요청] 2026-04-10\n저장: reports/daily-reports/2026-04-10/dev-agent.md\n포맷:\n# 일일 업무보고 — dev-agent\n날짜: 2026-04-10\n## 처리 작업\n## 특이사항\n## 내일 예정\n완료 후 MAX 1줄 보고. 30분 내.",
-      "status": "done",
-      "priority": "medium",
-      "created_at": "2026-04-10 22:00:43",
-      "updated_at": "2026-04-11 10:45:04",
-      "last_report_at": null,
-      "completed_at": "2026-04-11 10:45:04"
     },
     {
       "id": "tq-admin-agent-345f2f",
@@ -3731,18 +3311,6 @@
       "updated_at": "2026-04-12 01:02:39",
       "last_report_at": null,
       "completed_at": "2026-04-12 01:02:39"
-    },
-    {
-      "id": "tq-dev-agent-efe62b",
-      "agent": "dev-agent",
-      "task": "[판매자재관리 후속] 1) 파일 업로드 2-step → 단일 흐름(옵션A multipart 트랜잭션) 2) sale_code 편집 허용(백엔드 allowed + 프론트 활성화)",
-      "message": "",
-      "status": "done",
-      "priority": "high",
-      "created_at": "2026-04-11 10:48:28",
-      "updated_at": "2026-04-11 10:56:54",
-      "last_report_at": null,
-      "completed_at": "2026-04-11 10:56:54"
     },
     {
       "id": "tq-dev-agent-e2c12b",
@@ -5301,18 +4869,6 @@
       "requested_by": "MAX"
     },
     {
-      "id": "tq-qa-agent-b29eb0",
-      "agent": "qa-agent",
-      "task": "[지시 — 대기 대신 선제 작업] docs-agent 파이프라인 진행 중 유휴 금지. 7개 카테고리 최종 검증 대비해서 아래 선제 작업 동시 진행.",
-      "message": "[지시 — 대기 대신 선제 작업] docs-agent 파이프라인 진행 중 유휴 금지. 7개 카테고리 최종 검증 대비해서 아래 선제 작업 동시 진행.\n\n1) 평가 쿼리셋 확장 — 현재 5쿼리 → 카테고리별 최소 5쿼리 × 7 = 35쿼리로 확장. 실제 사용자 질문 패턴 반영 (설치/파라미터/알람/트러블슈팅/스펙).\n2) 자동 평가 스크립트화 — 필터 표준 v1.0 + MRR 재산출 로직을 원샷 실행 가능한 py 스크립트로 정리. 입력: 쿼리셋 JSON + 인덱스 엔드포인트, 출력: reports/manuals-v2-qa-{timestamp}.html\n3) OCR 품질 사전 점검 — 2_sensor 45/122, 5_inverter 11/17, 7_pneumatic 30/65 OCR 문서 리스트 추출 후 임베딩 단계 품질 리스크 사전 보고\n4) 카테고리별 골든셋 정답 청크 사전 지정 — 쿼리별 정답 section_path/파일명 미리 라벨링\n\n결과: 각 항목 산출물 경로 + 3줄 요약. 완료 시 report_complete.",
-      "status": "pending",
-      "priority": "medium",
-      "created_at": "2026-04-12 10:02:29",
-      "updated_at": "2026-04-12 10:02:29",
-      "last_report_at": null,
-      "completed_at": null
-    },
-    {
       "id": "tq-docs-agent-213c64",
       "agent": "docs-agent",
       "task": "[긴급 전체 정지] 부서장 지시. manuals-v2 Step2 파싱 배치 즉시 중단.\n\n조치:\n1) 백그라운드 배치 프로세스 즉시 종료\n2) 현재까지 진행된 state.json ",
@@ -5324,18 +4880,6 @@
       "last_report_at": null,
       "completed_at": null,
       "requested_by": "MAX"
-    },
-    {
-      "id": "tq-docs-agent-ee72f8",
-      "agent": "docs-agent",
-      "task": "[긴급 전체 정지] 부서장 지시. manuals-v2 Step2 파싱 배치 즉시 중단.",
-      "message": "[긴급 전체 정지] 부서장 지시. manuals-v2 Step2 파싱 배치 즉시 중단.\n\n조치:\n1) 백그라운드 배치 프로세스 즉시 종료\n2) 현재까지 진행된 state.json + log 상태 그대로 보존 (재개 가능 상태 유지)\n3) 중단 시점의 처리 건수 / 남은 건수 / 중단 지점 파일 3줄 요약 보고\n\n다음 지시 있을 때까지 대기. 추가 작업 금지.",
-      "status": "pending",
-      "priority": "medium",
-      "created_at": "2026-04-12 10:04:35",
-      "updated_at": "2026-04-12 10:04:35",
-      "last_report_at": null,
-      "completed_at": null
     },
     {
       "id": "tq-qa-agent-069a69",
@@ -5351,18 +4895,6 @@
       "requested_by": "MAX"
     },
     {
-      "id": "tq-qa-agent-2a315e",
-      "agent": "qa-agent",
-      "task": "[긴급 전체 정지] 부서장 지시. 방금 지시한 선제 작업 4건(쿼리셋 확장/자동화 스크립트/OCR 점검/골든셋 라벨링) 즉시 중단. 다음 지시 대기. 현재 진행 상태만 3줄 요약 ",
-      "message": "[긴급 전체 정지] 부서장 지시. 방금 지시한 선제 작업 4건(쿼리셋 확장/자동화 스크립트/OCR 점검/골든셋 라벨링) 즉시 중단. 다음 지시 대기. 현재 진행 상태만 3줄 요약 보고.",
-      "status": "pending",
-      "priority": "medium",
-      "created_at": "2026-04-12 10:04:38",
-      "updated_at": "2026-04-12 10:04:38",
-      "last_report_at": null,
-      "completed_at": null
-    },
-    {
       "id": "tq-docs-agent-bc4aad",
       "agent": "docs-agent",
       "task": "[인수인계 작성 지시] 부서장 지시. 오늘 부서장과 다른 일이 많으니 manuals-v2/GraphRAG 작업을 qa-agent에게 인수인계.\n\n작성 내용 (handoff 문서 1",
@@ -5374,18 +4906,6 @@
       "last_report_at": null,
       "completed_at": null,
       "requested_by": "MAX"
-    },
-    {
-      "id": "tq-docs-agent-2c3940",
-      "agent": "docs-agent",
-      "task": "[인수인계 작성 지시] 부서장 지시. 오늘 부서장과 다른 일이 많으니 manuals-v2/GraphRAG 작업을 qa-agent에게 인수인계.",
-      "message": "[인수인계 작성 지시] 부서장 지시. 오늘 부서장과 다른 일이 많으니 manuals-v2/GraphRAG 작업을 qa-agent에게 인수인계.\n\n작성 내용 (handoff 문서 1개, 간결하게):\n1) 현재 상태: Step2 파싱 배치 1/693 중단 / state.json + log 경로\n2) 재개 명령: manuals_v2_step2_parse.py 실행 방법, 환경변수(V2_EMBED/V2_VLM), 체크포인트 재개 동작\n3) 전체 파이프라인 남은 단계: Step2 파싱 → 임베딩(Qwen3-Emb-8B, EMBED_DIM=2000) → LightRAG+pgvector 인덱싱\n4) 주요 스크립트 경로 목록 (extract/parse/embed/index 각 단계)\n5) 알려진 이슈/주의: OCR 품질(2_sensor/5_inverter/7_pneumatic), 색공간 오류\n6) qa-agent가 물어볼만한 FAQ 3~5개 선제 정리\n\n저장: workspaces/docs-agent/manuals_v2_handoff.md\n완료 시 경로 + 3줄 요약 보고. 인수인계 완료 후 GraphRAG 건은 qa-agent 담당.",
-      "status": "pending",
-      "priority": "medium",
-      "created_at": "2026-04-12 10:05:59",
-      "updated_at": "2026-04-12 10:05:59",
-      "last_report_at": null,
-      "completed_at": null
     },
     {
       "id": "tq-crafter-ea5465",
@@ -5401,18 +4921,6 @@
       "requested_by": "MAX"
     },
     {
-      "id": "tq-crafter-00f52c",
-      "agent": "crafter",
-      "task": "[인수인계 작성 지시] 부서장 지시. 오늘 부서장과 다른 일이 많으니 manuals-v2/GraphRAG 관련 작업을 issue-manager에게 인수인계.",
-      "message": "[인수인계 작성 지시] 부서장 지시. 오늘 부서장과 다른 일이 많으니 manuals-v2/GraphRAG 관련 작업을 issue-manager에게 인수인계.\n\n작성 내용 (handoff 문서 1개, 간결하게):\n1) crafter가 이번 파이프라인에서 담당한 범위 (재파싱, LightRAG 인프라, Qdrant/pgvector 설정, MCP agent-channel msg_type 등)\n2) 진행 중이거나 대기 중인 GraphRAG 관련 작업 목록\n3) 재개에 필요한 명령/환경/경로 정리\n4) 08:25~26 재파싱 때 사용한 스크립트/파라미터\n5) issue-manager가 물어볼만한 FAQ 3~5개 선제 정리\n\n저장: workspaces/crafter/graphrag_handoff.md\n완료 시 경로 + 3줄 요약 보고. GraphRAG 완료 시점까지 issue-manager 담당.",
-      "status": "pending",
-      "priority": "medium",
-      "created_at": "2026-04-12 10:06:06",
-      "updated_at": "2026-04-12 10:06:06",
-      "last_report_at": null,
-      "completed_at": null
-    },
-    {
       "id": "tq-docs-agent-920b03",
       "agent": "docs-agent",
       "task": "[인수인계 강화 — 부서장 재지시] 인수인계 확실히 할 것. qa-agent가 본인 없이도 Step2~인덱싱 단계를 단독 실행/재개/트러블슈팅 가능한 수준까지 작성.\n\n추가 필수 ",
@@ -5426,18 +4934,6 @@
       "requested_by": "MAX"
     },
     {
-      "id": "tq-docs-agent-64db51",
-      "agent": "docs-agent",
-      "task": "[인수인계 강화 — 부서장 재지시] 인수인계 확실히 할 것. qa-agent가 본인 없이도 Step2~인덱싱 단계를 단독 실행/재개/트러블슈팅 가능한 수준까지 작성.",
-      "message": "[인수인계 강화 — 부서장 재지시] 인수인계 확실히 할 것. qa-agent가 본인 없이도 Step2~인덱싱 단계를 단독 실행/재개/트러블슈팅 가능한 수준까지 작성.\n\n추가 필수 항목:\n- 각 단계별 실행 커맨드 복붙 가능한 형태(예: `python workspaces/docs-agent/manuals_v2_step2_parse.py --resume`)\n- 환경변수 전체 목록(V2_EMBED/V2_VLM/EMBED_DIM/PGVECTOR_DSN 등) 기본값 포함\n- 중단/재개 시나리오 3개(정상 재개 / md5 미기록 파일 / state 손상) 처리법\n- 산출물 검증 방법(chunks.jsonl 확인 커맨드)\n- 막힐 때 crafter/MAX 에스컬레이션 기준\n\n인수 완료 조건: qa-agent가 문서 읽고 \"착수 가능\" 확인 사인.",
-      "status": "pending",
-      "priority": "medium",
-      "created_at": "2026-04-12 10:06:27",
-      "updated_at": "2026-04-12 10:06:27",
-      "last_report_at": null,
-      "completed_at": null
-    },
-    {
       "id": "tq-crafter-828cbd",
       "agent": "crafter",
       "task": "[인수인계 강화 — 부서장 재지시] 인수인계 확실히 할 것. issue-manager가 본인 없이도 담당 범위를 단독 실행/재개 가능한 수준까지 작성.\n\n추가 필수 항목:\n- 각 ",
@@ -5449,18 +4945,6 @@
       "last_report_at": null,
       "completed_at": null,
       "requested_by": "MAX"
-    },
-    {
-      "id": "tq-crafter-bc8485",
-      "agent": "crafter",
-      "task": "[인수인계 강화 — 부서장 재지시] 인수인계 확실히 할 것. issue-manager가 본인 없이도 담당 범위를 단독 실행/재개 가능한 수준까지 작성.",
-      "message": "[인수인계 강화 — 부서장 재지시] 인수인계 확실히 할 것. issue-manager가 본인 없이도 담당 범위를 단독 실행/재개 가능한 수준까지 작성.\n\n추가 필수 항목:\n- 각 인프라 작업 복붙 가능한 커맨드(재파싱 / LightRAG 재시작 / pgvector 점검)\n- 환경/포트/DSN/인증 정보 위치(비밀은 경로만)\n- 중단/재개 시나리오 처리법\n- 08:25~26 재파싱 스크립트 전체 경로 + 재현 순서\n- 막힐 때 docs-agent/MAX 에스컬레이션 기준\n\n인수 완료 조건: issue-manager가 문서 읽고 \"착수 가능\" 확인 사인.",
-      "status": "pending",
-      "priority": "medium",
-      "created_at": "2026-04-12 10:06:32",
-      "updated_at": "2026-04-12 10:06:32",
-      "last_report_at": null,
-      "completed_at": null
     },
     {
       "id": "tq-docs-agent-a6a69b",
@@ -5539,18 +5023,6 @@
       "requested_by": "MAX"
     },
     {
-      "id": "tq-docs-agent-4be872",
-      "agent": "docs-agent",
-      "task": "[정정 — 산출물 경로] 부서장 지시 변경. 자체 산출물도 모두 reports/ 에 생성.",
-      "message": "[정정 — 산출물 경로] 부서장 지시 변경. 자체 산출물도 모두 reports/ 에 생성.\n\nhandoff 문서 \"작업공간 경계\" 섹션 수정:\n- 파이프라인 실행 파일(스크립트/state.json/체크포인트/log): workspaces/docs-agent/ 유지\n- 모든 산출물(검증 리포트/쿼리셋/로그 요약/분석 결과/중간 산출물 포함): reports/manuals-v2/ 하위에 생성\n- qa-agent 자체 산출물도 workspaces/qa-agent가 아닌 reports/manuals-v2/ 로\n- 세부 하위 경로 제안: reports/manuals-v2/pipeline/, reports/manuals-v2/qa/, reports/manuals-v2/ocr/ 등 카테고리별\n\nqa-agent 에게 넘길 때 이 규칙 반드시 전달.",
-      "status": "pending",
-      "priority": "medium",
-      "created_at": "2026-04-12 10:09:47",
-      "updated_at": "2026-04-12 10:09:47",
-      "last_report_at": null,
-      "completed_at": null
-    },
-    {
       "id": "tq-crafter-6738d0",
       "agent": "crafter",
       "task": "[정정 — 산출물 경로] 부서장 지시 변경. 자체 산출물도 모두 reports/ 에 생성.\n\nhandoff 문서 수정:\n- 인프라 실행 파일(스크립트/config): workspa",
@@ -5562,18 +5034,6 @@
       "last_report_at": null,
       "completed_at": null,
       "requested_by": "MAX"
-    },
-    {
-      "id": "tq-crafter-572907",
-      "agent": "crafter",
-      "task": "[정정 — 산출물 경로] 부서장 지시 변경. 자체 산출물도 모두 reports/ 에 생성.",
-      "message": "[정정 — 산출물 경로] 부서장 지시 변경. 자체 산출물도 모두 reports/ 에 생성.\n\nhandoff 문서 수정:\n- 인프라 실행 파일(스크립트/config): workspaces/crafter/ 유지\n- 모든 산출물(이슈 리포트/트래킹/분석/중간 결과): reports/manuals-v2/ 하위에 생성\n- issue-manager 자체 산출물도 workspaces/issue-manager가 아닌 reports/manuals-v2/ 로\n\nissue-manager 에게 넘길 때 이 규칙 반드시 전달.",
-      "status": "pending",
-      "priority": "medium",
-      "created_at": "2026-04-12 10:09:51",
-      "updated_at": "2026-04-12 10:09:51",
-      "last_report_at": null,
-      "completed_at": null
     },
     {
       "id": "tq-docs-agent-9acd49",
@@ -5589,18 +5049,6 @@
       "requested_by": "MAX"
     },
     {
-      "id": "tq-docs-agent-56fedc",
-      "agent": "docs-agent",
-      "task": "[정정 추가 — 용량 이슈] 부서장 설명: workspaces/는 git 커밋 대상이라 용량이 불필요하게 증가. 따라서 부피 있는 파일은 모두 reports/(gitignored)",
-      "message": "[정정 추가 — 용량 이슈] 부서장 설명: workspaces/는 git 커밋 대상이라 용량이 불필요하게 증가. 따라서 부피 있는 파일은 모두 reports/(gitignored) 로 이동.\n\n규칙 최종:\n- workspaces/docs-agent/ 에 유지: .py 스크립트만 (버전관리 필요한 경량 파일)\n- reports/manuals-v2/ 로 이동/생성:\n  * state.json, *.ckpt, *.log (모든 체크포인트/로그)\n  * *.jsonl (추출/청킹 산출물 전체)\n  * v2_poc/ 하위 chunks.jsonl\n  * 중간 산출물, 분석 결과, 리포트 HTML 모두\n\n기존 파일도 이미 workspaces/에 있는 것들은 reports/manuals-v2/legacy/ 로 이동 후 스크립트 경로 업데이트. handoff 문서에도 \"용량 이유로 reports/ 사용\" 명시.\n\n이행 순서:\n1) 기존 workspaces/docs-agent/manuals_v2_* 파일 중 용량 큰 것(jsonl/ckpt/log/state) reports/manuals-v2/ 로 이동\n2) 스크립트 내 경로 상수 업데이트\n3) handoff 문서 작성\n\nqa-agent도 이 규칙 따르도록 인계.",
-      "status": "pending",
-      "priority": "medium",
-      "created_at": "2026-04-12 10:10:18",
-      "updated_at": "2026-04-12 10:10:18",
-      "last_report_at": null,
-      "completed_at": null
-    },
-    {
       "id": "tq-crafter-d48347",
       "agent": "crafter",
       "task": "[정정 추가 — 용량 이슈] 부서장 설명: workspaces/는 git 커밋 대상이라 용량이 불필요하게 증가. 부피 있는 파일은 reports/(gitignored) 로 이동.\n",
@@ -5612,18 +5060,6 @@
       "last_report_at": null,
       "completed_at": null,
       "requested_by": "MAX"
-    },
-    {
-      "id": "tq-crafter-222b91",
-      "agent": "crafter",
-      "task": "[정정 추가 — 용량 이슈] 부서장 설명: workspaces/는 git 커밋 대상이라 용량이 불필요하게 증가. 부피 있는 파일은 reports/(gitignored) 로 이동.",
-      "message": "[정정 추가 — 용량 이슈] 부서장 설명: workspaces/는 git 커밋 대상이라 용량이 불필요하게 증가. 부피 있는 파일은 reports/(gitignored) 로 이동.\n\n규칙:\n- workspaces/crafter/ 에 유지: .py 스크립트만\n- reports/manuals-v2/ 로 이동/생성: 로그/체크포인트/산출물/분석/중간 파일 전체\n\n기존 workspaces/crafter/ 내 GraphRAG 관련 부피 파일(재파싱 로그/캐시/dump 등) reports/manuals-v2/legacy/ 로 이동 후 스크립트 경로 업데이트. handoff 문서에도 \"용량 이유로 reports/ 사용\" 명시.\n\nissue-manager도 이 규칙 따르도록 인계.",
-      "status": "pending",
-      "priority": "medium",
-      "created_at": "2026-04-12 10:10:23",
-      "updated_at": "2026-04-12 10:10:23",
-      "last_report_at": null,
-      "completed_at": null
     },
     {
       "id": "tq-docs-agent-c1c8dc",
@@ -5639,18 +5075,6 @@
       "requested_by": "MAX"
     },
     {
-      "id": "tq-docs-agent-3b8242",
-      "agent": "docs-agent",
-      "task": "[추가 지시] 부서장 지시: 이미 PoC로 생성된 파일도 모두 reports/manuals-v2/ 로 이동.",
-      "message": "[추가 지시] 부서장 지시: 이미 PoC로 생성된 파일도 모두 reports/manuals-v2/ 로 이동.\n\n이행 범위 (workspaces/docs-agent/ 내 전체):\n1) PoC 산출물: v2_poc/ 하위 전체(chunks.jsonl, figures, 파싱 결과) → reports/manuals-v2/poc/\n2) 추출 JSONL 7개: manuals_v2_*_extract.jsonl → reports/manuals-v2/extract/\n3) 분류 결과: manuals_v2_*_classification.csv → reports/manuals-v2/classify/\n4) 체크포인트/로그: *.ckpt, *.log, state.json 전부 → reports/manuals-v2/state/\n5) 기타 부피 파일: manuals_v2_summary.json, *_rename_log.json, *_phase*.json → reports/manuals-v2/legacy/\n6) 스크립트(.py)는 workspaces에 유지하되 내부 경로 상수를 reports/manuals-v2/ 기준으로 업데이트\n\n이행 완료 후 workspaces/docs-agent/ 는 scripts + handoff 문서만 남게. \n이행 결과 3줄 보고 + 이동 파일 건수 + 새 디렉터리 구조 트리 첨부.",
-      "status": "pending",
-      "priority": "medium",
-      "created_at": "2026-04-12 10:10:40",
-      "updated_at": "2026-04-12 10:10:40",
-      "last_report_at": null,
-      "completed_at": null
-    },
-    {
       "id": "tq-qa-agent-3494c6",
       "agent": "qa-agent",
       "task": "[추가 지시] 부서장 지시: workspaces/qa-agent/ 내 manuals-v2/graphrag 관련 기존 산출물도 모두 reports/manuals-v2/qa/ 로 이동",
@@ -5664,18 +5088,6 @@
       "requested_by": "MAX"
     },
     {
-      "id": "tq-qa-agent-518bbb",
-      "agent": "qa-agent",
-      "task": "[추가 지시] 부서장 지시: workspaces/qa-agent/ 내 manuals-v2/graphrag 관련 기존 산출물도 모두 reports/manuals-v2/qa/ 로 이동",
-      "message": "[추가 지시] 부서장 지시: workspaces/qa-agent/ 내 manuals-v2/graphrag 관련 기존 산출물도 모두 reports/manuals-v2/qa/ 로 이동.\n\n대상:\n- graphrag_validation_*.json\n- ocr_text_quality.json\n- decrease_analysis.json\n- 기타 검증/분석 산출물(.json/.html/.csv/.log) 전부\n\n스크립트(.py)는 workspaces/qa-agent/에 유지하되 경로 상수 업데이트. 이행 결과 3줄 + 이동 건수 보고.",
-      "status": "pending",
-      "priority": "medium",
-      "created_at": "2026-04-12 10:10:46",
-      "updated_at": "2026-04-12 10:10:46",
-      "last_report_at": null,
-      "completed_at": null
-    },
-    {
       "id": "tq-issue-manager-741382",
       "agent": "issue-manager",
       "task": "[인수인계 — crafter GraphRAG 업무] 부서장 지시로 오늘부터 GraphRAG 작업 완료 시점까지 crafter의 인프라 담당을 issue-manager가 임시 인수.",
@@ -5687,18 +5099,6 @@
       "last_report_at": null,
       "completed_at": null,
       "requested_by": "MAX"
-    },
-    {
-      "id": "tq-issue-manager-86965d",
-      "agent": "issue-manager",
-      "task": "[인수인계 — crafter GraphRAG 업무] 부서장 지시로 오늘부터 GraphRAG 작업 완료 시점까지 crafter의 인프라 담당을 issue-manager가 임시 인수.",
-      "message": "[인수인계 — crafter GraphRAG 업무] 부서장 지시로 오늘부터 GraphRAG 작업 완료 시점까지 crafter의 인프라 담당을 issue-manager가 임시 인수.\n\n인수 문서: C:/MES/wta-agents/workspaces/crafter/graphrag_handoff.md\n\n범위:\n- PoC 재처리 이후 GraphRAG 인덱싱/검증/보고까지 단독 운영\n- 환경/포트/DSN/스크립트/재개 시나리오/FAQ 6건/에스컬레이션 매트릭스 포함\n- 산출물 경로: reports/manuals-v2/ 하위 (workspaces/ 쓰지 말 것 — 용량 이슈)\n- 스크립트는 workspaces/crafter/ 에 유지, 경로 상수는 이미 reports/ 기준으로 수정됨\n\n작업:\n1) 문서 정독\n2) 불명확 항목 질문 정리\n3) \"착수 가능\" 사인 (문제 없으면 즉시, 질문 있으면 선질문 후)\n4) 이후 GraphRAG 완료 시점까지 crafter 자리 대행, 인프라 이슈/운영 담당\n\n완료 시 task_id 에코 + report_complete. 질문 있으면 reply 로 먼저 알려줘.",
-      "status": "pending",
-      "priority": "medium",
-      "created_at": "2026-04-12 10:13:57",
-      "updated_at": "2026-04-12 10:13:57",
-      "last_report_at": null,
-      "completed_at": null
     },
     {
       "id": "tq-issue-manager-c72303",
@@ -5726,18 +5126,6 @@
       "requested_by": "MAX"
     },
     {
-      "id": "tq-admin-agent-a06f1e",
-      "agent": "admin-agent",
-      "task": "[긴급 — 슬랙봇 로그 인코딩 깨짐] 부서장이 로그 공유했는데 한글이 전부 깨짐. 원인 cp949/utf-8 인코딩 불일치로 추정.",
-      "message": "[긴급 — 슬랙봇 로그 인코딩 깨짐] 부서장이 로그 공유했는데 한글이 전부 깨짐. 원인 cp949/utf-8 인코딩 불일치로 추정.\n\n로그 파일: logs/slack-bot.log\n증상: \"?곌껐 ?쒖옉\", \"?섏떊\" 같은 mojibake 다수\n예: \"2026-04-12 09:31:37,162 INFO Socket Mode ?곌껐 ?쒖옉...\"\n\n작업:\n1) slack-bot 로거 설정 파일 확인 — FileHandler encoding 파라미터 누락 여부\n2) Python 로깅 기본이 locale 인코딩(cp949)이라 한글 깨짐 발생\n3) encoding='utf-8' 명시로 수정 (FileHandler 또는 logging.basicConfig)\n4) 기존 로그 파일은 백업 후 신규 생성\n5) 수정 후 slack-bot 재시작(기존 프로세스 1개만 남기도록 주의)\n\n결과 3줄 보고 + 수정된 설정 경로. 단, slack-bot 재시작은 MAX 승인 필요 (부서장 응답성 최우선).",
-      "status": "pending",
-      "priority": "medium",
-      "created_at": "2026-04-12 10:15:52",
-      "updated_at": "2026-04-12 10:15:52",
-      "last_report_at": null,
-      "completed_at": null
-    },
-    {
       "id": "tq-qa-agent-4b2e4f",
       "agent": "qa-agent",
       "task": "[인수인계 — docs-agent manuals-v2 파이프라인] 부서장 지시로 GraphRAG 작업 완료 시점까지 docs-agent의 파이프라인 실행 담당을 qa-agent가 ",
@@ -5749,18 +5137,6 @@
       "last_report_at": null,
       "completed_at": null,
       "requested_by": "MAX"
-    },
-    {
-      "id": "tq-qa-agent-2b1dbe",
-      "agent": "qa-agent",
-      "task": "[인수인계 — docs-agent manuals-v2 파이프라인] 부서장 지시로 GraphRAG 작업 완료 시점까지 docs-agent의 파이프라인 실행 담당을 qa-agent가 ",
-      "message": "[인수인계 — docs-agent manuals-v2 파이프라인] 부서장 지시로 GraphRAG 작업 완료 시점까지 docs-agent의 파이프라인 실행 담당을 qa-agent가 임시 인수.\n\n인수 문서: C:\\MES\\wta-agents\\workspaces\\docs-agent\\manuals_v2_handoff.md\n\n범위:\n- Step2 파싱 + 임베딩(Qwen3-Emb-8B, EMBED_DIM=2000) + LightRAG/pgvector 인덱싱\n- 현재 상태: done=5/693 (3_hmi 5건 처리 완료) — state.json 경로는 reports/manuals-v2/state/manuals_v2_step2_state.json\n- 재개 명령: python workspaces/docs-agent/manuals_v2_step2_parse.py\n\n문서 포함 사항:\n- 경로 대전제, 단계별 커맨드, env 목록, 재개 3시나리오, 검증 커맨드\n- 작업공간 경계(스크립트는 workspaces/docs-agent/, 데이터/로그/산출물은 reports/manuals-v2/)\n- 에스컬레이션 기준, FAQ, 인수 체크리스트\n\n파일 이동 완료: 본 61건 + PoC 12 디렉토리(808MB)가 reports/manuals-v2/{extract,classify,state,poc,legacy}/ 로 정리됨.\n\n작업:\n1) 문서 정독\n2) 불명확 항목 질문\n3) \"착수 가능\" 사인 (질문 없으면 즉시)\n4) GraphRAG 완료 시점까지 docs-agent 자리 대행, 파이프라인 실행 담당\n\n참고: issue-manager는 crafter의 인프라(LightRAG/재처리) 담당 인수받음. 협업 필요 시 issue-manager와 직접 조율.\n\n완료 시 report_complete + task_id.",
-      "status": "pending",
-      "priority": "medium",
-      "created_at": "2026-04-12 10:18:41",
-      "updated_at": "2026-04-12 10:18:41",
-      "last_report_at": null,
-      "completed_at": null
     },
     {
       "id": "tq-issue-manager-d3fe53",
@@ -5800,18 +5176,6 @@
       "requested_by": "MAX"
     },
     {
-      "id": "tq-crafter-79f907",
-      "agent": "crafter",
-      "task": "[지시 — 파이프라인 명확화] 부서장 지적: 인수인계 문서에 혼선이 있었음. 파이프라인 전체를 재정리해서 명확한 1장짜리 문서 작성 필요.",
-      "message": "[지시 — 파이프라인 명확화] 부서장 지적: 인수인계 문서에 혼선이 있었음. 파이프라인 전체를 재정리해서 명확한 1장짜리 문서 작성 필요.\n\n이슈 2건:\n1) LLM 표기 — crafter 문서에 \"sonnet 권장\"으로 적혀 있었음. 이게 LightRAG 엔티티추출용 LLM인데, 실제 PoC는 Ollama로 진행하는 게 맞음 (research-agent/poc-index.py 패턴). 표기 정정 필요.\n2) 경로 불일치 — manuals_v2_reprocess.py WORK_ROOT가 workspaces/docs-agent/v2_poc/ 를 가리키지만 실제 파일은 reports/manuals-v2/poc/ 로 이동됨. 재처리 스크립트를 다시 돌릴 일 없다면 \"실행 금지\" 명시, 돌릴 일이 있다면 경로 업데이트 필요.\n\n작성 내용 (1장으로, 복잡하지 않게):\n[manuals-v2 파이프라인 전체 흐름]\nStep0: 문서 수집(원본 PDF) — 경로/출처\nStep1: 분류+추출 — 스크립트, 입출력 경로, 현재 상태(7/8)\nStep2: Docling 파싱+512청킹 — 스크립트, 입출력 경로, 현재 상태(5/693)\nStep3: 재처리(청크 병합/정규화) — 스크립트, 언제/왜 실행했는지, 재실행 조건\nStep4: 임베딩 — 모델/엔드포인트/EMBED_DIM/출력\nStep5: 인덱싱(A: pgvector / B: Neo4j LightRAG) — 병렬 경로 2개 명시\nStep6: 검증 — qa-agent 책임, 필터 표준 v1.0\nStep7: 보고 — Cloudflare URL\n\n각 Step: 담당(docs-agent/crafter/qa-agent/issue-manager), 입력 경로, 출력 경로, 실행 커맨드, 재개 가능 여부, LLM/모델 정보\n\n저장: reports/manuals-v2/pipeline-overview.md (gitignored라 용량 부담 없음, 본인 워크스페이스 말고 reports에)\n\n완료 시 Cloudflare URL + 3줄 요약.",
-      "status": "pending",
-      "priority": "medium",
-      "created_at": "2026-04-12 10:20:34",
-      "updated_at": "2026-04-12 10:20:34",
-      "last_report_at": null,
-      "completed_at": null
-    },
-    {
       "id": "tq-qa-agent-a5616e",
       "agent": "qa-agent",
       "task": "[graphrag pipeline Step2 resume - 7 categories 693 files]",
@@ -5837,18 +5201,6 @@
       "requested_by": "MAX"
     },
     {
-      "id": "tq-issue-manager-3565e1",
-      "agent": "issue-manager",
-      "task": "[긴급 정정 — LightRAG 사용 금지] 부서장 지적으로 확인. 2026-04-11 확정 파이프라인에 \"LightRAG 미도입\" 명시되어 있음.",
-      "message": "[긴급 정정 — LightRAG 사용 금지] 부서장 지적으로 확인. 2026-04-11 확정 파이프라인에 \"LightRAG 미도입\" 명시되어 있음.\n\n정정 내용:\n- 기존 Neo4j(bolt://localhost:7688) 직접 방식 유지\n- 엔티티 추출: qwen3.5:35b-a3b 로컬 Ollama\n- 이미 구축된 대시보드 지식그래프 페이지(@neo4j-nvl/react) + /api/graphrag/* 엔드포인트 그대로 확장\n- manuals-v2 노드는 동일 Neo4j에 누적 (레이블로 구분)\n\n작업 중단:\n1) LightRAG 러너 작성 즉시 중단\n2) 기존 /api/graphrag/* + research-agent/poc-index.py 패턴 분석부터 다시\n3) 직접 Neo4j 쓰기 방식 + qwen3.5:35b-a3b 엔티티 추출로 재설계\n\n재착수 전 3줄 요약으로 기존 코드 파악 결과 먼저 보고. tq-issue-manager-d3fe53 진행률 report_progress로.",
-      "status": "pending",
-      "priority": "medium",
-      "created_at": "2026-04-12 10:21:31",
-      "updated_at": "2026-04-12 10:21:31",
-      "last_report_at": null,
-      "completed_at": null
-    },
-    {
       "id": "tq-crafter-f0b9cc",
       "agent": "crafter",
       "task": "[긴급 정정 + 파이프라인 재작성] 방금 지시한 pipeline-overview.md에 **중대 정정**:\n\n2026-04-11 확정 파이프라인(project memory: man",
@@ -5860,18 +5212,6 @@
       "last_report_at": null,
       "completed_at": null,
       "requested_by": "MAX"
-    },
-    {
-      "id": "tq-crafter-361815",
-      "agent": "crafter",
-      "task": "[긴급 정정 + 파이프라인 재작성] 방금 지시한 pipeline-overview.md에 **중대 정정**:",
-      "message": "[긴급 정정 + 파이프라인 재작성] 방금 지시한 pipeline-overview.md에 **중대 정정**:\n\n2026-04-11 확정 파이프라인(project memory: manuals-v2 RAG+GraphRAG 확정판)에 명시:\n- **LightRAG 미도입**\n- 기존 Neo4j(bolt://localhost:7688) 직접 방식 유지\n- qwen3.5:35b-a3b 로컬 엔티티 추출\n- 이미 구축된 /api/graphrag/* 엔드포인트 + 대시보드 지식그래프 페이지(1,553노드 PoC) 그대로 확장\n- manuals-v2 노드는 동일 Neo4j에 레이블로 구분\n\ncrafter 본인이 인수문서에 LightRAG 언급한 것 자체가 확정판 위반이었음. pipeline-overview.md 작성 시 이 확정판 기준으로 작성할 것. LightRAG 언급 금지, 기존 GraphRAG 코드(research-agent/poc-index.py 및 /api/graphrag/*) 재활용 명시.\n\n추가 반영:\n- 리랭커: Qwen3-Reranker-4B (vLLM)\n- 이미지: Docling picture → Qwen2.5-VL-7B vlm_description → 통합 벡터공간\n- 이미지 저장: Supabase Storage manual-images 버킷\n- 저장 테이블: manual.documents_v2 (2000dim)\n- 하이브리드 검색: BM25 + Dense RRF + Qwen3-Reranker 재순위화\n\n부서장 매우 불쾌. 확정판과 어긋나는 기술 결정 절대 금지. 본인 기억 말고 memory 파일 직접 대조 후 작성.\n\n저장: reports/manuals-v2/pipeline-overview.md",
-      "status": "pending",
-      "priority": "medium",
-      "created_at": "2026-04-12 10:21:51",
-      "updated_at": "2026-04-12 10:21:51",
-      "last_report_at": null,
-      "completed_at": null
     },
     {
       "id": "tq-issue-manager-46f481",
@@ -5887,18 +5227,6 @@
       "requested_by": "MAX"
     },
     {
-      "id": "tq-issue-manager-94d68c",
-      "agent": "issue-manager",
-      "task": "[tq-issue-manager-d3fe53] 재설계안 승인 + 질문 답변.",
-      "message": "[tq-issue-manager-d3fe53] 재설계안 승인 + 질문 답변.\n\nQ1. 10-20시간 vs 윈도우 호출 2-4시간\nA. **윈도우 방식 채택** (2000자 묶음, 호출 수 1/5 축소). 속도 우선 + 품질은 샘플 스팟체크로 확인. 교차검증 사이클 최소화 필수.\n\nQ2. 라벨\nA. **ManualV2_PoC10_ISSUE** 사용. 예약된 ManualV2는 full 데이터셋용으로 보존. qa-agent는 동일 조건으로 **ManualV2_PoC10_QA** 레이블로 병렬 실행 예정 → Cypher로 양쪽 비교.\n\n📌 중요 — 교차검증 조건 명시 (부서장 지시)\nissue-manager + qa-agent 가 PoC10 동일 파일로 독립 실행 후 동일 결과물이 나오는지 검증. 따라서 반드시 아래 공통 조건 고정:\n- 입력: reports/manuals-v2/poc/{fid}/chunks.jsonl (PoC10 file_id 동일 집합)\n- LLM: qwen3.5:35b-a3b (온도 0 또는 최저값, 재현성 확보)\n- 청킹 윈도우: 2000자 (동일)\n- 엔티티/관계 스키마: cm-graphrag-pipeline.py 그대로 (10 타입 / 11 관계)\n- 속성: _source_id, _run_id, _corpus='manuals_v2', _lang 동일\n- 차이점: 레이블만 (ISSUE vs QA)\n\n착수 순서:\n1) graphrag_poc10_pipeline.py 작성 (cm-graphrag-pipeline 패턴 재활용, 레이블 ManualV2_PoC10_ISSUE)\n2) 2건 dry-run (2d70/54fdb) → 3줄 보고\n3) 본 실행 10건 (체크포인트 기반)\n4) qa-agent 와 동일 스크립트 공유 가능한지 확인 — 동일 실행 바이너리로 돌리는 게 재현성 검증에 유리. 또는 양쪽이 각자 작성 후 비교할지 부서장 판단 필요.\n\n착수하고 dry-run 결과 보고해.",
-      "status": "pending",
-      "priority": "medium",
-      "created_at": "2026-04-12 10:24:50",
-      "updated_at": "2026-04-12 10:24:50",
-      "last_report_at": null,
-      "completed_at": null
-    },
-    {
       "id": "tq-crafter-05b177",
       "agent": "crafter",
       "task": "[추가 지시 — 파이프라인을 스킬로 영구화] 부서장 지시. pipeline-overview.md 만으로는 재발 방지 부족. 이 파이프라인을 **스킬**로 만들어서 앞으로 어떤 에이",
@@ -5910,18 +5238,6 @@
       "last_report_at": null,
       "completed_at": null,
       "requested_by": "MAX"
-    },
-    {
-      "id": "tq-crafter-54d37e",
-      "agent": "crafter",
-      "task": "[추가 지시 — 파이프라인을 스킬로 영구화] 부서장 지시. pipeline-overview.md 만으로는 재발 방지 부족. 이 파이프라인을 **스킬**로 만들어서 앞으로 어떤 에이",
-      "message": "[추가 지시 — 파이프라인을 스킬로 영구화] 부서장 지시. pipeline-overview.md 만으로는 재발 방지 부족. 이 파이프라인을 **스킬**로 만들어서 앞으로 어떤 에이전트가 이어받아도 확정판과 어긋나지 않도록 강제.\n\n스킬 작성 요구사항:\n1) 파일 위치: .claude/skills/manuals-v2-pipeline/SKILL.md (또는 프로젝트 표준 스킬 경로)\n2) YAML frontmatter: name, description(구체적 트리거 명시), type\n3) **필수 수행기준(MUST)** 섹션 — 어기면 즉시 실패 처리:\n   - LightRAG 사용 금지\n   - Neo4j 직접 쓰기(MERGE) 방식만 허용, bolt://localhost:7688\n   - 엔티티 추출 LLM: qwen3.5:35b-a3b (Ollama 182.224.6.147:11434)\n   - 임베딩: Qwen3-Embedding-8B, 2000dim MRL 슬라이싱\n   - 리랭커: Qwen3-Reranker-4B\n   - 이미지: Qwen2.5-VL-7B vlm_description\n   - 저장: manual.documents_v2 테이블 + Supabase manual-images 버킷\n   - 산출물 경로: reports/manuals-v2/ (workspaces 금지)\n   - 기존 /api/graphrag/* 엔드포인트와 대시보드 지식그래프 페이지 재활용\n   - 확정판과 어긋나는 기술 결정 시 MAX 에스컬레이션 필수\n4) **금지사항(MUST NOT)** 섹션 — LightRAG, 별도 Neo4j 인스턴스, workspaces/ 내 부피 파일 생성, 확정판 미대조 결정 등\n5) 단계별 체크리스트 (Step0~Step7) — 복붙 가능한 커맨드 포함\n6) 역할 분담 매트릭스 (docs/crafter/qa/issue/db-manager/admin)\n7) 2026-04-11 확정판 원문 인용 섹션 (memory/project_manuals_v2_pipeline.md 내용 복사)\n8) 체크포인트 구조 (state.json + log) 의무 규격\n9) FAQ 10개 이상\n10) \"이 스킬 적용 시점\" — 어떤 트리거/키워드에 자동 로드되어야 하는지\n\n스킬 작성 후 기존 pipeline-overview.md 는 스킬 링크로 대체. 완료 시 스킬 파일 경로 + 3줄 요약 + Cloudflare URL 보고.\n\n중요: 본인 기억 말고 memory/project_manuals_v2_pipeline.md 파일 직접 읽고 복사할 것. 다시 확정판 위반하면 안 됨.",
-      "status": "pending",
-      "priority": "medium",
-      "created_at": "2026-04-12 10:25:34",
-      "updated_at": "2026-04-12 10:25:34",
-      "last_report_at": null,
-      "completed_at": null
     },
     {
       "id": "tq-issue-manager-acb0ca",
@@ -5937,18 +5253,6 @@
       "requested_by": "MAX"
     },
     {
-      "id": "tq-issue-manager-0bbb8e",
-      "agent": "issue-manager",
-      "task": "[긴급 전체 대기] 부서장 지시. crafter가 파이프라인 문서(reports/manuals-v2/pipeline-overview.md) + 스킬(.claude/skills/ma",
-      "message": "[긴급 전체 대기] 부서장 지시. crafter가 파이프라인 문서(reports/manuals-v2/pipeline-overview.md) + 스킬(.claude/skills/manuals-v2-pipeline/SKILL.md) 완성할 때까지 **모든 GraphRAG 작업 중단**.\n\n중단 범위:\n- graphrag_poc10_pipeline.py 작성 중단\n- dry-run 금지\n- 기존 코드 분석도 더 이상 진행 금지\n- reports/manuals-v2/ 내 모든 쓰기 금지\n\n유지:\n- tq-issue-manager-d3fe53 상태는 pending 유지\n- 이미 작성된 분석 내용은 그대로 보존\n\n재개 신호는 MAX가 crafter 완성 확인 후 직접 전달. 그때까지 이 task 외 다른 요청만 대기/처리.",
-      "status": "pending",
-      "priority": "medium",
-      "created_at": "2026-04-12 10:26:07",
-      "updated_at": "2026-04-12 10:26:07",
-      "last_report_at": null,
-      "completed_at": null
-    },
-    {
       "id": "tq-qa-agent-009492",
       "agent": "qa-agent",
       "task": "[긴급 전체 대기] 부서장 지시. crafter가 파이프라인 문서 + 스킬 완성할 때까지 **모든 GraphRAG/manuals-v2 작업 중단**.\n\n중단 범위:\n- Step2 ",
@@ -5960,18 +5264,6 @@
       "last_report_at": null,
       "completed_at": null,
       "requested_by": "MAX"
-    },
-    {
-      "id": "tq-qa-agent-8bcfad",
-      "agent": "qa-agent",
-      "task": "[긴급 전체 대기] 부서장 지시. crafter가 파이프라인 문서 + 스킬 완성할 때까지 **모든 GraphRAG/manuals-v2 작업 중단**.",
-      "message": "[긴급 전체 대기] 부서장 지시. crafter가 파이프라인 문서 + 스킬 완성할 때까지 **모든 GraphRAG/manuals-v2 작업 중단**.\n\n중단 범위:\n- Step2 파싱 배치 재개 금지\n- 새 스크립트 작성 금지\n- 인수인계 받은 docs-agent 파이프라인 관련 쓰기 모두 금지\n- reports/manuals-v2/ 쓰기 금지\n\n유지:\n- tq-qa-agent-a5616e 상태는 pending 유지\n- 기존 산출물(reports/manuals-v2/qa/) 보존\n\n재개 신호는 MAX가 crafter 완성 확인 후 직접 전달. 그때까지 이 task 외 다른 요청만 대기/처리.",
-      "status": "pending",
-      "priority": "medium",
-      "created_at": "2026-04-12 10:26:14",
-      "updated_at": "2026-04-12 10:26:14",
-      "last_report_at": null,
-      "completed_at": null
     },
     {
       "id": "tq-issue-manager-d9d14e",
@@ -5987,18 +5279,6 @@
       "requested_by": "MAX"
     },
     {
-      "id": "tq-issue-manager-63ed49",
-      "agent": "issue-manager",
-      "task": "[tq-issue-manager-d3fe53 재개 — 교차검증 착수] 부서장 승인. 대기 해제, 즉시 착수.",
-      "message": "[tq-issue-manager-d3fe53 재개 — 교차검증 착수] 부서장 승인. 대기 해제, 즉시 착수.\n\n🎯 교차검증 조건 (qa-agent와 동일)\n- 입력: reports/manuals-v2/poc/{fid}/chunks.jsonl — PoC 10 file_id 집합 (14개 중 PoC10만, 기존 확정 10건)\n- 스킬: .claude/skills/manuals-v2-pipeline/SKILL.md 의무 정독 후 시작\n- LLM: qwen3.5:35b-a3b (온도 0, 재현성)\n- 청킹 윈도우: 2000자 묶음\n- 엔티티 스키마: cm-graphrag-pipeline 패턴 (10 타입 / 11 관계)\n- 레이블: **ManualsV2_PoC10_ISSUE** (크래프터 스킬 M10 준수)\n- 속성: `_source_id, _run_id, _corpus='manuals_v2', _lang` + `_team='issue-manager'`\n- 체크포인트: reports/manuals-v2/work/graphrag_poc10_issue_state.json\n- 로그: reports/manuals-v2/work/graphrag_poc10_issue.log\n- 스크립트: workspaces/issue-manager/graphrag_poc10_pipeline.py (독립 작성 — 기존 graphrag_poc10_pipeline.py 있으면 스킬 준수 확인 후 재사용)\n\n⚠️ 조건 B안 (독립 작성): qa-agent도 스킬만 보고 본인 스크립트 독립 작성. 서로 코드 공유 금지. 인수인계 이해도 검증 목적.\n\n📊 최종 보고 (완료 시 report_complete + task_id)\n- Cypher로 노드 수 / 엣지 수 / 타입 분포 / source_id별 분포\n- chunks 처리 건수 / 실패 건수\n- 소요 시간\n- 샘플 쿼리 5건 (영업 장비 / 서보 파라미터 / HMI 알람 등)\n- Cloudflare URL 리포트 (reports/manuals-v2/work/graphrag_poc10_issue_report.html)\n\n📢 진행률 보고: 단계 전환 시 report_progress + task_id\n\n착수 OK 확인만 먼저 짧게.",
-      "status": "pending",
-      "priority": "medium",
-      "created_at": "2026-04-12 10:32:21",
-      "updated_at": "2026-04-12 10:32:21",
-      "last_report_at": null,
-      "completed_at": null
-    },
-    {
       "id": "tq-qa-agent-de478c",
       "agent": "qa-agent",
       "task": "[tq-qa-agent-a5616e 재개 — 교차검증 착수] 부서장 승인. 대기 해제.\n\n🎯 교차검증 조건 (issue-manager와 동일)\n- 입력: reports/manual",
@@ -6010,18 +5290,6 @@
       "last_report_at": null,
       "completed_at": null,
       "requested_by": "MAX"
-    },
-    {
-      "id": "tq-qa-agent-fe8ba6",
-      "agent": "qa-agent",
-      "task": "[tq-qa-agent-a5616e 재개 — 교차검증 착수] 부서장 승인. 대기 해제.",
-      "message": "[tq-qa-agent-a5616e 재개 — 교차검증 착수] 부서장 승인. 대기 해제.\n\n🎯 교차검증 조건 (issue-manager와 동일)\n- 입력: reports/manuals-v2/poc/{fid}/chunks.jsonl — PoC 10 file_id 집합 (기존 확정 10건)\n- 스킬: .claude/skills/manuals-v2-pipeline/SKILL.md 의무 정독 후 시작\n- LLM: qwen3.5:35b-a3b (온도 0, 재현성)\n- 청킹 윈도우: 2000자 묶음\n- 엔티티 스키마: cm-graphrag-pipeline 패턴 (10 타입 / 11 관계)\n- 레이블: **ManualsV2_PoC10_QA** (스킬 M10 준수)\n- 속성: `_source_id, _run_id, _corpus='manuals_v2', _lang` + `_team='qa-agent'`\n- 체크포인트: reports/manuals-v2/work/graphrag_poc10_qa_state.json\n- 로그: reports/manuals-v2/work/graphrag_poc10_qa.log\n- 스크립트: workspaces/qa-agent/graphrag_poc10_pipeline.py (독립 작성)\n\n⚠️ 조건 B안 (독립 작성): issue-manager도 스킬만 보고 본인 스크립트 독립 작성. **서로 코드 공유 금지**. 인수인계 이해도 검증 목적이므로 엄격히 격리.\n\n참조 가능:\n- 스킬 SKILL.md\n- workspaces/db-manager/cm-graphrag-pipeline.py (참조 패턴, 복사 금지)\n- /api/graphrag/* 엔드포인트 사양\n- memory/project_manuals_v2_pipeline.md\n\n참조 금지:\n- workspaces/issue-manager/ 내 모든 파일\n- issue-manager의 분석 메모/결정\n\n📊 최종 보고 (완료 시 report_complete + task_id)\n- Cypher로 노드 수 / 엣지 수 / 타입 분포 / source_id별 분포\n- chunks 처리 건수 / 실패 건수\n- 소요 시간\n- 샘플 쿼리 5건 (동일 쿼리 세트 — 별도 전달 예정 또는 스킬 정의 재사용)\n- Cloudflare URL 리포트 (reports/manuals-v2/work/graphrag_poc10_qa_report.html)\n\n📢 진행률 보고: 단계 전환 시 report_progress + task_id\n\n착수 OK 확인만 먼저 짧게.",
-      "status": "pending",
-      "priority": "medium",
-      "created_at": "2026-04-12 10:32:40",
-      "updated_at": "2026-04-12 10:32:40",
-      "last_report_at": null,
-      "completed_at": null
     },
     {
       "id": "tq-admin-agent-5f527d",
