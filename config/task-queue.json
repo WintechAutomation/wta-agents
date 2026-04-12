@@ -5328,6 +5328,30 @@
       "last_report_at": null,
       "completed_at": null,
       "requested_by": "docs-agent"
+    },
+    {
+      "id": "tq-crafter-588769",
+      "agent": "crafter",
+      "task": "부서장이 진행 상태 확인 중. docs-agent와 협의 현황 즉시 보고해줘. 어디까지 진행됐는지.",
+      "message": "부서장이 진행 상태 확인 중. docs-agent와 협의 현황 즉시 보고해줘. 어디까지 진행됐는지.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-12 16:19:46",
+      "updated_at": "2026-04-12 16:19:46",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-docs-agent-f646b8",
+      "agent": "docs-agent",
+      "task": "부서장이 진행 상태 확인 중. crafter와 협의 현황 즉시 보고해줘.",
+      "message": "부서장이 진행 상태 확인 중. crafter와 협의 현황 즉시 보고해줘.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-12 16:19:52",
+      "updated_at": "2026-04-12 16:19:52",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }
