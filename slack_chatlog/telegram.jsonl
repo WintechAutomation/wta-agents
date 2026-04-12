@@ -991,3 +991,8 @@
 {"ts": "2026-04-12 23:06:30", "direction": "inbound", "user": "boss", "text": "파나소닉 이랑.csd5시리즈 ezi servo , wmx2,3 관련문서부터 하자"}
 {"ts": "2026-04-12 23:06:45", "direction": "outbound", "user": "MAX", "text": "👑 알겠습니다. Panasonic, CSD5, Ezi-SERVO, WMX2/3 관련 문서부터 진행하겠습니다. 해당 파일 목록 추출 중입니다."}
 {"ts": "2026-04-12 23:07:33", "direction": "outbound", "user": "MAX", "text": "👑 대상 정리:\n\nPanasonic + CSD5/CSD7 + Ezi-SERVO + WMX2/3 관련 = 131건\n(아직 파싱 안 됨 — Step0 Docling부터 시작 필요)\n\n그룹별:\n- Panasonic (MINAS-A5/A6, collabo, SX-DSV 등): ~47건\n- Ezi 시리즈 (SERVO, STEP, IO, MotionLink): ~35건  \n- CSD5/CSD7: ~20건\n- WMX/WMX2/WMX3: ~20건\n- 기타 연관: ~9건\n\n131건 전체 진행할까요? 에이전트 할당 방식은 어떻게 할지 지시해주세요. (예: issue-manager/qa-agent 2팀 분할, 또는 추가 에이전트 투입)"}
+{"ts": "2026-04-12 23:18:16", "direction": "inbound", "user": "boss", "text": "총 4팀진행가능?"}
+{"ts": "2026-04-12 23:18:40", "direction": "outbound", "user": "MAX", "text": "👑 가능합니다. 현재 투입 가능한 팀:\n\n1. 🚨 issue-manager — 즉시 가능 (v1.1 테스트 완료)\n2. 🔧 crafter — 즉시 가능 (SKILL.md 작업 완료)\n3. 📝 docs-agent — 즉시 가능 (평가 완료)\n4. 🔬 qa-agent — 현재 v1.1 테스트 진행 중, ~22:35 완료 후 투입\n\n131건 ÷ 4팀 = 약 33건씩.\n먼저 3팀 즉시 시작하고 qa-agent는 현재 작업 완료 후 합류시킬까요?\n\n단, 131건은 아직 Docling 파싱(Step0~1)부터 필요합니다. 파싱 시간 + GraphRAG까지 포함하면 건당 ~1시간 예상됩니다."}
+{"ts": "2026-04-12 23:18:55", "direction": "outbound", "user": "MAX", "text": "👑 3팀으로 진행합니다.\n\n1. 🚨 issue-manager — 즉시\n2. 🔧 crafter — 즉시  \n3. 🔬 qa-agent — 현재 테스트 완료 후\n\n131건 ÷ 3팀 = 약 44건씩. docs-agent는 최종 취합/평가 역할.\n\n할당 배분해서 시작할까요?"}
+{"ts": "2026-04-12 23:19:04", "direction": "inbound", "user": "boss", "text": "크래프터 말고"}
+{"ts": "2026-04-12 23:19:34", "direction": "inbound", "user": "boss", "text": "Doc 말고"}
