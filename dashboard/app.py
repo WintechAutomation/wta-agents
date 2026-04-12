@@ -1802,8 +1802,11 @@ def _save_tasks(tasks: list[dict]):
 def api_task_queue_list():
     tasks = _load_tasks()
     agent = request.args.get("agent")
+    status = request.args.get("status")
     if agent:
         tasks = [t for t in tasks if t.get("agent") == agent]
+    if status:
+        tasks = [t for t in tasks if t.get("status") == status]
     return jsonify(tasks)
 
 
