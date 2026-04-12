@@ -996,3 +996,7 @@
 {"ts": "2026-04-12 23:18:55", "direction": "outbound", "user": "MAX", "text": "👑 3팀으로 진행합니다.\n\n1. 🚨 issue-manager — 즉시\n2. 🔧 crafter — 즉시  \n3. 🔬 qa-agent — 현재 테스트 완료 후\n\n131건 ÷ 3팀 = 약 44건씩. docs-agent는 최종 취합/평가 역할.\n\n할당 배분해서 시작할까요?"}
 {"ts": "2026-04-12 23:19:04", "direction": "inbound", "user": "boss", "text": "크래프터 말고"}
 {"ts": "2026-04-12 23:19:34", "direction": "inbound", "user": "boss", "text": "Doc 말고"}
+{"ts": "2026-04-12 23:20:16", "direction": "outbound", "user": "MAX", "text": "👑 알겠습니다. 3팀:\n\n1. 🚨 issue-manager — 즉시\n2. 🔬 qa-agent — 테스트 완료 후\n3. 📊 db-manager — 즉시\n\n131건 ÷ 3팀 = 약 44건씩. 진행할까요?"}
+{"ts": "2026-04-12 23:20:20", "direction": "inbound", "user": "boss", "text": "ㅇㅋㅇㅋ"}
+{"ts": "2026-04-12 23:20:34", "direction": "outbound", "user": "MAX", "text": "👑 3팀 할당 배분 시작합니다. issue-manager, db-manager 즉시, qa-agent 합류 후 진행."}
+{"ts": "2026-04-12 23:21:50", "direction": "outbound", "user": "MAX", "text": "👑 3팀 배치 할당 완료\n\n🚨 issue-manager: 44건 — 즉시 착수\n📊 db-manager: 44건 — 착수 확인\n🔬 qa-agent: 43건 — v1.1 테스트 완료 후 합류\n\n할당 파일: reports/manuals-v2/servo_batch_allocation.json\n10건마다 중간 보고 받겠습니다."}
