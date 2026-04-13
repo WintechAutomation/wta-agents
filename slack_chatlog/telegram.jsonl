@@ -1031,3 +1031,14 @@
 {"ts": "2026-04-13 10:47:46", "direction": "inbound", "user": "boss", "text": "진행해"}
 {"ts": "2026-04-13 10:48:22", "direction": "inbound", "user": "boss", "text": "아이콘도 표현안해도되 그냥 메뉴를 안보이게 하고 펼칠수있는 버튼만잇으면됨"}
 {"ts": "2026-04-13 10:49:22", "direction": "inbound", "user": "boss", "text": "지금부터 내가 mes 쪽 수정사항을 여러가지로 지시할건데, dev 혼자서는 좀 처리가 늦을수잇으니 크래프터도 같이 지원가능한가 ?"}
+{"ts": "2026-04-13 10:50:05", "direction": "outbound", "user": "MAX", "text": "👑 가능합니다. crafter도 MES 프론트/백엔드 수정 역량 있습니다. \n\ndev-agent + crafter 2팀 체제로 MES 수정사항 병렬 처리하겠습니다. 지시해주세요."}
+{"ts": "2026-04-13 10:51:03", "direction": "inbound", "user": "boss", "text": "크래프터 부적합현황 페이지에보면 프로제트 필터 부분이 부적합 등록된 내역을 기준으로 프로젝트 리스트가 나열이 안되어이슴."}
+{"ts": "2026-04-13 10:51:27", "direction": "outbound", "user": "MAX", "text": "👑 crafter에게 부적합현황 페이지 프로젝트 필터 수정 지시했습니다."}
+{"ts": "2026-04-13 10:51:35", "direction": "inbound", "user": "boss", "text": "그리고 검색 필터 버튼들이 모두 제 기능을 안하고잇음."}
+{"ts": "2026-04-13 10:51:37", "direction": "inbound", "user": "boss", "text": "점검해"}
+{"ts": "2026-04-13 10:52:08", "direction": "outbound", "user": "MAX", "text": "👑 dev-agent 사이드바 접기/펼치기 완료\n\n• 접기: 사이드바 헤더의 접기 버튼 → 완전 숨김, 콘텐츠 전체 너비\n• 펼치기: 좌상단 버튼 → 240px 사이드바 복원\n• 빌드 성공\n\n부적합현황 필터 건은 crafter 진행 중입니다. 다음 수정사항 있으시면 말씀해주세요."}
+{"ts": "2026-04-13 10:53:21", "direction": "inbound", "user": "boss", "text": "사이드바 헤더 접기버튼은 어디에잇어?  안보이는데"}
+{"ts": "2026-04-13 10:53:41", "direction": "outbound", "user": "MAX", "text": "👑 dev-agent에게 확인 요청했습니다. 버튼 위치/가시성 점검 중입니다."}
+{"ts": "2026-04-13 10:55:14", "direction": "outbound", "user": "MAX", "text": "👑 접기 버튼 가시성 개선 완료\n\n• 접기 버튼: MES 로고 왼쪽으로 이동 (헤더 첫 번째 요소)\n• 펼치기 버튼: \"메뉴\" 텍스트 라벨 추가 + 그림자 강화\n• 빌드 성공\n\n새로고침 후 확인해보시겠습니까?"}
+{"ts": "2026-04-13 10:57:22", "direction": "inbound", "user": "boss", "text": "지금 프로젝트 상세에서 부적합 등록을 할려는데 안된다"}
+{"ts": "2026-04-13 10:57:45", "direction": "outbound", "user": "MAX", "text": "👑 dev-agent에게 긴급 확인 요청했습니다. 어떤 에러가 나오나요? (버튼이 안 눌리는지, 에러 메시지가 있는지 등)"}
