@@ -393,9 +393,18 @@ def call_llm(text: str) -> dict:
 
 
 # ── Neo4j MERGE ────────────────────────────────────────────────────────────────
+_NEO4J_DRIVER = None
+
+def _get_neo4j_driver():
+    global _NEO4J_DRIVER
+    if _NEO4J_DRIVER is None:
+        from neo4j import GraphDatabase
+        _NEO4J_DRIVER = GraphDatabase.driver(NEO4J_URI, auth=(NEO4J_USER, NEO4J_PASS))
+    return _NEO4J_DRIVER
+
+
 def neo4j_merge(file_id: str, run_id: str, entities: list, relations: list) -> tuple[int, int]:
-    from neo4j import GraphDatabase
-    driver = GraphDatabase.driver(NEO4J_URI, auth=(NEO4J_USER, NEO4J_PASS))
+    driver = _get_neo4j_driver()
     node_count, rel_count = 0, 0
     eid_set = set()
     with driver.session() as s:
@@ -439,7 +448,7 @@ def neo4j_merge(file_id: str, run_id: str, entities: list, relations: list) -> t
                 rel_count += 1
             except Exception:
                 pass
-    driver.close()
+    # driver is singleton — not closed here
     return node_count, rel_count
 
 
@@ -1114,4 +1123,13 @@ tr:hover td{{background:#f8f9fa}}
 
 
 if __name__ == '__main__':
-    main()
+    try:
+        main()
+    except BaseException as e:
+        # Catch MemoryError, SystemExit, KeyboardInterrupt etc. — log before exit
+        import traceback
+        try:
+            log(f'FATAL {type(e).__name__}: {e}\n{traceback.format_exc()}')
+        except Exception:
+            pass
+        raise

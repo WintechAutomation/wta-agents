@@ -1625,6 +1625,19 @@
       "last_report_at": null,
       "completed_at": null,
       "requested_by": "MAX"
+    },
+    {
+      "id": "tq-crafter-85d940",
+      "agent": "crafter",
+      "task": "MES 부적합 등록 AI 제목 자동생성 백엔드 엔드포인트 추가 요청.\n\n**작업 내용**: `POST /api/quality/nonconformance/generate-ai-tit",
+      "message": "MES 부적합 등록 AI 제목 자동생성 백엔드 엔드포인트 추가 요청.\n\n**작업 내용**: `POST /api/quality/nonconformance/generate-ai-title` 엔드포인트 구현\n\n**요청 body**:\n```json\n{\n  \"description\": \"부적합 내용 (필수)\",\n  \"nonconformance_type\": \"부적합 종류 (선택)\",\n  \"process\": \"공정 (선택)\"\n}\n```\n\n**응답**:\n```json\n{ \"success\": true, \"title\": \"AI 생성 제목\" }\n```\n\n**구현 참고** (wMES 기준):\n- 프롬프트: 제조업 품질관리 전문가 role, 30자 이내 한국어 제목 생성\n- 기존 MES AI는 Gemini(GOOGLE_API_KEY) 사용 중 → Gemini로 구현\n- `max_tokens` 50, `temperature` 0.3 수준\n- description 없으면 400 반환\n\n**라우트 등록 위치**: `C:\\MES\\backend\\cmd\\server\\main.go` 708번째 줄 근처 nc 그룹에 추가\n```go\nnc.POST(\"/generate-ai-title\", nonconformanceHandler.GenerateAITitle)\n```\n\n완료 후 dev-agent에게 보고해줘. 프론트엔드 연동은 dev-agent가 처리함.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-13 11:32:41",
+      "updated_at": "2026-04-13 11:32:41",
+      "last_report_at": null,
+      "completed_at": null,
+      "requested_by": "dev-agent"
     }
   ]
 }
