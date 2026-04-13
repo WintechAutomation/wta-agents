@@ -173,6 +173,28 @@ TARGET_FILES = [
     {"file_id": "4_servo_59f118e97997de2478a8904177028e02", "src": r"C:\MES\wta-agents\data\manuals\4_servo\WMX_APIReference_v0.99.pdf", "mfr": "Unknown", "model": "WMX", "lang": "EN", "doctype": "MaintenanceManual", "pages": 557},
     {"file_id": "4_servo_9c35ea621532a0b36f20a795a4d7f3ca", "src": "C:\\MES\\wta-agents\\data\\manuals\\4_servo\\사용자메뉴얼(EziSTEP PlusR) 통신_Ver6 기능편.pdf", "mfr": "Unknown", "model": "EziSTEP", "lang": "KO", "doctype": "ParameterManual", "pages": 114},
     {"file_id": "4_servo_e3a5e2c4c2fd51ab82db2420bca27cb3", "src": "C:\\MES\\wta-agents\\data\\manuals\\4_servo\\편면Panasonic Servo 20160127 (일산 이구스 다이덴).pdf", "mfr": "Unknown", "model": "Panasonic", "lang": "EN", "doctype": "Manual", "pages": 1},
+    # --- 추가 21건 (db-manager 재분배, 2026-04-13) ---
+    {"file_id": "4_servo_029abc028d543129900ef28597e70229", "src": r"C:\MES\wta-agents\data\manuals\4_servo\Motion-RN001B-CSD5-KO_Firware1.39.pdf", "mfr": "Unknown", "model": "Motion-RN001B-CSD5-K", "lang": "KO", "doctype": "WiringGuide", "pages": 30},
+    {"file_id": "4_servo_65e20dbb93080ab98d5c047cc1167f22", "src": r"C:\MES\wta-agents\data\manuals\4_servo\minas-a6_ctlg_e.pdf", "mfr": "Panasonic", "model": "minas-a6", "lang": "EN", "doctype": "Catalog", "pages": 145},
+    {"file_id": "4_servo_68f68b18007c352668fd9a01787362dd", "src": r"C:\MES\wta-agents\data\manuals\4_servo\minas-a6_ctlg_kr.pdf", "mfr": "Panasonic", "model": "minas-a6", "lang": "KO", "doctype": "Troubleshooting", "pages": 167},
+    {"file_id": "4_servo_ad87315c78defffd9ead986a6f4019e3", "src": r"C:\MES\wta-agents\data\manuals\4_servo\minas-a5b_ctlg_e.pdf", "mfr": "Panasonic", "model": "minas-a5b", "lang": "EN", "doctype": "Catalog", "pages": 2},
+    {"file_id": "4_servo_01f9867ec97ed889ce8ae2320b7853bf", "src": r"C:\MES\wta-agents\data\manuals\4_servo\Panasonic Servo.pdf", "mfr": "Panasonic", "model": "Panasonic", "lang": "KO", "doctype": "Manual", "pages": 33},
+    {"file_id": "4_servo_8f32d3b79d220e96e17d33fcce89476e", "src": r"C:\MES\wta-agents\data\manuals\4_servo\SX-DSV02473_R4_00E.pdf", "mfr": "Panasonic", "model": "SX-DSV02473", "lang": "JA", "doctype": "Manual", "pages": 294},
+    {"file_id": "4_servo_0411096280f06ba8e578af21e29678b9", "src": r"C:\MES\wta-agents\data\manuals\4_servo\PANATERMforA5_ko.pdf", "mfr": "Panasonic", "model": "PANATERMforA5", "lang": "KO", "doctype": "Troubleshooting", "pages": 185},
+    {"file_id": "4_servo_d223a0cceaed4e8b5c716364f3b1f427", "src": "C:\\MES\\wta-agents\\data\\manuals\\4_servo\\RSACSD7 관련.docx", "mfr": "Unknown", "model": "RSACSD7", "lang": "EN", "doctype": "Manual", "pages": 0},
+    {"file_id": "4_servo_e94e4902649c853e192e5f62b198099c", "src": r"C:\MES\wta-agents\data\manuals\4_servo\rtex_cable_r5e.pdf", "mfr": "Panasonic", "model": "rtex", "lang": "EN", "doctype": "EthernetInterface", "pages": 16},
+    {"file_id": "4_servo_e5cefa9c8480245d0c7acc7c058f9a0b", "src": r"C:\MES\wta-agents\data\manuals\4_servo\Reference Specifications.pdf", "mfr": "Panasonic", "model": "Reference", "lang": "EN", "doctype": "SetupGuide", "pages": 87},
+    {"file_id": "4_servo_e9f8f9765b360d3149213139343e8a2f", "src": r"C:\MES\wta-agents\data\manuals\4_servo\EtherCAT Communication Specifications_unlock.pdf", "mfr": "Panasonic", "model": "EtherCAT", "lang": "JA", "doctype": "Manual", "pages": 294},
+    {"file_id": "4_servo_6b9eb011dbfa2cfbd3e179442c1d76f6", "src": "C:\\MES\\wta-agents\\data\\manuals\\4_servo\\SSK_Seminar 2015 (한국어) 2015 0116.pdf", "mfr": "Panasonic", "model": "SSK", "lang": "KO", "doctype": "Manual", "pages": 47},
+    {"file_id": "4_servo_e9649d8eb8f24353b3d13932cbbb358d", "src": r"C:\MES\wta-agents\data\manuals\4_servo\SX-DSV02468_J.pdf", "mfr": "Panasonic", "model": "SX-DSV02468", "lang": "JA", "doctype": "SetupGuide", "pages": 74},
+    {"file_id": "4_servo_dbccbb6482a73669ab01ce02eea67aed", "src": r"C:\MES\wta-agents\data\manuals\4_servo\SX-DSV02469_R1_05J.pdf", "mfr": "Panasonic", "model": "SX-DSV02469", "lang": "JA", "doctype": "Manual", "pages": 154},
+    {"file_id": "4_servo_af63b20c890a6ae0b00ad0800878292f", "src": r"C:\MES\wta-agents\data\manuals\4_servo\SX-DSV02471_R4_0E.pdf", "mfr": "Panasonic", "model": "SX-DSV02471", "lang": "EN", "doctype": "SetupGuide", "pages": 87},
+    {"file_id": "4_servo_3d5b637cdf9031387627c1ebf05ccba7", "src": r"C:\MES\wta-agents\data\manuals\4_servo\SX-DSV02828_R1_0E.pdf", "mfr": "Panasonic", "model": "SX-DSV02828", "lang": "JA", "doctype": "SetupGuide", "pages": 80},
+    {"file_id": "4_servo_e8fca0f15d48c0daa868dc9c096f92d6", "src": r"C:\MES\wta-agents\data\manuals\4_servo\SX-DSV03002_R3_0E.pdf", "mfr": "Panasonic", "model": "SX-DSV03002", "lang": "EN", "doctype": "SetupGuide", "pages": 88},
+    {"file_id": "4_servo_4845a16fd1d22b9304579b963e215ee5", "src": r"C:\MES\wta-agents\data\manuals\4_servo\SX-DSV02829_R1_00E.pdf", "mfr": "Panasonic", "model": "SX-DSV02829", "lang": "JA", "doctype": "SetupGuide", "pages": 206},
+    {"file_id": "4_servo_ee2ccc4c4dba7e34f743e4678e057b53", "src": r"C:\MES\wta-agents\data\manuals\4_servo\SX-DSV03190_R1_0E_170428.pdf", "mfr": "Panasonic", "model": "SX-DSV03190", "lang": "EN", "doctype": "ParameterManual", "pages": 83},
+    {"file_id": "4_servo_0e348e406e749a8fd8f71b4042a9be9f", "src": r"C:\MES\wta-agents\data\manuals\4_servo\SX-DSV03241_R2_1E.pdf", "mfr": "Panasonic", "model": "SX-DSV03241", "lang": "JA", "doctype": "Manual", "pages": 248},
+    {"file_id": "4_servo_15db0cd9acd1f3e009f3817b3a443ab8", "src": r"C:\MES\wta-agents\data\manuals\4_servo\SX-DSV03306_R2_0E.pdf", "mfr": "Panasonic", "model": "SX-DSV03306", "lang": "JA", "doctype": "SetupGuide", "pages": 246},
 ]
 
 TOTAL = len(TARGET_FILES)

@@ -59,3 +59,5 @@ https://agent.mes
 이참에 더 해보고싶은거 해도됨. (현시점 백업 필수) → docs-agent
 2026-04-13 09:01:17,259 INFO 직접 전송 완료 → docs-agent:5614
 2026-04-13 09:15:46,242 INFO [수신] #docs 김근형: 네 알겠습니다. → docs-agent
+2026-04-13 09:15:46,642 INFO 직접 전송 완료 → docs-agent:5614
+2026-04-13 09:29:36,079 INFO [수신] #docs 김근형: <https://agent.mes-wta.com/api/files/ERP_현재고_구매진행_전체.html> 김근형 폴더내에 백업폴더에 백업 해줘 → docs-agent
