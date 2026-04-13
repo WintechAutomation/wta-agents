@@ -1720,18 +1720,6 @@
       "requested_by": "MAX"
     },
     {
-      "id": "tq-db-manager-f78576",
-      "agent": "db-manager",
-      "task": "GraphRAG 배치 재개는 보류합니다. 부서장님이 Neo4j 지식그래프 데이터 품질에 의문을 제기하셨습니다. 대시보드에서 봤을 때 데이터가 이상하다고 합니다.",
-      "message": "GraphRAG 배치 재개는 보류합니다. 부서장님이 Neo4j 지식그래프 데이터 품질에 의문을 제기하셨습니다. 대시보드에서 봤을 때 데이터가 이상하다고 합니다.\n\nNeo4j(bolt://localhost:7688) 데이터 품질 점검을 해주세요:\n\n1. 노드/엣지 통계: 총 노드 수, 엣지 수, 노드 타입별 분포\n2. 데이터 품질 샘플 점검:\n   - 엔티티 이름이 의미 있는지 (깨진 문자, 무의미한 토큰, 너무 긴/짧은 이름 등)\n   - 관계(엣지)가 논리적으로 타당한지 샘플 확인\n   - 중복 노드나 고립 노드(연결 없는 노드) 비율\n3. 1_robot 완료분 vs 4_servo 진행분 품질 비교\n4. qwen3.5:35b-a3b 엔티티 추출 결과 품질 — 한글/영문 혼재, 의미없는 추출 등 문제 여부\n5. 이상 패턴 종합 보고\n\n결과를 정리해서 보고해주세요. 이 점검 결과에 따라 배치 재개 여부를 결정합니다.",
-      "status": "pending",
-      "priority": "medium",
-      "created_at": "2026-04-13 16:12:36",
-      "updated_at": "2026-04-13 16:12:36",
-      "last_report_at": null,
-      "completed_at": null
-    },
-    {
       "id": "tq-db-manager-30ffad",
       "agent": "db-manager",
       "task": "부서장 승인 완료. Neo4j 전체 초기화 + GraphRAG 파이프라인 개선 후 재시작 진행해주세요.\n\n순서:\n1. Neo4j 전체 초기화 — MATCH (n) DETACH DE",
@@ -1743,18 +1731,6 @@
       "last_report_at": null,
       "completed_at": null,
       "requested_by": "MAX"
-    },
-    {
-      "id": "tq-db-manager-0761a6",
-      "agent": "db-manager",
-      "task": "부서장 승인 완료. Neo4j 전체 초기화 + GraphRAG 파이프라인 개선 후 재시작 진행해주세요.",
-      "message": "부서장 승인 완료. Neo4j 전체 초기화 + GraphRAG 파이프라인 개선 후 재시작 진행해주세요.\n\n순서:\n1. Neo4j 전체 초기화 — MATCH (n) DETACH DELETE n (모든 노드/엣지 삭제)\n2. 파이프라인 수정:\n   - 엔티티 필터링 규칙 추가: 이름 3자 이하 제외, 섹션번호 패턴(1.1.1. 등) 제외, 200자 이상 장문 제외, 중복 노드 병합 처리\n   - source 필드에 file_id 기록하도록 수정\n3. 수정 완료 후 보고 — 재인덱싱은 qa-agent/issue-manager 배치 재개와 함께 진행 예정\n\n파이프라인 수정 사항은 코드 변경 내역과 함께 보고해주세요.",
-      "status": "pending",
-      "priority": "medium",
-      "created_at": "2026-04-13 16:17:39",
-      "updated_at": "2026-04-13 16:17:39",
-      "last_report_at": null,
-      "completed_at": null
     },
     {
       "id": "tq-qa-agent-df76f2",
@@ -1770,18 +1746,6 @@
       "requested_by": "MAX"
     },
     {
-      "id": "tq-qa-agent-1faa00",
-      "agent": "qa-agent",
-      "task": "GraphRAG 파이프라인 수정 필요 — Neo4j 전체 초기화 완료되어 재시작합니다. 재개 전에 servo_batch_qa.py에 아래 수정을 적용해주세요.",
-      "message": "GraphRAG 파이프라인 수정 필요 — Neo4j 전체 초기화 완료되어 재시작합니다. 재개 전에 servo_batch_qa.py에 아래 수정을 적용해주세요.\n\ndb-manager가 servo_batch_pipeline.py에 적용한 내용과 동일:\n\n1. 엔티티 품질 필터링 함수 추가:\n   - 이름 3자 이하 제외\n   - 200자 이상 장문 제외\n   - 섹션번호 패턴(1.1.1., 7.7 등) 제외\n   - 윈도우 내 중복 id 제거\n   - 자기참조 관계 제외 (source != target)\n\n2. source 필드를 'manuals_v2' → file_id로 변경\n\ndb-manager의 servo_batch_pipeline.py를 참조해서 동일 로직 적용 후 보고해주세요. 수정 완료 확인되면 배치 재시작 지시합니다.",
-      "status": "pending",
-      "priority": "medium",
-      "created_at": "2026-04-13 16:19:36",
-      "updated_at": "2026-04-13 16:19:36",
-      "last_report_at": null,
-      "completed_at": null
-    },
-    {
       "id": "tq-issue-manager-b571f9",
       "agent": "issue-manager",
       "task": "GraphRAG 파이프라인 수정 필요 — Neo4j 전체 초기화 완료되어 재시작합니다. 재개 전에 servo_batch_v11.py에 아래 수정을 적용해주세요.\n\ndb-manage",
@@ -1793,18 +1757,6 @@
       "last_report_at": null,
       "completed_at": null,
       "requested_by": "MAX"
-    },
-    {
-      "id": "tq-issue-manager-d32231",
-      "agent": "issue-manager",
-      "task": "GraphRAG 파이프라인 수정 필요 — Neo4j 전체 초기화 완료되어 재시작합니다. 재개 전에 servo_batch_v11.py에 아래 수정을 적용해주세요.",
-      "message": "GraphRAG 파이프라인 수정 필요 — Neo4j 전체 초기화 완료되어 재시작합니다. 재개 전에 servo_batch_v11.py에 아래 수정을 적용해주세요.\n\ndb-manager가 servo_batch_pipeline.py에 적용한 내용과 동일:\n\n1. 엔티티 품질 필터링 함수 추가:\n   - 이름 3자 이하 제외\n   - 200자 이상 장문 제외\n   - 섹션번호 패턴(1.1.1., 7.7 등) 제외\n   - 윈도우 내 중복 id 제거\n   - 자기참조 관계 제외 (source != target)\n\n2. source 필드를 'manuals_v2' → file_id로 변경\n\ndb-manager의 servo_batch_pipeline.py를 참조해서 동일 로직 적용 후 보고해주세요. 수정 완료 확인되면 배치 재시작 지시합니다.",
-      "status": "pending",
-      "priority": "medium",
-      "created_at": "2026-04-13 16:19:40",
-      "updated_at": "2026-04-13 16:19:40",
-      "last_report_at": null,
-      "completed_at": null
     },
     {
       "id": "tq-db-manager-856eef",
@@ -1820,18 +1772,6 @@
       "requested_by": "MAX"
     },
     {
-      "id": "tq-db-manager-c68ee1",
-      "agent": "db-manager",
-      "task": "파이프라인 수정 3팀 모두 완료 확인. db-manager 할당분 GraphRAG 배치 재시작해주세요. Neo4j 초기화 상태이므로 graphrag 단계부터 처음부터 진행. sta",
-      "message": "파이프라인 수정 3팀 모두 완료 확인. db-manager 할당분 GraphRAG 배치 재시작해주세요. Neo4j 초기화 상태이므로 graphrag 단계부터 처음부터 진행. state.json에서 step2/embed/pgvector 완료분은 재사용하고 graphrag만 재실행.",
-      "status": "pending",
-      "priority": "medium",
-      "created_at": "2026-04-13 16:21:46",
-      "updated_at": "2026-04-13 16:21:46",
-      "last_report_at": null,
-      "completed_at": null
-    },
-    {
       "id": "tq-qa-agent-b13685",
       "agent": "qa-agent",
       "task": "파이프라인 수정 3팀 모두 완료 확인. qa-agent 할당분 GraphRAG 배치 재시작해주세요. Neo4j 초기화 상태이므로 graphrag 단계부터 처음부터 진행. state",
@@ -1845,18 +1785,6 @@
       "requested_by": "MAX"
     },
     {
-      "id": "tq-qa-agent-335e35",
-      "agent": "qa-agent",
-      "task": "파이프라인 수정 3팀 모두 완료 확인. qa-agent 할당분 GraphRAG 배치 재시작해주세요. Neo4j 초기화 상태이므로 graphrag 단계부터 처음부터 진행. state",
-      "message": "파이프라인 수정 3팀 모두 완료 확인. qa-agent 할당분 GraphRAG 배치 재시작해주세요. Neo4j 초기화 상태이므로 graphrag 단계부터 처음부터 진행. state.json에서 기존 완료 단계는 재사용하고 graphrag만 재실행.",
-      "status": "pending",
-      "priority": "medium",
-      "created_at": "2026-04-13 16:21:49",
-      "updated_at": "2026-04-13 16:21:49",
-      "last_report_at": null,
-      "completed_at": null
-    },
-    {
       "id": "tq-issue-manager-7dcc22",
       "agent": "issue-manager",
       "task": "파이프라인 수정 3팀 모두 완료 확인. issue-manager 할당분 GraphRAG 배치 재시작해주세요. Neo4j 초기화 상태이므로 graphrag 단계부터 처음부터 진행. ",
@@ -1868,18 +1796,6 @@
       "last_report_at": null,
       "completed_at": null,
       "requested_by": "MAX"
-    },
-    {
-      "id": "tq-issue-manager-3deecd",
-      "agent": "issue-manager",
-      "task": "파이프라인 수정 3팀 모두 완료 확인. issue-manager 할당분 GraphRAG 배치 재시작해주세요. Neo4j 초기화 상태이므로 graphrag 단계부터 처음부터 진행. ",
-      "message": "파이프라인 수정 3팀 모두 완료 확인. issue-manager 할당분 GraphRAG 배치 재시작해주세요. Neo4j 초기화 상태이므로 graphrag 단계부터 처음부터 진행. state.json에서 기존 완료 단계는 재사용하고 graphrag만 재실행.",
-      "status": "pending",
-      "priority": "medium",
-      "created_at": "2026-04-13 16:21:51",
-      "updated_at": "2026-04-13 16:21:51",
-      "last_report_at": null,
-      "completed_at": null
     },
     {
       "id": "tq-db-manager-75ccb7",
