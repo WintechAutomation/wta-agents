@@ -1528,18 +1528,6 @@
       "requested_by": "MAX"
     },
     {
-      "id": "tq-dev-agent-58488d",
-      "agent": "dev-agent",
-      "task": "부서장 문의: MES 왼쪽 네비게이션 패널(사이드바) 숨기기/접기 기능이 현재 가능한 구조인지 확인해줘.",
-      "message": "부서장 문의: MES 왼쪽 네비게이션 패널(사이드바) 숨기기/접기 기능이 현재 가능한 구조인지 확인해줘.\n\n현재 Layout.tsx 사이드바 구조를 확인하고:\n1. 접기/펼치기 토글이 이미 구현되어 있는지\n2. 없다면 추가 가능한지, 난이도는 어떤지\n바로 답변해줘.",
-      "status": "pending",
-      "priority": "medium",
-      "created_at": "2026-04-13 10:46:43",
-      "updated_at": "2026-04-13 10:46:43",
-      "last_report_at": null,
-      "completed_at": null
-    },
-    {
       "id": "tq-dev-agent-976259",
       "agent": "dev-agent",
       "task": "부서장 승인. 사이드바 접기/펼치기 기능 구현 진행해.\n\n요구사항:\n- 토글 버튼으로 접기/펼치기\n- 접었을 때 아이콘만 표시 (~60px)\n- 펼쳤을 때 기존 240px 유지\n-",
@@ -1637,18 +1625,6 @@
       "last_report_at": null,
       "completed_at": null,
       "requested_by": "MAX"
-    },
-    {
-      "id": "tq-dev-agent-af582c",
-      "agent": "dev-agent",
-      "task": "긴급: 프로젝트 상세페이지에서 부적합 등록이 안 된다고 부서장 보고. 즉시 확인하고 수정해줘. 에러 원인 파악 후 바로 보고.",
-      "message": "긴급: 프로젝트 상세페이지에서 부적합 등록이 안 된다고 부서장 보고. 즉시 확인하고 수정해줘. 에러 원인 파악 후 바로 보고.",
-      "status": "pending",
-      "priority": "medium",
-      "created_at": "2026-04-13 10:57:35",
-      "updated_at": "2026-04-13 10:57:35",
-      "last_report_at": null,
-      "completed_at": null
     }
   ]
 }
