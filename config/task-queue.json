@@ -1666,6 +1666,94 @@
       "last_report_at": null,
       "completed_at": null,
       "requested_by": "control-agent"
+    },
+    {
+      "id": "tq-crafter-c0d960",
+      "agent": "crafter",
+      "task": "긴급 확인 요청: 시스템 재시작으로 GraphRAG 작업이 중단된 것 같습니다.\n\n확인 사항:\n1. manuals-v2 GraphRAG 파이프라인 현재 상태 — state.json",
+      "message": "긴급 확인 요청: 시스템 재시작으로 GraphRAG 작업이 중단된 것 같습니다.\n\n확인 사항:\n1. manuals-v2 GraphRAG 파이프라인 현재 상태 — state.json 및 체크포인트 파일 확인\n2. 어디까지 진행되었고 어디서 중단되었는지\n3. 재개 가능 여부 및 재개 방법\n\nstate.json과 로그 파일 기반으로 현황 파악 후 보고해주세요.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-13 15:54:20",
+      "updated_at": "2026-04-13 15:54:20",
+      "last_report_at": null,
+      "completed_at": null,
+      "requested_by": "MAX"
+    },
+    {
+      "id": "tq-crafter-6f302a",
+      "agent": "crafter",
+      "task": "긴급 확인 요청: 시스템 재시작으로 GraphRAG 작업이 중단된 것 같습니다.",
+      "message": "긴급 확인 요청: 시스템 재시작으로 GraphRAG 작업이 중단된 것 같습니다.\n\n확인 사항:\n1. manuals-v2 GraphRAG 파이프라인 현재 상태 — state.json 및 체크포인트 파일 확인\n2. 어디까지 진행되었고 어디서 중단되었는지\n3. 재개 가능 여부 및 재개 방법\n\nstate.json과 로그 파일 기반으로 현황 파악 후 보고해주세요.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-13 15:54:22",
+      "updated_at": "2026-04-13 15:54:22",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-db-manager-16f0ff",
+      "agent": "db-manager",
+      "task": "긴급 확인 요청: 시스템 재시작(conhost 크래시)으로 GraphRAG 작업이 중단된 것 같습니다.\n\n확인 사항:\n1. manuals-v2 GraphRAG 파이프라인 현재 상태",
+      "message": "긴급 확인 요청: 시스템 재시작(conhost 크래시)으로 GraphRAG 작업이 중단된 것 같습니다.\n\n확인 사항:\n1. manuals-v2 GraphRAG 파이프라인 현재 상태 — state.json 및 체크포인트 파일 확인\n2. 어디까지 진행되었고 어디서 중단되었는지\n3. 재개 가능 여부 및 재개 방법\n\nstate.json과 로그 파일 기반으로 현황 파악 후 보고해주세요.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-13 15:54:38",
+      "updated_at": "2026-04-13 15:54:38",
+      "last_report_at": null,
+      "completed_at": null,
+      "requested_by": "MAX"
+    },
+    {
+      "id": "tq-db-manager-0ac07b",
+      "agent": "db-manager",
+      "task": "긴급 확인 요청: 시스템 재시작(conhost 크래시)으로 GraphRAG 작업이 중단된 것 같습니다.",
+      "message": "긴급 확인 요청: 시스템 재시작(conhost 크래시)으로 GraphRAG 작업이 중단된 것 같습니다.\n\n확인 사항:\n1. manuals-v2 GraphRAG 파이프라인 현재 상태 — state.json 및 체크포인트 파일 확인\n2. 어디까지 진행되었고 어디서 중단되었는지\n3. 재개 가능 여부 및 재개 방법\n\nstate.json과 로그 파일 기반으로 현황 파악 후 보고해주세요.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-13 15:54:41",
+      "updated_at": "2026-04-13 15:54:41",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-crafter-bbd6aa",
+      "agent": "crafter",
+      "task": "이전 GraphRAG 확인 요청은 취소합니다. db-manager 담당이었습니다. 무시해주세요.",
+      "message": "이전 GraphRAG 확인 요청은 취소합니다. db-manager 담당이었습니다. 무시해주세요.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-13 15:54:52",
+      "updated_at": "2026-04-13 15:54:52",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-qa-agent-09ea1a",
+      "agent": "qa-agent",
+      "task": "시스템 재시작(conhost 크래시)으로 작업이 중단되었을 수 있습니다. GraphRAG/manuals-v2 관련 진행하던 작업 현재 상태를 보고해주세요.\n\n- state.json",
+      "message": "시스템 재시작(conhost 크래시)으로 작업이 중단되었을 수 있습니다. GraphRAG/manuals-v2 관련 진행하던 작업 현재 상태를 보고해주세요.\n\n- state.json / 체크포인트 확인\n- 어디까지 완료되었고 어디서 중단되었는지\n- 재개 가능 여부",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-13 15:55:14",
+      "updated_at": "2026-04-13 15:55:14",
+      "last_report_at": null,
+      "completed_at": null,
+      "requested_by": "MAX"
+    },
+    {
+      "id": "tq-issue-manager-6c98ca",
+      "agent": "issue-manager",
+      "task": "시스템 재시작(conhost 크래시)으로 작업이 중단되었을 수 있습니다. GraphRAG/manuals-v2 관련 진행하던 작업 현재 상태를 보고해주세요.\n\n- state.json",
+      "message": "시스템 재시작(conhost 크래시)으로 작업이 중단되었을 수 있습니다. GraphRAG/manuals-v2 관련 진행하던 작업 현재 상태를 보고해주세요.\n\n- state.json / 체크포인트 확인\n- 어디까지 완료되었고 어디서 중단되었는지\n- 재개 가능 여부",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-13 15:55:16",
+      "updated_at": "2026-04-13 15:55:16",
+      "last_report_at": null,
+      "completed_at": null,
+      "requested_by": "MAX"
     }
   ]
 }

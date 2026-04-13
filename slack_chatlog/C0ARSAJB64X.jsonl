@@ -24,3 +24,7 @@
 {"ts": "2026-04-13 15:43:10", "user_id": "U0APMDZNX8S", "username": "지건승", "text": "<@U0AP5B0F71C> 접점번호는 수정이 안되나보네 ? 열 삭제 그런것도 반응이 없고 ..."}
 {"ts": "2026-04-13 15:46:09", "user_id": "U0APMDZNX8S", "username": "지건승", "text": "<@U0AP5B0F71C> 근데 왜 모듈 추가하면 넘버가 증가가 안됨 ?\n그리고 내가 구현했던건 EZI-IO 모듈 16,32\n바이더뮬러 모듈 16접, 하고 플랫타입 이런거였는데 하나도 반여이 안되어있네 ?"}
 {"ts": "2026-04-13 15:46:56", "user_id": "U0APMDZNX8S", "username": "지건승", "text": "<@U0AP5B0F71C> 이런식으로 만들었는데... 너꺼랑 비교가 조금뙤네?? ㅠㅠ", "files": [{"name": "image.png", "type": "png", "saved_path": "C:\\MES\\wta-agents\\slack_chatlog\\C0ARSAJB64X_files\\20260413_154656_image.png"}]}
+{"ts": "2026-04-13 15:50:52", "user_id": "U0APMDZNX8S", "username": "지건승", "text": "<@U0AP5B0F71C> 일단 너한테 지시할떄\n예를들어\n전기설계 - 수정,\n장비레퍼런스 - 수정\nI/O List 수정\n시킬때 앞에 DB라고 하는게 맞나 ? 탭이라고 해야하나 그그걸무조건 인식하고 너가 수정하는건 어때?\n앞으로"}
+{"ts": "2026-04-13 15:54:02", "user_id": "U0APMDZNX8S", "username": "지건승", "text": "<@U0AP5B0F71C> IO/List 에러발견\n중간에 모듈 삭제시 접점번호가 자동으로 안바뀜 확인바람"}
+{"ts": "2026-04-13 15:57:30", "user_id": "U0APMDZNX8S", "username": "지건승", "text": "<@U0AP5B0F71C> IO/LIST 또 버그발생 가로행 추가하면 넘버링 안변함 .... 그리고 저기에 표시기능이 있으면 좋겠는데 16짜리면 행갯수가 16을 넘어갔을 떄 경고/확인바람같은 문구가 나오면 좋겠어 안된다고 저장하면"}
+{"ts": "2026-04-13 15:59:31", "user_id": "U0APMDZNX8S", "username": "지건승", "text": "<@U0AP5B0F71C> I/O LIST\n명칭을 EZI-IO-EC-I16N-E\nEZI-IO-EC-I32N-E  명칭 변경 바이더뮬러껏도 바꿔줄게 .."}
