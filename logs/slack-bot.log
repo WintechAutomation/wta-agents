@@ -61,3 +61,5 @@ https://agent.mes
 2026-04-13 09:15:46,242 INFO [수신] #docs 김근형: 네 알겠습니다. → docs-agent
 2026-04-13 09:15:46,642 INFO 직접 전송 완료 → docs-agent:5614
 2026-04-13 09:29:36,079 INFO [수신] #docs 김근형: <https://agent.mes-wta.com/api/files/ERP_현재고_구매진행_전체.html> 김근형 폴더내에 백업폴더에 백업 해줘 → docs-agent
+2026-04-13 09:29:36,476 INFO 직접 전송 완료 → docs-agent:5614
+2026-04-13 09:30:03,158 INFO [응답시간] docs-agent #docs: 26초
