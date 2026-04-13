@@ -301,6 +301,7 @@ def build_windows(chunks: list[dict]) -> list[dict]:
 # ── LLM call ──────────────────────────────────────────────────────────────────
 def call_llm(text: str) -> dict:
     import requests as req
+    from concurrent.futures import ThreadPoolExecutor, TimeoutError as FutTimeout
     try:
         from json_repair import repair_json
         HAS_REPAIR = True
@@ -310,25 +311,22 @@ def call_llm(text: str) -> dict:
     prompt = MANUALS_V2_EXTRACT_PROMPT + text
     payload = dict(LLM_PARAMS)
     payload['prompt'] = prompt
-    payload['stream'] = True  # streaming for reliable wall-clock timeout
+    payload['stream'] = False  # non-streaming; timeout enforced via future
 
-    deadline = time.time() + LLM_TIMEOUT
-    parts: list[str] = []
-    with req.post(LLM_URL, json=payload, stream=True, timeout=120) as r:
-        r.raise_for_status()
-        for line in r.iter_lines():
-            if time.time() > deadline:
-                raise TimeoutError(f'LLM deadline exceeded after {LLM_TIMEOUT}s')
-            if not line:
-                continue
-            try:
-                chunk = json.loads(line)
-            except Exception:
-                continue
-            parts.append(chunk.get('response', ''))
-            if chunk.get('done'):
-                break
-    raw = ''.join(parts)
+    def _do_req():
+        resp = req.post(LLM_URL, json=payload, timeout=LLM_TIMEOUT)
+        resp.raise_for_status()
+        return resp.json().get('response', '')
+
+    # Run in daemon thread; future.result(timeout) is the hard wall-clock limit.
+    # executor.shutdown(wait=False) so the orphaned thread doesn't block exit.
+    executor = ThreadPoolExecutor(max_workers=1, thread_name_prefix='llm_call')
+    future = executor.submit(_do_req)
+    executor.shutdown(wait=False)
+    try:
+        raw = future.result(timeout=LLM_TIMEOUT + 30)  # 30s grace beyond socket timeout
+    except FutTimeout:
+        raise TimeoutError(f'LLM call timed out after {LLM_TIMEOUT + 30}s')
 
     raw = re.sub(r'```json\s*', '', raw)
     raw = re.sub(r'```\s*', '', raw)

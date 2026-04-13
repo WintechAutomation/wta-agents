@@ -391,3 +391,5 @@
 {"ts": "2026-04-13 08:39:04", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "일단 지금 <https://agent.mes-wta.com/ERP_현재고_구매진행_전체> 이거 안들어가짐\nFailed to load resource: the server responded with a status of 404 ()"}
 {"ts": "2026-04-13 08:41:29", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "ERP_현재고_구매진행_전체.html 서버에 있는거 안들어가짐.."}
 {"ts": "2026-04-13 08:49:49", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "cs 파트 정리한 자료를 줘야하는거 아냐?", "files": [{"name": "image.png", "type": "png", "saved_path": "C:\\MES\\wta-agents\\slack_chatlog\\C0APX6JSK98_files\\20260413_084949_image.png"}]}
+{"ts": "2026-04-13 09:00:48", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "해당건 보고는 저번주에 약식으로 진행햇으니까,"}
+{"ts": "2026-04-13 09:01:16", "user_id": "U0A7S89M5S7", "username": "조한종", "text": "더 할거는 없다만 ,\n이참에 더 해보고싶은거 해도됨. (현시점 백업 필수)"}
