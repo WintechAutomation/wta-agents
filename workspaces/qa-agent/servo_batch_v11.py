@@ -77,6 +77,28 @@ VALID_REL_TYPES = {
     'DEPICTS', 'DOCUMENTS', 'WARNS',
 }
 
+_SECTION_NUM_RE = re.compile(r'^[\d]+([.\-]\d+)*\.?\s*$')  # 1.1.1. / 7.7 / 1.2.1 등
+
+
+def _is_quality_name(name: str) -> bool:
+    """엔티티 이름 품질 검사 — False 반환 시 제외"""
+    if not name:
+        return False
+    stripped = name.strip()
+    # 3자 이하 단자/약어 제외
+    if len(stripped) <= 3:
+        return False
+    # 200자 이상 장문 문장 제외
+    if len(stripped) > 200:
+        return False
+    # 섹션 번호 패턴 제외 (예: 1.1.1., 7.7, 1.2.1)
+    if _SECTION_NUM_RE.match(stripped):
+        return False
+    # 쉼표로 섹션번호 조합된 패턴 제외 (예: "1.2, Overview of this specification")
+    if _SECTION_NUM_RE.match(stripped.split(',')[0].strip()):
+        return False
+    return True
+
 MANUALS_V2_EXTRACT_PROMPT = """다음 산업 장비 매뉴얼 텍스트에서 엔티티와 관계를 추출하세요.
 
 ## 엔티티 타입 (12종)
@@ -416,7 +438,7 @@ def neo4j_merge(file_id: str, run_id: str, entities: list, relations: list) -> t
             if not eid:
                 continue
             props = ent.get('properties', {}) or {}
-            props['source'] = 'manuals_v2'
+            props['source'] = file_id  # file_id로 파일별 추적 가능
             props['_run_id'] = run_id
             props['_file_id'] = file_id
             props['_team'] = TEAM
@@ -815,9 +837,25 @@ def graphrag_for_file(file_id: str, chunks: list[dict], state: dict) -> tuple[in
             result = call_llm(win['text'])
             entities = result.get('entities', []) or []
             relations = result.get('relations', []) or []
-            # Filter valid types
+            # 타입 필터
             entities = [e for e in entities if isinstance(e, dict) and e.get('type') in VALID_ENTITY_TYPES]
             relations = [r for r in relations if isinstance(r, dict) and r.get('type') in VALID_REL_TYPES]
+            # 이름 품질 필터 (3자 이하, 200자 이상, 섹션번호 패턴 제외)
+            entities = [e for e in entities if _is_quality_name(e.get('name', ''))]
+            # 윈도우 내 중복 id 제거
+            seen_ids: set = set()
+            dedup_entities = []
+            for e in entities:
+                if e['id'] not in seen_ids:
+                    seen_ids.add(e['id'])
+                    dedup_entities.append(e)
+            entities = dedup_entities
+            # 유효 엔티티 id 집합 기준으로 관계 재필터 + 자기참조 제외
+            ent_ids = {e['id'] for e in entities}
+            relations = [r for r in relations
+                         if r.get('source') in ent_ids
+                         and r.get('target') in ent_ids
+                         and r.get('source') != r.get('target')]
             # Neo4j MERGE
             nc, rc = neo4j_merge(file_id, state['run_id'], entities, relations)
             ckpt['entities_raw'] += len(entities)

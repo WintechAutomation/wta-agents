@@ -1066,3 +1066,8 @@
 {"ts": "2026-04-13 16:17:00", "direction": "outbound", "user": "MAX", "text": "네, 동의합니다. Neo4j 전체 초기화 후 GraphRAG 인덱싱만 다시 하면 됩니다.\n\n앞단 작업(파싱/청킹/임베딩/pgvector 적재)은 이미 완료된 상태라 손댈 필요 없고, Neo4j에 넣는 GraphRAG 단계만 재실행하면 됩니다.\n\n진행 순서:\n1. Neo4j 전체 노드/엣지 삭제 (MATCH (n) DETACH DELETE n)\n2. 엔티티 필터링 규칙 추가 (3자 이하, 섹션번호, 장문, 중복 방지)\n3. source 필드에 file_id 기록하도록 수정\n4. 완료된 파일부터 GraphRAG 재인덱싱\n\n승인해주시면 db-manager에게 Neo4j 초기화 + 파이프라인 수정 후 재시작 지시하겠습니다."}
 {"ts": "2026-04-13 16:17:22", "direction": "inbound", "user": "boss", "text": "ㅇㅋ"}
 {"ts": "2026-04-13 16:17:41", "direction": "outbound", "user": "MAX", "text": "db-manager에게 지시 완료:\n1. Neo4j 전체 초기화\n2. 엔티티 필터링 규칙 추가 + source 필드 수정\n3. 파이프라인 수정 완료 후 재인덱싱 시작\n\n진행 상황 보고드리겠습니다."}
+{"ts": "2026-04-13 16:21:53", "direction": "outbound", "user": "MAX", "text": "3팀 모두 파이프라인 수정 완료 확인, 배치 재시작 지시했습니다.\n\n• db-manager: 42건\n• qa-agent: 64건\n• issue-manager: 67건\n\nNeo4j 초기화 상태에서 개선된 필터링(3자이하/섹션번호/장문 제외, 중복병합, source=file_id)으로 재인덱싱 시작합니다. 진행 상황 보고드리겠습니다."}
+{"ts": "2026-04-13 16:22:04", "direction": "inbound", "user": "boss", "text": "db 는 뺴"}
+{"ts": "2026-04-13 16:22:15", "direction": "outbound", "user": "MAX", "text": "확인. db-manager 배치 중단 지시했습니다. qa-agent(64건) + issue-manager(67건)만 진행합니다."}
+{"ts": "2026-04-13 16:23:05", "direction": "outbound", "user": "MAX", "text": "db-manager 중단 확인. db-manager 할당분 42건은 qa-agent/issue-manager에게 재분배할까요, 아니면 나중에 별도 처리할까요?"}
+{"ts": "2026-04-13 16:29:02", "direction": "outbound", "user": "MAX", "text": "진행 상황 업데이트:\n\n• qa-agent: 1/64 진행 중 (정상)\n• issue-manager: 1/64 진행 중, 단 LLM 서버(182.224.6.147) 타임아웃 빈번 발생\n\n참고사항:\n- db-manager 제외했으므로 2팀만 동시 실행, 부하는 줄었습니다\n- issue-manager 할당분 63건은 chunks.jsonl 없어서 Docling 파싱부터 진행 필요\n- 체크포인트 5윈도우마다 저장, 중단되어도 재개 가능\n\ndb-manager 42건 재분배 건은 어떻게 할까요?"}
