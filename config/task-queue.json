@@ -541,18 +541,6 @@
       "requested_by": "MAX"
     },
     {
-      "id": "tq-issue-manager-d3fe53",
-      "agent": "issue-manager",
-      "task": "[graphrag Phase1 PoC10 LightRAG indexing]",
-      "message": "crafter handoff. PoC 10 files LightRAG index + validate + Cloudflare report",
-      "status": "done",
-      "priority": "high",
-      "created_at": "2026-04-12 10:19:24",
-      "updated_at": "2026-04-12 14:21:25",
-      "last_report_at": "2026-04-12 14:21:25",
-      "completed_at": "2026-04-12 14:21:25"
-    },
-    {
       "id": "tq-issue-manager-45fd1a",
       "agent": "issue-manager",
       "task": "[task:tq-issue-manager-d3fe53 발급 + 답변 4건]",
@@ -1639,18 +1627,6 @@
       "last_report_at": null,
       "completed_at": null,
       "requested_by": "MAX"
-    },
-    {
-      "id": "tq-admin-agent-db25c0",
-      "agent": "admin-agent",
-      "task": "긴급 조사 요청: 방금 전 모든 에이전트가 동시에 꺼지는 현상이 발생했습니다. 부서장님 지시로 원인 파악이 필요합니다.",
-      "message": "긴급 조사 요청: 방금 전 모든 에이전트가 동시에 꺼지는 현상이 발생했습니다. 부서장님 지시로 원인 파악이 필요합니다.\n\n조사 범위:\n1. 각 에이전트의 세션 로그(logs/ 및 dashboard/logs/) 확인 — 종료 직전 시점에 stop-agents.bat, /stop, ConEmu 종료, 또는 에이전트 종료 관련 명령을 실행한 에이전트가 있는지\n2. launch-agents-conemu.ps1 또는 stop-agents.bat 실행 흔적 확인\n3. 시스템 이벤트(Windows Event Log 등)에서 ConEmu 프로세스 종료 원인 확인\n4. 각 에이전트 세션 로그에서 마지막 활동 시점과 종료 패턴 비교\n\n결과를 정리해서 보고해주세요. 어떤 에이전트가 종료 명령을 내렸는지, 아니면 외부 요인(시스템, ConEmu 크래시 등)인지 판별이 핵심입니다.",
-      "status": "pending",
-      "priority": "medium",
-      "created_at": "2026-04-13 14:14:18",
-      "updated_at": "2026-04-13 14:14:18",
-      "last_report_at": null,
-      "completed_at": null
     },
     {
       "id": "tq-admin-agent-d76222",
