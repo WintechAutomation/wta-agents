@@ -1651,6 +1651,19 @@
       "updated_at": "2026-04-13 14:14:18",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-admin-agent-d76222",
+      "agent": "admin-agent",
+      "task": "지건승님이 192.168.0.210:5173 접속이 안 된다고 합니다. 서버는 실행 중이라고 하는데 외부에서 접속이 안 되는 상황입니다. 포트 5173은 Vite 개발 서버입니다.",
+      "message": "지건승님이 192.168.0.210:5173 접속이 안 된다고 합니다. 서버는 실행 중이라고 하는데 외부에서 접속이 안 되는 상황입니다. 포트 5173은 Vite 개발 서버입니다.\n\nnetstat 결과 확인 및 방화벽 설정 점검 부탁드립니다. 192.168.0.210 서버에 접근 가능하면 직접 확인해주세요:\n1. `netstat -an | findstr 5173` — 바인딩 주소 확인\n2. Windows 방화벽 인바운드 5173 포트 허용 여부\n3. 필요시 `--host 0.0.0.0` 옵션으로 Vite 재실행\n\n결과 나오면 저(control-agent)에게 알려주시면 지건승님께 전달하겠습니다.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-13 14:48:22",
+      "updated_at": "2026-04-13 14:48:22",
+      "last_report_at": null,
+      "completed_at": null,
+      "requested_by": "control-agent"
     }
   ]
 }
