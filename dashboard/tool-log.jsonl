@@ -30119,3 +30119,5 @@
 {"agent_id": "crafter", "tool_name": "Edit", "timestamp": "2026-04-13 12:38:28"}
 {"agent_id": "crafter", "tool_name": "Bash", "timestamp": "2026-04-13 12:39:20"}
 {"agent_id": "issue-manager", "tool_name": "mcp__agent-channel__wait_for_channel", "timestamp": "2026-04-13 12:39:26"}
+{"agent_id": "control-agent", "tool_name": "mcp__agent-channel__send_message", "timestamp": "2026-04-13 12:54:26"}
+{"agent_id": "control-agent", "tool_name": "mcp__agent-channel__send_message", "timestamp": "2026-04-13 12:55:05"}
