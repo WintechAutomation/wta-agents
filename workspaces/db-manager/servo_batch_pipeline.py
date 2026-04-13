@@ -220,14 +220,51 @@ def extract_entities(text: str) -> dict:
     return {'entities': [], 'relations': []}
 
 
+_SECTION_NUM_RE = re.compile(r'^[\d]+([.\-]\d+)*\.?\s*$')  # 1.1.1. / 7.7 / 1.2.1 등
+
+
+def _is_quality_name(name: str) -> bool:
+    """엔티티 이름 품질 검사 — False 반환 시 제외"""
+    if not name:
+        return False
+    stripped = name.strip()
+    # 3자 이하 단자/약어 제외
+    if len(stripped) <= 3:
+        return False
+    # 200자 이상 장문 문장 제외
+    if len(stripped) > 200:
+        return False
+    # 섹션 번호 패턴 제외 (예: 1.1.1., 7.7, 1.2.1)
+    if _SECTION_NUM_RE.match(stripped):
+        return False
+    # 쉼표로 섹션번호 조합된 패턴 제외 (예: "1.2, Overview of this specification")
+    if _SECTION_NUM_RE.match(stripped.split(',')[0].strip()):
+        return False
+    return True
+
+
 def filter_extracted(extracted: dict, file_id: str) -> dict:
-    entities = [e for e in extracted.get('entities', [])
-                if e.get('type') in VALID_ENTITY_TYPES and e.get('id')]
+    raw_entities = [e for e in extracted.get('entities', [])
+                    if e.get('type') in VALID_ENTITY_TYPES and e.get('id')]
+
+    # 이름 품질 필터링 적용
+    entities = [e for e in raw_entities if _is_quality_name(e.get('name', ''))]
+
+    # 중복 id 제거 (같은 윈도우 내)
+    seen_ids: set = set()
+    dedup_entities = []
+    for e in entities:
+        if e['id'] not in seen_ids:
+            seen_ids.add(e['id'])
+            dedup_entities.append(e)
+    entities = dedup_entities
+
     ent_ids = {e['id'] for e in entities}
     relations = [r for r in extracted.get('relations', [])
                  if r.get('type') in VALID_REL_TYPES
                  and r.get('source') in ent_ids
-                 and r.get('target') in ent_ids]
+                 and r.get('target') in ent_ids
+                 and r.get('source') != r.get('target')]  # 자기참조 관계 제외
     return {'entities': entities, 'relations': relations}
 
 
@@ -315,7 +352,7 @@ def load_to_neo4j(driver, extracted: dict, file_id: str) -> tuple:
             props = {k: v for k, v in (ent.get('properties') or {}).items()
                      if v is not None and v != ''}
             props.update({
-                '_id': safe_id, 'source': 'manuals_v2',
+                '_id': safe_id, 'source': file_id,  # file_id로 파일별 추적 가능
                 '_run_id': RUN_ID, '_file_id': file_id, '_team': TEAM,
             })
             try:
