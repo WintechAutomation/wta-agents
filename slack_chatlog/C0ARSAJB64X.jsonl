@@ -20,3 +20,7 @@
 {"ts": "2026-04-13 15:24:01", "user_id": "U0APMDZNX8S", "username": "지건승", "text": "<@U0AP5B0F71C> 연결은됨\ni/o 리스트가 엑셀껄 복사 붙여넣기 하고싶은데 안됨"}
 {"ts": "2026-04-13 15:36:03", "user_id": "U0APMDZNX8S", "username": "지건승", "text": "<@U0AP5B0F71C> 점접번호를 DI = X000 DO= Y000 이렇게 표현해줘\n그리고 열을 자동맞춤 그리고 열삭제기능도 넣어줘"}
 {"ts": "2026-04-13 15:39:41", "user_id": "U0APMDZNX8S", "username": "지건승", "text": "<@U0AP5B0F71C> 하나도 안바꼈네 ?\n열삭제버튼 없음 ...\n열삭제버튼도 추가해줘\nX000. Y000 반영안됨\n\n\"Signals\": [\n    {\n      \"ModuleName\": \"IN01\",\n      \"Channel\": 0,\n      \"SignalType\": 0,\n      \"Group\": \"ETC\",\n      \"Key\": \"DOOR_INTERLOCK\",\n      \"SignalName\": \"입력1\",\n      \"Description\": \"\"\n    },\n\nSW에서 이렇게 IO맵을 짜고 있는데 우리는 어떤식으로 해야 JSON 으로 통일을 할 수 있을까 ? 이건 반영하지말고 너가 어떻게 하면 되는지보여줘"}
+{"ts": "2026-04-13 15:42:04", "user_id": "U0APMDZNX8S", "username": "지건승", "text": "<@U0AP5B0F71C> 응 그럼 구현해줘봐"}
+{"ts": "2026-04-13 15:43:10", "user_id": "U0APMDZNX8S", "username": "지건승", "text": "<@U0AP5B0F71C> 접점번호는 수정이 안되나보네 ? 열 삭제 그런것도 반응이 없고 ..."}
+{"ts": "2026-04-13 15:46:09", "user_id": "U0APMDZNX8S", "username": "지건승", "text": "<@U0AP5B0F71C> 근데 왜 모듈 추가하면 넘버가 증가가 안됨 ?\n그리고 내가 구현했던건 EZI-IO 모듈 16,32\n바이더뮬러 모듈 16접, 하고 플랫타입 이런거였는데 하나도 반여이 안되어있네 ?"}
+{"ts": "2026-04-13 15:46:56", "user_id": "U0APMDZNX8S", "username": "지건승", "text": "<@U0AP5B0F71C> 이런식으로 만들었는데... 너꺼랑 비교가 조금뙤네?? ㅠㅠ", "files": [{"name": "image.png", "type": "png", "saved_path": "C:\\MES\\wta-agents\\slack_chatlog\\C0ARSAJB64X_files\\20260413_154656_image.png"}]}
