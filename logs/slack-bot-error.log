@@ -394,3 +394,4 @@ UnicodeDecodeError: 'utf-8' codec can't decode byte 0x98 in position 1057442: in
 [slack-bot] 08:41:00 Á÷Á¢ Àü¼Û ¿Ï·á ¡æ control-agent:5616
 [slack-bot] 08:42:59 [ÀÀ´ä½Ã°£] control-agent #Á¦¾î-Á¶ÇÑÁ¾: 1ºĞ 59ÃÊ
 [slack-bot] 08:42:59 [½½·¢ ¹ß½Å] #Á¦¾î-Á¶ÇÑÁ¾ ¡ç control-agent: ¿øÀÎ Ã£¾Ò½À´Ï´Ù. AG-Grid v33ºÎÅÍ ¸ğµâÀ» ¸í½ÃÀûÀ¸·Î µî·ÏÇØ¾ß ±×¸®µå°¡ ·»´õ¸µµË´Ï´Ù. v32±îÁö´Â C
+2026-04-13 08:49:53,079 WARNING [íŒŒì¼â†’MES] í”„ë¡œì íŠ¸ ì¡°íšŒ ì‹¤íŒ¨: 'list' object has no attribute 'get'

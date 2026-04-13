@@ -323,7 +323,6 @@ def build_windows(chunks: list[dict]) -> list[dict]:
 # ── LLM call ──────────────────────────────────────────────────────────────────
 def call_llm(text: str) -> dict:
     import requests as req
-    from concurrent.futures import ThreadPoolExecutor, TimeoutError as FutTimeout
     try:
         from json_repair import repair_json
         HAS_REPAIR = True
@@ -333,22 +332,40 @@ def call_llm(text: str) -> dict:
     prompt = MANUALS_V2_EXTRACT_PROMPT + text
     payload = dict(LLM_PARAMS)
     payload['prompt'] = prompt
-    payload['stream'] = False  # non-streaming; timeout enforced via future
+    payload['stream'] = True  # streaming; per-chunk socket timeout + idle-token check
 
-    def _do_req():
-        resp = req.post(LLM_URL, json=payload, timeout=LLM_TIMEOUT)
-        resp.raise_for_status()
-        return resp.json().get('response', '')
+    # Two-layer timeout:
+    #   1. Socket read timeout=60: fires if server sends NOTHING for 60s
+    #   2. Idle token timeout=90: fires if server sends data but no real tokens for 90s
+    #   3. Deadline: absolute wall-clock limit from request start
+    SOCKET_TIMEOUT = 60
+    IDLE_TOKEN_TIMEOUT = 90  # seconds without a non-empty token response
+    deadline = time.time() + LLM_TIMEOUT
 
-    # Run in daemon thread; future.result(timeout) is the hard wall-clock limit.
-    # executor.shutdown(wait=False) so the orphaned thread doesn't block exit.
-    executor = ThreadPoolExecutor(max_workers=1, thread_name_prefix='llm_call')
-    future = executor.submit(_do_req)
-    executor.shutdown(wait=False)
-    try:
-        raw = future.result(timeout=LLM_TIMEOUT + 30)  # 30s grace beyond socket timeout
-    except FutTimeout:
-        raise TimeoutError(f'LLM call timed out after {LLM_TIMEOUT + 30}s')
+    parts: list[str] = []
+    last_token_time = time.time()
+    with req.post(LLM_URL, json=payload, stream=True, timeout=SOCKET_TIMEOUT) as r:
+        r.raise_for_status()
+        for line in r.iter_lines():
+            now = time.time()
+            if now > deadline:
+                raise TimeoutError(f'LLM deadline exceeded after {LLM_TIMEOUT}s')
+            idle = now - last_token_time
+            if idle > IDLE_TOKEN_TIMEOUT:
+                raise TimeoutError(f'LLM idle: no tokens for {idle:.0f}s')
+            if not line:
+                continue
+            try:
+                chunk = json.loads(line)
+            except Exception:
+                continue
+            token = chunk.get('response', '')
+            if token:
+                last_token_time = now
+            parts.append(token)
+            if chunk.get('done'):
+                break
+    raw = ''.join(parts)
 
     raw = re.sub(r'```json\s*', '', raw)
     raw = re.sub(r'```\s*', '', raw)
