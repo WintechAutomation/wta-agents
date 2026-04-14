@@ -32267,3 +32267,7 @@
 {"agent_id": "db-manager", "tool_name": "Bash", "timestamp": "2026-04-14 08:46:30"}
 {"agent_id": "db-manager", "tool_name": "Bash", "timestamp": "2026-04-14 08:48:37"}
 {"agent_id": "db-manager", "tool_name": "Bash", "timestamp": "2026-04-14 08:53:46"}
+{"agent_id": "control-agent", "tool_name": "mcp__agent-channel__send_message", "timestamp": "2026-04-14 09:03:45"}
+{"agent_id": "db-manager", "tool_name": "Bash", "timestamp": "2026-04-14 09:03:53"}
+{"agent_id": "db-manager", "tool_name": "mcp__agent-channel__send_message", "timestamp": "2026-04-14 09:04:18"}
+{"agent_id": "control-agent", "tool_name": "mcp__agent-channel__send_message", "timestamp": "2026-04-14 09:04:30"}
