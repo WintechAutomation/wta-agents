@@ -2409,6 +2409,81 @@
       "updated_at": "2026-04-14 11:38:32",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-admin-agent-3993bb",
+      "agent": "admin-agent",
+      "task": "부서장님이 다시 테스트 요청하셨습니다. 화면으로 직접 보고 계십니다.\n\n이전 테스트 ConEmu 창이 남아있으면 닫고, 처음부터 다시:\n1. 새 ConEmu 창에 -runlist로",
+      "message": "부서장님이 다시 테스트 요청하셨습니다. 화면으로 직접 보고 계십니다.\n\n이전 테스트 ConEmu 창이 남아있으면 닫고, 처음부터 다시:\n1. 새 ConEmu 창에 -runlist로 탭 5개 생성\n2. 탭 5개가 열린 것 확인\n3. 각 탭에 PID 기반으로 Enter 2번씩 전송\n4. 전체 과정을 천천히 실행 (부서장님이 화면 확인 중)\n\n바로 실행해주세요.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-14 11:43:37",
+      "updated_at": "2026-04-14 11:43:37",
+      "last_report_at": null,
+      "completed_at": null,
+      "requested_by": "MAX"
+    },
+    {
+      "id": "tq-admin-agent-449dec",
+      "agent": "admin-agent",
+      "task": "부서장님이 다시 테스트 요청하셨습니다. 화면으로 직접 보고 계십니다.",
+      "message": "부서장님이 다시 테스트 요청하셨습니다. 화면으로 직접 보고 계십니다.\n\n이전 테스트 ConEmu 창이 남아있으면 닫고, 처음부터 다시:\n1. 새 ConEmu 창에 -runlist로 탭 5개 생성\n2. 탭 5개가 열린 것 확인\n3. 각 탭에 PID 기반으로 Enter 2번씩 전송\n4. 전체 과정을 천천히 실행 (부서장님이 화면 확인 중)\n\n바로 실행해주세요.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-14 11:43:40",
+      "updated_at": "2026-04-14 11:43:40",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-admin-agent-40dca9",
+      "agent": "admin-agent",
+      "task": "부서장 지적: 이전 테스트 ConEmu만 닫고 터미널 프로세스가 살아남아 있습니다.\n\n1. 먼저 이전 테스트에서 남은 잔존 프로세스 정리 (테스트용 cmd/ConEmuC64만, W",
+      "message": "부서장 지적: 이전 테스트 ConEmu만 닫고 터미널 프로세스가 살아남아 있습니다.\n\n1. 먼저 이전 테스트에서 남은 잔존 프로세스 정리 (테스트용 cmd/ConEmuC64만, WTA-Agents 건드리지 말 것)\n2. 정리 완료 후 다시 새 ConEmu 창에 탭 5개 생성\n3. 테스트 실행\n\n잔존 프로세스부터 확인/정리 후 진행해주세요.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-14 11:45:25",
+      "updated_at": "2026-04-14 11:45:25",
+      "last_report_at": null,
+      "completed_at": null,
+      "requested_by": "MAX"
+    },
+    {
+      "id": "tq-admin-agent-42ac3d",
+      "agent": "admin-agent",
+      "task": "부서장 지적: 이전 테스트 ConEmu만 닫고 터미널 프로세스가 살아남아 있습니다.",
+      "message": "부서장 지적: 이전 테스트 ConEmu만 닫고 터미널 프로세스가 살아남아 있습니다.\n\n1. 먼저 이전 테스트에서 남은 잔존 프로세스 정리 (테스트용 cmd/ConEmuC64만, WTA-Agents 건드리지 말 것)\n2. 정리 완료 후 다시 새 ConEmu 창에 탭 5개 생성\n3. 테스트 실행\n\n잔존 프로세스부터 확인/정리 후 진행해주세요.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-14 11:45:28",
+      "updated_at": "2026-04-14 11:45:28",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-crafter-d510c0",
+      "agent": "crafter",
+      "task": "런처 스크립트 수정 요청 (부서장 승인):\n\n1. 기존 파일 백업:\n   - scripts/launch-agents-conemu.ps1 → scripts/launch-agents-",
+      "message": "런처 스크립트 수정 요청 (부서장 승인):\n\n1. 기존 파일 백업:\n   - scripts/launch-agents-conemu.ps1 → scripts/launch-agents-conemu-split.ps1.bak\n\n2. 새 런처 작성 (scripts/launch-agents-conemu.ps1):\n   - 기존 4x4 분할 방식 → 탭 방식으로 변경\n   - 에이전트 목록, 모델 매핑, 클린업 로직 등은 기존과 동일 유지\n   - ConEmu -runlist에서 분할 파라미터(s1T75H 등) 제거, 탭으로만 생성\n   - AHK 대신 PowerShell GuiMacro 기반 자동 승인:\n     - ConEmu64 PID에서 ConEmuC64 자식 PID 조회\n     - 각 PID에 ConEmuC64.exe -GuiMacro:<PID> \"Keys(Enter)\" 2번씩 전송\n     - 마지막 MAX 탭에 /reload-plugins 전송\n   - auto-approve-plugins.ahk 실행 부분 제거\n\n3. 참고: admin-agent가 테스트한 방식\n   - ConEmuC64.exe -GuiMacro:<PID> \"Keys(Enter)\" 로 직접 전송\n   - Tab(1)로 순회하지 않고 PID 직접 지정이 안정적\n\n기존 기능 100% 유지하면서 분할→탭만 변경. 완료 후 보고해주세요.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-14 11:47:47",
+      "updated_at": "2026-04-14 11:47:47",
+      "last_report_at": null,
+      "completed_at": null,
+      "requested_by": "MAX"
+    },
+    {
+      "id": "tq-crafter-0c3d76",
+      "agent": "crafter",
+      "task": "런처 스크립트 수정 요청 (부서장 승인):",
+      "message": "런처 스크립트 수정 요청 (부서장 승인):\n\n1. 기존 파일 백업:\n   - scripts/launch-agents-conemu.ps1 → scripts/launch-agents-conemu-split.ps1.bak\n\n2. 새 런처 작성 (scripts/launch-agents-conemu.ps1):\n   - 기존 4x4 분할 방식 → 탭 방식으로 변경\n   - 에이전트 목록, 모델 매핑, 클린업 로직 등은 기존과 동일 유지\n   - ConEmu -runlist에서 분할 파라미터(s1T75H 등) 제거, 탭으로만 생성\n   - AHK 대신 PowerShell GuiMacro 기반 자동 승인:\n     - ConEmu64 PID에서 ConEmuC64 자식 PID 조회\n     - 각 PID에 ConEmuC64.exe -GuiMacro:<PID> \"Keys(Enter)\" 2번씩 전송\n     - 마지막 MAX 탭에 /reload-plugins 전송\n   - auto-approve-plugins.ahk 실행 부분 제거\n\n3. 참고: admin-agent가 테스트한 방식\n   - ConEmuC64.exe -GuiMacro:<PID> \"Keys(Enter)\" 로 직접 전송\n   - Tab(1)로 순회하지 않고 PID 직접 지정이 안정적\n\n기존 기능 100% 유지하면서 분할→탭만 변경. 완료 후 보고해주세요.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-14 11:47:51",
+      "updated_at": "2026-04-14 11:47:51",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }

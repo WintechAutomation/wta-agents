@@ -1131,3 +1131,11 @@
 {"ts": "2026-04-14 11:36:11", "direction": "inbound", "user": "boss", "text": "탭을 5개 켜놓고 테스트를 해야지"}
 {"ts": "2026-04-14 11:37:55", "direction": "inbound", "user": "boss", "text": "(photo)", "files": [{"type": "image", "path": "C:\\MES\\wta-agents\\slack_chatlog\\telegram_files\\20260414_113755.jpg"}]}
 {"ts": "2026-04-14 11:38:25", "direction": "outbound", "user": "MAX", "text": "확인했습니다. Keys(^t)로 탭 생성이 안 되고 ^T 문자가 그대로 입력되고 있네요.\n\n탭 생성은 GuiMacro Keys가 아니라 다른 방법이 필요합니다. 실제 런처에서는 ConEmu -runlist로 탭을 생성하므로 이 문제는 없지만, 지금 테스트에서 탭 5개를 먼저 만들어야 합니다.\n\nadmin-agent에게 수정 지시하겠습니다."}
+{"ts": "2026-04-14 11:41:37", "direction": "outbound", "user": "MAX", "text": "재테스트 결과: 탭 5개 열어놓고 테스트 성공했습니다.\n\n핵심 결과:\n- runlist로 탭 5개 동시 생성 ✅\n- 각 탭 PID로 직접 엔터 전송 ✅ (5/5)\n- 탭 전환 없이 PID 기반으로 직접 전송이 가장 안정적\n- AHK 불필요 — PowerShell 스크립트로 대체 가능\n\n즉, 런처를 분할→탭 방식으로 바꾸면:\n- 렌더링 부하 감소\n- AHK 대신 PS1 스크립트로 자동 승인\n- conhost 크래시 위험도 줄어듦\n\n런처 수정 진행할까요? 다음 재시작 시 적용됩니다."}
+{"ts": "2026-04-14 11:43:27", "direction": "inbound", "user": "boss", "text": "다시해봐"}
+{"ts": "2026-04-14 11:44:52", "direction": "outbound", "user": "MAX", "text": "재테스트 완료:\n- 탭 1~4: Enter 2번 전송 성공 ✅\n- 탭 5: cmd가 Enter 1번에 종료되어 2번째 실패 (테스트용 cmd 한정, 실제 Claude Code는 종료 안 됨)\n\n화면에서 확인하셨을 때 어떠셨나요? 탭 전환 방식으로 런처 수정 진행할까요?"}
+{"ts": "2026-04-14 11:45:15", "direction": "inbound", "user": "boss", "text": "끌때 conEmu 만 끄면 터미널은 살아남아있어  다시한번해봐"}
+{"ts": "2026-04-14 11:46:58", "direction": "outbound", "user": "MAX", "text": "재테스트 완료: 탭 5개 전부 Enter 2번 성공 (5/5 ✅)\n\n잔존 프로세스 정리 후 깨끗하게 테스트했고, WTA-Agents에 영향 없음 확인됐습니다.\n\n런처를 분할→탭 방식으로 수정 진행할까요?"}
+{"ts": "2026-04-14 11:47:29", "direction": "inbound", "user": "boss", "text": "기존거 백업해두고 수정한거새로만들어"}
+{"ts": "2026-04-14 11:47:42", "direction": "outbound", "user": "MAX", "text": "네, 기존 런처 백업 후 탭 방식 새로 만들겠습니다. crafter에게 지시합니다."}
+{"ts": "2026-04-14 11:49:23", "direction": "outbound", "user": "MAX", "text": "완료:\n- 기존 백업: launch-agents-conemu-split.ps1.bak\n- 새 런처: 탭 방식 + GuiMacro 자동 승인\n- AHK 제거, 기존 로직 유지\n\n다음 /restart 시 탭 방식으로 적용됩니다."}

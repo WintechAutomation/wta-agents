@@ -401,3 +401,4 @@
 {"ts": "2026-04-14 11:27:04", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "왜 항상 주는 파일마다 에러가..\n```{\"error\":\"'ascii' codec can't encode characters in position 15-17: ordinal not in range(128)\"}```\n"}
 {"ts": "2026-04-14 11:27:42", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "parts-sales-by-equip-20260414.html:1  Failed to load resource: the server responded with a status of 404 ()"}
 {"ts": "2026-04-14 11:30:09", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "**2. 판매자재관리 (판매형번별)* 이거 판매코드별이다 쏘리.."}
+{"ts": "2026-04-14 11:41:43", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "db에 등록된 데이터중에 패킹리스트, 소모품리스트 관련해서 저장된 파일들이 있어?"}
