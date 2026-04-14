@@ -2284,6 +2284,56 @@
       "updated_at": "2026-04-14 11:05:23",
       "last_report_at": null,
       "completed_at": null
+    },
+    {
+      "id": "tq-admin-agent-15adb5",
+      "agent": "admin-agent",
+      "task": "긴급 확인: 현재 conhost.exe 프로세스 상태를 점검해주세요.\n\n확인 사항:\n1. 현재 conhost.exe 프로세스가 몇 개 실행 중인지\n2. 16개 에이전트 탭이 하나의",
+      "message": "긴급 확인: 현재 conhost.exe 프로세스 상태를 점검해주세요.\n\n확인 사항:\n1. 현재 conhost.exe 프로세스가 몇 개 실행 중인지\n2. 16개 에이전트 탭이 하나의 conhost를 공유하는지, 각각 별도 conhost인지\n3. 각 conhost의 PID와 메모리 사용량\n4. ConEmu 설정에서 conhost 격리 옵션이 있는지\n\ntasklist /fi \"imagename eq conhost.exe\" 결과와 함께 보고해주세요.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-14 11:21:08",
+      "updated_at": "2026-04-14 11:21:08",
+      "last_report_at": null,
+      "completed_at": null,
+      "requested_by": "MAX"
+    },
+    {
+      "id": "tq-admin-agent-b44ef1",
+      "agent": "admin-agent",
+      "task": "긴급 확인: 현재 conhost.exe 프로세스 상태를 점검해주세요.",
+      "message": "긴급 확인: 현재 conhost.exe 프로세스 상태를 점검해주세요.\n\n확인 사항:\n1. 현재 conhost.exe 프로세스가 몇 개 실행 중인지\n2. 16개 에이전트 탭이 하나의 conhost를 공유하는지, 각각 별도 conhost인지\n3. 각 conhost의 PID와 메모리 사용량\n4. ConEmu 설정에서 conhost 격리 옵션이 있는지\n\ntasklist /fi \"imagename eq conhost.exe\" 결과와 함께 보고해주세요.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-14 11:21:13",
+      "updated_at": "2026-04-14 11:21:13",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-admin-agent-65fbf6",
+      "agent": "admin-agent",
+      "task": "긴급 테스트 요청: ConEmu 탭 방식 전환 가능 여부 확인\n\n기존 WTA-Agents ConEmu는 건드리지 말고, 별도 ConEmu 창을 열어서 테스트해주세요.\n\n테스트 내용",
+      "message": "긴급 테스트 요청: ConEmu 탭 방식 전환 가능 여부 확인\n\n기존 WTA-Agents ConEmu는 건드리지 말고, 별도 ConEmu 창을 열어서 테스트해주세요.\n\n테스트 내용:\n1. 새 ConEmu 창에 5개 탭으로 cmd 실행 (분할 아닌 탭)\n2. ConEmu GuiMacro 또는 API로 탭 간 전환이 되는지 확인\n   - 예: ConEmuC -GuiMacro \"Tab(7,1)\" 같은 명령\n3. 각 탭으로 전환 후 엔터 키 전송이 가능한지 확인\n4. AHK로 탭 순회하면서 엔터 전송하는 것이 가능한 구조인지 판단\n\n테스트 후 결과 즉시 보고해주세요. 현재 운영 중인 WTA-Agents ConEmu는 절대 건드리지 마세요.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-14 11:28:47",
+      "updated_at": "2026-04-14 11:28:47",
+      "last_report_at": null,
+      "completed_at": null,
+      "requested_by": "MAX"
+    },
+    {
+      "id": "tq-admin-agent-ab2d36",
+      "agent": "admin-agent",
+      "task": "긴급 테스트 요청: ConEmu 탭 방식 전환 가능 여부 확인",
+      "message": "긴급 테스트 요청: ConEmu 탭 방식 전환 가능 여부 확인\n\n기존 WTA-Agents ConEmu는 건드리지 말고, 별도 ConEmu 창을 열어서 테스트해주세요.\n\n테스트 내용:\n1. 새 ConEmu 창에 5개 탭으로 cmd 실행 (분할 아닌 탭)\n2. ConEmu GuiMacro 또는 API로 탭 간 전환이 되는지 확인\n   - 예: ConEmuC -GuiMacro \"Tab(7,1)\" 같은 명령\n3. 각 탭으로 전환 후 엔터 키 전송이 가능한지 확인\n4. AHK로 탭 순회하면서 엔터 전송하는 것이 가능한 구조인지 판단\n\n테스트 후 결과 즉시 보고해주세요. 현재 운영 중인 WTA-Agents ConEmu는 절대 건드리지 마세요.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-14 11:28:51",
+      "updated_at": "2026-04-14 11:28:51",
+      "last_report_at": null,
+      "completed_at": null
     }
   ]
 }

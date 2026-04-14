@@ -397,3 +397,6 @@
 {"ts": "2026-04-13 09:29:35", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "<https://agent.mes-wta.com/api/files/ERP_현재고_구매진행_전체.html> 김근형 폴더내에 백업폴더에 백업 해줘"}
 {"ts": "2026-04-14 11:16:52", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "업무공간에 부품판매관리_20260414 (1), 판매자재관리_20260414 두 리스트 업로드 했는데 확인 가능?"}
 {"ts": "2026-04-14 11:19:44", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "20260414.csv, 20260414_1.csv 이걸로 등록된거 같음 확인해봐"}
+{"ts": "2026-04-14 11:24:18", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "정리 필요\n20260414.csv 파일은 장비별, 판매 형번별 분류로 정리해주면 될 것 같고,\n20260414_1.csv 파일은 판매형번별 분류해서 정리한 파일 좀 만들어 주시오."}
+{"ts": "2026-04-14 11:27:04", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "왜 항상 주는 파일마다 에러가..\n```{\"error\":\"'ascii' codec can't encode characters in position 15-17: ordinal not in range(128)\"}```\n"}
+{"ts": "2026-04-14 11:27:42", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "parts-sales-by-equip-20260414.html:1  Failed to load resource: the server responded with a status of 404 ()"}
