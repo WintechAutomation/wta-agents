@@ -785,3 +785,4 @@ ht
 2026-04-14 12:35:53,744 INFO 직접 전송 완료 → control-agent:5616
 2026-04-14 12:35:53,841 WARNING [파일→MES] 프로젝트 조회 실패: 'list' object has no attribute 'get'
 2026-04-14 12:38:42,788 INFO [응답시간] control-agent #제어-정보: 2분 49초
+2026-04-14 12:38:42,788 INFO [슬랙 발신] #제어-정보 ← control-agent: 이미지 확인했습니다. AG Grid를 완전히 제거하고 HorzTableEditor 방식으로 교체하는 작업입니
