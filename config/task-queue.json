@@ -2349,18 +2349,6 @@
       "requested_by": "MAX"
     },
     {
-      "id": "tq-admin-agent-db01d8",
-      "agent": "admin-agent",
-      "task": "탭 전환 테스트 다시 한 번 해주세요. 이번에는 좀 더 실제 시나리오에 가깝게:",
-      "message": "탭 전환 테스트 다시 한 번 해주세요. 이번에는 좀 더 실제 시나리오에 가깝게:\n\n1. 별도 ConEmu에 탭 5개 생성 (cmd)\n2. 각 탭에 에코 명령으로 탭 구분 가능하게 세팅 (echo Tab1, echo Tab2 등)\n3. Tab(1)로 탭 순회하면서 각 탭에서 Keys(Enter) 전송\n4. 16개 탭을 순회하며 엔터 2번씩 보내는 전체 시나리오를 스크립트로 실행\n5. 모든 탭에 정상 전달되었는지 확인\n\n실제 자동 승인 시나리오를 시뮬레이션해서 보고해주세요.",
-      "status": "pending",
-      "priority": "medium",
-      "created_at": "2026-04-14 11:35:47",
-      "updated_at": "2026-04-14 11:35:47",
-      "last_report_at": null,
-      "completed_at": null
-    },
-    {
       "id": "tq-admin-agent-3e38e1",
       "agent": "admin-agent",
       "task": "테스트 방법 수정: 탭 5개를 먼저 열어놓고 테스트해주세요.\n\n1. 별도 ConEmu 창에서 탭 5개를 미리 생성 (각각 cmd)\n2. 5개 탭이 열린 상태에서 GuiMacro로 ",
@@ -2399,18 +2387,6 @@
       "requested_by": "MAX"
     },
     {
-      "id": "tq-admin-agent-c6100a",
-      "agent": "admin-agent",
-      "task": "Keys(^t)로 탭 생성이 안 됩니다. ^T 문자가 그대로 입력되고 있어요.",
-      "message": "Keys(^t)로 탭 생성이 안 됩니다. ^T 문자가 그대로 입력되고 있어요.\n\nConEmu에서 탭 생성은 GuiMacro Recreate() 또는 아래 방법으로 해주세요:\n- ConEmuC64.exe -GuiMacro \"Recreate(0,1)\"  또는\n- ConEmu64.exe 실행 시 runlist로 탭 5개 미리 생성\n\n방법:\n1. 별도 ConEmu 창을 -runlist로 탭 5개 생성하여 실행\n   예: ConEmu64.exe -runlist \"cmd ||| cmd ||| cmd ||| cmd ||| cmd\"\n2. 5개 탭이 열린 상태에서 Tab(1)로 순회 + Keys(Enter) 전송 테스트\n3. 각 탭에 정상 전달 확인\n\n부서장님이 직접 화면 보고 계십니다. 정확하게 테스트해주세요.",
-      "status": "pending",
-      "priority": "medium",
-      "created_at": "2026-04-14 11:38:32",
-      "updated_at": "2026-04-14 11:38:32",
-      "last_report_at": null,
-      "completed_at": null
-    },
-    {
       "id": "tq-admin-agent-3993bb",
       "agent": "admin-agent",
       "task": "부서장님이 다시 테스트 요청하셨습니다. 화면으로 직접 보고 계십니다.\n\n이전 테스트 ConEmu 창이 남아있으면 닫고, 처음부터 다시:\n1. 새 ConEmu 창에 -runlist로",
@@ -2447,18 +2423,6 @@
       "last_report_at": null,
       "completed_at": null,
       "requested_by": "MAX"
-    },
-    {
-      "id": "tq-admin-agent-42ac3d",
-      "agent": "admin-agent",
-      "task": "부서장 지적: 이전 테스트 ConEmu만 닫고 터미널 프로세스가 살아남아 있습니다.",
-      "message": "부서장 지적: 이전 테스트 ConEmu만 닫고 터미널 프로세스가 살아남아 있습니다.\n\n1. 먼저 이전 테스트에서 남은 잔존 프로세스 정리 (테스트용 cmd/ConEmuC64만, WTA-Agents 건드리지 말 것)\n2. 정리 완료 후 다시 새 ConEmu 창에 탭 5개 생성\n3. 테스트 실행\n\n잔존 프로세스부터 확인/정리 후 진행해주세요.",
-      "status": "pending",
-      "priority": "medium",
-      "created_at": "2026-04-14 11:45:28",
-      "updated_at": "2026-04-14 11:45:28",
-      "last_report_at": null,
-      "completed_at": null
     },
     {
       "id": "tq-crafter-d510c0",

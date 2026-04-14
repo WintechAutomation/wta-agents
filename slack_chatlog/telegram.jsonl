@@ -1141,3 +1141,4 @@
 {"ts": "2026-04-14 11:49:23", "direction": "outbound", "user": "MAX", "text": "완료:\n- 기존 백업: launch-agents-conemu-split.ps1.bak\n- 새 런처: 탭 방식 + GuiMacro 자동 승인\n- AHK 제거, 기존 로직 유지\n\n다음 /restart 시 탭 방식으로 적용됩니다."}
 {"ts": "2026-04-14 11:57:16", "direction": "inbound", "user": "boss", "text": "지금 또 오토 커밋 안되고잇는거같은데?"}
 {"ts": "2026-04-14 11:57:25", "direction": "outbound", "user": "MAX", "text": "확인하겠습니다. admin-agent에게 점검 지시합니다."}
+{"ts": "2026-04-14 12:00:13", "direction": "outbound", "user": "MAX", "text": "오토커밋 자체는 정상인데 push가 실패 중입니다.\n\n원인: GitHub 100MB 파일 크기 초과\n- chunks.jsonl 129MB, chunks.jsonl.bak 107MB/108MB (3개 파일)\n\n조치: .gitignore에 추가 + git rm --cached로 트래킹 제거하면 해결됩니다. 진행할까요?"}
