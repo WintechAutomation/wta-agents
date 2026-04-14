@@ -43,5 +43,10 @@
     "date": "2026-04-13",
     "restaurant": "뷔페",
     "weekday": "월"
+  },
+  {
+    "date": "2026-04-14",
+    "restaurant": "한식뷔페",
+    "weekday": "화"
   }
 ]
