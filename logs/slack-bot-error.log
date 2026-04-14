@@ -400,3 +400,9 @@ UnicodeDecodeError: 'utf-8' codec can't decode byte 0x98 in position 1057442: in
 2026-04-13 16:01:56,831 WARNING [파일→MES] 프로젝트 조회 실패: 'list' object has no attribute 'get'
 2026-04-14 08:33:13,582 WARNING 채널 ID 없음: #품질관리
 2026-04-14 09:42:24,872 ERROR MES 로그인 오류: timed out
+2026-04-14 10:45:30,146 WARNING [파일→MES] 프로젝트 조회 실패: 'list' object has no attribute 'get'
+2026-04-14 11:10:39,893 WARNING [파일→MES] 프로젝트 조회 실패: 'list' object has no attribute 'get'
+2026-04-14 11:32:33,344 WARNING [파일→MES] 프로젝트 조회 실패: 'list' object has no attribute 'get'
+2026-04-14 11:51:32,360 WARNING [파일→MES] 프로젝트 조회 실패: 'list' object has no attribute 'get'
+2026-04-14 12:35:53,841 WARNING [파일→MES] 프로젝트 조회 실패: 'list' object has no attribute 'get'
+2026-04-14 12:56:14,207 WARNING [파일→MES] 프로젝트 조회 실패: 'list' object has no attribute 'get'

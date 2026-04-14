@@ -786,3 +786,18 @@ ht
 2026-04-14 12:35:53,841 WARNING [파일→MES] 프로젝트 조회 실패: 'list' object has no attribute 'get'
 2026-04-14 12:38:42,788 INFO [응답시간] control-agent #제어-정보: 2분 49초
 2026-04-14 12:38:42,788 INFO [슬랙 발신] #제어-정보 ← control-agent: 이미지 확인했습니다. AG Grid를 완전히 제거하고 HorzTableEditor 방식으로 교체하는 작업입니
+2026-04-14 12:44:57,563 INFO [슬랙 발신] #제어-정보 ← control-agent: 완료했습니다.
+
+**Axis Information 전면 교체 내용:**
+
+- AG Grid 제거 → 완전 커
+2026-04-14 12:50:45,148 INFO [수신] #제어-정보 지건승: <@U0AP5B0F71C> 근데 너가 봐도 판넬 1축 구성하는게 너무 그지같지않냐 그리고 첫번째 축이 판넬1로가야하는데 개는 전체축으로 가면 어 → control-agent
+2026-04-14 12:50:45,573 INFO 직접 전송 완료 → control-agent:5616
+2026-04-14 12:56:13,361 INFO [파일다운] 저장 완료: image.png (141116B) → C:\MES\wta-agents\uploads\slack\제어-정보\2026-04-14\125612_image.png
+2026-04-14 12:56:13,612 INFO [수신] #제어-정보 지건승: <@U0AP5B0F71C> 아니 이부분이 이상한거 아니냐고 그리고 답변을 어디로 보내냐 → control-agent
+2026-04-14 12:56:14,073 INFO 직접 전송 완료 → control-agent:5616
+2026-04-14 12:56:14,195 INFO MES 서비스 계정 로그인 성공
+2026-04-14 12:56:14,207 WARNING [파일→MES] 프로젝트 조회 실패: 'list' object has no attribute 'get'
+2026-04-14 12:59:33,771 INFO [응답시간] control-agent #제어-정보: 3분 19초
+2026-04-14 12:59:33,773 INFO [슬랙 발신] #제어-정보 ← control-agent: @지건승 이미지 확인했는데, 정확히 어느 부분이 이상한지 조금 더 알려주실 수 있나요? 
+- 사이드바(왼쪽 
