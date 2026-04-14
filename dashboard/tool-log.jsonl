@@ -32274,3 +32274,5 @@
 {"agent_id": "db-manager", "tool_name": "Bash", "timestamp": "2026-04-14 09:14:30"}
 {"agent_id": "db-manager", "tool_name": "Bash", "timestamp": "2026-04-14 09:16:41"}
 {"agent_id": "db-manager", "tool_name": "Bash", "timestamp": "2026-04-14 09:19:50"}
+{"agent_id": "control-agent", "tool_name": "mcp__agent-channel__send_message", "timestamp": "2026-04-14 09:21:46"}
+{"agent_id": "control-agent", "tool_name": "mcp__agent-channel__send_message", "timestamp": "2026-04-14 09:29:03"}
