@@ -2,9 +2,10 @@
 """
 servo_quick_analysis.py — 알람 섹션 5윈도우 즉시 품질 분석 (v1.4 프롬프트)
 """
-import sys, json
-sys.stdout = __import__('io').TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
+import sys, json, io
 sys.path.insert(0, 'C:/MES/wta-agents/workspaces/db-manager')
+if hasattr(sys.stdout, 'buffer'):
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
 
 from servo_batch_pipeline import (
     build_windows, extract_entities, filter_extracted
