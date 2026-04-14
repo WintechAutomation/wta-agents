@@ -32,3 +32,6 @@
 {"ts": "2026-04-13 16:01:54", "user_id": "U0APMDZNX8S", "username": "지건승", "text": "<@U0AP5B0F71C> 장비레퍼런스에서 수정\nAxis Information으로 이런식으로 구현했는데 왠만큼해준것같은데 너가 이런 비슷한 구성으로 맞춰 줄 수 있나 ?", "files": [{"name": "image.png", "type": "png", "saved_path": "C:\\MES\\wta-agents\\slack_chatlog\\C0ARSAJB64X_files\\20260413_160154_image.png"}]}
 {"ts": "2026-04-14 09:21:40", "user_id": "U0APMDZNX8S", "username": "지건승", "text": "<@U0AP5B0F71C> 안녕"}
 {"ts": "2026-04-14 09:28:10", "user_id": "U0APMDZNX8S", "username": "지건승", "text": "<@U0AP5B0F71C> 장비레퍼렌스에서 PC추가 했는데 구성을 반반 나눠서 serial 하나 / usb 양쪽으로 / land도 양쪽으로\n카메라만 하나로 해서 구성이되려나 이해됬어?\n그리고 행/ 열 다 수동/ 자동으로 조절 할 수 있게 만들어주고 여기도 엑셀형식으로 바꿔줘"}
+{"ts": "2026-04-14 09:40:06", "user_id": "U0APMDZNX8S", "username": "지건승", "text": "<@U0AP5B0F71C> px를 열1(px)이런식으로 바꿔주라 좀 지저분해보인다 나머지들도 똑같이바꿔줘"}
+{"ts": "2026-04-14 09:42:31", "user_id": "U0APMDZNX8S", "username": "지건승", "text": "<@U0AP5B0F71C> 잘했는데 열1(px)이렇게 가게 해줘 저러면 행이 두개여서 늘어나잖아 오키 ?"}
+{"ts": "2026-04-14 09:44:06", "user_id": "U0APMDZNX8S", "username": "지건승", "text": "<@U0AP5B0F71C> 우리 엑셀처럼 구성해달라고 했는데 추가 하면 엑셀처럼 안되네 ? 외부에서 복사 붙여넣기 할거라서 너가 해줘야해 할 수 있지 그리고 위에 가운데정렬, 일반정렬 , 왼쪽정렬 등 이런거 할 수 있게 만들어줘"}
