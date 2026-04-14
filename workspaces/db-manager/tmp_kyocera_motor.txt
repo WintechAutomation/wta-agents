@@ -1,4 +1,0 @@
-[오류] column ts.specification_id does not exist
-LINE 6: JOIN api_technicalspecificationitem ts ON ts.specification_i...
-                                                  ^
-

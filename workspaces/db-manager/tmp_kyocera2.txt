@@ -1,9 +1,0 @@
-id | project_code | name | product_model | customer_name
-----------------------------------------------------------------------------
-67 | KRKKOHPL0001 | 한국교세라 포장기 #1 개조건 | MODIFY | 
-62 | KRKKOHPL0002 | 한국교세라 포장기 #2 개조건 | MODIFY | 
-31 | KRKKOHPL0006 | 한국야금 포장기 #6 (#25-3) | HPLPB0 | 한국야금
-45 | KRWTAHPL2205 | YG1 포장기 #4 (#22-5) | HPLPB0 | YG1
-46 | KRWTAHPL2501 | [선제작] 포장기 #25-1 (교세라CN) | HPLPB0 | WTA
-
-총 5건

@@ -1,9 +1,0 @@
-[    2105ms] [WARNING] [.WebGL-0x525407d8a200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels @ https://map.naver.com/p/entry/place/18277255?placePath=%2Fhome&c=15.00,0,0,0,dh:0
-[    2105ms] [WARNING] [.WebGL-0x525407d87100]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels @ https://map.naver.com/p/entry/place/18277255?placePath=%2Fhome&c=15.00,0,0,0,dh:0
-[    2105ms] [WARNING] [.WebGL-0x525407d87100]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels @ https://map.naver.com/p/entry/place/18277255?placePath=%2Fhome&c=15.00,0,0,0,dh:0
-[    2809ms] [ERROR] Permissions policy violation: accelerometer is not allowed in this document. @ https://wtm.pstatic.net/49f8c72/12215417ae36a9c2bf5c.js:1
-[    2809ms] [WARNING] The deviceorientation events are blocked by permissions policy. See https://github.com/w3c/webappsec-permissions-policy/blob/master/features.md#sensor-features @ https://wtm.pstatic.net/49f8c72/12215417ae36a9c2bf5c.js:1
-[    2810ms] [ERROR] Permissions policy violation: accelerometer is not allowed in this document. @ https://wtm.pstatic.net/49f8c72/12215417ae36a9c2bf5c.js:1
-[    2810ms] [WARNING] The devicemotion events are blocked by permissions policy. See https://github.com/w3c/webappsec-permissions-policy/blob/master/features.md#sensor-features @ https://wtm.pstatic.net/49f8c72/12215417ae36a9c2bf5c.js:1
-[    2911ms] [WARNING] [.WebGL-0x52540a1f6300]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat) @ https://pcmap.place.naver.com/restaurant/18277255/home?from=map&fromPanelNum=1&additionalHeight=76&timestamp=202604061119&locale=ko&svcName=map_pcv5:0
-[   39840ms] [WARNING] setPolicyInfo {versionInfo: Object, sdkInfo: Object, sentryInfo: Object} @ https://ssl.pstatic.net/tveta/libs/glad/prod/gfp-core.js:0

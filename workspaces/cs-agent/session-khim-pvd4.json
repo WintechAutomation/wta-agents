@@ -1,9 +1,0 @@
-{
-  "question": "한국야금 pvd 로딩 #4 cs 이력 조회",
-  "answer": "한국야금 PVD 로딩 #4 CS 이력 조회 결과\n\n총 1건 조회됨\n\n[CS-116] 막대 끝단 확인하는 조명이 내려오지 않음(인덱스에 조립된 조명)\n- 장비: 한국야금 PVD 로딩 #4 (S/N: HPVD1P7001)\n- 상태: CS 종결 | 유무상: 무상\n- 접수: 2025-09-12 | 완료: 미완료\n- 담당: 최종태 부장\n- 처리방법: 원격지원, 방문조치, 고객사처리\n\n증상 및 원인:\n1. 막대 끝단 확인 조명이 하강하지 않음\n2. 인장 스프링 끝단 이탈\n3. 스프링 선경 얇아 고리 파손\n4. 스프링 교체 조치\n\nhttps://cs-wta.com/cs/116",
-  "question_source": "slack",
-  "image_paths": [],
-  "tools_used": ["csagent.cs_history DB직접조회"],
-  "model": "claude-sonnet-4-6",
-  "response_time_ms": 2100
-}

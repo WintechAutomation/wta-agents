@@ -1,8 +1,0 @@
-id | source_file | page_number | chunk_index
-----------------------------------------------------------------
-386511 | Mitsubishi_BFP-A8588-B_MaintenanceManual_KO.pdf | 20 | 57
-386513 | Mitsubishi_BFP-A8588-B_MaintenanceManual_KO.pdf | 20 | 58
-386515 | Mitsubishi_BFP-A8588-B_MaintenanceManual_KO.pdf | 20 | 59
-386517 | Mitsubishi_BFP-A8588-B_MaintenanceManual_KO.pdf | 20 | 60
-
-�� 4��

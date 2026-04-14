@@ -1,5 +1,0 @@
-id | task_name | task_code | task_type | status | parent_task_id
-------------------------------------------------------------------------------------
-4842 | 전장배선 | T4563 | task | not_started | None
-
-총 1건
