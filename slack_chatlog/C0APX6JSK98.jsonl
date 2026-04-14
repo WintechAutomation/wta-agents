@@ -400,3 +400,4 @@
 {"ts": "2026-04-14 11:24:18", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "정리 필요\n20260414.csv 파일은 장비별, 판매 형번별 분류로 정리해주면 될 것 같고,\n20260414_1.csv 파일은 판매형번별 분류해서 정리한 파일 좀 만들어 주시오."}
 {"ts": "2026-04-14 11:27:04", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "왜 항상 주는 파일마다 에러가..\n```{\"error\":\"'ascii' codec can't encode characters in position 15-17: ordinal not in range(128)\"}```\n"}
 {"ts": "2026-04-14 11:27:42", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "parts-sales-by-equip-20260414.html:1  Failed to load resource: the server responded with a status of 404 ()"}
+{"ts": "2026-04-14 11:30:09", "user_id": "U0APTPTUKJR", "username": "김근형", "text": "**2. 판매자재관리 (판매형번별)* 이거 판매코드별이다 쏘리.."}

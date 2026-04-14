@@ -142,7 +142,7 @@ function showTab(name) {
     return "\n".join(html)
 
 
-# --- 2. 판매자재관리: 판매형번별 분류 ---
+# --- 2. 판매자재관리: 판매코드별 분류 ---
 def parse_sales_csv(path):
     """판매자재관리 CSV — 멀티행 프로젝트 병합"""
     with open(path, "r", encoding="utf-8-sig") as f:
@@ -164,7 +164,7 @@ def parse_sales_csv(path):
                 "장비명": r.get("장비명", ""),
                 "영업담당자": r.get("영업담당자", ""),
                 "납기요청일": r.get("납기요청일", ""),
-                "판매형번": (r.get("판매형번") or "").strip(),
+                "판매코드": (r.get("판매형번") or "").strip(),
                 "부품명": r.get("부품명", ""),
                 "단가": r.get("단가", ""),
                 "부품리스트": [],
@@ -188,21 +188,21 @@ def parse_sales_csv(path):
     return projects
 
 def build_sales_by_code(projects):
-    """판매자재관리 판매형번별 분류"""
+    """판매자재관리 판매코드명별 분류 (부품리스트의 판매코드명 기준)"""
     by_code = defaultdict(list)
 
-    # 프로젝트 단위 + 부품리스트 내 코드 모두 수집
     for p in projects:
-        # 프로젝트 자체 판매형번
-        code = p["판매형번"] or "(미등록)"
-        by_code[code].append(p)
-
-        # 부품리스트 내 코드별로도 추가 인덱싱
+        codes_seen = set()
         for part in p["부품리스트"]:
-            pc = part["코드"]
-            if pc and pc != code:
-                if p not in by_code.get(pc, []):
-                    by_code[pc].append(p)
+            pc = part["코드"].strip()
+            if not pc:
+                pc = "(미등록)"
+            if pc not in codes_seen:
+                codes_seen.add(pc)
+                by_code[pc].append(p)
+        # 부품리스트가 없는 프로젝트
+        if not codes_seen:
+            by_code["(미등록)"].append(p)
 
     return by_code
 
@@ -256,12 +256,12 @@ def sales_html(projects, by_code):
 </head>
 <body>
 <div class="container">
-  <h1>판매자재관리 — 판매형번별 분류</h1>
-  <div class="subtitle">(주)윈텍오토메이션 · 생산관리팀 · {NOW} · 프로젝트 {len(projects)}건 · 판매형번 {len(by_code)}종</div>
+  <h1>판매자재관리 — 판매코드별 분류</h1>
+  <div class="subtitle">(주)윈텍오토메이션 · 생산관리팀 · {NOW} · 프로젝트 {len(projects)}건 · 판매코드 {len(by_code)}종</div>
 
   <div class="summary">
     <div class="summary-item"><div class="num">{len(projects)}</div><div class="label">판매 프로젝트</div></div>
-    <div class="summary-item"><div class="num">{len(by_code)}</div><div class="label">판매형번</div></div>
+    <div class="summary-item"><div class="num">{len(by_code)}</div><div class="label">판매코드</div></div>
     <div class="summary-item"><div class="num">{sum(len(p["부품리스트"]) for p in projects)}</div><div class="label">부품 항목</div></div>
   </div>
 
@@ -271,7 +271,7 @@ def sales_html(projects, by_code):
         html.append(f'    <div class="status-chip {s}">{s}: {cnt}건</div>')
 
     html.append("""  </div>
-  <div class="search-box"><input type="text" id="searchInput" placeholder="판매형번 또는 부품명 검색..." oninput="filterSections()"></div>
+  <div class="search-box"><input type="text" id="searchInput" placeholder="판매코드 또는 부품명 검색..." oninput="filterSections()"></div>
 """)
 
     for code in sorted(by_code.keys()):
