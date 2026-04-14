@@ -125,10 +125,10 @@ def load_chunks(file_id: str) -> list:
     return chunks
 
 
-def run_graphrag_sample(chunks: list, file_id: str, max_windows: int = 30) -> dict:
-    """처음 max_windows 윈도우만 추출해서 품질 분석"""
+def run_graphrag_sample(chunks: list, file_id: str, max_windows: int = 30, start_from: int = 0) -> dict:
+    """start_from 위치부터 max_windows 윈도우 추출해서 품질 분석"""
     windows = build_windows(chunks)
-    windows = windows[:max_windows]
+    windows = windows[start_from:start_from + max_windows]
 
     all_entities = []
     all_relations = []
@@ -333,10 +333,16 @@ def main():
         if not chunks:
             log.warning(f'chunks 없음: {file_id}')
             continue
-        log.info(f'청크: {len(chunks)}건, 최대 30 윈도우 추출')
+        # 알람표는 뒷부분에 있으므로 CSD7 파일의 경우 뒷부분 윈도우 사용
+        total_windows = len(build_windows(chunks))
+        start = max(0, total_windows - 30) if not tf['has_chunks'] else max(0, total_windows - 30)
+        if tf['file_id'] == '4_servo_7e174cc67cee':
+            # CSD7: 알람/트러블슈팅 섹션 집중 구간 (윈도우 290~320)
+            start = 290
+        log.info(f'청크: {len(chunks)}건, 총 윈도우: {total_windows}, 추출 구간: [{start}~{start+30}] (알람섹션 포함 후반부)')
 
-        # GraphRAG (최대 30 윈도우)
-        extracted = run_graphrag_sample(chunks, file_id, max_windows=30)
+        # GraphRAG (뒷부분 30 윈도우)
+        extracted = run_graphrag_sample(chunks, file_id, max_windows=30, start_from=start)
         log.info(f'추출: 엔티티 {len(extracted["entities"])}건, 관계 {len(extracted["relations"])}건')
 
         # 품질 분석

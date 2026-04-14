@@ -109,7 +109,7 @@ MANUALS_V2_EXTRACT_PROMPT = """[목적] 이 추출 결과는 현장 CS 엔지니
 - Parameter: 파라미터 코드 (Pr.0.07, C1-01, H4-02 등 코드 반드시 포함); 속성: code(필수), description(필수), range, default_value, unit
 - Alarm: 알람/에러코드 (AL.16, E401, OC 등 코드 반드시 포함); 속성: code(필수), cause(원인), symptom(증상), solution(해결책), description(설명)
 - Process: 절차/작업 (배선, 설치, 점검, 튜닝, 교체 등); 속성: description(단계별 절차 요약 필수)
-- Section: 문서 섹션/챕터; 속성: description
+- Section: [최소 추출] 대챕터 단위만 (예: "3장 배선", "알람 목록", "7장 보호 기능"). 소절/하위 섹션 추출 금지. 속성: description
 - Figure: 그림/배선도/회로도; 속성: description
 - Table: 표 (파라미터 표, 알람 일람표 등); 속성: description
 - Diagram: 블록도/시퀀스 다이어그램; 속성: description
@@ -130,6 +130,13 @@ MANUALS_V2_EXTRACT_PROMPT = """[목적] 이 추출 결과는 현장 CS 엔지니
 - DEPICTS: (Figure|Diagram) → (Equipment|Component) — 그림이 장비/부품을 도시
 - DOCUMENTS: (Manual) → (Equipment|Process) — 매뉴얼이 장비/절차를 기술
 - WARNS: (SafetyRule) → (Process|Equipment) — 안전규정이 절차/장비에 적용
+
+## 금지 관계 (FORBIDDEN — 절대 생성하지 마세요)
+- WARNS: SafetyRule → Section (X) — 반드시 SafetyRule → Process 또는 SafetyRule → Equipment
+- REFERENCES: Section → Section (X) — 반드시 Section → Figure/Table/Diagram
+- HAS_PARAMETER: Equipment → Equipment (X) — 반드시 Equipment → Parameter
+- CAUSES: Equipment → Process (X) — 반드시 Alarm → Process
+위 금지 패턴에 해당하면 해당 관계를 아예 생성하지 마세요.
 
 ## 추출 규칙
 1. 엔티티 id: 영문 snake_case (예: alarm_al16, param_pr0_07, csd7_servo_drive)
@@ -267,11 +274,43 @@ def filter_extracted(extracted: dict, file_id: str) -> dict:
     entities = dedup_entities
 
     ent_ids = {e['id'] for e in entities}
+    ent_type_map = {e['id']: e.get('type') for e in entities}
+
+    # 관계 타입 제약 (source→target 타입 허용 규칙)
+    _REL_CONSTRAINTS = {
+        'PART_OF':      ({'Component'}, {'Equipment'}),
+        'HAS_PARAMETER':({'Equipment'}, {'Parameter'}),
+        'SPECIFIES':    ({'Specification'}, {'Equipment', 'Component'}),
+        'CAUSES':       ({'Alarm'}, {'Process'}),
+        'RESOLVES':     ({'Process'}, {'Alarm'}),
+        'CONNECTS_TO':  ({'Equipment', 'Component'}, {'Equipment', 'Component'}),
+        'REQUIRES':     ({'Process'}, {'Equipment', 'Component'}),
+        'BELONGS_TO':   ({'Figure', 'Table', 'Diagram'}, {'Section'}),
+        'REFERENCES':   ({'Section'}, {'Figure', 'Table', 'Diagram'}),
+        'DEPICTS':      ({'Figure', 'Diagram'}, {'Equipment', 'Component'}),
+        'DOCUMENTS':    ({'Manual'}, {'Equipment', 'Process'}),
+        'WARNS':        ({'SafetyRule'}, {'Process', 'Equipment'}),
+    }
+
+    def _rel_type_ok(r: dict) -> bool:
+        rtype = r.get('type')
+        if rtype not in _REL_CONSTRAINTS:
+            return True
+        src_type = ent_type_map.get(r.get('source', ''))
+        tgt_type = ent_type_map.get(r.get('target', ''))
+        allowed_src, allowed_tgt = _REL_CONSTRAINTS[rtype]
+        if src_type and src_type not in allowed_src:
+            return False
+        if tgt_type and tgt_type not in allowed_tgt:
+            return False
+        return True
+
     relations = [r for r in extracted.get('relations', [])
                  if r.get('type') in VALID_REL_TYPES
                  and r.get('source') in ent_ids
                  and r.get('target') in ent_ids
-                 and r.get('source') != r.get('target')]  # 자기참조 관계 제외
+                 and r.get('source') != r.get('target')  # 자기참조 관계 제외
+                 and _rel_type_ok(r)]                    # 타입 제약 위반 제외
     return {'entities': entities, 'relations': relations}
 
 
