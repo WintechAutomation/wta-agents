@@ -99,51 +99,65 @@ def _is_quality_name(name: str) -> bool:
         return False
     return True
 
-MANUALS_V2_EXTRACT_PROMPT = """다음 산업 장비 매뉴얼 텍스트에서 엔티티와 관계를 추출하세요.
+MANUALS_V2_EXTRACT_PROMPT = """[목적] 이 추출 결과는 현장 CS 엔지니어가 "에러 AL.16이 뭐야?", "파라미터 Pr.0.07 기본값은?", "OC 알람 어떻게 해결해?" 같은 질문에 그래프로 답할 수 있도록 사용됩니다. Alarm·Parameter·Process 엔티티가 CS 목적의 핵심입니다.
+
+## 최우선 추출 대상 (반드시 추출)
+1. **Alarm** — 알람/에러코드: code(코드 필수), cause(원인), symptom(증상), solution(해결책), description(설명) 포함
+2. **Parameter** — 파라미터/설정값: code(코드 필수), description(설명 필수), range(범위), default_value(초기값), unit(단위) 포함
+3. **Process** — 절차/작업: description(단계별 절차 요약 필수) 포함
 
 ## 엔티티 타입 (12종)
-- Equipment: 장비/기기 (로봇, 인버터, 서보, 센서, PLC 등)
-- Component: 부품/구성요소 (모터, 엔코더, 퓨즈, 커넥터, 단자대 등)
-- Parameter: 파라미터/설정값 코드 (C1-01, H4-02, Pr.7 등 코드 반드시 포함)
-- Alarm: 알람/에러코드 (oC, AL.16, E401, OV 등 코드 반드시 포함)
-- Process: 절차/작업/공정 (배선, 설치, 점검, 튜닝, 초기화, 교체 등)
-- Section: 문서 섹션/챕터 (제목 단위)
-- Figure: 그림/다이어그램 (배선도, 회로도, 외형도 등)
-- Table: 표 (파라미터 표, 사양 표, 알람 일람표 등)
-- Diagram: 도식/블록도 (제어 블록도, 시퀀스 다이어그램 등)
-- Specification: 사양/규격 수치 (정격전압 200V, 최대토크 47Nm 등)
-- Manual: 매뉴얼 문서 자체
-- SafetyRule: 안전규정/경고 ("전원 차단 후 5분 대기" 등)
+- Equipment: 장비/기기 (서보드라이브, 인버터, 모터, PLC 등); 속성: model, mfr, description
+- Component: 부품/구성요소 (엔코더, 퓨즈, 커넥터 등); 속성: description
+- Parameter: 파라미터 코드 (Pr.0.07, C1-01, H4-02 등 코드 반드시 포함); 속성: code(필수), description(필수), range, default_value, unit
+- Alarm: 알람/에러코드 (AL.16, E401, OC 등 코드 반드시 포함); 속성: code(필수), cause(원인), symptom(증상), solution(해결책), description(설명)
+- Process: 절차/작업 (배선, 설치, 점검, 튜닝, 교체 등); 속성: description(단계별 절차 요약 필수)
+- Section: [최소 추출] 대챕터 단위만 (예: "3장 배선", "알람 목록", "7장 보호 기능"). 소절/하위 섹션 추출 금지. 속성: description
+- Figure: 그림/배선도/회로도; 속성: description
+- Table: 표 (파라미터 표, 알람 일람표 등); 속성: description
+- Diagram: 블록도/시퀀스 다이어그램; 속성: description
+- Specification: 사양/규격 수치 (정격전압 200V 등); 속성: value, unit, description
+- Manual: 매뉴얼 문서; 속성: description
+- SafetyRule: 안전규정/경고; 속성: description(경고 내용 필수)
 
-## 관계 타입 (12종)
-- PART_OF: Component가 Equipment의 부품
-- HAS_PARAMETER: Equipment가 Parameter를 가짐
-- SPECIFIES: Specification이 Equipment/Component를 규정
-- CAUSES: Alarm 발생 시 Process 유발
-- RESOLVES: Process가 Alarm을 해결
-- CONNECTS_TO: Equipment/Component 간 물리적 연결
-- REQUIRES: Process에 필요한 Equipment/Component
-- BELONGS_TO: Figure/Table이 Section에 속함
-- REFERENCES: Section이 Figure/Table을 참조
-- DEPICTS: Figure가 Equipment/Component를 도식
-- DOCUMENTS: Manual이 Equipment/Process를 기술
-- WARNS: SafetyRule이 Process/Equipment에 적용
+## 관계 타입 (12종) — 타입 제약 엄수
+- PART_OF: (Component) → (Equipment) — 부품이 장비에 속함
+- HAS_PARAMETER: (Equipment) → (Parameter) — 장비가 파라미터를 가짐
+- SPECIFIES: (Specification) → (Equipment|Component) — 사양이 장비/부품을 규정
+- CAUSES: (Alarm) → (Process) — 알람 발생 시 조치 절차 유발
+- RESOLVES: (Process) → (Alarm) — 절차가 알람을 해결
+- CONNECTS_TO: (Equipment|Component) → (Equipment|Component) — 물리적 연결
+- REQUIRES: (Process) → (Equipment|Component) — 절차에 필요한 장비/부품
+- BELONGS_TO: (Figure|Table|Diagram) → (Section) — 그림/표가 섹션에 속함
+- REFERENCES: (Section) → (Figure|Table|Diagram) — 섹션이 그림/표를 참조
+- DEPICTS: (Figure|Diagram) → (Equipment|Component) — 그림이 장비/부품을 도시
+- DOCUMENTS: (Manual) → (Equipment|Process) — 매뉴얼이 장비/절차를 기술
+- WARNS: (SafetyRule) → (Process|Equipment) — 안전규정이 절차/장비에 적용
+
+## 금지 관계 (FORBIDDEN — 절대 생성하지 마세요)
+- WARNS: SafetyRule → Section (X) — 반드시 SafetyRule → Process 또는 SafetyRule → Equipment
+- REFERENCES: Section → Section (X) — 반드시 Section → Figure/Table/Diagram
+- HAS_PARAMETER: Equipment → Equipment (X) — 반드시 Equipment → Parameter
+- CAUSES: Equipment → Process (X) — 반드시 Alarm → Process
+위 금지 패턴에 해당하면 해당 관계를 아예 생성하지 마세요.
 
 ## 추출 규칙
-1. 엔티티 id는 영문 snake_case
-2. name은 원문 표기 그대로 (한국어/영어/일어)
-3. properties에 model, mfr, unit, code 등 있으면 포함
-4. 관계는 반드시 추출된 엔티티 id 사이에서만 생성
-5. 텍스트에 명시적 근거가 없는 관계는 생성하지 않음
-6. 엔티티가 0개여도 빈 배열로 응답, 에러 메시지 금지
+1. 엔티티 id: 영문 snake_case (예: alarm_al16, param_pr0_07, csd7_servo_drive)
+2. name: 원문 표기 그대로 (코드+이름 조합 권장, 예: "AL.16 과전류")
+3. **description은 모든 엔티티에 필수** — 텍스트에서 핵심 정보 1-2문장
+4. Alarm의 경우: cause/symptom/solution 속성을 반드시 분리 추출 (텍스트에 있는 경우)
+5. 관계는 반드시 위 타입 제약 준수 (Equipment→Parameter는 HAS_PARAMETER만)
+6. 텍스트에 명시적 근거가 없는 관계 생성 금지
+7. 엔티티가 0개여도 빈 배열로 응답, 에러 메시지 금지
 
 ## 응답 형식 (JSON만, 다른 텍스트 없이)
 {
   "entities": [
-    {"id": "eng_snake_case", "name": "표시명", "type": "Equipment", "properties": {"model": "V1000", "mfr": "Yaskawa"}}
+    {"id": "alarm_al16", "name": "AL.16 과전류", "type": "Alarm", "properties": {"code": "AL.16", "cause": "모터 전류 초과", "symptom": "드라이브 트립", "solution": "부하 점검, 가감속 시간 연장", "description": "과전류 알람, 인버터 출력 전류가 정격을 초과할 때 발생"}},
+    {"id": "param_pr0_07", "name": "Pr.0.07 토크제한", "type": "Parameter", "properties": {"code": "Pr.0.07", "description": "정방향 토크 제한값", "range": "0~500", "default_value": "300", "unit": "%"}}
   ],
   "relations": [
-    {"source": "entity_id1", "target": "entity_id2", "type": "HAS_PARAMETER"}
+    {"source": "alarm_al16", "target": "overcurrent_check_process", "type": "CAUSES"}
   ]
 }
 
@@ -850,12 +864,44 @@ def graphrag_for_file(file_id: str, chunks: list[dict], state: dict) -> tuple[in
                     seen_ids.add(e['id'])
                     dedup_entities.append(e)
             entities = dedup_entities
-            # 유효 엔티티 id 집합 기준으로 관계 재필터 + 자기참조 제외
+            # 유효 엔티티 id 집합 및 타입 맵
             ent_ids = {e['id'] for e in entities}
+            ent_type_map = {e['id']: e.get('type') for e in entities}
+            # 관계 타입 제약 (source→target 허용 타입)
+            _REL_CONSTRAINTS = {
+                'PART_OF':       ({'Component'}, {'Equipment'}),
+                'HAS_PARAMETER': ({'Equipment'}, {'Parameter'}),
+                'SPECIFIES':     ({'Specification'}, {'Equipment', 'Component'}),
+                'CAUSES':        ({'Alarm'}, {'Process'}),
+                'RESOLVES':      ({'Process'}, {'Alarm'}),
+                'CONNECTS_TO':   ({'Equipment', 'Component'}, {'Equipment', 'Component'}),
+                'REQUIRES':      ({'Process'}, {'Equipment', 'Component'}),
+                'BELONGS_TO':    ({'Figure', 'Table', 'Diagram'}, {'Section'}),
+                'REFERENCES':    ({'Section'}, {'Figure', 'Table', 'Diagram'}),
+                'DEPICTS':       ({'Figure', 'Diagram'}, {'Equipment', 'Component'}),
+                'DOCUMENTS':     ({'Manual'}, {'Equipment', 'Process'}),
+                'WARNS':         ({'SafetyRule'}, {'Process', 'Equipment'}),
+            }
+
+            def _rel_type_ok(r: dict) -> bool:
+                rtype = r.get('type')
+                if rtype not in _REL_CONSTRAINTS:
+                    return True
+                src_type = ent_type_map.get(r.get('source', ''))
+                tgt_type = ent_type_map.get(r.get('target', ''))
+                allowed_src, allowed_tgt = _REL_CONSTRAINTS[rtype]
+                if src_type and src_type not in allowed_src:
+                    return False
+                if tgt_type and tgt_type not in allowed_tgt:
+                    return False
+                return True
+
+            # 자기참조 제외 + 타입 제약 위반 제외
             relations = [r for r in relations
                          if r.get('source') in ent_ids
                          and r.get('target') in ent_ids
-                         and r.get('source') != r.get('target')]
+                         and r.get('source') != r.get('target')
+                         and _rel_type_ok(r)]
             # Neo4j MERGE
             nc, rc = neo4j_merge(file_id, state['run_id'], entities, relations)
             ckpt['entities_raw'] += len(entities)

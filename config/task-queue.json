@@ -1100,12 +1100,12 @@
       "agent": "db-manager",
       "task": "[manuals-v2 서보 배치] 4_servo 44건 전체 파이프라인",
       "message": "SKILL.md v1.1 기준 4_servo 문서 44건 Step0-7 전체 파이프라인 실행",
-      "status": "in_progress",
+      "status": "done",
       "priority": "high",
       "created_at": "2026-04-12 23:21:02",
-      "updated_at": "2026-04-14 11:55:07",
-      "last_report_at": "2026-04-14 11:55:07",
-      "completed_at": "2026-04-13 09:17:19"
+      "updated_at": "2026-04-14 12:28:22",
+      "last_report_at": "2026-04-14 12:28:22",
+      "completed_at": "2026-04-14 12:28:22"
     },
     {
       "id": "tq-qa-agent-acbf75",
@@ -2471,6 +2471,81 @@
       "priority": "medium",
       "created_at": "2026-04-14 11:57:29",
       "updated_at": "2026-04-14 11:57:29",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-qa-agent-62e520",
+      "agent": "qa-agent",
+      "task": "GraphRAG 프롬프트 v1.4 품질 검증 합격 확인. 배치 재개 전 파이프라인 업데이트 필요합니다.\n\ndb-manager의 servo_batch_pipeline.py에서 v1.",
+      "message": "GraphRAG 프롬프트 v1.4 품질 검증 합격 확인. 배치 재개 전 파이프라인 업데이트 필요합니다.\n\ndb-manager의 servo_batch_pipeline.py에서 v1.4 변경사항을 servo_batch_v11.py에 반영해주세요:\n\n1. MANUALS_V2_EXTRACT_PROMPT를 v1.4로 교체 (CS 목적 명시, Alarm code/cause/symptom/solution, FORBIDDEN 관계 예시 포함)\n2. Section 억제: \"대챕터 단위만, 소절 금지\"\n3. filter_extracted()에 _rel_type_ok() post-filter 추가 (관계 타입 제약 위반 자동 제거)\n\ndb-manager의 servo_batch_pipeline.py를 참조해서 동일 적용 후 보고해주세요. 확인되면 배치 재시작 지시합니다.\n\nNeo4j는 이미 초기화 상태이므로 graphrag 전부 처음부터 재실행합니다.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-14 12:26:35",
+      "updated_at": "2026-04-14 12:26:35",
+      "last_report_at": null,
+      "completed_at": null,
+      "requested_by": "MAX"
+    },
+    {
+      "id": "tq-qa-agent-2b5713",
+      "agent": "qa-agent",
+      "task": "GraphRAG 프롬프트 v1.4 품질 검증 합격 확인. 배치 재개 전 파이프라인 업데이트 필요합니다.",
+      "message": "GraphRAG 프롬프트 v1.4 품질 검증 합격 확인. 배치 재개 전 파이프라인 업데이트 필요합니다.\n\ndb-manager의 servo_batch_pipeline.py에서 v1.4 변경사항을 servo_batch_v11.py에 반영해주세요:\n\n1. MANUALS_V2_EXTRACT_PROMPT를 v1.4로 교체 (CS 목적 명시, Alarm code/cause/symptom/solution, FORBIDDEN 관계 예시 포함)\n2. Section 억제: \"대챕터 단위만, 소절 금지\"\n3. filter_extracted()에 _rel_type_ok() post-filter 추가 (관계 타입 제약 위반 자동 제거)\n\ndb-manager의 servo_batch_pipeline.py를 참조해서 동일 적용 후 보고해주세요. 확인되면 배치 재시작 지시합니다.\n\nNeo4j는 이미 초기화 상태이므로 graphrag 전부 처음부터 재실행합니다.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-14 12:26:39",
+      "updated_at": "2026-04-14 12:26:39",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-issue-manager-102fce",
+      "agent": "issue-manager",
+      "task": "GraphRAG 프롬프트 v1.4 품질 검증 합격 확인. 배치 재개 전 파이프라인 업데이트 필요합니다.\n\ndb-manager의 servo_batch_pipeline.py에서 v1.",
+      "message": "GraphRAG 프롬프트 v1.4 품질 검증 합격 확인. 배치 재개 전 파이프라인 업데이트 필요합니다.\n\ndb-manager의 servo_batch_pipeline.py에서 v1.4 변경사항을 servo_batch_v11.py에 반영해주세요:\n\n1. MANUALS_V2_EXTRACT_PROMPT를 v1.4로 교체 (CS 목적 명시, Alarm code/cause/symptom/solution, FORBIDDEN 관계 예시 포함)\n2. Section 억제: \"대챕터 단위만, 소절 금지\"\n3. filter_extracted()에 _rel_type_ok() post-filter 추가 (관계 타입 제약 위반 자동 제거)\n\ndb-manager의 servo_batch_pipeline.py를 참조해서 동일 적용 후 보고해주세요. 확인되면 배치 재시작 지시합니다.\n\nNeo4j는 이미 초기화 상태이므로 graphrag 전부 처음부터 재실행합니다.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-14 12:26:40",
+      "updated_at": "2026-04-14 12:26:40",
+      "last_report_at": null,
+      "completed_at": null,
+      "requested_by": "MAX"
+    },
+    {
+      "id": "tq-issue-manager-a8d94e",
+      "agent": "issue-manager",
+      "task": "GraphRAG 프롬프트 v1.4 품질 검증 합격 확인. 배치 재개 전 파이프라인 업데이트 필요합니다.",
+      "message": "GraphRAG 프롬프트 v1.4 품질 검증 합격 확인. 배치 재개 전 파이프라인 업데이트 필요합니다.\n\ndb-manager의 servo_batch_pipeline.py에서 v1.4 변경사항을 servo_batch_v11.py에 반영해주세요:\n\n1. MANUALS_V2_EXTRACT_PROMPT를 v1.4로 교체 (CS 목적 명시, Alarm code/cause/symptom/solution, FORBIDDEN 관계 예시 포함)\n2. Section 억제: \"대챕터 단위만, 소절 금지\"\n3. filter_extracted()에 _rel_type_ok() post-filter 추가 (관계 타입 제약 위반 자동 제거)\n\ndb-manager의 servo_batch_pipeline.py를 참조해서 동일 적용 후 보고해주세요. 확인되면 배치 재시작 지시합니다.\n\nNeo4j는 이미 초기화 상태이므로 graphrag 전부 처음부터 재실행합니다.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-14 12:26:44",
+      "updated_at": "2026-04-14 12:26:44",
+      "last_report_at": null,
+      "completed_at": null
+    },
+    {
+      "id": "tq-issue-manager-7c3ce6",
+      "agent": "issue-manager",
+      "task": "v1.4 확인 완료. 배치 재시작해주세요. Neo4j 초기화 상태이므로 graphrag 전부 처음부터 재실행. state에서 기존 완료 단계(step2/embed/pgvector)",
+      "message": "v1.4 확인 완료. 배치 재시작해주세요. Neo4j 초기화 상태이므로 graphrag 전부 처음부터 재실행. state에서 기존 완료 단계(step2/embed/pgvector)는 재사용하고 graphrag만 재실행.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-14 12:29:21",
+      "updated_at": "2026-04-14 12:29:21",
+      "last_report_at": null,
+      "completed_at": null,
+      "requested_by": "MAX"
+    },
+    {
+      "id": "tq-issue-manager-bdadc6",
+      "agent": "issue-manager",
+      "task": "v1.4 확인 완료. 배치 재시작해주세요. Neo4j 초기화 상태이므로 graphrag 전부 처음부터 재실행. state에서 기존 완료 단계(step2/embed/pgvector)",
+      "message": "v1.4 확인 완료. 배치 재시작해주세요. Neo4j 초기화 상태이므로 graphrag 전부 처음부터 재실행. state에서 기존 완료 단계(step2/embed/pgvector)는 재사용하고 graphrag만 재실행.",
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2026-04-14 12:29:25",
+      "updated_at": "2026-04-14 12:29:25",
       "last_report_at": null,
       "completed_at": null
     }
