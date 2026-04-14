@@ -128,10 +128,11 @@ def get_weather():
 
 
 def get_recent_restaurants(days: int = 5) -> list[str]:
-    """최근 N일 추천 식당 목록 (중복 방지용)"""
+    """최근 N일 '실제 선택된' 식당 목록 (중복 방지용, decided 상태만)"""
     history = load_json(MENU_HISTORY_FILE, [])
     recent = history[-days:] if len(history) >= days else history
-    return [r["restaurant"] for r in recent]
+    # decided 상태만 반영 (recommended는 무시, pending도 무시)
+    return [r["restaurant"] for r in recent if r.get("status") == "decided" and r["restaurant"] != "미정"]
 
 
 def recommend_restaurants(weekday: str, weather: dict, top_n: int = 3) -> tuple[list[str], dict]:
@@ -139,7 +140,8 @@ def recommend_restaurants(weekday: str, weather: dict, top_n: int = 3) -> tuple[
     data = load_json(MENU_DATA_FILE, {"restaurants": {}})
     restaurants = data.get("restaurants", {})
     recent = get_recent_restaurants(4)
-    yesterday = get_recent_restaurants(1)[0] if get_recent_restaurants(1) else ""
+    yesterday_list = get_recent_restaurants(1)
+    yesterday = yesterday_list[0] if yesterday_list else ""
 
     scores = {}
     details = {}  # 각 식당별 점수 상세 정보
@@ -169,7 +171,7 @@ def recommend_restaurants(weekday: str, weather: dict, top_n: int = 3) -> tuple[
 
     return picks, {
         "picks": picks,
-        "yesterday": yesterday,
+        "yesterday": yesterday,  # 실제 선택된 메뉴만 (decided 상태)
         "details": details,
         "score_summary": {name: score for name, score in sorted_rests[:top_n]}
     }
@@ -249,14 +251,15 @@ def slack_post(message: str) -> bool:
         return False
 
 
-def save_history(date_str: str, restaurant: str, weekday: str):
-    """추천 이력 저장"""
+def save_history(date_str: str, restaurant: str, weekday: str, status: str = "recommended"):
+    """추천 이력 저장 (status: recommended/decided/pending)"""
     history = load_json(MENU_HISTORY_FILE, [])
     # 같은 날 중복 저장 방지
     if history and history[-1].get("date") == date_str:
         history[-1]["restaurant"] = restaurant
+        history[-1]["status"] = status
     else:
-        history.append({"date": date_str, "restaurant": restaurant, "weekday": weekday})
+        history.append({"date": date_str, "restaurant": restaurant, "weekday": weekday, "status": status})
     # 최근 60일만 보관
     save_json(MENU_HISTORY_FILE, history[-60:])
 
@@ -265,6 +268,13 @@ def cmd_recommend():
     """오전 10시 추천 메시지 발송"""
     today = datetime.date.today()
     weekday = ["월", "화", "수", "목", "금", "토", "일"][today.weekday()]
+
+    # 주말 처리: 토요일(5), 일요일(6) 건너뛰기
+    if today.weekday() >= 5:
+        print(f"[{today}({weekday})] 주말 — 추천 생략")
+        save_history(str(today), "미정", weekday, status="pending")
+        return
+
     weather = get_weather()
     picks, reason = recommend_restaurants(weekday, weather)
 
@@ -279,11 +289,11 @@ def cmd_recommend():
     print(f"슬랙 발송: {'성공' if ok else '실패'}")
 
     if ok:
-        save_history(str(today), picks[0], weekday)
+        save_history(str(today), picks[0], weekday, status="recommended")
 
 
 def cmd_collect():
-    """응답 수집 후 정리본 발송 (slack_history로 최근 메시지 파싱)"""
+    """응답 수집 후 정리본 발송 + 히스토리 업데이트 (slack_history로 최근 메시지 파싱)"""
     if not SLACK_TOKEN_FILE.exists():
         print("[오류] 슬랙 토큰 없음", file=sys.stderr)
         return
@@ -340,6 +350,18 @@ def cmd_collect():
         summary = "📋 *점심 주문 정리*\n\n" + "\n".join(lines)
         ok = slack_post(summary)
         print(f"정리본 발송: {'성공' if ok else '실패'}")
+
+        # 히스토리 업데이트: 실제 선택된 메뉴 기록
+        today = datetime.date.today()
+        history_data = load_json(MENU_HISTORY_FILE, [])
+        if history_data and history_data[-1].get("date") == str(today):
+            # 오늘 항목이 있으면, 첫 응답자의 선택을 대표로 저장
+            first_order = list(member_orders.values())[0] if member_orders else "미정"
+            history_data[-1]["restaurant"] = first_order
+            history_data[-1]["status"] = "decided"
+            history_data[-1]["responded_count"] = len(member_orders)
+            save_json(MENU_HISTORY_FILE, history_data)
+            print(f"히스토리 업데이트: {first_order} (결정됨, {len(member_orders)}명 응답)")
 
     except Exception as e:
         print(f"[오류] 응답 수집 실패: {e}", file=sys.stderr)
